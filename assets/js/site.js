@@ -100,7 +100,10 @@
     return `<a class="skip" href="#main">본문으로 건너뛰기</a>
 <header class="site-header">
   <div class="wrap header-inner">
-    <a class="brand" href="${ROOT}index.html"><span class="brand-en">Eastern Europe</span><span class="brand-ko">동유럽 학회 아카이브</span></a>
+    <a class="brand" href="${ROOT}index.html" aria-label="Eastern Europe by KUERA, 고려대학교 동유럽지역 전략학회 아카이브 홈">
+      <img class="brand-logo" src="${ROOT}assets/images/kuera/kuera-badge.png" alt="" width="44" height="44" decoding="async">
+      <span class="brand-text"><span class="brand-en">Eastern Europe<span class="brand-by">by KUERA</span></span><span class="brand-ko">고려대학교 동유럽지역 전략학회</span></span>
+    </a>
     <nav aria-label="주 메뉴"><ul>${nav.map(([id, label, href]) =>
       `<li><a href="${ROOT}${href}"${id === current ? ' aria-current="page"' : ''}>${label}</a></li>`).join('')}</ul></nav>
   </div>
@@ -108,7 +111,11 @@
   }
   function footer() {
     return `<footer class="site-footer"><div class="wrap footer-inner">
-  <p class="footer-brand">Eastern Europe</p>
+  <div class="footer-id">
+    <img class="footer-logo" src="${ROOT}assets/images/kuera/kuera-badge.png" alt="KUERA 로고" width="56" height="56" loading="lazy" decoding="async">
+    <div><p class="footer-brand">Eastern Europe <span class="brand-by">by KUERA</span></p>
+    <p class="footer-org">고려대학교 동유럽지역 전략학회<span lang="en"> · Korea University Eastern Europe Research Association</span></p></div>
+  </div>
   <p>동유럽 학회원을 위한 국가 정보 아카이브. 국가 정보는 2026년 10월 18일에 검토했으며, 각 항목 아래 출처를 함께 적었습니다.</p>
   <p>지도 경계: Natural Earth · 국기: <a href="https://flagpedia.net/" target="_blank" rel="noopener">Flagpedia</a></p>
 </div></footer>`;
@@ -886,6 +893,11 @@ ${countryTabs(c, id)}
   <p>동유럽 학회원이 수업과 연구, 답사 준비에 참고할 수 있도록 국가별 기초 정보와 최신 브리핑을 한곳에 정리하는 사이트입니다.</p></div>
 </section>
 <section class="wrap prose">
+  <div class="about-org">
+    <img src="${ROOT}assets/images/kuera/kuera-badge.png" alt="KUERA 로고" width="96" height="96" decoding="async">
+    <div><p class="about-org-ko">고려대학교 동유럽지역 전략학회</p>
+    <p class="about-org-en" lang="en">Korea University Eastern Europe Research Association (KUERA)</p></div>
+  </div>
   <h2>자료 원칙</h2>
   <ul>
     <li>국가 정보는 EU, 각국 관광청, 투자진흥기관 같은 공식 출처를 우선하고 항목마다 출처를 적습니다.</li>
@@ -896,6 +908,12 @@ ${countryTabs(c, id)}
   }
 
   /* ---------- 시작 ---------- */
+  // 브라우저 탭 아이콘: KUERA 로고
+  if (!document.querySelector('link[rel~="icon"]')) {
+    const ic = document.createElement('link');
+    ic.rel = 'icon'; ic.type = 'image/png'; ic.href = ROOT + 'assets/images/kuera/kuera-icon.png';
+    document.head.appendChild(ic);
+  }
   document.getElementById('site-header').outerHTML = header();
   document.getElementById('site-footer').outerHTML = footer();
   const main = document.getElementById('main');
