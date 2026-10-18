@@ -36,8 +36,8 @@
     LVA: { ko: '라트비아', en: 'Latvia', flag: { h: ['#9e3039', '#ffffff', '#9e3039'], w: [2, 1, 2] } },
     EST: { ko: '에스토니아', en: 'Estonia', flag: { h: ['#0072ce', '#000000', '#ffffff'] } }
   };
-  const SLUG_BY_ISO3 = { POL: 'poland', CZE: 'czechia', HUN: 'hungary' };
-  const ISO3_BY_SLUG = { poland: 'POL', czechia: 'CZE', hungary: 'HUN' };
+  const SLUG_BY_ISO3 = { POL: 'poland', CZE: 'czechia', HUN: 'hungary', SVK: 'slovakia', SVN: 'slovenia' };
+  const ISO3_BY_SLUG = { poland: 'POL', czechia: 'CZE', hungary: 'HUN', slovakia: 'SVK', slovenia: 'SVN' };
   const ISO3_BY_KO = {};
   Object.keys(EAST).forEach(k => { ISO3_BY_KO[EAST[k].ko] = k; });
   const SLUG_BY_KO = {};
@@ -306,7 +306,7 @@
     svg.setAttribute('viewBox',narrow?'1050 0 720 760':'45 10 1745 780');
     svg.setAttribute('preserveAspectRatio','xMidYMid meet');
     svg.setAttribute('role','group');
-    svg.setAttribute('aria-label','동유럽 야경 지도. 폴란드, 체코, 헝가리 페이지로 이동할 수 있습니다.');
+    svg.setAttribute('aria-label','동유럽 야경 지도. 폴란드, 체코, 헝가리, 슬로바키아, 슬로베니아 페이지로 이동할 수 있습니다.');
     svg.innerHTML='<image href="'+ROOT+'assets/images/hero-clean-flags.png" width="1883" height="835" preserveAspectRatio="none"/>'+
       '<g transform="translate(1370 355) scale(2.65)">'+Object.entries(SLUG_BY_ISO3).map(([code,slug])=>'<a class="country is-live art-area" data-code="'+code+'" href="'+countryUrl(slug)+'" aria-label="'+EAST[code].ko+' 페이지 열기"><path d="'+MAP[code].d+'"/></a>').join('')+'</g>';
     stage.appendChild(svg);attachTooltip(stage,svg);return svg;
@@ -564,7 +564,7 @@
     const fields = kind === 'travel'
       ? [['추천 체험', 'experience'], ['시기', 'season'], ['방문 유의사항', 'caution']]
       : [['주재료', 'ingredients'], ['맛과 식감', 'taste'], ['현지 식문화', 'context'], ['어디서 먹나', 'where'], ['알레르기 정보', 'allergens'], ['참고', 'notes']];
-    const lang = { czechia: 'cs', hungary: 'hu' }[slug] || 'pl';
+    const lang = { czechia: 'cs', hungary: 'hu', slovakia: 'sk', slovenia: 'sl' }[slug] || 'pl';
     const noPhoto = items.filter(p => !photoUrls(p, slug)[0]).length;
     return `<p class="img-note">사진은 Wikimedia Commons에 공개된 실제 촬영본이며, 저작자와 라이선스를 각 사진 아래에 적었습니다. 촬영한 ${kind === 'travel' ? '날씨·시기·구도' : '식당·지역·조리법'}에 따라 실제 모습은 다를 수 있습니다.${noPhoto ? ` 라이선스 확인이 끝나지 않은 ${noPhoto}곳은 사진을 비워 두었습니다.` : ''}</p>
 <ul class="place-grid">${items.map(p => {
@@ -611,7 +611,7 @@
       else if (id === 'industry' && hasH3 >= 3) html = accordion(s.lines);
       else if (hasH3 >= 3) html = topicCards(s.lines);
       else html = mdBlocks(s.lines);
-      return { id: `s${i + 1}`, title: s.title, html, tab: id === 'language' && /인사말|여행 회화|^(인사·기본|자기소개|식당·쇼핑|교통·긴급)$/.test(s.raw) };
+      return { id: `s${i + 1}`, title: s.title, html, tab: id === 'language' && /인사말|여행 회화|^(인사·기본|자기소개|식당·쇼핑|교통·긴급|인사·예절|소개·기초|길·교통·숙소)$/.test(s.raw) };
     });
     return { title: doc.title, lead: doc.lead, intro: mdBlocks(doc.intro), secs };
   }
@@ -663,9 +663,18 @@
     hungary: { title: 'Hungary', shots: [
       { src: 'parliament.jpg', ko: '도나우강과 국회의사당', en: 'Parliament on the Danube', author: 'Florian Fèvre', license: 'CC BY-SA 4.0', file: 'Danube_and_Hungarian_Parliament_Building_by_night.jpg' },
       { src: 'chain-bridge.jpg', ko: '세체니 다리', en: 'Széchenyi Chain Bridge', author: 'Wilfredor', license: 'CC0', file: 'Széchenyi_Chain_Bridge_in_Budapest_at_night.jpg' },
-      { src: 'szechenyi-baths.jpg', ko: '세체니 온천', en: 'Széchenyi Baths', author: 'Marc Ryckaert (MJJR)', license: 'CC BY 3.0', file: 'Budapest_Széchenyi_Baths_R01.jpg' }] }
+      { src: 'szechenyi-baths.jpg', ko: '세체니 온천', en: 'Széchenyi Baths', author: 'Marc Ryckaert (MJJR)', license: 'CC BY 3.0', file: 'Budapest_Széchenyi_Baths_R01.jpg' }] },
+    // 슬로바키아·슬로베니아는 관광 카드와 같은 사진(2026-10-19 사용자 승인 후 다운로드)을 960px로 줄여 쓴다
+    slovakia: { title: 'Slovakia', shots: [
+      { src: 'strbske-pleso.jpg', ko: '하이 타트라 슈트르브스케 플레소', en: 'Štrbské pleso, High Tatras', author: 'Adrian Tync', license: 'CC BY-SA 4.0', file: 'Štrbské_pleso_&_Hotel_Patria_2022.jpg' },
+      { src: 'spis-castle.jpg', ko: '스피시 성', en: 'Spiš Castle', author: 'Govisity / Tip na Trip / kosice.guide', license: 'CC BY 2.0', file: 'Spis_Castle.jpg' },
+      { src: 'orava-castle.jpg', ko: '오라바 성', en: 'Orava Castle', author: 'Lynx1211', license: 'CC BY-SA 4.0', file: 'Oravský_hrad_(celkový_pohled).jpg' }] },
+    slovenia: { title: 'Slovenia', shots: [
+      { src: 'bled.jpg', ko: '블레드 호수', en: 'Lake Bled', author: 'Martin McBrien', license: 'CC BY-SA 3.0', file: 'Lake_Bled_view.jpg' },
+      { src: 'piran.jpg', ko: '피란 구시가지', en: 'Piran Old Town', author: 'Isiwal', license: 'CC BY-SA 4.0', file: 'Piran_old_town.jpg' },
+      { src: 'predjama.jpg', ko: '프레드야마 성', en: 'Predjama Castle', author: 'Dickelbers', license: 'CC BY-SA 3.0', file: 'Predjama_castle.jpg' }] }
   };
-  const LICENSE_URL = { 'CC0': 'https://creativecommons.org/publicdomain/zero/1.0/', 'CC BY 3.0': 'https://creativecommons.org/licenses/by/3.0/',
+  const LICENSE_URL = { 'CC0': 'https://creativecommons.org/publicdomain/zero/1.0/', 'CC BY 3.0': 'https://creativecommons.org/licenses/by/3.0/', 'CC BY 2.0': 'https://creativecommons.org/licenses/by/2.0/',
     'CC BY-SA 3.0': 'https://creativecommons.org/licenses/by-sa/3.0/', 'CC BY-SA 4.0': 'https://creativecommons.org/licenses/by-sa/4.0/',
     'FAL': 'https://artlibre.org/licence/lal/en/' };
   function reelHtml(c) {
