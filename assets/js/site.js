@@ -525,8 +525,15 @@
   /* 원고의 "문제 6개" 목록과 정답 줄을 펼쳐 보는 퀴즈로 */
   function quiz(lines) {
     const qs = lines.filter(l => /^\d+\.\s+/.test(l)).map(l => l.replace(/^\d+\.\s+/, ''));
-    const line = (lines.find(l => /정답/.test(l)) || '').replace(/^\*\*정답:\*\*\s*/, '').replace(/\.\s*$/, '');
-    const ans = line.split(/,\s*(?=\d+\s)/).map(a => a.replace(/^\d+\s+/, ''));
+    let ans;
+    // "질문 → 답" 형식(체코·헝가리 원고)이면 한 줄에서 질문과 정답을 나눈다
+    if (qs.length && qs.every(q => q.includes(' → '))) {
+      ans = qs.map(q => q.split(' → ').slice(1).join(' → '));
+      qs.forEach((q, i) => { qs[i] = q.split(' → ')[0]; });
+    } else {
+      const line = (lines.find(l => /정답/.test(l)) || '').replace(/^\*\*정답:\*\*\s*/, '').replace(/\.\s*$/, '');
+      ans = line.split(/,\s*(?=\d+\s)/).map(a => a.replace(/^\d+\s+/, ''));
+    }
     return `<p>질문을 누르면 정답이 보입니다.</p><ol class="quiz">${qs.map((q, i) =>
       `<li><details><summary>${inline(q)}</summary><p class="quiz-a">정답: ${inline(ans[i] || '')}</p></details></li>`).join('')}</ol>`;
   }
@@ -545,7 +552,9 @@
   }
   function placePhoto(p, slug) {
     const [src, alt] = photoUrls(p, slug);
-    if (!src) return '';
+    // 라이선스를 확인한 실제 사진이 아직 없는 항목은 다른 사진으로 대신하지 않고 빈 상태로 둔다
+    if (!src) return `<figure class="place-img is-empty"><div class="place-photo"><span>사진 준비 중</span></div>
+    <figcaption>라이선스를 확인한 실제 사진을 구하는 대로 게시합니다.</figcaption></figure>`;
     return `<figure class="place-img"><div class="place-photo"><img src="${esc(src)}" alt="${esc(p.image_subject || p.title)}" loading="lazy" decoding="async" referrerpolicy="no-referrer"${alt ? ` data-alt="${esc(alt)}" onerror="this.onerror=null;this.src=this.dataset.alt"` : ''}></div>
     <figcaption>${photoCredit(p)}</figcaption></figure>`;
   }
@@ -554,20 +563,23 @@
   function placeCards(items, kind, slug, sources) {
     const fields = kind === 'travel'
       ? [['추천 체험', 'experience'], ['시기', 'season'], ['방문 유의사항', 'caution']]
-      : [['주재료', 'ingredients'], ['어디서 먹나', 'where'], ['알레르기 정보', 'allergens'], ['참고', 'notes']];
-    return `<p class="img-note">사진은 Wikimedia Commons에 공개된 실제 촬영본이며, 저작자와 라이선스를 각 사진 아래에 적었습니다. 촬영한 ${kind === 'travel' ? '날씨·시기·구도' : '식당·지역·조리법'}에 따라 실제 모습은 다를 수 있습니다.</p>
+      : [['주재료', 'ingredients'], ['맛과 식감', 'taste'], ['현지 식문화', 'context'], ['어디서 먹나', 'where'], ['알레르기 정보', 'allergens'], ['참고', 'notes']];
+    const lang = { czechia: 'cs', hungary: 'hu' }[slug] || 'pl';
+    const noPhoto = items.filter(p => !photoUrls(p, slug)[0]).length;
+    return `<p class="img-note">사진은 Wikimedia Commons에 공개된 실제 촬영본이며, 저작자와 라이선스를 각 사진 아래에 적었습니다. 촬영한 ${kind === 'travel' ? '날씨·시기·구도' : '식당·지역·조리법'}에 따라 실제 모습은 다를 수 있습니다.${noPhoto ? ` 라이선스 확인이 끝나지 않은 ${noPhoto}곳은 사진을 비워 두었습니다.` : ''}</p>
 <ul class="place-grid">${items.map(p => {
       const tags = kind === 'travel' ? [p.type, p.region] : [p.category];
       const src = (p.sources || []).map(k => sources[k]).filter(Boolean);
+      if (p.source_url) src.push({ url: p.source_url, title: host(p.source_url) });
       return `<li class="place" id="${esc(p.slug)}">
   ${placePhoto(p, slug)}
   <div class="place-text">
     <div class="place-tags">${tags.filter(Boolean).map(t => `<span class="tag">${esc(t)}</span>`).join('')}</div>
-    <h3>${esc(p.title)}<span class="local" lang="pl">${esc(p.pl)}</span></h3>
+    <h3>${esc(p.title)}<span class="local" lang="${lang}">${esc(p.pl)}</span></h3>
     <p class="place-sum">${esc(p.summary)}</p>
     <details class="place-more"><summary>자세히 보기</summary>
-      <p>${esc(p.body)}</p>
-      <dl>${fields.filter(([, k]) => p[k]).map(([label, k]) => `<div><dt>${label}</dt><dd>${esc(p[k])}</dd></div>`).join('')}</dl>
+      ${p.body ? `<p>${esc(p.body)}</p>` : ''}
+      <dl>${fields.filter(([, k]) => p[k]).map(([label, k]) => `<div><dt>${k === 'experience' && p.experience_label ? p.experience_label : label}</dt><dd>${esc(p[k])}</dd></div>`).join('')}</dl>
       ${src.length ? `<p class="place-src">출처: ${src.map(s => `<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.title)}</a>`).join(', ')}</p>` : ''}
     </details>
   </div>
@@ -599,7 +611,7 @@
       else if (id === 'industry' && hasH3 >= 3) html = accordion(s.lines);
       else if (hasH3 >= 3) html = topicCards(s.lines);
       else html = mdBlocks(s.lines);
-      return { id: `s${i + 1}`, title: s.title, html, tab: id === 'language' && /인사말|여행 회화/.test(s.raw) };
+      return { id: `s${i + 1}`, title: s.title, html, tab: id === 'language' && /인사말|여행 회화|^(인사·기본|자기소개|식당·쇼핑|교통·긴급)$/.test(s.raw) };
     });
     return { title: doc.title, lead: doc.lead, intro: mdBlocks(doc.intro), secs };
   }

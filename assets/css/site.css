@@ -532,3 +532,7 @@ a.cc .cc-state { color: #fff; background: var(--rc); padding: 3px 10px; border-r
   .reel-shot:first-child, .reel-title { opacity: 1; }
   .reel-toggle { display: none; }
 }
+
+/* 사진이 아직 없는 관광·음식 카드의 빈 이미지 상태 */
+.place-img.is-empty .place-photo { display: flex; align-items: center; justify-content: center; background: repeating-linear-gradient(135deg, #14203f 0 10px, #101a36 10px 20px); }
+.place-img.is-empty .place-photo span { color: #8fa9d4; font-size: 14px; letter-spacing: .06em; }
