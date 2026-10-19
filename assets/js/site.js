@@ -909,6 +909,41 @@ ${countryTabs(c, id)}
     mountThumbs(main, all);
   }
 
+  /* ---------- 페이지: 미니 게임 (games/* 의 게임을 iframe으로) ---------- */
+  const GAMES = [
+    { id: 'flag-battle', title: 'Flag Battle Royale', ko: '국기 서바이벌',
+      lead: '동유럽 20개국의 국기가 원 안에서 튕기다가, 돌아가는 틈으로 빠져나가면 탈락합니다. 마지막까지 남는 한 나라가 우승입니다.',
+      rules: [['랜덤 이벤트', '틈이 두 개로 늘거나, 중력이 뒤집히거나, 한 나라가 거대해지는 변수가 수시로 일어납니다.'],
+              ['총격전', '약 15초마다 무작위 나라가 총을 들고 다른 나라를 쏩니다. 방패가 있으면 막아냅니다.'],
+              ['조작', '화면을 누르면 시작합니다. 아래 버튼으로 다시 시작, 일시정지, 소리, 배속을 바꿀 수 있습니다.']] },
+    { id: 'clockwork-drop', title: 'Clockwork Drop', ko: '톱니바퀴 낙하',
+      lead: '20개국의 국기가 한꺼번에 떨어져 빛나는 톱니바퀴 사이를 지나갑니다. 맨 아래 시간의 틈에 닿으면 탈락하고, 마지막까지 버틴 나라가 우승입니다.',
+      rules: [['매번 다른 배치', '톱니바퀴의 크기·개수·맞물림이 판마다 새로 정해집니다. 톱니 사이 골이 맞을 때만 빠져나갈 수 있습니다.'],
+              ['시간의 비틀림', '10여 초마다 모든 톱니가 방향을 바꾸고, 한동안 아무도 떨어지지 않으면 톱니가 점점 빨라집니다.'],
+              ['조작', '화면을 누르면 시작합니다. 아래 버튼으로 다시 시작, 일시정지, 소리, 째깍 소리, 배속을 바꿀 수 있습니다.']] },
+  ];
+  function renderGames(main) {
+    main.innerHTML = `
+<section class="page-head night">
+  <div class="wrap"><p class="kicker">Mini Game</p><h1>미니 게임</h1>
+  <p>동유럽 20개국 국기로 즐기는 짧은 서바이벌 게임입니다. 한 판에 1~2분 정도 걸리고, 우승국은 매번 달라집니다.</p></div>
+</section>
+<div class="games-wrap">${GAMES.map((g, i) => `
+<section class="game-item wrap${i % 2 ? ' is-flip' : ''}" id="${g.id}" aria-labelledby="g-${g.id}">
+  <div class="game-copy">
+    <p class="kicker">Game ${i + 1} · ${g.ko}</p>
+    <h2 id="g-${g.id}">${g.title}</h2>
+    <p>${g.lead}</p>
+    <ul class="game-rules">${g.rules.map(([t, d]) => `<li><strong>${t}</strong> ${d}</li>`).join('')}</ul>
+    <a class="more" href="${ROOT}games/${g.id}/index.html" target="_blank" rel="noopener">새 창에서 크게 보기</a>
+  </div>
+  <div class="game-frame">
+    <iframe src="${ROOT}games/${g.id}/index.html?embed" title="${g.title} ${g.ko} 게임" loading="lazy"></iframe>
+  </div>
+</section>`).join('')}
+</div>`;
+  }
+
   /* ---------- 페이지: 소개 ---------- */
   function renderAbout(main) {
     main.innerHTML = `
@@ -947,38 +982,3 @@ ${countryTabs(c, id)}
      country: m => renderCountry(m, body.dataset.slug),
      section: m => renderSection(m, body.dataset.slug, body.dataset.section) }[PAGE] || renderHome)(main);
 })();
-  /* ---------- 페이지: 미니 게임 (games/* 의 게임을 iframe으로) ---------- */
-  const GAMES = [
-    { id: 'flag-battle', title: 'Flag Battle Royale', ko: '국기 서바이벌',
-      lead: '동유럽 20개국의 국기가 원 안에서 튕기다가, 돌아가는 틈으로 빠져나가면 탈락합니다. 마지막까지 남는 한 나라가 우승입니다.',
-      rules: [['랜덤 이벤트', '틈이 두 개로 늘거나, 중력이 뒤집히거나, 한 나라가 거대해지는 변수가 수시로 일어납니다.'],
-              ['총격전', '약 15초마다 무작위 나라가 총을 들고 다른 나라를 쏩니다. 방패가 있으면 막아냅니다.'],
-              ['조작', '화면을 누르면 시작합니다. 아래 버튼으로 다시 시작, 일시정지, 소리, 배속을 바꿀 수 있습니다.']] },
-    { id: 'clockwork-drop', title: 'Clockwork Drop', ko: '톱니바퀴 낙하',
-      lead: '20개국의 국기가 한꺼번에 떨어져 빛나는 톱니바퀴 사이를 지나갑니다. 맨 아래 시간의 틈에 닿으면 탈락하고, 마지막까지 버틴 나라가 우승입니다.',
-      rules: [['매번 다른 배치', '톱니바퀴의 크기·개수·맞물림이 판마다 새로 정해집니다. 톱니 사이 골이 맞을 때만 빠져나갈 수 있습니다.'],
-              ['시간의 비틀림', '10여 초마다 모든 톱니가 방향을 바꾸고, 한동안 아무도 떨어지지 않으면 톱니가 점점 빨라집니다.'],
-              ['조작', '화면을 누르면 시작합니다. 아래 버튼으로 다시 시작, 일시정지, 소리, 째깍 소리, 배속을 바꿀 수 있습니다.']] },
-  ];
-  function renderGames(main) {
-    main.innerHTML = `
-<section class="page-head night">
-  <div class="wrap"><p class="kicker">Mini Game</p><h1>미니 게임</h1>
-  <p>동유럽 20개국 국기로 즐기는 짧은 서바이벌 게임입니다. 한 판에 1~2분 정도 걸리고, 우승국은 매번 달라집니다.</p></div>
-</section>
-<div class="games-wrap">${GAMES.map((g, i) => `
-<section class="game-item wrap${i % 2 ? ' is-flip' : ''}" id="${g.id}" aria-labelledby="g-${g.id}">
-  <div class="game-copy">
-    <p class="kicker">Game ${i + 1} · ${g.ko}</p>
-    <h2 id="g-${g.id}">${g.title}</h2>
-    <p>${g.lead}</p>
-    <ul class="game-rules">${g.rules.map(([t, d]) => `<li><strong>${t}</strong> ${d}</li>`).join('')}</ul>
-    <a class="more" href="${ROOT}games/${g.id}/index.html" target="_blank" rel="noopener">새 창에서 크게 보기</a>
-  </div>
-  <div class="game-frame">
-    <iframe src="${ROOT}games/${g.id}/index.html?embed" title="${g.title} ${g.ko} 게임" loading="lazy"></iframe>
-  </div>
-</section>`).join('')}
-</div>`;
-  }
-
