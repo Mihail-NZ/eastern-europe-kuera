@@ -66,7 +66,7 @@ p { margin: 0 0 1em; }
 .brand-by { font: 500 11px/1 var(--sans); letter-spacing: .16em; text-transform: uppercase; color: #e7c8cd; }
 .brand-ko { font: 400 11.5px/1 var(--sans); color: #8fa9d4; letter-spacing: .06em; }
 .site-header ul { display: flex; gap: 6px; list-style: none; margin: 0; padding: 0; }
-.site-header nav a { position: relative; display: block; padding: 10px 16px; color: #c3d2ec; text-decoration: none; font-size: 15.5px; }
+.site-header nav a { position: relative; display: block; padding: 10px 16px; color: #c3d2ec; text-decoration: none; font-size: 15.5px; white-space: nowrap; }
 .site-header nav a:hover { color: #fff; }
 .site-header nav a[aria-current="page"] { color: #fff; }
 .site-header nav a[aria-current="page"]::after { content: ''; position: absolute; left: 16px; right: 16px; bottom: 2px; height: 2px; border-radius: 2px;
@@ -315,6 +315,7 @@ a.cc .cc-state { color: #fff; background: var(--rc); padding: 3px 10px; border-r
   .disc-list { grid-template-columns: repeat(3, 1fr); }
 }
 @media (max-width: 960px) {
+  .site-header nav a { padding: 10px 10px; font-size: 14.5px; }
   .card-list { grid-template-columns: 1fr 1fr; }
   .country-hero-inner { grid-template-columns: 1fr; }
   .locator { max-width: 560px; }
@@ -537,9 +538,12 @@ a.cc .cc-state { color: #fff; background: var(--rc); padding: 3px 10px; border-r
 .place-img.is-empty .place-photo { display: flex; align-items: center; justify-content: center; background: repeating-linear-gradient(135deg, #14203f 0 10px, #101a36 10px 20px); }
 .place-img.is-empty .place-photo span { color: #8fa9d4; font-size: 14px; letter-spacing: .06em; }
 
-/* ---------- 홈: 미니 게임 (games/flag-battle을 iframe으로) ---------- */
-.home-game { display: grid; grid-template-columns: minmax(0, 1fr) 400px; gap: 56px; align-items: center; padding-top: 72px; }
-.home-game h2 { font-family: var(--display); font-weight: 400; font-size: 46px; line-height: 1; letter-spacing: -0.01em; margin-bottom: 20px; }
+/* ---------- 미니 게임 페이지 (games/*를 iframe으로) ---------- */
+.games-wrap { padding-bottom: 96px; }
+.game-item { display: grid; grid-template-columns: minmax(0, 1fr) 400px; gap: 56px; align-items: center; padding-top: 72px; }
+.game-item.is-flip { grid-template-columns: 400px minmax(0, 1fr); }
+.game-item.is-flip .game-copy { order: 2; }
+.game-item h2 { font-family: var(--display); font-weight: 400; font-size: 46px; line-height: 1; letter-spacing: -0.01em; margin-bottom: 20px; }
 .game-copy > p { max-width: 34em; color: #33405e; }
 .game-rules { list-style: none; margin: 0 0 26px; padding: 0; display: grid; gap: 12px; max-width: 34em; }
 .game-rules li { background: var(--card); border-radius: 12px; padding: 14px 18px; box-shadow: var(--shadow); font-size: 14.5px; line-height: 1.7; color: #44506c; }
@@ -547,11 +551,12 @@ a.cc .cc-state { color: #fff; background: var(--rc); padding: 3px 10px; border-r
 .game-frame { background: var(--space); border-radius: 20px; padding: 12px; box-shadow: var(--shadow); }
 .game-frame iframe { display: block; width: 100%; aspect-ratio: 376 / 702; border: 0; border-radius: 14px; background: var(--space); }
 @media (max-width: 960px) {
-  .home-game { grid-template-columns: 1fr; gap: 28px; }
+  .game-item, .game-item.is-flip { grid-template-columns: 1fr; gap: 28px; }
+  .game-item.is-flip .game-copy { order: 0; }
   .game-frame { width: 100%; max-width: 400px; margin: 0 auto; }
 }
 @media (max-width: 760px) {
-  .home-game { padding-top: 48px; }
-  .home-game h2 { font-size: 36px; }
+  .game-item { padding-top: 48px; }
+  .game-item h2 { font-size: 36px; }
   .game-frame { padding: 8px; }
 }
