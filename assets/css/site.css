@@ -154,7 +154,7 @@ p { margin: 0 0 1em; }
 .story-thumb .map-svg .land { fill: #13285a; stroke: #2a4a85; }
 .story-thumb .map-svg .country path { stroke: rgba(255, 255, 255, .85); stroke-width: 1px; }
 .story-thumb .map-svg .country.is-dim path { fill-opacity: .14; stroke: rgba(150, 190, 255, .45); stroke-width: .6px; }
-.story-text { display: flex; flex-direction: column; flex: 1; padding: 18px 22px 20px; }
+.story-text { display: flex; flex-direction: column; flex: 1; min-width: 0; padding: 18px 22px 20px; } /* min-width:0 이 없으면 긴 원문 링크 줄 때문에 카드 밖으로 넘쳐 잘린다 */
 .story-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 10px; }
 .tag { padding: 2px 9px; border-radius: 999px; background: #e8eef8; color: #33456c; font-size: 12.5px; font-weight: 500; text-decoration: none; }
 a.tag.is-live { background: #dce8fd; color: var(--blue-ink); }
@@ -536,3 +536,22 @@ a.cc .cc-state { color: #fff; background: var(--rc); padding: 3px 10px; border-r
 /* 사진이 아직 없는 관광·음식 카드의 빈 이미지 상태 */
 .place-img.is-empty .place-photo { display: flex; align-items: center; justify-content: center; background: repeating-linear-gradient(135deg, #14203f 0 10px, #101a36 10px 20px); }
 .place-img.is-empty .place-photo span { color: #8fa9d4; font-size: 14px; letter-spacing: .06em; }
+
+/* ---------- 홈: 미니 게임 (games/flag-battle을 iframe으로) ---------- */
+.home-game { display: grid; grid-template-columns: minmax(0, 1fr) 400px; gap: 56px; align-items: center; padding-top: 72px; }
+.home-game h2 { font-family: var(--display); font-weight: 400; font-size: 46px; line-height: 1; letter-spacing: -0.01em; margin-bottom: 20px; }
+.game-copy > p { max-width: 34em; color: #33405e; }
+.game-rules { list-style: none; margin: 0 0 26px; padding: 0; display: grid; gap: 12px; max-width: 34em; }
+.game-rules li { background: var(--card); border-radius: 12px; padding: 14px 18px; box-shadow: var(--shadow); font-size: 14.5px; line-height: 1.7; color: #44506c; }
+.game-rules strong { display: block; font-family: var(--serif); font-size: 15px; color: var(--ink); margin-bottom: 2px; }
+.game-frame { background: var(--space); border-radius: 20px; padding: 12px; box-shadow: var(--shadow); }
+.game-frame iframe { display: block; width: 100%; aspect-ratio: 376 / 702; border: 0; border-radius: 14px; background: var(--space); }
+@media (max-width: 960px) {
+  .home-game { grid-template-columns: 1fr; gap: 28px; }
+  .game-frame { width: 100%; max-width: 400px; margin: 0 auto; }
+}
+@media (max-width: 760px) {
+  .home-game { padding-top: 48px; }
+  .home-game h2 { font-size: 36px; }
+  .game-frame { padding: 8px; }
+}

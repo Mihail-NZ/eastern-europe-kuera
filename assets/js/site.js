@@ -37,9 +37,9 @@
     EST: { ko: '에스토니아', en: 'Estonia', flag: { h: ['#0072ce', '#000000', '#ffffff'] } }
   };
   const SLUG_BY_ISO3 = { POL: 'poland', CZE: 'czechia', HUN: 'hungary', SVK: 'slovakia', SVN: 'slovenia',
-    HRV: 'croatia', SRB: 'serbia', EST: 'estonia', MDA: 'moldova', BGR: 'bulgaria', ROU: 'romania', LVA: 'latvia', LTU: 'lithuania', UKR: 'ukraine', BLR: 'belarus' };
+    HRV: 'croatia', SRB: 'serbia', EST: 'estonia', MDA: 'moldova', BGR: 'bulgaria', ROU: 'romania', LVA: 'latvia', LTU: 'lithuania', UKR: 'ukraine', BLR: 'belarus', MKD: 'north-macedonia', ALB: 'albania' };
   const ISO3_BY_SLUG = { poland: 'POL', czechia: 'CZE', hungary: 'HUN', slovakia: 'SVK', slovenia: 'SVN',
-    croatia: 'HRV', serbia: 'SRB', estonia: 'EST', moldova: 'MDA', bulgaria: 'BGR', romania: 'ROU', latvia: 'LVA', lithuania: 'LTU', ukraine: 'UKR', belarus: 'BLR' };
+    croatia: 'HRV', serbia: 'SRB', estonia: 'EST', moldova: 'MDA', bulgaria: 'BGR', romania: 'ROU', latvia: 'LVA', lithuania: 'LTU', ukraine: 'UKR', belarus: 'BLR', 'north-macedonia': 'MKD', albania: 'ALB' };
   const ISO3_BY_KO = {};
   Object.keys(EAST).forEach(k => { ISO3_BY_KO[EAST[k].ko] = k; });
   const SLUG_BY_KO = {};
@@ -118,8 +118,8 @@
     <div><p class="footer-brand">Eastern Europe <span class="brand-by">by KUERA</span></p>
     <p class="footer-org">고려대학교 동유럽지역 전략학회<span lang="en"> · Korea University Eastern Europe Research Association</span></p></div>
   </div>
-  <p>동유럽 학회원을 위한 국가 정보 아카이브. 국가 정보는 2026년 10월 18일에 검토했으며, 각 항목 아래 출처를 함께 적었습니다.</p>
-  <p>지도 경계: Natural Earth · 국기: <a href="https://flagpedia.net/" target="_blank" rel="noopener">Flagpedia</a></p>
+  <p>동유럽 학회원을 위한 국가 정보 아카이브. 국가 정보는 2026년 10월 기준으로 정리했으며, 각 항목 아래 출처를 함께 적었습니다. 운영시간·가격·통계는 바뀔 수 있으니 방문 전 공식 안내를 확인하세요.</p>
+  <p>지도 경계: Natural Earth · 국기: <a href="https://flagpedia.net/" target="_blank" rel="noopener">Flagpedia</a> · 사진: <a href="https://commons.wikimedia.org/" target="_blank" rel="noopener">Wikimedia Commons</a>(저작자와 라이선스는 사진마다 표시)</p>
 </div></footer>`;
   }
 
@@ -308,7 +308,7 @@
     svg.setAttribute('viewBox',narrow?'1050 0 720 760':'45 10 1745 780');
     svg.setAttribute('preserveAspectRatio','xMidYMid meet');
     svg.setAttribute('role','group');
-    svg.setAttribute('aria-label','동유럽 야경 지도. 폴란드, 체코, 헝가리, 슬로바키아, 슬로베니아를 비롯한 15개국 페이지로 이동할 수 있습니다.');
+    svg.setAttribute('aria-label','동유럽 야경 지도. 폴란드, 체코, 헝가리, 슬로바키아, 슬로베니아를 비롯한 17개국 페이지로 이동할 수 있습니다.');
     svg.innerHTML='<image href="'+ROOT+'assets/images/hero-clean-flags.png" width="1883" height="835" preserveAspectRatio="none"/>'+
       '<g transform="translate(1370 355) scale(2.65)">'+Object.entries(SLUG_BY_ISO3).map(([code,slug])=>'<a class="country is-live art-area" data-code="'+code+'" href="'+countryUrl(slug)+'" aria-label="'+EAST[code].ko+' 페이지 열기"><path d="'+MAP[code].d+'"/></a>').join('')+'</g>';
     stage.appendChild(svg);attachTooltip(stage,svg);return svg;
@@ -325,6 +325,22 @@
     <p>지도에서 나라를 선택해 사람과 문화, 언어, 음식, 산업을 살펴보세요.</p>
   </div>
 
+</section>
+<section class="home-game wrap" aria-labelledby="game-title">
+  <div class="game-copy">
+    <p class="kicker">Mini game</p>
+    <h2 id="game-title">Flag Battle Royale</h2>
+    <p>동유럽 20개국의 국기가 원 안에서 튕기다가, 돌아가는 틈으로 빠져나가면 탈락합니다. 마지막까지 남는 한 나라가 우승입니다.</p>
+    <ul class="game-rules">
+      <li><strong>랜덤 이벤트</strong> 틈이 두 개로 늘거나, 중력이 뒤집히거나, 한 나라가 거대해지는 변수가 수시로 일어납니다.</li>
+      <li><strong>총격전</strong> 약 15초마다 무작위 나라가 총을 들고 다른 나라를 쏩니다. 방패가 있으면 막아냅니다.</li>
+      <li><strong>조작</strong> 화면을 누르면 시작합니다. 아래 버튼으로 다시 시작, 일시정지, 소리, 배속을 바꿀 수 있습니다.</li>
+    </ul>
+    <a class="more" href="${ROOT}games/flag-battle/index.html" target="_blank" rel="noopener">새 창에서 크게 보기</a>
+  </div>
+  <div class="game-frame">
+    <iframe src="${ROOT}games/flag-battle/index.html?embed" title="Flag Battle Royale 국기 서바이벌 게임" loading="lazy"></iframe>
+  </div>
 </section>
 <section class="home-news wrap" aria-labelledby="news-title">
   <div class="section-head">
@@ -556,7 +572,7 @@
     const [src, alt] = photoUrls(p, slug);
     // 라이선스를 확인한 실제 사진이 아직 없는 항목은 다른 사진으로 대신하지 않고 빈 상태로 둔다
     if (!src) return `<figure class="place-img is-empty"><div class="place-photo"><span>사진 준비 중</span></div>
-    <figcaption>라이선스를 확인한 실제 사진을 구하는 대로 게시합니다.</figcaption></figure>`;
+    <figcaption>맞는 사진을 구하는 대로 채웁니다. 다른 사진으로 대신하지 않습니다.</figcaption></figure>`;
     return `<figure class="place-img"><div class="place-photo"><img src="${esc(src)}" alt="${esc(p.image_subject || p.title)}" loading="lazy" decoding="async" referrerpolicy="no-referrer"${alt ? ` data-alt="${esc(alt)}" onerror="this.onerror=null;this.src=this.dataset.alt"` : ''}></div>
     <figcaption>${photoCredit(p)}</figcaption></figure>`;
   }
@@ -567,9 +583,9 @@
       ? [['추천 체험', 'experience'], ['시기', 'season'], ['방문 유의사항', 'caution']]
       : [['주재료', 'ingredients'], ['맛과 식감', 'taste'], ['현지 식문화', 'context'], ['어디서 먹나', 'where'], ['알레르기 정보', 'allergens'], ['참고', 'notes']];
     const lang = { czechia: 'cs', hungary: 'hu', slovakia: 'sk', slovenia: 'sl', croatia: 'hr', serbia: 'sr', estonia: 'et', moldova: 'ro', bulgaria: 'bg',
-      romania: 'ro', latvia: 'lv', lithuania: 'lt', ukraine: 'uk', belarus: 'be' }[slug] || 'pl';
+      romania: 'ro', latvia: 'lv', lithuania: 'lt', ukraine: 'uk', belarus: 'be', 'north-macedonia': 'mk', albania: 'sq' }[slug] || 'pl';
     const noPhoto = items.filter(p => !photoUrls(p, slug)[0]).length;
-    return `<p class="img-note">사진은 Wikimedia Commons에 공개된 실제 촬영본이며, 저작자와 라이선스를 각 사진 아래에 적었습니다. 촬영한 ${kind === 'travel' ? '날씨·시기·구도' : '식당·지역·조리법'}에 따라 실제 모습은 다를 수 있습니다.${noPhoto ? ` 라이선스 확인이 끝나지 않은 ${noPhoto}곳은 사진을 비워 두었습니다.` : ''}</p>
+    return `<p class="img-note">사진은 Wikimedia Commons에 공개된 실제 촬영본이며, 저작자와 라이선스를 각 사진 아래에 적었습니다. 촬영한 ${kind === 'travel' ? '날씨·시기·구도' : '식당·지역·조리법'}에 따라 실제 모습은 다를 수 있습니다.${noPhoto ? ` 맞는 사진을 아직 찾지 못한 ${noPhoto}곳은 비워 두었습니다.` : ''}</p>
 <ul class="place-grid">${items.map(p => {
       const tags = kind === 'travel' ? [p.type, p.region] : [p.category];
       const src = (p.sources || []).map(k => sources[k]).filter(Boolean);
@@ -926,7 +942,9 @@ ${countryTabs(c, id)}
   <ul>
     <li>국가 정보는 EU, 각국 관광청, 투자진흥기관 같은 공식 출처를 우선하고 항목마다 출처를 적습니다.</li>
     <li>뉴스는 기사 본문을 옮기지 않고 요약과 원문 링크만 싣습니다.</li>
-    <li>사진은 이미지별 사용 조건을 확인한 뒤에만 게시합니다.</li>
+    <li>사진은 Wikimedia Commons에 공개된 사진을 쓰며, 저작자와 라이선스를 사진마다 표시합니다. 맞는 사진을 찾지 못한 곳은 다른 사진으로 대신하지 않고 "사진 준비 중"으로 비워 둡니다.</li>
+    <li>운영시간·입장료·통계는 바뀔 수 있습니다. 방문이나 인용 전에 각 항목의 출처를 다시 확인하세요.</li>
+    <li>우크라이나·벨라루스 페이지는 문화유산과 역사를 소개하는 자료이며, 현재 방문을 권유하지 않습니다.</li>
   </ul>
 </section>`;
   }

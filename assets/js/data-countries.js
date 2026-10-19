@@ -446,11 +446,11 @@ window.COUNTRY_DATA={
                           "subtitle":  "성곽과 산맥, 자동차 공급망이 맞닿는 유럽의 교차점",
                           "intro":  "다뉴브강이 흐르는 브라티슬라바에서 타트라산맥의 빙하호수, 동부의 목조 성당까지. 슬로바키아는 중세 도시와 민속문화, 유럽 자동차 제조업이 서로 다른 매력을 이루는 나라다.",
                           "fact":  {
-                                       "capital":  "Bratislava (브라티슬라바)",
+                                       "capital":  "브라티슬라바 (Bratislava)",
                                        "population":  "5,409,407명",
                                        "population_year":  2026,
                                        "official_language":  "슬로바키아어",
-                                       "currency":  "EUR",
+                                       "currency":  "유로 (EUR)",
                                        "eu":  "2004-05-01",
                                        "schengen":  "2007-12-21",
                                        "area":  "49,035 km²"
@@ -592,11 +592,11 @@ window.COUNTRY_DATA={
                           "subtitle":  "알프스와 아드리아해, 카르스트 동굴과 첨단 제조업의 만남",
                           "intro":  "슬로베니아에서는 류블랴나의 강변과 블레드 호수를 지나 소차강의 에메랄드빛 협곡과 피란의 아드리아해 해안까지 짧은 거리에서 만난다. 알프스·지중해·판노니아의 문화가 겹치는 나라다.",
                           "fact":  {
-                                       "capital":  "Ljubljana (류블랴나)",
+                                       "capital":  "류블랴나 (Ljubljana)",
                                        "population":  "2,135,107명",
                                        "population_year":  2026,
                                        "official_language":  "슬로베니아어",
-                                       "currency":  "EUR",
+                                       "currency":  "유로 (EUR)",
                                        "eu":  "2004-05-01",
                                        "schengen":  "2007-12-21",
                                        "area":  "20,273 km²"
@@ -705,7 +705,7 @@ window.COUNTRY_DATA={
                                        },
                                        {
                                            "name":  "Slovenia.info Press",
-                                           "url":  "https://www.slovenia.info/en/press-centre",
+                                           "url":  "https://www.slovenia.info/en",
                                            "description":  "여행·문화·관광통계"
                                        },
                                        {
@@ -735,14 +735,14 @@ window.COUNTRY_DATA={
                           "name_local":  "Hrvatska",
                           "iso2":  "HR",
                           "flag":  "🇭🇷",
-                          "subtitle":  "아드리아해 연안의 해양도시와 디나르알프스·슬라보니아 내륙을 연결하는 나라.",
+                          "subtitle":  "아드리아해 해안과 내륙의 문화가 만나는 나라",
                           "intro":  "아드리아해 연안의 해양도시와 디나르알프스·슬라보니아 내륙을 연결하는 나라. 로마시대 유산, 중세 해상무역, 근현대 산업, 다양한 지역 음식이 공존한다.",
                           "fact":  {
-                                       "capital":  "Zagreb",
+                                       "capital":  "자그레브 (Zagreb)",
                                        "population":  "3,876,002명",
                                        "population_year":  2026,
                                        "official_language":  "크로아티아어",
-                                       "currency":  "EUR (€)",
+                                       "currency":  "유로 (EUR)",
                                        "eu":  "EU 회원국 2013-07-01 / 유로·솅겐 2023-01-01",
                                        "schengen":  "",
                                        "area":  "56,594 km²"
@@ -881,14 +881,14 @@ window.COUNTRY_DATA={
                           "name_local":  "Србија / Srbija",
                           "iso2":  "RS",
                           "flag":  "🇷🇸",
-                          "subtitle":  "도나우·사바강의 내륙 교통축과 보이보디나 평야, 서부 산악 및 남부의 다양한 문화권이 만나는 나라.",
+                          "subtitle":  "도나우·사바강의 교통축과 다양한 문화권이 만나는 나라",
                           "intro":  "도나우·사바강의 내륙 교통축과 보이보디나 평야, 서부 산악 및 남부의 다양한 문화권이 만나는 나라. 중세 정교회 수도원에서 현대 ICT·자동차 산업까지 폭넓은 층위를 볼 수 있다.",
                           "fact":  {
-                                       "capital":  "Beograd / Београд",
+                                       "capital":  "베오그라드 (Београд)",
                                        "population":  "6,549,901명",
                                        "population_year":  2025,
                                        "official_language":  "세르비아어",
-                                       "currency":  "RSD (세르비아 디나르)",
+                                       "currency":  "세르비아 디나르 (RSD)",
                                        "eu":  "EU 비회원국·2012년 후보국 지위·2014년 가입협상 개시",
                                        "schengen":  "",
                                        "area":  "약 77,474 km² (코소보를 제외한 통계 기준에서 통용; 기준마다 달라 별도 표기 권장)"
@@ -1030,11 +1030,11 @@ window.COUNTRY_DATA={
                           "subtitle":  "중세 한자동맹의 거리와 디지털 국가, 숲과 습지의 발트해 공화국",
                           "intro":  "에스토니아는 발트해 동쪽의 북유럽적 문화권에 속하며 중세 탈린, 타르투 대학도시, 사레마 섬, 라헤마·소마의 늪지생태로 알려져 있다. 핀란드어와 가까운 에스토니아어는 슬라브어도 발트어도 아닌 우랄어족 언어다. 전자 신원·디지털 정부와 ICT 산업이 발달했으나, 관광·제조·임업 같은 실물경제도 중요한 비중을 차지한다.",
                           "fact":  {
-                                       "capital":  "탈린 Tallinn",
+                                       "capital":  "탈린 (Tallinn)",
                                        "population":  "1,360,745명",
                                        "population_year":  2026,
                                        "official_language":  "에스토니아어",
-                                       "currency":  "EUR",
+                                       "currency":  "유로 (EUR)",
                                        "eu":  "2004-05-01 가입",
                                        "schengen":  "2007-12-21 가입",
                                        "area":  "45,336 km²"
@@ -1186,11 +1186,11 @@ window.COUNTRY_DATA={
                           "subtitle":  "포도밭과 석회암 수도원, 다언어 문화가 만나는 드네스트르·프루트 사이의 나라",
                           "intro":  "몰도바는 루마니아와 우크라이나 사이의 내륙국으로 포도밭·와인 저장고·전통음식·정교회 문화와 농촌 풍경이 대표적이다. 국가의 공용어는 루마니아어이며 가가우즈어·러시아어·우크라이나어 등도 지역과 공동체별로 사용된다. 1991년 독립 이후 EU와의 경제·제도 연계를 확대하고 있지만, 트란스니스트리아의 미해결 분쟁과 전쟁 인접 위험을 구별하여 설명해야 한다.",
                           "fact":  {
-                                       "capital":  "키시너우 Chișinău",
+                                       "capital":  "키시너우 (Chișinău)",
                                        "population":  "2,409,207명",
                                        "population_year":  2024,
                                        "official_language":  "루마니아어",
-                                       "currency":  "MDL",
+                                       "currency":  "몰도바 레우 (MDL)",
                                        "eu":  "EU 비회원·가입 후보국; 2024년 협상 개시, 2026년 협상 진행",
                                        "schengen":  "비회원",
                                        "area":  "33,846 km²"
@@ -1289,7 +1289,7 @@ window.COUNTRY_DATA={
                           "news":  [
                                        {
                                            "name":  "Moldpres",
-                                           "url":  "https://www.moldpres.md/en",
+                                           "url":  "https://www.moldpres.md/",
                                            "description":  "통신사"
                                        },
                                        {
@@ -1339,14 +1339,14 @@ window.COUNTRY_DATA={
                           "name_local":  "България",
                           "iso2":  "BG",
                           "flag":  "🇧🇬",
-                          "subtitle":  "발칸산맥·릴라·피린산맥, 트라키아 평원, 흑해 해안이 한 나라 안에 공존한다.",
+                          "subtitle":  "발칸산맥과 흑해, 오래된 수도원과 로마 유적의 나라",
                           "intro":  "발칸산맥·릴라·피린산맥, 트라키아 평원, 흑해 해안이 한 나라 안에 공존한다. 소피아의 정교회 유산, 플로브디프의 로마 극장, 릴라 수도원의 벽화, 카잔러크의 장미 산업을 통해 역사·문화·경제를 연결해 소개할 수 있다.",
                           "fact":  {
                                        "capital":  "소피아 (София)",
                                        "population":  "6,423,207명",
                                        "population_year":  2026,
                                        "official_language":  "불가리아어",
-                                       "currency":  "유로(EUR), 2026-01-01 채택",
+                                       "currency":  "유로 (EUR)",
                                        "eu":  "2007-01-01 EU 가입",
                                        "schengen":  "2025-01-01 육상 국경 통제 해제 포함 완전 참여 (2024-03-31 항공·해상 내부통제 해제)",
                                        "area":  "110,996 km²"
@@ -1490,14 +1490,14 @@ window.COUNTRY_DATA={
                           "name_local":  "România",
                           "iso2":  "RO",
                           "flag":  "🇷🇴",
-                          "subtitle":  "트란실바니아의 요새도시와 카르파티아산맥, 부코비나의 벽화 수도원, 흑해로 흘러드는 도나우 삼각주가 루마니아의 다양한 지리·문화권을 구성한다.",
+                          "subtitle":  "트란실바니아의 요새도시와 카르파티아, 도나우 삼각주의 나라",
                           "intro":  "트란실바니아의 요새도시와 카르파티아산맥, 부코비나의 벽화 수도원, 흑해로 흘러드는 도나우 삼각주가 루마니아의 다양한 지리·문화권을 구성한다. 언어는 슬라브계가 아니라 라틴어에서 발전한 로망스어이며 자동차 제조업·ICT·에너지·농업 등 산업기반도 크다.",
                           "fact":  {
                                        "capital":  "부쿠레슈티 (București)",
                                        "population":  "19,041,322명",
                                        "population_year":  2026,
                                        "official_language":  "루마니아어",
-                                       "currency":  "루마니아 레우(RON), 유로 미채택",
+                                       "currency":  "루마니아 레우 (RON)",
                                        "eu":  "2007-01-01 EU 가입",
                                        "schengen":  "2025-01-01 육상 국경 통제 해제 포함 완전 참여 (2024-03-31 항공·해상 내부통제 해제)",
                                        "area":  "238,398 km²"
@@ -1641,14 +1641,14 @@ window.COUNTRY_DATA={
                           "name_local":  "Latvija",
                           "iso2":  "LV",
                           "flag":  "🇱🇻",
-                          "subtitle":  "발트해 동부 해안에 위치한 라트비아는 중세 한자동맹 도시 리가와 울창한 숲·습지·호수·해안 생태를 함께 지닌 나라다.",
+                          "subtitle":  "한자동맹의 도시 리가와 숲·습지·해안의 나라",
                           "intro":  "발트해 동부 해안에 위치한 라트비아는 중세 한자동맹 도시 리가와 울창한 숲·습지·호수·해안 생태를 함께 지닌 나라다. 동부 라트갈레의 종교문화와 서부 쿠르제메의 어촌생활, 남부 젬갈레의 농업환경이 뚜렷한 지역 차이를 만든다. 기술·바이오경제·재생에너지 분야에 투자를 유치하고 있으며, 발트해 물류망과 EU 단일시장의 접점에 있다.",
                           "fact":  {
                                        "capital":  "리가 (Rīga)",
                                        "population":  "1,845,096명",
                                        "population_year":  2026,
                                        "official_language":  "라트비아어",
-                                       "currency":  "EUR · 유로",
+                                       "currency":  "유로 (EUR)",
                                        "eu":  "2004-05-01",
                                        "schengen":  "2007-12-21",
                                        "area":  "64,594 km² (Eurostat 2026)"
@@ -1797,14 +1797,14 @@ window.COUNTRY_DATA={
                           "name_local":  "Lietuva",
                           "iso2":  "LT",
                           "flag":  "🇱🇹",
-                          "subtitle":  "발트해 연안의 리투아니아는 중세 대공국의 역사, 빌뉴스의 바로크 구시가지, 트라카이 섬의 요새, 쿠로니아 사주의 모래사구와 카우나스의 전간기 모더니즘 건축을 모두 보유한다.",
+                          "subtitle":  "대공국의 역사와 바로크 구시가지, 쿠로니아 사주의 나라",
                           "intro":  "발트해 연안의 리투아니아는 중세 대공국의 역사, 빌뉴스의 바로크 구시가지, 트라카이 섬의 요새, 쿠로니아 사주의 모래사구와 카우나스의 전간기 모더니즘 건축을 모두 보유한다. 언어적으로 라트비아어와 같은 발트어파에 속하며, 오늘날에는 핀테크·레이저·생명과학·디지털 서비스 등 첨단 산업을 육성하고 있다.",
                           "fact":  {
                                        "capital":  "빌뉴스 (Vilnius)",
                                        "population":  "2,890,664명",
                                        "population_year":  2025,
                                        "official_language":  "리투아니아어",
-                                       "currency":  "EUR · 유로",
+                                       "currency":  "유로 (EUR)",
                                        "eu":  "2004-05-01",
                                        "schengen":  "2007-12-21",
                                        "area":  "65,284 km² (Eurostat 2025)"
@@ -1953,14 +1953,14 @@ window.COUNTRY_DATA={
                           "name_local":  "Україна",
                           "iso2":  "UA",
                           "flag":  "🇺🇦",
-                          "subtitle":  "우크라이나는 흑해 연안과 카르파티아 산맥에 걸친 동유럽의 국가다.",
+                          "subtitle":  "흑해 연안에서 카르파티아 산맥까지 이어진 동유럽의 나라",
                           "intro":  "우크라이나는 흑해 연안과 카르파티아 산맥에 걸친 동유럽의 국가다. 키이우 루스의 중세유산, 카르파티아 산악문화, 코자크 전통, 비옥한 흑토 지대, 산업도시의 역사가 다양한 지역 정체성을 형성했다. 1991년 독립 이후 현재의 우크라이나는 2014년부터 계속된 러시아의 침략과 2022년 전면 침공으로 심각한 인명·경제·문화유산 피해를 겪고 있다. 국가 소개에서 문화적 풍요로움과 오늘날의 현실을 동시에 다루되, 주민을 전쟁 서사로만 환원하지 않는다.",
                           "fact":  {
                                        "capital":  "키이우 (Київ)",
                                        "population":  "",
                                        "population_year":  null,
                                        "official_language":  "우크라이나어",
-                                       "currency":  "흐리우냐 UAH",
+                                       "currency":  "흐리우냐 (UAH)",
                                        "eu":  "EU 비회원국·가입 후보국(2024년부터 가입협상)",
                                        "schengen":  "",
                                        "area":  "603,628 km²"
@@ -2109,14 +2109,14 @@ window.COUNTRY_DATA={
                           "name_local":  "Беларусь",
                           "iso2":  "BY",
                           "flag":  "🇧🇾",
-                          "subtitle":  "벨라루스는 폴란드·리투아니아·라트비아·러시아·우크라이나와 접하며 산림과 습지, 호수, 완만한 평원이 넓은 동유럽의 내륙국이다.",
+                          "subtitle":  "산림과 습지, 완만한 평원이 넓은 동유럽 내륙국",
                           "intro":  "벨라루스는 폴란드·리투아니아·라트비아·러시아·우크라이나와 접하며 산림과 습지, 호수, 완만한 평원이 넓은 동유럽의 내륙국이다. 중세 폴라츠크 공국과 리투아니아 대공국, 폴란드-리투아니아 연방의 역사부터 소비에트 시대 산업화까지 여러 정치체제를 거쳤다. 미르성과 네스비시, 벨라베자 원시림 등 문화·자연유산이 많으며 벨라루스어·러시아어가 공존한다. 현재 정치·인권 환경과 러시아의 우크라이나 전쟁 관여에 따른 국제 제재는 산업과 여행 정보를 이해하는 데 필수적인 맥락이다.",
                           "fact":  {
                                        "capital":  "민스크 (Мінск)",
                                        "population":  "",
                                        "population_year":  null,
                                        "official_language":  "벨라루스어",
-                                       "currency":  "벨라루스 루블 BYN",
+                                       "currency":  "벨라루스 루블 (BYN)",
                                        "eu":  "EU 비회원국·가입 후보국 아님",
                                        "schengen":  "",
                                        "area":  "207,600 km²"
@@ -2230,7 +2230,7 @@ window.COUNTRY_DATA={
                                        },
                                        {
                                            "name":  "Belsat",
-                                           "url":  "https://belsat.eu/en",
+                                           "url":  "https://belsat.eu/",
                                            "description":  "독립·국제뉴스"
                                        },
                                        {
@@ -2252,6 +2252,318 @@ window.COUNTRY_DATA={
                                            "name":  "European Commission trade",
                                            "url":  "https://policy.trade.ec.europa.eu/eu-trade-relationships-country-and-region/countries-and-regions/belarus_en",
                                            "description":  "무역·경제통계"
+                                       }
+                                   ],
+                          "official_sources":  [
+
+                                               ]
+                      },
+                      {
+                          "slug":  "north-macedonia",
+                          "name_ko":  "북마케도니아",
+                          "name_en":  "North Macedonia",
+                          "name_local":  "Република Северна Македонија",
+                          "iso2":  "MK",
+                          "flag":  "🇲🇰",
+                          "subtitle":  "오흐리드호와 고대 유산, 발칸 내륙 제조업의 교차점",
+                          "intro":  "북마케도니아는 발칸반도 내륙의 다언어 국가로 스코페의 옛 시장과 현대 도시개발, 오흐리드의 호수·중세 수도원, 샤르산맥과 펠리스테르의 산악 자연이 공존한다. 2019년 프레스파 합의에 따른 국호 변경 이후 북마케도니아라는 공식 명칭을 사용한다. 산업적으로는 유럽 가치사슬에 연결된 자동차 배선·촉매·제조업과 농식품·관광이 중요한 역할을 한다.",
+                          "fact":  {
+                                       "capital":  "스코페 (Скопје)",
+                                       "population":  "1,819,074명",
+                                       "population_year":  2025,
+                                       "official_language":  "마케도니아어 및 알바니아어",
+                                       "currency":  "마케도니아 데나르 (MKD)",
+                                       "eu":  "EU 가입 후보국. 회원국 아님",
+                                       "schengen":  "미가입",
+                                       "area":  "25,713 km²"
+                                   },
+                          "highlights":  [
+                                             "오흐리드 성 요한 교회",
+                                             "사무일 요새",
+                                             "성 나움 수도원"
+                                         ],
+                          "culture":  [
+                                          {
+                                              "title":  "오흐리드 문자문화",
+                                              "local":  "오흐리드 문자문화",
+                                              "body":  "클리멘트와 나움이 활동한 오흐리드 학파 전통은 남슬라브 문자문화와 기독교 교육의 중요한 역사적 맥락을 형성한다.",
+                                              "source":  null
+                                          },
+                                          {
+                                              "title":  "정교회 달력과 축일",
+                                              "local":  "정교회 달력과 축일",
+                                              "body":  "북마케도니아의 정교회 공동체는 부활절과 성인축일 등을 중요한 명절로 지킨다. 종파별 일정과 개인적 관습은 다를 수 있다.",
+                                              "source":  null
+                                          },
+                                          {
+                                              "title":  "알바니아계 공동체",
+                                              "local":  "알바니아계 공동체",
+                                              "body":  "알바니아어 사용자 공동체는 테토보·서북부에서 중요한 문화적 역할을 하며 북마케도니아의 다언어 성격을 보여 준다.",
+                                              "source":  null
+                                          }
+                                      ],
+                          "food":  [
+                                       {
+                                           "title":  "타브체 그라브체",
+                                           "local":  "Тавче гравче",
+                                           "body":  "흰콩을 파프리카·양파 등으로 조리해 작은 토기에 구운 대표적인 음식이다. 오스만·발칸의 콩요리 전통과 연결된다.",
+                                           "source":  null
+                                       },
+                                       {
+                                           "title":  "아이바르",
+                                           "local":  "Ајвар",
+                                           "body":  "구운 빨간 피망과 가지 등을 갈아 만든 소스로 가을철 대량 저장식의 특징이 있다. 발칸 여러 나라가 공유한다.",
+                                           "source":  null
+                                       },
+                                       {
+                                           "title":  "파스트르마일리야",
+                                           "local":  "Пастрмајлија",
+                                           "body":  "길쭉한 반죽 위에 작은 고기 조각을 얹어 오븐에 구운 지역 음식. 슈티프와 벨레스식 등 여러 변형이 있다.",
+                                           "source":  null
+                                       }
+                                   ],
+                          "language_note":  "마케도니아어는 인도유럽어족 남슬라브어파 언어로 31자 키릴 문자를 사용한다. 2001년 오흐리드 기본협정 이후 알바니아어의 공용 지위 및 공적 사용은 관련 헌법·법률에 따라 규율된다. 마케도니아어 표준음은 대부분 철자와 발음이 비교적 일정하지만, Ѓ·Ќ처럼 음성·음운 기술에 변이가 있는 문자가 있다.",
+                          "language":  [
+                                           {
+                                               "ko":  "안녕하세요 (낮)",
+                                               "local":  "Добар ден"
+                                           },
+                                           {
+                                               "ko":  "좋은 아침이에요",
+                                               "local":  "Добро утро"
+                                           },
+                                           {
+                                               "ko":  "안녕하세요 (저녁)",
+                                               "local":  "Добра вечер"
+                                           },
+                                           {
+                                               "ko":  "안녕 (친근하게)",
+                                               "local":  "Здраво"
+                                           },
+                                           {
+                                               "ko":  "안녕히 가세요",
+                                               "local":  "Довидување"
+                                           },
+                                           {
+                                               "ko":  "잘 자요",
+                                               "local":  "Добра ноќ"
+                                           }
+                                       ],
+                          "language_source":  "",
+                          "industry_intro":  "스코페 및 산업기술개발구역(TIDZ) 중심의 유럽향 자동차 부품·배선 하네스 제조 클러스터. 독일 등 EU 공급망 의존도가 높다.",
+                          "industry":  [
+                                           {
+                                               "title":  "자동차 부품·배선",
+                                               "body":  "스코페 및 산업기술개발구역(TIDZ) 중심의 유럽향 자동차 부품·배선 하네스 제조 클러스터. 독일 등 EU 공급망 의존도가 높다.",
+                                               "source":  null
+                                           },
+                                           {
+                                               "title":  "촉매·화학",
+                                               "body":  "귀금속 촉매 및 산업용 화학제품은 북마케도니아 수출 구성에서 중요한 분야다.",
+                                               "source":  null
+                                           },
+                                           {
+                                               "title":  "식음료·와인",
+                                               "body":  "티크베시 포도밭과 와인 생산, 농산물 가공·유통이 강점이다.",
+                                               "source":  null
+                                           }
+                                       ],
+                          "news":  [
+                                       {
+                                           "name":  "MIA",
+                                           "url":  "https://mia.mk/en",
+                                           "description":  "국영통신·정책"
+                                       },
+                                       {
+                                           "name":  "State Statistical Office",
+                                           "url":  "https://www.stat.mk/en/",
+                                           "description":  "통계·경제"
+                                       },
+                                       {
+                                           "name":  "Government of North Macedonia",
+                                           "url":  "https://vlada.mk/",
+                                           "description":  "정부 발표"
+                                       },
+                                       {
+                                           "name":  "European Commission",
+                                           "url":  "https://enlargement.ec.europa.eu/",
+                                           "description":  "EU 가입·개혁"
+                                       },
+                                       {
+                                           "name":  "EBRD",
+                                           "url":  "https://www.ebrd.com/",
+                                           "description":  "금융·에너지"
+                                       },
+                                       {
+                                           "name":  "UNESCO World Heritage",
+                                           "url":  "https://whc.unesco.org/",
+                                           "description":  "세계유산"
+                                       },
+                                       {
+                                           "name":  "Balkan Insight",
+                                           "url":  "https://balkaninsight.com/",
+                                           "description":  "지역 사회·정치"
+                                       },
+                                       {
+                                           "name":  "Radio Free Europe Balkans",
+                                           "url":  "https://www.slobodnaevropa.mk/",
+                                           "description":  "지역 뉴스"
+                                       }
+                                   ],
+                          "official_sources":  [
+
+                                               ]
+                      },
+                      {
+                          "slug":  "albania",
+                          "name_ko":  "알바니아",
+                          "name_en":  "Albania",
+                          "name_local":  "Shqipëria",
+                          "iso2":  "AL",
+                          "flag":  "🇦🇱",
+                          "subtitle":  "알프스의 산악 마을에서 이오니아해의 해변까지, 문화유산과 관광이 공존하는 나라",
+                          "intro":  "알바니아는 아드리아해와 이오니아해에 맞닿은 서부 발칸 국가다. 북부 알프스의 산악마을과 남부 리비에라, 베라트·지로카스터의 오스만시대 도시유산, 부트린트 고대 유적이 관광·문화의 중심을 이룬다. 알바니아어는 인도유럽어족 안에서 독자 분파로 분류되며, 산업은 관광·농식품·수력·제조·디지털 서비스가 함께 발전하고 있다.",
+                          "fact":  {
+                                       "capital":  "티라나 (Tiranë)",
+                                       "population":  "2,402,113명",
+                                       "population_year":  2023,
+                                       "official_language":  "알바니아어",
+                                       "currency":  "알바니아 레크 (ALL)",
+                                       "eu":  "EU 가입 후보국. 회원국 아님",
+                                       "schengen":  "미가입",
+                                       "area":  "28,748 km²"
+                                   },
+                          "highlights":  [
+                                             "베라트 구시가지",
+                                             "지로카스터 구시가지·성",
+                                             "부트린트 고고유적"
+                                         ],
+                          "culture":  [
+                                          {
+                                              "title":  "스칸데르베그와 역사기억",
+                                              "local":  "스칸데르베그와 역사기억",
+                                              "body":  "15세기 오스만 저항과 연결되는 스칸데르베그는 현대 알바니아 국민 정체성의 중요한 인물이다. 기념관과 역사 서술을 구분한다.",
+                                              "source":  null
+                                          },
+                                          {
+                                              "title":  "게그·토스크 지역성",
+                                              "local":  "게그·토스크 지역성",
+                                              "body":  "북부 게그, 남부 토스크의 언어·민속 차이가 존재하지만 개인과 공동체의 정체성은 더 다양하다. 현대 표준어는 토스크 기반이다.",
+                                              "source":  null
+                                          },
+                                          {
+                                              "title":  "이소 폴리포니",
+                                              "local":  "이소 폴리포니",
+                                              "body":  "알바니아 남부의 다성 성악은 선율과 지속음(드론)이 결합된 독특한 음악 전통으로 UNESCO 무형유산이다.",
+                                              "source":  null
+                                          }
+                                      ],
+                          "food":  [
+                                       {
+                                           "title":  "타버 코시",
+                                           "local":  "Tavë kosi",
+                                           "body":  "양고기와 쌀을 요거트·달걀 소스와 함께 구워 상단이 노릇해지는 알바니아 대표 음식이다.",
+                                           "source":  null
+                                       },
+                                       {
+                                           "title":  "퍼르게서",
+                                           "local":  "Fërgesë",
+                                           "body":  "고추·토마토·부드러운 치즈 등을 익히는 크리미한 요리로 빵과 곁들인다.",
+                                           "source":  null
+                                       },
+                                       {
+                                           "title":  "뷔레크",
+                                           "local":  "Byrek",
+                                           "body":  "얇은 반죽에 치즈·시금치·고기 등을 넣어 구워 파이처럼 먹는다. 오스만-발칸 음식문화의 공통 요소다.",
+                                           "source":  null
+                                       }
+                                   ],
+                          "language_note":  "알바니아어는 인도유럽어족에서 독자적인 계통을 이루며 표준어는 주로 남부 토스크(Tosk) 방언을 토대로 한다. 북부 게그(Gheg) 방언은 어휘·발음·형태에서 차이가 있을 수 있다. 라틴 36자 가운데 Dh, Gj 등 2문자 조합 9개를 독립된 알파벳으로 센다.",
+                          "language":  [
+                                           {
+                                               "ko":  "안녕하세요 (아침)",
+                                               "local":  "Mirëmëngjes!"
+                                           },
+                                           {
+                                               "ko":  "안녕하세요 (낮)",
+                                               "local":  "Mirëdita!"
+                                           },
+                                           {
+                                               "ko":  "안녕하세요 (저녁)",
+                                               "local":  "Mirëmbrëma!"
+                                           },
+                                           {
+                                               "ko":  "안녕 (친근하게)",
+                                               "local":  "Përshëndetje!"
+                                           },
+                                           {
+                                               "ko":  "안녕히 가세요",
+                                               "local":  "Mirupafshim!"
+                                           },
+                                           {
+                                               "ko":  "잘 자요",
+                                               "local":  "Natën e mirë!"
+                                           }
+                                       ],
+                          "language_source":  "",
+                          "industry_intro":  "아드리아·이오니아 해안과 UNESCO 역사도시, 알프스 트레킹이 서비스업의 성장 동력이다.",
+                          "industry":  [
+                                           {
+                                               "title":  "관광·숙박",
+                                               "body":  "아드리아·이오니아 해안과 UNESCO 역사도시, 알프스 트레킹이 서비스업의 성장 동력이다.",
+                                               "source":  null
+                                           },
+                                           {
+                                               "title":  "수력·재생에너지",
+                                               "body":  "수력발전 비중이 큰 전력시스템에서 가뭄 리스크 완화 및 태양광·풍력 다변화가 주요 과제다.",
+                                               "source":  null
+                                           },
+                                           {
+                                               "title":  "농업·농식품",
+                                               "body":  "올리브·과일·채소·약용식물·유제품 등 농식품 가치사슬이 존재한다.",
+                                               "source":  null
+                                           }
+                                       ],
+                          "news":  [
+                                       {
+                                           "name":  "ATA - Albanian Telegraphic Agency",
+                                           "url":  "https://ata.gov.al/",
+                                           "description":  "국영통신·정책"
+                                       },
+                                       {
+                                           "name":  "INSTAT",
+                                           "url":  "https://www.instat.gov.al/en/",
+                                           "description":  "통계·경제"
+                                       },
+                                       {
+                                           "name":  "Albanian National Tourism Agency",
+                                           "url":  "https://www.akt.gov.al/en/",
+                                           "description":  "관광·문화"
+                                       },
+                                       {
+                                           "name":  "European Commission",
+                                           "url":  "https://enlargement.ec.europa.eu/",
+                                           "description":  "EU 가입·개혁"
+                                       },
+                                       {
+                                           "name":  "UNESCO",
+                                           "url":  "https://whc.unesco.org/",
+                                           "description":  "세계유산"
+                                       },
+                                       {
+                                           "name":  "Balkan Insight",
+                                           "url":  "https://balkaninsight.com/",
+                                           "description":  "지역 사회·정치"
+                                       },
+                                       {
+                                           "name":  "Exit News",
+                                           "url":  "https://exit.al/en/",
+                                           "description":  "정치·사회"
+                                       },
+                                       {
+                                           "name":  "Bank of Albania",
+                                           "url":  "https://www.bankofalbania.org/",
+                                           "description":  "통화·경제"
                                        }
                                    ],
                           "official_sources":  [
