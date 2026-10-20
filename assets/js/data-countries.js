@@ -2569,6 +2569,474 @@ window.COUNTRY_DATA={
                           "official_sources":  [
 
                                                ]
+                      },
+                      {
+                          "slug":  "bosnia-herzegovina",
+                          "name_ko":  "보스니아 헤르체고비나",
+                          "name_en":  "Bosnia and Herzegovina",
+                          "name_local":  "Bosna i Hercegovina / Босна и Херцеговина",
+                          "iso2":  "BA",
+                          "flag":  "🇧🇦",
+                          "subtitle":  "오스만과 합스부르크의 유산, 강과 산이 어우러진 나라",
+                          "intro":  "디나르 알프스와 네레트바·드리나 강, 오스만 제국의 도시유산과 합스부르크 시기 건축이 한 공간에 공존한다. 사라예보의 바슈차르시야부터 모스타르의 재건된 옛 다리까지, 20세기 전쟁의 기억과 오늘날의 다층적 문화가 함께 나타난다. 산업은 금속·자동차 부품·목재·에너지·관광·ICT로 구성되며, 복잡한 행정구조를 이해하는 것이 경제를 해석하는 출발점이다.",
+                          "fact":  {
+                                       "capital":  "사라예보 (Sarajevo)",
+                                       "population":  "약 353만 명",
+                                       "population_year":  2013,
+                                       "official_language":  "보스니아어·크로아티아어·세르비아어",
+                                       "currency":  "태환 마르크 (BAM)",
+                                       "eu":  "EU 가입 후보국(2022), 2024년 가입협상 개시 결정",
+                                       "schengen":  "",
+                                       "area":  ""
+                                   },
+                          "highlights":  [
+                                             "바슈차르시야·세빌리 분수",
+                                             "라틴교",
+                                             "모스타르 옛 다리"
+                                         ],
+                          "culture":  [
+                                          {
+                                              "title":  "세브달린카 전통 도시가요",
+                                              "local":  "세브달린카 전통 도시가요",
+                                              "body":  "오스만 제국 시기 도시 서사·사랑 노래 전통과 지역 음악이 섞여 발달했다. UNESCO 무형유산(2024)으로 등재되었다.",
+                                              "source":  null
+                                          },
+                                          {
+                                              "title":  "스테치치 중세 묘비",
+                                              "local":  "스테치치 중세 묘비",
+                                              "body":  "석조 묘비의 형태·문양·비문이 보스니아뿐 아니라 주변 국가에도 분포한다. 여러 나라가 함께 가진 공동 유산이다.",
+                                              "source":  null
+                                          },
+                                          {
+                                              "title":  "즈미야네 자수",
+                                              "local":  "즈미야네 자수",
+                                              "body":  "깊은 남색 실과 기하학 문양이 특징적인 자수 기법으로 UNESCO 무형문화유산에 등재되었다.",
+                                              "source":  null
+                                          }
+                                      ],
+                          "food":  [
+                                       {
+                                           "title":  "체바피",
+                                           "local":  "Ćevapi",
+                                           "body":  "잘게 다진 고기를 작은 원통 형태로 구워 솜운(somun) 빵·양파와 함께 제공한다. 사라예보와 반야루카 등 지역별 모양과 양념 차이가 있다.",
+                                           "source":  null
+                                       },
+                                       {
+                                           "title":  "부레크",
+                                           "local":  "Burek",
+                                           "body":  "얇은 유프카 반죽에 고기 소를 넣어 말거나 겹겹이 굽는다. 보스니아에서는 고기 파이를 burek, 치즈 등 다른 속의 파이를 다른 명칭으로 구분하는 관습이 널리 알려져 있다.",
+                                           "source":  null
+                                       },
+                                       {
+                                           "title":  "시르니차",
+                                           "local":  "Sirnica",
+                                           "body":  "치즈·유제품 소를 넣어 구운 파이. 부레크와 비슷하게 생겼지만 속 재료가 다르다.",
+                                           "source":  null
+                                       }
+                                   ],
+                          "language_note":  "남슬라브어군 슈토카비아 방언 연속체에 속한다. 보스니아어·크로아티아어·세르비아어와 상호 이해도가 높지만 문화·정체성과 공식 표기 차이는 존중한다.",
+                          "language":  [
+                                           {
+                                               "ko":  "안녕하세요(격식)",
+                                               "local":  "Dobar dan."
+                                           },
+                                           {
+                                               "ko":  "안녕하세요(친근)",
+                                               "local":  "Zdravo."
+                                           },
+                                           {
+                                               "ko":  "좋은 아침입니다",
+                                               "local":  "Dobro jutro."
+                                           },
+                                           {
+                                               "ko":  "좋은 저녁입니다",
+                                               "local":  "Dobro veče."
+                                           },
+                                           {
+                                               "ko":  "안녕히 주무세요",
+                                               "local":  "Laku noć."
+                                           },
+                                           {
+                                               "ko":  "감사합니다",
+                                               "local":  "Hvala."
+                                           }
+                                       ],
+                          "language_source":  "",
+                          "industry_intro":  "제니차·모스타르·중부 산업도시의 금속 가공, 제련·부품 공급망이 있다.",
+                          "industry":  [
+                                           {
+                                               "title":  "금속·철강·비철금속",
+                                               "body":  "제니차·모스타르·중부 산업도시의 금속 가공, 제련·부품 공급망이 있다.",
+                                               "source":  null
+                                           },
+                                           {
+                                               "title":  "자동차 부품·가공",
+                                               "body":  "금속·플라스틱·하네스 등 유럽 완성차 공급망과 연결되는 부품 생산이 특징이다.",
+                                               "source":  null
+                                           },
+                                           {
+                                               "title":  "목재·가구",
+                                               "body":  "산림자원 기반의 제재·가구·인테리어 제조로 유럽 시장을 공략한다.",
+                                               "source":  null
+                                           }
+                                       ],
+                          "news":  [
+                                       {
+                                           "name":  "BHAS 국가통계",
+                                           "url":  "https://bhas.gov.ba/",
+                                           "description":  "통계"
+                                       },
+                                       {
+                                           "name":  "FIPA 투자청",
+                                           "url":  "https://fipa.gov.ba/en",
+                                           "description":  "산업"
+                                       },
+                                       {
+                                           "name":  "CBBH 중앙은행",
+                                           "url":  "https://www.cbbh.ba/",
+                                           "description":  "경제"
+                                       },
+                                       {
+                                           "name":  "EU 확대국 보고서",
+                                           "url":  "https://enlargement.ec.europa.eu/countries/bosnia-and-herzegovina_en",
+                                           "description":  "EU"
+                                       },
+                                       {
+                                           "name":  "Klix.ba",
+                                           "url":  "https://www.klix.ba/",
+                                           "description":  "국내"
+                                       },
+                                       {
+                                           "name":  "N1 BiH",
+                                           "url":  "https://n1info.ba/",
+                                           "description":  "정치·사회"
+                                       },
+                                       {
+                                           "name":  "Radio Slobodna Evropa Balkan",
+                                           "url":  "https://www.slobodnaevropa.org/",
+                                           "description":  "국제"
+                                       },
+                                       {
+                                           "name":  "UNESCO BiH",
+                                           "url":  "https://whc.unesco.org/en/statesparties/ba/",
+                                           "description":  "문화"
+                                       }
+                                   ],
+                          "official_sources":  [
+
+                                               ]
+                      },
+                      {
+                          "slug":  "montenegro",
+                          "name_ko":  "몬테네그로",
+                          "name_en":  "Montenegro",
+                          "name_local":  "Crna Gora / Црна Гора",
+                          "iso2":  "ME",
+                          "flag":  "🇲🇪",
+                          "subtitle":  "아드리아 해안과 고산지대가 맞닿은 작은 나라",
+                          "intro":  "아드리아해 코토르만의 베네치아 유산과 두르미토르 고산지대가 한 나라에 공존한다. 해안 휴양 관광이 경제에서 매우 중요하지만, 북부의 생태관광·바르항 물류·에너지 전환·ICT로 경제의 계절성을 줄이는 노력이 함께 진행된다. EU 가입 협상이 진전된 서발칸 국가 중 하나이며 유로화를 사용하지만 유로존 회원국은 아니라는 점이 특징이다.",
+                          "fact":  {
+                                       "capital":  "포드고리차 (Podgorica)",
+                                       "population":  "623,633명",
+                                       "population_year":  2023,
+                                       "official_language":  "몬테네그로어",
+                                       "currency":  "유로 (EUR)",
+                                       "eu":  "EU 가입 후보국(2026-10-12 기준 협상 33개 분야 중 21개 잠정 종결)",
+                                       "schengen":  "",
+                                       "area":  ""
+                                   },
+                          "highlights":  [
+                                             "코토르 구시가지·성벽",
+                                             "코토르만",
+                                             "페라스트·바위 위의 성모섬"
+                                         ],
+                          "culture":  [
+                                          {
+                                              "title":  "보카 해양단",
+                                              "local":  "보카 해양단",
+                                              "body":  "코토르의 Boka Navy 의례·복장·원무는 UNESCO 무형유산(2021)으로 등재되었다.",
+                                              "source":  null
+                                          },
+                                          {
+                                              "title":  "페타르 2세 페트로비치 녜고시",
+                                              "local":  "페타르 2세 페트로비치 녜고시",
+                                              "body":  "시인·통치자로 알려진 인물과 로브첸 영묘가 국가문화 기억을 상징한다.",
+                                              "source":  null
+                                          },
+                                          {
+                                              "title":  "베네치아의 해안 유산",
+                                              "local":  "베네치아의 해안 유산",
+                                              "body":  "코토르·부드바·페라스트의 석조건물과 요새는 아드리아 해상교역의 역사를 보여 준다.",
+                                              "source":  null
+                                          }
+                                      ],
+                          "food":  [
+                                       {
+                                           "title":  "녜구시 훈제햄",
+                                           "local":  "Njeguški pršut",
+                                           "body":  "녜구시 마을의 전통 염장·건조 숙성 햄. 산간 기후와 훈연법이 맛에 영향을 주며 치즈·올리브와 곁들인다.",
+                                           "source":  null
+                                       },
+                                       {
+                                           "title":  "녜구시 치즈",
+                                           "local":  "Njeguški sir",
+                                           "body":  "녜구시 지역의 숙성 치즈. 햄과 함께 지역 전채요리로 낸다.",
+                                           "source":  null
+                                       },
+                                       {
+                                           "title":  "카차마크",
+                                           "local":  "Kačamak",
+                                           "body":  "북부에서 먹는 묵직한 옥수수 가루·감자 으깬 요리. 치즈·카이마크와 함께 제공되는 경우가 많다.",
+                                           "source":  null
+                                       }
+                                   ],
+                          "language_note":  "남슬라브어군 슈토카비아 체계. 국가 표준어로 몬테네그로어를 공식 채택했으며 세르비아어·보스니아어·크로아티아어와 상호 이해도가 높다.",
+                          "language":  [
+                                           {
+                                               "ko":  "안녕하세요(격식)",
+                                               "local":  "Dobar dan."
+                                           },
+                                           {
+                                               "ko":  "안녕하세요(친근)",
+                                               "local":  "Zdravo."
+                                           },
+                                           {
+                                               "ko":  "좋은 아침입니다",
+                                               "local":  "Dobro jutro."
+                                           },
+                                           {
+                                               "ko":  "좋은 저녁입니다",
+                                               "local":  "Dobro veče."
+                                           },
+                                           {
+                                               "ko":  "안녕히 주무세요",
+                                               "local":  "Laku noć."
+                                           },
+                                           {
+                                               "ko":  "감사합니다",
+                                               "local":  "Hvala."
+                                           }
+                                       ],
+                          "language_source":  "",
+                          "industry_intro":  "코토르만·부드바 등 아드리아해 연안 리조트와 크루즈, 북부 생태관광이 성장 축이다.",
+                          "industry":  [
+                                           {
+                                               "title":  "관광·숙박·레저",
+                                               "body":  "코토르만·부드바 등 아드리아해 연안 리조트와 크루즈, 북부 생태관광이 성장 축이다.",
+                                               "source":  null
+                                           },
+                                           {
+                                               "title":  "수력·풍력·태양광 에너지",
+                                               "body":  "전력생산의 수력 의존과 신규 풍력·태양광 프로젝트가 병존한다.",
+                                               "source":  null
+                                           },
+                                           {
+                                               "title":  "바르항·물류",
+                                               "body":  "바르항과 철도·도로는 서발칸 내륙 연결 관문이다.",
+                                               "source":  null
+                                           }
+                                       ],
+                          "news":  [
+                                       {
+                                           "name":  "MONSTAT 통계청",
+                                           "url":  "https://www.monstat.org/",
+                                           "description":  "통계"
+                                       },
+                                       {
+                                           "name":  "MIA 투자청",
+                                           "url":  "https://mia.gov.me/en/",
+                                           "description":  "산업"
+                                       },
+                                       {
+                                           "name":  "몬테네그로 정부",
+                                           "url":  "https://www.gov.me/en",
+                                           "description":  "정책"
+                                       },
+                                       {
+                                           "name":  "EU 확대국 보고서",
+                                           "url":  "https://enlargement.ec.europa.eu/countries/montenegro_en",
+                                           "description":  "EU"
+                                       },
+                                       {
+                                           "name":  "공식 관광청",
+                                           "url":  "https://www.montenegro.travel/en",
+                                           "description":  "관광"
+                                       },
+                                       {
+                                           "name":  "Vijesti",
+                                           "url":  "https://www.vijesti.me/",
+                                           "description":  "국내"
+                                       },
+                                       {
+                                           "name":  "RTCG 공영방송",
+                                           "url":  "https://rtcg.me/",
+                                           "description":  "사회"
+                                       },
+                                       {
+                                           "name":  "World Bank 국가보고",
+                                           "url":  "https://www.worldbank.org/ext/en/country/montenegro",
+                                           "description":  "경제"
+                                       }
+                                   ],
+                          "official_sources":  [
+
+                                               ]
+                      },
+                      {
+                          "slug":  "kosovo",
+                          "name_ko":  "코소보",
+                          "name_en":  "Kosovo",
+                          "name_local":  "Kosova / Косово",
+                          "iso2":  "XK",
+                          "flag":  "🇽🇰",
+                          "subtitle":  "오스만기 도시유산과 중세 수도원, 젊은 인구의 나라",
+                          "intro":  "프리즈렌의 오스만기 구시가지, 프리슈티나의 현대 공공건축, 루고바 협곡·샤르산맥의 자연이 공존한다. 알바니아계가 다수를 이루며, 세르비아계와 여러 소수 공동체의 문화유산도 함께 있다. 경제는 ICT 서비스, 송금·소비, 에너지·광물, 농식품·경공업 등이 주요 소재이며 젊은 인구구조와 수입 의존을 동시에 볼 필요가 있다.",
+                          "fact":  {
+                                       "capital":  "프리슈티나 (Prishtinë)",
+                                       "population":  "1,602,515명",
+                                       "population_year":  2024,
+                                       "official_language":  "알바니아어·세르비아어",
+                                       "currency":  "유로 (EUR)",
+                                       "eu":  "EU 잠재 후보국(potential candidate)",
+                                       "schengen":  "",
+                                       "area":  ""
+                                   },
+                          "highlights":  [
+                                             "프리즈렌 구시가지·석교",
+                                             "프리즈렌 요새",
+                                             "시난 파샤 모스크"
+                                         ],
+                          "culture":  [
+                                          {
+                                              "title":  "프리즈렌 도시문화",
+                                              "local":  "프리즈렌 도시문화",
+                                              "body":  "오스만기 석교·모스크·교회·시장 공간이 한 도시에 공존한다.",
+                                              "source":  null
+                                          },
+                                          {
+                                              "title":  "알바니아계 언어·가족문화",
+                                              "local":  "알바니아계 언어·가족문화",
+                                              "body":  "알바니아어가 일상에서 널리 쓰이지만, 다른 소수 공동체도 함께 살고 있다.",
+                                              "source":  null
+                                          },
+                                          {
+                                              "title":  "세르비아 정교회 중세유산",
+                                              "local":  "세르비아 정교회 중세유산",
+                                              "body":  "데차니·그라차니차·페치 수도원 등은 중요한 종교·예술 유산이며, 보호 체계와 관리 주체는 유산마다 다르다.",
+                                              "source":  null
+                                          }
+                                      ],
+                          "food":  [
+                                       {
+                                           "title":  "플리야",
+                                           "local":  "Flija / Fli",
+                                           "body":  "층층이 얇은 반죽을 굽고 크림·버터를 바르는 요리. 전통 화덕덮개(saç)를 활용하며 코소보와 알바니아 여러 지역에서 공유한다.",
+                                           "source":  null
+                                       },
+                                       {
+                                           "title":  "피테",
+                                           "local":  "Pite",
+                                           "body":  "시금치·치즈·고기 등 다양한 속을 넣은 전통 파이의 총칭. 지역과 가정마다 모양이 크게 다르다.",
+                                           "source":  null
+                                       },
+                                       {
+                                           "title":  "부레크",
+                                           "local":  "Burek",
+                                           "body":  "육류 소를 넣은 얇은 반죽 파이로 도시 베이커리에서 널리 판매된다. 주변 국가와 공유하는 음식이다.",
+                                           "source":  null
+                                       }
+                                   ],
+                          "language_note":  "알바니아어는 인도유럽어족의 독립된 분파이다. 코소보에서는 게그(Gheg) 방언이 널리 사용되지만 교육·공적 글쓰기는 표준 알바니아어 철자법을 따른다. 세르비아어도 공용어이므로 다언어 안내를 별도로 제공한다.",
+                          "language":  [
+                                           {
+                                               "ko":  "안녕하세요(격식)",
+                                               "local":  "Mirëdita."
+                                           },
+                                           {
+                                               "ko":  "안녕하세요",
+                                               "local":  "Përshëndetje."
+                                           },
+                                           {
+                                               "ko":  "좋은 아침입니다",
+                                               "local":  "Mirëmëngjes."
+                                           },
+                                           {
+                                               "ko":  "좋은 저녁입니다",
+                                               "local":  "Mirëmbrëma."
+                                           },
+                                           {
+                                               "ko":  "안녕히 주무세요",
+                                               "local":  "Natën e mirë."
+                                           },
+                                           {
+                                               "ko":  "감사합니다",
+                                               "local":  "Faleminderit."
+                                           }
+                                       ],
+                          "language_source":  "",
+                          "industry_intro":  "웹·모바일 개발·원격 IT 서비스가 비교적 국제시장과 연결된 산업 중 하나이다.",
+                          "industry":  [
+                                           {
+                                               "title":  "ICT·소프트웨어 수출",
+                                               "body":  "웹·모바일 개발·원격 IT 서비스가 비교적 국제시장과 연결된 산업 중 하나이다.",
+                                               "source":  null
+                                           },
+                                           {
+                                               "title":  "전력·재생에너지",
+                                               "body":  "석탄화력 비중이 높고 풍력·태양광 확대와 전력망 개선이 과제다.",
+                                               "source":  null
+                                           },
+                                           {
+                                               "title":  "광업·금속",
+                                               "body":  "트렙차(Trepça) 광업 유산과 납·아연 등 금속 자원이 있다.",
+                                               "source":  null
+                                           }
+                                       ],
+                          "news":  [
+                                       {
+                                           "name":  "Kosovo Agency of Statistics",
+                                           "url":  "https://ask.rks-gov.net/",
+                                           "description":  "통계"
+                                       },
+                                       {
+                                           "name":  "Kosovo 정부",
+                                           "url":  "https://kryeministri.rks-gov.net/en/",
+                                           "description":  "정책"
+                                       },
+                                       {
+                                           "name":  "EU Kosovo 확대국",
+                                           "url":  "https://enlargement.ec.europa.eu/countries/kosovo_en",
+                                           "description":  "EU"
+                                       },
+                                       {
+                                           "name":  "OECD Kosovo",
+                                           "url":  "https://www.oecd.org/en/publications/western-balkans-competitiveness-outlook-2024-kosovo_ff74ae0e-en.html",
+                                           "description":  "산업"
+                                       },
+                                       {
+                                           "name":  "Koha",
+                                           "url":  "https://www.koha.net/",
+                                           "description":  "국내"
+                                       },
+                                       {
+                                           "name":  "KALLXO",
+                                           "url":  "https://kallxo.com/",
+                                           "description":  "탐사"
+                                       },
+                                       {
+                                           "name":  "Kosovo 2.0",
+                                           "url":  "https://kosovotwopointzero.com/en/",
+                                           "description":  "문화·사회"
+                                       },
+                                       {
+                                           "name":  "Radio Free Europe Kosovo",
+                                           "url":  "https://www.evropaelire.org/",
+                                           "description":  "국제"
+                                       }
+                                   ],
+                          "official_sources":  [
+
+                                               ]
                       }
                   ]
 };

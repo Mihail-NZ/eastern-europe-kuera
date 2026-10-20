@@ -37,9 +37,9 @@
     EST: { ko: '에스토니아', en: 'Estonia', flag: { h: ['#0072ce', '#000000', '#ffffff'] } }
   };
   const SLUG_BY_ISO3 = { POL: 'poland', CZE: 'czechia', HUN: 'hungary', SVK: 'slovakia', SVN: 'slovenia',
-    HRV: 'croatia', SRB: 'serbia', EST: 'estonia', MDA: 'moldova', BGR: 'bulgaria', ROU: 'romania', LVA: 'latvia', LTU: 'lithuania', UKR: 'ukraine', BLR: 'belarus', MKD: 'north-macedonia', ALB: 'albania' };
+    HRV: 'croatia', SRB: 'serbia', EST: 'estonia', MDA: 'moldova', BGR: 'bulgaria', ROU: 'romania', LVA: 'latvia', LTU: 'lithuania', UKR: 'ukraine', BLR: 'belarus', MKD: 'north-macedonia', ALB: 'albania', BIH: 'bosnia-herzegovina', MNE: 'montenegro', KOS: 'kosovo' };
   const ISO3_BY_SLUG = { poland: 'POL', czechia: 'CZE', hungary: 'HUN', slovakia: 'SVK', slovenia: 'SVN',
-    croatia: 'HRV', serbia: 'SRB', estonia: 'EST', moldova: 'MDA', bulgaria: 'BGR', romania: 'ROU', latvia: 'LVA', lithuania: 'LTU', ukraine: 'UKR', belarus: 'BLR', 'north-macedonia': 'MKD', albania: 'ALB' };
+    croatia: 'HRV', serbia: 'SRB', estonia: 'EST', moldova: 'MDA', bulgaria: 'BGR', romania: 'ROU', latvia: 'LVA', lithuania: 'LTU', ukraine: 'UKR', belarus: 'BLR', 'north-macedonia': 'MKD', albania: 'ALB', 'bosnia-herzegovina': 'BIH', montenegro: 'MNE', kosovo: 'KOS' };
   const ISO3_BY_KO = {};
   Object.keys(EAST).forEach(k => { ISO3_BY_KO[EAST[k].ko] = k; });
   const SLUG_BY_KO = {};
@@ -308,7 +308,7 @@
     svg.setAttribute('viewBox',narrow?'1050 0 720 760':'45 10 1745 780');
     svg.setAttribute('preserveAspectRatio','xMidYMid meet');
     svg.setAttribute('role','group');
-    svg.setAttribute('aria-label','동유럽 야경 지도. 폴란드, 체코, 헝가리, 슬로바키아, 슬로베니아를 비롯한 17개국 페이지로 이동할 수 있습니다.');
+    svg.setAttribute('aria-label','동유럽 야경 지도. 폴란드, 체코, 헝가리, 슬로바키아, 슬로베니아를 비롯한 20개국 페이지로 이동할 수 있습니다.');
     svg.innerHTML='<image href="'+ROOT+'assets/images/hero-clean-flags.png" width="1883" height="835" preserveAspectRatio="none"/>'+
       '<g transform="translate(1370 355) scale(2.65)">'+Object.entries(SLUG_BY_ISO3).map(([code,slug])=>'<a class="country is-live art-area" data-code="'+code+'" href="'+countryUrl(slug)+'" aria-label="'+EAST[code].ko+' 페이지 열기"><path d="'+MAP[code].d+'"/></a>').join('')+'</g>';
     stage.appendChild(svg);attachTooltip(stage,svg);return svg;
@@ -567,7 +567,7 @@
       ? [['추천 체험', 'experience'], ['시기', 'season'], ['방문 유의사항', 'caution']]
       : [['주재료', 'ingredients'], ['맛과 식감', 'taste'], ['현지 식문화', 'context'], ['어디서 먹나', 'where'], ['알레르기 정보', 'allergens'], ['참고', 'notes']];
     const lang = { czechia: 'cs', hungary: 'hu', slovakia: 'sk', slovenia: 'sl', croatia: 'hr', serbia: 'sr', estonia: 'et', moldova: 'ro', bulgaria: 'bg',
-      romania: 'ro', latvia: 'lv', lithuania: 'lt', ukraine: 'uk', belarus: 'be', 'north-macedonia': 'mk', albania: 'sq' }[slug] || 'pl';
+      romania: 'ro', latvia: 'lv', lithuania: 'lt', ukraine: 'uk', belarus: 'be', 'north-macedonia': 'mk', albania: 'sq', 'bosnia-herzegovina': 'bs', montenegro: 'sr', kosovo: 'sq' }[slug] || 'pl';
     const noPhoto = items.filter(p => !photoUrls(p, slug)[0]).length;
     return `<p class="img-note">사진은 Wikimedia Commons에 공개된 실제 촬영본이며, 저작자와 라이선스를 각 사진 아래에 적었습니다. 촬영한 ${kind === 'travel' ? '날씨·시기·구도' : '식당·지역·조리법'}에 따라 실제 모습은 다를 수 있습니다.${noPhoto ? ` 맞는 사진을 아직 찾지 못한 ${noPhoto}곳은 비워 두었습니다.` : ''}</p>
 <ul class="place-grid">${items.map(p => {
