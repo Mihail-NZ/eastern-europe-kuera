@@ -324,6 +324,7 @@
     <h1 id="hero-title"><span class="h-line">Discover</span><span class="h-line h-glow">Eastern Europe</span></h1>
     <p>지도에서 나라를 선택해 사람과 문화, 언어, 음식, 산업을 살펴보세요.</p>
   </div>
+  <p class="hero-tag">From Eastern Europe <em>to a New ERA.</em></p>
 
 </section>
 <section class="home-news wrap" aria-labelledby="news-title">
