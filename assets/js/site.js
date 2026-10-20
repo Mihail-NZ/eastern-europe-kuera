@@ -309,7 +309,7 @@
     svg.setAttribute('preserveAspectRatio','xMidYMid meet');
     svg.setAttribute('role','group');
     svg.setAttribute('aria-label','동유럽 야경 지도. 폴란드, 체코, 헝가리, 슬로바키아, 슬로베니아를 비롯한 20개국 페이지로 이동할 수 있습니다.');
-    svg.innerHTML='<image href="'+ROOT+'assets/images/hero-clean-flags.png" width="1883" height="835" preserveAspectRatio="none"/>'+
+    svg.innerHTML='<image href="'+ROOT+'assets/images/hero-clean-flags-era.png" width="1883" height="835" preserveAspectRatio="none"/>'+
       '<g transform="translate(1370 355) scale(2.65)">'+Object.entries(SLUG_BY_ISO3).map(([code,slug])=>'<a class="country is-live art-area" data-code="'+code+'" href="'+countryUrl(slug)+'" aria-label="'+EAST[code].ko+' 페이지 열기"><path d="'+MAP[code].d+'"/></a>').join('')+'</g>';
     stage.appendChild(svg);attachTooltip(stage,svg);return svg;
   }
@@ -324,7 +324,6 @@
     <h1 id="hero-title"><span class="h-line">Discover</span><span class="h-line h-glow">Eastern Europe</span></h1>
     <p>지도에서 나라를 선택해 사람과 문화, 언어, 음식, 산업을 살펴보세요.</p>
   </div>
-  <p class="hero-tag">From Eastern Europe <em>to a New ERA.</em></p>
 
 </section>
 <section class="home-news wrap" aria-labelledby="news-title">

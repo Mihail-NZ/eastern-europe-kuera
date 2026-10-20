@@ -569,8 +569,3 @@ a.cc .cc-state { color: #fff; background: var(--rc); padding: 3px 10px; border-r
 .video-reel summary { cursor:pointer; margin-top:4px; }
 .video-reel .reel-toggle:focus-visible { outline:3px solid #fff; outline-offset:-5px; }
 
-
-/* 대문 문구: 이미지 속 "Discover Eastern Europe" 아래에 학회 슬로건을 한 번 더 */
-.hero-tag { position: absolute; left: 2.1%; top: 73.5%; z-index: 3; margin: 0; font: 400 clamp(15px, 1.75vw, 27px)/1.2 var(--display); letter-spacing: .01em; color: #d6e6ff; text-shadow: 0 1px 14px rgba(3, 9, 28, .95); pointer-events: none; }
-.hero-tag em { font-style: italic; color: #8cc8ff; }
-@media (max-width: 760px) { .hero-tag { position: relative; order: 2; left: auto; top: auto; padding: 4px 24px 22px; font-size: 18px; } }
