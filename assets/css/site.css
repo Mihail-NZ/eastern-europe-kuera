@@ -560,3 +560,10 @@ a.cc .cc-state { color: #fff; background: var(--rc); padding: 3px 10px; border-r
   .game-item h2 { font-size: 36px; }
   .game-frame { padding: 8px; }
 }
+
+/* Baltic country films, 2026-10-20 */
+.video-reel video { display:block; width:100%; height:100%; object-fit:cover; }
+.video-reel .reel-toggle { display:grid; }
+.video-reel .reel-toggle[hidden] { display:none; }
+.video-reel summary { cursor:pointer; margin-top:4px; }
+.video-reel .reel-toggle:focus-visible { outline:3px solid #fff; outline-offset:-5px; }
