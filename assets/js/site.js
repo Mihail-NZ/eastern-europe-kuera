@@ -965,23 +965,7 @@ ${countryTabs(c, id)}
   function renderGames(main) {
     main.innerHTML = `
 <section class="page-head night">
-  <div class="wrap"><p class="kicker">Mini Game</p><h1>미니 게임</h1>
-  <p>동유럽 20개국 국기로 즐기는 짧은 서바이벌 게임입니다. 한 판에 1~2분 정도 걸리고, 우승국은 매번 달라집니다.</p></div>
-</section>
-<div class="games-wrap">${GAMES.map((g, i) => `
-<section class="game-item wrap${i % 2 ? ' is-flip' : ''}" id="${g.id}" aria-labelledby="g-${g.id}">
-  <div class="game-copy">
-    <p class="kicker">Game ${i + 1} · ${g.ko}</p>
-    <h2 id="g-${g.id}">${g.title}</h2>
-    <p>${g.lead}</p>
-    <ul class="game-rules">${g.rules.map(([t, d]) => `<li><strong>${t}</strong> ${d}</li>`).join('')}</ul>
-    <a class="more" href="${ROOT}games/${g.id}/index.html" target="_blank" rel="noopener">새 창에서 크게 보기</a>
-  </div>
-  <div class="game-frame">
-    <iframe src="${ROOT}games/${g.id}/index.html?embed" title="${g.title} ${g.ko} 게임" loading="lazy"></iframe>
-  </div>
-</section>`).join('')}
-</div>`;
+<div class="wrap"><p class="kicker">Mini Game</p><h1>미니 게임</h1></div></section><div class="games-wrap wrap">${GAMES.map((g, i) => `<section class="game-card" id="${g.id}" aria-labelledby="g-${g.id}">  <header class="game-head">    <p class="kicker">Game ${i + 1} · ${g.ko}</p>    <h2 id="g-${g.id}">${g.title}</h2>  </header>  <div class="game-frame">    <iframe src="${ROOT}games/${g.id}/index.html?embed" title="${g.title} ${g.ko} 게임" loading="lazy"></iframe>  </div>  <a class="more" href="${ROOT}games/${g.id}/index.html" target="_blank" rel="noopener">새 창에서 크게 보기</a></section>`).join('')}</div>`;
   }
 
   /* ---------- 페이지: 소개 ---------- */

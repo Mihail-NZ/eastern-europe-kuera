@@ -569,3 +569,12 @@ a.cc .cc-state { color: #fff; background: var(--rc); padding: 3px 10px; border-r
 .video-reel summary { cursor:pointer; margin-top:4px; }
 .video-reel .reel-toggle:focus-visible { outline:3px solid #fff; outline-offset:-5px; }
 
+
+/* 미니 게임 페이지: 설명 없이 게임 카드 두 개를 나란히 */
+.games-wrap { display: grid; grid-template-columns: repeat(2, minmax(0, 400px)); justify-content: center; gap: 48px; padding-top: 56px; padding-bottom: 96px; }
+.game-card { display: flex; flex-direction: column; align-items: center; gap: 16px; }
+.game-head { align-self: stretch; text-align: center; }
+.game-head h2 { font-family: var(--display); font-weight: 400; font-size: 38px; line-height: 1.05; letter-spacing: -0.01em; margin: 4px 0 0; }
+.game-card .game-frame { width: 100%; }
+.game-card .more { align-self: center; }
+@media (max-width: 960px) { .games-wrap { grid-template-columns: minmax(0, 400px); gap: 56px; padding-top: 40px; } }
