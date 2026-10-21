@@ -173,7 +173,7 @@ const EVENTS = {
 let balls, eliminated, falling, particles, confetti, rings, banners, activeEvent, nextEventAt, lastEventKey;
 let gapAngle, gapHalfBase, closedTimer, gapK = 1, sinceEscape, ringR, bumperR, shake, slowmo, revivedOnce;
 let state = "ready", stateT = 0, gameT = 0, winner = null, winT = 0;
-let paused = false, speed = 1, eventsOn = true, gunsOn = true, gun = null, nextGunAt = 15;
+let paused = false, speed = 1, eventsOn = true, gunsOn = true, gun = null, nextGunAt = 10;
 const listEl = document.getElementById("list");
 
 function makeBall([code, name, color]) {
@@ -185,7 +185,7 @@ function reset(toCountdown) {
   timers.forEach(clearTimeout); timers = [];
   balls = COUNTRIES.map(makeBall).sort(() => Math.random() - 0.5);
   eliminated = []; falling = []; particles = []; confetti = []; rings = []; banners = [];
-  activeEvent = null; nextEventAt = 6; lastEventKey = null; revivedOnce = false; gun = null; nextGunAt = rand(13, 16);
+  activeEvent = null; nextEventAt = 6; lastEventKey = null; revivedOnce = false; gun = null; nextGunAt = 10;
   gapAngle = -Math.PI / 2; gapHalfBase = 0.22; closedTimer = 0; gapK = 1; sinceEscape = 0; ringR = R0; bumperR = 0; shake = 0; slowmo = 0;
   winner = null; winT = 0; gameT = 0;
   // 격자형 배치 후 살짝 흔들기
@@ -261,7 +261,7 @@ function revive() {
   return b;
 }
 
-// ───────────────────────── gunfight (약 15초마다) ─────────────────────────
+// ───────────────────────── gunfight (10초마다) ─────────────────────────
 const AIM_TIME = 1.6, BULLET_SPEED = 1400;
 function startGun() {
   const shooter = pick(balls);
@@ -270,7 +270,7 @@ function startGun() {
   banner("🔫  SHOOTOUT", `${shooter.name} has a gun — aiming at ${target.name}!`, "#ff3b3b", "", 2.6);
   sfx.cock();
 }
-function endGun() { gun = null; nextGunAt = gameT + rand(13, 17); }
+function endGun() { gun = null; nextGunAt = gameT + 10; }
 function muzzle(g) {
   const len = g.shooter.r + 30;
   return [g.shooter.x + Math.cos(g.ang) * len, g.shooter.y + Math.sin(g.ang) * len];
