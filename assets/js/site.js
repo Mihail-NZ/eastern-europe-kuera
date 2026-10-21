@@ -316,7 +316,7 @@
 
   function renderHome(main) {
     const latest = NEWS[0];
-    const stories = latest ? (latest.stories || []).slice(0, 3).map(s => Object.assign({ date: latest.date }, s)) : [];
+    const stories = latest ? (latest.home && latest.home.length === 3 ? latest.home.map(i => (latest.stories || [])[i]).filter(Boolean) : (latest.stories || []).slice(0, 3)).map(s => Object.assign({ date: latest.date }, s)) : [];
     main.innerHTML = `
 <section class="hero-map night" aria-labelledby="hero-title">
   <div class="map-stage" id="home-map"></div>
