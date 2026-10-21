@@ -507,12 +507,15 @@ a.cc .cc-state { color: #fff; background: var(--rc); padding: 3px 10px; border-r
   box-shadow: 0 0 0 1px rgba(130, 185, 255, .3), 0 30px 60px -20px rgba(0, 0, 0, .6), 0 0 60px rgba(60, 130, 255, .18); }
 .reel-shot::after { content: ""; position: absolute; inset: 0; z-index: 1; pointer-events: none;
   background: linear-gradient(180deg, transparent 45%, rgba(4, 10, 28, .78) 100%); }
-.reel-shot { position: absolute; inset: 0; opacity: 0;
-  animation: reel-fade calc(var(--shots) * 1.8s) linear infinite; animation-delay: calc(var(--i) * 1.8s - .6s); }
-.reel-shot img { width: 100%; height: 100%; object-fit: cover; display: block; transform-origin: 60% 45%;
-  animation: reel-zoom calc(var(--shots) * 1.8s) linear infinite; animation-delay: inherit; }
-@keyframes reel-fade { 0% { opacity: 0; } 11.1% { opacity: 1; } 33.3% { opacity: 1; } 44.4% { opacity: 0; } 100% { opacity: 0; } }
-@keyframes reel-zoom { 0% { transform: scale(1.03) translate(0, 0); } 44.4% { transform: scale(1.15) translate(-1.6%, -1%); } 100% { transform: scale(1.15) translate(-1.6%, -1%); } }
+/* 4장면 × 1.75초 = 7초 반복. 장면마다 0.7초 겹쳐 교차 전환하고, 위치 이동 없이 1.00→1.08배로 일정하게 천천히 확대한다.
+ * transform은 GPU 합성(translate3d·will-change)으로 그려 픽셀 단위로 끊기는 흔들림이 생기지 않게 한다. */
+.reel-shot { position: absolute; inset: 0; opacity: 0; will-change: opacity;
+  animation: reel-fade 7s linear infinite; animation-delay: calc(var(--i) * 1.75s - .7s); }
+.reel-shot img { width: 100%; height: 100%; object-fit: cover; display: block; transform-origin: 50% 50%;
+  will-change: transform; backface-visibility: hidden; transform: translate3d(0, 0, 0) scale(1);
+  animation: reel-zoom 7s linear infinite; animation-delay: inherit; }
+@keyframes reel-fade { 0% { opacity: 0; } 10% { opacity: 1; } 35% { opacity: 1; } 45% { opacity: 0; } 100% { opacity: 0; } }
+@keyframes reel-zoom { 0% { transform: translate3d(0, 0, 0) scale(1); } 45% { transform: translate3d(0, 0, 0) scale(1.08); } 100% { transform: translate3d(0, 0, 0) scale(1.08); } }
 .reel-cap { position: absolute; z-index: 2; left: 22px; bottom: 18px; display: flex; align-items: baseline; gap: 8px;
   color: #fff; font-size: 14px; font-weight: 500; text-shadow: 0 1px 8px rgba(0, 0, 0, .6); }
 .reel-cap span { font: italic 400 13px/1.2 var(--display); color: #c9dcf5; }
@@ -563,11 +566,6 @@ a.cc .cc-state { color: #fff; background: var(--rc); padding: 3px 10px; border-r
 }
 
 /* Baltic country films, 2026-10-20 */
-.video-reel video { display:block; width:100%; height:100%; object-fit:cover; }
-.video-reel .reel-toggle { display:grid; }
-.video-reel .reel-toggle[hidden] { display:none; }
-.video-reel summary { cursor:pointer; margin-top:4px; }
-.video-reel .reel-toggle:focus-visible { outline:3px solid #fff; outline-offset:-5px; }
 
 
 /* 미니 게임 페이지: 설명 없이 게임 카드 두 개를 나란히 */
