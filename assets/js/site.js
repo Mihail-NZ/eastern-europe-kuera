@@ -96,7 +96,7 @@
   function header() {
     const nav = [
       ['home', 'Home', 'index.html'], ['countries', 'Countries', 'countries/index.html'],
-      ['news', 'Daily News', 'news/index.html'], ['games', 'Mini Game', 'games/index.html'], ['about', 'About', 'about/index.html']
+      ['news', 'Daily News', 'news/index.html'], ['games', 'Mini Game', 'games/index.html'], ['about', 'About KUERA', 'about/index.html']
     ];
     const current = PAGE === 'country' || PAGE === 'section' ? 'countries' : PAGE;
     return `<a class="skip" href="#main">본문으로 건너뛰기</a>
@@ -973,19 +973,46 @@ ${countryTabs(c, id)}
   }
 
   /* ---------- 페이지: 소개 ---------- */
+  /* About KUERA: 학회 소개(사용자가 준 소개글 그대로) + 아래쪽에 이 아카이브 사이트의 자료 원칙 */
   function renderAbout(main) {
     main.innerHTML = `
-<section class="page-head night">
-  <div class="wrap"><p class="kicker">About</p><h1>소개</h1>
-  <p>동유럽 학회원이 수업과 연구, 답사 준비에 참고할 수 있도록 국가별 기초 정보와 최신 브리핑을 한곳에 정리하는 사이트입니다.</p></div>
-</section>
-<section class="wrap prose">
-  <div class="about-org">
-    <img src="${ROOT}assets/images/kuera/kuera-badge.png" alt="KUERA 로고" width="96" height="96" decoding="async">
-    <div><p class="about-org-ko">고려대학교 동유럽지역 전략학회</p>
-    <p class="about-org-en" lang="en">Korea University Eastern Europe Research Association (KUERA)</p></div>
+<section class="page-head night kuera-head">
+  <div class="wrap kuera-head-inner">
+    <img class="kuera-badge" src="${ROOT}assets/images/kuera/kuera-badge.png" alt="KUERA 로고" width="120" height="120" decoding="async">
+    <div>
+      <p class="kicker">About KUERA</p>
+      <h1>고려대학교 동유럽지역 전략학회</h1>
+      <p class="kuera-en" lang="en">Korea University Eastern Europe Research Association</p>
+    </div>
   </div>
-  <h2>자료 원칙</h2>
+</section>
+<section class="wrap prose kuera">
+  <p class="kuera-lead">KUERA(Korea University Eastern Europe Research Association)는 2026년 9월 출범한 고려대학교 노어노문학과 산하의 학술단체로, 국내 대학생 학술단체 중 유일하게 동유럽(중동부유럽)을 중점적으로 연구하는 학회입니다.</p>
+  <dl class="kuera-facts">
+    <div><dt>출범</dt><dd>2026년 9월</dd></div>
+    <div><dt>소속</dt><dd>고려대학교 노어노문학과</dd></div>
+    <div><dt>연구 지역</dt><dd>동유럽(중동부유럽)</dd></div>
+  </dl>
+
+  <h2>왜 동유럽인가</h2>
+  <p>동유럽(중동부유럽)은 한국에 아직 충분히 알려지지 않았지만, 고유한 역사와 문화, 다양한 경제적 가능성을 지닌 지역입니다. KUERA는 이러한 동유럽에 대한 관심을 바탕으로 각국의 특성과 지역적 현안을 살펴보고, 지역에 대한 이해를 넓히고자 합니다.</p>
+
+  <h2>활동</h2>
+  <div class="kuera-acts">
+    <article class="kuera-act">
+      <p class="kuera-act-tag">매주</p>
+      <h3>정규 세션</h3>
+      <p>동유럽의 경제·산업 및 지역적 특성을 학습하고, 한국 기업의 동유럽 시장 진출과 확대 전략을 주제로 프로젝트를 진행합니다.</p>
+    </article>
+    <article class="kuera-act">
+      <p class="kuera-act-tag">기획 중</p>
+      <h3>비정규 활동</h3>
+      <p>전문가 초청 강연, 동유럽 지역 스터디, 대사관 방문 등 동유럽을 보다 폭넓게 이해할 수 있는 다양한 활동을 기획하고 있습니다.</p>
+    </article>
+  </div>
+
+  <h2 class="kuera-site-h">이 사이트에 대해</h2>
+  <p>Eastern Europe by KUERA는 학회원이 세션과 프로젝트, 지역 스터디를 준비하며 참고할 수 있도록 동유럽 20개국의 기초 정보와 최신 브리핑을 한곳에 정리한 아카이브입니다.</p>
   <ul>
     <li>국가 정보는 EU, 각국 관광청, 투자진흥기관 같은 공식 출처를 우선하고 항목마다 출처를 적습니다.</li>
     <li>뉴스는 기사 본문을 옮기지 않고 요약과 원문 링크만 싣습니다.</li>
@@ -995,7 +1022,6 @@ ${countryTabs(c, id)}
   </ul>
 </section>`;
   }
-
   /* ---------- 시작 ---------- */
   // 브라우저 탭 아이콘: KUERA 로고
   if (!document.querySelector('link[rel~="icon"]')) {
