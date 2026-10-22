@@ -1011,6 +1011,11 @@ ${countryTabs(c, id)}
     </article>
   </div>
 
+  <h2>연락처</h2>
+  <ul class="kuera-contact">
+    <li><span class="kc-label">인스타그램</span><a href="https://www.instagram.com/kuera_official/" target="_blank" rel="noopener">@kuera_official</a></li>
+    <li><span class="kc-label">이메일</span><a href="mailto:ku.easteurope@gmail.com">ku.easteurope@gmail.com</a></li>
+  </ul>
   <h2 class="kuera-site-h">이 사이트에 대해</h2>
   <p>Eastern Europe by KUERA는 학회원이 세션과 프로젝트, 지역 스터디를 준비하며 참고할 수 있도록 동유럽 20개국의 기초 정보와 최신 브리핑을 한곳에 정리한 아카이브입니다.</p>
   <ul>

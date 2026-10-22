@@ -604,3 +604,8 @@ a.cc .cc-state { color: #fff; background: var(--rc); padding: 3px 10px; border-r
   .kuera-acts { grid-template-columns: 1fr; }
   .kuera-lead { font-size: 17px !important; }
 }
+.kuera-contact { list-style: none; padding: 0 !important; margin: 0; background: var(--card); border-radius: 14px; box-shadow: var(--shadow); overflow: hidden; }
+.kuera-contact li { display: flex; align-items: baseline; gap: 18px; padding: 14px 22px; margin: 0 !important; }
+.kuera-contact li + li { border-top: 1px solid var(--rule); }
+.kuera-contact .kc-label { flex: none; width: 84px; font-size: 13px; color: var(--muted); }
+.kuera-contact a { font-weight: 500; font-size: 16px; word-break: break-all; }
