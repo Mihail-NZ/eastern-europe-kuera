@@ -988,26 +988,19 @@ ${countryTabs(c, id)}
 </section>
 <section class="wrap prose kuera">
   <p class="kuera-lead">KUERA(Korea University Eastern Europe Research Association)는 2026년 9월 출범한 고려대학교 노어노문학과 산하의 학술단체로, 국내 대학생 학술단체 중 유일하게 동유럽(중동부유럽)을 중점적으로 연구하는 학회입니다.</p>
-  <dl class="kuera-facts">
-    <div><dt>출범</dt><dd>2026년 9월</dd></div>
-    <div><dt>소속</dt><dd>고려대학교 노어노문학과</dd></div>
-    <div><dt>연구 지역</dt><dd>동유럽(중동부유럽)</dd></div>
-  </dl>
 
-  <h2>왜 동유럽인가</h2>
+  <h2>왜 동유럽인가?</h2>
   <p>동유럽(중동부유럽)은 한국에 아직 충분히 알려지지 않았지만, 고유한 역사와 문화, 다양한 경제적 가능성을 지닌 지역입니다. KUERA는 이러한 동유럽에 대한 관심을 바탕으로 각국의 특성과 지역적 현안을 살펴보고, 지역에 대한 이해를 넓히고자 합니다.</p>
 
   <h2>활동</h2>
   <div class="kuera-acts">
     <article class="kuera-act">
-      <p class="kuera-act-tag">매주</p>
       <h3>정규 세션</h3>
-      <p>동유럽의 경제·산업 및 지역적 특성을 학습하고, 한국 기업의 동유럽 시장 진출과 확대 전략을 주제로 프로젝트를 진행합니다.</p>
+      <p>매주 진행되는 정규 세션에서는 동유럽의 경제·산업 및 지역적 특성을 학습하고, 한국 기업의 동유럽 시장 진출과 확대 전략을 주제로 프로젝트를 진행합니다.</p>
     </article>
     <article class="kuera-act">
-      <p class="kuera-act-tag">기획 중</p>
       <h3>비정규 활동</h3>
-      <p>전문가 초청 강연, 동유럽 지역 스터디, 대사관 방문 등 동유럽을 보다 폭넓게 이해할 수 있는 다양한 활동을 기획하고 있습니다.</p>
+      <p>전문가 초청 강연, 동유럽 지역 스터디, 대사관 방문 등 동유럽을 보다 폭넓게 이해할 수 있는 다양한 활동을 진행합니다.</p>
     </article>
   </div>
 
