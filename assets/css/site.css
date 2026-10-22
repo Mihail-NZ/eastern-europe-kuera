@@ -601,3 +601,10 @@ a.cc .cc-state { color: #fff; background: var(--rc); padding: 3px 10px; border-r
 .kuera-contact li + li { border-top: 1px solid var(--rule); }
 .kuera-contact .kc-label { flex: none; width: 84px; font-size: 13px; color: var(--muted); }
 .kuera-contact a { font-weight: 500; font-size: 16px; word-break: break-all; }
+/* 국가별 대표 보고서·자료 */
+.home-reports { padding-top: 8px; padding-bottom: 56px; }
+.reports-note { margin: 18px 0 10px; color: var(--muted, #5b6b85); font-size: 15px; }
+.report-chips { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; }
+.report-chips a { display: block; padding: 7px 14px; border-radius: 999px; background: var(--card); box-shadow: var(--shadow); font-size: 14px; font-weight: 500; }
+.report-chips a:hover, .report-chips a:focus-visible { background: #e6efff; }
+@media (max-width: 760px) { .outlets li { grid-template-columns: 1fr; gap: 2px; } }

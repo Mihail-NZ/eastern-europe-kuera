@@ -1,0 +1,53 @@
+/* 국가별 대표 보고서·자료 링크. 2026-10-22에 주소 응답을 확인한 것만 실었다(IMF·CIA 등 일부는 자동 접속을 막아 403이 나오지만 공식 주소 형식이다).
+   k: KOTRA 국가지역정보 국가코드(KOTRA에 국가 페이지가 있는 나라만), m: 외교부 국가·지역정보 번호, i: ISO2, i3: IMF 국가코드,
+   cia: CIA World Factbook 주소 이름, wb: 세계은행 국가 개요 주소 이름(없는 나라는 생략), tg: 미국 상무부 Country Commercial Guide 주소 이름(없으면 생략),
+   eu: 'eu'=EU 회원국 소개, 'en'=EU 확대·이웃정책 국가 페이지(주소 끝 부분), local: 현지 공식 기관 [이름, 설명, 주소] */
+window.REPORTS = {
+  common: [
+    { n: 'KOTRA 해외시장뉴스 – 국가·지역정보', d: 'KOTRA 무역관이 정리한 국가별 경제·무역·투자 정보', u: 'https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=220' },
+    { n: 'KOTRA 해외시장뉴스 – 진출전략', d: '국가별 시장 진출전략 보고서', u: 'https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=250' },
+    { n: 'KOTRA 해외시장뉴스 – 국별 주요산업', d: '국가별 주요 산업 분석', u: 'https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=200' }
+  ],
+  countries: {
+    'poland':             { k: '616', m: 199, i: 'PL', i3: 'POL', cia: 'poland', wb: 'poland', tg: 'poland', eu: 'eu',
+                            local: [['PAIH 폴란드투자무역청', '투자 환경·인센티브 안내', 'https://www.paih.gov.pl/en/'], ['GUS 폴란드 통계청', '인구·경제 공식 통계', 'https://stat.gov.pl/en/']] },
+    'czechia':            { k: '203', m: 120, i: 'CZ', i3: 'CZE', cia: 'czechia', tg: 'czech-republic', eu: 'eu',
+                            local: [['CzechInvest 체코투자청', '투자 환경·산업 안내', 'https://www.czechinvest.gov.cz/en'], ['체코 통계청(CZSO)', '공식 통계', 'https://csu.gov.cz/home']] },
+    'slovakia':           { k: '703', m: 105, i: 'SK', i3: 'SVK', cia: 'slovakia', tg: 'slovakia', eu: 'eu',
+                            local: [['SARIO 슬로바키아 투자무역진흥청', '투자 환경·산업 안내', 'https://www.sario.sk/en'], ['슬로바키아 통계청', '공식 통계', 'https://slovak.statistics.sk/']] },
+    'hungary':            { k: '348', m: 131, i: 'HU', i3: 'HUN', cia: 'hungary', tg: 'hungary', eu: 'eu',
+                            local: [['HIPA 헝가리투자진흥청', '투자 환경·인센티브 안내', 'https://hipa.hu/'], ['KSH 헝가리 통계청', '공식 통계', 'https://www.ksh.hu/?lang=en']] },
+    'slovenia':           { m: 106, i: 'SI', i3: 'SVN', cia: 'slovenia', tg: 'slovenia', eu: 'eu',
+                            local: [['SPIRIT 슬로베니아 기업진흥청', '투자·수출 지원 안내', 'https://www.spiritslovenia.si/en'], ['SURS 슬로베니아 통계청', '공식 통계', 'https://www.stat.si/statweb/en']] },
+    'croatia':            { k: '191', m: 123, i: 'HR', i3: 'HRV', cia: 'croatia', wb: 'croatia', tg: 'croatia', eu: 'eu',
+                            local: [['크로아티아 투자 포털', '투자 환경 안내', 'https://investcroatia.gov.hr/en/'], ['크로아티아 통계청', '공식 통계', 'https://podaci.dzs.hr/en/']] },
+    'serbia':             { k: '688', m: 101, i: 'RS', i3: 'SRB', cia: 'serbia', wb: 'serbia', tg: 'serbia', eu: 'en',
+                            local: [['RAS 세르비아 개발청', '투자·수출 안내', 'https://ras.gov.rs/en'], ['세르비아 통계청', '공식 통계', 'https://www.stat.gov.rs/en-US/']] },
+    'bosnia-herzegovina': { m: 97, i: 'BA', i3: 'BIH', cia: 'bosnia-and-herzegovina', wb: 'bosniaandherzegovina', tg: 'bosnia-and-herzegovina', eu: 'en',
+                            local: [['BHAS 보스니아 통계청', '공식 통계', 'https://bhas.gov.ba/?lang=en']] },
+    'kosovo':             { m: 122, i: 'XK', i3: 'KSV', cia: 'kosovo', wb: 'kosovo', tg: 'kosovo', eu: 'en',
+                            local: [['KIESA 코소보 투자기업지원청', '투자 환경 안내', 'https://invest-ks.org/'], ['코소보 통계청', '공식 통계', 'https://ask.rks-gov.net/']] },
+    'montenegro':         { k: '499', m: 91, i: 'ME', i3: 'MNE', cia: 'montenegro', wb: 'montenegro', tg: 'montenegro', eu: 'en',
+                            local: [['MONSTAT 몬테네그로 통계청', '공식 통계', 'https://www.monstat.org/eng/']] },
+    'north-macedonia':    { m: 89, i: 'MK', i3: 'MKD', cia: 'north-macedonia', wb: 'northmacedonia', tg: 'north-macedonia', eu: 'en',
+                            local: [['북마케도니아 투자청', '투자 환경 안내', 'https://investnorthmacedonia.gov.mk/']] },
+    'albania':            { m: 112, i: 'AL', i3: 'ALB', cia: 'albania', wb: 'albania', tg: 'albania', eu: 'en',
+                            local: [['AIDA 알바니아 투자개발청', '투자 환경 안내', 'https://aida.gov.al/en'], ['INSTAT 알바니아 통계청', '공식 통계', 'https://www.instat.gov.al/en/']] },
+    'bulgaria':           { k: '100', m: 98, i: 'BG', i3: 'BGR', cia: 'bulgaria', wb: 'bulgaria', tg: 'bulgaria', eu: 'eu',
+                            local: [['IBA 불가리아 투자청', '투자 환경 안내', 'https://www.investbg.government.bg/'], ['NSI 불가리아 통계청', '공식 통계', 'https://www.nsi.bg/en']] },
+    'romania':            { k: '642', m: 85, i: 'RO', i3: 'ROU', cia: 'romania', wb: 'romania', tg: 'romania', eu: 'eu',
+                            local: [['INS 루마니아 통계청', '공식 통계', 'https://insse.ro/cms/en']] },
+    'moldova':            { m: 92, i: 'MD', i3: 'MDA', cia: 'moldova', wb: 'moldova', tg: 'moldova', eu: 'en',
+                            local: [['Invest Moldova', '투자 환경 안내', 'https://invest.gov.md'], ['몰도바 통계청', '공식 통계', 'https://statistica.gov.md/en']] },
+    'ukraine':            { k: '804', m: 117, i: 'UA', i3: 'UKR', cia: 'ukraine', wb: 'ukraine', tg: 'ukraine', eu: 'en',
+                            local: [['UkraineInvest 투자진흥청', '투자·재건 사업 안내', 'https://ukraineinvest.gov.ua/en/']] },
+    'belarus':            { k: '112', m: 95, i: 'BY', i3: 'BLR', cia: 'belarus', wb: 'belarus', eu: 'en',
+                            local: [['벨라루스 경제부', '경제 정책·통계 안내', 'https://economy.gov.by']] },
+    'lithuania':          { m: 87, i: 'LT', i3: 'LTU', cia: 'lithuania', wb: 'lithuania', tg: 'lithuania', eu: 'eu',
+                            local: [['Invest Lithuania', '투자 환경 안내', 'https://investlithuania.com/'], ['리투아니아 통계청', '공식 통계', 'https://osp.stat.gov.lt/en']] },
+    'latvia':             { m: 83, i: 'LV', i3: 'LVA', cia: 'latvia', wb: 'latvia', tg: 'latvia', eu: 'eu',
+                            local: [['CSB 라트비아 통계청', '공식 통계', 'https://stat.gov.lv/en']] },
+    'estonia':            { m: 113, i: 'EE', i3: 'EST', cia: 'estonia', wb: 'estonia', tg: 'estonia', eu: 'eu',
+                            local: [['Estonian Investment Agency', '투자 환경 안내', 'https://investinestonia.com/'], ['에스토니아 통계청', '공식 통계', 'https://www.stat.ee/en']] }
+  }
+};

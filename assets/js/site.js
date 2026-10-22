@@ -334,7 +334,13 @@
   ${latest ? `<p class="news-overview"><strong>${fmtDate(latest.date)}의 흐름</strong>${esc(latest.overview)}</p>
   <ul class="card-list">${stories.map(storyCard).join('')}</ul>`
     : '<p class="empty">아직 올라온 브리핑이 없습니다.</p>'}
-</section>`;
+</section>
+${window.REPORTS ? `<section class="home-reports wrap" aria-labelledby="reports-title">
+  <div class="section-head"><div><p class="kicker">Reports &amp; data</p><h2 id="reports-title">국가별 대표 보고서·자료</h2></div></div>
+  <ul class="outlets">${window.REPORTS.common.map(r => `<li><a href="${esc(r.u)}" target="_blank" rel="noopener">${esc(r.n)}</a><span>${esc(r.d)}</span></li>`).join('')}</ul>
+  <p class="reports-note">나라를 골라 KOTRA·외교부·세계은행·IMF·현지 공식 기관의 자료로 바로 이동하세요.</p>
+  <ul class="report-chips">${COUNTRIES.filter(c => window.REPORTS.countries[c.slug]).map(c => `<li><a href="${countryUrl(c.slug)}">${esc(c.name_ko)}</a></li>`).join('')}</ul>
+</section>` : ''}`;
     mountThumbs(main, stories);
 
     // 홈과 국가 페이지는 동일한 Natural Earth 국경을 사용한다.
@@ -618,6 +624,29 @@
     });
     return { title: doc.title, lead: doc.lead, intro: mdBlocks(doc.intro), secs };
   }
+  /* ---------- 대표 보고서·자료 (data-reports.js) ---------- */
+  function reportGroups(slug) {
+    const R = window.REPORTS, r = R && R.countries[slug];
+    if (!r) return [];
+    const eu = r.eu === 'eu' ? ['EU 회원국 소개 (유럽연합 공식 사이트)', 'EU 공식 사이트의 국가 소개와 EU 내 위치', `https://european-union.europa.eu/principles-countries-history/eu-countries/${slug}_en`]
+      : ['EU 확대·이웃정책 국가 페이지', 'EU 집행위원회가 다루는 가입·협력 현황과 연례 보고서', slug === 'moldova' || slug === 'ukraine' || slug === 'belarus' ? `https://enlargement.ec.europa.eu/countries/${slug}_en` : `https://enlargement.ec.europa.eu/enlargement-policy/${slug === 'bosnia-herzegovina' ? 'bosnia-and-herzegovina' : slug}_en`];
+    const kr = [];
+    if (r.k) kr.push(['KOTRA 해외시장뉴스 국가정보', 'KOTRA 무역관의 경제·무역·투자 개황과 최신 보고서', `https://dream.kotra.or.kr/kotranews/cms/nation/actionNatIemList.do?pageNo=&pagePerCnt=10&SITE_NO=3&MENU_ID=220&CONTENTS_NO=1&pRegnCd=03&pNatCd=${r.k}`]);
+    kr.push(['외교부 국가·지역 정보', '개황, 정치·경제, 한국과의 관계', `https://www.mofa.go.kr/www/nation/m_3458/view.do?seq=${r.m}`]);
+    const intl = [];
+    if (r.wb) intl.push(['세계은행 국가 개요', '경제 전망과 개발 과제 요약', `https://www.worldbank.org/en/country/${r.wb}/overview`]);
+    intl.push(['세계은행 국가 데이터', 'GDP·인구 등 핵심 지표', `https://data.worldbank.org/country/${r.i}`]);
+    intl.push(['IMF 국가 페이지', '경제 전망과 연례 점검(Article IV) 보고서', `https://www.imf.org/en/Countries/${r.i3}`]);
+    if (r.tg) intl.push(['미국 상무부 Country Commercial Guide', '시장 개요와 산업별 진출 분석(영문)', `https://www.trade.gov/country-commercial-guides/${r.tg}-market-overview`]);
+    intl.push(eu);
+    intl.push(['CIA World Factbook', '지리·인구·경제 기본 정보(영문)', `https://www.cia.gov/the-world-factbook/countries/${r.cia}/`]);
+    return [['한국 기관 자료', kr], ['국제기구·해외 기관 자료', intl], ['현지 공식 기관', r.local]];
+  }
+  function reportListHtml(slug) {
+    return reportGroups(slug).map(([title, items]) => `<h3 class="outlets-title">${esc(title)}</h3><ul class="outlets">${items.map(([n, d, u]) => `<li><a href="${esc(u)}" target="_blank" rel="noopener">${esc(n)}</a><span>${esc(d)}</span></li>`).join('')}</ul>`).join('')
+      + '<p class="img-note">외부 사이트로 연결됩니다. 보고서 목록과 수치는 해당 기관이 갱신하므로 최신 판은 각 사이트에서 확인하세요.</p>';
+  }
+
   function basicSections(c, id) {
     const f = c.fact;
     const S = (title, html) => ({ id: 'b-' + title, title, html });
@@ -628,6 +657,7 @@
           ['수도', f.capital], ['공식 언어', f.official_language], ['통화', f.currency],
           ['인구', `${f.population} (${f.population_year}년 기준)`], ['면적', f.area], ['EU 가입', f.eu], ['솅겐 참여', f.schengen]
         ].map(([k, v]) => `<tr><th scope="row">${k}</th><td>${esc(v)}</td></tr>`).join('')}</tbody></table></div>`),
+        S('대표 보고서·자료', reportListHtml(c.slug)),
         S('출처', `<ul>${c.official_sources.map(u => `<li><a href="${esc(u)}" target="_blank" rel="noopener">${esc(host(u))}</a></li>`).join('')}</ul>`)];
       case 'culture': return [S('주요 문화 주제', entryList(c.culture))];
       case 'food': return [S('대표 음식', entryList(c.food))];
@@ -856,6 +886,11 @@ ${stories.length ? `<section class="hub-news wrap" aria-labelledby="hub-news-tit
       lead = d.lead; intro = d.intro; secs = d.secs;
     } else {
       secs = basicSections(c, id);
+    }
+    if (id === 'overview' && deep && window.REPORTS && window.REPORTS.countries[slug]) {
+      const rs = { id: 'b-reports', title: '대표 보고서·자료', html: reportListHtml(slug) };
+      const at = secs.findIndex(s => /출처/.test(s.title));
+      if (at >= 0) secs.splice(at, 0, rs); else secs.push(rs);
     }
     let newsStories = [];
     if (id === 'news') {
