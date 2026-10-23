@@ -1,6 +1,233 @@
 /* 원본: 동유럽 웹사이트/news-data/*.json (최신순, tools/build-news.ps1로 생성) */
 window.NEWS_DATA=[
     {
+        "date":  "2026-10-23",
+        "home":  [
+                     3,
+                     5,
+                     0
+                 ],
+        "overview":  "세르비아는 10월 25일 총선을 이틀 앞두고 14년 만에 가장 결과를 예측하기 어려운 선거라는 평가를 받고 있습니다. 루마니아 콘스탄차 앞바다에서는 화물선이 드론 공격으로 의심되는 사고로 침몰해 1명이 숨지고 3명이 실종됐습니다. 우크라이나에서는 러시아의 공습으로 하루 사이 최소 8명이 숨지고 에너지 시설이 피해를 입었으며, EU는 117건의 대러 제재 명단을 추진 중입니다. 헝가리에서는 마톨치 전 중앙은행 총재가 구금됐고, 불가리아는 같은 날 대통령 선거를 치릅니다.",
+        "stories":  [
+                        {
+                            "region":  "top",
+                            "title":  "러시아, 우크라이나 에너지 시설 집중 공습…하루 최소 8명 사망, EU는 117건 대러 제재 명단 추진",
+                            "countries":  [
+                                              "우크라이나"
+                                          ],
+                            "period":  "2026-10-22 ~ 23",
+                            "points":  [
+                                           "키이우인디펜던트에 따르면 지난 하루 러시아 공격으로 민간인 최소 8명이 숨지고 67명이 다쳤습니다. 하르키우주 로조바의 시장 공격 등으로 3명이 숨지고 46명이 다쳤습니다.",
+                                           "우크라이나 공군은 러시아가 밤사이 장거리 드론 176대(제트 추진 92대 포함)를 발사해 140대를 격추했다고 밝혔습니다. 우크레네르고는 지토미르·도네츠크·흐멜니츠키 등 8개 주에서 긴급 정전이 발생했다고 전했고, 민간 에너지 기업 DTEK은 화력발전소 한 곳의 발전이 중단됐다고 밝혔습니다.",
+                                           "EU는 10월 21일 대사들에게 12명·105개 단체 등 117건의 신규 제재 명단 초안을 제시한 것으로 보도됐습니다. 러시아 정유·수출 능력 31건, 금융기관 52곳이 포함되고 UAE 등 제3국 기업도 대상입니다. 보도는 트럼프 대통령의 러시아산 디젤 구매 합의 직후 나온 조치라고 짚었으며, 최종 승인은 대사 검토와 장관급 표결을 거쳐야 합니다.",
+                                           "핀란드 총리가 키이우를 방문해 에너지 체계와 위성 개발 지원을 위해 3억 3,600만 달러 이상을 지원하겠다고 밝혔습니다. 같은 매체는 스타링크 속도 제한이 풀렸다는 보도를 우크라이나 당국자가 부인했다고 전했습니다."
+                                       ],
+                            "why":  "협상 논의와 별개로 겨울을 앞둔 에너지망 타격이 이어지고, 서방의 제재·지원 구도도 바뀌는 중입니다. EU 제재 명단의 승인 여부가 다음 확인 지점입니다.",
+                            "korea":  "에너지·전력 인프라 피해가 이어져 현지 진출 한국 기업과 재건 사업은 전력·물류 차질을 함께 점검할 필요가 있습니다.",
+                            "sources":  [
+                                            {
+                                                "name":  "Kyiv Independent – Energy facilities across Ukraine targeted as Russian attacks kill at least 8, injure 67",
+                                                "url":  "https://kyivindependent.com/energy-facilities-across-ukraine-targeted-as-russian-attacks-kill-at-least-8-injure-67-over-past-day/",
+                                                "lang":  "EN"
+                                            },
+                                            {
+                                                "name":  "Kyiv Independent – EU responds to Trump diesel deal with new Russia energy sanctions",
+                                                "url":  "https://kyivindependent.com/eu-responds-to-trump-diesel-deal-with-new-russia-energy-sanctions/",
+                                                "lang":  "EN"
+                                            },
+                                            {
+                                                "name":  "Kyiv Independent – Finnish PM visits Kyiv as Russia steps up attacks",
+                                                "url":  "https://kyivindependent.com/finnish-pm-visits-kyiv-as-russia-steps-up-attacks-despite-peace-push/",
+                                                "lang":  "EN"
+                                            }
+                                        ]
+                        },
+                        {
+                            "region":  "v4",
+                            "title":  "헝가리, 마톨치 전 중앙은행 총재 구금…재단 자금 수천억 포린트 손실 수사",
+                            "countries":  [
+                                              "헝가리"
+                                          ],
+                            "period":  "2026-10-21 ~ 22",
+                            "points":  [
+                                           "텔렉스에 따르면 2013~2025년 헝가리 중앙은행(MNB) 총재를 지낸 죄르지 마톨치가 10월 21일 구금됐습니다. 전직 MNB 총재가 구금된 것은 처음입니다. 변호인은 그가 경제 사기와 사문서 위조 혐의의 피의자라고 밝혔습니다.",
+                                           "2013~2016년 중앙은행에서 재단 6곳으로 2,665억 포린트가 이전됐고, 투자 손실은 약 2,700억 포린트로 알려졌습니다. 당국은 현금·증권 918억 포린트를 압수 또는 동결했으며 개인 97명, 기업 36곳, 사모펀드 11곳을 수사하고 있습니다.",
+                                           "아들 아담 마톨치와 재단 자금을 운용한 옵티마의 전 대표에게는 체포영장이 발부됐고, 국제 수배도 요청됐습니다.",
+                                           "수사는 2026년 4월 정권 교체 이후 중앙수사검찰청이 사건을 넘겨받으며 속도가 붙었다고 보도됐습니다. 마톨치 전 총재는 9월 에르스테은행 압박 의혹으로 조사를 받고 풀려난 바 있으며 혐의를 부인했습니다."
+                                       ],
+                            "why":  "오르반 정권 시기 핵심 경제 인사에 대한 수사가 구금 단계로 넘어갔습니다. 기소 여부와 자금 회수 규모가 다음 쟁점입니다.",
+                            "korea":  "",
+                            "sources":  [
+                                            {
+                                                "name":  "Telex – Former governor of Hungarian central bank in custody",
+                                                "url":  "https://telex.hu/english/2026/10/22/former-governor-of-hungarian-central-bank-in-custody",
+                                                "lang":  "EN"
+                                            },
+                                            {
+                                                "name":  "Balkan Insight – Democracy Digest: Czech Culture Ministry Cuts Funding for Velvet Revolution Anniversary",
+                                                "url":  "https://balkaninsight.com/2026/10/23/democracy-digest-czech-culture-ministry-cuts-funding-for-velvet-revolution-anniversary/rd/",
+                                                "lang":  "EN"
+                                            }
+                                        ]
+                        },
+                        {
+                            "region":  "baltic",
+                            "title":  "독일, 리투아니아 여단 감시 혐의 우크라이나인 체포…리투아니아 총리 “국방 예산 연내 전액 집행”",
+                            "countries":  [
+                                              "리투아니아"
+                                          ],
+                            "period":  "2026-10-21 ~ 22",
+                            "points":  [
+                                           "LRT에 따르면 독일 당국은 10월 22일 리투아니아 주둔 여단을 감시한 혐의로 우크라이나 국적 남성을 체포했습니다. 혐의의 구체적 내용은 제목 외에는 확인하지 못했습니다.",
+                                           "리투아니아 총리는 올해 말까지 군사 예산을 전액 집행하겠다고 밝혔습니다.",
+                                           "10월 22일 LRT는 이란에 리투아니아 국민 2명이 억류됐다는 보도를 외무부가 확인 중이라고 전했고, 담배 밀수용 풍선 2개가 송전선에 닿아 폭발했다고 보도했습니다.",
+                                           "스위스 스타들러 제작 신형 열차가 리투아니아에서 운행을 시작했습니다."
+                                       ],
+                            "why":  "NATO 동부 측면에서 군 시설 대상 정보 활동과 국방비 집행이 안보 현안으로 이어지고 있습니다. 체포 사건의 수사 결과가 다음 확인 지점입니다.",
+                            "korea":  "",
+                            "sources":  [
+                                            {
+                                                "name":  "LRT – Germany arrests Ukrainian man suspected of spying on Lithuania brigade",
+                                                "url":  "https://www.lrt.lt/en/news-in-english/19/3090269/germany-arrests-ukrainian-man-suspected-of-spying-on-lithuania-brigade",
+                                                "lang":  "EN"
+                                            },
+                                            {
+                                                "name":  "LRT – Lithuania will spend its military funding by year-end, PM assures",
+                                                "url":  "https://www.lrt.lt/en/news-in-english/19/3090175/lithuania-will-spend-its-military-funding-by-year-end-pm-assures",
+                                                "lang":  "EN"
+                                            },
+                                            {
+                                                "name":  "LRT – Lithuania seeks confirmation of reports two citizens detained in Iran",
+                                                "url":  "https://www.lrt.lt/en/news-in-english/19/3090077/lithuania-seeks-confirmation-of-reports-two-citizens-detained-in-iran",
+                                                "lang":  "EN"
+                                            }
+                                        ]
+                        },
+                        {
+                            "region":  "wbalkan",
+                            "title":  "세르비아 10월 25일 총선 이틀 앞…“14년 만에 가장 불확실한 선거”, 선거 침묵기 돌입",
+                            "countries":  [
+                                              "세르비아"
+                                          ],
+                            "period":  "2026-10-22 ~ 23",
+                            "points":  [
+                                           "발칸인사이트는 10월 23일 이번 조기 총선을 2012년부터 집권해 온 세르비아진보당(SNS)이 처음 맞는 가장 강한 도전이자 14년 만에 가장 결과가 불확실한 선거라고 분석했습니다. 약 2년간 이어진 학생 시위 운동이 시위를 표로 바꾸려 하고 있습니다.",
+                                           "BTA에 따르면 선거 침묵기는 10월 22일 자정부터 시작됐습니다. 유럽웨스턴발칸스는 MAGA 계열 단체들이 선거 참관인으로 올 것으로 예상된다고 전했습니다.",
+                                           "유럽웨스턴발칸스는 학생 명부가 이끄는 정부가 들어설 경우의 국정 방향을 다룬 인터뷰와, 선거 결과가 근소하더라도 유럽이 부치치 이후 세르비아에 대비해야 한다는 의견 기사를 실었습니다.",
+                                           "발칸인사이트는 정부 측에 충성을 보인 건설장비 업자가 국영 지분 기업에서 110만 유로 계약을 받았다는 탐사 기사도 냈습니다. 앞서 보도된 불법 감시 사례와 MOL의 NIS 인수 계약 서명도 선거 환경의 변수로 거론됩니다."
+                                       ],
+                            "why":  "오랜 집권당이 처음으로 실제 정권 교체 가능성에 직면한 선거입니다. 결과와 그 이후의 유럽 대응이 세르비아의 EU 관계와 지역 안정을 좌우할 수 있습니다.",
+                            "korea":  "",
+                            "sources":  [
+                                            {
+                                                "name":  "Balkan Insight – Serbia Braces for Most Uncertain Elections in 14 Years",
+                                                "url":  "https://balkaninsight.com/2026/10/23/serbia-braces-for-most-uncertain-elections-in-14-years/bi/",
+                                                "lang":  "EN"
+                                            },
+                                            {
+                                                "name":  "European Western Balkans – MAGA-linked groups among expected observers of Serbia’s elections",
+                                                "url":  "https://europeanwesternbalkans.com/2026/10/22/maga-linked-groups-among-expected-observers-of-serbias-elections/",
+                                                "lang":  "EN"
+                                            },
+                                            {
+                                                "name":  "European Western Balkans – Europe must prepare for a Serbia beyond Vučić",
+                                                "url":  "https://europeanwesternbalkans.com/2026/10/22/europe-must-prepare-for-a-serbia-beyond-vucic/",
+                                                "lang":  "EN"
+                                            },
+                                            {
+                                                "name":  "Balkan Insight – Dzimi’s Diggers: Big Contract Follows Show of Loyalty to Serbia’s Ruling Party",
+                                                "url":  "https://balkaninsight.com/2026/10/22/dzimis-diggers-big-contract-follows-show-of-loyalty-to-serbias-ruling-party/bi/",
+                                                "lang":  "EN"
+                                            }
+                                        ]
+                        },
+                        {
+                            "region":  "sbalkan",
+                            "title":  "불가리아 10월 25일 대통령 선거…이오토바 우세 속 흑해 드론 대응 논란, 유럽의회 결의안 충돌",
+                            "countries":  [
+                                              "불가리아"
+                                          ],
+                            "period":  "2026-10-22 ~ 23",
+                            "points":  [
+                                           "발칸인사이트에 따르면 라데프 총리의 진보불가리아가 지지하는 일리아나 이오토바 대통령 권한대행이 유력 후보입니다. 주요 경쟁자는 은행가 출신 전 임시총리 안드레이 규로프입니다. BTA가 인용한 Trend 여론조사에서는 투표 의향 47%, 이오토바 진영이 45.9%였고, 알파리서치는 투표율을 약 40%로 예상했습니다.",
+                                           "10월 6일과 13일 불가리아 흑해 경제수역에서 상선이 드론 공격을 받았고, 정부는 대응이 약하고 러시아를 지목하길 꺼린다는 비판을 받았습니다.",
+                                           "유럽의회는 10월 22일 불가리아·루마니아의 흑해 위협 대응을 위한 EU 자금 지원을 촉구하며 불가리아의 대응을 비판하는 결의를 채택했습니다. 국방장관은 이를 정치적 공격이라고 반발했고, 라데프 총리는 유럽의회 정당 그룹에 공개서한을 보냈습니다.",
+                                           "10월 23일 BTA는 이오토바 대통령 권한대행이 국가보호국장의 사임을 요구할 것이라고 전했고, 국가안보국장은 사임할 용의가 있다고 밝혔습니다. 사건의 구체적 경위는 확인하지 못했습니다."
+                                       ],
+                            "why":  "대선 결과에 따라 라데프 총리 진영의 권력 집중이 강화될 수 있습니다. 흑해 안보 대응을 둘러싼 EU와의 마찰도 선거 이후 이어질 전망입니다.",
+                            "korea":  "",
+                            "sources":  [
+                                            {
+                                                "name":  "Balkan Insight – Bulgaria’s Presidential Frontrunner Holds Lead Despite Drone Controversy",
+                                                "url":  "https://balkaninsight.com/2026/10/23/bulgarias-presidential-frontrunner-holds-lead-despite-drone-controversy/bi/",
+                                                "lang":  "EN"
+                                            },
+                                            {
+                                                "name":  "BTA – EP calls for EU funding to help Bulgaria, Romania counter Black Sea threats",
+                                                "url":  "https://www.bta.bg/en/news/world/1230296-ep-calls-for-eu-funding-to-help-bulgaria-romania-counter-black-sea-threats-voi",
+                                                "lang":  "EN"
+                                            },
+                                            {
+                                                "name":  "BTA – Defence minister calls European Parliament resolution a political attack",
+                                                "url":  "https://www.bta.bg/en/news/world/1230991-defence-minister-calls-european-parliament-resolution-political-attack-on-gove",
+                                                "lang":  "EN"
+                                            }
+                                        ]
+                        },
+                        {
+                            "region":  "east",
+                            "title":  "루마니아 콘스탄차 앞바다서 화물선 침몰…드론 공격 의심, 1명 사망·3명 실종",
+                            "countries":  [
+                                              "루마니아"
+                                          ],
+                            "period":  "2026-10-23",
+                            "points":  [
+                                           "BTA에 따르면 코모로 선적 화물선 호리우(Khoryv)가 10월 23일 콘스탄차 앞 약 13해리 해상에서 드론 공격이 의심되는 사고로 침몰했습니다. 루마니아 영해 밖입니다. 드론 의혹은 루마니아 매체 Digi24가 먼저 보도했고, 공식적인 공격 주체 발표는 보도에 없습니다.",
+                                           "승선 13명은 우크라이나인 10명과 아제르바이잔인 3명으로, 1명이 숨지고 9명이 구조됐으며 3명이 실종됐습니다. 현지 시간 오전 10시경 조난 신호가 접수됐고, 악천후와 시정 불량으로 헬기 구조는 불가능했습니다.",
+                                           "BTA는 10월 6일 불가리아 경제수역에서 상선 2척이 공격받았고 10월 13일에는 HS Dignity호가 침몰했다고 정리했습니다. 이번 사고는 루마니아 최고국방회의가 열린 다음 날 발생했다고 루마니아 언론을 인용해 전했습니다.",
+                                           "이 외에 10월 22일 루마니아국제방송은 유로스탯 자료로 루마니아의 2025년 재정적자가 GDP의 7.8%로 EU 최고라고 전했습니다."
+                                       ],
+                            "why":  "흑해 서부에서 상선 피해가 이어져 NATO·EU 회원국 인근 해역의 안전이 직접 현안이 됐습니다. 실종자 수색 결과와 공격 주체에 대한 공식 발표가 다음 확인 지점입니다.",
+                            "korea":  "흑해 항로를 이용하는 곡물·화물 운송과 콘스탄차항 물류에 영향을 줄 수 있어 이 해역을 경유하는 한국 기업은 운항·보험 동향을 살펴볼 필요가 있습니다.",
+                            "sources":  [
+                                            {
+                                                "name":  "BTA – One dead, three missing as cargo ship sinks off Romania’s Constanta after suspected drone strike",
+                                                "url":  "https://www.bta.bg/en/news/balkans/1231033-one-dead-three-missing-as-cargo-ship-sinks-off-romania-s-constanta-after-suspec",
+                                                "lang":  "EN"
+                                            },
+                                            {
+                                                "name":  "Radio Romania International – Romania, the EU’s largest budget deficit in 2025",
+                                                "url":  "https://www.rri.ro/en/news-and-current-affairs/today-in-the-news/romania-the-eus-largest-budget-deficit-in-2025-id1074245.html",
+                                                "lang":  "EN"
+                                            }
+                                        ]
+                        }
+                    ],
+        "countries":  {
+                          "폴란드":  "낙태법 완화를 요구하는 시위대가 다시 거리로 나옴(10/23, Notes from Poland). 폴란드·인도 총리가 뉴델리에서 만나 2030년까지 교역액 2배 확대를 목표로 제시(10/22). 러시아 반체제 인사 살해 사건으로 두 번째 조지아인을 기소(10/22).",
+                          "체코":  "문화부가 벨벳혁명 기념 행사 지원금을 삭감(BIRN, 10/23). 학급 부족 해소를 위한 신설 학교 계획, 프라하 대규모 도로 공사 시작(10/23, Expats.cz).",
+                          "슬로바키아":  "최근 48시간 내 주요 보도 확인되지 않음. 발칸인사이트 중부유럽 요약에 극우 성향 후보 지명 소식이 언급됐으나 내용은 확인하지 못함. 배경으로 10/24 지방선거가 예정돼 있음.",
+                          "헝가리":  "마톨치 전 중앙은행 총재가 구금됨(10/21). 재단 자금 수천억 포린트 손실 수사에서 아들과 옵티마 전 대표에게 체포영장 발부.",
+                          "에스토니아":  "외무부 최고위 관료 요나탄 프세비오프가 사임하고 2027년 총선에 사민당 총리 후보로 출마할 계획(ERR). 아우베레 드론 사건 조사에서 에스토니아를 겨냥한 고의 활동은 확인되지 않았고, EU가 드론 감시에 3,200만 유로를 지원. 10/25(일)부터 겨울 시간 적용.",
+                          "라트비아":  "사에이마가 인도 과학자의 시민권 부여 결정을 뒤집음(10/23). 선거 참패 후 한 정당 지도부가 사임(10/22). 불법 국경 통과 13명이 발미에라에서 적발됨(10/23).",
+                          "리투아니아":  "독일이 리투아니아 여단 감시 혐의 우크라이나인을 체포(10/22). 총리는 국방 예산을 연내 전액 집행하겠다고 밝힘. 이란에 억류된 리투아니아인 2명 보도를 확인 중.",
+                          "슬로베니아":  "최근 48시간 내 주요 보도 확인되지 않음(이번에는 Sloveniatimes를 조회하지 못함). 배경으로 얀샤 4기 정부(6월 출범)가 2027년 예산 수정안을 처리 중.",
+                          "크로아티아":  "자그레브 공항과 위즈에어 간 협상이 계속됨(10/22). 유로파리그에서 디나모가 NEC에 2-4로 패하고, 하이두크는 콘퍼런스리그 원정에서 튠에 1-0 승리. 발칸인사이트는 몬테네그로-크로아티아 간 전시 수용소 전범 사건 미해결이 몬테네그로의 EU 가입에 영향을 줄 수 있다고 보도(10/23).",
+                          "세르비아":  "10/25 총선을 앞두고 14년 만에 가장 불확실한 선거라는 평가, 선거 침묵기 시작(10/22), MAGA 계열 단체의 참관 예상.",
+                          "보스니아 헤르체고비나":  "크리스토 등이 베를린 프로세스 정상회의에서 지역 협력과 EU 통합을 강조(10/22). IRMCT 소장이 전범 미화가 정의를 훼손한다고 UN에 경고. 보스니아인 2명이 크로아티아에서 이주민 밀수 혐의로 체포됨.",
+                          "몬테네그로":  "메르츠 총리가 베를린 프로세스 정상회의에서 몬테네그로의 EU 가입이 2028년까지 가능하다고 언급(BIRN, 10/22). 크로아티아와의 전시 수용소 사건 문제가 가입 변수로 거론됨(10/23).",
+                          "코소보":  "최근 48시간 내 주요 보도 확인되지 않음. 배경으로 최대 야당 PDK의 베드리 함자 대표가 10/21 사임했고, 베를린 프로세스에서 프리슈티나-베오그라드 대화 정상화가 거론됨.",
+                          "알바니아":  "학생 시위 중 미성년자 200명 이상이 체포되거나 기소됐고, 인권단체가 경찰 폭력을 주장(BIRN, 10/23).",
+                          "북마케도니아":  "오흐리드 법원이 불가리아 클럽 비서 펜디코프 폭행 사건 피고 2명에게 무죄 판결(10/22). 불가리아 의원들이 펜디코프 지지를 표명해 양국 갈등 소지가 이어짐(BTA).",
+                          "불가리아":  "10/25 대통령 선거를 앞두고 이오토바 권한대행 우세. 유럽의회 흑해 결의안을 두고 국방장관이 정치적 공격이라고 반발, 라데프 총리는 유럽의회 정당 그룹에 공개서한을 보냄(10/22).",
+                          "우크라이나":  "러시아 공습으로 하루 최소 8명 사망·67명 부상, 8개 주에서 긴급 정전(10/23). EU가 117건 신규 대러 제재 명단을 추진. 핀란드가 3억 3,600만 달러 이상을 지원.",
+                          "벨라루스":  "최근 48시간 내 주요 보도 확인되지 않음. 배경으로 폴란드와의 국경 문제가 이어지는 중.",
+                          "몰도바":  "최근 48시간 내 주요 보도 확인되지 않음. 배경으로 헝가리가 우크라이나와 함께 몰도바의 마지막 2개 EU 협상 분야 개시 절차를 보류한 상태(10/20 보도).",
+                          "루마니아":  "콘스탄차 앞바다에서 화물선이 드론 공격 의심으로 침몰, 1명 사망·3명 실종(10/23). 2025년 재정적자 GDP 대비 7.8%로 EU 최고(10/22)."
+                      },
+        "note":  "작성 기준: 2026-10-23 저녁(한국시간). Kyiv Independent, Radio Romania International, LSM, LRT, ERR, Notes from Poland, Balkan Insight, BTA, European Western Balkans, Expats.cz, Total Croatia News, Telex, N1의 첫 화면과 일부 기사를 확인했습니다. Sloveniatimes는 이번에 조회하지 않았고 KOTRA 해외시장뉴스는 동유럽 새 기사를 확인하지 못했으며 한국 언론은 사용하지 못했습니다. 루마니아 선박 침몰은 BTA 단일 보도를 바탕으로 했고 공격 주체는 공식 확인되지 않았습니다. 세르비아 기사 일부는 유료 구간 때문에 앞부분만 확인했고, 불가리아 국가보호국장 사임 요구의 경위는 확인하지 못했습니다. 슬로바키아·슬로베니아·코소보·벨라루스·몰도바는 새 주요 보도가 확인되지 않아 배경 동향으로 대신했습니다. 일부 매체의 요약은 헤드라인 중심입니다. ‘한국·기업 시사점’은 보도를 바탕으로 한 해석입니다. 출처 표시: KR = 한국 언론, KOTRA = KOTRA 해외시장뉴스, EN = 해외 매체."
+    },
+    {
         "date":  "2026-10-22",
         "home":  [
                      0,
