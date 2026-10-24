@@ -1,6 +1,248 @@
 /* 원본: 동유럽 웹사이트/news-data/*.json (최신순, tools/build-news.ps1로 생성) */
 window.NEWS_DATA=[
     {
+        "date":  "2026-10-24",
+        "home":  [
+                     0,
+                     1,
+                     4
+                 ],
+        "overview":  "우크라이나에서는 러시아의 공습이 이어지는 가운데 젤렌스키 대통령이 11월 전반 아부다비에서 3자 실무회담이 열릴 것이라고 밝혔습니다. 체코 의회는 공영방송 수신료를 국가 예산 지원으로 대체하는 법안을 밤샘 표결 끝에 1차 심의에서 통과시켰고 시위가 이어졌습니다. 불가리아는 10월 25일 대통령 선거를 앞두고 선거 침묵기에 들어갔으며, 소피아에서는 태권도연맹 회장이 총격으로 숨졌습니다. 세르비아도 같은 날 총선을 치릅니다.",
+        "stories":  [
+                        {
+                            "region":  "top",
+                            "title":  "젤렌스키 “11월 전반 아부다비서 3자 실무회담”…러시아 공습은 계속, 하루 4명 사망·78명 부상",
+                            "countries":  [
+                                              "우크라이나"
+                                          ],
+                            "period":  "2026-10-23 ~ 24",
+                            "points":  [
+                                           "키이우인디펜던트에 따르면 젤렌스키 대통령은 우크라이나·러시아·미국 협상팀이 11월 전반 아부다비에서 만날 것이라고 밝혔습니다. 회담은 실무급에서 시작하며, 성과가 있으면 젤렌스키·푸틴·트럼프 정상회담으로 이어질 수 있다고 했습니다. 10월로 예상됐던 3자 회동은 열리지 않았고, 그는 모든 것이 러시아에 달려 있다고 말했습니다.",
+                                           "젤렌스키 대통령은 강력한 안전보장과 유럽의 참여가 필요하다고 강조했고, 종전 후에도 대규모 우크라이나군 유지를 위해 최소 10년의 재정 지원이 필요하다고 말했습니다. 미국 특사 위트코프는 이번 주 오슬로에서 젤렌스키 대통령을 만난 뒤 푸틴 대통령을 만났다고 합니다.",
+                                           "10월 24일 보도 기준 지난 하루 러시아 공격으로 4명이 숨지고 78명이 다쳤습니다. 러시아는 밤사이 드론 126대(제트 추진 61대)를 발사했고 우크라이나 공군은 101대를 제압했다고 밝혔습니다. 키이우 오볼론 구역 주거용 건물이 드론에 맞아 2명이 다쳤고, 체르니히우 낮 공격으로 1명이 숨지고 최소 25명이 다쳤습니다.",
+                                           "스타링크·스타실드 속도 제한을 두고 젤렌스키 대통령은 10월 중순부터 제한이 계속된다고 말했으나, 국방부는 10월 24일 스타실드 속도가 시속 400km 이상(원문 표기)으로 복구됐다고 밝혀 현재 상태는 엇갈립니다. 우크라이나군은 오룔 전자공장을 타격했다고 참모본부가 확인했으며 모스크바 공항 4곳의 운항이 제한됐다고 보도됐습니다."
+                                       ],
+                            "why":  "협상 일정이 처음으로 구체화됐지만 개최 여부는 러시아 태도에 달려 있고, 겨울을 앞둔 민간·에너지 피해는 계속됩니다. 11월 아부다비 회담이 실제로 열리는지가 다음 확인 지점입니다.",
+                            "korea":  "회담 성사와 안전보장 논의의 진전은 장기적으로 재건 사업 환경에 영향을 줍니다. 전투와 통신·전력 불안이 이어지는 만큼 현지 진출 기업은 운영 리스크를 계속 점검할 필요가 있습니다.",
+                            "sources":  [
+                                            {
+                                                "name":  "Kyiv Independent – Trilateral peace talks with Russia, US negotiators to begin in November, Zelensky says",
+                                                "url":  "https://kyivindependent.com/trilateral-peace-talks-with-russia-us-negotiators-to-begin-in-november-zelensky-says/",
+                                                "lang":  "EN"
+                                            },
+                                            {
+                                                "name":  "Kyiv Independent – Russian attacks kill 4, injure 78 across Ukraine over past day, as drone strikes Kyiv residential building",
+                                                "url":  "https://kyivindependent.com/russian-attacks-kill-4-injure-78-across-ukraine-over-past-day-as-drone-strikes-kyiv-residential-building-in-the-morning/",
+                                                "lang":  "EN"
+                                            },
+                                            {
+                                                "name":  "Kyiv Independent – Starshield operations restored to speeds of more than 400 km/h, Ukraine’s Defense Ministry says",
+                                                "url":  "https://kyivindependent.com/starshield-operations-restored-above-400-km-h-ukraines-defense-ministry-says/",
+                                                "lang":  "EN"
+                                            }
+                                        ]
+                        },
+                        {
+                            "region":  "v4",
+                            "title":  "체코 의회, 공영방송 수신료 폐지·국가 예산 지원 법안 1차 통과…밤샘 시위, 11월 3일 방송사 파업 예고",
+                            "countries":  [
+                                              "체코"
+                                          ],
+                            "period":  "2026-10-23 ~ 24",
+                            "points":  [
+                                           "Expats.cz에 따르면 ANO·SPD·모토리스트 연립이 발의한 법안이 10월 24일 새벽 4시 36분 1차 심의를 통과했습니다. 야당의 부결·정부 반송 동의안 2건은 177명 중 81표에 그쳤습니다. 수신료는 아직 폐지된 것이 아니며, 법안은 미디어·문화 위원회를 거쳐 추가 심의를 받습니다.",
+                                           "법안에 따르면 체코TV는 57억 4,000만 코루나, 체코라디오는 20억 6,500만 코루나를 받습니다. 이는 올해 예상 수신료 수입보다 각각 약 10억, 4억 코루나 적고, 두 방송사 합계 수입은 내년에 약 14억 코루나 줄어듭니다. 문화부 장관은 유럽에서 흔한 방식이라고 옹호했고, 바비시 총리는 표결에 참여하지 않았습니다.",
+                                           "시위대는 10월 23일 오후부터 프라하 말로스트란스케 광장에 모였고 새벽 4시 이후에도 수백 명이 남았습니다. 일부는 의회 진입을 시도했으나 경찰이 막았습니다. 10월 25일 오후 4시 구시가지 광장에서 ‘밀리온 칠마 칠레’ 집회가 예정돼 있습니다.",
+                                           "체코TV·라디오 직원들은 의회가 재개되는 11월 3일 하루 파업을 계획하고 있으며, 직접 국가 지원이 방송 독립성을 위협한다고 주장합니다. ODS·해적당·STAN·TOP 09 등 야당은 수정안과 토론으로 맞서겠다고 밝혔습니다. 이틀 전 발칸인사이트는 문화부가 벨벳혁명 기념 행사 지원금을 줄였다고도 전했습니다."
+                                       ],
+                            "why":  "공영방송의 재원을 정부 예산에 의존시키는 방식이어서 언론 독립성 논쟁이 정치 갈등으로 커졌습니다. 위원회 심의와 11월 3일 파업·표결이 다음 확인 지점입니다.",
+                            "korea":  "",
+                            "sources":  [
+                                            {
+                                                "name":  "Expats.cz – Overnight protests mark Czech media funding vote as opposition vows fight",
+                                                "url":  "https://www.expats.cz/czech-news/article/overnight-protests-mark-czech-media-funding-vote-as-opposition-vows-fight",
+                                                "lang":  "EN"
+                                            },
+                                            {
+                                                "name":  "Expats.cz – Czech TV and radio staff plan Nov. 3 strike, with visible broadcast changes",
+                                                "url":  "https://www.expats.cz/czech-news/article/czech-tv-and-radio-staff-plan-nov-3-strike-with-visible-broadcast-changes",
+                                                "lang":  "EN"
+                                            },
+                                            {
+                                                "name":  "Balkan Insight – Democracy Digest: Czech Culture Ministry Cuts Funding for Velvet Revolution Anniversary",
+                                                "url":  "https://balkaninsight.com/2026/10/23/democracy-digest-czech-culture-ministry-cuts-funding-for-velvet-revolution-anniversary/rd/",
+                                                "lang":  "EN"
+                                            }
+                                        ]
+                        },
+                        {
+                            "region":  "baltic",
+                            "title":  "리투아니아, 라인메탈 탄약 공장 환경 승인…대드론 그물 생산·국방비 삭감 압박 논란",
+                            "countries":  [
+                                              "리투아니아"
+                                          ],
+                            "period":  "2026-10-23",
+                            "points":  [
+                                           "LRT에 따르면 리투아니아 환경 당국이 독일 라인메탈의 탄약 공장 건설을 승인했습니다. 승인 범위와 착공 일정은 헤드라인 외에는 확인하지 못했습니다.",
+                                           "LRT는 같은 날 리투아니아 기업들이 주요 시설 보호용 대드론 그물을 생산하고 있다고 매체를 인용해 전했습니다.",
+                                           "재무장관은 적자 예산을 옹호하면서 국방비를 줄이라는 압박이 있었다고 말했습니다. 앞서 총리는 올해 군사 예산을 전액 집행하겠다고 밝힌 바 있습니다.",
+                                           "빌니우스 시장 발다스 벤쿤스카스는 재선 도전 의사를 밝혔고, 올겨울 공항 노선은 74개로 작년보다 6개 줄어듭니다."
+                                       ],
+                            "why":  "NATO 동부 측면 국가가 현지 탄약 생산과 드론 방어를 동시에 키우고 있습니다. 공장 착공 시기와 2027년 국방 예산 확정이 다음 확인 지점입니다.",
+                            "korea":  "",
+                            "sources":  [
+                                            {
+                                                "name":  "LRT – Lithuania’s environment agency greenlights Rheinmetall ammo factory",
+                                                "url":  "https://www.lrt.lt/en/news-in-english/19/3091313/lithuania-s-environment-agency-greenlights-rheinmetall-ammo-factory",
+                                                "lang":  "EN"
+                                            },
+                                            {
+                                                "name":  "LRT – Lithuanian firms produce anti-drone netting to shield strategic objects",
+                                                "url":  "https://www.lrt.lt/en/news-in-english/19/3091125/lithuanian-firms-produce-anti-drone-netting-to-shield-strategic-objects-media",
+                                                "lang":  "EN"
+                                            },
+                                            {
+                                                "name":  "LRT – Lithuanian finmin defends deficit budget",
+                                                "url":  "https://www.lrt.lt/en/news-in-english/19/3091085/lithuanian-finmin-defends-deficit-budget-there-was-pressure-to-cut-defence-spending",
+                                                "lang":  "EN"
+                                            }
+                                        ]
+                        },
+                        {
+                            "region":  "wbalkan",
+                            "title":  "세르비아 총선 하루 앞…장애인 대상 투표 압박 의혹, 불법 감시 사례 공개, 검찰은 폭력 자제 촉구",
+                            "countries":  [
+                                              "세르비아"
+                                          ],
+                            "period":  "2026-10-22 ~ 23",
+                            "points":  [
+                                           "발칸인사이트는 장애인과 돌봄 제공자들이 복지 지원을 잃을 것을 우려해 집권당 지지를 하라는 직간접적 압박을 받았다고 증언했다고 보도했습니다.",
+                                           "유럽웨스턴발칸스는 새로 드러난 불법 감시 사례가 선거 절차의 신뢰성에 영향을 준다고 전했고, MAGA 계열 단체가 참관인으로 올 것으로 예상된다고 보도했습니다.",
+                                           "BTA에 따르면 세르비아 검찰은 이틀간의 선거를 앞두고 폭력 없이 헌법과 법률을 지킬 것을 촉구했습니다. 선거 침묵기는 이미 시작됐습니다.",
+                                           "발칸인사이트 오피니언은 젊은 유권자가 이탈하며 부치치 대통령 지지 기반이 약해지고 있다고 분석했습니다. 투표 결과나 출구조사는 아직 보도되지 않았습니다."
+                                       ],
+                            "why":  "2년간의 학생 시위 이후 처음 치르는 사실상의 정권 평가입니다. 결과와 선거 공정성에 대한 국제 참관단 평가가 다음 확인 지점입니다.",
+                            "korea":  "",
+                            "sources":  [
+                                            {
+                                                "name":  "Balkan Insight – ‘Collective Fear’: Pressure on Serbians with Disabilities to Vote for Ruling Party",
+                                                "url":  "https://balkaninsight.com/2026/10/23/collective-fear-pressure-on-serbians-with-disabilities-to-vote-for-ruling-party/bi/",
+                                                "lang":  "EN"
+                                            },
+                                            {
+                                                "name":  "European Western Balkans – Newly revealed cases of illegal surveillance in Serbia affect the integrity of the election process",
+                                                "url":  "https://europeanwesternbalkans.com/2026/10/22/newly-revealed-cases-of-illegal-surveillance-in-serbia-affect-the-integrity-of-the-election-process/",
+                                                "lang":  "EN"
+                                            },
+                                            {
+                                                "name":  "BTA – Prosecution office calls for no violence ahead of Serbia’s early parliamentary election",
+                                                "url":  "https://www.bta.bg/en/news/balkans/1231470-prosecution-office-calls-for-no-violence-respect-of-constitution-laws-two-day",
+                                                "lang":  "EN"
+                                            },
+                                            {
+                                                "name":  "Balkan Insight – Vucic’s Electoral Base Erodes as Younger Voters Seek Change in Serbia",
+                                                "url":  "https://balkaninsight.com/2026/10/22/vucics-electoral-base-erodes-as-younger-voters-seek-change-in-serbia/bi/",
+                                                "lang":  "EN"
+                                            }
+                                        ]
+                        },
+                        {
+                            "region":  "sbalkan",
+                            "title":  "불가리아 대선 당일 선거 규칙 발효…소피아서 태권도연맹 회장 총격 사망, 이오토바 우세 속 투표율 낮을 전망",
+                            "countries":  [
+                                              "불가리아"
+                                          ],
+                            "period":  "2026-10-23 ~ 24",
+                            "points":  [
+                                           "BTA에 따르면 10월 24일부터 선거운동과 여론조사 공표가 금지됐습니다. 후보 흐리스타노프와 체르케조바 등은 10월 23일 플로브디프에서 선거운동을 마쳤고, 중앙선관위는 국제 참관단에 선거 준비 상황을 설명했습니다.",
+                                           "발칸인사이트는 이오토바 대통령 권한대행과 라데프 총리의 진보불가리아가 낮은 신뢰와 낮은 투표율에도 영향력을 키울 전망이라고 평가했습니다. 흑해 상선 드론 공격에 대한 정부 대응 논란이 변수로 거론됩니다.",
+                                           "10월 24일 BTA는 사업가이자 불가리아 태권도연맹 회장인 슬라비 비네프가 소피아 자택에서 머리에 총상을 입고 숨졌다고 전했습니다. 내무부 사무총장 직무대행은 용의자 3명을 트라키아 고속도로 터널 부근에서 체포했고 총기 2정을 압수했다고 밝혔습니다.",
+                                           "당국은 증거가 청부살인을 가리키지 않으며 피해자와 용의자가 서로 아는 사이로 보이고 동기는 금전 분쟁일 가능성이 크다고 밝혔습니다. 보도는 이 사건을 선거와 연결하지 않았습니다. 소피아 경찰은 사건 서류가 일요일 검찰로 넘어갈 것이라고 말했습니다."
+                                       ],
+                            "why":  "대선 결과에 따라 라데프 총리 진영의 권력 집중이 강화될 수 있고, 같은 날 투표를 앞두고 발생한 강력 사건에 대한 수사 경과도 관심을 받습니다. 개표 결과와 투표율이 다음 확인 지점입니다.",
+                            "korea":  "",
+                            "sources":  [
+                                            {
+                                                "name":  "BTA – Bulgarian Taekwondo Federation chair Slavi Binev shot dead in Sofia",
+                                                "url":  "https://www.bta.bg/en/news/bulgaria/1231714-bulgarian-taekwondo-federation-chair-slavi-binev-shot-dead-in-sofia-interior-mi",
+                                                "lang":  "EN"
+                                            },
+                                            {
+                                                "name":  "BTA – Day of election silence: campaigning prohibited, publishing of public opinion polls banned",
+                                                "url":  "https://www.bta.bg/en/news/bulgaria/1231576-day-of-election-silence-campaigning-prohibited-publishing-of-public-opinion-po",
+                                                "lang":  "EN"
+                                            },
+                                            {
+                                                "name":  "BTA – Hristanov and Cherkezova end presidential campaign in Plovdiv",
+                                                "url":  "https://www.bta.bg/en/news/bulgaria/1231595-hristanov-and-cherkezova-end-presidential-campaign-in-plovdiv",
+                                                "lang":  "EN"
+                                            },
+                                            {
+                                                "name":  "Balkan Insight – Bulgaria’s Presidential Frontrunner Holds Lead Despite Drone Controversy",
+                                                "url":  "https://balkaninsight.com/2026/10/23/bulgarias-presidential-frontrunner-holds-lead-despite-drone-controversy/bi/",
+                                                "lang":  "EN"
+                                            }
+                                        ]
+                        },
+                        {
+                            "region":  "east",
+                            "title":  "루마니아 최고국방회의, 흑해 상선 드론 공격 논의…유럽의회는 러시아 책임 명시한 결의 채택",
+                            "countries":  [
+                                              "루마니아"
+                                          ],
+                            "period":  "2026-10-22 ~ 23",
+                            "points":  [
+                                           "루마니아국제방송에 따르면 최고국방회의(CSAT)가 새 총리 루카 니쿨레스쿠와 내각이 처음 참석한 자리에서 영해 인근 상선 드론 공격과 영공 침범 등 해상 사건 증가를 논의했습니다. 회의는 이를 우크라이나 밖으로 번진 러시아의 침략의 결과로 규정했습니다.",
+                                           "우선과제로 해상 감시 체계 확충, 기뢰 대응, 무단 드론 대응 능력이 꼽혔고, NATO 조율과 동부 측면 억제·방어 태세 강화도 논의됐습니다.",
+                                           "유럽의회는 불가리아·루마니아 연안 인명 피해 공격을 규탄하고 러시아에 책임을 묻는 결의를 채택했습니다. 흑해 EU 해군 작전, NATO 흑해 구상, EU 흑해 해양안보센터 신속 출범, 미사용 SAFE 자금 활용 등이 제안됐습니다.",
+                                           "발칸인사이트는 루마니아 국영 무기 공장이 부패한 경영과 자금 낭비로 제대로 가동되지 않는다는 탐사 기사를 냈습니다. 어제 보도된 콘스탄차 앞바다 화물선 침몰의 후속 수색 결과는 오늘 확인한 매체에서 찾지 못했습니다."
+                                       ],
+                            "why":  "흑해 서부 상선 피해가 EU·NATO 차원의 대응 논의로 이어지고 있습니다. 해군 작전 등 제안이 실제 결정으로 이어지는지가 다음 확인 지점입니다.",
+                            "korea":  "흑해 항로와 콘스탄차항을 이용하는 물류에 영향을 줄 수 있어 이 해역을 경유하는 한국 기업은 운항·보험 동향을 살펴볼 필요가 있습니다.",
+                            "sources":  [
+                                            {
+                                                "name":  "Radio Romania International – Supreme Defence Council and MEPs discuss Black Sea security",
+                                                "url":  "https://www.rri.ro/en/news-and-current-affairs/today-in-the-news/supreme-defence-council-and-meps-discuss-black-sea-security-id1074641.html",
+                                                "lang":  "EN"
+                                            },
+                                            {
+                                                "name":  "Balkan Insight – One Dead, Crew Members Missing After Ship Sinks off Romania",
+                                                "url":  "https://balkaninsight.com/2026/10/23/one-dead-crew-members-missing-after-ship-sinks-off-romania/bi/",
+                                                "lang":  "EN"
+                                            },
+                                            {
+                                                "name":  "Balkan Insight – Held Together with Wire: Inside Romania’s Neglected Arms Industry",
+                                                "url":  "https://balkaninsight.com/2026/10/22/held-together-with-wire-inside-romanias-neglected-arms-industry/rd/",
+                                                "lang":  "EN"
+                                            }
+                                        ]
+                        }
+                    ],
+        "countries":  {
+                          "폴란드":  "연립 소수 파트너 폴란드2050 대표 카타지나 펠친스카나웬치가 장관직과 당 대표직에서 사임(10/23, Notes from Poland). 시장 연임 제한 폐지안이 213대 215로 부결된 데 따른 것이며 정당은 연립에 남을 예정. 낙태법 자유화 요구 시위도 재개.",
+                          "체코":  "공영방송 수신료를 국가 예산 지원으로 대체하는 법안이 1차 심의 통과(10/24). 야당 반발, 11월 3일 방송사 파업 예고.",
+                          "슬로바키아":  "최근 48시간 내 주요 보도 확인되지 않음. 발칸인사이트 중부유럽 요약에 슬로바키아 대통령의 거부권 행사가 언급됐으나 내용은 확인하지 못함.",
+                          "헝가리":  "텔렉스에 따르면 마톨치 전 중앙은행 총재가 은행 재단 자금 손실 수사와 관련해 일단 한 달간 구금(10/23, 결정은 아직 확정되지 않음). 마제르 총리는 1956년 혁명 기념 연설을 함.",
+                          "에스토니아":  "최근 48시간 내 새 전개는 제한적. 국방장관이 드론전 시대에 맨손은 아니라고 말하며 단거리 HIMARS 미사일 도착과 EU의 드론 감시 3,200만 유로 지원을 언급(ERR). 외무부 최고위 관료 요나탄 프세비오프의 사임·정계 진출 계획도 보도됨.",
+                          "라트비아":  "의회가 논란이 된 미디어법 졸속 개정안을 통과시킴(10/22, LSM). 인도 과학자 시민권 결정을 번복하고 소득 불평등이 EU 2위라는 보도(10/23).",
+                          "리투아니아":  "환경 당국이 라인메탈 탄약 공장 건설을 승인(10/23). 대드론 그물 생산, 국방비 삭감 압박 논란.",
+                          "슬로베니아":  "최근 48시간 내 주요 보도 확인되지 않음(이번에도 Sloveniatimes를 조회하지 못함). 배경으로 얀샤 4기 정부가 2027년 예산 수정안을 처리 중.",
+                          "크로아티아":  "최근 48시간 내 주요 보도 확인되지 않음(Total Croatia News 미조회). 발칸인사이트는 몬테네그로와의 전시 수용소 전범 문제 미해결이 양국 관계의 부담이라고 보도(10/23).",
+                          "세르비아":  "10/25 총선을 앞두고 장애인 투표 압박 의혹, 불법 감시 사례 공개, 검찰의 폭력 자제 촉구. 선거 침묵기 진행 중.",
+                          "보스니아 헤르체고비나":  "발칸인사이트는 무죄 판결이 보스니아 전범 사건의 세르비아 이관에 대한 의문을 키운다고 보도(10/22).",
+                          "몬테네그로":  "마이다 고르체비치 유럽문제장관이 EU 가입 협상 33개 챕터 작업이 모두 끝났다고 밝힘(10/23, EWB). 메르츠 총리는 협상이 거의 마무리 단계라고 언급(10/22). EU-서부발칸 정상회의는 11월 25일 브뤼셀 개최.",
+                          "코소보":  "대통령이 헤이그 특별재판소 권한 제한 법안을 PDK 요청으로 의회에 재심의 반송(10/23, BIRN). EU는 국제 의무와 충돌한다고 경고. 앞서 타치·크라스니키는 각각 징역 25년 선고.",
+                          "알바니아":  "학생 시위 중 미성년자 200명 이상이 체포되거나 기소됐고 인권단체가 경찰 폭력 의혹을 제기(BIRN, 10/23).",
+                          "북마케도니아":  "최근 48시간 내 주요 보도 확인되지 않음. 불가리아 대사가 스코페에서 IMARO 창립자 기념비에 헌화(BTA, 10/23).",
+                          "불가리아":  "10/25 대선을 앞두고 선거 침묵기 시작. 소피아에서 태권도연맹 회장이 총격으로 숨져 용의자 3명 체포(10/24, BTA).",
+                          "우크라이나":  "젤렌스키 대통령이 11월 전반 아부다비에서 3자 실무회담이 열린다고 발표(10/23). 하루 4명 사망·78명 부상, 키이우 주거용 건물 드론 피격(10/24).",
+                          "벨라루스":  "최근 48시간 내 주요 보도 확인되지 않음. 배경으로 폴란드와의 국경 문제가 이어지는 중.",
+                          "몰도바":  "최근 48시간 내 주요 보도 확인되지 않음. 배경으로 헝가리가 몰도바의 마지막 2개 EU 협상 분야 개시 절차를 보류한 상태(10/20 보도).",
+                          "루마니아":  "최고국방회의가 흑해 상선 드론 공격과 영공 침범을 논의(10/22~23). 학교 흉기 사건이 일주일 새 두 건 발생해 우려 확산(RRI)."
+                      },
+        "note":  "작성 기준: 2026-10-24 저녁(한국시간). Kyiv Independent, Radio Romania International, LSM, LRT, ERR, Notes from Poland, Balkan Insight, BTA, European Western Balkans, Expats.cz, Telex의 첫 화면과 일부 기사를 확인했습니다. Sloveniatimes는 접속이 거부되어 읽지 못했고 Total Croatia News와 N1은 이번에 조회하지 않았으며, KOTRA 해외시장뉴스에서는 동유럽 새 기사를 확인하지 못했고 한국 언론은 사용하지 못했습니다. 리투아니아 기사는 헤드라인 중심으로 확인했습니다. 슬로바키아·슬로베니아·크로아티아·북마케도니아·벨라루스·몰도바는 새 주요 보도가 확인되지 않아 배경 동향으로 대신했습니다. 스타링크 제한 상태는 대통령 발언과 국방부 발표가 엇갈립니다. 세르비아와 불가리아 선거 결과는 작성 시점에 나오지 않았습니다. ‘한국·기업 시사점’은 보도를 바탕으로 한 해석입니다. 출처 표시: KR = 한국 언론, KOTRA = KOTRA 해외시장뉴스, EN = 해외 매체."
+    },
+    {
         "date":  "2026-10-23",
         "home":  [
                      3,
