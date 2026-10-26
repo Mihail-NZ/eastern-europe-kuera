@@ -5,6 +5,32 @@
  * title이 null이면 그 주에 확인된 주요 보도가 없다는 뜻이다. */
 window.WEEKLY_NEWS = [
   {
+    week_start: '2026-10-19', week_end: '2026-10-25', updated: '2026-10-27',
+    note: '웹 검색과 학회 브리핑(10/19·10/20)으로 확인한 보도를 바탕으로 골랐습니다. 이번 주 주요 보도를 확인하지 못한 나라는 비워 두었고, 조사 시점이 일요일이 아닌 화요일(10/27)이어서 10/19~10/25 주를 반영했습니다.',
+    countries: {
+      '폴란드': { title: '폴란드 하원, 중대 태아 기형 시 낙태 허용 복원 등 낙태법 완화안 통과', source: 'Notes from Poland', url: 'https://notesfrompoland.com/2026/10/21/parliament-approves-liberalisation-of-polands-abortion-laws/' },
+      '체코': { title: null },
+      '슬로바키아': { title: null },
+      '헝가리': { title: '헝가리 경찰, 마톨치 전 중앙은행 총재를 금융 사기 혐의로 체포', source: 'Euronews', url: 'https://www.euronews.com/2026/10/21/former-hungarian-central-bank-chief-gyorgy-matolcsy-detained-in-financial-fraud-probe' },
+      '슬로베니아': { title: null },
+      '크로아티아': { title: null },
+      '세르비아': { title: '세르비아 총선서 야권 학생 명단 압승…부치치 패배 인정', source: 'Balkan Insight', url: 'https://balkaninsight.com/2026/10/25/serbian-strongman-vucic-concedes-defeat-in-snap-elections/bi/' },
+      '보스니아 헤르체고비나': { title: null },
+      '코소보': { title: '코소보, 정치 교착 탓에 EU 자금 추가 상실 위험', source: 'Balkan Insight', url: 'https://balkaninsight.com/2026/10/20/kosovo-risks-losing-more-eu-funds-after-deadlock-delayed-reforms/bi/' },
+      '몬테네그로': { title: '메르츠 독일 총리, 베를린 프로세스 정상회의서 몬테네그로 2028년 EU 가입 전망', source: 'Balkan Insight', url: 'https://balkaninsight.com/2026/10/22/montenegro-could-join-eu-by-2028-says-german-chancellor/bi/' },
+      '북마케도니아': { title: null },
+      '알바니아': { title: '알바니아 학생들, 라마 총리 퇴진과 부패 척결 요구', source: 'Balkan Insight', url: 'https://balkaninsight.com/2026/10/21/albanias-students-demand-the-fall-of-rama-and-an-end-to-corruption/bi/' },
+      '불가리아': { title: '불가리아 대선 1차 투표 역대 최저 투표율…결선 진출', source: 'Balkan Insight', url: 'https://balkaninsight.com/2026/10/26/bulgarias-presidential-election-heads-to-runoff-after-record-low-turnout/bi/' },
+      '루마니아': { title: '루마니아 의회, 니쿨레스쿠 소수 정부 승인…찬성 280표', source: 'AP', url: 'https://www.cp24.com/news/world/2026/10/20/romanian-lawmakers-back-a-minority-government-to-end-monthslong-stalemate/' },
+      '몰도바': { title: null },
+      '우크라이나': { title: '젤렌스키, 오슬로서 위트코프 美특사와 종전 협상', source: '뉴스1', url: 'https://news1.kr/world/europe/6326474' },
+      '벨라루스': { title: '카우나스 공항, 벨라루스발 풍선 위협으로 운항 중단', source: 'Charter97', url: 'https://charter97.org/en/news/2026/10/25/703120' },
+      '리투아니아': { title: '리투아니아, 육안 확인 없이도 드론 격추하는 NATO 규정 변경 협의 추진', source: 'LRT', url: 'https://www.lrt.lt/en/news-in-english/19/3088084/lithuania-seeks-nato-talks-on-shooting-down-drones-without-visual-confirmation' },
+      '라트비아': { title: null },
+      '에스토니아': { title: null }
+    }
+  },
+  {
     week_start: '2026-10-12', week_end: '2026-10-18', updated: '2026-10-18',
     note: '학회 브리핑(10/17·10/18)과 웹 검색으로 확인한 보도를 바탕으로 골랐습니다. 링크가 없는 항목은 브리핑 정리 문장에서 가져왔습니다.',
     countries: {
