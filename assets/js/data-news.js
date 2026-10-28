@@ -1,6 +1,227 @@
 /* 원본: 동유럽 웹사이트/news-data/*.json (최신순, tools/build-news.ps1로 생성) */
 window.NEWS_DATA=[
     {
+        "date":  "2026-10-28",
+        "home":  [
+                     0,
+                     3,
+                     4
+                 ],
+        "overview":  "우크라이나는 미국의 패트리엇 요격미사일 공급이 월 12발에 그친다고 밝히며 방공 부족을 호소했고, 미국이 러시아 국부펀드 제재 해제를 검토한다는 보도도 나왔습니다. 세르비아에서는 총선 사흘 만에 베오그라드 이스라엘 대사관 앞 흉기 공격이 발생해 테러 경보가 최고 단계로 올랐습니다. 불가리아에서는 스타링크 방화 용의자들이 다른 EU 국가에서도 비슷한 공격을 했다는 사실이 공개되고 흑해 상선 드론 공격 대응이 논의됐습니다. 폴란드는 미국의 패트리엇 미사일 정비 시설 입지로 선정됐습니다.",
+        "stories":  [
+                        {
+                            "region":  "top",
+                            "title":  "젤렌스키 “미국 패트리엇 월 12발뿐”…미국, 러시아 국부펀드 제재 해제 검토 보도",
+                            "countries":  [
+                                              "우크라이나"
+                                          ],
+                            "period":  "2026-10-27 ~ 28",
+                            "points":  [
+                                           "키이우인디펜던트에 따르면 젤렌스키 대통령은 10월 27일 브리핑에서 올해 미국에서 패트리엇 요격미사일을 월평균 12발 받는다고 밝혔습니다. 우크라이나는 매달 약 150발의 러시아 탄도미사일을 막아야 한다고 했습니다.",
+                                           "일부 유럽 국가가 비축 미사일을 추가로 제공하기로 했지만 미국의 승인이 필요하며, 헤그세스 국방장관의 서명이 관건이라고 말했습니다. 러시아는 10월 14일 이후 키이우 일대에 탄도미사일 100발 넘게 발사했고, 10월 27일 공격으로 1명이 숨지고 15명이 다쳤습니다.",
+                                           "같은 매체는 뉴욕타임스를 인용해 트럼프 대통령이 러시아 정부 투자펀드에 대한 제재 해제를 검토 중이라고 전했습니다. 백악관은 대러 관계 개선과 종전 지원 목적으로 평가 중이며, 우크라이나 관리들은 비료 산업 등으로 거래가 확대될 가능성을 우려한다고 합니다.",
+                                           "10월 28일 기준 올레시키 지역 휴전이 30시간째 이어졌다고 보도됐고, 네덜란드는 2029년까지 13억 달러의 비군사 지원을 확정했습니다."
+                                       ],
+                            "why":  "방공 미사일 공급 부족과 대러 제재 완화 검토가 겹치며 우크라이나의 협상 위치가 불리해질 수 있다는 우려가 나옵니다. 11월 4일 이후 3자 회담 재개 여부와 미국의 미사일 승인이 다음 확인 지점입니다.",
+                            "korea":  "방공 전력 부족은 겨울철 에너지·인프라 피해로 이어져 현지 진출 기업의 운영 리스크를 키울 수 있습니다. 제재 완화 논의는 재건·종전 이후 사업 환경의 변수입니다.",
+                            "sources":  [
+                                            {
+                                                "name":  "Kyiv Independent – Ukraine receives 12 Patriot missiles per month from US, Zelensky says",
+                                                "url":  "https://kyivindependent.com/ukraine-receives-12-patriot-missiles-per-month-from-us-zelensky-says/",
+                                                "lang":  "EN"
+                                            },
+                                            {
+                                                "name":  "Kyiv Independent – Trump reportedly considering lifting sanctions against Russia’s investment fund",
+                                                "url":  "https://kyivindependent.com/trump-reportedly-considering-lifting-sanctions-against-russias-investment-fund/",
+                                                "lang":  "EN"
+                                            },
+                                            {
+                                                "name":  "Kyiv Independent – Netherlands confirms $1.3 billion in non-military aid for Ukraine through 2029",
+                                                "url":  "https://kyivindependent.com/netherlands-confirms-1-3-billion-in-non-military-aid-for-ukraine-through-2029/",
+                                                "lang":  "EN"
+                                            }
+                                        ]
+                        },
+                        {
+                            "region":  "v4",
+                            "title":  "미국, 패트리엇 PAC-3 미사일 정비 시설 입지로 폴란드 선정…영국과 ‘바르샤바 국방 계획’ 서명",
+                            "countries":  [
+                                              "폴란드"
+                                          ],
+                            "period":  "2026-10-27 ~ 28",
+                            "points":  [
+                                           "노츠프롬폴란드에 따르면 미 국방부가 10월 27일 PAC-3 미사일 정비·유지보수 시설 입지로 폴란드를 선정했다고 발표했습니다. 미국 밖에 세워지는 첫 시설이며 독일·네덜란드 등 경쟁 후보를 제쳤다고 합니다.",
+                                           "미국은 정비 기간 단축과 공급망 안정에 도움이 된다고 설명했고, 폴란드 국방장관은 폴란드가 신뢰받는 동맹국임을 보여준다고 평가했습니다. 정부와 나브로츠키 대통령이 이번 건에서는 협력했다고 보도됐습니다.",
+                                           "10월 28일에는 폴란드와 영국이 러시아 위협 억제를 목표로 한 ‘바르샤바 국방 계획’에 서명했습니다.",
+                                           "같은 매체는 나브로츠키 대통령이 20년 전 호텔 관련 증언으로 논란에 휩싸여 해당 보도 매체를 고소했다고 전했습니다."
+                                       ],
+                            "why":  "폴란드가 NATO 동부 측면의 방공 정비 거점으로 자리 잡는 계기입니다. 시설 착공 시점과 규모는 아직 확인되지 않았습니다.",
+                            "korea":  "폴란드는 한국 방산의 주요 시장이어서 미국·영국과의 안보 협력 확대가 향후 무기 조달 구도에 영향을 줄 수 있습니다.",
+                            "sources":  [
+                                            {
+                                                "name":  "Notes from Poland – US chooses Poland to host service facility for Patriot missiles",
+                                                "url":  "https://notesfrompoland.com/2026/10/27/us-chooses-poland-to-host-service-facility-for-patriot-missiles/",
+                                                "lang":  "EN"
+                                            },
+                                            {
+                                                "name":  "Notes from Poland – Poland and UK sign Warsaw Defence Plan to deter Russian threats",
+                                                "url":  "https://notesfrompoland.com/2026/10/28/poland-and-uk-sign-warsaw-defence-plan-to-deter-russian-threats/",
+                                                "lang":  "EN"
+                                            }
+                                        ]
+                        },
+                        {
+                            "region":  "baltic",
+                            "title":  "리투아니아, 미군 200여 명 순환 배치 재개…보수당 대표 2030년 전 국민 징병제 제안",
+                            "countries":  [
+                                              "리투아니아"
+                                          ],
+                            "period":  "2026-10-27",
+                            "points":  [
+                                           "LRT에 따르면 미군 순환 배치가 재개되면서 200명 이상의 미군이 리투아니아에 도착할 예정입니다.",
+                                           "보수당 대표는 2030년부터 전 국민 징병제를 도입하자고 제안했습니다. 나우세다 대통령은 리투아니아·중국 관계가 대만 대표처 명칭 문제에 좌우되어서는 안 된다고 말했습니다.",
+                                           "10월 26일에는 리투아니아가 라트비아 정부 교체로 레일 발티카 사업이 재개되기를 기대한다고 밝혔고, 피치는 신용등급 A+를 유지했습니다."
+                                       ],
+                            "why":  "발트 국가의 안보 강화가 미군 배치와 병역 제도 논의로 이어지고 있습니다. 징병제안은 제안 단계로 입법 여부는 확인되지 않았습니다.",
+                            "korea":  "",
+                            "sources":  [
+                                            {
+                                                "name":  "LRT – More than 200 US troops to arrive in Lithuania as rotations resume",
+                                                "url":  "https://www.lrt.lt/en/news-in-english/19/3095090/more-than-200-us-troops-to-arrive-in-lithuania-as-rotations-resume",
+                                                "lang":  "EN"
+                                            },
+                                            {
+                                                "name":  "LRT – Lithuanian conservative leader proposes universal conscription from 2030",
+                                                "url":  "https://www.lrt.lt/en/news-in-english/19/3095225/lithuanian-conservative-leader-proposes-universal-conscription-from-2030",
+                                                "lang":  "EN"
+                                            },
+                                            {
+                                                "name":  "LRT – Nausėda: Lithuania-China diplomatic ties should not hinge on Taiwan office name",
+                                                "url":  "https://www.lrt.lt/en/news-in-english/19/3095138/nauseda-lithuania-china-diplomatic-ties-should-not-hinge-on-taiwan-office-name",
+                                                "lang":  "EN"
+                                            }
+                                        ]
+                        },
+                        {
+                            "region":  "wbalkan",
+                            "title":  "세르비아, 총선 사흘 만에 이스라엘 대사관 앞 흉기 공격…테러 경보 최고 단계로",
+                            "countries":  [
+                                              "세르비아"
+                                          ],
+                            "period":  "2026-10-27 ~ 28",
+                            "points":  [
+                                           "발칸인사이트에 따르면 10월 27일 밤 베오그라드 이스라엘 대사관을 경비하던 헌병이 흉기에 얼굴을 다쳤고, 헌병이 쏜 총에 용의자가 숨졌습니다. 이스라엘 외무부는 대사관이 닫혀 있었고 직원은 다치지 않았다고 밝혔습니다.",
+                                           "임시 내무장관 다치치는 용의자가 사바치 출신으로 추정되는 미성년자이며 공격 중 ‘알라후 아크바르’를 외쳤다고 밝히고 테러 위협 수준을 최고 단계로 올렸습니다. 신원과 동기는 수사 중입니다.",
+                                           "총선에서는 학생 명부가 잠정 52.85%, 진보당 주도 명부가 39.1%로 보도됐고 최종 결과는 아직 나오지 않았습니다. BTA에 따르면 부치치 전 대통령은 새 정부를 반세르비아적이라고 비판했고, 한 전 중앙은행 총재는 장애가 없으면 한 달 안에 정부 구성이 가능하다고 말했습니다.",
+                                           "유럽웨스턴발칸스는 세르비아 당국자가 선거 후에도 EU 가입 노선과 코소보 대화를 유지한다고 밝혔다고 전했습니다."
+                                       ],
+                            "why":  "정권 교체기에 안보 불안이 겹쳤습니다. 수사 결과, 최종 개표 확정과 정부 구성이 다음 확인 지점입니다.",
+                            "korea":  "",
+                            "sources":  [
+                                            {
+                                                "name":  "Balkan Insight – Serbia Raises Terror Alert After Attack on Israeli Embassy",
+                                                "url":  "https://balkaninsight.com/2026/10/28/serbia-raises-terror-alert-after-attack-on-israeli-embassy/bi/",
+                                                "lang":  "EN"
+                                            },
+                                            {
+                                                "name":  "Balkan Insight – After the Election Party, What Lies Ahead for Serbia?",
+                                                "url":  "https://balkaninsight.com/2026/10/28/after-the-election-party-what-lies-ahead-for-serbia/bi/",
+                                                "lang":  "EN"
+                                            },
+                                            {
+                                                "name":  "BTA – Former Serbian President Vucic Calls Incoming Government Anti-Serbian",
+                                                "url":  "https://www.bta.bg/en/news/balkans/1234214-former-serbian-president-vucic-calls-incoming-government-anti-serbian",
+                                                "lang":  "EN"
+                                            }
+                                        ]
+                        },
+                        {
+                            "region":  "sbalkan",
+                            "title":  "불가리아, 스타링크 방화 용의자 독일인 2명…타국 유사 공격도 확인, 흑해 상선 드론 공격 대응 논의",
+                            "countries":  [
+                                              "불가리아"
+                                          ],
+                            "period":  "2026-10-27 ~ 28",
+                            "points":  [
+                                           "BTA에 따르면 데메르지에프 내무장관은 10월 9일 스타링크 안테나 방화의 용의자가 독일 국적 2명이며 같은 사람들이 10월 18일 다른 EU 국가에서도 비슷한 공격을 했다고 밝혔습니다. 용의자들은 사건 당일 독일로 돌아갔고, 유럽 체포영장 절차 때문에 즉시 체포하지 못했다고 합니다.",
+                                           "관련 임시 국회 회의는 정족수 부족으로 세 번째 무산됐습니다. 라데프 총리는 당국이 정보를 일찍 공개할 수 없었다고 설명했습니다.",
+                                           "불가리아는 흑해 상선을 공격한 드론의 출처를 확인하려 하고 있고, 불가리아·루마니아·튀르키예 국방장관이 소피아에서 흑해 안보를 논의하며 조정 메커니즘이 제안될 예정입니다. 루마니아 전 내무장관은 라데프 총리가 드론 공격 증거에 의문을 제기한 뒤 연대를 촉구했습니다.",
+                                           "대선 1차 투표율은 최종 22.98%로 집계됐고, 총리는 가정용 전기·지역난방 요금을 2027년 7월까지 동결한다고 밝혔습니다."
+                                       ],
+                            "why":  "인프라 방화와 흑해 선박 공격이 겹쳐 하이브리드 위협 대응이 정치 쟁점이 됐습니다. 용의자 인도 여부와 드론 출처 규명이 다음 확인 지점입니다.",
+                            "korea":  "",
+                            "sources":  [
+                                            {
+                                                "name":  "BTA – Starlink Arson Suspects Carried Out Similar Attack in Another EU Country, Interior Minister Says",
+                                                "url":  "https://www.bta.bg/en/news/bulgaria/1234270-starlink-arson-suspects-carried-out-similar-attack-in-another-eu-country-interi",
+                                                "lang":  "EN"
+                                            },
+                                            {
+                                                "name":  "BTA – Parliament Fails to Hold Extraordinary Sitting for Third Time Due to Lack of Quorum",
+                                                "url":  "https://www.bta.bg/en/news/bulgaria/1234209-parliament-fails-to-hold-extraordinary-sitting-for-third-time-due-to-lack-of-quo",
+                                                "lang":  "EN"
+                                            },
+                                            {
+                                                "name":  "BTA – Defence Ministers of Bulgaria, Romania, Turkiye to Discuss Black Sea Security in Sofia",
+                                                "url":  "https://www.bta.bg/en/news/balkans/1234165-defence-ministers-of-bulgaria-romania-turkiye-to-discuss-black-sea-security-in",
+                                                "lang":  "EN"
+                                            }
+                                        ]
+                        },
+                        {
+                            "region":  "east",
+                            "title":  "루마니아, 러시아 연계 사보타주 혐의 외국인 3명 수배…브라쇼브 군수 시설 폭발·화재 연루",
+                            "countries":  [
+                                              "루마니아"
+                                          ],
+                            "period":  "2026-10-27",
+                            "points":  [
+                                           "루마니아국제방송(RRI)에 따르면 DIICOT와 정보국은 벨라루스인 2명과 우크라이나인 1명을 수사했다고 발표했습니다. 이들은 지난달 브라쇼브의 Romarm 자회사 시설 폭발·화재에 연루된 것으로 알려졌습니다.",
+                                           "법원은 이들에 대해 유럽 체포영장을 발부했고, 2명은 독일에서 구금됐으며 1명은 폴란드에서 위치가 확인됐습니다. 루마니아 송환 절차가 추진 중입니다.",
+                                           "정보국은 이 네트워크가 지역 내 무기 생산·군사 시설을 노렸고 소셜미디어로 모집한다고 밝혔습니다.",
+                                           "RRI는 같은 날 루마니아 신정부가 사회적 파트너들과 협의를 시작했다고 전했습니다."
+                                       ],
+                            "why":  "러시아가 조율한 것으로 의심되는 사보타주가 여러 EU 국가에 걸쳐 있음을 보여줍니다. 송환과 기소 진행이 다음 확인 지점입니다.",
+                            "korea":  "",
+                            "sources":  [
+                                            {
+                                                "name":  "RRI – Russian sabotage in Romania",
+                                                "url":  "https://www.rri.ro/en/news-and-current-affairs/today-in-the-news/russian-sabotage-in-romania-id1075946.html",
+                                                "lang":  "EN"
+                                            },
+                                            {
+                                                "name":  "RRI – What the business community wants",
+                                                "url":  "https://www.rri.ro/en/news-and-current-affairs/today-in-the-news/what-the-business-community-wants-id1075941.html",
+                                                "lang":  "EN"
+                                            }
+                                        ]
+                        }
+                    ],
+        "countries":  {
+                          "폴란드":  "미국이 패트리엇 PAC-3 정비 시설 입지로 폴란드를 선정(10/27), 영국과 바르샤바 국방 계획 서명(10/28, Notes from Poland).",
+                          "체코":  "독립기념일인 10/28 공영미디어 재원 변경에 반대하는 시위가 전국에서 열림. 코루나가 즈워티 대비 3년 만에 최고치(Expats.cz).",
+                          "슬로바키아":  "최근 48시간 내 주요 보도 확인되지 않음. 배경으로 연립정부의 EU·우크라이나 정책 논쟁이 이어지는 중.",
+                          "헝가리":  "전 중앙은행 총재 아들에 대한 유럽·국제 체포영장 발효, 공익재단 운영 대학이 Erasmus+·Horizon에 복귀(10/27, Telex).",
+                          "에스토니아":  "야당의 정부 불신임안이 부결, 조사에서 중도당이 이소아이마를 앞섬(ERR 첫 화면). 스웨드뱅크가 발트 지역 직원 100명 감원.",
+                          "라트비아":  "시민권 스캔들로 골든비자 제도가 다시 주목받고, 러시아·벨라루스 대상 화물운송 제한이 연장됨(10/27~28, LSM).",
+                          "리투아니아":  "미군 200여 명 순환 배치 재개, 보수당 대표가 2030년 전 국민 징병제 제안(10/27, LRT).",
+                          "슬로베니아":  "얀샤 정부가 4건의 국민투표 중 2건에서 패배했다는 분석(10/28, 발칸인사이트). Sloveniatimes는 조회하지 못함.",
+                          "크로아티아":  "최근 48시간 내 주요 보도 확인되지 않음. 배경으로 플렌코비치 총리가 세르비아 학생 명부 지도부와 통화한 바 있음.",
+                          "세르비아":  "이스라엘 대사관 앞 흉기 공격 후 테러 경보 최고 단계, 학생 명부 잠정 52.85%(10/28).",
+                          "보스니아 헤르체고비나":  "발칸인사이트가 전쟁 성폭력 재판의 양형 편차를 분석(10/27). 새 정치 전개는 확인하지 못함.",
+                          "몬테네그로":  "최근 48시간 내 주요 보도 확인되지 않음. 배경으로 2028년 EU 가입 목표가 거론되는 중.",
+                          "코소보":  "세르비아 당국자가 선거 후에도 코소보와의 대화를 유지한다고 밝힘(10/27, EWB).",
+                          "알바니아":  "발칸인사이트가 폴란드 활동가 살해 사건과 알바니아 조직범죄 연계 의혹을 탐사 보도(10/28).",
+                          "북마케도니아":  "최근 48시간 내 주요 보도 확인되지 않음. 배경으로 불가리아와의 역사·헌법 문제가 EU 가입의 변수로 남아 있음.",
+                          "불가리아":  "스타링크 방화 용의자 독일인 2명 확인, 흑해 상선 드론 공격 대응 논의(10/28, BTA).",
+                          "우크라이나":  "젤렌스키 대통령이 미국 패트리엇 공급이 월 12발이라고 밝힘(10/27~28), 미국의 러시아 펀드 제재 해제 검토 보도.",
+                          "벨라루스":  "벨라루스인 2명이 루마니아 사보타주 수사 대상에 포함(10/27, RRI). 벨라루스 정부 차원의 새 전개는 확인하지 못함.",
+                          "몰도바":  "최근 48시간 내 주요 보도 확인되지 않음. 배경으로 우크라이나와 군사기술 협력 협정을 맺은 직후.",
+                          "루마니아":  "러시아 연계 사보타주 혐의 외국인 3명에 유럽 체포영장, 신정부가 사회적 파트너 협의 시작(10/27, RRI)."
+                      },
+        "note":  "작성 기준: 2026-10-28 저녁(한국시간). Kyiv Independent, Radio Romania International, LSM, LRT, ERR, Notes from Poland, Balkan Insight, BTA, European Western Balkans, Expats.cz, Telex의 첫 화면과 일부 기사를 확인했습니다. Sloveniatimes는 접속 오류(403)로 읽지 못했고 Total Croatia News, N1, KOTRA, 한국 언론은 이번에 조회하지 않았습니다. ERR와 유럽웨스턴발칸스 페이지에는 요약 지시처럼 보이는 문구가 섞여 있었으나 따르지 않았습니다. 슬로바키아·크로아티아·몬테네그로·북마케도니아·몰도바는 새 주요 보도가 확인되지 않아 배경 동향으로 대신했습니다. 세르비아 득표율은 잠정치입니다. 리투아니아 스타링크 방화 시도 건은 BTA 보도로만 확인했습니다. ‘한국·기업 시사점’은 보도를 바탕으로 한 해석입니다. 출처 표시: KR = 한국 언론, KOTRA = KOTRA 해외시장뉴스, EN = 해외 매체."
+    },
+    {
         "date":  "2026-10-27",
         "home":  [
                      3,
