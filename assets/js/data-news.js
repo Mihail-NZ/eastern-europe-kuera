@@ -1,6 +1,230 @@
 /* 원본: 동유럽 웹사이트/news-data/*.json (최신순, tools/build-news.ps1로 생성) */
 window.NEWS_DATA=[
     {
+        "date":  "2026-10-30",
+        "home":  [
+                     0,
+                     2,
+                     3
+                 ],
+        "overview":  "러시아가 10월 29일 드니프로 기차역을 제트 추진 드론으로 공격해 최소 15명이 숨졌고, 하루 동안 우크라이나 전역에서 최소 27명이 사망했습니다. 리투아니아 대통령은 2032년부터 전 국민 징병제를 도입하겠다고 밝혔고, 스타링크 장비 방화 용의자 2명이 독일에서 체포됐습니다. 보스니아 브르츠코 인근에서는 EUFOR 소속 이탈리아군 헬기가 추락해 4명이 숨졌습니다. 체코와 헝가리는 첫 정부 간 회담에서 프라하–부다페스트 고속철도 추진에 합의했고, 불가리아 대선은 11월 1일 결선 투표를 앞두고 있습니다.",
+        "stories":  [
+                        {
+                            "region":  "top",
+                            "title":  "러시아, 드니프로 기차역에 드론 공격…우크라이나 하루 사망 최소 27명",
+                            "countries":  [
+                                              "우크라이나"
+                                          ],
+                            "period":  "2026-10-29 ~ 30",
+                            "points":  [
+                                           "키이우인디펜던트에 따르면 10월 29일 오전 드니프로 기차역에 정차한 열차를 러시아 제트 추진 드론이 공격해 주지사 발표 기준 최소 15명이 숨지고 14명이 다쳤습니다. 통근열차와 장거리 열차가 정차해 있었다고 합니다.",
+                                           "러시아의 공격으로 지난 24시간 동안 우크라이나 전역에서 최소 27명이 사망하고 127명이 부상했다고 집계됐습니다(기사 제목에는 128명으로 표기). 체르니히우에서는 순항미사일로 15세 소녀 2명이 숨졌고, 크레멘추크에서는 3명이 사망했습니다.",
+                                           "10월 30일 밤에는 탄도미사일과 샤헤드형 드론 113기 등이 발사됐고, 드니프로페트롭스크주에서 약 35만 명이 정전을 겪었습니다. 키이우에서는 1명이 숨졌습니다.",
+                                           "헤르손주 올레시키에서는 주민 대피를 위한 국지 휴전이 이어지는 가운데 러시아 지뢰 폭발로 1명이 다쳤습니다. 같은 매체는 EU가 우크라이나 기술에 기반한 드론 기술 허브 2곳을 발표했다고 전했습니다."
+                                       ],
+                            "why":  "평화 협상이 거론되는 시점에도 민간 교통 시설에 대한 공격이 이어져 겨울철 인명·인프라 피해가 커지고 있습니다. 올레시키 대피 이행과 방공 지원 확대 여부가 다음 확인 지점입니다.",
+                            "korea":  "철도·전력 등 핵심 인프라 피해가 누적되면 현지 물류와 사업 운영의 불확실성이 커지고, 재건 수요도 함께 늘어날 수 있습니다.",
+                            "sources":  [
+                                            {
+                                                "name":  "Kyiv Independent – Russian attacks across Ukraine kill 27, injure 128 over past day as horrific attack strikes Dnipro train station",
+                                                "url":  "https://kyivindependent.com/russian-attacks-across-ukraine-kill-27-injure-128-over-past-day-as-horrific-attack-strikes-dnipro-train-station/",
+                                                "lang":  "EN"
+                                            },
+                                            {
+                                                "name":  "Kyiv Independent – Russian night attacks kill 1 in Kyiv, leave 350,000 in Dnipro without power",
+                                                "url":  "https://kyivindependent.com/russian-night-attacks-kill-1-in-kyiv-leave-350-000-in-dnipro-without-power/",
+                                                "lang":  "EN"
+                                            },
+                                            {
+                                                "name":  "Kyiv Independent – EU announces two new drone technology hubs backed by Ukrainian know-how",
+                                                "url":  "https://kyivindependent.com/eu-announces-two-new-drone-technology-hubs-backed-by-ukrainian-know-how/",
+                                                "lang":  "EN"
+                                            }
+                                        ]
+                        },
+                        {
+                            "region":  "v4",
+                            "title":  "체코·헝가리 첫 정부 간 회담…프라하–부다페스트 고속철도 MoU, 에너지 협력 확인",
+                            "countries":  [
+                                              "체코",
+                                              "헝가리"
+                                          ],
+                            "period":  "2026-10-30",
+                            "points":  [
+                                           "텔렉스에 따르면 마자르 헝가리 총리가 장관 8명과 함께 프라하를 방문해 바비시 체코 총리와 첫 정부 간 회담을 열었습니다.",
+                                           "양측은 교통 협력 양해각서에 서명하고 부다페스트–프라하 철도 노선 개발과 EU 자금 확보를 추진하기로 했습니다. 이동 시간은 프라하–부다페스트 약 3시간, 바르샤바–부다페스트 약 5시간으로 예상됩니다.",
+                                           "두 총리는 에너지 기업 상호 투자와 원자력 이용을 함께 지지하기로 했고, 다음 회담은 부다페스트에서 열기로 했습니다. 마자르 총리는 헝가리가 이민 정책 관련 EU 벌금으로 하루 100만 유로를 내고 있으며 연말 전 면제를 기대한다고 말했습니다.",
+                                           "Expats.cz에 따르면 Albert 소유사가 체코의 Tesco와 Žabka를 17억 유로 규모로 인수하기로 합의했습니다."
+                                       ],
+                            "why":  "헝가리 정권 교체 이후 V4 협력이 재개되는 신호입니다. 고속철도는 MoU 단계로 노선과 재원은 아직 확정되지 않았습니다.",
+                            "korea":  "원전과 철도 투자가 논의되는 만큼 한국 기업의 에너지·인프라 진출 환경에 변수가 될 수 있습니다.",
+                            "sources":  [
+                                            {
+                                                "name":  "Telex English – Magyar after joint Czech-Hungarian government meeting in Prague",
+                                                "url":  "https://telex.hu/english/2026/10/30/magyar-babis",
+                                                "lang":  "EN"
+                                            },
+                                            {
+                                                "name":  "Expats.cz – Prague to Budapest by high-speed rail? Czechia and Hungary seek EU funds",
+                                                "url":  "https://www.expats.cz/czech-news/article/prague-to-budapest-by-high-speed-rail-czechia-and-hungary-seek-eu-funds",
+                                                "lang":  "EN"
+                                            },
+                                            {
+                                                "name":  "Expats.cz – Albert owner agrees to buy Tesco and Žabka in Czechia in €1.7 billion deal",
+                                                "url":  "https://www.expats.cz/czech-news/article/albert-owner-agrees-to-buy-tesco-and-zabka-in-czechia-in-1-7-billion-deal",
+                                                "lang":  "EN"
+                                            }
+                                        ]
+                        },
+                        {
+                            "region":  "baltic",
+                            "title":  "리투아니아 대통령 “2032년 전 국민 징병제”…스타링크 방화 용의자 독일서 체포",
+                            "countries":  [
+                                              "리투아니아"
+                                          ],
+                            "period":  "2026-10-29",
+                            "points":  [
+                                           "LRT에 따르면 나우세다 대통령은 10월 29일 국가국방위원회 후 2032년부터 전 국민 징병제를 도입하는 것이 최적이라고 밝혔습니다. 현재 연 5,000명 이상인 징집 규모는 약 7,500명으로 늘어나며, 여성은 계속 자발적 복무입니다.",
+                                           "총리는 정부가 더 빠른 도입을 원했으나 군이 준비 완료 시점을 2032년으로 제시해 조정됐다고 설명했습니다. 신병 숙소 확보와 교관 약 300명 양성이 과제입니다.",
+                                           "빌뉴스 스타링크 장비 방화 시도 용의자는 20대 남성 2명으로, 불가리아의 요청으로 독일에서 체포됐다고 LRT는 전했습니다. 이들은 테러 관련 혐의를 받으며, 불가리아·폴란드의 유사 사건과의 연관성도 수사 중입니다.",
+                                           "ERR와 LRT에 따르면 EU 집행위는 발트 3국의 5억 유로 규모 대드론 예산 요청을 거절하고 차입을 제안했습니다."
+                                       ],
+                            "why":  "징병제 시기가 확정되면서 발트 국가의 안보 강화가 제도화 단계로 넘어갔고, 유럽 전역의 하이브리드 공격 수사도 공조 국면입니다. 용의자 인도 여부는 아직 정해지지 않았습니다.",
+                            "korea":  "",
+                            "sources":  [
+                                            {
+                                                "name":  "LRT – Lithuania to introduce universal military conscription in 2032, president says",
+                                                "url":  "https://www.lrt.lt/en/news-in-english/19/3097267/lithuania-to-introduce-universal-military-conscription-in-2032-president-says",
+                                                "lang":  "EN"
+                                            },
+                                            {
+                                                "name":  "LRT – Two German citizens arrested over suspected Starlink equipment arson attempt in Vilnius",
+                                                "url":  "https://www.lrt.lt/en/news-in-english/19/3097187/two-german-citizens-arrested-over-suspected-starlink-equipment-arson-attempt-in-vilnius",
+                                                "lang":  "EN"
+                                            },
+                                            {
+                                                "name":  "LRT – Brussels rejects Baltic states’ €500 million anti-drone request, suggests borrowing",
+                                                "url":  "https://www.lrt.lt/en/news-in-english/19/3097170/brussels-rejects-baltic-states-eur500-million-anti-drone-request-suggests-borrowing",
+                                                "lang":  "EN"
+                                            }
+                                        ]
+                        },
+                        {
+                            "region":  "wbalkan",
+                            "title":  "보스니아 브르츠코 인근 EUFOR 헬기 추락…이탈리아군 4명 사망, 11명 부상",
+                            "countries":  [
+                                              "보스니아 헤르체고비나"
+                                          ],
+                            "period":  "2026-10-29 ~ 30",
+                            "points":  [
+                                           "발칸인사이트와 N1에 따르면 10월 29일 보스니아 북동부 브르츠코 인근에서 EUFOR 소속 이탈리아군 CH-47 헬기가 통상 임무 중 추락해 4명이 숨지고 11명이 다쳤습니다. 부상자는 모두 안정적이라고 합니다.",
+                                           "민간인 피해와 민간 시설 손상은 없었습니다. 브르츠코 시장은 10월 30일 애도의 날을 선포하고, 조종사들이 인구 밀집 지역 추락을 막았다고 평가했습니다.",
+                                           "멜로니 이탈리아 총리와 국방장관이 애도를 표했습니다. 사고 원인은 조사 중이며 공식 발표는 없습니다. EUFOR는 추측과 허위정보 확산을 자제해 달라고 당부했습니다.",
+                                           "N1에 따르면 유엔 안보리는 10월 30일 보스니아 문제를 논의할 예정이었고, OHR 보고서는 제도적 교착이 이어진다고 경고했습니다."
+                                       ],
+                            "why":  "EUFOR 작전 중 발생한 드문 인명 사고로, 원인 조사 결과가 향후 임무 운영과 이탈리아·EU의 대응에 영향을 줄 수 있습니다.",
+                            "korea":  "",
+                            "sources":  [
+                                            {
+                                                "name":  "Balkan Insight – Mourning Day Declared in Bosnia’s Brcko Following Deadly EUFOR Helicopter Crash",
+                                                "url":  "https://balkaninsight.com/2026/10/30/mourning-day-declared-in-bosnias-brcko-following-deadly-eufor-helicopter-crash/bi/",
+                                                "lang":  "EN"
+                                            },
+                                            {
+                                                "name":  "N1 – EUFOR identifies four killed in helicopter crash near Brcko, says all 11 injured are stable",
+                                                "url":  "https://n1info.ba/english/news/eufor-identifies-four-killed-in-helicopter-crash-near-brcko-says-all-11-injured-are-stable/",
+                                                "lang":  "EN"
+                                            },
+                                            {
+                                                "name":  "N1 – New OHR report to UN SC warns of continued institutional deadlock and attacks on Bosnian state",
+                                                "url":  "https://n1info.ba/english/news/new-ohr-report-to-un-sc-warns-of-continued-institutional-deadlock-and-attacks-on-bosnian-state/",
+                                                "lang":  "EN"
+                                            }
+                                        ]
+                        },
+                        {
+                            "region":  "sbalkan",
+                            "title":  "불가리아 대선 결선 앞두고 러시아 노선 쟁점…흑해 드론 사고 중단 공감대",
+                            "countries":  [
+                                              "불가리아"
+                                          ],
+                            "period":  "2026-10-29 ~ 30",
+                            "points":  [
+                                           "발칸인사이트에 따르면 불가리아 대선은 1차 투표(10월 25일)에서 과반 후보가 없어 일요일 결선으로 갑니다. 대행 대통령 요토바가 34.7%, 전 임시 총리 규로프가 31.9%를 얻었습니다.",
+                                           "투표율은 22.98%로 기록적으로 낮았습니다. 요토바는 러시아와의 균형 관계를 강조하며 집권 진보 불가리아 등의 지지를 받고, 규로프는 친EU 야당의 지지를 받습니다. 결선 날짜는 기사에 명시되지 않아 11월 1일로 추정됩니다.",
+                                           "BTA에 따르면 루마니아 외무장관은 루마니아와 불가리아가 흑해 드론 사고를 끝내는 데 공동 이해를 갖고 있다고 말했고, 불가리아 외무장관은 EU 대사들과 흑해 안보를 논의했습니다.",
+                                           "BTA는 라데프 총리가 EU 예산 담당 집행위원과 2027년까지의 적자 감축과 재원 문제를 논의했다고 전했습니다."
+                                       ],
+                            "why":  "친러 성향 논란과 낮은 투표율이 겹친 결선이어서 결과가 불가리아의 EU·우크라이나 노선과 흑해 안보 대응에 영향을 줄 수 있습니다. 결선 결과는 아직 나오지 않았습니다.",
+                            "korea":  "",
+                            "sources":  [
+                                            {
+                                                "name":  "Balkan Insight – Bulgaria’s Presidential Race Heads to Runoff as Russia Divides the Two Candidates",
+                                                "url":  "https://balkaninsight.com/2026/10/30/bulgarias-presidential-race-heads-to-runoff-as-russia-divides-the-two-candidates/bi/",
+                                                "lang":  "EN"
+                                            },
+                                            {
+                                                "name":  "BTA – Romania and Bulgaria Share Interest in Ending Drone Incidents in the Black Sea",
+                                                "url":  "https://www.bta.bg/en/news/balkans/1236324-romania-and-bulgaria-share-interest-in-ending-drone-incidents-in-the-black-sea-",
+                                                "lang":  "EN"
+                                            }
+                                        ]
+                        },
+                        {
+                            "region":  "east",
+                            "title":  "몰도바 국경경찰 “전례 없는 위협”…올해 드론 침범 65회, 루마니아 총리 키시너우 방문",
+                            "countries":  [
+                                              "몰도바",
+                                              "루마니아"
+                                          ],
+                            "period":  "2026-10-28 ~ 30",
+                            "points":  [
+                                           "발칸인사이트에 따르면 몰도바 국경경찰청장은 드론, 마약 밀매, 불법 이민 위협이 전례 없는 수준이라고 밝혔습니다. 2022년 2월 이후 드론 침범은 100회 넘고 이 중 65회가 올해 발생했습니다.",
+                                           "10월 5일에는 러시아 드론 공격으로 검문소 인근에서 국경경찰관 1명이 다쳤습니다. 러시아는 해당 검문소가 우크라이나군 보급 통로라고 주장하지만 몰도바는 부인합니다. 몰도바는 감시 시스템과 대드론 장비를 도입하는 중입니다.",
+                                           "루마니아국제방송(RRI)에 따르면 루마니아 총리가 10월 28일 키시너우를 찾아 몰도바 지원 의사를 재확인했습니다.",
+                                           "RRI는 루마니아·불가리아·튀르키예가 NATO와 흑해 해상 감시와 드론 위협 대응에서 협력하기로 했고, 여론조사에서 다수의 루마니아인이 나라가 잘못된 방향으로 간다고 응답했다고 전했습니다."
+                                       ],
+                            "why":  "우크라이나 전쟁의 여파가 몰도바 국경 안보에 직접 닿고 있고, 루마니아가 지원 파트너로 나서고 있습니다.",
+                            "korea":  "",
+                            "sources":  [
+                                            {
+                                                "name":  "Balkan Insight – Moldova Steps Up Border Security Amid ‘Unprecedented’ Threats",
+                                                "url":  "https://balkaninsight.com/2026/10/30/moldova-steps-up-border-security-amid-unprecedented-threats/bi/",
+                                                "lang":  "EN"
+                                            },
+                                            {
+                                                "name":  "RRI – Romanian news and current affairs",
+                                                "url":  "https://www.rri.ro/en/news-and-current-affairs/",
+                                                "lang":  "EN"
+                                            }
+                                        ]
+                        }
+                    ],
+        "countries":  {
+                          "폴란드":  "야당 대표의 EU 탈퇴 협상 가능성 연설이 논란이 되어 투스크 총리가 비판, 아동 성학대 신고 지연으로 주교가 처음 유죄 판결(10/29, Notes from Poland).",
+                          "체코":  "바비시 총리가 마자르 헝가리 총리와 첫 정부 간 회담, Albert 소유사가 Tesco·Žabka 체코 사업을 17억 유로에 인수 합의(10/30, Expats.cz).",
+                          "슬로바키아":  "슬로바키아 장관의 모스크바 방문이 발칸인사이트 지역 요약에서 언급됐으나 세부 내용은 확인하지 못함(10/30).",
+                          "헝가리":  "마자르 총리가 프라하 회담에서 고속철도·에너지 협력에 합의, 새 정부가 오르반 시절 스포츠 후원 체계 해체 법안 추진(10/30, Telex·발칸인사이트).",
+                          "에스토니아":  "3분기 GDP가 잠정 2.2% 성장, 정부 불신임안 부결, 발트 3국 5억 유로 대드론 지원 요청은 EU가 거절(10/29~30, ERR).",
+                          "라트비아":  "국경수비대의 무력·무기 사용 권한 명확화(10/29), NATO 소해함이 리에파야 항에 도착(10/30), 새 내각 윤곽 논의(LSM).",
+                          "리투아니아":  "나우세다 대통령이 2032년 전 국민 징병제 도입 발표, 스타링크 방화 용의자 2명 독일서 체포(10/29, LRT).",
+                          "슬로베니아":  "최근 48시간 내 주요 보도 확인되지 않음. Sloveniatimes는 접속 오류로 읽지 못했고, 배경으로 얀샤 정부의 국민투표 패배 분석이 있었음.",
+                          "크로아티아":  "자그레브에서 시위 호소가 확산 중이나 목적은 확인하지 못함, 두브로브니크 공항 EU 자금 부패 의혹 보도(10/27, Total Croatia News).",
+                          "세르비아":  "공영방송 RTS 사장이 사임(10/29, 발칸인사이트), 총선에서 학생 명부가 압승한 배경을 분석한 보도(10/30, EWB).",
+                          "보스니아 헤르체고비나":  "브르츠코 인근 EUFOR 이탈리아군 헬기 추락으로 4명 사망·11명 부상, 브르츠코 애도의 날(10/29~30, 발칸인사이트·N1).",
+                          "몬테네그로":  "스파이치 총리가 몬테네그로와 세르비아 관계에 새 시대가 열렸다고 발언(10/29, EWB).",
+                          "코소보":  "여성 살해 사건 이후 검사와 경찰관들이 직무 정지됨(10/29, 발칸인사이트, 제목 기준).",
+                          "알바니아":  "시위 현장 경찰에 대한 보너스 지급이 책임성 논란을 부름(10/29, 발칸인사이트).",
+                          "북마케도니아":  "최근 48시간 내 주요 보도 확인되지 않음. 배경으로 EU 집행위가 11월 4일 2026 확대 패키지를 발표할 예정.",
+                          "불가리아":  "대선 결선을 앞두고 요토바 34.7%, 규로프 31.9%, 투표율 22.98%(10/30, 발칸인사이트), 흑해 드론 사고 중단에 루마니아와 공감대(BTA).",
+                          "우크라이나":  "드니프로 기차역 드론 공격으로 최소 15명 사망, 하루 사망 최소 27명, 드니프로 약 35만 명 정전(10/29~30, Kyiv Independent).",
+                          "벨라루스":  "최근 48시간 내 주요 보도 확인되지 않음. 배경으로 루마니아 사보타주 수사에 벨라루스인 2명이 포함된 바 있음.",
+                          "몰도바":  "국경경찰청장이 전례 없는 위협을 경고, 올해 드론 침범 65회(10/30, 발칸인사이트). 루마니아 총리가 키시너우 방문(10/28, RRI).",
+                          "루마니아":  "흑해 안보에서 불가리아·튀르키예와 NATO 협력 논의, 여론조사에서 다수가 나라가 잘못된 방향으로 간다고 응답(10/29~30, RRI)."
+                      },
+        "note":  "작성 기준: 2026-10-30 저녁(한국시간). Kyiv Independent, Radio Romania International, LSM, LRT, ERR, Notes from Poland, Balkan Insight, BTA, European Western Balkans, Expats.cz, Total Croatia News, Telex, N1의 첫 화면과 일부 기사를 확인했습니다. Sloveniatimes는 접속 오류(403)로 읽지 못했고 KOTRA에서는 동유럽 관련 새 기사를 찾지 못했으며 한국 언론은 조회하지 않았습니다. 슬로베니아·북마케도니아·벨라루스는 새 주요 보도가 확인되지 않아 배경 동향으로 대신했습니다. 코소보 건은 제목만 확인했습니다. 불가리아 결선 날짜는 기사에 명시되지 않아 일요일(11월 1일)로 추정했고, 우크라이나 부상자 수는 127명과 128명 표기가 엇갈립니다. LRT 제목은 빌뉴스에서 체포로 읽히나 본문은 독일에서 체포로 설명합니다. ‘한국·기업 시사점’은 보도를 바탕으로 한 해석입니다. 출처 표시: KR = 한국 언론, KOTRA = KOTRA 해외시장뉴스, EN = 해외 매체."
+    },
+    {
         "date":  "2026-10-28",
         "home":  [
                      0,
