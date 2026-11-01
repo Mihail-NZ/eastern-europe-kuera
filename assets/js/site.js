@@ -128,81 +128,41 @@
    * mode 'locator': 국가 페이지. focus 나라만 선명하게, 이웃은 흐리게(열린 나라는 링크)
    * mode 'thumb'  : 뉴스 카드 썸네일. 링크·툴팁 없음 */
   function buildMap(container, opts) {
-    const mode = opts.mode || 'hero';
-    const focus = new Set(opts.focus || []);
+    const mode = opts.mode || 'locator';
+    const codes = (opts.focus || []).filter(code => MAP[code]);
+    const focus = new Set(codes);
     const u = 'm' + (++uidCounter);
     const svg = document.createElementNS(SVGNS, 'svg');
-    svg.setAttribute('class', `map-svg map-${mode}`);
-    svg.setAttribute('viewBox', opts.viewBox);
-    svg.setAttribute('preserveAspectRatio', opts.aspect || 'xMidYMid meet');
+    svg.setAttribute('class', 'map-svg map-art map-' + mode + ' cover-country-map');
+    svg.setAttribute('preserveAspectRatio', 'xMidYMid meet');
     if (mode === 'thumb') svg.setAttribute('aria-hidden', 'true');
-    else { svg.setAttribute('role', 'group'); svg.setAttribute('aria-label', opts.label || '동유럽 지도'); }
-
-    let defs = '<defs>';
-    Object.keys(EAST).forEach(k => {
-      defs += `<pattern id="${u}-${k}" patternUnits="objectBoundingBox" patternContentUnits="objectBoundingBox" width="1" height="1" preserveAspectRatio="none"><image href="${flagUrl(k)}" x="0" y="0" width="1" height="1" preserveAspectRatio="none"/></pattern>`;
-    });
-    if (mode !== 'thumb') {
-      defs += `
-<filter id="${u}-halo" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="${mode === 'hero' ? 1.1 : 0.8}"/></filter>
-<filter id="${u}-cloth" x="0" y="0" width="100%" height="100%">
-  <feTurbulence type="fractalNoise" baseFrequency="0.35" numOctaves="3" seed="4" result="t"/>
-  <feColorMatrix in="t" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 -0.9 0.52" result="shade"/>
-  <feComposite in="shade" in2="SourceGraphic" operator="in" result="s"/>
-  <feMerge><feMergeNode in="SourceGraphic"/><feMergeNode in="s"/></feMerge>
-</filter>
-<filter id="${u}-lights" x="0" y="0" width="100%" height="100%">
-  <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" seed="11" result="n"/>
-  <feColorMatrix in="n" type="matrix" values="0 0 0 0 1  0 0 0 0 0.78  0 0 0 0 0.4  22 0 0 0 -15" result="dots"/>
-  <feComposite in="dots" in2="SourceAlpha" operator="in" result="d"/>
-  <feGaussianBlur in="d" stdDeviation="0.35" result="dg"/>
-  <feMerge><feMergeNode in="SourceGraphic"/><feMergeNode in="dg"/><feMergeNode in="d"/></feMerge>
-</filter>
-<radialGradient id="${u}-city"><stop offset="0" stop-color="#fff6d8"/><stop offset="0.25" stop-color="#ffd27a" stop-opacity="0.85"/><stop offset="1" stop-color="#ff9d2e" stop-opacity="0"/></radialGradient>
-<radialGradient id="${u}-cap"><stop offset="0" stop-color="#ffffff"/><stop offset="0.3" stop-color="#9fd0ff" stop-opacity="0.9"/><stop offset="1" stop-color="#4a8dff" stop-opacity="0"/></radialGradient>`;
+    else {
+      svg.setAttribute('role', 'group');
+      svg.setAttribute('aria-label', opts.label || '동유럽 지도');
     }
-    defs += '</defs>';
-
-    let base = '', halo = '', east = '', live = '';
-    Object.keys(MAP).forEach(code => {
-      const d = MAP[code].d;
-      if (!d || d.length < 20) return;
-      const e = EAST[code];
-      if (!e) { base += `<path class="land" d="${d}"/>`; return; }
-      const vivid = mode === 'hero' || focus.has(code);
-      const slug = SLUG_BY_ISO3[code];
-      const fill = `url(#${u}-${code})`;
-      if (vivid && mode !== 'thumb') halo += `<path d="${d}"/>`;
-      const cls = `country${vivid ? ' is-vivid' : ' is-dim'}${focus.has(code) ? ' is-focus' : ''}`;
-      if (slug && mode !== 'thumb' && !(mode === 'locator' && focus.has(code))) {
-        live += `<a class="${cls} is-live" href="${countryUrl(slug)}" data-code="${code}" aria-label="${e.ko} 페이지 열기"><path d="${d}" fill="${fill}"/></a>`;
-      } else {
-        east += `<g class="${cls}" data-code="${code}"><path d="${d}" fill="${fill}"/></g>`;
-      }
-    });
-
-    let cities = '', marks = '';
-    if (mode === 'hero') {
-      cities = CITIES.map(([lon, lat, s]) => {
-        const [x, y] = project(lon, lat);
-        return `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="${s}" fill="url(#${u}-city)"/>`;
-      }).join('');
-    }
-    if (mode !== 'thumb') {
-      Object.keys(CAPITALS).forEach(code => {
-        if (mode === 'locator' && !focus.has(code)) return;
-        const [x, y] = project(CAPITALS[code][0], CAPITALS[code][1]);
-        marks += `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="${mode === 'hero' ? 4.2 : 3.4}" fill="url(#${u}-cap)"/><circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="0.9" fill="#fff"/>`;
-      });
-    }
-
-    svg.innerHTML = defs +
-      `<g class="layer-base"${mode === 'thumb' ? '' : ` filter="url(#${u}-lights)"`}>${base}</g>` +
-      `<g class="layer-cities">${cities}</g>` +
-      `<g class="layer-halo" filter="url(#${u}-halo)">${halo}</g>` +
-      `<g class="layer-east"${mode === 'thumb' ? '' : ` filter="url(#${u}-cloth)"`}>${east}${live}</g>` +
-      `<g class="layer-marks">${marks}</g>`;
+    // Reuse the cover pixels and its exact geographic coordinate transform.
+    const image = '<image style="filter:brightness(.87) saturate(.88) contrast(.96)" href="' + ROOT + 'assets/images/hero-clean-flags-era.png" x="' + (-1370 / 2.65) + '" y="' + (-355 / 2.65) + '" width="' + (1883 / 2.65) + '" height="' + (835 / 2.65) + '" preserveAspectRatio="none"/>';
+    const paths = codes.map(code => '<path d="' + MAP[code].d + '"/>').join('');
+    const links = mode === 'thumb' ? '' : Object.entries(SLUG_BY_ISO3).map(([code, slug]) =>
+      '<a class="country art-area' + (focus.has(code) ? ' is-focus' : ' is-live') + '" data-code="' + code + '" href="' + countryUrl(slug) + '" aria-label="' + EAST[code].ko + ' 페이지 열기"><path d="' + MAP[code].d + '"/></a>').join('');
+    svg.innerHTML = '<defs><clipPath id="' + u + '-focus">' + paths + '</clipPath></defs>' +
+      image + '<rect x="-520" y="-140" width="720" height="330" fill="#030818" opacity=".58"/>' +
+      '<g clip-path="url(#' + u + '-focus)">' + image + '</g>' + links;
+    svg.style.background = '#030818';
     container.appendChild(svg);
+    const resize = () => {
+      const rect = container.getBoundingClientRect();
+      const ratio = rect.width && rect.height ? rect.width / rect.height : 1.8;
+      svg.setAttribute('viewBox', fitView(codes.length ? codes : ['POL', 'UKR', 'ROU'], mode === 'thumb' ? 9 : 20, ratio));
+    };
+    resize();
+    if (typeof ResizeObserver !== 'undefined') {
+      const observer = new ResizeObserver(() => {
+        if (!container.isConnected) { observer.disconnect(); return; }
+        resize();
+      });
+      observer.observe(container);
+    }
     if (opts.tooltip) attachTooltip(container, svg);
     return svg;
   }
