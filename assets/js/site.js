@@ -806,7 +806,7 @@ ${window.REPORTS ? `<section class="home-reports wrap" aria-labelledby="reports-
       language: { svg: true },
       culture: { a: 'Petar Milošević', l: 'CC BY-SA 4.0', f: 'Ljubljana, triple bridge with flower shop-tempietto to the right.jpg' },
       industry: { a: 'Andrejj', l: 'CC BY-SA 4.0', f: 'Krka, podjetje 1.jpg' },
-      news: { a: 'Žiga', l: 'CC BY-SA 3.0', f: 'RTVS-Studio1.JPG' } },
+      news: { a: 'Yerpo', l: 'CC BY-SA 3.0', f: 'Radio Slovenia studio.JPG' } },
     'croatia': {
       overview: { a: 'Vojtěch Dočkal', l: 'CC BY-SA 4.0', f: 'Zagreb, Panorama 001.jpg' },
       language: { svg: true },
@@ -830,19 +830,19 @@ ${window.REPORTS ? `<section class="home-reports wrap" aria-labelledby="reports-
       language: { svg: true },
       culture: { a: 'Avital Brodski', l: 'CC BY-SA 4.0', f: 'Martisor Seller.jpg' },
       industry: { a: 'Nixalsverdrus', l: 'CC BY-SA 3.0', f: 'Vineyard, Anenii Noi District.JPG' },
-      news: { a: 'unknown author', l: 'Public domain', f: 'Moldova Newspaper 1.jpg' } },
+      news: { a: 'Ion Chibzii', l: 'CC BY-SA 2.0', f: 'Preparing for the TV show Village Hour (2002). (50921586923).jpg' } },
     'bulgaria': {
       overview: { a: 'Luca Volpi', l: 'CC BY-SA 2.0', f: 'Sofia skyline 3.jpg' },
       language: { svg: true },
       culture: { a: 'Dimitǎr Boevski', l: 'CC BY-SA 4.0', f: 'Martenitsa tree in Botevgrad, Bulgaria.jpg' },
-      industry: { a: 'Tiia Monto', l: 'CC BY-SA 4.0', f: 'Rousse - industrial.jpg' },
+      industry: { a: 'Kremister', l: 'CC BY-SA 4.0', f: 'Sensata-20150513- MG 4026.jpg' },
       news: { a: 'Konstantin Pavlov', l: 'CC BY-SA 3.0', f: 'Studio 1, Bulgarian National Radio.JPG' } },
     'romania': {
       overview: { a: 'seisdeagosto', l: 'CC BY-SA 2.0', f: 'Bucharest-Skyline-01.jpg' },
       language: { svg: true },
       culture: { a: 'Babu', l: 'CC BY-SA 4.0', f: 'Martisoare la Muzeul Satului (1).jpg' },
       industry: { a: 'Alexander-93', l: 'CC BY-SA 4.0', f: 'Dacia Duster III IMG 8961.jpg' },
-      news: { a: 'RudolfSimon', l: 'CC BY-SA 3.0', f: '1976 Bucuresti Newspaper Kiosk.jpg' } },
+      news: { a: 'Dimitris Kamaras', l: 'CC BY 2.0', f: 'Piața Charles de Gaulle, Bucharest (44658633210).jpg' } },
     'latvia': {
       overview: { a: 'Ymblanter', l: 'CC BY-SA 4.0', f: 'Panorama of Riga from the Stone Bridge.jpg' },
       language: { svg: true },
@@ -884,7 +884,7 @@ ${window.REPORTS ? `<section class="home-reports wrap" aria-labelledby="reports-
       language: { svg: true },
       culture: { a: 'Rossum1950', l: 'CC BY-SA 3.0', f: 'Mostar Sevdah Reunion.jpg' },
       industry: { a: 'Manfred Kopka', l: 'CC BY-SA 4.0', f: 'Zenica (Stahlwerk).jpg' },
-      news: { a: 'BiHVolim', l: 'CC BY-SA 4.0', f: 'View towards BHRT Sarajevo.JPG' } },
+      news: { a: 'Irmela Cero', l: 'CC BY-SA 4.0', f: 'Sjediste lista Oslobodjenje.jpg' } },
     'montenegro': {
       overview: { a: 'Janusz Recław', l: 'CC BY-SA 4.0', f: 'Podgorica panorama.jpg' },
       language: { svg: true },
