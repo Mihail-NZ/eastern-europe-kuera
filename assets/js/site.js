@@ -774,129 +774,129 @@ ${window.REPORTS ? `<section class="home-reports wrap" aria-labelledby="reports-
   <div class="wrap country-hero-inner">${inner}</div>
 </section>`;
   }
-  /* 국가 홈 '더 알아보기' 카드 사진(관광·음식 제외): 개요=수도 풍경, 언어=언어·문자 관련 기념물·도서관, 문화=첫 문화 주제, 산업=대표 산업, 뉴스=의회 건물.
+  /* 국가 홈 '더 알아보기' 카드 사진(관광·음식 제외): 개요=수도 풍경, 언어=자체 제작한 알파벳표(SVG), 문화=첫 문화 주제, 산업=대표 산업, 뉴스=그 나라 언어의 신문·방송(신문 가판대, 공영방송 스튜디오·사옥).
    * Wikimedia Commons(2026-11-02, 가로 960px로 크기 조정). a: 작가, l: 라이선스, f: Commons 파일명 */
   const CARD_ART = {
     'poland': {
       overview: { a: 'Quintin Soloviev', l: 'CC BY 4.0', f: 'Skyline of Warsaw, Poland.jpg' },
-      language: { a: 'Scotch Mist', l: 'CC BY-SA 4.0', f: 'Krakow 2024 063 Adam Mickiewicz Monument.jpg' },
+      language: { svg: true },
       culture: { a: 'Jorge Lascar', l: 'CC BY-SA 3.0', f: 'Old Town Market Place-Warsaw-Poland.JPG' },
       industry: { a: 'Marek Ślusarczyk (Tupungato)', l: 'CC BY 3.0', f: '001 Car factory assembly line - Opel factory in Gliwice, Poland.jpg' },
-      news: { a: 'Piotr Waglowski (VaGla)', l: 'Public domain', f: 'Sejm rp front 20070103.jpg' } },
+      news: { a: 'Monika (Flickr)', l: 'CC BY-SA 2.0', f: '2009 kiosk Warsaw 3455204738.jpg' } },
     'czechia': {
       overview: { a: 'Uoaei1', l: 'CC BY-SA 4.0', f: 'Praha Panorama from Petřín 20170430.jpg' },
-      language: { a: 'Skot', l: 'CC BY-SA 4.0', f: 'Clementinum Baroque Library Hall.jpg' },
+      language: { svg: true },
       culture: { a: 'A.Savin', l: 'FAL', f: 'Prague 07-2016 View from Old Town Hall Tower img3.jpg' },
       industry: { a: 'Zdeněk Fiedler', l: 'CC BY-SA 4.0', f: 'Škoda Auto Mladá Boleslav.jpg' },
-      news: { a: 'VitVit', l: 'CC BY-SA 4.0', f: 'Malá Strana Sněmovní, palác Thun a Lažanský.jpg' } },
+      news: { a: 'Rybicka11', l: 'CC BY-SA 4.0', f: 'Česká televize Hradec Králové - studio A.jpg' } },
     'hungary': {
       overview: { a: 'Furkan Akkurt', l: 'CC BY-SA 4.0', f: 'Danube panorama at dusk Budapest 2025.jpeg' },
-      language: { a: 'Suicasmo', l: 'CC BY-SA 4.0', f: 'Main Building of the Hungarian Academy of Sciences 20180824.jpg' },
+      language: { svg: true },
       culture: { a: 'Wilfredor', l: 'CC0', f: 'Széchenyi Chain Bridge in Budapest at night.jpg' },
       industry: { a: 'Globetrotter19', l: 'CC BY-SA 3.0', f: 'Mercedes-Benz plant, 2019 Kecskemét.jpg' },
-      news: { a: 'A.Donaire2005', l: 'CC BY 4.0', f: 'Hungarian Parlament Building in Kossuth Square (2025-07-01) 1.jpg' } },
+      news: { a: 'Veronika.szappanos', l: 'CC BY-SA 4.0', f: 'Magyar Nemzet utolsó, last editon.jpg' } },
     'slovakia': {
       overview: { a: 'Marc Ryckaert (MJJR)', l: 'CC BY 3.0', f: 'Bratislava Panorama R01.jpg' },
-      language: { a: 'Steven Lek', l: 'CC BY-SA 4.0', f: 'Ľudovít Štúr Memorial Bratislava 2019.jpg' },
+      language: { svg: true },
       culture: { a: 'Krzysiu', l: 'CC BY 4.0', f: 'Jano Adamek Slovakian pipe player.jpg' },
       industry: { a: 'Pedant01', l: 'CC BY-SA 3.0', f: 'Volkswagen Bratislava Plant 2021.jpg' },
-      news: { a: 'Robert von Oliva', l: 'CC0', f: 'National Council of Slovakia main building in Bratislava as seen from the east.jpg' } },
+      news: { a: 'Jorge Franganillo', l: 'CC BY 2.0', f: 'Bratislava- Slovenský rozhlas - 52049313578.jpg' } },
     'slovenia': {
       overview: { a: 'Tiia Monto', l: 'CC BY-SA 3.0', f: 'Ljubljana panorama 3.jpg' },
-      language: { a: 'Husond', l: 'CC BY-SA 4.0', f: 'Ljubljana Prešeren Square from Čopova.JPG' },
+      language: { svg: true },
       culture: { a: 'Petar Milošević', l: 'CC BY-SA 4.0', f: 'Ljubljana, triple bridge with flower shop-tempietto to the right.jpg' },
       industry: { a: 'Andrejj', l: 'CC BY-SA 4.0', f: 'Krka, podjetje 1.jpg' },
-      news: { a: 'Arths-at', l: 'CC BY-SA 4.0', f: 'Police officers of Slovenia by National Assembly Building of the Republic of Slovenia 01.jpg' } },
+      news: { a: 'Žiga', l: 'CC BY-SA 3.0', f: 'RTVS-Studio1.JPG' } },
     'croatia': {
       overview: { a: 'Vojtěch Dočkal', l: 'CC BY-SA 4.0', f: 'Zagreb, Panorama 001.jpg' },
-      language: { a: 'Sibinia', l: 'CC BY-SA 4.0', f: 'Kroatische tablet Baška.jpg' },
+      language: { svg: true },
       culture: { a: 'Klapa Kartolina', l: 'CC BY-SA 4.0', f: 'Klapa Kartolina in Omiš, Croatia.jpg' },
       industry: { a: 'Alex Proimos', l: 'CC BY 2.0', f: 'Hvar Town through the Yachts (5969965094).jpg' },
-      news: { a: 'Jorge Láscar', l: 'CC BY 2.0', f: 'St. Mark\'s Square (13023889495).jpg' } },
+      news: { a: 'Ronald Eikelenboom', l: 'CC BY-SA 2.0', f: '2011 news kiosk Croatia 6262630943.jpg' } },
     'serbia': {
       overview: { a: 'Vlada Marinković', l: 'CC BY-SA 3.0', f: 'Belgrade iz balona.jpg' },
-      language: { a: 'PedjaNbg', l: 'CC BY-SA 3.0', f: 'Вуков споменик2.JPG' },
+      language: { svg: true },
       culture: { a: 'Laslovarga', l: 'CC BY-SA 4.0', f: 'Slavski kolač - Laslovarga.jpg' },
       industry: { a: 'Bjoertvedt', l: 'CC BY-SA 4.0', f: 'Kragujevac FIAT IMG 7811.JPG' },
-      news: { a: 'kallerna', l: 'CC BY-SA 4.0', f: 'House of the National Assembly of the Republic of Serbia Belgrade 1.jpg' } },
+      news: { a: 'LukaP', l: 'CC BY-SA 3.0', f: 'Radio Television of Serbia headquarters in Tašmajdan Park.jpg' } },
     'estonia': {
       overview: { a: 'Sander Valdre', l: 'CC BY 4.0', f: 'Tallinn skyline 2025.jpg' },
-      language: { a: 'MMitt', l: 'CC BY-SA 3.0 ee', f: 'Toomemäe park K.J.Peterson mai2 2014 020.jpg' },
+      language: { svg: true },
       culture: { a: 'Diego Delso', l: 'CC BY-SA 3.0', f: 'Tallinn Song Festival Grounds, Tallinn, Estonia, 2012-08-12, DD 13.JPG' },
       industry: { a: 'Erko', l: 'CC BY-SA 4.0', f: 'Ülemiste City.jpg' },
-      news: { a: 'Abrget47j', l: 'CC BY-SA 3.0', f: 'Toompea loss 2014.jpg' } },
+      news: { a: 'Makingstopsense', l: 'CC0', f: 'SirpNov2025.jpg' } },
     'moldova': {
       overview: { a: 'Myrabella', l: 'CC BY-SA 3.0', f: 'Chisinau Stefan cel Mare park fountain.jpg' },
-      language: { a: 'Ukas', l: 'CC BY-SA 4.0', f: 'Alley of Classics Chisinau Moldova Nov 2012.jpg' },
+      language: { svg: true },
       culture: { a: 'Avital Brodski', l: 'CC BY-SA 4.0', f: 'Martisor Seller.jpg' },
       industry: { a: 'Nixalsverdrus', l: 'CC BY-SA 3.0', f: 'Vineyard, Anenii Noi District.JPG' },
-      news: { a: 'Pudelek', l: 'CC BY-SA 4.0', f: 'Parliament Building in Chișinău.jpg' } },
+      news: { a: 'unknown author', l: 'Public domain', f: 'Moldova Newspaper 1.jpg' } },
     'bulgaria': {
       overview: { a: 'Luca Volpi', l: 'CC BY-SA 2.0', f: 'Sofia skyline 3.jpg' },
-      language: { a: 'Bin im Garten', l: 'CC BY-SA 3.0', f: 'SS. Cyril and Methodius National Library 2012 PD 2.jpg' },
+      language: { svg: true },
       culture: { a: 'Dimitǎr Boevski', l: 'CC BY-SA 4.0', f: 'Martenitsa tree in Botevgrad, Bulgaria.jpg' },
       industry: { a: 'Tiia Monto', l: 'CC BY-SA 4.0', f: 'Rousse - industrial.jpg' },
-      news: { a: 'Лорд Бъмбъри', l: 'CC BY-SA 4.0', f: 'National Assembly main building, Sofia, October 2016 01.jpg' } },
+      news: { a: 'Konstantin Pavlov', l: 'CC BY-SA 3.0', f: 'Studio 1, Bulgarian National Radio.JPG' } },
     'romania': {
       overview: { a: 'seisdeagosto', l: 'CC BY-SA 2.0', f: 'Bucharest-Skyline-01.jpg' },
-      language: { a: 'Britchi Mirela', l: 'CC BY-SA 4.0', f: 'Bucuresti, Romania. Atheneul Roman si statuia lui Mihai Eminescu. Fatada (Cladire de patrimoniu). Arhitect Paul Louis Albert Galleron.jpg' },
+      language: { svg: true },
       culture: { a: 'Babu', l: 'CC BY-SA 4.0', f: 'Martisoare la Muzeul Satului (1).jpg' },
       industry: { a: 'Alexander-93', l: 'CC BY-SA 4.0', f: 'Dacia Duster III IMG 8961.jpg' },
-      news: { a: 'William John Gauthier', l: 'CC BY-SA 2.0', f: 'Palace of the Parliament in Bucharest (51878975552).jpg' } },
+      news: { a: 'RudolfSimon', l: 'CC BY-SA 3.0', f: '1976 Bucuresti Newspaper Kiosk.jpg' } },
     'latvia': {
       overview: { a: 'Ymblanter', l: 'CC BY-SA 4.0', f: 'Panorama of Riga from the Stone Bridge.jpg' },
-      language: { a: 'Bengt Oberger', l: 'CC BY-SA 4.0', f: 'National Library of Latvia 10.jpg' },
+      language: { svg: true },
       culture: { a: 'Kārlis Dambrāns', l: 'CC BY 2.0', f: 'Midsummer market.jpg' },
       industry: { a: 'Ignat Gorazd', l: 'CC BY-SA 2.0', f: 'Lumber mill in Kuldīga, Latvia (18996889756).jpg' },
-      news: { a: 'Barnos', l: 'CC BY-SA 4.0', f: 'Saeima in Riga.jpg' } },
+      news: { a: 'Tony Webster', l: 'CC BY 2.0', f: 'Latvijas Televīzija (LTV) - Latvian Television - Ukraine Flag - Riga.jpg' } },
     'lithuania': {
       overview: { a: 'Karmen media', l: 'CC BY-SA 3.0', f: 'Vilnius old town 8.JPG' },
-      language: { a: 'Raimondas Malaiška', l: 'Public domain', f: 'VU bibliotekos Smuglevičiaus salė.JPG' },
+      language: { svg: true },
       culture: { a: 'Pofka', l: 'CC BY-SA 4.0', f: 'Palace of the Grand Dukes of Lithuania and Gediminas Monument in Vilnius in winter in 2022.jpg' },
       industry: { a: 'Y1337', l: 'CC BY-SA 4.0', f: 'Vilnius CBD.jpg' },
-      news: { a: 'Ardfern', l: 'CC BY-SA 3.0', f: 'Seimas Palace, Vilnius, April 2015 (03).JPG' } },
+      news: { a: 'Bdx', l: 'CC0', f: 'Lithuanian newspapers in the Kaunas City Library (Ąžuolyno biblioteka).jpg' } },
     'ukraine': {
       overview: { a: 'spoilt.exile', l: 'CC BY-SA 2.0', f: 'Панорама на Днепр и Подол - Panorama of the Dnieper and Podol (9644947002).jpg' },
-      language: { a: 'Benoît Prieur', l: 'CC0', f: 'Monument to Taras Shevchenko near Kyiv City Council (2014).jpg' },
+      language: { svg: true },
       culture: { a: 'Yevtushuk Victor', l: 'CC BY-SA 4.0', f: 'Pysanka Eggs.jpg' },
       industry: { a: 'Eugenereed1984', l: 'CC BY-SA 3.0', f: 'Sunflower field in Ukraine, 23 July 2013.jpg' },
-      news: { a: 'Wadco2', l: 'CC BY-SA 3.0', f: 'Parliament of Ukraine. Listed ID 80-382-0099.SW. - Mykhaila Hrushevskoho Street, Pechersk Raion, Kiev. - Pechersk 28 09 13 452.jpg' } },
+      news: { a: 'Goo3', l: 'CC BY-SA 4.0', f: 'В студії skrypin.ua.jpg' } },
     'belarus': {
       overview: { a: 'Denis Faustinelli', l: 'CC BY 3.0', f: 'Panorama Minsk - panoramio (1).jpg' },
-      language: { a: 'Szeder László', l: 'CC BY-SA 3.0', f: 'Polatsk-F.Skaryna statue.JPG' },
+      language: { svg: true },
       culture: { a: 'Tatiana Markina', l: 'CC BY-SA 4.0', f: '2026.03.11 Heritage Crafts Center in Hrodna, Belarusian Traditional Ornaments Vytinanka Vycynanka.jpg' },
       industry: { a: 'Homoatrox', l: 'CC BY-SA 4.0', f: 'Salihorsk (Soligorsk) otvaly.jpg' },
-      news: { a: 'Suicasmo', l: 'CC BY-SA 4.0', f: 'House of Government (Minsk) 20190502.jpg' } },
+      news: { a: 'Чаховіч Уладзіслаў', l: 'CC BY-SA 3.0', f: 'Мінск. Вуліца Макаёнка. Белтэлерадыёкампанія (01).jpg' } },
     'north-macedonia': {
       overview: { a: 'kallerna', l: 'CC BY-SA 4.0', f: 'Skopje panorama 3.jpg' },
-      language: { a: 'Wikimedia Commons user', l: 'CC BY-SA 3.0', f: 'Monument of Saints Cyril and Methodius in Skopje 02.JPG' },
+      language: { svg: true },
       culture: { a: 'Diego Delso', l: 'CC BY-SA 3.0', f: 'Sitio arqueológico de Plaosnik, Ohrid, Macedonia, 2014-04-17, DD 28.JPG' },
       industry: { a: 'Ildar Sagdejev (Specious)', l: 'CC BY-SA 4.0', f: '2008-04-17 Geo Storm instrument cluster wiring harness.jpg' },
-      news: { a: 'Suicasmo', l: 'CC BY-SA 4.0', f: 'Assembly Palace (North Macedonia) 20180223.jpg' } },
+      news: { a: 'kallerna', l: 'CC BY-SA 4.0', f: 'MRT Center Skopje 1.jpg' } },
     'albania': {
       overview: { a: 'Thomas Quine', l: 'CC BY 2.0', f: 'Tirana panorama (7246584338).jpg' },
-      language: { a: 'AgnezaAzalea', l: 'CC BY-SA 4.0', f: 'Mësonjëtorja e Parë Shqipe (Korçë).jpg' },
+      language: { svg: true },
       culture: { a: 'Pudelek', l: 'CC BY-SA 4.0', f: 'Tirana - Skanderbeg Square (Sheshi Skënderbej) - by Pudelek.jpg' },
       industry: { a: 'BBB2021', l: 'CC BY-SA 4.0', f: 'Saranda Promenade.jpg' },
-      news: { a: 'Gertjan R.', l: 'CC BY-SA 3.0', f: 'Albanian Parliament building.jpg' } },
+      news: { a: 'TorbjørnS', l: 'CC BY-SA 4.0', f: 'RTSH Main Building Tirana.JPG' } },
     'bosnia-herzegovina': {
       overview: { a: 'Felky', l: 'CC BY 4.0', f: 'Sarajevo Panorama 2022.jpg' },
-      language: { a: 'Bernard Gagnon', l: 'CC BY-SA 4.0', f: 'Sarajevo City Hall 01.jpg' },
+      language: { svg: true },
       culture: { a: 'Rossum1950', l: 'CC BY-SA 3.0', f: 'Mostar Sevdah Reunion.jpg' },
       industry: { a: 'Manfred Kopka', l: 'CC BY-SA 4.0', f: 'Zenica (Stahlwerk).jpg' },
-      news: { a: 'Milan Suvajac', l: 'CC BY-SA 4.0', f: 'Sarajevo Parliamentary-Assembly 2011-09-26.jpg' } },
+      news: { a: 'BiHVolim', l: 'CC BY-SA 4.0', f: 'View towards BHRT Sarajevo.JPG' } },
     'montenegro': {
       overview: { a: 'Janusz Recław', l: 'CC BY-SA 4.0', f: 'Podgorica panorama.jpg' },
-      language: { a: 'Ingo Mehling', l: 'CC BY-SA 4.0', f: 'Njegos mausoleum frontside.jpg' },
+      language: { svg: true },
       culture: { a: 'Ivan Petrović Poljak', l: 'CC BY-SA 4.0', f: 'Bokeljska Mornarica 01 (Tripundan 2023).jpg' },
       industry: { a: 'Falk2', l: 'CC BY-SA 4.0', f: 'D02.30 Budva, Stadtstrand und Zitadelle.jpg' },
-      news: { a: 'Rasho992', l: 'CC BY-SA 3.0', f: 'Skupština.JPG' } },
+      news: { a: 'Savo Prelevic', l: 'CC BY 4.0', f: 'Visit of Marta Kos, to Montenegro (P-070783-00-18).jpg' } },
     'kosovo': {
       overview: { a: 'Bdx', l: 'CC0', f: 'Pristina, view of city centre, direction North-East, 2025.jpg' },
-      language: { a: 'Arild Vågen', l: 'CC BY-SA 3.0', f: 'Newborn Pristina February 2013.jpg' },
+      language: { svg: true },
       culture: { a: 'GentiBehramaj', l: 'CC BY-SA 4.0', f: 'Sheshi Shadervan.jpg' },
       industry: { a: 'Arianit', l: 'CC BY-SA 4.0', f: 'Innovation and Training Park Prizren from the drone 01.jpg' },
-      news: { a: 'Arianit', l: 'CC BY-SA 4.0', f: 'Parliament of the Republic of Kosovo.jpg' } }
+      news: { a: 'Arianit', l: 'CC BY-SA 4.0', f: 'RTK Studio morning show.jpg' } }
   };
   function crumbs(items) {
     return `<nav class="crumbs" aria-label="현재 위치">${items.map(([label, href], i) => (i ? '<span aria-hidden="true">/</span>' : '') +
@@ -937,8 +937,8 @@ ${window.REPORTS ? `<section class="home-reports wrap" aria-labelledby="reports-
           (pick.image_author ? `<span class="ai-badge">사진 ${esc(pick.image_author)} · ${esc(pick.image_license)}</span>` : '');
       }
       const ca = (CARD_ART[slug] || {})[id];
-      if (ca) return `<img src="${ROOT}assets/images/cards/${slug}/${id}.jpg" alt="" loading="lazy" decoding="async">` +
-        `<span class="ai-badge">사진 ${esc(ca.a)} · ${esc(ca.l)}</span>`;
+      if (ca) return `<img src="${ROOT}assets/images/cards/${slug}/${id}.${ca.svg ? 'svg' : 'jpg'}" alt="" loading="lazy" decoding="async">` +
+        (ca.a ? `<span class="ai-badge">사진 ${esc(ca.a)} · ${esc(ca.l)}</span>` : '');
       const word = { overview: c.name_local, culture: c.culture[0].local, food: c.food[0].local, language: c.language[0].local,
         industry: c.industry[0].title, news: c.name_local }[id] || c.name_local;
       return `<span class="disc-word" lang="und">${esc(word)}</span>`;
