@@ -727,7 +727,27 @@ ${window.REPORTS ? `<section class="home-reports wrap" aria-labelledby="reports-
       { src: 'tallinn.jpg', ko: '탈린 구시가지', en: 'Tallinn Old Town', author: 'Ivar Leidus (Iifar)', license: 'CC BY-SA 3.0 ee', file: 'Old_town_of_Tallinn_06-03-2012.jpg' },
       { src: 'jagala-winter.jpg', ko: '얼어붙은 예갈라 폭포', en: 'Jägala Waterfall in winter', author: 'Ivar Leidus', license: 'CC BY-SA 3.0 ee', file: 'Jägala_juga_22-03-2013.JPG' },
       { src: 'bog.jpg', ko: '라헤마 비루 습지', en: 'Viru Bog, Lahemaa', author: 'Diego Delso', license: 'CC BY-SA 3.0', file: 'Viru_Bog,_Parque_Nacional_Lahemaa,_Estonia,_2012-08-12,_DD_60.JPG' },
-      { src: 'kuressaare.jpg', ko: '쿠레사레 성', en: 'Kuressaare Castle, Saaremaa', author: 'Ivo Kruusamägi', license: 'CC BY-SA 3.0 ee', file: 'Kuressaare_linnus_(2010).JPG' }] }
+      { src: 'kuressaare.jpg', ko: '쿠레사레 성', en: 'Kuressaare Castle, Saaremaa', author: 'Ivo Kruusamägi', license: 'CC BY-SA 3.0 ee', file: 'Kuressaare_linnus_(2010).JPG' }] },
+    croatia: { title: 'Croatia', shots: [
+      { src: 'dubrovnik.jpg', ko: '두브로브니크 구시가지', en: 'Old Town of Dubrovnik', author: 'Akira Takiguchi', license: 'CC BY 2.0', file: 'Aerial view of the Old Town of Dubrovnik - Croatia.jpg' },
+      { src: 'plitvice.jpg', ko: '플리트비체 호수 국립공원', en: 'Plitvice Lakes National Park', author: 'OrionCro', license: 'CC BY-SA 4.0', file: 'Waterfalls at Plitvice Lakes.jpg' },
+      { src: 'split.jpg', ko: '스플리트 디오클레티아누스 궁전', en: "Diocletian's Palace, Split", author: 'Bernard Gagnon', license: 'CC BY-SA 4.0', file: "View of Diocletian's Palace, Split 01.jpg" },
+      { src: 'rovinj.jpg', ko: '로비니 구시가지', en: 'Rovinj, Istria', author: 'Giacomo Alessandroni', license: 'CC BY-SA 4.0', file: 'Rovinj seen from the sea.jpg' }] },
+    bulgaria: { title: 'Bulgaria', shots: [
+      { src: 'rila.jpg', ko: '릴라 수도원', en: 'Rila Monastery', author: 'King of Rona', license: 'CC BY-SA 4.0', file: 'Rila Monastery 17.jpg' },
+      { src: 'alexander-nevsky.jpg', ko: '소피아 알렉산드르 넵스키 대성당', en: 'Alexander Nevsky Cathedral, Sofia', author: 'Pudelek (Marcin Szala)', license: 'CC BY-SA 3.0', file: 'Alexander Nevsky Cathedral, Sofia (by Pudelek).JPG' },
+      { src: 'plovdiv.jpg', ko: '플로브디프 로마 극장', en: 'Roman Theatre, Plovdiv', author: 'Ymblanter', license: 'CC BY-SA 4.0', file: 'Roman Theatre Philippopolis.jpg' },
+      { src: 'nessebar.jpg', ko: '네세버르 구시가지', en: 'Old Nessebar', author: 'Hristina Bumbarova', license: 'CC BY-SA 4.0', file: 'Nessebar, Old town 3.jpg' }] },
+    serbia: { title: 'Serbia', shots: [
+      { src: 'belgrade-fortress.jpg', ko: '베오그라드 칼레메그단 요새', en: 'Belgrade Fortress, Kalemegdan', author: 'Zcvetkovic', license: 'CC BY-SA 4.0', file: 'Belgrade Fortress Kalemegdan-9878.NEF.jpg' },
+      { src: 'saint-sava.jpg', ko: '성 사바 성당', en: 'Church of Saint Sava, Belgrade', author: 'Petar Milošević', license: 'CC BY-SA 4.0', file: 'Church of Saint Sava (Belgrade, Serbia).jpg' },
+      { src: 'petrovaradin.jpg', ko: '노비사드 페트로바라딘 요새', en: 'Petrovaradin Fortress, Novi Sad', author: 'Zeljko511', license: 'CC BY-SA 4.0', file: 'Petrovaradin Fortress II, Novi Sad, Serbia 14.09.2016.jpg' },
+      { src: 'golubac.jpg', ko: '골루바츠 요새', en: 'Golubac Fortress, Danube', author: 'Miomir Magdevski', license: 'CC BY-SA 4.0', file: 'Fortress Golubac 06.jpg' }] },
+    'bosnia-herzegovina': { title: 'Bosnia and Herzegovina', shots: [
+      { src: 'mostar.jpg', ko: '모스타르 스타리 모스트', en: 'Stari Most, Mostar', author: 'Berthold Werner', license: 'CC BY-SA 4.0', file: 'Mostar Stari Most BW 2024-10-01 12-58-38.jpg' },
+      { src: 'bascarsija.jpg', ko: '사라예보 바슈카르시야', en: 'Baščaršija, Sarajevo', author: 'Niegodzisie', license: 'CC BY-SA 4.0', file: '2023.01.22 Baščaršija.jpg' },
+      { src: 'kravica.jpg', ko: '크라비차 폭포', en: 'Kravica Waterfall', author: 'old_s', license: 'CC0', file: 'Kravica waterfall july 2012.jpg' },
+      { src: 'pocitelj.jpg', ko: '포치텔리 요새 마을', en: 'Počitelj', author: 'Richard Mortel', license: 'CC BY 2.0', file: 'Pocitelj, Herzegovina; fort, 15th century and after (6) (29814165736).jpg' }] }
   };
   const LICENSE_URL = { 'CC0': 'https://creativecommons.org/publicdomain/zero/1.0/', 'CC BY 2.0': 'https://creativecommons.org/licenses/by/2.0/', 'CC BY 3.0': 'https://creativecommons.org/licenses/by/3.0/',
     'CC BY-SA 3.0': 'https://creativecommons.org/licenses/by-sa/3.0/', 'CC BY-SA 3.0 ee': 'https://creativecommons.org/licenses/by-sa/3.0/ee/', 'CC BY-SA 4.0': 'https://creativecommons.org/licenses/by-sa/4.0/',
