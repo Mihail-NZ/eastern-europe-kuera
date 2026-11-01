@@ -5,6 +5,32 @@
  * title이 null이면 그 주에 확인된 주요 보도가 없다는 뜻이다. */
 window.WEEKLY_NEWS = [
   {
+    week_start: '2026-10-26', week_end: '2026-11-01', updated: '2026-11-01',
+    note: '이번 주는 웹 검색으로 날짜까지 확인된 보도가 적어, 확인된 나라만 채우고 나머지는 비워 두었습니다.',
+    countries: {
+      '폴란드': { title: null },
+      '체코': { title: null },
+      '슬로바키아': { title: null },
+      '헝가리': { title: null },
+      '슬로베니아': { title: null },
+      '크로아티아': { title: null },
+      '세르비아': { title: null },
+      '보스니아 헤르체고비나': { title: null },
+      '코소보': { title: null },
+      '몬테네그로': { title: null },
+      '북마케도니아': { title: null },
+      '알바니아': { title: null },
+      '불가리아': { title: '불가리아 대선 결선, 현직 요토바 대통령 대 친서방 개혁파 규로프 맞대결', source: 'AP', url: 'https://www.lanacion.com.ar/usa/bulgarian-incumbent-president-faces-pro-western-reformist-in-runoff-on-sunday-nid26102026/' },
+      '루마니아': { title: null },
+      '몰도바': { title: '루마니아 니쿨레스쿠 신임 총리, 첫 해외 방문지로 키시너우 찾아 산두 대통령 면담', source: 'Agerpres', url: 'https://agerpres.ro/english/2026/10/27/pm-luca-niculescu-received-by-president-of-republic-of-moldova-maia-sandu--1607429' },
+      '우크라이나': { title: null },
+      '벨라루스': { title: null },
+      '리투아니아': { title: null },
+      '라트비아': { title: null },
+      '에스토니아': { title: null }
+    }
+  },
+  {
     week_start: '2026-10-19', week_end: '2026-10-25', updated: '2026-10-27',
     note: '웹 검색과 학회 브리핑(10/19·10/20)으로 확인한 보도를 바탕으로 골랐습니다. 이번 주 주요 보도를 확인하지 못한 나라는 비워 두었고, 조사 시점이 일요일이 아닌 화요일(10/27)이어서 10/19~10/25 주를 반영했습니다.',
     countries: {
