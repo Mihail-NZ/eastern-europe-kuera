@@ -681,9 +681,9 @@ ${window.REPORTS ? `<section class="home-reports wrap" aria-labelledby="reports-
     ];
   }
 
-  /* 국가 첫 화면의 명소 영상: 사진 4장을 천천히 확대하며 교차 전환하는 반복 클립(CSS 애니메이션, 첫 장면 3.5초·나머지 2초).
+  /* 국가 첫 화면의 명소 영상: 사진 4장을 천천히 확대하며 교차 전환하는 반복 클립(CSS 애니메이션, 첫 장면 2.5초·나머지 2초).
    * 한 나라 안에서 요새·성·구시가지처럼 같은 종류의 명소는 한 장면만 넣는다.
-   * 동영상 파일로 만들면 확대할 때 픽셀 단위로 끊겨 흔들려 보여서, 8개국 모두 브라우저가 부드럽게 그리는 이 방식으로 통일했다.
+   * 동영상 파일로 만들면 확대할 때 픽셀 단위로 끊겨 흔들려 보여서, 모든 나라를 브라우저가 부드럽게 그리는 이 방식으로 통일했다.
    * 사진: Wikimedia Commons(2026-10-18~21, 사용자 승인 후 내려받음). 작가·라이선스를 클립 아래에 표시한다.
    * pos: 4:3 칸에 잘려 들어갈 때 사진의 중심(object-position과 확대 중심) */
   const REEL = {
@@ -746,9 +746,50 @@ ${window.REPORTS ? `<section class="home-reports wrap" aria-labelledby="reports-
       { src: 'mostar.jpg', ko: '모스타르 스타리 모스트', en: 'Stari Most, Mostar', author: 'Berthold Werner', license: 'CC BY-SA 4.0', file: 'Mostar Stari Most BW 2024-10-01 12-58-38.jpg' },
       { src: 'blagaj.jpg', ko: '블라가이 테케(부나강 수원)', en: 'Blagaj Tekke, Buna spring', author: 'Julian Nyča', license: 'CC BY-SA 3.0', file: 'Blagaj – Vrelo Bune 3.jpg' },
       { src: 'kravica.jpg', ko: '크라비차 폭포', en: 'Kravica Waterfall', author: 'old_s', license: 'CC0', file: 'Kravica waterfall july 2012.jpg' },
-      { src: 'trebevic.jpg', ko: '트레베비치 1984 올림픽 봅슬레이 트랙', en: 'Trebević 1984 Olympic bobsleigh track', author: 'spacebirdy', license: 'CC BY-SA 3.0', file: 'Olympische Bobbahn von 1984 - Trebević - 03.jpg' }] }
+      { src: 'trebevic.jpg', ko: '트레베비치 1984 올림픽 봅슬레이 트랙', en: 'Trebević 1984 Olympic bobsleigh track', author: 'spacebirdy', license: 'CC BY-SA 3.0', file: 'Olympische Bobbahn von 1984 - Trebević - 03.jpg' }] },
+    romania: { title: 'Romania', shots: [
+      { src: 'bran.jpg', ko: '브란 성(드라큘라 성)', en: 'Bran Castle', author: 'Todor Bozhinov', license: 'CC BY-SA 4.0', file: 'Bran Castle TB1.jpg' },
+      { src: 'transfagarasan.jpg', ko: '트란스파가라산 산악도로', en: 'Transfăgărășan road', author: 'Pudelek (Marcin Szala)', license: 'CC BY-SA 4.0', file: 'Transfăgărășan road (by Pudelek) 01.jpg' },
+      { src: 'salina-turda.jpg', ko: '투르다 소금광산', en: 'Salina Turda salt mine', author: '7oanna', license: 'CC BY-SA 4.0', file: 'Salina Turda, Romania.jpg' },
+      { src: 'brasov.jpg', ko: '브라쇼브 구시가지 광장', en: 'Council Square, Brașov', author: 'Andrei Stroe', license: 'CC BY-SA 4.0', file: 'RO BV Council Square from Tampa.jpg' }] },
+    ukraine: { title: 'Ukraine', shots: [
+      { src: 'lavra.jpg', ko: '안개 속 키이우 페체르스크 라브라', en: 'Kyiv Pechersk Lavra in the fog', author: 'KyivMax', license: 'CC BY-SA 4.0', file: 'Києво-Печерська Лавра в ранковому тумані.jpg' },
+      { src: 'lviv.jpg', ko: '르비우 구시가지 시장광장', en: 'Market Square, Lviv', author: 'Petar Milošević', license: 'CC BY-SA 3.0', file: 'Лвов Галиција.jpg' },
+      { src: 'tunnel-of-love.jpg', ko: '클레반 사랑의 터널', en: 'Tunnel of Love, Klevan', author: 'Myroslava Rakovets', license: 'CC BY-SA 3.0', file: 'Осінь у Тунелі кохання.JPG' },
+      { src: 'odesa-opera.jpg', ko: '오데사 오페라 극장', en: 'Odesa Opera and Ballet Theatre', author: 'Konstantin Brizhnichenko', license: 'CC BY-SA 4.0', file: 'Одеський національний академічний театр опери та балету DJI 0112.jpg' }] },
+    belarus: { title: 'Belarus', shots: [
+      { src: 'mir.jpg', ko: '미르 성', en: 'Mir Castle', author: 'Вадзім Новикаў', license: 'CC BY-SA 3.0', file: 'Комплекс Мирского замка.JPG' },
+      { src: 'bison.jpg', ko: '벨라베자 숲의 유럽들소', en: 'European bison, Białowieża Forest', author: 'Charles J. Sharp', license: 'CC BY-SA 4.0', file: 'European bison (Bison bonasus) male Białowieza.jpg' },
+      { src: 'library.jpg', ko: '민스크 국립도서관', en: 'National Library of Belarus, Minsk', author: 'Agbarto', license: 'CC BY-SA 4.0', file: '2024.04.11 National Library of Belarus Building Minsk.jpg' },
+      { src: 'braslav.jpg', ko: '브라슬라우 호수', en: 'Braslaw Lakes', author: 'Chystakhvalau Uladzimir', license: 'CC BY-SA 4.0', file: 'Belarus, Braslav lakes, Strusto 4.jpg' }] },
+    moldova: { title: 'Moldova', shots: [
+      { src: 'orheiul-vechi.jpg', ko: '오르헤이울 베키 동굴수도원', en: 'Orheiul Vechi', author: 'Julian Nyča', license: 'CC BY-SA 4.0', file: 'Orhei Vechi 08.JPG' },
+      { src: 'cricova.jpg', ko: '크리코바 지하 와인 저장고', en: 'Cricova underground winery', author: 'Visem', license: 'CC BY 4.0', file: 'Cricova winery (Oct 2025) 1.jpg' },
+      { src: 'soroca.jpg', ko: '소로카 요새', en: 'Soroca Fortress', author: 'Diego Delso', license: 'CC BY-SA 4.0', file: 'Fuerte de Soroca, Soroca, Moldavia, 2023-11-01, DD 01.jpg' },
+      { src: 'chisinau.jpg', ko: '키시너우 예수탄생 대성당', en: 'Nativity Cathedral, Chișinău', author: 'Pudelek', license: 'CC BY-SA 4.0', file: 'Nativity Cathedral, Chișinău.jpg' }] },
+    montenegro: { title: 'Montenegro', shots: [
+      { src: 'kotor.jpg', ko: '코토르 만과 구시가지', en: 'Bay of Kotor', author: 'Jocelyn Erskine-Kellie', license: 'CC BY 2.0', file: 'View of Kotor (40711294340).jpg' },
+      { src: 'durmitor.jpg', ko: '두르미토르 검은 호수', en: 'Black Lake, Durmitor', author: 'Ad Meskens', license: 'CC BY-SA 4.0', file: 'Montenegro NP Durmitor Black Lake 01.jpg' },
+      { src: 'ostrog.jpg', ko: '절벽 속 오스트로그 수도원', en: 'Ostrog Monastery', author: 'Gavinevans', license: 'CC BY-SA 3.0', file: 'Ostrog Monastery, Montenegro.jpg' },
+      { src: 'tara-bridge.jpg', ko: '타라 협곡 주르제비차 다리', en: 'Đurđevića Tara Bridge', author: 'Followyourheartmarkomaodus', license: 'CC BY-SA 4.0', file: 'Đurđevića Tara.jpg' }] },
+    albania: { title: 'Albania', shots: [
+      { src: 'berat.jpg', ko: '천 개의 창문 도시 베라트', en: 'Berat, city of a thousand windows', author: 'Arianit', license: 'CC BY-SA 4.0', file: '141 Berat panorama Mangalem and Gorica.jpg' },
+      { src: 'blue-eye.jpg', ko: '블루 아이 샘', en: 'The Blue Eye spring', author: 'Calistemon', license: 'CC BY-SA 4.0', file: 'Syri i kalter (The Blue Eye), Albania, September 2022 02.jpg' },
+      { src: 'ksamil.jpg', ko: '크사밀 해변의 섬들', en: 'Ksamil islands', author: 'Q.marjola', license: 'CC BY-SA 3.0', file: 'Ksamil, Saranda , Albania.JPG' },
+      { src: 'theth.jpg', ko: '알바니아 알프스 테스 계곡', en: 'Theth Valley, Albanian Alps', author: 'Tom.whitehead337', license: 'CC BY-SA 4.0', file: 'Theth Valley, June 2024.jpg' }] },
+    'north-macedonia': { title: 'North Macedonia', shots: [
+      { src: 'ohrid.jpg', ko: '오흐리드 호수 카네오 성 요한 교회', en: 'St. John at Kaneo, Lake Ohrid', author: 'kallerna', license: 'CC BY-SA 4.0', file: 'Church of St. John at Kaneo 6.jpg' },
+      { src: 'matka.jpg', ko: '마트카 협곡', en: 'Matka Canyon', author: 'kallerna', license: 'CC BY-SA 4.0', file: 'Matka Canyon Skopje 3.jpg' },
+      { src: 'skopje.jpg', ko: '스코페 마케도니아 광장', en: 'Macedonia Square, Skopje', author: 'kallerna', license: 'CC BY-SA 4.0', file: 'Stone Bridge Skopje 4.jpg' },
+      { src: 'heraclea.jpg', ko: '헤라클레아 링케스티스 고대 극장', en: 'Theatre of Heraclea Lyncestis', author: 'Petar Milošević', license: 'CC BY-SA 4.0', file: 'Theatre in Heraclea Lyncestis, Bitola.jpg' }] },
+    kosovo: { title: 'Kosovo', shots: [
+      { src: 'prizren.jpg', ko: '프리즈렌 구시가지', en: 'Prizren', author: 'Janusz Recław', license: 'CC BY-SA 4.0', file: 'Prizren panorama.jpg' },
+      { src: 'decani.jpg', ko: '비소키 데차니 수도원', en: 'Visoki Dečani Monastery', author: 'Julian Nyča', license: 'CC BY-SA 4.0', file: 'Visoki Dečani, exterior view (Julian Nyča).jpg' },
+      { src: 'rugova.jpg', ko: '루고바 협곡', en: 'Rugova Canyon', author: 'Ardianlumi', license: 'CC BY-SA 3.0', file: 'Rugova Canyon.jpg' },
+      { src: 'library.jpg', ko: '프리슈티나 국립도서관', en: 'National Library of Kosovo, Prishtina', author: 'Arben Llapashtica', license: 'CC BY-SA 4.0', file: 'National Library of Kosovo photo Arben Llapashtica.jpg' }] }
   };
   const LICENSE_URL = { 'CC0': 'https://creativecommons.org/publicdomain/zero/1.0/', 'CC BY 2.0': 'https://creativecommons.org/licenses/by/2.0/', 'CC BY 3.0': 'https://creativecommons.org/licenses/by/3.0/',
+    'CC BY 4.0': 'https://creativecommons.org/licenses/by/4.0/',
     'CC BY-SA 2.0': 'https://creativecommons.org/licenses/by-sa/2.0/',
     'CC BY-SA 3.0': 'https://creativecommons.org/licenses/by-sa/3.0/', 'CC BY-SA 3.0 ee': 'https://creativecommons.org/licenses/by-sa/3.0/ee/', 'CC BY-SA 4.0': 'https://creativecommons.org/licenses/by-sa/4.0/',
     'FAL': 'https://artlibre.org/licence/lal/en/' };  function reelHtml(c) {
