@@ -499,23 +499,31 @@ a.cc .cc-state { color: #fff; background: var(--rc); padding: 3px 10px; border-r
 .hero-map .hero-copy .h-glow { background-image:linear-gradient(180deg,#e6ebf3 15%,#91b4d8 100%); filter:drop-shadow(0 0 12px rgba(90,160,255,.18)); }
 .hero-map .hero-copy p { color:#b4c3d9; }
 
-/* ---------- 국가 첫 화면: 명소 영상(사진 교차 전환 + 천천히 확대) ----------
- * 한 장면 1.8초, 3장면이면 5.4초마다 반복. 각 장면은 0.6초에 걸쳐 나타나고 사라진다.
- * 음수 지연을 줘서 첫 화면부터 첫 장면이 보이게 한다. */
+/* ---------- 국가 첫 화면: 명소 영상(사진 교차 전환 + 천천히 확대) ---------- */
 .reel { margin: 0; }
 .reel-stage { position: relative; aspect-ratio: 4 / 3; border-radius: 18px; overflow: hidden; background: #071331;
   box-shadow: 0 0 0 1px rgba(130, 185, 255, .3), 0 30px 60px -20px rgba(0, 0, 0, .6), 0 0 60px rgba(60, 130, 255, .18); }
 .reel-shot::after { content: ""; position: absolute; inset: 0; z-index: 1; pointer-events: none;
   background: linear-gradient(180deg, transparent 45%, rgba(4, 10, 28, .78) 100%); }
-/* 4장면 × 1.75초 = 7초 반복. 장면마다 0.7초 겹쳐 교차 전환하고, 위치 이동 없이 1.00→1.08배로 일정하게 천천히 확대한다.
+/* 4장면 9.5초 반복: 첫 장면 3.5초, 나머지 2초씩. 장면마다 0.7초 겹쳐 교차 전환하고, 위치 이동 없이 1.00→1.08배로 일정하게 천천히 확대한다.
+ * 첫 장면은 0초에 이미 완전히 보이는 상태로 시작하고(반복 끝 0.7초 동안 다시 나타남), 첫 사진을 받기 전까지는 멈춰 둔다(.is-loading).
+ * 구간 경계(초): 2.8·3.5 / 4.8·5.5 / 6.8·7.5 / 8.8·9.5 → 29.47·36.84 / 50.53·57.89 / 71.58·78.95 / 92.63·100%.
  * transform은 GPU 합성(translate3d·will-change)으로 그려 픽셀 단위로 끊기는 흔들림이 생기지 않게 한다. */
-.reel-shot { position: absolute; inset: 0; opacity: 0; will-change: opacity;
-  animation: reel-fade 7s linear infinite; animation-delay: calc(var(--i) * 1.75s - .7s); }
+.reel-shot { position: absolute; inset: 0; opacity: 0; will-change: opacity; animation: 9.5s linear infinite; }
 .reel-shot img { width: 100%; height: 100%; object-fit: cover; display: block; transform-origin: 50% 50%;
-  will-change: transform; backface-visibility: hidden; transform: translate3d(0, 0, 0) scale(1);
-  animation: reel-zoom 7s linear infinite; animation-delay: inherit; }
-@keyframes reel-fade { 0% { opacity: 0; } 10% { opacity: 1; } 35% { opacity: 1; } 45% { opacity: 0; } 100% { opacity: 0; } }
-@keyframes reel-zoom { 0% { transform: translate3d(0, 0, 0) scale(1); } 45% { transform: translate3d(0, 0, 0) scale(1.08); } 100% { transform: translate3d(0, 0, 0) scale(1.08); } }
+  will-change: transform; backface-visibility: hidden; transform: translate3d(0, 0, 0) scale(1); animation: 9.5s linear infinite; }
+.reel-shot:nth-child(1) { animation-name: reel-fade-1; } .reel-shot:nth-child(1) img { animation-name: reel-zoom-1; }
+.reel-shot:nth-child(2) { animation-name: reel-fade-2; } .reel-shot:nth-child(2) img { animation-name: reel-zoom-2; }
+.reel-shot:nth-child(3) { animation-name: reel-fade-3; } .reel-shot:nth-child(3) img { animation-name: reel-zoom-3; }
+.reel-shot:nth-child(4) { animation-name: reel-fade-4; } .reel-shot:nth-child(4) img { animation-name: reel-zoom-4; }
+@keyframes reel-fade-1 { 0%, 29.47% { opacity: 1; } 36.84%, 92.63% { opacity: 0; } 100% { opacity: 1; } }
+@keyframes reel-fade-2 { 0%, 29.47% { opacity: 0; } 36.84%, 50.53% { opacity: 1; } 57.89%, 100% { opacity: 0; } }
+@keyframes reel-fade-3 { 0%, 50.53% { opacity: 0; } 57.89%, 71.58% { opacity: 1; } 78.95%, 100% { opacity: 0; } }
+@keyframes reel-fade-4 { 0%, 71.58% { opacity: 0; } 78.95%, 92.63% { opacity: 1; } 100% { opacity: 0; } }
+@keyframes reel-zoom-1 { 0% { transform: translate3d(0, 0, 0) scale(1); } 36.84%, 50% { transform: translate3d(0, 0, 0) scale(1.08); } 50.01%, 100% { transform: translate3d(0, 0, 0) scale(1); } }
+@keyframes reel-zoom-2 { 0%, 29.47% { transform: translate3d(0, 0, 0) scale(1); } 57.89%, 100% { transform: translate3d(0, 0, 0) scale(1.08); } }
+@keyframes reel-zoom-3 { 0%, 50.53% { transform: translate3d(0, 0, 0) scale(1); } 78.95%, 100% { transform: translate3d(0, 0, 0) scale(1.08); } }
+@keyframes reel-zoom-4 { 0%, 71.58% { transform: translate3d(0, 0, 0) scale(1); } 100% { transform: translate3d(0, 0, 0) scale(1.08); } }
 .reel-cap { position: absolute; z-index: 2; left: 22px; bottom: 18px; display: flex; align-items: baseline; gap: 8px;
   color: #fff; font-size: 14px; font-weight: 500; text-shadow: 0 1px 8px rgba(0, 0, 0, .6); }
 .reel-cap span { font: italic 400 13px/1.2 var(--display); color: #c9dcf5; }
@@ -528,7 +536,8 @@ a.cc .cc-state { color: #fff; background: var(--rc); padding: 3px 10px; border-r
 .reel-toggle:hover { background: rgba(4, 10, 28, .7); }
 .reel-toggle span { width: 10px; height: 12px; border-left: 3px solid #fff; border-right: 3px solid #fff; }
 .reel.is-paused .reel-toggle span { width: 0; height: 0; border: 0; border-left: 11px solid #fff; border-top: 7px solid transparent; border-bottom: 7px solid transparent; margin-left: 3px; }
-.reel.is-paused .reel-shot, .reel.is-paused .reel-shot img { animation-play-state: paused; }
+.reel.is-paused .reel-shot, .reel.is-paused .reel-shot img,
+.reel.is-loading .reel-shot, .reel.is-loading .reel-shot img { animation-play-state: paused; }
 .reel-credit { margin-top: 10px; font-size: 11.5px; line-height: 1.6; color: #7f97c0; }
 .reel-credit a { color: #a9c2e6; }
 @media (max-width: 960px) { .reel { max-width: 560px; } }

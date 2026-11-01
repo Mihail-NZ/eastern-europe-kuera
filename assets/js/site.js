@@ -681,33 +681,32 @@ ${window.REPORTS ? `<section class="home-reports wrap" aria-labelledby="reports-
     ];
   }
 
-  /* 국가 첫 화면의 명소 영상(사진 3장을 천천히 확대하며 교차 전환하는 5초 남짓의 반복 클립).
-   * 사진: Wikimedia Commons, 2026-10-18 내려받아 960px로 줄임. CC 라이선스 조건에 따라 작가·라이선스를 클립 아래에 표시한다. */
-  /* 국가 첫 화면의 명소 영상: 사진 4장을 7초 동안 천천히 확대하며 교차 전환하는 반복 클립(CSS 애니메이션).
+  /* 국가 첫 화면의 명소 영상: 사진 4장을 천천히 확대하며 교차 전환하는 반복 클립(CSS 애니메이션, 첫 장면 3.5초·나머지 2초).
+   * 한 나라 안에서 요새·성·구시가지처럼 같은 종류의 명소는 한 장면만 넣는다.
    * 동영상 파일로 만들면 확대할 때 픽셀 단위로 끊겨 흔들려 보여서, 8개국 모두 브라우저가 부드럽게 그리는 이 방식으로 통일했다.
    * 사진: Wikimedia Commons(2026-10-18~21, 사용자 승인 후 내려받음). 작가·라이선스를 클립 아래에 표시한다.
    * pos: 4:3 칸에 잘려 들어갈 때 사진의 중심(object-position과 확대 중심) */
   const REEL = {
     poland: { title: 'Poland', shots: [
       { src: 'warsaw-castle-square.jpg', ko: '바르샤바 왕궁광장', en: 'Castle Square, Warsaw', author: 'Rhododendrites', license: 'CC BY-SA 4.0', file: 'Castle_Square_(22346p).jpg' },
-      { src: 'malbork.jpg', ko: '말보르크 성', en: 'Malbork Castle', author: 'DerHexer; derivative: Carschten', license: 'CC BY-SA 3.0', file: 'Panorama_of_Malbork_Castle,_part_4.jpg' },
+      { src: 'wieliczka.jpg', ko: '비엘리치카 소금광산 킹가 예배당', en: "St. Kinga's Chapel, Wieliczka Salt Mine", author: 'Андрей Романенко', license: 'CC BY-SA 4.0', file: 'Saint Kinga Chapel in Wieliczka Salt Mine.jpg' },
       { src: 'morskie-oko-winter.jpg', ko: '겨울의 모르스키에 오코', en: 'Morskie Oko in winter, Tatras', author: 'kallerna', license: 'CC BY-SA 4.0', file: 'Frozen_Morskie_Oko_2019.jpg' },
       { src: 'wawel-night.jpg', ko: '크라쿠프 바벨성 야경', en: 'Wawel Castle by night, Kraków', author: 'Michał Bulsa', license: 'CC0', file: 'Wawel_by_night_(03).jpg' }] },
     czechia: { title: 'Czech Republic', shots: [
       { src: 'prague-castle-night.jpg', ko: '프라하성과 카를교', en: 'Prague Castle & Charles Bridge', author: 'Diego Delso', license: 'CC BY-SA 4.0', file: 'Castillo_de_Praga_y_puente_Carlos,_Praga,_República_Checa,_2022-07-01,_DD_14-16_HDR.jpg', pos: '30% 60%' },
-      { src: 'old-town.jpg', ko: '프라하 구시가지', en: 'Old Town, Prague', author: 'A.Savin', license: 'FAL', file: 'Prague_07-2016_View_from_Old_Town_Hall_Tower_img3.jpg' },
+      { src: 'sedlec.jpg', ko: '쿠트나호라 세들레츠 해골 성당', en: 'Sedlec Ossuary, Kutná Hora', author: 'BrokenSphere', license: 'CC BY-SA 3.0', file: 'Sedlec Ossuary chandelier.JPG' },
       { src: 'pravcicka-brana.jpg', ko: '프라우치츠카 브라나', en: 'Pravčická brána, Bohemian Switzerland', author: 'Pudelek', license: 'CC BY-SA 4.0', file: 'Pravčická_brána_(Prebischtor)_-_by_Pudelek.jpg' },
       { src: 'cesky-krumlov-castle.jpg', ko: '체스키크룸로프', en: 'Český Krumlov', author: 'Scotch Mist', license: 'CC BY-SA 4.0', file: 'Cesky_Krumlov_25.JPG' }] },
     hungary: { title: 'Hungary', shots: [
       { src: 'parliament.jpg', ko: '도나우강과 국회의사당', en: 'Parliament on the Danube', author: 'Florian Fèvre', license: 'CC BY-SA 4.0', file: 'Danube_and_Hungarian_Parliament_Building_by_night.jpg' },
-      { src: 'fishermans-bastion.jpg', ko: '어부의 요새', en: "Fisherman's Bastion, Budapest", author: 'Ermell', license: 'CC BY-SA 4.0', file: "Budapest_Fisherman's_Bastion-20080321-RM-120519.jpg" },
+      { src: 'balaton.jpg', ko: '발라톤 호수 티하니 반도', en: 'Tihany Peninsula, Lake Balaton', author: 'Civertan', license: 'CC BY-SA 4.0', file: 'A Tihanyi-félsziget látképe madártávlatból.jpg' },
       { src: 'szechenyi-baths.jpg', ko: '세체니 온천', en: 'Széchenyi Baths', author: 'Marc Ryckaert (MJJR)', license: 'CC BY 3.0', file: 'Budapest_Széchenyi_Baths_R01.jpg' },
       { src: 'tokaj.jpg', ko: '토카이 와인 산지', en: 'Tokaj wine region', author: 'Civertan', license: 'CC BY-SA 3.0', file: 'Tokajcivertanlegi1.jpg' }] },
     slovakia: { title: 'Slovakia', shots: [
       { src: 'strbske-pleso.jpg', ko: '하이 타트라 슈트르브스케 플레소', en: 'Štrbské pleso, High Tatras', author: 'Adrian Tync', license: 'CC BY-SA 4.0', file: 'Štrbské_pleso_&_Hotel_Patria_2022.jpg' },
       { src: 'spis-castle.jpg', ko: '스피시 성', en: 'Spiš Castle', author: 'Govisity / Tip na Trip / kosice.guide', license: 'CC BY 2.0', file: 'Spis_Castle.jpg' },
-      { src: 'bojnice.jpg', ko: '보이니체 성', en: 'Bojnice Castle', author: 'User:Gaja', license: 'CC BY-SA 4.0', file: 'Bojnice_castle.jpg' },
-      { src: 'orava-castle.jpg', ko: '오라바 성', en: 'Orava Castle', author: 'Lynx1211', license: 'CC BY-SA 4.0', file: 'Oravský_hrad_(celkový_pohled).jpg' }] },
+      { src: 'bratislava.jpg', ko: '브라티슬라바 구시가지 중앙광장', en: 'Main Square, Bratislava', author: 'Pudelek (Marcin Szala)', license: 'CC BY-SA 3.0', file: 'Bratislava - Hlavné námestie (radnica).jpg' },
+      { src: 'slovak-paradise.jpg', ko: '슬로바키아 파라다이스 협곡 사다리길', en: 'Piecky gorge, Slovak Paradise', author: 'Rudolphs no uno', license: 'CC0', file: 'Slovensky raj Piecky4.jpg' }] },
     slovenia: { title: 'Slovenia', shots: [
       { src: 'bled.jpg', ko: '블레드 호수', en: 'Lake Bled', author: 'Martin McBrien', license: 'CC BY-SA 3.0', file: 'Lake_Bled_view.jpg' },
       { src: 'soca.jpg', ko: '소차강 계곡', en: 'Soča River valley', author: 'MarcusObal', license: 'CC BY-SA 3.0', file: 'Soča_River_Panorama.jpg' },
@@ -720,7 +719,7 @@ ${window.REPORTS ? `<section class="home-reports wrap" aria-labelledby="reports-
       { src: 'hill-crosses.jpg', ko: '십자가 언덕', en: 'Hill of Crosses', author: 'Alet123', license: 'CC BY-SA 4.0', file: 'Hill_of_crosses_in_Lithuania.jpg' }] },
     latvia: { title: 'Latvia', shots: [
       { src: 'riga-aerial.jpg', ko: '리가 구시가지', en: 'Riga Old Town', author: 'Diego Delso', license: 'CC BY-SA 3.0', file: 'Vistas_desde_la_iglesia_de_San_Pedro,_Riga,_Letonia,_2012-08-07,_DD_12.JPG' },
-      { src: 'blackheads.jpg', ko: '검은머리전당', en: 'House of the Blackheads, Riga', author: 'Geogrfr3ak', license: 'CC0', file: 'House_of_the_Blackheads_in_Riga.jpg' },
+      { src: 'venta-rapid.jpg', ko: '쿨디가 벤타 폭포', en: 'Venta Rapid, Kuldīga', author: 'Ymblanter', license: 'CC BY-SA 4.0', file: 'Venta Rapid from the left bank.jpg' },
       { src: 'rundale.jpg', ko: '룬달레 궁전', en: 'Rundāle Palace', author: 'Scotch Mist', license: 'CC BY-SA 4.0', file: 'Rundāle_Palace_27.jpg' },
       { src: 'turaida.jpg', ko: '시굴다 투라이다 성', en: 'Turaida Castle, Sigulda', author: 'Pudelek (Marcin Szala)', license: 'CC BY-SA 3.0', file: 'Turaida_Castle.JPG' }] },
     estonia: { title: 'Estonia', shots: [
@@ -732,31 +731,32 @@ ${window.REPORTS ? `<section class="home-reports wrap" aria-labelledby="reports-
       { src: 'dubrovnik.jpg', ko: '두브로브니크 구시가지', en: 'Old Town of Dubrovnik', author: 'Akira Takiguchi', license: 'CC BY 2.0', file: 'Aerial view of the Old Town of Dubrovnik - Croatia.jpg' },
       { src: 'plitvice.jpg', ko: '플리트비체 호수 국립공원', en: 'Plitvice Lakes National Park', author: 'OrionCro', license: 'CC BY-SA 4.0', file: 'Waterfalls at Plitvice Lakes.jpg' },
       { src: 'split.jpg', ko: '스플리트 디오클레티아누스 궁전', en: "Diocletian's Palace, Split", author: 'Bernard Gagnon', license: 'CC BY-SA 4.0', file: "View of Diocletian's Palace, Split 01.jpg" },
-      { src: 'rovinj.jpg', ko: '로비니 구시가지', en: 'Rovinj, Istria', author: 'Giacomo Alessandroni', license: 'CC BY-SA 4.0', file: 'Rovinj seen from the sea.jpg' }] },
+      { src: 'zlatni-rat.jpg', ko: '브라치섬 즐라트니 라트 해변', en: 'Zlatni Rat beach, Brač', author: 'Marin0110', license: 'CC BY-SA 4.0', file: 'Zlatni rat beach seen from Vidova gora mountain.jpg' }] },
     bulgaria: { title: 'Bulgaria', shots: [
       { src: 'rila.jpg', ko: '릴라 수도원', en: 'Rila Monastery', author: 'King of Rona', license: 'CC BY-SA 4.0', file: 'Rila Monastery 17.jpg' },
-      { src: 'alexander-nevsky.jpg', ko: '소피아 알렉산드르 넵스키 대성당', en: 'Alexander Nevsky Cathedral, Sofia', author: 'Pudelek (Marcin Szala)', license: 'CC BY-SA 3.0', file: 'Alexander Nevsky Cathedral, Sofia (by Pudelek).JPG' },
+      { src: 'rila-lakes.jpg', ko: '릴라 7호수', en: 'Seven Rila Lakes', author: 'Untravelled', license: 'CC BY-SA 4.0', file: 'Rila Lakes.jpg' },
       { src: 'plovdiv.jpg', ko: '플로브디프 로마 극장', en: 'Roman Theatre, Plovdiv', author: 'Ymblanter', license: 'CC BY-SA 4.0', file: 'Roman Theatre Philippopolis.jpg' },
       { src: 'nessebar.jpg', ko: '네세버르 구시가지', en: 'Old Nessebar', author: 'Hristina Bumbarova', license: 'CC BY-SA 4.0', file: 'Nessebar, Old town 3.jpg' }] },
     serbia: { title: 'Serbia', shots: [
       { src: 'belgrade-fortress.jpg', ko: '베오그라드 칼레메그단 요새', en: 'Belgrade Fortress, Kalemegdan', author: 'Zcvetkovic', license: 'CC BY-SA 4.0', file: 'Belgrade Fortress Kalemegdan-9878.NEF.jpg' },
       { src: 'saint-sava.jpg', ko: '성 사바 성당', en: 'Church of Saint Sava, Belgrade', author: 'Petar Milošević', license: 'CC BY-SA 4.0', file: 'Church of Saint Sava (Belgrade, Serbia).jpg' },
-      { src: 'petrovaradin.jpg', ko: '노비사드 페트로바라딘 요새', en: 'Petrovaradin Fortress, Novi Sad', author: 'Zeljko511', license: 'CC BY-SA 4.0', file: 'Petrovaradin Fortress II, Novi Sad, Serbia 14.09.2016.jpg' },
-      { src: 'golubac.jpg', ko: '골루바츠 요새', en: 'Golubac Fortress, Danube', author: 'Miomir Magdevski', license: 'CC BY-SA 4.0', file: 'Fortress Golubac 06.jpg' }] },
+      { src: 'uvac.jpg', ko: '우바츠 협곡의 굽이치는 강', en: 'Uvac River meanders', author: 'Fabian Vendrig', license: 'CC BY-SA 4.0', file: 'Uvac rivier, Servië.jpg' },
+      { src: 'devils-town.jpg', ko: '악마의 도시 돌기둥', en: "Đavolja Varoš (Devil's Town)", author: 'Dimo Dimov', license: 'CC BY-SA 2.0', file: 'Đavolja Varoš.jpg' }] },
     'bosnia-herzegovina': { title: 'Bosnia and Herzegovina', shots: [
       { src: 'mostar.jpg', ko: '모스타르 스타리 모스트', en: 'Stari Most, Mostar', author: 'Berthold Werner', license: 'CC BY-SA 4.0', file: 'Mostar Stari Most BW 2024-10-01 12-58-38.jpg' },
-      { src: 'bascarsija.jpg', ko: '사라예보 바슈카르시야', en: 'Baščaršija, Sarajevo', author: 'Niegodzisie', license: 'CC BY-SA 4.0', file: '2023.01.22 Baščaršija.jpg' },
+      { src: 'blagaj.jpg', ko: '블라가이 테케(부나강 수원)', en: 'Blagaj Tekke, Buna spring', author: 'Julian Nyča', license: 'CC BY-SA 3.0', file: 'Blagaj – Vrelo Bune 3.jpg' },
       { src: 'kravica.jpg', ko: '크라비차 폭포', en: 'Kravica Waterfall', author: 'old_s', license: 'CC0', file: 'Kravica waterfall july 2012.jpg' },
-      { src: 'pocitelj.jpg', ko: '포치텔리 요새 마을', en: 'Počitelj', author: 'Richard Mortel', license: 'CC BY 2.0', file: 'Pocitelj, Herzegovina; fort, 15th century and after (6) (29814165736).jpg' }] }
+      { src: 'trebevic.jpg', ko: '트레베비치 1984 올림픽 봅슬레이 트랙', en: 'Trebević 1984 Olympic bobsleigh track', author: 'spacebirdy', license: 'CC BY-SA 3.0', file: 'Olympische Bobbahn von 1984 - Trebević - 03.jpg' }] }
   };
   const LICENSE_URL = { 'CC0': 'https://creativecommons.org/publicdomain/zero/1.0/', 'CC BY 2.0': 'https://creativecommons.org/licenses/by/2.0/', 'CC BY 3.0': 'https://creativecommons.org/licenses/by/3.0/',
+    'CC BY-SA 2.0': 'https://creativecommons.org/licenses/by-sa/2.0/',
     'CC BY-SA 3.0': 'https://creativecommons.org/licenses/by-sa/3.0/', 'CC BY-SA 3.0 ee': 'https://creativecommons.org/licenses/by-sa/3.0/ee/', 'CC BY-SA 4.0': 'https://creativecommons.org/licenses/by-sa/4.0/',
     'FAL': 'https://artlibre.org/licence/lal/en/' };  function reelHtml(c) {
     const r = REEL[c.slug];
     if (!r) return '';
-    return `<figure class="reel" style="--shots:${r.shots.length}">
+    return `<figure class="reel is-loading">
   <div class="reel-stage">
-    ${r.shots.map((s, i) => `<div class="reel-shot" style="--i:${i}">
+    ${r.shots.map(s => `<div class="reel-shot">
       <img src="${ROOT}assets/images/landmarks/${c.slug}/${s.src}" alt="${esc(s.ko)}" decoding="async"${s.pos ? ` style="object-position:${s.pos};transform-origin:${s.pos}"` : ''}>
       <span class="reel-cap">${esc(s.ko)}<span lang="und">${esc(s.en)}</span></span>
     </div>`).join('')}
@@ -875,6 +875,10 @@ ${stories.length ? `<section class="hub-news wrap" aria-labelledby="hub-news-tit
         video.addEventListener('error', () => { btn.hidden = true; });
         video.querySelector('source').addEventListener('error', () => { btn.hidden = true; });
       } else {
+        // 첫 사진이 그려진 뒤에 재생을 시작해야 첫 장면이 온전히 보인다(느린 연결에서도 최대 4초 뒤에는 시작)
+        const first = reel.querySelector('.reel-shot img');
+        const start = () => reel.classList.remove('is-loading');
+        if (first.complete) start(); else { first.addEventListener('load', start); first.addEventListener('error', start); setTimeout(start, 4000); }
         btn.addEventListener('click', () => {
           const paused = reel.classList.toggle('is-paused');
           btn.setAttribute('aria-pressed', paused);
