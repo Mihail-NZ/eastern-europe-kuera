@@ -1,6 +1,251 @@
 /* 원본: 동유럽 웹사이트/news-data/*.json (최신순, tools/build-news.ps1로 생성) */
 window.NEWS_DATA=[
     {
+        "date":  "2026-11-01",
+        "home":  [
+                     0,
+                     1,
+                     2
+                 ],
+        "overview":  "러시아가 우크라이나 에너지 시설을 계속 공격해 수십만 가구가 정전을 겪었고, 미국은 우크라이나에 21억 달러 규모 패트리엇 판매를 승인했습니다. 폴란드에서는 대통령과 판사들의 헌법재판소 충돌에 EU 집행위가 정부 편을 들었고, 미국이 발트 3국에 대러 발언 수위를 낮추라고 압박했다는 보도가 나왔습니다. 불가리아는 11월 1일 대선 결선 투표를 치르고 있으며 결과는 아직 확인되지 않았습니다. 보스니아에서는 유엔 안보리가 EUFOR 임무를 연장했습니다.",
+        "stories":  [
+                        {
+                            "region":  "top",
+                            "title":  "러시아, 우크라이나 에너지 시설 연이어 공격…미국, 21억 달러 패트리엇 판매 승인",
+                            "countries":  [
+                                              "우크라이나"
+                                          ],
+                            "period":  "2026-10-30 ~ 11-01",
+                            "points":  [
+                                           "키이우인디펜던트에 따르면 11월 1일 기준 지난 24시간 동안 러시아 공격으로 1명이 숨지고 47명이 다쳤으며, 최소 4개 지역의 에너지 시설이 타격받아 수십만 가구가 전기를 쓰지 못했습니다. 에너지 기업 DTEK 직원 3명도 다쳤습니다.",
+                                           "10월 31일에는 5명이 숨지고 최소 46명이 다쳤으며, 공군은 드론 134기 중 105기를 격추했다고 밝혔습니다. 러시아가 9월 이후 우크라이나 에너지 시설 800곳 넘게 손상시켰다는 보도도 있었습니다.",
+                                           "10월 30일 미국이 우크라이나에 21억 달러 규모 패트리엇 미사일 판매를 승인했으나, 젤렌스키 대통령은 인도까지 수년이 걸릴 수 있다고 경고했습니다.",
+                                           "10월 31일 젤렌스키 대통령은 이스탄불에서 에르도안 대통령과 회담했고, 에르도안은 흑해 선박 공격이 용납될 수 없다고 말했습니다. 루비오 미 국무장관은 협상에 의한 평화가 가능한지 모르겠다고 말했습니다."
+                                       ],
+                            "why":  "겨울을 앞두고 에너지 시설 피해가 누적되는 가운데 방공 무기 인도 지연과 협상 불확실성이 겹쳐 있습니다. 패트리엇 인도 일정과 흑해 안전 논의가 다음 확인 지점입니다.",
+                            "korea":  "전력·철도 등 인프라 피해가 길어지면 현지 사업 운영의 불확실성과 함께 장기적인 재건·에너지 설비 수요가 커질 수 있습니다.",
+                            "sources":  [
+                                            {
+                                                "name":  "Kyiv Independent – Russian attacks kill 1, injure 47 over past day, leaving hundreds of thousands without electricity",
+                                                "url":  "https://kyivindependent.com/russian-attacks-kill-1-injure-47-over-past-day-leaving-hundreds-of-thousands-without-electricity/",
+                                                "lang":  "EN"
+                                            },
+                                            {
+                                                "name":  "Kyiv Independent – US approves $2.1 billion Patriot missile sale to Ukraine",
+                                                "url":  "https://kyivindependent.com/us-approves-2-1-billion-patriot-missile-sale-to-ukraine-as-nato-commander-dismisses-delivery-concerns/",
+                                                "lang":  "EN"
+                                            },
+                                            {
+                                                "name":  "Kyiv Independent – Erdogan calls Black Sea ship attacks unacceptable after substantive Zelensky talks",
+                                                "url":  "https://kyivindependent.com/zelensky-arrives-in-istanbul-for-important-talks-with-turkeys-erdogan/",
+                                                "lang":  "EN"
+                                            }
+                                        ]
+                        },
+                        {
+                            "region":  "v4",
+                            "title":  "폴란드 대통령, 헌법재판소 문 앞에서 판사들과 물리적 충돌…EU 집행위는 정부 입장 지지",
+                            "countries":  [
+                                              "폴란드"
+                                          ],
+                            "period":  "2026-10-30 ~ 11-01",
+                            "points":  [
+                                           "Notes from Poland에 따르면 10월 31일 나브로츠키 대통령이 헌법재판소 권력 다툼 와중에 재판소 입구에서 판사들과 물리적으로 충돌했습니다. 구체적 경위는 본문을 확인하지 못했습니다.",
+                                           "키이우인디펜던트는 11월 1일 EU 집행위가 헌법재판소 신임 재판관 8명을 임명하는 것이 하원의 권한 범위 안에 있다고 밝혔다고 전했습니다.",
+                                           "10월 30일 폴란드는 재생에너지 사업 준비 기간을 3~4년에서 최단 1년으로 줄이는 첫 신속 허가 구역을 승인했습니다.",
+                                           "같은 날 좌파 정당은 성직자 사회보험료의 국가 지원을 끝내는 법안을 추진한다고 밝혔으나, 연정 파트너 PSL이 반대할 예정입니다."
+                                       ],
+                            "why":  "대통령과 정부의 헌법재판소 대립이 물리적 충돌로까지 번졌고 EU가 정부 쪽 해석을 내놓았습니다. 신임 재판관 임명의 효력과 대통령의 대응이 다음 쟁점입니다.",
+                            "korea":  "재생에너지 신속 허가 구역은 에너지·설비 분야 투자 환경에 영향을 줄 수 있습니다.",
+                            "sources":  [
+                                            {
+                                                "name":  "Notes from Poland – Polish president in physical confrontation with judges amid power struggle at constitutional court",
+                                                "url":  "https://notesfrompoland.com/2026/10/31/polish-president-in-physical-confrontation-with-judges-amid-power-struggle-at-constitutional-court/",
+                                                "lang":  "EN"
+                                            },
+                                            {
+                                                "name":  "Kyiv Independent – EU Commission backs Poland government over constitutional court crisis",
+                                                "url":  "https://kyivindependent.com/eu-commission-backs-poland-government-over-constitutional-court-crisis/",
+                                                "lang":  "EN"
+                                            },
+                                            {
+                                                "name":  "Notes from Poland – Poland approves first fast-track renewable energy zones",
+                                                "url":  "https://notesfrompoland.com/2026/10/30/poland-approves-first-fast-track-renewable-energy-zones/",
+                                                "lang":  "EN"
+                                            }
+                                        ]
+                        },
+                        {
+                            "region":  "baltic",
+                            "title":  "미국, 발트 3국에 대러 발언 수위 낮추라 압박 보도…에스토니아 총리 “침묵하지 않겠다”",
+                            "countries":  [
+                                              "에스토니아",
+                                              "라트비아",
+                                              "리투아니아"
+                                          ],
+                            "period":  "2026-10-30 ~ 11-01",
+                            "points":  [
+                                           "LRT는 펜타곤이 발트 국가들에 러시아에 대한 수사를 낮추라고 촉구했다고 언론이 보도했다고 전했고, LSM도 미국이 발트 국가들에 압박을 가했다는 보도를 실었습니다.",
+                                           "ERR에 따르면 미칼 에스토니아 총리는 러시아에 대해 침묵하지 않겠다고 밝혔습니다. 정치 매체 보도를 인용한 LRT는 미국이 리투아니아에 벨라루스산 칼륨 수출을 위한 항만 재개방도 압박하고 있다고 전했습니다.",
+                                           "LRT는 리투아니아 경제가 3분기에 1% 위축됐다고 보도했고, 대학이 총리 박사논문에서 표절을 확인해 6개월 안에 수정하라고 했다고 전했습니다.",
+                                           "LSM은 에스토니아 기업이 라트비아 최대 유제품 기업 카룸스를 인수하는 거래가 마무리됐다고 전했습니다."
+                                       ],
+                            "why":  "발트 국가들의 안보 노선과 미국의 압박이 충돌하는 양상입니다. 다만 압박 내용은 언론 보도에 근거하며 미국 측 공식 확인 여부는 확인하지 못했습니다.",
+                            "korea":  "",
+                            "sources":  [
+                                            {
+                                                "name":  "LRT – Pentagon urges Baltic states to tone down rhetoric on Russia – media",
+                                                "url":  "https://www.lrt.lt/en/news-in-english/19/3098101/pentagon-urges-baltic-states-to-tone-down-rhetoric-on-russia-media",
+                                                "lang":  "EN"
+                                            },
+                                            {
+                                                "name":  "LSM – Report: U.S. pressures Baltics not to say nasty things about Russia",
+                                                "url":  "https://eng.lsm.lv/article/politics/diplomacy/30.10.2026-report-us-pressures-baltics-not-to-say-nasty-things-about-russia.a669926/",
+                                                "lang":  "EN"
+                                            },
+                                            {
+                                                "name":  "ERR – Prime minister: I will not remain silent about Russia",
+                                                "url":  "https://news.err.ee/1610182324/prime-minister-i-will-not-remain-silent-about-russia",
+                                                "lang":  "EN"
+                                            },
+                                            {
+                                                "name":  "LRT – Lithuania\u0027s economy contracts 1% in third quarter",
+                                                "url":  "https://www.lrt.lt/en/news-in-english/19/3098258/lithuania-s-economy-contracts-1-in-third-quarter-economists-warn-growth-is-slowing",
+                                                "lang":  "EN"
+                                            }
+                                        ]
+                        },
+                        {
+                            "region":  "wbalkan",
+                            "title":  "유엔 안보리, 보스니아 EUFOR 임무 연장…세르비아는 12월 27일까지 대선 공고",
+                            "countries":  [
+                                              "보스니아 헤르체고비나",
+                                              "세르비아"
+                                          ],
+                            "period":  "2026-10-30",
+                            "points":  [
+                                           "N1에 따르면 유엔 안보리가 만장일치로 EUFOR 알테아 임무 권한을 연장했습니다. 같은 날 안보리 토론에서 러시아는 OHR의 무조건 폐쇄를 요구했고 미국과 영국은 다른 입장을 밝혔습니다.",
+                                           "N1은 보스니아 검찰이 브르츠코 헬기 추락을 조사할 전문 팀 구성을 지시했다고 전했습니다. 이탈리아 국방장관은 부상자를 방문했습니다.",
+                                           "BTA에 따르면 브르나비치 세르비아 대통령 직무대행은 12월 27일까지 새 대선을 공고하겠다고 밝혔습니다.",
+                                           "발칸인사이트는 10월 30일 노비사드 역 지붕 붕괴 2주기를 맞아 16명 희생을 기렸다고 전했고, EWB는 학생 명부가 압승한 총선의 유권자 이동을 분석했습니다."
+                                       ],
+                            "why":  "EUFOR 임무가 유지되면서 헬기 사고 이후에도 보스니아 안정화 틀이 이어집니다. 세르비아는 총선 이후 대선 일정이 구체화되고 있습니다.",
+                            "korea":  "",
+                            "sources":  [
+                                            {
+                                                "name":  "N1 – UN Security Council unanimously extends EUFOR Althea mission mandate in BiH",
+                                                "url":  "https://n1info.ba/english/news/un-security-council-unanimously-extends-eufor-althea-mission-mandate-in-bih/",
+                                                "lang":  "EN"
+                                            },
+                                            {
+                                                "name":  "N1 – BiH Prosecutor\u0027s Office orders formation of specialized team to investigate Brcko helicopter crash",
+                                                "url":  "https://n1info.ba/english/news/bih-prosecutors-office-orders-formation-of-specialized-team-to-investigate-brcko-helicopter-crash/",
+                                                "lang":  "EN"
+                                            },
+                                            {
+                                                "name":  "BTA – Serbia\u0027s Acting President Ana Brnabic Says New Presidential Elections Will Be Called by December 27",
+                                                "url":  "https://www.bta.bg/en",
+                                                "lang":  "EN"
+                                            },
+                                            {
+                                                "name":  "European Western Balkans – Anatomy of a landslide: How Serbia\u0027s electorate shifted",
+                                                "url":  "https://europeanwesternbalkans.com/2026/10/30/anatomy-of-a-landslide-how-serbias-electorate-shifted/",
+                                                "lang":  "EN"
+                                            }
+                                        ]
+                        },
+                        {
+                            "region":  "sbalkan",
+                            "title":  "불가리아 대선 결선 투표 진행…11시 기준 투표율 6.11%, 결과는 미확인",
+                            "countries":  [
+                                              "불가리아"
+                                          ],
+                            "period":  "2026-10-30 ~ 11-01",
+                            "points":  [
+                                           "BTA에 따르면 11월 1일 결선 투표 11시 기준 투표율은 6.11%였습니다. 1차 투표는 기록적으로 낮은 투표율이었습니다.",
+                                           "라데프 총리는 투표 후 발언했고, 2027년 예산안이 며칠 안에 제출될 것이라고 밝혔습니다. 요토바 대통령도 투표 후 강하고 주권적인 불가리아를 위해 투표했다고 말했습니다.",
+                                           "BTA에 따르면 요토바 대통령은 10월 30일 흑해 연안 6개국과 안보 포럼을 열고 적대행위 중단을 추진하자고 제안했습니다. 불가리아는 저공 공중 위협에 대응하는 NATO 구상 참여도 추진합니다.",
+                                           "BTA는 10월 31일 필수 식품 가격이 안정되고 있다는 부총리 발언을 전했습니다."
+                                       ],
+                            "why":  "러시아 노선을 둘러싼 대립 속에 결선이 치러지고 있어 결과가 EU·흑해 안보 정책에 영향을 줄 수 있습니다. 기사 작성 시점에는 결과가 나오지 않았습니다.",
+                            "korea":  "",
+                            "sources":  [
+                                            {
+                                                "name":  "BTA – Presidential Runoff Turnout Stands at 6.11% as of 11:00",
+                                                "url":  "https://www.bta.bg/en/news/bulgaria/1237495-presidential-runoff-turnout-stands-at-6-11-as-of-11-00",
+                                                "lang":  "EN"
+                                            },
+                                            {
+                                                "name":  "BTA – President Iotova Proposes Black Sea Security Forum with Six Littoral States",
+                                                "url":  "https://www.bta.bg/en",
+                                                "lang":  "EN"
+                                            },
+                                            {
+                                                "name":  "Balkan Insight – Bulgaria\u0027s Presidential Race Heads to Runoff as Russia Divides the Two Candidates",
+                                                "url":  "https://balkaninsight.com/2026/10/30/bulgarias-presidential-race-heads-to-runoff-as-russia-divides-the-two-candidates/bi/",
+                                                "lang":  "EN"
+                                            }
+                                        ]
+                        },
+                        {
+                            "region":  "east",
+                            "title":  "올레시키 주민 대피 이어져…벨라루스에 착륙한 비행기 4대, 루마니아 여론은 비관적",
+                            "countries":  [
+                                              "벨라루스",
+                                              "루마니아"
+                                          ],
+                            "period":  "2026-10-30 ~ 31",
+                            "points":  [
+                                           "키이우인디펜던트에 따르면 10월 31일 러시아 점령지 올레시키에서 나온 대피민을 태운 비행기 4대가 벨라루스에 착륙했고, 대피민은 이후 우크라이나 통제 지역으로 이동했습니다. 한 자원봉사자는 러시아가 합의된 조건 밖으로 주민을 옮겼다고 주장했습니다.",
+                                           "RRI는 10월 30일 CURS 여론조사에서 다수의 루마니아인이 나라가 잘못된 방향으로 가고 있다고 본다고 전했습니다. 구체적 수치는 확인하지 못했습니다.",
+                                           "RRI는 겨울이 유럽 에너지 안보와 루마니아의 에너지 요금 부담에 중요한 시험대가 될 것이라는 보도도 실었습니다."
+                                       ],
+                            "why":  "대피 과정에 벨라루스가 경유지로 등장했으며 합의 이행에 대한 주장이 엇갈립니다. 루마니아는 여론 부담 속에 에너지 가격이 쟁점입니다.",
+                            "korea":  "",
+                            "sources":  [
+                                            {
+                                                "name":  "Kyiv Independent – Evacuees from occupied Oleshky en route after 4 planes land in Belarus",
+                                                "url":  "https://kyivindependent.com/oleshky-evacuation-begins-but-volunteer-claims-russia-already-moved-people-outside-of-agreed-terms/",
+                                                "lang":  "EN"
+                                            },
+                                            {
+                                                "name":  "RRI – The latest CURS Survey – A Sociological Mirror of Today",
+                                                "url":  "https://www.rri.ro/en/news-and-current-affairs/today-in-the-news/the-latest-curs-survey-a-sociological-mirror-of-today-id1077700.html",
+                                                "lang":  "EN"
+                                            },
+                                            {
+                                                "name":  "RRI – Concerns Regarding Energy Prices",
+                                                "url":  "https://www.rri.ro/en/news-and-current-affairs/today-in-the-news/concerns-regarding-energy-prices-id1077644.html",
+                                                "lang":  "EN"
+                                            }
+                                        ]
+                        }
+                    ],
+        "countries":  {
+                          "폴란드":  "대통령이 헌법재판소 앞에서 판사들과 물리적 충돌(10/31), EU 집행위는 신임 재판관 임명이 하원 권한이라며 정부 지지(11/1, Notes from Poland·Kyiv Independent).",
+                          "체코":  "바비시 총리가 TV·라디오 수신료를 자발 납부로 바꾸는 방안을 언급하되 1월 변경은 배제(11/1, Expats.cz, 제목 기준).",
+                          "슬로바키아":  "최근 48시간 내 주요 보도 확인되지 않음. 배경으로 지난주 슬로바키아 장관의 모스크바 방문이 언급됐음.",
+                          "헝가리":  "새 정부가 정치인의 스포츠 클럽 운영을 금지하는 법안으로 오르반 시절 후원 체계 해체 추진(10/30, 발칸인사이트).",
+                          "에스토니아":  "미칼 총리가 러시아에 침묵하지 않겠다고 발언, 대통령이 올리버 카스크를 법무수석 후보로 지명(10/31~11/1, ERR).",
+                          "라트비아":  "에스토니아 기업의 카룸스 인수 마무리, 미국의 발트 압박 보도, 리가 난방 요금 인상 예정(10/30, LSM).",
+                          "리투아니아":  "3분기 경제 1% 위축, 총리 박사논문 표절 판정, 미국의 벨라루스 칼륨 항만 재개방 압박 보도(10/30, LRT).",
+                          "슬로베니아":  "최근 48시간 내 주요 보도 확인되지 않음. Sloveniatimes는 접속 오류로 읽지 못했음.",
+                          "크로아티아":  "고속도로 초고속 전기차 충전소 가동(10/30), 사이트 목록에 슬로베니아의 국경 수력발전소 계획에 크로아티아가 반대한다는 기사가 있으나 날짜 미확인(Total Croatia News).",
+                          "세르비아":  "브르나비치 대통령 직무대행이 12월 27일까지 대선 공고 예정, 노비사드 역 붕괴 2주기(10/30, BTA·발칸인사이트).",
+                          "보스니아 헤르체고비나":  "유엔 안보리가 EUFOR 알테아 임무를 만장일치 연장, 검찰이 헬기 추락 조사팀 구성 지시(10/30, N1).",
+                          "몬테네그로":  "최근 48시간 내 주요 보도 확인되지 않음. 배경으로 스파이치 총리가 세르비아와 새 시대를 언급(10/29, EWB).",
+                          "코소보":  "최근 48시간 내 주요 보도 확인되지 않음. 배경으로 여성 살해 사건 이후 검사와 경찰관 직무 정지(10/29).",
+                          "알바니아":  "최근 48시간 내 주요 보도 확인되지 않음. 배경으로 시위 현장 경찰 보너스 논란(10/29).",
+                          "북마케도니아":  "최근 48시간 내 주요 보도 확인되지 않음. 배경으로 마르타 코스 집행위원이 11월 4일 2026 확대 패키지 발표 예정(EWB 10/30).",
+                          "불가리아":  "대선 결선 투표 진행, 11시 기준 투표율 6.11%, 라데프 총리는 2027년 예산안 며칠 내 제출 예고(11/1, BTA).",
+                          "우크라이나":  "에너지 시설 공격으로 수십만 가구 정전, 미국 21억 달러 패트리엇 판매 승인, 젤렌스키·에르도안 회담(10/30~11/1, Kyiv Independent).",
+                          "벨라루스":  "올레시키 대피민을 태운 비행기 4대가 벨라루스에 착륙(10/31, Kyiv Independent).",
+                          "몰도바":  "최근 48시간 내 주요 보도 확인되지 않음. 배경으로 국경경찰청장이 올해 드론 침범 65회를 경고(10/30).",
+                          "루마니아":  "CURS 여론조사에서 다수가 나라가 잘못된 방향이라고 응답, 겨울 에너지 요금 우려(10/30, RRI)."
+                      },
+        "note":  "작성 기준: 2026-11-01 저녁(한국시간). Kyiv Independent, Radio Romania International, LSM, LRT, ERR, Notes from Poland, Balkan Insight, BTA, European Western Balkans, Expats.cz, Total Croatia News, N1의 첫 화면(제목·요약 중심)을 확인했고 기사 본문은 대부분 열어보지 못했습니다. Sloveniatimes와 Telex는 접속 오류(403)로 읽지 못했고 KOTRA에는 동유럽 관련 새 기사가 없었으며 한국 언론은 조회하지 않았습니다. ERR 날짜는 일부 추정이고 불가리아 결선 결과는 확인되지 않았습니다. 슬로바키아·슬로베니아·몬테네그로·코소보·알바니아·북마케도니아·몰도바는 새 주요 보도가 확인되지 않아 배경 동향으로 대신했습니다. BTA 두 건의 출처는 기사 주소를 확인하지 못해 BTA 첫 화면으로 표기했습니다. 출처 표시: KR = 한국 언론, KOTRA = KOTRA 해외시장뉴스, EN = 해외 매체."
+    },
+    {
         "date":  "2026-10-30",
         "home":  [
                      0,
