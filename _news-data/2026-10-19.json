@@ -1,0 +1,147 @@
+{
+  "date": "2026-10-19",
+  "overview": "트럼프 대통령이 SNS에서 젤렌스키를 정면 비난했고, 젤렌스키는 미국이 이미 대금을 낸 패트리엇 요격미사일 인도를 늦추고 있다고 맞섰습니다. 그 사이 러시아는 주말에 키이우와 전국 에너지망을 다시 공습했습니다. 리투아니아에서는 드론 폭발과 스타링크 장비 업체 방화 시도가 같은 날 일어나 하이브리드 위협 우려가 커졌고, 체코 상원 결선에서는 바비시 총리의 집권당 ANO가 한 석도 얻지 못했습니다. 발칸에서는 알바니아 시위가 엿새째 이어졌고, 세르비아 총선(10/25)을 앞두고 선거인명부 감사가 방해를 받았다는 주장이 나왔습니다. 루마니아는 10/20 새 정부 신임투표와 흑해 안보를 다루는 NATO 회의를 앞두고 있습니다.",
+  "stories": [
+    {
+      "region": "top",
+      "title": "트럼프 “전쟁 끝내고 싶다”며 젤렌스키 비난…젤렌스키 “美, 대금 낸 패트리엇 인도 지연”",
+      "countries": ["우크라이나"],
+      "period": "2026-10-18 ~ 19",
+      "points": [
+        "트럼프 대통령은 10월 18일 트루스소셜에 글을 올려 대러 제재 면제와 러시아산 경유 합의를 옹호했습니다. 우크라이나의 러시아 정유시설 공격이 세계 경유 시장을 어지럽힌다며 젤렌스키를 탓했고, 젤렌스키가 전쟁을 끝내려 하지 않는다고 주장했습니다.",
+        "젤렌스키는 블룸버그 인터뷰에서 NATO의 PURL(동맹국 재원으로 미국 무기를 사는 제도)로 이미 값을 치른 패트리엇 요격미사일을 미국이 일부만 승인하고 있다고 밝혔습니다. 현재 공급량은 월 12발로, 바이든 행정부 때의 약 4분의 1 수준이라고 했습니다.",
+        "젤렌스키는 러시아 경유 시설 공격을 멈추는 대신 패트리엇을 더 달라고 제안했지만, 미국은 공격 중단만 요구한다고 말했습니다. 베선트 미 재무장관은 제재가 ‘해제’가 아니라 ‘면제’일 뿐이라며 젤렌스키에게 “조심하라”고 경고했습니다.",
+        "러시아는 10월 18~19일 밤 키이우에 세 차례 미사일 공격을 퍼부었습니다. 전국적으로 최소 3명이 숨지고 53명이 다쳤으며, 에너지 시설 10여 곳이 피해를 입어 55만 가구가 정전됐습니다. 우크라이나도 같은 기간 상트페테르부르크에 대규모 드론 공격을 감행했습니다."
+      ],
+      "why": "미국이 러시아에 제재 면제라는 ‘당근’을 주면서 우크라이나에는 방공 무기 인도를 미루는 구도가 굳어지고 있습니다. 겨울을 앞두고 우크라이나 방공망과 에너지망이 동시에 한계에 몰리면서, 유럽이 방공 지원 공백을 얼마나 메울지가 핵심 변수가 됐습니다.",
+      "korea": "우크라이나와 유럽의 방공 수요가 커지면서 중·단거리 요격체계를 가진 한국 방산업계에 대한 관심도 이어질 수 있습니다. 다만 한국과 우크라이나는 북한군 포로 송환 공개를 둘러싸고 외교 갈등을 겪고 있어(주우크라이나 대사 소환), 재건·방산 협력 논의에도 영향을 줄 수 있습니다.",
+      "sources": [
+        { "name": "파이낸셜뉴스 – 젤렌스키 “트럼프, 우크라에 러시아 항복 압박”…美와 갈등 격화", "url": "https://www.fnnews.com/news/202610190447162275", "lang": "KR" },
+        { "name": "뉴스1 – 젤렌스키, 트럼프 친러 행보 또 비판…“경유 합의는 푸틴 전쟁자금 지원”", "url": "https://www.news1.kr/world/europe/6323088", "lang": "KR" },
+        { "name": "Kyiv Independent – US delaying Patriot missiles already paid for under NATO initiative", "url": "https://kyivindependent.com/us-delaying-patriot-missiles-already-paid-for-under-nato-initiative-zelensky-says/", "lang": "EN" },
+        { "name": "Kyiv Independent – Trump defends pro-Russian policies in diatribe against Zelensky", "url": "https://kyivindependent.com/i-want-this-war-end-trump-defends-pro-russian-policies-in-scathing-diatribe-against-zelensky-2/", "lang": "EN" },
+        { "name": "Kyiv Independent – 3 killed, 53 injured as 550,000 households lose power", "url": "https://kyivindependent.com/3-killed-53-injured-in-russian-attacks-across-ukraine-over-past-day-as-550-000-households-lose-power/", "lang": "EN" }
+      ]
+    },
+    {
+      "region": "v4",
+      "title": "체코 상원 결선, 바비시 총리의 ANO ‘0석’ 참패…친서방 야권, 상원 과반 유지",
+      "countries": ["체코"],
+      "period": "2026-10-16 ~ 18",
+      "points": [
+        "10월 16~17일 치러진 체코 상원 결선투표(전체 81석 중 27석 대상)에서 집권당 ANO는 결선에 13명을 올렸지만 한 석도 얻지 못했습니다. 유일하게 지키던 카르비나 의석도 잃었습니다.",
+        "의석은 시장·무소속연합(STAN)과 연대 세력이 10석, 시민민주당(ODS)이 7석, 기독민주당(KDU-ČSL)이 3석, TOP 09가 2석을 가져갔습니다. 야권 성향 세력은 상원 81석 중 최대 61석을 차지할 수 있을 것으로 보입니다.",
+        "결선 투표율은 21.12%(약 47만 6천 명)에 그쳤습니다. 바비시 총리는 결과를 “재앙적”이라고 평가하면서도 지방 조직이 약했던 탓으로 돌렸고, 정부 노선은 바꾸지 않겠다고 밝혔습니다.",
+        "상원의장은 비스트르치르 현 의장이 유지할 가능성이 큽니다. 다만 이번 선거는 의석의 3분의 1만 대상이어서 다음 총선의 예고편으로 보기는 어렵다는 분석도 나옵니다."
+      ],
+      "why": "바비시 정부는 EU 정상회의에서 우크라이나 추가 지원에 불참을 시사하는 등 V4 내 ‘친트럼프·반지원’ 축에 서 있습니다. 친서방 야권이 상원을 확실히 장악하면서 개헌, 국제조약 비준, 헌법재판관 인준 등에서 정부를 견제할 힘이 더 커졌습니다.",
+      "korea": "한수원이 참여하는 두코바니 원전 사업은 정권과 무관하게 국가 사업으로 추진돼 왔지만, 상·하원 대립이 커지면 관련 법안과 예산 처리 일정에 영향을 줄 수 있습니다. 국내 기업은 체코 의회 일정을 함께 살펴볼 필요가 있습니다.",
+      "sources": [
+        { "name": "Expats.cz – Czech Senate elections 2026: this weekend's winners and a 'catastrophic' loser", "url": "https://www.expats.cz/czech-news/article/czech-senate-elections-2026-this-weekend-s-winners-and-a-surprising-loser", "lang": "EN" },
+        { "name": "Expats.cz – Czech Senate runoff ends, with opposition set to retain majority", "url": "https://www.expats.cz/czech-news/article/czech-senate-runoff-ends-with-opposition-set-to-retain-majority", "lang": "EN" },
+        { "name": "Around Prague – Senate runoff: ANO flops, STAN and ODS triumph", "url": "https://aroundprague.cz/en/news/politics/senate-runoff-ano-flops-stan-and-ods-triumph", "lang": "EN" }
+      ]
+    },
+    {
+      "region": "baltic",
+      "title": "리투아니아 상공서 드론 폭발·스타링크 장비 업체 방화 시도…같은 날 터진 두 사건에 안보 긴장",
+      "countries": ["리투아니아"],
+      "period": "2026-10-18 ~ 19",
+      "points": [
+        "10월 18일 새벽 드론 1기가 리투아니아 영공에 들어와 북부 파스발리스 지역에 떨어져 폭발했습니다. 잔해가 민간 차량을 파손했지만 다친 사람은 없었습니다. 북부 2개 주에 적색 공습경보가 내려졌다가 약 1시간 뒤 해제됐고, NATO 전투기가 긴급 출격했습니다.",
+        "카우나스 국방장관은 이 드론이 우크라이나의 상트페테르부르크 공격에 쓰인 우크라이나제 기체이며, 러시아의 전자전 때문에 경로를 벗어났다고 설명했습니다. 우크라이나는 공개 사과했습니다.",
+        "드론이 어디서 들어왔는지를 놓고는 혼선이 있습니다. 리투아니아 국가안보보좌관은 폴란드 국경을 넘어왔다는 증거가 있다고 했지만, 폴란드 매체는 국방부 소식통을 인용해 폴란드 영공을 지나지 않았다고 보도했습니다. 양국은 보안망으로 자료를 공유하기로 했습니다.",
+        "같은 날 새벽 빌뉴스의 스타링크 장비 보관 업체에서 방화 시도가 있었습니다. 신키예비추스 총리는 러시아의 하이브리드 전쟁의 일부라고 지목했고, 19일 국가안보위원회를 소집했습니다. 용의자는 아직 잡히지 않았습니다."
+      ],
+      "why": "우크라이나·러시아의 장거리 드론전이 NATO 동부 회원국 영공으로 번지고 있고, 러시아 소행으로 의심되는 사보타주도 이어지고 있습니다. 발트 3국은 공군 전력이 약해 NATO 공중 경계 임무에 기대고 있으며, 자체 방공망을 갖추는 데는 몇 년이 걸릴 전망입니다.",
+      "korea": "발트 지역에서 대드론·단거리 방공 수요가 빠르게 늘고 있습니다. 국내 방산업계에는 기회 요인이지만, 현지 조달은 NATO 표준과 공동 구매 틀 안에서 진행되는 경우가 많다는 점을 고려해야 합니다.",
+      "sources": [
+        { "name": "뉴스1 – 나토 회원국 리투아니아 상공서 드론 추정 물체 폭발…주민 대피령", "url": "https://www.news1.kr/world/europe/6323842", "lang": "KR" },
+        { "name": "LRT – Lithuanian minister says Sunday drone crash was part of Ukrainian attack on St Petersburg", "url": "https://www.lrt.lt/en/news-in-english/19/3087078/lithuanian-minister-says-sunday-drone-crash-was-part-of-ukrainian-attack-on-st-petersburg", "lang": "EN" },
+        { "name": "LRT – Lithuania has evidence Sunday's drone crossed from Poland", "url": "https://www.lrt.lt/en/news-in-english/19/3087132/lithuania-has-evidence-sunday-s-drone-crossed-from-poland-presidential-adviser-says", "lang": "EN" },
+        { "name": "LRT – Attempted arson at Lithuanian firm storing Starlink equipment, PM blames Russia", "url": "https://www.lrt.lt/en/news-in-english/19/3086054/attempted-arson-at-lithuanian-firm-storing-starlink-equipment-pm-blames-russia", "lang": "EN" },
+        { "name": "Kyiv Independent – NATO jets scramble as drone explodes in Lithuanian airspace", "url": "https://kyivindependent.com/nato-jets-scramble-as-drone-explodes-in-lithuanian-airspace/", "lang": "EN" }
+      ]
+    },
+    {
+      "region": "wbalkan",
+      "title": "세르비아 총선 D-6…선거인명부 감사위원 “당국이 감사 방해”, 한 주소에 유권자 100명 넘게 등록",
+      "countries": ["세르비아", "크로아티아"],
+      "period": "2026-10-15 ~ 19",
+      "points": [
+        "10월 25일 총선을 앞두고 선거인명부를 점검하는 감사위원회 위원들이 당국의 방해로 제대로 감사하지 못했다고 밝혔습니다.",
+        "명부를 직접 열람한 오그녠 라슈오 위원은 인구가 줄고 있는데도 유권자 수는 오히려 늘었고, 여러 주소에 중복 등록된 유권자가 상당수라고 말했습니다. 한 주소에 100명 넘게 등록된 사례도 있었다고 했습니다.",
+        "이번 총선은 14년째 집권 중인 세르비아진보당(SNS)에 가장 큰 도전으로 꼽힙니다. 선거를 앞두고 유권자 협박, 매표, 명부 조작 우려가 계속 제기되고 있습니다.",
+        "정부가 친부치치 성향 해외 동포단체에 2023년 이후 25만 유로 넘게 지원했다는 보도도 나왔습니다. 세르비아가 크로아티아의 선거 개입을 주장하자, 크로아티아는 이를 부인했습니다."
+      ],
+      "why": "노비사드 기차역 참사 이후 2년 가까이 이어진 반정부 시위가 투표로 판가름 나는 선거입니다. 선거의 공정성 논란은 결과의 정당성과 선거 이후 정국 안정, EU 가입 협상에 직접 영향을 줍니다.",
+      "korea": "",
+      "sources": [
+        { "name": "Balkan Insight – Alleged obstruction ruins highly-anticipated audit of Serbia's electoral roll", "url": "https://balkaninsight.com/2026/10/19/alleged-obstruction-ruins-highly-anticipated-audit-of-serbias-electoral-roll/bi/", "lang": "EN" },
+        { "name": "Balkan Insight – Serbia channels public funds to pro-Vucic diaspora groups", "url": "https://balkaninsight.com/2026/10/16/serbia-channels-public-funds-to-pro-vucic-diaspora-groups/bi/", "lang": "EN" },
+        { "name": "Balkan Insight – Croatia rejects Serbian accusation of election interference", "url": "https://balkaninsight.com/2026/10/15/croatia-rejects-serbian-accusation-of-election-interference/bi/", "lang": "EN" }
+      ]
+    },
+    {
+      "region": "sbalkan",
+      "title": "알바니아 학생 시위 엿새째, 주말 티라나 ‘혼돈’…부상자 290명 안팎, 라마 “폭력엔 협상 없다”",
+      "countries": ["알바니아"],
+      "period": "2026-10-17 ~ 19",
+      "points": [
+        "학생들이 주도하는 반정부 시위가 10월 18일로 엿새째 이어졌습니다. 수천 명이 라마 총리의 사퇴를 요구했고, 시위대는 교육부와 집권 사회당, 야당 민주당 당사를 공격했습니다.",
+        "경찰은 최루탄과 물대포, 고무탄으로 진압했고, 시위대는 돌과 화염병을 던졌습니다. 복면을 쓴 무리가 경찰서에 불을 질러 경찰관 10명이 다쳤습니다. 부상자는 경찰관 169명을 포함해 272명(뉴스1)으로 집계됐고, 라마 총리는 295명이라고 밝혔습니다.",
+        "라마 총리는 사퇴를 거부하며 “경찰에 폭력을 쓰는 사람과는 협상하지 않겠다”고 말했습니다. 시위의 배후로 야당과 극단주의 세력, 러시아와 이란을 지목했지만 근거는 내놓지 않았습니다.",
+        "대학교수 141명은 경찰의 폭력을 규탄하며 라마 총리 사퇴와 과도정부 구성을 요구했습니다. 시위대에는 공개 대변인이 없어 대화 상대가 분명하지 않습니다."
+      ],
+      "why": "높은 등록금, 열악한 교육 환경, 부패에 대한 청년층의 불만이 폭력 사태로 번졌습니다. 2030년 EU 가입을 목표로 내건 라마 정부의 국정 운영 능력과 법치에 대한 평가에도 부담이 되고 있습니다.",
+      "korea": "",
+      "sources": [
+        { "name": "뉴스1 – “열악한 교육 못 참아”…알바니아 학생들, 엿새째 시위·총리 사퇴 요구", "url": "https://www.news1.kr/world/europe/6324135", "lang": "KR" },
+        { "name": "Balkan Insight – Albania's capital rocked by chaotic weekend of street unrest", "url": "https://balkaninsight.com/2026/10/19/albanias-capital-rocked-by-chaotic-weekend-of-street-unrest/bi/", "lang": "EN" },
+        { "name": "European Western Balkans – Rama: no negotiations with those who use violence against the police", "url": "https://europeanwesternbalkans.com/2026/10/19/rama-there-will-be-no-negotiations-with-those-who-use-violence-against-the-police/", "lang": "EN" }
+      ]
+    },
+    {
+      "region": "east",
+      "title": "루마니아, 10/20 니쿨레스쿠 내각 신임투표…같은 날 NATO, 루마니아 요청으로 흑해 안보 회의",
+      "countries": ["루마니아"],
+      "period": "2026-10-16 ~ 20",
+      "points": [
+        "외교관 출신 루카 니쿨레스쿠 총리 지명자의 내각이 10월 20일 의회 신임투표를 받습니다. 5월 5일 볼로잔 정부가 불신임으로 무너진 뒤 단 대통령이 지명한 네 번째 총리 후보이며, 인준에는 최소 233표가 필요합니다.",
+        "새 내각은 사회민주당(PSD)과 무소속 인사로 꾸려집니다. PSD, 헝가리계 정당(UDMR), 소수민족 의원 등이 지지할 것으로 보이며, 국민자유당(PNL)은 야당으로 돌아서되 사안별로 협조하기로 했습니다. USR과 극우 AUR은 반대표를 던질 예정입니다.",
+        "같은 날 NATO 북대서양이사회는 루마니아의 요청으로 흑해 안보를 논의합니다. 루마니아·불가리아 연안에서는 드론 공격으로 상선이 파손되거나 침몰하고 선원이 숨지는 일이 잇따랐습니다. 루마니아 F-16은 술리나 인근에서 드론 2기를 격추했고, 프랑스는 특수 장비 지원을 약속했습니다.",
+        "올해 1~9월 재정적자는 GDP 대비 3.82%로 1년 전보다 1.5%포인트 줄었습니다. EU 집행위원회는 11월 20일까지 회복기금 마지막 두 차례 지급분(64억 3천만 유로)을 결정할 예정입니다."
+      ],
+      "why": "다섯 달 넘게 이어진 과도정부 체제를 끝낼 수 있을지가 걸린 표결입니다. 흑해 해상 안보가 NATO 차원의 의제로 올라가면서, 루마니아는 동부 전선의 정치·안보 리스크를 동시에 관리해야 하는 처지입니다.",
+      "korea": "루마니아는 K9 자주포 도입 등 한국 방산의 주요 협력국입니다. 정부 구성이 늦어지면 국방 조달과 EU 자금 집행 일정도 미뤄질 수 있어, 새 내각 출범 여부를 지켜볼 필요가 있습니다.",
+      "sources": [
+        { "name": "뉴시스 – 루마니아, 새로운 혼란의 시기 접어들어…총리 불신임안 의회 통과(배경)", "url": "https://www.newsis.com/view/NISX20260505_0003617522", "lang": "KR" },
+        { "name": "Radio Romania International – October 18, 2026 update", "url": "https://rri.ro/en/news-and-current-affairs/newsflash/october-18-2026-update-id1072636.html", "lang": "EN" },
+        { "name": "BTA – European Parliament debates Black Sea security and EU support for Ukraine", "url": "https://www.bta.bg/en/news/world/1227575-european-parliament-debates-black-sea-security-and-eu-support-for-ukraine", "lang": "EN" }
+      ]
+    }
+  ],
+  "countries": {
+    "폴란드": "리투아니아에 떨어진 드론이 폴란드에서 넘어왔다는 리투아니아 측 주장에, 폴란드 국방부 소식통은 폴란드 영공을 지나지 않았다고 반박(10/19). 라트비아와 사이버안보 협력 양해각서 체결. 이스라엘 정착민이 폴란드 외교관이 포함된 대표단을 공격한 사건을 규탄(10/18).",
+    "체코": "상원 결선(10/16~17)에서 집권당 ANO가 0석에 그쳐 야권이 상원 과반을 유지. 바비시 총리는 “재앙적 결과”라면서도 정부 노선은 유지하겠다고 밝힘.",
+    "슬로바키아": "최근 48시간 내 주요 보도 확인되지 않음. 10/24 지방·광역 선거를 앞두고 야권이 연대를 모색 중이며, 피초 총리는 2027년 우크라이나 700억 유로 지원에 불참하겠다는 입장을 유지.",
+    "헝가리": "머저르 총리가 젤렌스키와 첫 단독 회담을 갖고 장관급 대화를 이어가기로 합의(10/16). 우크라이나 측은 10/23 1956년 혁명 70주년 기념식에 젤렌스키가 초청됐다고 발표. 외무장관이 불가리아를 방문해 전략적 동반자 관계를 강조(10/19).",
+    "에스토니아": "연정 소수당 에스티200이 녹색당과의 합당을 부결(10/18). 최근 지지율은 1.2%에 그침. 난민센터가 있는 지자체가 이주 압력 증가를 이유로 소송을 검토 중.",
+    "라트비아": "총선에서 부진했던 ‘단결’당 지도부가 총사퇴했고, 11/28 전당대회에서 새 지도부를 선출할 예정. 41석을 얻은 통합명단이 연정 구성 협상을 이어가는 중. 폴란드와 사이버안보 협력 양해각서 체결.",
+    "리투아니아": "북부에서 우크라이나 드론으로 추정되는 기체가 폭발해 차량이 파손됐고(10/18), 같은 날 빌뉴스의 스타링크 장비 업체에서 방화 시도가 발생. 총리는 러시아의 하이브리드 공격을 지목하고 10/19 국가안보위원회를 소집.",
+    "슬로베니아": "최근 48시간 내 주요 보도 확인되지 않음. 얀샤 4기 정부(6월 출범)가 2027년 예산 수정안을 처리 중이며, KOTRA는 개방성과 연결성을 슬로베니아 성장의 핵심으로 분석.",
+    "크로아티아": "보스니아와 함께 흐르는 네레트바강의 상류 수력발전 계획이 생태계를 되돌릴 수 없게 훼손할 수 있다는 BIRN 보도(10/19). 몬테네그로의 EU 가입을 지지하는 조건으로 8개 요구사항을 제시.",
+    "세르비아": "10/25 총선 D-6. 선거인명부 감사위원들이 당국의 방해로 감사를 제대로 하지 못했다고 주장했고, 한 주소에 유권자 100명 넘게 등록된 사례도 공개.",
+    "보스니아 헤르체고비나": "최근 48시간 내 주요 보도 확인되지 않음. 10/4 총선 개표가 끝나기 전부터 새 정부 구성 협상이 시작됐다는 보도가 나왔고, 네레트바강 수력발전 사업을 둘러싼 환경 논란이 커지고 있음. 미국 법원은 북한에서 무기를 사려 한 보스니아인에게 유죄를 선고(10/15).",
+    "몬테네그로": "최근 48시간 내 주요 보도 확인되지 않음. EU 정상들이 가입조약 초안 작업을 환영했지만, 크로아티아가 지지 조건으로 8개 요구사항을 제시해 일정에 변수가 생김.",
+    "코소보": "최근 48시간 내 주요 보도 확인되지 않음. 정부가 민법 개정안을 다시 추진하면서 ‘가족 가치’ 논쟁이 재점화됐고, 전쟁범죄 항소심을 앞둔 옛 KLA 지도부에 대한 지원 확대를 추진 중.",
+    "알바니아": "학생 주도 반정부 시위가 엿새째 이어져 부상자가 272~295명으로 늘어남. 라마 총리는 사퇴를 거부하고 폭력 시위대와는 협상하지 않겠다고 밝힘(10/19).",
+    "북마케도니아": "최근 48시간 내 주요 보도 확인되지 않음. 이중국적자 이바 미하일로바 사건을 놓고 불가리아와 갈등이 이어지고 있고, 세르비아 정부 자금이 현지 세르비아계 단체에 흘러갔다는 BIRN 보도가 나옴.",
+    "불가리아": "10/25 대선(결선 11/1)을 앞두고 이오토바 현 대통령이 우세하다는 전망. 왕이 중국 외교부장이 방문해 라데프 총리, 이오토바 대통령과 회담(10/19). 흑해 상선 드론 피격 이후 안보 공백 논란이 계속됨.",
+    "우크라이나": "러시아가 키이우와 11개 주 에너지 시설을 공습해 55만 가구가 정전(10/19). 트럼프와 젤렌스키의 공방이 격해졌고, 미국은 미사일 발사 정보 공유를 재개. 한국과는 북한군 포로 송환 공개를 둘러싼 외교 갈등이 이어지는 중(파이낸셜뉴스, 10/19).",
+    "벨라루스": "최근 48시간 내 주요 보도 확인되지 않음. 젤렌스키는 러시아가 벨라루스에 탄도미사일을 추가 배치할 가능성을 경고했고(10/17), 벨라루스 영토의 장비가 러시아 드론 신호를 중계한다는 우크라이나 측 주장이 나옴.",
+    "몰도바": "러시아 드론 5기가 24시간도 안 되는 사이 몰도바 영토에 추락했다며 정부가 러시아를 규탄(10/17). 산두 대통령은 EU 가입만이 안보를 보장한다고 강조.",
+    "루마니아": "10/20 니쿨레스쿠 내각 신임투표(가결 기준 233표) 예정. 같은 날 NATO 북대서양이사회가 루마니아 요청으로 흑해 안보를 논의. 1~9월 재정적자는 GDP 대비 3.82%."
+  },
+  "note": "작성 기준: 2026-10-19 오후(한국시간). 한국 언론(파이낸셜뉴스, 뉴스1, 뉴시스)과 해외 매체(Kyiv Independent, LRT, ERR, The Baltic Times, Expats.cz, Around Prague, Notes from Poland, Telex, Balkan Insight, European Western Balkans, BTA, Radio Romania International 등)를 웹 검색과 각 사이트 첫 화면으로 확인했습니다. KOTRA 해외시장뉴스 첫 화면에서는 이번 기간의 동유럽 신규 기사를 찾지 못했고, 슬로베니아 관련 기사(국가 분석)만 확인했습니다. 연합뉴스·매일경제는 접근이 제한돼 검색에 쓰지 못했습니다. Balkan Insight의 세르비아·알바니아 기사와 월요 브리핑은 유료 구간이 있어 공개된 부분만 반영했습니다. 슬로바키아·슬로베니아·보스니아·몬테네그로·코소보·북마케도니아·벨라루스는 최근 48시간 내 주요 보도가 확인되지 않아 배경 동향으로 대신했습니다. 알바니아 부상자 수는 출처마다 달라(272명·295명) 함께 적었습니다. 루마니아 기사의 한국 출처는 5월 정부 붕괴를 다룬 배경 기사입니다. ‘한국·기업 시사점’은 보도를 바탕으로 한 해석입니다. 출처 표시: KR = 한국 언론, KOTRA = KOTRA 해외시장뉴스, EN = 해외 매체."
+}
