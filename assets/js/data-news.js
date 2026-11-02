@@ -1,6 +1,251 @@
 /* 원본: 동유럽 웹사이트/news-data/*.json (최신순, tools/build-news.ps1로 생성) */
 window.NEWS_DATA=[
     {
+        "date":  "2026-11-02",
+        "home":  [
+                     4,
+                     0,
+                     1
+                 ],
+        "overview":  "불가리아 대선 결선에서 러시아와의 관계 재설정을 내건 요토바 대통령 직무대행이 57.6%로 당선됐습니다. 우크라이나에서는 젤렌스키 대통령이 튀르키예에서 푸틴과 만날 준비가 돼 있다고 밝혔고, 공습경보 시스템이 해킹당해 가짜 핵·화학 경보가 울렸습니다. 폴란드는 헌법재판소 지도부를 둘러싼 대통령과 의회 선출 판사들의 대립이 깊어지고 있습니다. 라트비아에서는 드론으로 보이는 물체가 동부 국경 영공에 들어왔고, 루마니아 북동부에도 다시 드론이 진입했습니다.",
+        "stories":  [
+                        {
+                            "region":  "top",
+                            "title":  "젤렌스키 “튀르키예에서 푸틴과 만날 준비”…공습경보 시스템 해킹, 빈니차 기숙사 인근 드론 공격",
+                            "countries":  [
+                                              "우크라이나"
+                                          ],
+                            "period":  "2026-11-01 ~ 11-02",
+                            "points":  [
+                                           "키이우인디펜던트에 따르면 젤렌스키 대통령은 CNN 튀르크 인터뷰(11월 1일 공개)에서 푸틴과의 정상회담이 필수적이며 튀르키예가 현실적인 중재자가 될 수 있다고 말했습니다. 11월 중 아부다비에서 우크라이나·러시아·미국 실무 협상이 예정돼 있으며, 에너지·해상 부분 휴전과 포로 교환이 논의될 것이라고 밝혔습니다.",
+                                           "젤렌스키 대통령은 점령지를 러시아 영토로 공식 인정하지 않겠다고 했고, 휴전은 현재 전선을 기준으로 해야 한다고 말했습니다.",
+                                           "11월 1일 밤 우크라이나 공습경보 시스템이 해킹돼 핵·화학 공격과 시가전을 알리는 가짜 경보가 발송됐고, 경보 앱은 일시 중단됐다가 약 1시간 뒤 정상화됐습니다. 몇 시간 뒤 러시아의 경보 시스템도 해킹돼 가짜 핵 발사 메시지가 나갔다고 러시아 당국이 확인했습니다.",
+                                           "11월 1일 빈니차주 코자틴 지역 직업학교 기숙사(국내 피란민 거주) 인근에 러시아 드론이 떨어져 13세 소녀를 포함해 2명이 숨지고 5세 어린이 3명 등 6명이 다쳤습니다."
+                                       ],
+                            "why":  "정상회담 의사 표명과 아부다비 실무 협상 예고로 협상 일정이 구체화되는 가운데, 민간 시설 공격과 사이버 공격이 이어지고 있습니다. 아부다비 협상에서 에너지·해상 부분 휴전이 합의될지가 다음 확인 지점입니다.",
+                            "korea":  "에너지·해상 부분 휴전 논의가 진전되면 흑해 물류와 에너지 설비 복구 수요에 영향을 줄 수 있어, 현지 진출 기업은 협상 결과를 지켜볼 필요가 있습니다.",
+                            "sources":  [
+                                            {
+                                                "name":  "Kyiv Independent – Zelensky says he\u0027s ready to meet Putin in Turkey",
+                                                "url":  "https://kyivindependent.com/zelensky-says-hes-ready-to-meet-putin-in-turkey/",
+                                                "lang":  "EN"
+                                            },
+                                            {
+                                                "name":  "Kyiv Independent – Ukraine\u0027s air raid alert system hacked, Russian system targeted hours later",
+                                                "url":  "https://kyivindependent.com/ukraines-air-raid-alert-system-hacked-air-force-says-as-false-nuclear-chemical-warnings-sound/",
+                                                "lang":  "EN"
+                                            },
+                                            {
+                                                "name":  "Kyiv Independent – Russian drone strike near school dormitory kills 13-year-old in Vinnytsia Oblast",
+                                                "url":  "https://kyivindependent.com/russian-drone-strike-near-school-dormitory-kills-13-year-old-in-vinnytsia-oblast-injures-more-children/",
+                                                "lang":  "EN"
+                                            }
+                                        ]
+                        },
+                        {
+                            "region":  "v4",
+                            "title":  "폴란드 헌법재판소 두 지도부 대립 심화…대통령, 세네갈 방문 단축하고 재판소 진입 지원",
+                            "countries":  [
+                                              "폴란드"
+                                          ],
+                            "period":  "2026-10-30 ~ 11-02",
+                            "points":  [
+                                           "발칸인사이트에 따르면 현 의회가 선출했지만 나브로츠키 대통령이 취임을 막아온 판사 5명이 금요일 안나 코르빈-피오트로프스카를 헌법재판소장 직무대행으로 선언하고, 기존 재판소장 시비엥치코프스키와 부소장의 직무를 정지했습니다.",
+                                           "기존 지도부는 이를 거부했고, 주레크 법무장관은 두 사람의 법관 면책특권 박탈을 추진했습니다.",
+                                           "나브로츠키 대통령은 세네갈 국빈 방문을 단축하고 토요일 새벽 재판소에 도착해 부소장의 건물 진입을 도왔으며, 경찰이 배치됐습니다. 베니스위원회는 10월 대통령이 임명 권한으로 정당하게 선출된 판사를 막을 수 없다고 결론 내렸습니다.",
+                                           "코르빈-피오트로프스카는 11월 3일 2027년 재판소 예산 승인을 위한 전체회의를 소집했으며, 그 결과는 불확실합니다."
+                                       ],
+                            "why":  "헌법재판소에 사실상 두 개의 지도부가 맞서면서 2027년 총선을 앞두고 대통령과 정부의 법치 대립이 제도 마비로 번지고 있습니다. 11월 3일 전체회의가 다음 분기점입니다.",
+                            "korea":  "",
+                            "sources":  [
+                                            {
+                                                "name":  "Balkan Insight – Poland\u0027s Rule-of-Law Crisis Deepens as Rival Judges Claim Control of Top Court",
+                                                "url":  "https://balkaninsight.com/2026/11/02/polands-rule-of-law-crisis-deepens-as-rival-judges-claim-control-of-top-court/rd/",
+                                                "lang":  "EN"
+                                            },
+                                            {
+                                                "name":  "Notes from Poland – Polish president in physical confrontation with judges amid power struggle at constitutional court",
+                                                "url":  "https://notesfrompoland.com/2026/10/31/polish-president-in-physical-confrontation-with-judges-amid-power-struggle-at-constitutional-court/",
+                                                "lang":  "EN"
+                                            }
+                                        ]
+                        },
+                        {
+                            "region":  "baltic",
+                            "title":  "라트비아 동부 국경 영공에 의심 비행체 진입…에스토니아는 러시아 국적자 추방",
+                            "countries":  [
+                                              "라트비아",
+                                              "에스토니아"
+                                          ],
+                            "period":  "2026-11-01 ~ 11-02",
+                            "points":  [
+                                           "키이우인디펜던트에 따르면 라트비아군은 11월 1일 드론으로 보이는 비행체가 남동부 국경 도시 크라슬라바·루자 인근 영공에 잠시 들어왔다고 밝혔습니다. 상황은 1시간 안에 끝났고, 라트비아는 요격 드론을 투입했다가 러시아·벨라루스 영공 진입을 피하려 자폭시켰습니다. 비행체의 출처는 확인되지 않았습니다.",
+                                           "LSM에 따르면 라트비아는 11월 2일 동부 국경에 이동식 감시 장비를 보냈고, 11월 1일에는 처음으로 유엔 안보리 의장국을 맡았습니다.",
+                                           "ERR에 따르면 에스토니아 보안경찰(KAPO)은 러시아 정보기관과 연계된 러시아 국적자를 위협 활동 방지를 이유로 추방했습니다. 이 인물은 2022~2024년 ERR 러시아어 라디오에서 일했습니다.",
+                                           "ERR은 에스토니아 사회민주당 위원회가 요나탄 브세비오프의 총리 도전을 지지했다고 전했습니다."
+                                       ],
+                            "why":  "10월 리투아니아·루마니아에 이어 라트비아에서도 국경 영공 침범이 발생해 발트 국가들의 방공·국경 감시 강화가 이어지고 있습니다.",
+                            "korea":  "",
+                            "sources":  [
+                                            {
+                                                "name":  "Kyiv Independent – \u0027Suspicious object\u0027 enters Latvian airspace near Belarus, Russia border",
+                                                "url":  "https://kyivindependent.com/suspicious-object-enters-latvian-airspace-near-belarus-russia-border/",
+                                                "lang":  "EN"
+                                            },
+                                            {
+                                                "name":  "LSM – Latvia sends \u0027mobile surveillance device\u0027 to eastern border",
+                                                "url":  "https://eng.lsm.lv/article/society/defence/02.11.2026-latvia-sends-mobile-surveillance-device-to-eastern-border.a670167/",
+                                                "lang":  "EN"
+                                            },
+                                            {
+                                                "name":  "LSM – Latvia takes charge of the United Nations Security Council for first time",
+                                                "url":  "https://eng.lsm.lv/article/politics/diplomacy/01.11.2026-latvia-takes-charge-of-the-united-nations-security-council-for-first-time.a670070/",
+                                                "lang":  "EN"
+                                            },
+                                            {
+                                                "name":  "ERR – Russian citizen expelled to \u0027prevent activities\u0027 that \u0027threaten\u0027 Estonia",
+                                                "url":  "https://news.err.ee/1610183218/russian-citizen-expelled-to-prevent-activities-that-threaten-estonia",
+                                                "lang":  "EN"
+                                            },
+                                            {
+                                                "name":  "ERR – Social Democrats council endorses Jonatan Vseviov\u0027s prime minister bid",
+                                                "url":  "https://news.err.ee/1610182819/social-democrats-council-endorses-jonatan-vseviov-s-prime-minister-bid",
+                                                "lang":  "EN"
+                                            }
+                                        ]
+                        },
+                        {
+                            "region":  "wbalkan",
+                            "title":  "미국, 보스니아 선거 승자들에 신속한 정부 구성 촉구…크로아티아 대통령 “EU가 초국가 지향”",
+                            "countries":  [
+                                              "보스니아 헤르체고비나",
+                                              "크로아티아"
+                                          ],
+                            "period":  "2026-10-31 ~ 11-02",
+                            "points":  [
+                                           "N1은 10월 31일 미국이 보스니아 선거 승자들에게 신속히 행동해 유권자의 선택이 옳았음을 증명하라고 촉구했다고 보도했습니다(제목 기준).",
+                                           "같은 날 N1은 미국 상원의원 머피가 트럼프 행정부가 사실상 도디크 쪽으로 기울었다고 비판했다고 전했습니다(제목 기준).",
+                                           "Total Croatia News에 따르면 밀라노비치 크로아티아 대통령은 11월 2일 EU가 초국가가 되려 한다고 비판했습니다.",
+                                           "크로아티아에서는 도로 이용자에 대한 새 규정 시행이 예고됐고, 자그레브-마드리드 직항이 이번 겨울에도 유지됩니다."
+                                       ],
+                            "why":  "보스니아는 선거 이후 정부 구성 국면에서 미국의 대(對)도디크 정책이 논쟁거리가 되고 있습니다. 세부 내용은 기사 본문을 확인하지 못했습니다.",
+                            "korea":  "",
+                            "sources":  [
+                                            {
+                                                "name":  "N1 – US urges Bosnia\u0027s election winners to act swiftly and prove voters right",
+                                                "url":  "https://n1info.ba/english/news/us-urges-bosnias-election-winners-to-act-swiftly-and-prove-voters-right/",
+                                                "lang":  "EN"
+                                            },
+                                            {
+                                                "name":  "N1 – Murphy: Trump administration has de facto tilted towards Dodik",
+                                                "url":  "https://n1info.ba/english/news/murphy-trump-administration-has-de-facto-tilted-towards-dodik/",
+                                                "lang":  "EN"
+                                            },
+                                            {
+                                                "name":  "Total Croatia News – Zoran Milanović Accuses EU of Wanting to be a Superstate",
+                                                "url":  "https://total-croatia-news.com/news/milanovic-eu-superstate/",
+                                                "lang":  "EN"
+                                            }
+                                        ]
+                        },
+                        {
+                            "region":  "sbalkan",
+                            "title":  "불가리아 대선 결선, 요토바 57.6%로 당선…“러시아와 관계 재설정” 공약",
+                            "countries":  [
+                                              "불가리아"
+                                          ],
+                            "period":  "2026-11-01 ~ 11-02",
+                            "points":  [
+                                           "BTA에 따르면 개표 100% 기준 일리아나 요토바·키릴 발체프 후보가 57.6%(109만 3,852표)를 얻어 안드레이 구로프·게오르기 칸데프 후보(39.5%, 75만 251표)를 이겼습니다. ‘지지 후보 없음’은 5만 6,080표였습니다.",
+                                           "발칸인사이트에 따르면 투표율은 29.1%로 1차 투표(22.98%)보다 올랐습니다. 요토바는 ‘평화의 대통령’을 내세워 러시아에 대한 균형 잡힌 태도와 우크라이나 추가 군사지원에 대한 회의론을 밝혔으며, 10월 30일에는 러시아를 적국으로 보지 않는다고 말했습니다.",
+                                           "요토바는 라데프 총리가 이끄는 정부의 지지를 받아 대통령직과 정부의 노선이 일치하게 됐습니다. 부통령 당선인 발체프는 BTA 사장이어서 언론 자유 문제도 제기됐습니다.",
+                                           "해외 투표에서는 구로프 측이 56.36%로 앞섰고, EU 집행위원장과 외국 정상들이 당선을 축하했습니다."
+                                       ],
+                            "why":  "EU·NATO 회원국인 불가리아에서 러시아와의 관계 재설정을 내건 대통령이 정부와 같은 노선으로 당선돼, 흑해 안보와 대우크라이나 지원 정책 변화 여부가 주목됩니다.",
+                            "korea":  "현대건설이 참여하는 코즐로두이 원전 신규 건설 등 에너지 사업이 있는 만큼, 새 대통령 아래 에너지·대외 정책 방향을 지켜볼 필요가 있습니다.",
+                            "sources":  [
+                                            {
+                                                "name":  "BTA – Based on 100% of Tally Sheets, Iotova Wins Presidential Runoff with 57.6%, Gurov Receives 39.5%",
+                                                "url":  "https://www.bta.bg/en/news/bulgaria/1237996-based-on-100-of-tally-sheets-iotova-wins-presidential-runoff-with-57-6-gurov",
+                                                "lang":  "EN"
+                                            },
+                                            {
+                                                "name":  "Balkan Insight – Bulgaria\u0027s Presidential Election Winner Pledges Reset with Russia",
+                                                "url":  "https://balkaninsight.com/2026/11/02/bulgarias-presidential-election-winner-pledges-reset-with-russia/bi/",
+                                                "lang":  "EN"
+                                            },
+                                            {
+                                                "name":  "BTA – Gurov-Kandev Win 56.36% of Votes Abroad, Iotova-Valchev 41.43%",
+                                                "url":  "https://www.bta.bg/en/bg-world/1237973-gurov-kandev-win-56-36-of-votes-abroad-iotova-valchev-41-43-based-on-100-of",
+                                                "lang":  "EN"
+                                            }
+                                        ]
+                        },
+                        {
+                            "region":  "east",
+                            "title":  "루마니아 북동부에 다시 드론 진입…여론조사 78% “나라 잘못된 방향”, 연료 위기 상태 2월까지 연장",
+                            "countries":  [
+                                              "루마니아",
+                                              "몰도바"
+                                          ],
+                            "period":  "2026-10-31 ~ 11-01",
+                            "points":  [
+                                           "RRI에 따르면 10월 31일 밤 이아시주 영공이 폐쇄되고 에인트호번발 항공편이 회항했습니다. 국방부는 몰도바 국경 10km 지점에서 움직이는 비행 목표물을 탐지했고, 이어 몰도바 방향에서 새 목표물이 영공에 들어왔다고 밝혔습니다. 11월 1일에도 드론 2기가 북동부 영공에 들어와 6개 군에 경보가 발송됐습니다.",
+                                           "RRI가 전한 아방가르드 여론조사(10월 21~26일)에서 78%가 루마니아가 잘못된 방향으로 가고 있다고 답했고, 정당 지지율은 AUR 35%, PSD 26%, PNL 15%, USR 10%였습니다.",
+                                           "정부는 연료 위기 상태를 2월 1일까지 3개월 연장해 표준 경유 소비세 인하를 유지하기로 했습니다. 11월 1일부터 EU 밖에서 들어오는 150유로 미만 소포에 개당 3유로와 품목당 2유로의 새 세금이 적용됩니다.",
+                                           "RRI 주간 정리에 따르면 니쿨레스쿠 신임 총리는 첫 해외 방문지로 키시너우를 찾아 토판 몰도바 총리와 인프라·에너지 공동 사업과 유럽 통합을 논의했습니다."
+                                       ],
+                            "why":  "몰도바 방향에서 드론 진입이 반복되며 루마니아의 영공 방어 부담이 커지고 있고, 국내에서는 극우 AUR이 지지율 선두를 유지하고 있습니다.",
+                            "korea":  "",
+                            "sources":  [
+                                            {
+                                                "name":  "RRI – October 31, 2026 (UPDATE)",
+                                                "url":  "https://www.rri.ro/en/news-and-current-affairs/newsflash/october-31-2026-update-id1077997.html",
+                                                "lang":  "EN"
+                                            },
+                                            {
+                                                "name":  "RRI – November 1, 2026",
+                                                "url":  "https://www.rri.ro/en/news-and-current-affairs/newsflash/november-1-2026-id1078109.html",
+                                                "lang":  "EN"
+                                            },
+                                            {
+                                                "name":  "RRI – October 31, 2026",
+                                                "url":  "https://www.rri.ro/en/news-and-current-affairs/newsflash/october-31-2026-id1077902.html",
+                                                "lang":  "EN"
+                                            },
+                                            {
+                                                "name":  "RRI – The Week in Review 26–30.10.2026",
+                                                "url":  "https://www.rri.ro/en/news-and-current-affairs/the-week-in-review/the-week-in-review-26-30-10-2026-id1077610.html",
+                                                "lang":  "EN"
+                                            }
+                                        ]
+                        }
+                    ],
+        "countries":  {
+                          "폴란드":  "헌법재판소에 두 지도부가 맞서는 가운데 11월 3일 직무대행 측 전체회의 예정, 이민자 체류허가 수년 대기 문제(11/2, 발칸인사이트).",
+                          "체코":  "중앙은행이 11월 5일 기준금리를 3.75%에서 4%로 올릴 것으로 예상, 2027년 1월 최저임금 2만 4,900코루나로 인상(11/2, Expats.cz).",
+                          "슬로바키아":  "최근 48시간 내 주요 보도 확인되지 않음. 배경으로 지난주 슬로바키아 장관의 모스크바 방문이 언급됐음.",
+                          "헝가리":  "유럽의회 법치 조사단장 윌메스가 보고서가 대체로 긍정적일 것이라고 전망(11/2, Telex). KOTRA는 헝가리 유로 도입 과제로 GDP 대비 7.5% 재정적자를 지적(게재일 미확인).",
+                          "에스토니아":  "보안경찰이 러시아 정보기관 연계 러시아 국적자 추방, 사회민주당이 브세비오프 총리 도전 지지(11/1~2, ERR).",
+                          "라트비아":  "드론으로 보이는 비행체가 크라슬라바·루자 인근 영공에 진입(11/1), 처음으로 유엔 안보리 의장국 수임(11/1, LSM·Kyiv Independent).",
+                          "리투아니아":  "최근 48시간 내 주요 보도 확인되지 않음. 배경으로 3분기 경제 1% 위축과 미국의 벨라루스 칼륨 항만 재개방 압박 보도(10/30, LRT).",
+                          "슬로베니아":  "최근 48시간 내 주요 보도 확인되지 않음. Sloveniatimes는 접속 오류(403)로 읽지 못했음.",
+                          "크로아티아":  "밀라노비치 대통령이 EU가 초국가가 되려 한다고 비판, 도로 이용 새 규정 시행 예고(11/2, Total Croatia News).",
+                          "세르비아":  "최근 48시간 내 주요 보도 확인되지 않음. 배경으로 브르나비치 대통령 직무대행이 12월 27일까지 대선 공고 예정(10/30, BTA).",
+                          "보스니아 헤르체고비나":  "미국이 선거 승자들에 신속한 행동 촉구, 머피 상원의원은 트럼프 행정부가 도디크 쪽으로 기울었다고 비판(10/31, N1).",
+                          "몬테네그로":  "에너지공동체 관계자가 플레블랴 석탄발전소 개보수에도 EU 환경 기준 충족을 입증해야 한다고 밝힘(11/2, 발칸인사이트).",
+                          "코소보":  "최근 48시간 내 주요 보도 확인되지 않음. 배경으로 프리슈티나에서 반파시즘 전시가 독일 밖 첫 개최(11/2, 발칸인사이트 문화 기사).",
+                          "알바니아":  "최근 48시간 내 주요 보도 확인되지 않음. 배경으로 시위 현장 경찰 보너스 논란(10/29).",
+                          "북마케도니아":  "최근 48시간 내 주요 보도 확인되지 않음. 배경으로 마르타 코스 집행위원이 11월 4일 2026 확대 패키지 발표 예정(EWB 10/30).",
+                          "불가리아":  "대선 결선에서 요토바 57.6%로 당선, 투표율 29.1%, 세계은행은 가구 19%가 난방비를 감당 못 한다고 발표(11/2, BTA·발칸인사이트).",
+                          "우크라이나":  "젤렌스키가 튀르키예에서 푸틴과 만날 준비 표명, 공습경보 시스템 해킹, 빈니차 기숙사 인근 드론 공격으로 2명 사망(11/1~2, Kyiv Independent).",
+                          "벨라루스":  "최근 48시간 내 주요 보도 확인되지 않음. 배경으로 올레시키 대피민을 태운 비행기 4대가 벨라루스에 착륙(10/31, Kyiv Independent).",
+                          "몰도바":  "루마니아 국방부가 몰도바 방향에서 영공에 들어온 비행 목표물을 탐지(10/31), 니쿨레스쿠 루마니아 총리가 첫 해외 방문으로 키시너우 방문(RRI).",
+                          "루마니아":  "북동부에 다시 드론 2기 진입(11/1), 여론조사 78% 잘못된 방향 응답, 연료 위기 상태 2월 1일까지 연장(10/31~11/1, RRI)."
+                      },
+        "note":  "작성 기준: 2026-11-02 저녁(한국시간). Kyiv Independent, Radio Romania International, LSM, LRT, ERR, Notes from Poland, Balkan Insight, BTA, European Western Balkans, Expats.cz, Total Croatia News, Telex, N1, KOTRA 해외시장뉴스 첫 화면을 확인했고, 우크라이나·폴란드·불가리아·라트비아 주요 기사는 본문을 열어 수치를 확인했습니다. Sloveniatimes는 접속 오류(403)로 읽지 못했고 한국 언론은 조회하지 않았습니다. LRT 첫 화면은 11월 2일 기사가 보이지 않아 갱신이 늦었을 수 있으며, ERR 기사 날짜 일부는 사진 경로 등으로 추정했습니다. N1·Total Croatia News 기사는 제목·요약 기준입니다. KOTRA 헝가리 기사는 게재일을 확인하지 못했습니다. 슬로바키아·리투아니아·슬로베니아·세르비아·코소보·알바니아·북마케도니아·벨라루스는 새 주요 보도가 확인되지 않아 배경 동향으로 대신했습니다. 출처 표시: KR = 한국 언론, KOTRA = KOTRA 해외시장뉴스, EN = 해외 매체."
+    },
+    {
         "date":  "2026-11-01",
         "home":  [
                      0,
