@@ -5,6 +5,32 @@
  * title이 null이면 그 주에 확인된 주요 보도가 없다는 뜻이다. */
 window.WEEKLY_NEWS = [
   {
+    week_start: '2026-11-02', week_end: '2026-11-08', updated: '2026-11-08',
+    note: '웹 검색과 주요 매체 첫 화면에서 이번 주(11/2~11/8) 날짜가 확인된 보도만 골랐습니다. 확인하지 못한 나라는 비워 두었습니다.',
+    countries: {
+      '폴란드': { title: '크라쿠프 중앙광장서 총격 테러…6명 사망·15명 부상', source: 'Notes from Poland', url: 'https://notesfrompoland.com/2026/11/07/fatalities-reported-in-shooting-on-historical-market-square-in-krakow/' },
+      '체코': { title: '체코 정부, 전국 단위 국민투표 제도 도입안 논의', source: 'Expats.cz', url: 'https://www.expats.cz/czech-news/article/czech-government-to-debate-system-for-nationwide-referendums' },
+      '슬로바키아': { title: null },
+      '헝가리': { title: null },
+      '슬로베니아': { title: null },
+      '크로아티아': { title: null },
+      '세르비아': { title: '세르비아, 경찰 고위 간부들을 직권남용·고문 혐의로 구금', source: 'Balkan Insight', url: 'https://balkaninsight.com/2026/11/03/serbia-detains-police-officials-over-abuse-of-position-torture-allegations/bi/' },
+      '보스니아 헤르체고비나': { title: null },
+      '코소보': { title: null },
+      '몬테네그로': { title: 'EU 집행위 확대 패키지 채택…몬테네그로 등 선두 후보국에 가입 로드맵 제시', source: 'European Western Balkans', url: 'https://europeanwesternbalkans.com/2026/11/04/european-commission-adopts-enlargement-package-with-roadmaps-for-the-most-advanced-candidates/' },
+      '북마케도니아': { title: '불가리아·북마케도니아 역사·교육 공동위원회, 성과 없이 종료', source: 'BTA' },
+      '알바니아': { title: 'EU 집행위, 확대 패키지서 알바니아에 가입 로드맵 제시', source: 'European Western Balkans', url: 'https://europeanwesternbalkans.com/2026/11/04/european-commission-adopts-enlargement-package-with-roadmaps-for-the-most-advanced-candidates/' },
+      '불가리아': { title: '불가리아 대선 결선서 요토바 현 대통령 승리', source: 'Reuters (The Star)', url: 'https://www.thestar.com.my/news/world/2026/11/02/bulgaria039s-iotova-wins-presidential-runoff-near-final-results-show' },
+      '루마니아': { title: null },
+      '몰도바': { title: '산두 대통령, 러시아의 새로운 몰도바 불안정화 시도 경고', source: 'Ukrinform', url: 'https://www.ukrinform.net/rubric-polytics/4182646-sandu-warns-of-new-russian-attempts-to-destabilize-moldova.html' },
+      '우크라이나': { title: 'EU 집행위, 확대 패키지서 우크라이나에 가입 로드맵 제시', source: 'European Western Balkans', url: 'https://europeanwesternbalkans.com/2026/11/04/european-commission-adopts-enlargement-package-with-roadmaps-for-the-most-advanced-candidates/' },
+      '벨라루스': { title: null },
+      '리투아니아': { title: null },
+      '라트비아': { title: '라트비아 정부, 자체 성과 평가서 ‘대체로 잘했다’ 결론', source: 'LSM', url: 'https://eng.lsm.lv/article/politics/politics/06.11.2026-latvian-government-judges-itself-to-have-done-pretty-well.a670876/' },
+      '에스토니아': { title: null }
+    }
+  },
+  {
     week_start: '2026-10-26', week_end: '2026-11-01', updated: '2026-11-01',
     note: '이번 주는 웹 검색으로 날짜까지 확인된 보도가 적어, 확인된 나라만 채우고 나머지는 비워 두었습니다.',
     countries: {
