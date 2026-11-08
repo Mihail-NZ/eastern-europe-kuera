@@ -1,0 +1,32 @@
+[
+  {
+    "run_id": "2026-11-08-initial",
+    "run_at": "2026-11-08T21:30:00+09:00",
+    "kind": "초기 등록",
+    "window_from": null,
+    "window_to": "2026-11-08",
+    "found": 18, "new": 18, "updated": 0, "closed": 0, "needs_check": 0, "duplicates_removed": 0,
+    "results": [
+      { "source_id": "K09", "result": "ok", "note": "국가명 검색 9개 키워드, 공고 18건 원문 확인" },
+      { "source_id": "K01", "result": "error", "note": "서비스 점검 중" },
+      { "source_id": "K04", "result": "error", "note": "리디렉션 반복(자동 요청)" },
+      { "source_id": "K05", "result": "error", "note": "폴란드·체코·헝가리 공관 게시판 리디렉션 반복(자동 요청)" },
+      { "source_id": "K06", "result": "partial", "note": "목록이 스크립트로 표시되어 읽지 못함" },
+      { "source_id": "K07", "result": "ok", "note": "1쪽에 동유럽 공고 없음" },
+      { "source_id": "K12", "result": "ok", "note": "동유럽 관련 공고 없음" },
+      { "source_id": "L01", "result": "blocked", "note": "HTTP 403" },
+      { "source_id": "L02", "result": "blocked", "note": "HTTP 403" },
+      { "source_id": "L03", "result": "blocked", "note": "HTTP 403" },
+      { "source_id": "L04", "result": "blocked", "note": "연결 거부" },
+      { "source_id": "L05", "result": "blocked", "note": "자동 요청 차단" },
+      { "source_id": "L07", "result": "blocked", "note": "HTTP 403" },
+      { "source_id": "G04", "result": "ok", "note": "폴란드 한국어 공고 0건" },
+      { "source_id": "G05", "result": "ok", "note": "한국 관련 공고 없음(1쪽)" },
+      { "source_id": "G07", "result": "blocked", "note": "자동 요청 차단" },
+      { "source_id": "G09", "result": "partial", "note": "개별 기회는 검색 필터 뒤에 있어 확인 못 함" },
+      { "source_id": "G10", "result": "ok", "note": "대상 국가 인턴 0건" },
+      { "source_id": "G11", "result": "blocked", "note": "HTTP 403" },
+      { "source_id": "G18", "result": "ok", "note": "바르샤바 공고 있으나 참여국 국적자 한정이라 제외" }
+    ]
+  }
+]

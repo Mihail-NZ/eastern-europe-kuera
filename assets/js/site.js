@@ -96,7 +96,7 @@
   function header() {
     const nav = [
       ['home', 'Home', 'index.html'], ['countries', 'Countries', 'countries/index.html'],
-      ['news', 'Daily News', 'news/index.html'], ['games', 'Mini Game', 'games/index.html'], ['about', 'About KUERA', 'about/index.html']
+      ['news', 'Daily News', 'news/index.html'], ['jobs', 'Careers', 'jobs/index.html'], ['games', 'Mini Game', 'games/index.html'], ['about', 'About KUERA', 'about/index.html']
     ];
     const current = PAGE === 'country' || PAGE === 'section' ? 'countries' : PAGE;
     return `<a class="skip" href="#main">본문으로 건너뛰기</a>
@@ -1207,6 +1207,203 @@ ${countryTabs(c, id)}
   </ul>
 </section>`;
   }
+  /* ---------- 페이지: 취업·인턴 ----------
+   * 데이터: data-jobs.js (원본 _jobs-data/*.json, _tools/build-jobs.ps1로 생성). 검수 후 게시(published)된 실제 공고만 들어 있다.
+   * 근무지 탭(해외/국내)과 인턴 탭, 보기(전체/이번 주 신규/마감 임박), 조건 필터를 조합해 목록을 그린다. */
+  const JOBS = window.JOBS_DATA || { updated: null, jobs: [], sources: [], last_run: null };
+  const DAY = 864e5;
+  const isIntern = j => /인턴|intern|trainee|traineeship|실습|stáž|staż|praktyk/i.test(`${j.employment_type || ''} ${j.title_ko || ''} ${j.title_original || ''}`);
+  const fmtLong = iso => { const [y, m, d] = iso.slice(0, 10).split('-'); return `${y}년 ${+m}월 ${+d}일`; };
+  const seoulDate = t => new Date(t + 9 * 36e5).toISOString().slice(0, 10); // 날짜만 있는 마감일은 한국 날짜로 비교
+  /* 마감 정보: 시각+시간대가 있을 때만 남은 일수를 정확히 센다 */
+  function deadlineInfo(j, now) {
+    if (!j.deadline_at) return { label: j.deadline_note || '마감일 미기재', passed: false, days: null };
+    if (/T/.test(j.deadline_at)) {
+      const t = Date.parse(j.deadline_at), hm = j.deadline_at.slice(11, 16);
+      return { label: `${fmtDate(j.deadline_at.slice(0, 10))} ${hm}${j.deadline_timezone === 'Asia/Seoul' ? ' (한국 시간)' : ` (${j.deadline_timezone})`}`,
+        passed: now > t, days: Math.ceil((t - now) / DAY) };
+    }
+    const today = seoulDate(now), days = Math.round((Date.parse(j.deadline_at) - Date.parse(today)) / DAY);
+    return { label: `${fmtDate(j.deadline_at)} (시각 미기재)`, passed: days < 0, days: null, approx: days };
+  }
+  const effStatus = (j, dl) => (j.status === '모집중' && dl.passed ? '마감' : j.status);
+  /* 이번 주 신규: 이번 호 기준일 전 7일 안에 게시된 공고(게시일이 없으면 처음 발견한 날로 대신하고 그렇게 표시) */
+  function isNewJob(j) {
+    if (!JOBS.updated) return false;
+    const ref = Date.parse(JOBS.updated), d = Date.parse(j.published_at || j.first_seen_at);
+    return ref - d >= 0 && ref - d < 7 * DAY;
+  }
+  const soonJob = (j, dl) => !dl.passed && j.status === '모집중' && ((dl.days != null && dl.days <= 7) || (dl.approx != null && dl.approx <= 7));
+  const ENTRY = '신입 지원 가능', EXP = '경력 필요';
+  const JOB_FILTERS = [
+    ['country', '국가', j => [j.work_country]],
+    ['city', '도시', j => [j.work_city ? j.work_city.replace(/\s*\(.*\)$/, '') : '도시 미기재']],
+    ['cat', '직무', j => [j.job_category || '미분류']],
+    ['type', '고용 형태', j => [(j.employment_type || '미기재').replace(/\s*\(.*\)$/, '')]],
+    ['level', '경력', j => [j.entry_level ? ENTRY : EXP]],
+    ['lang', '요구 언어', j => (j.required_languages && j.required_languages.length ? j.required_languages : ['언어 조건 미기재'])]
+  ];
+  const STATUS_OPTS = [['open', '모집중·확인 필요'], ['모집중', '모집중'], ['확인필요', '확인 필요'], ['마감', '마감'], ['all', '전체']];
+  const TABS = [['abroad', '해외 근무'], ['domestic', '국내 근무'], ['intern', '인턴']];
+  const inTab = (j, tab) => (tab === 'intern' ? isIntern(j) : tab === 'domestic' ? j.work_location_group === '국내' : j.work_location_group !== '국내');
+
+  function jobCard(j, now) {
+    const dl = deadlineInfo(j, now), st = effStatus(j, dl), iso3 = ISO3_BY_KO[j.work_country];
+    const un = t => `<span class="unk">${esc(t)}</span>`;
+    const badges = [
+      isNewJob(j) ? `<span class="jb is-new">${j.published_at ? '이번 주 신규' : '이번 주 발견'}</span>` : '',
+      st === '마감' ? '<span class="jb is-closed">마감</span>' : st === '확인필요' ? '<span class="jb is-check">확인 필요</span>' : '',
+      st === '모집중' && soonJob(j, dl) ? `<span class="jb is-soon">${dl.days != null ? (dl.days <= 0 ? '오늘 마감' : `D-${dl.days}`) : '마감 임박'}</span>` : '',
+      j.entry_level ? '<span class="jb">신입 가능</span>' : '',
+      j.work_location_group === '원격' ? '<span class="jb">원격</span>' : j.work_location_group === '미확인' ? '<span class="jb is-check">근무지 미확인</span>' : ''
+    ].join('');
+    const langs = (j.required_languages || []).length ? esc(j.required_languages.join(', ')) : un('미기재');
+    const pref = (j.preferred_languages || []).length ? ` <span class="pref">우대: ${esc(j.preferred_languages.join(', '))}</span>` : '';
+    const pay = j.compensation_type === '미공개' || !j.salary_original ? `비공개${j.salary_original ? ` <span class="pref">(${esc(j.salary_original)})</span>` : ''}`
+      : `${esc(j.salary_original)}${j.salary_is_estimate ? ' <span class="pref">(추정치)</span>' : ''}${j.gross_or_net ? ` · ${esc(j.gross_or_net)}` : ''}`;
+    const src = JOBS.sources.find(s => s.source_id === j.source_id);
+    const fact = (k, v) => `<div><dt>${k}</dt><dd>${v}</dd></div>`;
+    const prog = j.participation_fee || j.program_eligibility || j.internship_duration
+      ? `<dl class="job-facts job-prog">${fact('인턴 기간', j.internship_duration ? esc(j.internship_duration) : un('미기재'))}${fact('참가비', j.participation_fee ? esc(j.participation_fee) : un('미확인'))}${fact('프로그램 자격', j.program_eligibility ? esc(j.program_eligibility) : un('미확인'))}</dl>` : '';
+    const elig = j.eligibility_for_korean === '미확인' ? un('미확인') : `<strong>${esc(j.eligibility_for_korean)}</strong>`;
+    const visa = j.visa_sponsorship === '미확인' ? un('미확인') : `<strong>${esc(j.visa_sponsorship)}</strong>`;
+    return `<li class="job-card${st === '마감' ? ' is-closed' : ''}"${iso3 ? ` style="--band:${flagBand(iso3)}"` : ''}>
+  <div class="job-top"><span class="job-place">${iso3 ? flagIcon(iso3, 'flag') : ''}${esc(j.work_country)}${j.work_city ? ` · ${esc(j.work_city)}` : ''}</span><span class="job-badges">${badges}</span></div>
+  <h3 class="job-title"><a href="${esc(j.original_url)}" target="_blank" rel="noopener">${esc(j.title_ko)}</a></h3>
+  <p class="job-org">${esc(j.company_or_organization)}</p>
+  <dl class="job-facts">
+    ${fact('고용 형태', esc(j.employment_type || '미기재'))}${fact('경력', esc(j.seniority || '미기재'))}${fact('직무', esc(j.job_category || '미분류'))}
+    ${fact('요구 언어', langs + pref)}${fact('급여', pay)}${fact('마감', `${esc(dl.label)}`)}
+  </dl>${prog}
+  <p class="job-sum">${esc(j.summary_ko)}</p>
+  ${j.work_location_group === '국내' ? `<p class="job-rel"><span>동유럽 관련성</span>${esc(j.relevance_reason)}</p>` : ''}
+  <p class="job-elig"><span>한국 국적 지원: ${elig}</span><span>비자 지원: ${visa}</span>${j.eligibility_evidence ? `<span class="ev">근거: “${esc(j.eligibility_evidence)}”</span>` : ''}${j.work_authorization_requirement ? `<span class="ev">체류·취업 조건 — ${esc(j.work_authorization_requirement)}</span>` : ''}</p>
+  <div class="job-foot">
+    <p><span>출처 ${esc(src ? src.source_name : j.source_id)}</span><span>게시 ${j.published_at ? fmtDate(j.published_at) : '미기재'} · 마지막 확인 ${fmtDate(j.last_verified_at)}</span></p>
+    <a class="job-apply" href="${esc(j.original_url)}" target="_blank" rel="noopener">원문에서 지원<span aria-hidden="true"> ↗</span></a>
+  </div>
+</li>`;
+  }
+
+  /* 출처 목록: 실제로 어떻게 확인하는지(수동 검토/링크 안내/비활성)를 그대로 보여 준다 */
+  const SRC_GROUPS = [
+    ['국내 채용 사이트·기관', s => s.source_group === '국내'],
+    ['동유럽 현지 채용 사이트', s => s.source_type === '현지 종합'],
+    ['외국어·IT·연구 채용', s => ['외국어·전문', 'IT', '공공 고용망', '연구'].includes(s.source_type)],
+    ['인턴 프로그램', s => s.source_type === '인턴 프로그램'],
+    ['국제기구·국제기관', s => s.source_group === '해외' && ['국제기구', '기관 직접'].includes(s.source_type)]
+  ];
+  function sourceRow(s) {
+    const m = s.active ? s.collection_method : '검토 대기';
+    const cls = { '자동 수집': 'is-auto', '수동 검토': 'is-manual', '링크 안내': 'is-link' }[m] || 'is-off';
+    return `<li class="src-row">
+  <div class="src-name"><a href="${esc(s.source_url)}" target="_blank" rel="noopener">${esc(s.source_name)}</a><span class="src-cov">${esc((s.coverage_countries || []).join(', '))}</span></div>
+  <div class="src-meta"><span class="src-m ${cls}">${esc(m)}</span><span class="src-v">${esc(s.verification_status)}${s.last_source_checked_at ? ` · ${fmtDate(s.last_source_checked_at)} 확인` : ''}</span></div>
+  ${s.access_notes ? `<p class="src-note">${esc(s.access_notes)}</p>` : ''}
+  ${s.program ? `<p class="src-note src-prog">급여: ${esc(s.program.pay)} · 참가비: ${esc(s.program.fee)} · 자격: ${esc(s.program.eligibility)}</p>` : ''}
+</li>`;
+  }
+  function sourcesSection() {
+    const all = JOBS.sources, act = all.filter(s => s.active), off = all.filter(s => !s.active);
+    const count = m => act.filter(s => s.collection_method === m).length;
+    return `<section class="jobs-sources" id="sources" aria-labelledby="src-h">
+  <div class="section-head"><h2 id="src-h">출처 목록</h2></div>
+  <p class="src-summary">출처 ${all.length}곳 — 수동 검토 ${count('수동 검토')} · 링크 안내 ${count('링크 안내')} · 검토 대기 ${off.length} · <strong>자동 수집 연결 ${count('자동 수집')}</strong></p>
+  <p class="src-lead">'수동 검토'는 운영자가 매주 목록을 열어 공고를 고르는 출처, '링크 안내'는 자동 접근이 막혀 있거나 이용 조건을 확인하지 못해 직접 찾아보도록 안내하는 출처입니다. 공식 API·RSS를 확인한 곳은 아직 없어 자동 수집으로 연결된 출처는 없습니다.</p>
+  ${SRC_GROUPS.map(([label, fn]) => { const list = act.filter(fn); return list.length ? `<h3 class="src-h3">${esc(label)} <span>${list.length}</span></h3><ul class="src-list">${list.map(sourceRow).join('')}</ul>` : ''; }).join('')}
+  ${off.length ? `<details class="src-off"><summary>검토 대기·비활성 출처 ${off.length}곳</summary><ul class="src-list">${off.map(sourceRow).join('')}</ul></details>` : ''}
+</section>`;
+  }
+
+  function renderJobs(main) {
+    const now = Date.now();
+    const jobs = JOBS.jobs.map(j => { const dl = deadlineInfo(j, now); return Object.assign({ _dl: dl, _st: effStatus(j, dl) }, j); });
+    const tabFromHash = () => (TABS.some(t => t[0] === location.hash.slice(1)) ? location.hash.slice(1) : 'abroad');
+    const state = { tab: tabFromHash(), view: 'all', status: 'open' };
+    const run = JOBS.last_run;
+    main.innerHTML = `
+<section class="page-head night">
+  <div class="wrap"><p class="kicker">Careers</p><h1>취업·인턴</h1>
+  <p>동유럽에서 일하거나 동유럽 시장을 맡는 채용·인턴 공고를 매주 월요일 모아 확인합니다. 공고 본문은 옮기지 않고 핵심 조건과 원문 링크만 싣습니다.</p>
+  <p class="jobs-edition">${JOBS.updated ? `${fmtLong(JOBS.updated)} 기준 · 공고 ${jobs.length}건${run ? ` · ${esc(run.kind)}` : ''}` : '아직 발행된 공고가 없습니다'}</p></div>
+</section>
+<div class="wrap jobs-wrap">
+  <div class="jobs-note">
+    <p><strong>읽는 법.</strong> 한국 국적 지원 가능 여부와 비자 지원은 공고 원문에 근거가 있을 때만 표시합니다. 한국 기업 공고나 영어 공고라는 이유만으로 지원 가능하다고 보지 않으니, '미확인'은 원문과 회사에 직접 확인하세요. '주재원'은 보통 본사 채용 후 파견, '현지 채용'은 현지 법인 직접 고용이라 체류·취업 조건이 다를 수 있습니다. 마감일은 기업 사정으로 바뀔 수 있습니다.</p>
+  </div>
+  <div class="tab-bar jobs-tabs" role="tablist" aria-label="근무지 구분">${TABS.map(([id, label]) =>
+    `<button type="button" role="tab" id="jt-${id}" aria-controls="jobs-panel" data-tab="${id}">${label} <span class="n"></span></button>`).join('')}</div>
+  <div class="jobs-views" role="group" aria-label="보기">${[['all', '전체'], ['new', '이번 주 신규'], ['soon', '마감 임박 (7일 이내)']].map(([id, label]) =>
+    `<button type="button" data-view="${id}" aria-pressed="false">${label}</button>`).join('')}</div>
+  <details class="jobs-filter" open>
+    <summary>조건 필터</summary>
+    <form class="jf-grid" onsubmit="return false">
+      ${JOB_FILTERS.map(([k, label]) => `<label><span>${label}</span><select data-f="${k}"></select></label>`).join('')}
+      <label><span>모집 상태</span><select data-f="status">${STATUS_OPTS.map(([v, l]) => `<option value="${v}">${l}</option>`).join('')}</select></label>
+      <button type="button" class="jf-reset">조건 초기화</button>
+    </form>
+  </details>
+  <div id="jobs-panel" role="tabpanel">
+    <p class="jobs-count" aria-live="polite"></p>
+    <ul class="jobs-list"></ul>
+    <div class="jobs-extra"></div>
+  </div>
+  ${sourcesSection()}
+</div>`;
+    const $ = s => main.querySelector(s);
+    const selects = [...main.querySelectorAll('select[data-f]')];
+    const statusOk = j => (state.status === 'all' ? true : state.status === 'open' ? j._st !== '마감' : j._st === state.status);
+    const viewOk = j => (state.view === 'new' ? isNewJob(j) : state.view === 'soon' ? soonJob(j, j._dl) : true);
+    function fill() {
+      const base = jobs.filter(j => inTab(j, state.tab));
+      JOB_FILTERS.forEach(([k, label, get]) => {
+        const sel = main.querySelector(`select[data-f="${k}"]`), cur = state[k] || '';
+        const vals = [...new Set(base.flatMap(get))].sort((a, b) => a.localeCompare(b, 'ko'));
+        sel.innerHTML = `<option value="">전체</option>` + vals.map(v => `<option${v === cur ? ' selected' : ''}>${esc(v)}</option>`).join('');
+        if (cur && !vals.includes(cur)) state[k] = '';
+      });
+    }
+    function draw() {
+      TABS.forEach(([id]) => {
+        const b = main.querySelector(`[data-tab="${id}"]`);
+        b.setAttribute('aria-selected', String(id === state.tab)); b.tabIndex = id === state.tab ? 0 : -1;
+        b.querySelector('.n').textContent = jobs.filter(j => inTab(j, id) && j._st !== '마감').length;
+      });
+      $('#jobs-panel').setAttribute('aria-labelledby', `jt-${state.tab}`);
+      main.querySelectorAll('[data-view]').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.view === state.view)));
+      const list = jobs.filter(j => inTab(j, state.tab) && statusOk(j) && viewOk(j) &&
+        JOB_FILTERS.every(([k, , get]) => !state[k] || get(j).includes(state[k])))
+        .sort((a, b) => (a._st === '마감') - (b._st === '마감') || (b.published_at || b.first_seen_at).localeCompare(a.published_at || a.first_seen_at));
+      $('.jobs-count').textContent = list.length ? `${list.length}건` : '';
+      $('.jobs-list').innerHTML = list.map(j => jobCard(j, now)).join('');
+      const tabLabel = TABS.find(t => t[0] === state.tab)[1];
+      const empty = !list.length ? `<p class="empty jobs-empty">${!jobs.length ? '아직 게시된 공고가 없습니다.'
+        : state.view === 'new' ? '이번 주 신규 공고 없음.' : state.view === 'soon' ? '7일 안에 마감되는 공고가 없습니다.'
+        : `조건에 맞는 ${tabLabel} 공고가 없습니다.`} 아래 출처 목록에서 직접 찾아볼 수도 있습니다.</p>` : '';
+      const progs = state.tab === 'intern' ? `<section class="intern-progs" aria-labelledby="ip-h"><h3 id="ip-h">인턴 프로그램 바로가기</h3>
+  <p>교환·실습 프로그램은 일반 채용과 조건이 다릅니다. 참가비, 급여, 재학 국가·학교 협약 같은 자격을 프로그램마다 확인하세요. 봉사(Global Volunteer 등)와 교육 모집은 인턴 공고로 넣지 않습니다.</p>
+  <ul class="src-list">${JOBS.sources.filter(s => s.active && (s.source_type === '인턴 프로그램' || s.source_type === '인턴')).map(sourceRow).join('')}</ul></section>` : '';
+      $('.jobs-extra').innerHTML = empty + progs;
+    }
+    main.querySelectorAll('[data-tab]').forEach(b => {
+      b.addEventListener('click', () => { state.tab = b.dataset.tab; history.replaceState(null, '', '#' + state.tab); fill(); draw(); });
+      b.addEventListener('keydown', e => {
+        const i = TABS.findIndex(t => t[0] === state.tab), d = e.key === 'ArrowRight' ? 1 : e.key === 'ArrowLeft' ? -1 : 0;
+        if (!d) return;
+        e.preventDefault(); const next = main.querySelector(`[data-tab="${TABS[(i + d + TABS.length) % TABS.length][0]}"]`); next.click(); next.focus();
+      });
+    });
+    main.querySelectorAll('[data-view]').forEach(b => b.addEventListener('click', () => { state.view = b.dataset.view; draw(); }));
+    selects.forEach(s => s.addEventListener('change', () => { state[s.dataset.f] = s.value; draw(); }));
+    $('.jf-reset').addEventListener('click', () => {
+      JOB_FILTERS.forEach(([k]) => { state[k] = ''; }); state.status = 'open'; state.view = 'all';
+      $('select[data-f="status"]').value = 'open'; fill(); draw();
+    });
+    window.addEventListener('hashchange', () => { state.tab = tabFromHash(); fill(); draw(); });
+    if (matchMedia('(max-width: 760px)').matches) $('.jobs-filter').open = false;
+    fill(); draw();
+  }
+
   /* ---------- 시작 ---------- */
   // 브라우저 탭 아이콘: KUERA 로고
   if (!document.querySelector('link[rel~="icon"]')) {
@@ -1217,7 +1414,7 @@ ${countryTabs(c, id)}
   document.getElementById('site-header').outerHTML = header();
   document.getElementById('site-footer').outerHTML = footer();
   const main = document.getElementById('main');
-  ({ home: renderHome, countries: renderCountries, news: renderNews, games: renderGames, about: renderAbout,
+  ({ home: renderHome, countries: renderCountries, news: renderNews, jobs: renderJobs, games: renderGames, about: renderAbout,
      country: m => renderCountry(m, body.dataset.slug),
      section: m => renderSection(m, body.dataset.slug, body.dataset.section) }[PAGE] || renderHome)(main);
 })();
