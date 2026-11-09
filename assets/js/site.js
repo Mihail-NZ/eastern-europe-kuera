@@ -294,13 +294,7 @@
   ${latest ? `<p class="news-overview"><strong>${fmtDate(latest.date)}의 흐름</strong>${esc(latest.overview)}</p>
   <ul class="card-list">${stories.map(storyCard).join('')}</ul>`
     : '<p class="empty">아직 올라온 브리핑이 없습니다.</p>'}
-</section>
-${window.REPORTS ? `<section class="home-reports wrap" aria-labelledby="reports-title">
-  <div class="section-head"><div><p class="kicker">Reports &amp; data</p><h2 id="reports-title">국가별 대표 보고서·자료</h2></div></div>
-  <ul class="outlets">${window.REPORTS.common.map(r => `<li><a href="${esc(r.u)}" target="_blank" rel="noopener">${esc(r.n)}</a><span>${esc(r.d)}</span></li>`).join('')}</ul>
-  <p class="reports-note">나라를 골라 KOTRA·외교부·세계은행·IMF·현지 공식 기관의 자료로 바로 이동하세요.</p>
-  <ul class="report-chips">${COUNTRIES.filter(c => window.REPORTS.countries[c.slug]).map(c => `<li><a href="${countryUrl(c.slug)}">${esc(c.name_ko)}</a></li>`).join('')}</ul>
-</section>` : ''}`;
+</section>`;
     mountThumbs(main, stories);
 
     // 홈과 국가 페이지는 동일한 Natural Earth 국경을 사용한다.
@@ -346,14 +340,20 @@ ${window.REPORTS ? `<section class="home-reports wrap" aria-labelledby="reports-
   <div class="wrap"><p class="kicker">Countries</p><h1>국가</h1>
   <p>동유럽 20개국의 국가 정보와 소식을 권역별로 살펴보세요.</p>
   <nav class="region-jump" aria-label="권역 바로가기"><ul>${REGIONS.map(r =>
-    `<li><a href="#r-${r.id}" style="--rc:${r.color}">${esc(r.label)}</a></li>`).join('')}</ul></nav></div>
+    `<li><a href="#r-${r.id}" style="--rc:${r.color}">${esc(r.label)}</a></li>`).join('')}${window.REPORTS ? '<li><a href="#reports">보고서·자료</a></li>' : ''}</ul></nav></div>
 </section>
 <div class="wrap list-wrap">${REGIONS.map(r => `
   <section class="region" id="r-${r.id}" style="--rc:${r.color}" aria-labelledby="rh-${r.id}">
     <div class="region-head"><h2 id="rh-${r.id}">${esc(r.label)}</h2><span class="region-en">${esc(r.short)}</span><span class="region-count">${r.members.length}개국</span></div>
     <ul class="cc-list">${r.members.map(card).join('')}</ul>
   </section>`).join('')}
-</div>`;
+</div>
+${window.REPORTS ? `<section class="home-reports wrap" id="reports" aria-labelledby="reports-title">
+  <div class="section-head"><div><p class="kicker">Reports &amp; data</p><h2 id="reports-title">국가별 대표 보고서·자료</h2></div></div>
+  <ul class="outlets">${window.REPORTS.common.map(r => `<li><a href="${esc(r.u)}" target="_blank" rel="noopener">${esc(r.n)}</a><span>${esc(r.d)}</span></li>`).join('')}</ul>
+  <p class="reports-note">나라를 골라 KOTRA·외교부·세계은행·IMF·현지 공식 기관의 자료로 바로 이동하세요.</p>
+  <ul class="report-chips">${COUNTRIES.filter(c => window.REPORTS.countries[c.slug]).map(c => `<li><a href="${countryUrl(c.slug)}">${esc(c.name_ko)}</a></li>`).join('')}</ul>
+</section>` : ''}`;
   }
 
   /* ---------- 페이지: 국가 상세(허브)와 항목별 하위 페이지 ----------
@@ -1193,17 +1193,8 @@ ${countryTabs(c, id)}
 
   <h2>연락처</h2>
   <ul class="kuera-contact">
-    <li><span class="kc-label">인스타그램</span><a href="https://www.instagram.com/kuera_official/" target="_blank" rel="noopener">@kuera_official</a></li>
-    <li><span class="kc-label">이메일</span><a href="mailto:ku.easteurope@gmail.com">ku.easteurope@gmail.com</a></li>
-  </ul>
-  <h2 class="kuera-site-h">이 사이트에 대해</h2>
-  <p>Eastern Europe by KUERA는 학회원이 세션과 프로젝트, 지역 스터디를 준비하며 참고할 수 있도록 동유럽 20개국의 기초 정보와 최신 브리핑을 한곳에 정리한 아카이브입니다.</p>
-  <ul>
-    <li>국가 정보는 EU, 각국 관광청, 투자진흥기관 같은 공식 출처를 우선하고 항목마다 출처를 적습니다.</li>
-    <li>뉴스는 기사 본문을 옮기지 않고 요약과 원문 링크만 싣습니다.</li>
-    <li>사진은 Wikimedia Commons에 공개된 사진을 쓰며, 저작자와 라이선스를 사진마다 표시합니다. 맞는 사진을 찾지 못한 곳은 다른 사진으로 대신하지 않고 "사진 준비 중"으로 비워 둡니다.</li>
-    <li>운영시간·입장료·통계는 바뀔 수 있습니다. 방문이나 인용 전에 각 항목의 출처를 다시 확인하세요.</li>
-    <li>우크라이나·벨라루스 페이지는 문화유산과 역사를 소개하는 자료이며, 현재 방문을 권유하지 않습니다.</li>
+    <li><a class="kc-ig" href="https://www.instagram.com/kuera_official/" target="_blank" rel="noopener" aria-label="인스타그램 @kuera_official" title="인스타그램 @kuera_official"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.3" cy="6.7" r="1.3" fill="currentColor"/></svg></a></li>
+    <li><a class="kc-mail" href="mailto:ku.easteurope@gmail.com" aria-label="이메일 ku.easteurope@gmail.com" title="ku.easteurope@gmail.com"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="5" width="19" height="14" rx="2.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M3.5 6.5 12 13l8.5-6.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></a></li>
   </ul>
 </section>`;
   }

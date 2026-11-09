@@ -605,11 +605,13 @@ a.cc .cc-state { color: #fff; background: var(--rc); padding: 3px 10px; border-r
   .kuera-acts { grid-template-columns: 1fr; }
   .kuera-lead { font-size: 17px !important; }
 }
-.kuera-contact { list-style: none; padding: 0 !important; margin: 0; background: var(--card); border-radius: 14px; box-shadow: var(--shadow); overflow: hidden; }
-.kuera-contact li { display: flex; align-items: baseline; gap: 18px; padding: 14px 22px; margin: 0 !important; }
-.kuera-contact li + li { border-top: 1px solid var(--rule); }
-.kuera-contact .kc-label { flex: none; width: 84px; font-size: 13px; color: var(--muted); }
-.kuera-contact a { font-weight: 500; font-size: 16px; word-break: break-all; }
+.kuera-contact { list-style: none; padding: 0 !important; margin: 0 0 48px; display: flex; gap: 14px; }
+.kuera-contact li { margin: 0 !important; }
+.kuera-contact a { display: grid; place-items: center; width: 56px; height: 56px; border-radius: 50%; background: var(--card); box-shadow: var(--shadow); color: var(--ink); transition: transform .15s, color .15s; }
+.kuera-contact a:hover, .kuera-contact a:focus-visible { transform: translateY(-2px); }
+.kuera-contact .kc-ig:hover, .kuera-contact .kc-ig:focus-visible { color: #d6246e; }
+.kuera-contact .kc-mail:hover, .kuera-contact .kc-mail:focus-visible { color: #1f5fd1; }
+.kuera-contact svg { width: 26px; height: 26px; }
 /* 국가별 대표 보고서·자료 */
 .home-reports { padding-top: 8px; padding-bottom: 56px; }
 .reports-note { margin: 18px 0 10px; color: var(--muted, #5b6b85); font-size: 15px; }
