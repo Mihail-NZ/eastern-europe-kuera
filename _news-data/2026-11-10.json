@@ -1,0 +1,144 @@
+{
+  "date": "2026-11-10",
+  "home": [0, 1, 4],
+  "overview": "우크라이나 대표단이 11월 10~11일 아부다비 3자 협상을 위해 출발했고, 11월 2일 자포리자주 코미슈바하 공습 희생자 수습이 이어지고 있습니다. 폴란드에서는 11월 7일 크라쿠프 중앙광장 총격으로 6명이 숨지고 용의자 가족 3명도 숨진 채 발견돼 국가 애도 기간이 선포됐습니다. 폰 데어 라이엔 집행위원장은 부쿠레슈티에서 불가리아·루마니아가 추진하는 흑해 해상안보 허브에 5,000만 유로를 배정한다고 밝혔습니다. 몰도바는 러시아산 가스를 사지 않는다고 발표하고 EU 연결 송전선을 개통했습니다.",
+  "stories": [
+    {
+      "region": "top",
+      "title": "우크라이나 대표단 아부다비로…11월 10~11일 3자 협상, 코미슈바하 공습 희생자 신원 확인 계속",
+      "countries": ["우크라이나"],
+      "period": "2026-11-08 ~ 11-09",
+      "points": [
+        "키이우인디펜던트에 따르면 아부다비 협상은 11월 10~11일 열릴 예정이며, 루스템 우메로프가 이끄는 우크라이나 대표단이 이미 이동 중입니다. 크렘린은 미국이 중재하는 러시아·우크라이나 3자 협상이라고 강조했고, EU·NATO와 영국·프랑스·독일 안보보좌관의 참석 형식은 불분명한 상태입니다.",
+        "11월 2일 코미슈바하 공습 현장에서 수습된 시신 55구 가운데 30명의 신원이 확인됐고, 잔해 속에 19구가 더 있을 수 있다고 경찰이 밝혔습니다.",
+        "EU는 2027년 우크라이나에 450억 유로를 추가 지원할 계획이며, 에너지 위기가 심해지자 긴급 자금 지원 장치를 가동할 예정이라고 보도됐습니다. 11월 9일 현재 12개 주에서 정전이 보고됐습니다.",
+        "젤렌스키 대통령은 모디 인도 총리와 통화해 평화 노력 지원을 요청했고, 폴란드를 중심으로 11개국 약 2,800명이 참여하는 전후 파견 대비 훈련이 11월 22일까지 시작됐습니다."
+      ],
+      "why": "협상이 이틀 앞으로 다가온 가운데 유럽의 참여 방식을 둘러싼 이견이 남아 있고, 민간 피해와 에너지 설비 공격은 계속되고 있습니다. 협상 결과는 아직 나오지 않았습니다.",
+      "korea": "겨울철 전력난으로 에너지 설비 복구 수요가 커지고 있어, 현지 진출 기업은 협상과 EU 지원 집행 동향을 지켜볼 필요가 있습니다.",
+      "sources": [
+        { "name": "Kyiv Independent – Europe to attend Ukraine peace talks as Kyiv's delegation heads to Abu Dhabi", "url": "https://kyivindependent.com/europes-attendance-at-abu-dhabi-peace-talks-clarified/", "lang": "EN" },
+        { "name": "Kyiv Independent – Police identify 30 of 55 bodies recovered from Komyshuvakha airstrike", "url": "https://kyivindependent.com/police-identify-30-of-55-bodies-recovered-from-komyshuvakha-airstrike/", "lang": "EN" },
+        { "name": "Kyiv Independent – EU plans to send a new 45 billion euros to Kyiv in 2027", "url": "https://kyivindependent.com/eu-plans-to-send-a-new-45-billion-euros-to-kyiv-in-2027/", "lang": "EN" },
+        { "name": "Kyiv Independent – Zelensky seeks India's assistance in peace efforts ahead of Russia talks", "url": "https://kyivindependent.com/zelensky-seeks-indias-assistance-in-peace-efforts-ahead-of-russia-talks/", "lang": "EN" }
+      ]
+    },
+    {
+      "region": "v4",
+      "title": "크라쿠프 중앙광장 총격으로 6명 사망…용의자 가족 3명도 숨져, 폴란드 이틀간 국가 애도",
+      "countries": ["폴란드"],
+      "period": "2026-11-07 ~ 11-09",
+      "points": [
+        "노츠프롬폴란드에 따르면 11월 7일(토) 오후 3시 직후 24세 남성이 차를 몰고 크라쿠프 중앙 시장 광장에 들어가 총격을 가해 6명이 숨졌습니다. 피해자는 폴란드인 4명, 영국인 1명, 오스트리아인 1명이며 부상자는 15~16명입니다. 용의자는 경찰과 교전 중 중상을 입고 11월 9일 병원에서 숨졌습니다.",
+        "용의자의 부모와 누나 등 가족 3명이 오스트로비에츠 시비엔토키스키 자택에서 숨진 채 발견됐고, 검찰은 그가 범행 전 가족을 살해한 것으로 보고 있습니다. 이를 합치면 그가 숨지게 한 사람은 9명입니다.",
+        "발칸인사이트에 따르면 검찰은 현재까지 정치적·극단주의 활동의 증거를 찾지 못했다고 밝혔고, 동기는 불분명합니다. 내무장관은 처음 극우 이념에 끌렸을 가능성을 언급했다가 초기 가설이라고 물러섰습니다.",
+        "용의자는 유효한 총기 면허로 민간용 소총을 사용했고, 일부 장관은 총기 규제 강화를 제안했습니다. 정부는 11월 8~9일을 국가 애도 기간으로 선포했습니다."
+      ],
+      "why": "폴란드 전후 최악 수준의 총기 난사로, 합법 소지 총기 관리와 면허자 심리 검증 체계가 정책 논쟁으로 떠올랐습니다. 동기와 총기 규제 법안의 향방이 다음 확인 지점입니다.",
+      "korea": "",
+      "sources": [
+        { "name": "Notes from Poland – Perpetrator of Kraków terrorist attack dies of injuries in hospital", "url": "https://notesfrompoland.com/2026/11/09/perpetrator-of-krakow-terrorist-attack-dies-of-injuries-in-hospital/", "lang": "EN" },
+        { "name": "Notes from Poland – Polish government ministers suggest tighter gun controls after deadly terrorist shooting", "url": "https://notesfrompoland.com/2026/11/09/polish-government-ministers-suggest-tighter-gun-controls-after-deadly-terrorist-shooting/", "lang": "EN" },
+        { "name": "Balkan Insight – Polish Mass Shooter Dies of Injuries; Motive Remains Unclear", "url": "https://balkaninsight.com/2026/11/09/polish-mass-shooter-dies-of-injuries-motive-remains-unclear/rd/", "lang": "EN" }
+      ]
+    },
+    {
+      "region": "baltic",
+      "title": "라트비아, 안보리 의장국으로 우크라이나 긴급회의 주재…에스토니아 외무 “아부다비 최선은 휴전”",
+      "countries": ["라트비아", "에스토니아"],
+      "period": "2026-11-09",
+      "points": [
+        "LSM에 따르면 라트비아는 11월 9일 우크라이나의 요청으로 소집된 유엔 안보리 긴급회의를 의장국으로서 주재했습니다. 덴마크·프랑스·그리스·영국이 소집을 지지했습니다.",
+        "라트비아 외교부는 브라줴 외교장관이 민간인 공격 중단, 국제범죄 책임 규명, 즉각적이고 완전한 무조건 휴전을 요구할 계획이라고 밝혔습니다.",
+        "ERR 헤드라인에 따르면 차흐나 에스토니아 외교장관은 아부다비 협상에서 가능한 최선의 결과는 휴전이라고 말했습니다(본문은 확인하지 못했습니다).",
+        "ERR에 따르면 에스토니아 셀버 슈퍼마켓 냉장고가 사이버 공격으로 50도까지 올라갔고, 유럽 11개국에서 비슷한 사례가 보고됐습니다."
+      ],
+      "why": "발트 국가들이 아부다비 협상을 앞두고 유엔과 유럽 무대에서 휴전과 책임 규명을 강하게 요구하고 있으며, 사이버·하이브리드 위협도 일상 인프라로 번지고 있습니다.",
+      "korea": "",
+      "sources": [
+        { "name": "LSM – Latvia chairs emergency UN meeting on Ukraine", "url": "https://eng.lsm.lv/article/politics/diplomacy/09.11.2026-latvia-chairs-emergency-un-meeting-on-ukraine.a671081/", "lang": "EN" },
+        { "name": "ERR – FM on Abu Dhabi talks: Best possible outcome would be a ceasefire", "url": "https://news.err.ee/1610190274/estonian-foreign-minister-on-abu-dhabi-talks-best-possible-outcome-would-be-a-ceasefire", "lang": "EN" },
+        { "name": "ERR – How is Estonia protecting itself against intensifying cyberthreats?", "url": "https://news.err.ee/1610190514/how-is-estonia-protecting-itself-against-intensifying-cyberthreats", "lang": "EN" }
+      ]
+    },
+    {
+      "region": "wbalkan",
+      "title": "도디크, 미국 방문 뒤 스르프스카 헌법 개정 시사…세르비아에서는 사회당 의석 상실",
+      "countries": ["보스니아 헤르체고비나", "세르비아"],
+      "period": "2026-11-08 ~ 11-09",
+      "points": [
+        "N1(Hina)에 따르면 도디크 SNSD 대표는 11월 8일 플로리다 마러라고 행사에서 돌아와, 스르프스카 공화국 의회가 다음 주 구성되며 헌법 개정에 필요한 3분의 2 의석을 확보할 수 있다고 자신했습니다.",
+        "도디크는 고위대표부의 역할이 트럼프 임기 남은 2년 동안 약화될 것으로 내다봤고, 10월 세르비아 총선에서 학생 명단이 부치치 진영을 꺾은 뒤에도 세르비아 새 지도부와 좋은 관계를 유지하겠다고 말했습니다.",
+        "발칸인사이트 11월 9일 칼럼에 따르면 세르비아 사회당(SPS)이 처음으로 의회 의석을 잃었고 존속이 불투명합니다.",
+        "BTA에 따르면 브라니슬라프 루지치 전 사회당 부대표가 새 정당 창당 청원을 시작했고, 세르비아 불가리아 소수민족위원회 선거에서는 자하리예프 명단이 앞선 것으로 잠정 집계됐습니다."
+      ],
+      "why": "세르비아는 총선 이후 정치 지형이 재편되고 있고, 보스니아에서는 스르프스카 지도부가 미국 정책 변화를 헌법 개정 시도에 활용하려는 움직임이 나타나고 있습니다.",
+      "korea": "",
+      "sources": [
+        { "name": "N1 – Dodik returns from US, claims popularity among Trump supporters and plans constitutional changes in Republika Srpska", "url": "https://n1info.ba/english/news/dodik-returns-from-us-claims-popularity-among-trump-supporters-and-plans-constitutional-changes-in-republika-srpska/", "lang": "EN" },
+        { "name": "Balkan Insight – Bye-Bye Serbia's SPS, the Socialists Who Weren't", "url": "https://balkaninsight.com/2026/11/09/bye-bye-serbias-sps-the-socialists-who-werent/bi/", "lang": "EN" },
+        { "name": "European Western Balkans – Analysis: EU's divergent responses to political crises in Serbia and Georgia", "url": "https://europeanwesternbalkans.com/2026/11/09/analysis-eus-divergent-responses-to-political-crises-in-serbia-and-georgia-exposed-a-lack-of-strategic-consistency/", "lang": "EN" }
+      ]
+    },
+    {
+      "region": "sbalkan",
+      "title": "EU, 불가리아·루마니아 흑해 해상안보 허브에 5,000만 유로…몬테네그로 협상 장 2개 추가 종료",
+      "countries": ["불가리아", "몬테네그로"],
+      "period": "2026-11-06 ~ 11-09",
+      "points": [
+        "BTA에 따르면 폰 데어 라이엔 집행위원장은 11월 9일 부쿠레슈티에서 니쿠쇼르 단 루마니아 대통령을 만나 흑해 해상안보 허브에 5,000만 유로를 배정한다고 밝혔고, 절차를 앞당기겠다고 했습니다.",
+        "허브는 바르나(불가리아)와 콘스탄차(루마니아)의 상호 보완 센터로 구성되며, 불가리아 쪽은 상황 인식, 핵심 인프라 보호, 사이버안보, 하이브리드 위협 대응에 중점을 둡니다.",
+        "BTA는 프랑스 해운사가 흑해 운송에 추가 요금을 부과했고, 경쟁보호위원회가 카우플란트 불가리아에 7,600만 유로 과징금을 물렸다고 전했습니다.",
+        "유럽웨스턴발칸스에 따르면 몬테네그로는 11월 6일 브뤼셀 정부간회의에서 상품 자유 이동과 식품안전·수의·식물위생 장을 잠정 종료해 33개 장 중 23개를 마쳤습니다."
+      ],
+      "why": "흑해 하이브리드 위협에 대한 EU의 지원이 예산으로 구체화됐고, 몬테네그로는 EU 가입 협상에서 앞서 나가고 있습니다.",
+      "korea": "흑해 항만 물류 비용 상승과 해상 안보 강화 움직임은 이 지역을 거치는 한국 기업의 물류에 영향을 줄 수 있습니다.",
+      "sources": [
+        { "name": "BTA – EU to Allocate EUR 50 Mln for Black Sea Maritime Security Hub, EC President Says", "url": "https://www.bta.bg/en/news/balkans/1243247-eu-to-allocate-eur-50-mln-for-black-sea-maritime-security-hub-ec-presidents-say", "lang": "EN" },
+        { "name": "European Western Balkans – Montenegro provisionally closes two more negotiating chapters", "url": "https://europeanwesternbalkans.com/2026/11/09/montenegro-provisionally-closes-two-more-negotiating-chapters/", "lang": "EN" }
+      ]
+    },
+    {
+      "region": "east",
+      "title": "몰도바 “러시아 가스 구매 제로”…EU 연결 새 송전선 개통, 루마니아 흑해 안보 논의",
+      "countries": ["몰도바", "루마니아"],
+      "period": "2026-11-06 ~ 11-09",
+      "points": [
+        "키이우인디펜던트에 따르면 산두 몰도바 대통령은 11월 8일 러시아산 가스를 구매하지 않는다고 밝히고 볼쿠네슈티-키시너우 구간 158km 송전선을 개통했습니다. 루마니아와 잇는 송전선 2개가 더 건설 중이라고 했습니다.",
+        "몰도바는 그동안 러시아 소유의 트란스니스트리아 쿠추르간 발전소에 크게 의존해 왔고, 기사는 EU가 2027년 러시아산 가스를 전면 금지할 예정이라고 전했습니다.",
+        "RRI에 따르면 11월 6~7일 부쿠레슈티에서 루마니아와 우크라이나가 흑해 안보와 소수민족 권리를 논의했고, 같은 시기 유럽 곳곳 항공편이 허위 폭탄 위협 표적이 됐다고 보도했습니다.",
+        "RRI에 따르면 11월 9일 부쿠레슈티에서 룩사나 민주 EU 집행위 부위원장이 오프레아 국방장관을 만나 국방·안보를 논의했습니다."
+      ],
+      "why": "몰도바가 러시아 에너지 의존을 끊는 과정이 실제 인프라로 이어지고 있으며, 루마니아는 흑해 안보 협력의 거점 역할을 키우고 있습니다.",
+      "korea": "",
+      "sources": [
+        { "name": "Kyiv Independent – Moldova 'buys zero Russian gas,' launches new power line to EU", "url": "https://kyivindependent.com/moldova-buys-zero-russian-gas-launches-new-power-line-to-eu/", "lang": "EN" },
+        { "name": "RRI – Romania-Ukraine talks in Bucharest", "url": "https://www.rri.ro/en/news-and-current-affairs/today-in-the-news/romania-ukraine-talks-in-bucharest-id1080440.html", "lang": "EN" },
+        { "name": "RRI – Talks on defence and security in Europe", "url": "https://www.rri.ro/en/news-and-current-affairs/today-in-the-news/talks-on-defence-and-security-in-europe-id1081444.html", "lang": "EN" }
+      ]
+    }
+  ],
+  "countries": {
+    "폴란드": "크라쿠프 중앙광장 총격으로 6명 사망, 용의자 가족 3명도 숨진 채 발견, 총기 규제 강화 논의(11/7~9, 노츠프롬폴란드).",
+    "체코": "정부가 2027년 1월부터 실업급여 축소를 추진, 러시아 하키 선수의 세계선수권 출전을 막으려는 법적 수단 검토(11/9, Expats.cz).",
+    "슬로바키아": "최근 48시간 내 주요 보도 확인되지 않음. 이번에 조회한 매체에서 슬로바키아 기사는 찾지 못했음.",
+    "헝가리": "최근 48시간 내 주요 보도 확인되지 않음. 텔렉스 영문판은 이번 조회에서 접속이 막혔음(403).",
+    "에스토니아": "셀버 슈퍼마켓 냉장고가 사이버 공격으로 50도까지 올랐고 유럽 11개국에서 유사 사례 보고, 3분기 수출 6% 증가(11/9, ERR).",
+    "라트비아": "안보리 의장국으로 우크라이나 긴급회의 주재(11/9), 동부 관광업이 드론 경보 여파로 타격(LSM).",
+    "리투아니아": "최근 48시간 내 주요 보도 확인되지 않음. 배경으로 노동법 개정 내용 정리 기사 게재(11/7, LRT).",
+    "슬로베니아": "최근 48시간 내 주요 보도 확인되지 않음. Sloveniatimes는 접속 오류(403)로 읽지 못했음.",
+    "크로아티아": "부치치 이후 세르비아와의 관계 변화 가능성을 다룬 기사와 크로아티아인의 관심을 조사한 연구 보도(11/9, Total Croatia News).",
+    "세르비아": "사회당(SPS)이 처음으로 의회 의석을 잃어 존속이 불투명하다는 분석, 루지치 전 부대표가 새 정당 창당 청원 시작(11/9, 발칸인사이트·BTA).",
+    "보스니아 헤르체고비나": "도디크가 미국 방문 뒤 스르프스카 헌법 개정을 시사(11/8), 사라예보 대기질이 세계 최악 수준으로 거론, 모스타르 옛 다리 파괴 33주년 추모(11/9, N1).",
+    "몬테네그로": "11월 6일 협상 장 2개를 잠정 종료해 33개 중 23개 완료, 대테러 당국이 2022년 이후 해외 전투 참여 자국민 14명을 등록했다고 발표(11/9).",
+    "코소보": "2026년 유럽위원회 코소보 보고서 분석 기사 게재, 노보브르도 요새가 유네스코 복원 문제로 폐쇄 상태라는 보도(11/9, EWB·발칸인사이트).",
+    "알바니아": "2026년 유럽위원회 알바니아 보고서를 다룬 분석 기사에서 시위·충돌 현실과 개혁 과제를 대비(11/9, EWB).",
+    "북마케도니아": "코차니 법원이 불가리아인 이바 미하일로바의 영상 출석 요청을 기각, 불가리아 의원들이 재판 방청(11/9, BTA).",
+    "불가리아": "EU가 불가리아·루마니아 흑해 해상안보 허브에 5,000만 유로 배정, 카우플란트에 7,600만 유로 과징금(11/9, BTA).",
+    "우크라이나": "11월 10~11일 아부다비 3자 협상을 앞두고 대표단 출발, 12개 주에서 정전, EU의 2027년 450억 유로 지원 계획(11/9, Kyiv Independent).",
+    "벨라루스": "최근 48시간 내 주요 보도 확인되지 않음. 이번에 조회한 매체에서 벨라루스 기사는 찾지 못했음.",
+    "몰도바": "산두 대통령이 러시아 가스 구매 중단을 발표하고 EU 연결 158km 송전선 개통(11/8, Kyiv Independent).",
+    "루마니아": "부쿠레슈티에서 폰 데어 라이엔이 흑해 안보 허브 지원을 발표, EU 집행위 부위원장이 국방장관과 회담(11/9, RRI·BTA)."
+  },
+  "note": "작성 기준: 2026-11-10 저녁(한국시간). Kyiv Independent, Radio Romania International, LSM, LRT, ERR, Notes from Poland, Balkan Insight, BTA, European Western Balkans, Expats.cz, Total Croatia News, N1, KOTRA 해외시장뉴스 첫 화면을 확인했고 크라쿠프 총격·아부다비 협상·몰도바·발트·도디크 관련 기사는 본문을 열어 확인했습니다. Sloveniatimes와 Telex는 접속 오류(403)로 읽지 못했고 한국 언론은 조회하지 않았습니다. 크라쿠프 총격 날짜는 발칸인사이트가 11월 8일, 노츠프롬폴란드가 11월 7일(토)로 달라 요일 기준으로 11월 7일로 적었고 부상자 수도 매체별로 15~16명으로 다릅니다. ERR 에스토니아 외무장관 기사는 제목만 확인했습니다. 발칸인사이트 월요일 브리핑은 유료라 본문을 읽지 못했고, N1 일부와 BTA 일부는 제목·요약 기준입니다. 아부다비 협상 결과는 아직 나오지 않았습니다. 슬로바키아·헝가리·리투아니아·슬로베니아·벨라루스는 새 주요 보도가 확인되지 않았습니다. 출처 표시: KR = 한국 언론, KOTRA = KOTRA 해외시장뉴스, EN = 해외 매체."
+}
