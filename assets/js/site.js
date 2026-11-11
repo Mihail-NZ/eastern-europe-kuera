@@ -1105,14 +1105,15 @@ ${countryTabs(c, id)}
    * 데일리 뉴스와 따로 저장하고, 데일리 기사에서 고른 경우 daily_ref("날짜#기사번호")로만 연결한다. */
   const MAJOR = window.MAJOR_NEWS || { categories: [], items: [] };
   const MAJOR_CATS = MAJOR.categories || [];
-  const ARCHIVE_YEARS = 3; // 원문 발행 후 3년이 지나면 보관 기사로 본다(지우지 않음)
+  const ARCHIVE_YEARS = 5; // 원문 발행 후 5년이 지나면 보관 기사로 본다(지우지 않음)
   const catOf = id => MAJOR_CATS.find(c => c.id === id);
   const subOf = (cat, id) => ((catOf(cat) || {}).subs || []).find(s => s.id === id);
   const majorItems = () => (MAJOR.items || []).filter(it => it.status === 'published' || it.status === 'archived');
   const isArchived = it => {
     if (it.status === 'archived') return true;
     const d = new Date(it.published + 'T00:00:00'); d.setFullYear(d.getFullYear() + ARCHIVE_YEARS);
-    return d < new Date();
+    const today = new Date(); today.setHours(0, 0, 0, 0);
+    return d < today;
   };
   const byKey = (a, b) => (!!b.featured - !!a.featured) || b.published.localeCompare(a.published);
   const byDate = (a, b) => b.published.localeCompare(a.published);
@@ -1157,7 +1158,7 @@ ${countryTabs(c, id)}
   <h3 class="mj-d-h">원문</h3>
   <ul class="mj-d-src">${(it.sources || []).map(s => `<li><a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.name)}</a><span>${esc(host(s.url))}</span></li>`).join('')}</ul>
   ${daily ? `<p class="mj-d-daily"><a href="${ROOT}news/index.html?date=${esc(daily)}#daily">${fmtLong(daily)} 데일리 뉴스에서 처음 다룬 기사입니다</a></p>` : ''}
-  <p class="mj-d-note">요약과 시사점은 학회가 원문을 바탕으로 작성했습니다. 수치와 발언은 원문에서 확인하세요.</p>
+  <p class="mj-d-note">요약은 원문을 바탕으로 작성했으며, ‘왜 중요한가’는 편집상 해석입니다. 수치·계획은 보도 시점을 기준으로 하므로 이후 진행 상황은 원문에서 확인하세요.</p>
 </article>`;
     dlg.querySelector('.mj-close').addEventListener('click', () => dlg.close());
     dlg.onclose = onClose || null;
@@ -1189,12 +1190,12 @@ ${countryTabs(c, id)}
     const tabFromHash = () => (/^#major/.test(location.hash) ? 'major' : 'daily');
     const st = { tab: tabFromHash(), dq: '', dc: pickCountry(qs.get('country')), dd: days.some(d => d.date === qs.get('date')) ? qs.get('date') : '', dShown: 5,
       cat: '', sub: '', mq: '', mc: pickCountry(qs.get('country')), my: '', sort: 'key', arch: false, mShown: 12 };
-    const TABS = [['daily', '데일리 뉴스', `${days.length}일`], ['major', '주요 뉴스', `${majors.filter(it => !isArchived(it)).length}건`]];
+    const TABS = [['daily', '데일리 뉴스', `${days.length}일`], ['major', '최근 5개년 주요 뉴스', `${majors.filter(it => !isArchived(it)).length}건`]];
     const sel = (f, label) => `<label><span>${label}</span><select data-f="${f}"></select></label>`;
     main.innerHTML = `
 <section class="page-head night">
   <div class="wrap"><p class="kicker">News</p><h1>뉴스</h1>
-  <p>데일리 뉴스는 동유럽의 오늘을, 주요 뉴스는 최근 3년 사이 이 지역을 바꾼 사건을 분야별로 정리합니다. 기사 본문은 옮기지 않고 요약과 원문 링크만 싣습니다.</p></div>
+  <p>데일리 뉴스는 동유럽의 오늘을, 최근 5개년 주요 뉴스는 이 지역을 바꾼 사건을 분야별로 정리합니다. 기사 본문은 옮기지 않고 요약과 원문 링크만 싣습니다.</p></div>
 </section>
 <div class="wrap news-wrap">
   <div class="tab-bar news-tabs" role="tablist" aria-label="뉴스 구분">${TABS.map(([id, label, n]) =>
@@ -1213,14 +1214,14 @@ ${countryTabs(c, id)}
   </section>
 
   <section id="np-major" class="news-panel" role="tabpanel" aria-labelledby="nt-major" hidden>
-    <p class="np-lead">최근 3년 동안 동유럽의 정치·경제·산업·사회 흐름을 바꾼 사건을 골라 핵심 내용과 시사점을 함께 정리했습니다.</p>
+    <p class="np-lead">최근 5년 동안 동유럽의 정치·경제·산업·사회 흐름을 바꾼 사건을 골라 핵심 내용과 시사점을 함께 정리했습니다. 한국과 직접 관련된 외교·산업·협력 소식은 ‘한국-동유럽’에서 모아 볼 수 있습니다.</p>
     <div class="chip-row mj-cats" role="group" aria-label="분야"></div>
     <div class="chip-row mj-subs" role="group" aria-label="산업 세부 분야" hidden></div>
     <form class="nf-bar" role="search" onsubmit="return false">
       <label class="nf-q"><span>검색</span><input type="search" data-f="mq" placeholder="제목·요약·키워드"></label>
       ${sel('mc', '나라')}${sel('my', '연도')}
       <label><span>정렬</span><select data-f="sort"><option value="key">중요 뉴스 먼저</option><option value="date">최신순</option></select></label>
-      <label class="nf-chk"><input type="checkbox" data-f="arch"> <span>3년 지난 보관 기사 포함</span></label>
+      <label class="nf-chk"><input type="checkbox" data-f="arch"> <span>5년 지난 보관 기사 포함</span></label>
       <button type="button" class="nf-reset">초기화</button>
     </form>
     <p class="nf-count" aria-live="polite"></p>
@@ -1228,7 +1229,7 @@ ${countryTabs(c, id)}
     <div class="nf-more"></div>
     <aside class="mj-criteria">
       <h2>선정 기준</h2>
-      <p>원문 발행일 기준 최근 3년 안의 기사 가운데 나라나 지역 전체의 방향을 바꾼 사건, 산업·경제 구조의 변화, 한국 기업과 직접 이어지는 사안, 외교·안보·통상의 전환점, 오래 참고할 만한 사회·문화 변화를 고릅니다. 화제성보다 이후 흐름에 미친 영향을 봅니다. 3년이 지난 기사는 지우지 않고 보관 기사로 옮깁니다.</p>
+      <p>원문 발행일 기준 오늘부터 거슬러 최근 5년 안의 기사 가운데 나라나 지역 전체의 방향을 바꾼 사건, 산업·경제 구조의 변화, 외교·안보·통상의 전환점, 오래 참고할 만한 사회·문화 변화를 고릅니다. 국제·현지 언론과 정부·국제기구·기업의 원문 자료를 함께 참고하며, 기업 발표의 계획과 실제 완료를 구분합니다. 같은 사건을 다룬 여러 보도와 후속 진행은 한 항목에 모읍니다. 한국 정부·기업·기관이 직접 당사자인 소식은 ‘한국-동유럽’으로 분류하고 다른 분야에 중복 등록하지 않습니다. 5년이 지난 기사는 지우지 않고 보관 기사로 옮깁니다.</p>
     </aside>
   </section>
 </div>`;

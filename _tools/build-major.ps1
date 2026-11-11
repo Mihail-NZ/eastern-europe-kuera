@@ -20,12 +20,17 @@ foreach ($c in @($data.categories)) {
   $cats[$c.id] = @(@($c.subs) | Where-Object { $_ } | ForEach-Object { $_.id })
 }
 
-$ids = @{}; $urls = @{}; $refs = @{}
+$ids = @{}; $urls = @{}; $refs = @{}; $titles = @{}
 foreach ($it in @($data.items)) {
   $n = "item $($it.id)"
   if (-not $it.id) { $errs.Add('item: id 없음'); continue }
   if ($ids.ContainsKey($it.id)) { $errs.Add("${n}: id 중복") }; $ids[$it.id] = 1
   foreach ($f in 'title', 'summary') { if (-not $it.$f) { $errs.Add("${n}: $f 없음") } }
+  $titleKey = ("$($it.title)".Normalize([Text.NormalizationForm]::FormKC).ToLowerInvariant() -replace '[^\p{L}\p{N}]', '')
+  if ($titleKey) {
+    if ($titles.ContainsKey($titleKey)) { $errs.Add("${n}: 같은 제목이 $($titles[$titleKey])에도 있음(중복 등록)") }
+    $titles[$titleKey] = $it.id
+  }
   if ($STATUS -notcontains $it.status) { $errs.Add("${n}: status 값 이상(draft/published/archived)") }
   if ($it.review -and $REVIEW -notcontains $it.review) { $errs.Add("${n}: review 값 이상(ai/checked)") }
   if (-not $cats.ContainsKey($it.category)) { $errs.Add("${n}: 모르는 category $($it.category)") }

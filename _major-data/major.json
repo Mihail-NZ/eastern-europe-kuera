@@ -1,25 +1,91 @@
 {
-  "updated": "2026-11-11",
+  "updated": "2026-11-12",
   "categories": [
-    { "id": "industry", "ko": "산업", "en": "Industry", "subs": [
-      { "id": "energy", "ko": "에너지", "en": "Energy" },
-      { "id": "defense", "ko": "방산", "en": "Defense" },
-      { "id": "auto", "ko": "자동차·배터리", "en": "Automotive & Battery" },
-      { "id": "consumer", "ko": "소비재·유통", "en": "Consumer & Retail" },
-      { "id": "tech", "ko": "IT·첨단기술", "en": "Technology" },
-      { "id": "infra", "ko": "인프라·물류", "en": "Infrastructure & Logistics" },
-      { "id": "other", "ko": "기타 산업", "en": "Other Industries" }
-    ] },
-    { "id": "politics", "ko": "정치·외교", "en": "Politics & Diplomacy", "subs": [] },
-    { "id": "economy", "ko": "경제·통상", "en": "Economy & Trade", "subs": [] },
-    { "id": "society", "ko": "사회·문화", "en": "Society & Culture", "subs": [] }
+    {
+      "id": "industry",
+      "ko": "산업",
+      "en": "Industry",
+      "subs": [
+        {
+          "id": "energy",
+          "ko": "에너지",
+          "en": "Energy"
+        },
+        {
+          "id": "defense",
+          "ko": "방산",
+          "en": "Defense"
+        },
+        {
+          "id": "auto",
+          "ko": "자동차·배터리",
+          "en": "Automotive & Battery"
+        },
+        {
+          "id": "consumer",
+          "ko": "소비재·유통",
+          "en": "Consumer & Retail"
+        },
+        {
+          "id": "tech",
+          "ko": "IT·첨단기술",
+          "en": "Technology"
+        },
+        {
+          "id": "infra",
+          "ko": "인프라·물류",
+          "en": "Infrastructure & Logistics"
+        },
+        {
+          "id": "other",
+          "ko": "기타 산업",
+          "en": "Other Industries"
+        }
+      ]
+    },
+    {
+      "id": "politics",
+      "ko": "정치·외교",
+      "en": "Politics & Diplomacy",
+      "subs": []
+    },
+    {
+      "id": "economy",
+      "ko": "경제·통상",
+      "en": "Economy & Trade",
+      "subs": []
+    },
+    {
+      "id": "society",
+      "ko": "사회·문화",
+      "en": "Society & Culture",
+      "subs": []
+    },
+    {
+      "id": "korea",
+      "ko": "한국-동유럽",
+      "en": "Korea & Eastern Europe",
+      "subs": []
+    }
   ],
   "items": [
     {
       "id": "cz-dukovany-khnp-contract",
-      "status": "published", "featured": true, "review": "ai",
-      "category": "industry", "sub": "energy",
-      "countries": ["체코"], "tags": ["원전", "KHNP", "한국 기업"],
+      "status": "published",
+      "featured": true,
+      "review": "ai",
+      "category": "korea",
+      "sub": "",
+      "countries": [
+        "체코"
+      ],
+      "tags": [
+        "원전",
+        "KHNP",
+        "한국 기업",
+        "한국",
+        "에너지"
+      ],
       "title": "체코, 한국수력원자력과 두코바니 신규 원전 2기 건설 계약 서명",
       "summary": "체코 정부가 2024년 7월 프랑스 EDF를 제치고 한수원을 두코바니 5·6호기 우선협상대상자로 뽑은 뒤, EDF의 소송으로 한 차례 막혔던 본계약이 2025년 6월 4일 최고행정법원의 가처분 취소 직후 서명됐습니다.",
       "points": [
@@ -28,17 +94,38 @@
         "EDF가 낸 본안 소송은 계약 서명과 별개로 법원에서 계속 다뤄집니다."
       ],
       "why": "한국 원전이 유럽연합 회원국에 처음 수출되는 사례로, 유럽 원전 시장과 현지 공급망에 한국 기업이 들어갈 발판이 됩니다.",
-      "published": "2025-06-04", "added": "2026-11-11",
+      "published": "2025-06-04",
+      "added": "2026-11-11",
       "sources": [
-        { "name": "World Nuclear News – Czech-KHNP Dukovany contract signed after court lifts injunction", "url": "https://world-nuclear-news.org/articles/czech-supreme-court-lifts-ban-on-signing-dukovany-contract", "lang": "EN" },
-        { "name": "NEI Magazine – South Korea selected as preferred bidder for Czech nuclear expansion", "url": "https://www.neimagazine.com/news/south-korea-selected-as-preferred-bidder-for-czech-nuclear-expansion/", "lang": "EN" }
+        {
+          "name": "World Nuclear News – Czech-KHNP Dukovany contract signed after court lifts injunction",
+          "url": "https://world-nuclear-news.org/articles/czech-supreme-court-lifts-ban-on-signing-dukovany-contract",
+          "lang": "EN"
+        },
+        {
+          "name": "NEI Magazine – South Korea selected as preferred bidder for Czech nuclear expansion",
+          "url": "https://www.neimagazine.com/news/south-korea-selected-as-preferred-bidder-for-czech-nuclear-expansion/",
+          "lang": "EN"
+        }
       ]
     },
     {
       "id": "baltic-grid-synchronisation",
-      "status": "published", "featured": true, "review": "ai",
-      "category": "industry", "sub": "energy",
-      "countries": ["에스토니아", "라트비아", "리투아니아"], "tags": ["전력망", "에너지 안보", "BRELL"],
+      "status": "published",
+      "featured": true,
+      "review": "ai",
+      "category": "industry",
+      "sub": "energy",
+      "countries": [
+        "에스토니아",
+        "라트비아",
+        "리투아니아"
+      ],
+      "tags": [
+        "전력망",
+        "에너지 안보",
+        "BRELL"
+      ],
       "title": "발트 3국, 러시아 전력망에서 분리돼 유럽 대륙 전력망과 동기화",
       "summary": "에스토니아·라트비아·리투아니아가 2025년 2월 8일 러시아·벨라루스와 묶인 BRELL 전력망에서 빠져나와 하루 넘게 독자 운영을 거친 뒤, 2월 9일 폴란드와 잇는 LitPol Link를 통해 유럽 대륙 전력망에 합류했습니다.",
       "points": [
@@ -46,17 +133,37 @@
         "전력망 보강에 약 16억 유로가 들었고, 이 중 75%를 EU가 지원했습니다."
       ],
       "why": "소련 시절부터 이어진 에너지 의존의 마지막 고리를 끊은 사건으로, 이후 발트해 해저 케이블 보호와 역내 전력 투자가 안보 과제로 다뤄지는 출발점이 됐습니다.",
-      "published": "2025-02-09", "added": "2026-11-11",
+      "published": "2025-02-09",
+      "added": "2026-11-11",
       "sources": [
-        { "name": "Ukrainska Pravda – Baltic states finally synchronise their power grids with Europe", "url": "https://pravda.com.ua/eng/news/2025/02/9/7497412", "lang": "EN" },
-        { "name": "Eurelectric – The Baltics join the European grid", "url": "https://www.eurelectric.org/news/the-baltics-join-the-european-grid-a-successful-integration-story/", "lang": "EN" }
+        {
+          "name": "Ukrainska Pravda – Baltic states finally synchronise their power grids with Europe",
+          "url": "https://pravda.com.ua/eng/news/2025/02/9/7497412",
+          "lang": "EN"
+        },
+        {
+          "name": "Eurelectric – The Baltics join the European grid",
+          "url": "https://www.eurelectric.org/news/the-baltics-join-the-european-grid-a-successful-integration-story/",
+          "lang": "EN"
+        }
       ]
     },
     {
       "id": "ua-russian-gas-transit-ends",
-      "status": "published", "featured": false, "review": "ai",
-      "category": "industry", "sub": "energy",
-      "countries": ["우크라이나", "슬로바키아", "헝가리"], "tags": ["가스", "에너지 안보"],
+      "status": "published",
+      "featured": false,
+      "review": "ai",
+      "category": "industry",
+      "sub": "energy",
+      "countries": [
+        "우크라이나",
+        "슬로바키아",
+        "헝가리"
+      ],
+      "tags": [
+        "가스",
+        "에너지 안보"
+      ],
       "title": "우크라이나 경유 러시아산 가스 수송 종료",
       "summary": "우크라이나와 러시아 가스프롬의 5년 수송 계약이 연장되지 않으면서 2025년 1월 1일 새벽 우크라이나를 거쳐 유럽으로 가던 러시아산 가스 흐름이 멈췄습니다.",
       "points": [
@@ -65,17 +172,35 @@
         "헝가리·세르비아 등은 우크라이나를 우회하는 투르크스트림으로 계속 공급받습니다."
       ],
       "why": "중동부유럽의 가스 공급 구조가 우크라이나 경로 없이 재편되는 계기로, 슬로바키아·헝가리의 대러 정책과 LNG·대체 노선 투자에 영향을 줍니다.",
-      "published": "2025-01-01", "added": "2026-11-11",
+      "published": "2025-01-01",
+      "added": "2026-11-11",
       "sources": [
-        { "name": "bne IntelliNews – Russian gas transit through Ukraine ends", "url": "https://www.intellinews.com/russian-gas-transit-through-ukraine-ends-with-europe-meeting-the-new-year-with-5-less-gas-359699/", "lang": "EN" },
-        { "name": "Oxford Institute for Energy Studies – The End of Russian Gas Transit via Ukraine", "url": "https://www.oxfordenergy.org/publications/the-end-of-russian-gas-transit-via-ukraine-immediate-impact-and-implications-for-the-european-gas-market-in-2025/", "lang": "EN" }
+        {
+          "name": "bne IntelliNews – Russian gas transit through Ukraine ends",
+          "url": "https://www.intellinews.com/russian-gas-transit-through-ukraine-ends-with-europe-meeting-the-new-year-with-5-less-gas-359699/",
+          "lang": "EN"
+        },
+        {
+          "name": "Oxford Institute for Energy Studies – The End of Russian Gas Transit via Ukraine",
+          "url": "https://www.oxfordenergy.org/publications/the-end-of-russian-gas-transit-via-ukraine-immediate-impact-and-implications-for-the-european-gas-market-in-2025/",
+          "lang": "EN"
+        }
       ]
     },
     {
       "id": "pl-nuclear-state-aid",
-      "status": "published", "featured": false, "review": "ai",
-      "category": "industry", "sub": "energy",
-      "countries": ["폴란드"], "tags": ["원전", "EU 국가보조금"],
+      "status": "published",
+      "featured": false,
+      "review": "ai",
+      "category": "industry",
+      "sub": "energy",
+      "countries": [
+        "폴란드"
+      ],
+      "tags": [
+        "원전",
+        "EU 국가보조금"
+      ],
       "title": "EU 집행위, 폴란드 첫 원전 국가보조금 승인",
       "summary": "유럽연합 집행위원회가 2025년 12월 9일 폴란드 루비아투보-코팔리노 원전(웨스팅하우스 AP1000 3기, 최대 3,750MW)의 건설·운영 지원책을 EU 규정에 맞는다고 승인했습니다.",
       "points": [
@@ -83,16 +208,34 @@
         "폴란드 정부는 이번 승인으로 웨스팅하우스·벡텔과의 계약을 마무리할 수 있게 됐다고 밝혔습니다."
       ],
       "why": "석탄 비중이 높은 폴란드의 에너지 전환에서 원전이 실제 사업 단계로 들어섰다는 신호로, 기자재·시공 협력 기회와도 연결됩니다.",
-      "published": "2025-12-09", "added": "2026-11-11",
+      "published": "2025-12-09",
+      "added": "2026-11-11",
       "sources": [
-        { "name": "World Nuclear News – EU approves Polish state aid for nuclear plant", "url": "https://world-nuclear-news.org/articles/eu-approves-polish-state-aid-for-nuclear-plant", "lang": "EN" }
+        {
+          "name": "World Nuclear News – EU approves Polish state aid for nuclear plant",
+          "url": "https://world-nuclear-news.org/articles/eu-approves-polish-state-aid-for-nuclear-plant",
+          "lang": "EN"
+        }
       ]
     },
     {
       "id": "pl-k2-second-contract",
-      "status": "published", "featured": true, "review": "ai",
-      "category": "industry", "sub": "defense",
-      "countries": ["폴란드"], "tags": ["K2 전차", "현대로템", "한국 기업", "현지 생산"],
+      "status": "published",
+      "featured": true,
+      "review": "ai",
+      "category": "korea",
+      "sub": "",
+      "countries": [
+        "폴란드"
+      ],
+      "tags": [
+        "K2 전차",
+        "현대로템",
+        "한국 기업",
+        "현지 생산",
+        "한국",
+        "방산"
+      ],
       "title": "폴란드, 현대로템과 K2 전차 2차 실행계약 약 65억 달러 체결",
       "summary": "폴란드 군비청이 2025년 8월 1일 현대로템과 K2 전차 180대와 지원 차량 81대에 대한 2차 실행계약을 맺었습니다. 단일 방산 수출로는 한국 역대 최대 규모로 보도됐습니다.",
       "points": [
@@ -101,17 +244,38 @@
         "2022년 7월 최대 1,000대 규모 기본계약의 두 번째 실행계약입니다."
       ],
       "why": "완제품 수출에서 폴란드 현지 생산으로 넘어가는 단계로, 한국 방산 기업이 유럽 방산 공급망에 생산 거점을 두는 첫 사례가 될 수 있습니다.",
-      "published": "2025-08-01", "added": "2026-11-11",
+      "published": "2025-08-01",
+      "added": "2026-11-11",
       "sources": [
-        { "name": "Defense News – Poland doubles down on South Korean tanks with $6.5 billion deal", "url": "https://www.defensenews.com/global/europe/2025/08/01/poland-doubles-down-on-south-korean-tanks-with-65-billion-deal/", "lang": "EN" },
-        { "name": "Defence24 – Black Panthers to be built in Poland: K2PL deal signed", "url": "https://defence24.com/defence-policy/black-panthers-to-be-built-in-poland-k2pl-deal-signed", "lang": "EN" }
+        {
+          "name": "Defense News – Poland doubles down on South Korean tanks with $6.5 billion deal",
+          "url": "https://www.defensenews.com/global/europe/2025/08/01/poland-doubles-down-on-south-korean-tanks-with-65-billion-deal/",
+          "lang": "EN"
+        },
+        {
+          "name": "Defence24 – Black Panthers to be built in Poland: K2PL deal signed",
+          "url": "https://defence24.com/defence-policy/black-panthers-to-be-built-in-poland-k2pl-deal-signed",
+          "lang": "EN"
+        }
       ]
     },
     {
       "id": "pl-chunmoo-second-contract",
-      "status": "published", "featured": false, "review": "ai",
-      "category": "industry", "sub": "defense",
-      "countries": ["폴란드"], "tags": ["천무", "한화에어로스페이스", "한국 기업"],
+      "status": "published",
+      "featured": false,
+      "review": "ai",
+      "category": "korea",
+      "sub": "",
+      "countries": [
+        "폴란드"
+      ],
+      "tags": [
+        "천무",
+        "한화에어로스페이스",
+        "한국 기업",
+        "한국",
+        "방산"
+      ],
       "title": "폴란드, 한화에어로스페이스와 천무 다연장로켓 2차 실행계약",
       "summary": "폴란드 군비청이 2024년 4월 25일 한화에어로스페이스와 K239 천무 72대와 사거리 80~290km 유도탄 수천 발, 기술 이전을 포함한 약 16억 달러 규모 2차 실행계약을 맺었습니다.",
       "points": [
@@ -119,17 +283,38 @@
         "계약 발효는 같은 해 별도 금융 계약 체결을 조건으로 했습니다."
       ],
       "why": "폴란드의 대규모 한국 무기 도입이 전차·자주포에서 장거리 정밀타격 체계로 넓어졌고, 수출 금융이 방산 수출의 변수로 떠올랐습니다.",
-      "published": "2024-04-25", "added": "2026-11-11",
+      "published": "2024-04-25",
+      "added": "2026-11-11",
       "sources": [
-        { "name": "Defense News – Poland to spend $2.9 billion on missile equipment from South Korea, US", "url": "https://www.defensenews.com/global/europe/2024/04/25/poland-to-spend-29-billion-on-missile-equipment-from-south-korea-us/", "lang": "EN" },
-        { "name": "EDR Magazine – Hanwha Aerospace signs 2nd executive contract for Polish MLRS", "url": "https://www.edrmagazine.eu/hanwha-aerospace-signs-2ndexecutive-contract-for-polish-multiple-rocket-launcher-system", "lang": "EN" }
+        {
+          "name": "Defense News – Poland to spend $2.9 billion on missile equipment from South Korea, US",
+          "url": "https://www.defensenews.com/global/europe/2024/04/25/poland-to-spend-29-billion-on-missile-equipment-from-south-korea-us/",
+          "lang": "EN"
+        },
+        {
+          "name": "EDR Magazine – Hanwha Aerospace signs 2nd executive contract for Polish MLRS",
+          "url": "https://www.edrmagazine.eu/hanwha-aerospace-signs-2ndexecutive-contract-for-polish-multiple-rocket-launcher-system",
+          "lang": "EN"
+        }
       ]
     },
     {
       "id": "ro-k9-howitzer",
-      "status": "published", "featured": false, "review": "ai",
-      "category": "industry", "sub": "defense",
-      "countries": ["루마니아"], "tags": ["K9 자주포", "한화에어로스페이스", "한국 기업"],
+      "status": "published",
+      "featured": false,
+      "review": "ai",
+      "category": "korea",
+      "sub": "",
+      "countries": [
+        "루마니아"
+      ],
+      "tags": [
+        "K9 자주포",
+        "한화에어로스페이스",
+        "한국 기업",
+        "한국",
+        "방산"
+      ],
       "title": "루마니아, 한화에어로스페이스 K9 자주포 54문 도입 계약",
       "summary": "루마니아 국방부가 2024년 7월 9일 한화에어로스페이스와 K9 자주포 54문, K10 탄약운반차 36대, 탄약·지원 차량을 포함한 약 10억 달러 규모 계약을 맺었습니다.",
       "points": [
@@ -137,17 +322,38 @@
         "인도는 2027년 초부터 단계적으로 이뤄지며, 루마니아 현지 업체의 참여가 예정돼 있습니다."
       ],
       "why": "폴란드에 이어 흑해 방면 NATO 동부 전선 국가로 한국 방산 수출이 넓어진 사례입니다.",
-      "published": "2024-07-10", "added": "2026-11-11",
+      "published": "2024-07-10",
+      "added": "2026-11-11",
       "sources": [
-        { "name": "KED Global – Hanwha Aerospace to export K9 howitzer to Romania", "url": "https://www.kedglobal.com/newsView/ked202407100003", "lang": "EN" },
-        { "name": "Romania Insider – South Korean contractor wins USD 1 billion howitzer contract", "url": "https://romania-insider.com/south-korean-contractor-romania-self-propelled-howitzers-2024", "lang": "EN" }
+        {
+          "name": "KED Global – Hanwha Aerospace to export K9 howitzer to Romania",
+          "url": "https://www.kedglobal.com/newsView/ked202407100003",
+          "lang": "EN"
+        },
+        {
+          "name": "Romania Insider – South Korean contractor wins USD 1 billion howitzer contract",
+          "url": "https://romania-insider.com/south-korean-contractor-romania-self-propelled-howitzers-2024",
+          "lang": "EN"
+        }
       ]
     },
     {
       "id": "pl-safe-defence-loans",
-      "status": "published", "featured": false, "review": "ai",
-      "category": "industry", "sub": "defense",
-      "countries": ["폴란드", "루마니아", "헝가리"], "tags": ["SAFE", "EU 국방", "국방비"],
+      "status": "published",
+      "featured": false,
+      "review": "ai",
+      "category": "industry",
+      "sub": "defense",
+      "countries": [
+        "폴란드",
+        "루마니아",
+        "헝가리"
+      ],
+      "tags": [
+        "SAFE",
+        "EU 국방",
+        "국방비"
+      ],
       "title": "폴란드, EU 방위 대출 프로그램 SAFE에서 최대 437억 유로 배정",
       "summary": "EU의 1,500억 유로 규모 방위 대출 프로그램 SAFE에서 폴란드가 2025년 9월 437억 유로를 배정받아 최대 수혜국이 됐습니다. 루마니아(167억 유로), 프랑스·헝가리(각 162억 유로)가 뒤를 이었습니다.",
       "points": [
@@ -155,17 +361,36 @@
         "대통령이 관련 법안에 거부권을 행사해 정부는 기존 군 현대화 기금을 통하는 방식으로 우회했습니다."
       ],
       "why": "EU 차원의 공동 재원이 중동부유럽 국방비 확대를 뒷받침하게 되면서, 유럽산 우선 조달 규정이 비EU 방산 기업의 참여 방식에도 영향을 줍니다.",
-      "published": "2025-09-09", "added": "2026-11-11",
+      "published": "2025-09-09",
+      "added": "2026-11-11",
       "sources": [
-        { "name": "Notes from Poland – Poland allocated largest share of new EU defence programme", "url": "https://notesfrompoland.com/2025/09/09/poland-allocated-largest-share-of-new-eu-defence-programme-with-e44bn-in-loans/", "lang": "EN" },
-        { "name": "Notes from Poland – Poland signs agreement with EU for €44 billion in SAFE defence loans", "url": "https://notesfrompoland.com/2026/05/08/poland-signs-agreement-with-eu-for-e44-billion-in-safe-defence-loans/", "lang": "EN" }
+        {
+          "name": "Notes from Poland – Poland allocated largest share of new EU defence programme",
+          "url": "https://notesfrompoland.com/2025/09/09/poland-allocated-largest-share-of-new-eu-defence-programme-with-e44bn-in-loans/",
+          "lang": "EN"
+        },
+        {
+          "name": "Notes from Poland – Poland signs agreement with EU for €44 billion in SAFE defence loans",
+          "url": "https://notesfrompoland.com/2026/05/08/poland-signs-agreement-with-eu-for-e44-billion-in-safe-defence-loans/",
+          "lang": "EN"
+        }
       ]
     },
     {
       "id": "hu-byd-szeged",
-      "status": "published", "featured": false, "review": "ai",
-      "category": "industry", "sub": "auto",
-      "countries": ["헝가리"], "tags": ["전기차", "BYD", "중국 투자"],
+      "status": "published",
+      "featured": false,
+      "review": "ai",
+      "category": "industry",
+      "sub": "auto",
+      "countries": [
+        "헝가리"
+      ],
+      "tags": [
+        "전기차",
+        "BYD",
+        "중국 투자"
+      ],
       "title": "BYD, 헝가리 세게드에 첫 유럽 승용차 공장 건설 발표",
       "summary": "중국 BYD가 2023년 12월 22일 헝가리 남부 세게드에 유럽 첫 승용차 공장을 여러 단계로 지어 전기차와 플러그인 하이브리드를 생산하겠다고 발표했습니다.",
       "points": [
@@ -173,17 +398,36 @@
         "2024년 2월에는 3년 안에 공장을 가동하겠다는 계획이 전해졌습니다."
       ],
       "why": "헝가리가 중국 전기차·배터리 투자의 유럽 거점으로 자리 잡는 흐름을 보여 주며, 같은 지역에 진출한 한국 배터리 기업과의 경쟁·협력 구도에도 영향을 줍니다.",
-      "published": "2023-12-22", "added": "2026-11-11",
+      "published": "2023-12-22",
+      "added": "2026-11-11",
       "sources": [
-        { "name": "BYD Europe – BYD to build a new energy passenger vehicle factory in Hungary", "url": "https://www.byd.com/eu/news-list/BYD_to_Build_A_New_Energy_Passenger_Vehicle_Factory_in_Hungary_for_Localised_Production_in_Europe", "lang": "EN" },
-        { "name": "electrive – BYD plans to open its Hungarian EV factory within three years", "url": "https://www.electrive.com/2024/02/06/byd-plans-to-open-its-hungarian-ev-factory-within-three-years/", "lang": "EN" }
+        {
+          "name": "BYD Europe – BYD to build a new energy passenger vehicle factory in Hungary",
+          "url": "https://www.byd.com/eu/news-list/BYD_to_Build_A_New_Energy_Passenger_Vehicle_Factory_in_Hungary_for_Localised_Production_in_Europe",
+          "lang": "EN"
+        },
+        {
+          "name": "electrive – BYD plans to open its Hungarian EV factory within three years",
+          "url": "https://www.electrive.com/2024/02/06/byd-plans-to-open-its-hungarian-ev-factory-within-three-years/",
+          "lang": "EN"
+        }
       ]
     },
     {
       "id": "pl-intel-cancels-plant",
-      "status": "published", "featured": false, "review": "ai",
-      "category": "industry", "sub": "tech",
-      "countries": ["폴란드"], "tags": ["반도체", "인텔", "외국인 투자"],
+      "status": "published",
+      "featured": false,
+      "review": "ai",
+      "category": "industry",
+      "sub": "tech",
+      "countries": [
+        "폴란드"
+      ],
+      "tags": [
+        "반도체",
+        "인텔",
+        "외국인 투자"
+      ],
       "title": "인텔, 폴란드 브로츠와프 인근 반도체 공장 계획 철회",
       "summary": "인텔이 2025년 7월 실적 발표와 함께 독일과 폴란드에서 계획했던 사업을 더 이상 추진하지 않는다고 밝혔습니다. 2024년 9월 최소 2년 보류를 발표한 데 이은 결정입니다.",
       "points": [
@@ -191,16 +435,32 @@
         "현지 보도에 따르면 그단스크 연구개발센터는 유지됩니다."
       ],
       "why": "중동부유럽의 첨단 제조 투자 유치가 글로벌 기업의 구조조정에 크게 흔들릴 수 있음을 보여 준 사례입니다.",
-      "published": "2025-07-25", "added": "2026-11-11",
+      "published": "2025-07-25",
+      "added": "2026-11-11",
       "sources": [
-        { "name": "Notes from Poland – Intel to no longer move forward with planned new plant in Poland", "url": "https://notesfrompoland.com/2025/07/25/intel-to-no-longer-move-forward-with-planned-new-plant-in-poland", "lang": "EN" }
+        {
+          "name": "Notes from Poland – Intel to no longer move forward with planned new plant in Poland",
+          "url": "https://notesfrompoland.com/2025/07/25/intel-to-no-longer-move-forward-with-planned-new-plant-in-poland",
+          "lang": "EN"
+        }
       ]
     },
     {
       "id": "pl-microsoft-cloud-ai",
-      "status": "published", "featured": false, "review": "ai",
-      "category": "industry", "sub": "tech",
-      "countries": ["폴란드"], "tags": ["클라우드", "AI", "데이터센터", "외국인 투자"],
+      "status": "published",
+      "featured": false,
+      "review": "ai",
+      "category": "industry",
+      "sub": "tech",
+      "countries": [
+        "폴란드"
+      ],
+      "tags": [
+        "클라우드",
+        "AI",
+        "데이터센터",
+        "외국인 투자"
+      ],
       "title": "마이크로소프트, 폴란드 클라우드·AI에 28억 즐로티 투자 발표",
       "summary": "마이크로소프트가 2025년 2월 17일 2026년 6월까지 폴란드의 클라우드·AI 인프라와 인력 교육, 사이버보안에 28억 즐로티(약 7억 달러)를 투자하겠다고 발표했습니다.",
       "points": [
@@ -208,17 +468,36 @@
         "폴란드 국방부와 AI 역량을 포함한 사이버보안 협력 체계를 만드는 내용도 들어 있습니다."
       ],
       "why": "폴란드가 중동부유럽의 데이터센터·클라우드 거점으로 커지는 흐름과 함께, 디지털 주권 논쟁도 불러왔습니다.",
-      "published": "2025-02-17", "added": "2026-11-11",
+      "published": "2025-02-17",
+      "added": "2026-11-11",
       "sources": [
-        { "name": "Microsoft Polska – Microsoft announces a PLN 2.8 billion investment in Poland", "url": "https://news.microsoft.com/pl-pl/2025/02/17/microsoft-announces-a-pln-2-8-billion-investment-in-cloud-and-ai-infrastructure-skilling-and-cybersecurity-in-poland/", "lang": "EN" },
-        { "name": "Notes from Poland – Microsoft announces $700m investment in Poland", "url": "https://notesfrompoland.com/2025/02/17/microsoft-announces-700m-investment-in-poland/", "lang": "EN" }
+        {
+          "name": "Microsoft Polska – Microsoft announces a PLN 2.8 billion investment in Poland",
+          "url": "https://news.microsoft.com/pl-pl/2025/02/17/microsoft-announces-a-pln-2-8-billion-investment-in-cloud-and-ai-infrastructure-skilling-and-cybersecurity-in-poland/",
+          "lang": "EN"
+        },
+        {
+          "name": "Notes from Poland – Microsoft announces $700m investment in Poland",
+          "url": "https://notesfrompoland.com/2025/02/17/microsoft-announces-700m-investment-in-poland/",
+          "lang": "EN"
+        }
       ]
     },
     {
       "id": "hu-tisza-wins-election",
-      "status": "published", "featured": true, "review": "ai",
-      "category": "politics", "sub": "",
-      "countries": ["헝가리"], "tags": ["총선", "정권 교체", "EU"],
+      "status": "published",
+      "featured": true,
+      "review": "ai",
+      "category": "politics",
+      "sub": "",
+      "countries": [
+        "헝가리"
+      ],
+      "tags": [
+        "총선",
+        "정권 교체",
+        "EU"
+      ],
       "title": "헝가리 총선에서 머저르 페테르의 티서 압승, 오르반 16년 집권 종료",
       "summary": "2026년 4월 12일 헝가리 총선에서 티서당이 개헌선을 넘는 의석을 얻어 오르반 빅토르 총리의 16년 집권이 끝났습니다. 오르반 총리는 선거 당일 밤 패배를 인정했습니다.",
       "points": [
@@ -226,17 +505,36 @@
         "투표율은 80%에 가까워 체제 전환 이후 최고치를 기록했습니다."
       ],
       "why": "EU 안에서 우크라이나 지원과 제재에 가장 자주 제동을 걸던 정부가 바뀌면서, 우크라이나 가입 협상과 EU의 대러 정책 결정 구도가 달라졌습니다.",
-      "published": "2026-04-13", "added": "2026-11-11",
+      "published": "2026-04-13",
+      "added": "2026-11-11",
       "sources": [
-        { "name": "OSW – Elections in Hungary: the triumph of Péter Magyar", "url": "https://www.osw.waw.pl/en/publikacje/analyses/2026-04-13/elections-hungary-triumph-peter-magyar", "lang": "EN" },
-        { "name": "bne IntelliNews – Final Hungarian election results confirm supermajority for Tisza", "url": "https://www.intellinews.com/final-hungarian-election-results-confirm-supermajority-for-tisza-438174/", "lang": "EN" }
+        {
+          "name": "OSW – Elections in Hungary: the triumph of Péter Magyar",
+          "url": "https://www.osw.waw.pl/en/publikacje/analyses/2026-04-13/elections-hungary-triumph-peter-magyar",
+          "lang": "EN"
+        },
+        {
+          "name": "bne IntelliNews – Final Hungarian election results confirm supermajority for Tisza",
+          "url": "https://www.intellinews.com/final-hungarian-election-results-confirm-supermajority-for-tisza-438174/",
+          "lang": "EN"
+        }
       ]
     },
     {
       "id": "ro-election-annulled",
-      "status": "published", "featured": true, "review": "ai",
-      "category": "politics", "sub": "",
-      "countries": ["루마니아"], "tags": ["대선", "선거 개입", "헌법재판소"],
+      "status": "published",
+      "featured": true,
+      "review": "ai",
+      "category": "politics",
+      "sub": "",
+      "countries": [
+        "루마니아"
+      ],
+      "tags": [
+        "대선",
+        "선거 개입",
+        "헌법재판소"
+      ],
       "title": "루마니아 헌법재판소, 대선 1차 투표 결과 무효화",
       "summary": "루마니아 헌법재판소가 2024년 12월 6일 친러 성향 극우 후보 칼린 제오르제스쿠가 1위를 차지한 대선 1차 투표를 포함해 선거 절차 전체를 무효로 하고 처음부터 다시 치르라고 결정했습니다.",
       "points": [
@@ -244,17 +542,35 @@
         "헌법재판소는 불과 나흘 전 같은 1차 투표 결과를 승인한 바 있습니다."
       ],
       "why": "EU 회원국에서 외부 개입을 이유로 대선 자체를 무효화한 첫 사례로, 소셜미디어를 통한 선거 개입 대응이 지역 전체의 과제로 떠올랐습니다.",
-      "published": "2024-12-06", "added": "2026-11-11",
+      "published": "2024-12-06",
+      "added": "2026-11-11",
       "sources": [
-        { "name": "Al Jazeera – Romania’s top court annuls results of presidential election’s first round", "url": "https://www.aljazeera.com/news/2024/12/6/romanias-top-court-annuls-results-of-presidential-elections-first-round", "lang": "EN" },
-        { "name": "Romania Insider – Constitutional Court annuls presidential election, orders complete restart", "url": "https://www.romania-insider.com/ccr-annuls-presidential-elections-romania-december-2024", "lang": "EN" }
+        {
+          "name": "Al Jazeera – Romania’s top court annuls results of presidential election’s first round",
+          "url": "https://www.aljazeera.com/news/2024/12/6/romanias-top-court-annuls-results-of-presidential-elections-first-round",
+          "lang": "EN"
+        },
+        {
+          "name": "Romania Insider – Constitutional Court annuls presidential election, orders complete restart",
+          "url": "https://www.romania-insider.com/ccr-annuls-presidential-elections-romania-december-2024",
+          "lang": "EN"
+        }
       ]
     },
     {
       "id": "pl-nawrocki-president",
-      "status": "published", "featured": false, "review": "ai",
-      "category": "politics", "sub": "",
-      "countries": ["폴란드"], "tags": ["대선", "법과정의당"],
+      "status": "published",
+      "featured": false,
+      "review": "ai",
+      "category": "politics",
+      "sub": "",
+      "countries": [
+        "폴란드"
+      ],
+      "tags": [
+        "대선",
+        "법과정의당"
+      ],
       "title": "폴란드 대선 결선에서 나브로츠키 당선",
       "summary": "2025년 6월 1일 폴란드 대선 결선에서 법과정의당(PiS)이 지지한 무소속 카롤 나브로츠키가 50.89%를 얻어 친EU 성향 라파우 트샤스코프스키 바르샤바 시장(49.11%)을 근소하게 이겼습니다.",
       "points": [
@@ -262,16 +578,30 @@
         "나브로츠키는 정치 경력 없이 국가기억원장을 지낸 역사학자입니다."
       ],
       "why": "투스크 정부와 대통령이 다른 진영에 서게 되면서 거부권이 개혁 입법의 변수로 남게 됐습니다. SAFE 법안 거부권도 그 사례입니다.",
-      "published": "2025-06-02", "added": "2026-11-11",
+      "published": "2025-06-02",
+      "added": "2026-11-11",
       "sources": [
-        { "name": "Notes from Poland – Right-wing opposition candidate Nawrocki wins Polish presidential election", "url": "https://notesfrompoland.com/2025/06/02/right-wing-opposition-candidate-nawrocki-wins-polish-presidential-election/", "lang": "EN" }
+        {
+          "name": "Notes from Poland – Right-wing opposition candidate Nawrocki wins Polish presidential election",
+          "url": "https://notesfrompoland.com/2025/06/02/right-wing-opposition-candidate-nawrocki-wins-polish-presidential-election/",
+          "lang": "EN"
+        }
       ]
     },
     {
       "id": "cz-ano-wins-election",
-      "status": "published", "featured": false, "review": "ai",
-      "category": "politics", "sub": "",
-      "countries": ["체코"], "tags": ["총선", "바비시"],
+      "status": "published",
+      "featured": false,
+      "review": "ai",
+      "category": "politics",
+      "sub": "",
+      "countries": [
+        "체코"
+      ],
+      "tags": [
+        "총선",
+        "바비시"
+      ],
       "title": "체코 총선에서 바비시의 ANO 승리",
       "summary": "2025년 10월 3~4일 체코 총선에서 안드레이 바비시 전 총리가 이끄는 ANO가 34.7%를 얻어 피알라 총리의 중도우파 연합(23.2%)을 크게 앞섰습니다.",
       "points": [
@@ -279,17 +609,35 @@
         "투표율은 68.95%였습니다."
       ],
       "why": "슬로바키아에 이어 체코에서도 우크라이나 지원에 신중한 세력이 집권하면서 비셰그라드 국가들의 대외 노선 변화가 주목받았습니다.",
-      "published": "2025-10-04", "added": "2026-11-11",
+      "published": "2025-10-04",
+      "added": "2026-11-11",
       "sources": [
-        { "name": "NPR (KPBS) – Populist billionaire Andrej Babiš wins Czech parliamentary election", "url": "https://www.kpbs.org/news/international/2025/10/04/populist-billionaire-andrej-babis-wins-czech-parliamentary-election", "lang": "EN" },
-        { "name": "PISM – Czechia after Parliamentary Elections", "url": "https://pism.pl/publications/czechia-after-parliamentary-elections-ano-on-its-way-to-forming-a-government", "lang": "EN" }
+        {
+          "name": "NPR (KPBS) – Populist billionaire Andrej Babiš wins Czech parliamentary election",
+          "url": "https://www.kpbs.org/news/international/2025/10/04/populist-billionaire-andrej-babis-wins-czech-parliamentary-election",
+          "lang": "EN"
+        },
+        {
+          "name": "PISM – Czechia after Parliamentary Elections",
+          "url": "https://pism.pl/publications/czechia-after-parliamentary-elections-ano-on-its-way-to-forming-a-government",
+          "lang": "EN"
+        }
       ]
     },
     {
       "id": "sk-fico-shooting",
-      "status": "published", "featured": false, "review": "ai",
-      "category": "politics", "sub": "",
-      "countries": ["슬로바키아"], "tags": ["정치 폭력", "피초"],
+      "status": "published",
+      "featured": false,
+      "review": "ai",
+      "category": "politics",
+      "sub": "",
+      "countries": [
+        "슬로바키아"
+      ],
+      "tags": [
+        "정치 폭력",
+        "피초"
+      ],
       "title": "슬로바키아 피초 총리, 한들로바에서 총격 피습",
       "summary": "로베르트 피초 슬로바키아 총리가 2024년 5월 15일 중부 소도시 한들로바에서 열린 정부 회의를 마치고 지지자들을 만나던 중 여러 발의 총격을 받아 중상을 입었습니다.",
       "points": [
@@ -297,16 +645,31 @@
         "유럽 각국 정상과 NATO가 공격을 규탄했습니다."
       ],
       "why": "유럽의회 선거를 앞두고 일어난 현직 총리 암살 시도로, 중동부유럽의 정치 양극화와 정치 폭력 문제를 드러냈습니다.",
-      "published": "2024-05-15", "added": "2026-11-11",
+      "published": "2024-05-15",
+      "added": "2026-11-11",
       "sources": [
-        { "name": "TASR – Prime Minister Fico shot and injured after cabinet meeting in Handlová", "url": "https://newsnow.tasr.sk/prime-minister-fico-shot-and-injured-after-cabinet-meeting-in-handlova", "lang": "EN" }
+        {
+          "name": "TASR – Prime Minister Fico shot and injured after cabinet meeting in Handlová",
+          "url": "https://newsnow.tasr.sk/prime-minister-fico-shot-and-injured-after-cabinet-meeting-in-handlova",
+          "lang": "EN"
+        }
       ]
     },
     {
       "id": "ua-md-eu-accession-talks",
-      "status": "published", "featured": false, "review": "ai",
-      "category": "politics", "sub": "",
-      "countries": ["우크라이나", "몰도바"], "tags": ["EU 가입", "확대"],
+      "status": "published",
+      "featured": false,
+      "review": "ai",
+      "category": "politics",
+      "sub": "",
+      "countries": [
+        "우크라이나",
+        "몰도바"
+      ],
+      "tags": [
+        "EU 가입",
+        "확대"
+      ],
       "title": "EU, 우크라이나·몰도바와 가입 협상 공식 개시",
       "summary": "EU가 2024년 6월 25일 룩셈부르크에서 우크라이나, 몰도바와 각각 첫 정부간회의를 열어 가입 협상을 공식적으로 시작했습니다.",
       "points": [
@@ -314,16 +677,30 @@
         "우크라이나 협상 대표는 2030년 이전에 모든 절차를 마칠 수 있다고 밝혔습니다."
       ],
       "why": "전쟁 중인 나라와의 가입 협상이 시작되면서 EU 확대가 동유럽 안보 정책의 중심 수단이 됐습니다. 실제 협상 챕터 개방은 헝가리의 반대로 오래 지연됐습니다.",
-      "published": "2024-06-25", "added": "2026-11-11",
+      "published": "2024-06-25",
+      "added": "2026-11-11",
       "sources": [
-        { "name": "European Western Balkans – Ukraine and Moldova start EU accession talks", "url": "https://europeanwesternbalkans.com/2024/06/25/ukraine-and-moldova-start-eu-accession-talks-hold-their-first-conferences-with-member-states/", "lang": "EN" }
+        {
+          "name": "European Western Balkans – Ukraine and Moldova start EU accession talks",
+          "url": "https://europeanwesternbalkans.com/2024/06/25/ukraine-and-moldova-start-eu-accession-talks-hold-their-first-conferences-with-member-states/",
+          "lang": "EN"
+        }
       ]
     },
     {
       "id": "bg-joins-euro",
-      "status": "published", "featured": true, "review": "ai",
-      "category": "economy", "sub": "",
-      "countries": ["불가리아"], "tags": ["유로", "통화"],
+      "status": "published",
+      "featured": true,
+      "review": "ai",
+      "category": "economy",
+      "sub": "",
+      "countries": [
+        "불가리아"
+      ],
+      "tags": [
+        "유로",
+        "통화"
+      ],
       "title": "불가리아, 유로존 21번째 회원국으로 유로 도입",
       "summary": "불가리아가 2026년 1월 1일 유로를 도입해 유로존 21번째 회원국이 됐습니다. EU 이사회가 2025년 7월 8일 최종 승인했고, 전환 환율은 1유로당 1.95583레프입니다.",
       "points": [
@@ -331,17 +708,37 @@
         "정부 붕괴와 대규모 시위로 정부와 2026년 예산이 없는 상태에서 통화를 바꾼 첫 사례로 기록됐습니다."
       ],
       "why": "환전 비용과 환율 위험이 사라져 불가리아에 진출하거나 거래하는 기업의 비용 구조가 바뀌고, 루마니아 등 남은 비유로 회원국의 논의에도 기준점이 됩니다.",
-      "published": "2026-01-01", "added": "2026-11-11",
+      "published": "2026-01-01",
+      "added": "2026-11-11",
       "sources": [
-        { "name": "The Sofia Globe – Bulgaria’s euro era dawns", "url": "https://sofiaglobe.com/2026/01/01/bulgarias-euro-era-dawns/", "lang": "EN" },
-        { "name": "European Union Learning Corner – Bulgaria joins the euro", "url": "https://learning-corner.learning.europa.eu/news-and-competitions/bulgaria-joins-euro-new-chapter-begins-2026-01-01_en", "lang": "EN" }
+        {
+          "name": "The Sofia Globe – Bulgaria’s euro era dawns",
+          "url": "https://sofiaglobe.com/2026/01/01/bulgarias-euro-era-dawns/",
+          "lang": "EN"
+        },
+        {
+          "name": "European Union Learning Corner – Bulgaria joins the euro",
+          "url": "https://learning-corner.learning.europa.eu/news-and-competitions/bulgaria-joins-euro-new-chapter-begins-2026-01-01_en",
+          "lang": "EN"
+        }
       ]
     },
     {
       "id": "ro-bg-schengen-full",
-      "status": "published", "featured": false, "review": "ai",
-      "category": "economy", "sub": "",
-      "countries": ["루마니아", "불가리아"], "tags": ["솅겐", "물류", "국경"],
+      "status": "published",
+      "featured": false,
+      "review": "ai",
+      "category": "economy",
+      "sub": "",
+      "countries": [
+        "루마니아",
+        "불가리아"
+      ],
+      "tags": [
+        "솅겐",
+        "물류",
+        "국경"
+      ],
       "title": "루마니아·불가리아, 솅겐 완전 가입으로 육로 국경 검문 폐지",
       "summary": "루마니아와 불가리아가 2025년 1월 1일 육로 국경 검문까지 없애고 솅겐 지역의 완전한 회원이 됐습니다. 2024년 3월 항공·해상 검문을 먼저 없앤 뒤, 오스트리아가 거부권을 거두면서 13년 만에 이뤄졌습니다.",
       "points": [
@@ -349,17 +746,36 @@
         "전환 기간에는 국경 지역에서 일부 표적 검사가 이어졌습니다."
       ],
       "why": "트럭이 국경에서 오래 기다리던 문제가 줄어 흑해 항구와 중부유럽을 잇는 육상 물류의 비용과 시간이 달라졌습니다.",
-      "published": "2025-01-01", "added": "2026-11-11",
+      "published": "2025-01-01",
+      "added": "2026-11-11",
       "sources": [
-        { "name": "Al Jazeera – Romania, Bulgaria join borderless Schengen zone after 13-year wait", "url": "https://www.aljazeera.com/news/2025/1/1/romania-bulgaria-join-borderless-schengen-zone-after-13-year-wait", "lang": "EN" },
-        { "name": "European Commission – Bulgaria and Romania join the Schengen area", "url": "https://home-affairs.ec.europa.eu/news/bulgaria-and-romania-join-schengen-area-2025-01-03_en", "lang": "EN" }
+        {
+          "name": "Al Jazeera – Romania, Bulgaria join borderless Schengen zone after 13-year wait",
+          "url": "https://www.aljazeera.com/news/2025/1/1/romania-bulgaria-join-borderless-schengen-zone-after-13-year-wait",
+          "lang": "EN"
+        },
+        {
+          "name": "European Commission – Bulgaria and Romania join the Schengen area",
+          "url": "https://home-affairs.ec.europa.eu/news/bulgaria-and-romania-join-schengen-area-2025-01-03_en",
+          "lang": "EN"
+        }
       ]
     },
     {
       "id": "ua-us-minerals-fund",
-      "status": "published", "featured": false, "review": "ai",
-      "category": "economy", "sub": "",
-      "countries": ["우크라이나"], "tags": ["핵심 광물", "재건", "투자 기금"],
+      "status": "published",
+      "featured": false,
+      "review": "ai",
+      "category": "economy",
+      "sub": "",
+      "countries": [
+        "우크라이나"
+      ],
+      "tags": [
+        "핵심 광물",
+        "재건",
+        "투자 기금"
+      ],
       "title": "미국·우크라이나 광물 협정 서명, 재건투자기금 설립",
       "summary": "미국과 우크라이나가 2025년 4월 30일 광물 협정에 서명하고 양국이 공동 출자하는 ‘미국-우크라이나 재건투자기금’을 만들기로 했습니다.",
       "points": [
@@ -367,17 +783,36 @@
         "미국은 우크라이나 광물 사업에 우선 참여할 수 있으며, 향후 방공 지원도 미국 측 출자로 인정됩니다."
       ],
       "why": "우크라이나 재건이 원조에서 투자 구조로 옮겨 가는 사례로, 광물·에너지·인프라 분야에서 외국 기업이 참여하는 방식의 기준이 됩니다.",
-      "published": "2025-04-30", "added": "2026-11-11",
+      "published": "2025-04-30",
+      "added": "2026-11-11",
       "sources": [
-        { "name": "Al Jazeera – US, Ukraine sign minerals deal pushed by Trump", "url": "https://www.aljazeera.com/news/2025/4/30/ukraine-says-it-is-set-to-sign-minerals-deal-with-us", "lang": "EN" },
-        { "name": "RFE/RL – Ukraine, US sign minerals deal creating reconstruction investment fund", "url": "https://www.rferl.org/amp/ukraine-minerals-zelenskyy-trump-russia/33401501.html", "lang": "EN" }
+        {
+          "name": "Al Jazeera – US, Ukraine sign minerals deal pushed by Trump",
+          "url": "https://www.aljazeera.com/news/2025/4/30/ukraine-says-it-is-set-to-sign-minerals-deal-with-us",
+          "lang": "EN"
+        },
+        {
+          "name": "RFE/RL – Ukraine, US sign minerals deal creating reconstruction investment fund",
+          "url": "https://www.rferl.org/amp/ukraine-minerals-zelenskyy-trump-russia/33401501.html",
+          "lang": "EN"
+        }
       ]
     },
     {
       "id": "rs-novi-sad-canopy-protests",
-      "status": "published", "featured": false, "review": "ai",
-      "category": "society", "sub": "",
-      "countries": ["세르비아"], "tags": ["시위", "부패", "안전"],
+      "status": "published",
+      "featured": false,
+      "review": "ai",
+      "category": "society",
+      "sub": "",
+      "countries": [
+        "세르비아"
+      ],
+      "tags": [
+        "시위",
+        "부패",
+        "안전"
+      ],
       "title": "세르비아 노비사드역 캐노피 붕괴, 전국적 반정부 시위로 번져",
       "summary": "2024년 11월 1일 개보수를 마친 노비사드 기차역의 콘크리트 캐노피가 무너져 사망자가 나왔고, 부실 공사와 부패 책임을 묻는 시위가 대학생을 중심으로 전국으로 퍼졌습니다.",
       "points": [
@@ -386,17 +821,38 @@
         "1주기에는 노비사드에서 수만 명이 행진했습니다."
       ],
       "why": "안전사고가 장기 집권 정부에 대한 최대 규모의 시민 저항으로 이어진 사건으로, 세르비아 정치와 EU 가입 논의의 흐름을 바꿨습니다.",
-      "published": "2024-11-06", "added": "2026-11-11",
+      "published": "2024-11-06",
+      "added": "2026-11-11",
       "sources": [
-        { "name": "Al Jazeera – Police fire tear gas at Serbians protesting deadly station roof collapse", "url": "https://www.aljazeera.com/news/2024/11/6/police-fire-tear-gas-at-serbians-protesting-deadly-station-roof-collapse", "lang": "EN" },
-        { "name": "RFE/RL – Serbia protest over railway station canopy collapse", "url": "https://www.rferl.org/a/serbia-protest-canopy-railway-station-vucic-novi-sad/33189199.html", "lang": "EN" }
+        {
+          "name": "Al Jazeera – Police fire tear gas at Serbians protesting deadly station roof collapse",
+          "url": "https://www.aljazeera.com/news/2024/11/6/police-fire-tear-gas-at-serbians-protesting-deadly-station-roof-collapse",
+          "lang": "EN"
+        },
+        {
+          "name": "RFE/RL – Serbia protest over railway station canopy collapse",
+          "url": "https://www.rferl.org/a/serbia-protest-canopy-railway-station-vucic-novi-sad/33189199.html",
+          "lang": "EN"
+        }
       ]
     },
     {
       "id": "storm-boris-floods",
-      "status": "published", "featured": false, "review": "ai",
-      "category": "society", "sub": "",
-      "countries": ["폴란드", "체코", "루마니아"], "tags": ["홍수", "기후", "재난"],
+      "status": "published",
+      "featured": false,
+      "review": "ai",
+      "category": "society",
+      "sub": "",
+      "countries": [
+        "폴란드",
+        "체코",
+        "루마니아"
+      ],
+      "tags": [
+        "홍수",
+        "기후",
+        "재난"
+      ],
       "title": "폭풍 보리스, 중동부유럽에 대홍수",
       "summary": "2024년 9월 중순 폭풍 보리스가 폴란드·체코·루마니아·오스트리아 등에 기록적인 비를 뿌려 대규모 홍수가 났고, 지역 전체에서 20명 넘게 숨졌습니다.",
       "points": [
@@ -404,17 +860,36 @@
         "루마니아 갈라치에서는 주택 약 5,000채가 피해를 입었습니다."
       ],
       "why": "기후 재난이 중동부유럽의 인프라 투자, EU 재난 기금, 보험·복구 산업의 주요 과제로 떠오른 계기입니다.",
-      "published": "2024-09-16", "added": "2026-11-11",
+      "published": "2024-09-16",
+      "added": "2026-11-11",
       "sources": [
-        { "name": "bne IntelliNews – Storm Boris death toll rises to 17 as businesses reel from unprecedented flooding", "url": "https://www.intellinews.com/storm-boris-death-toll-rises-to-17-as-businesses-reel-from-unprecedented-flooding-343685/", "lang": "EN" },
-        { "name": "Center for Disaster Philanthropy – 2024 Central and Eastern Europe Floods", "url": "https://disasterphilanthropy.org/disasters/2024-central-and-eastern-europe-floods/", "lang": "EN" }
+        {
+          "name": "bne IntelliNews – Storm Boris death toll rises to 17 as businesses reel from unprecedented flooding",
+          "url": "https://www.intellinews.com/storm-boris-death-toll-rises-to-17-as-businesses-reel-from-unprecedented-flooding-343685/",
+          "lang": "EN"
+        },
+        {
+          "name": "Center for Disaster Philanthropy – 2024 Central and Eastern Europe Floods",
+          "url": "https://disasterphilanthropy.org/disasters/2024-central-and-eastern-europe-floods/",
+          "lang": "EN"
+        }
       ]
     },
     {
       "id": "si-go2025-capital-of-culture",
-      "status": "published", "featured": false, "review": "ai",
-      "category": "society", "sub": "",
-      "countries": ["슬로베니아"], "tags": ["유럽문화수도", "관광", "문화"],
+      "status": "published",
+      "featured": false,
+      "review": "ai",
+      "category": "society",
+      "sub": "",
+      "countries": [
+        "슬로베니아"
+      ],
+      "tags": [
+        "유럽문화수도",
+        "관광",
+        "문화"
+      ],
       "title": "슬로베니아 노바고리차·이탈리아 고리치아, 첫 국경 공동 유럽문화수도 개막",
       "summary": "슬로베니아 노바고리차와 이탈리아 고리치아가 함께 맡은 2025 유럽문화수도 ‘GO! 2025’가 2월 8일 슬로베니아 문화의 날에 두 도시 기차역을 잇는 행진과 함께 개막했습니다.",
       "points": [
@@ -422,10 +897,1079 @@
         "개막일에는 다섯 곳에서 2,000명 넘는 공연자가 참여한 14시간 행사가 열렸습니다."
       ],
       "why": "냉전 시기 국경으로 갈렸던 두 도시가 공동 개최한 행사로, 국경 지역 관광과 문화 협력의 사례로 자주 언급됩니다.",
-      "published": "2025-01-31", "added": "2026-11-11",
+      "published": "2025-01-31",
+      "added": "2026-11-11",
       "sources": [
-        { "name": "GOV.SI – European Capital of Culture to open with 14-hour spectacle", "url": "https://www.gov.si/en/news/2025-01-31-european-capital-of-culture-to-open-with-14-hour-spectacle/", "lang": "EN" },
-        { "name": "Slovenia.info – A Borderless Celebration: Nova Gorica and Gorizia open the European Capital of Culture", "url": "https://www.slovenia.info/en/press-centre/press-releases/31697-a-borderless-celebration-nova-gorica-and-gorizia-open-the-european-capital-of-culture", "lang": "EN" }
+        {
+          "name": "GOV.SI – European Capital of Culture to open with 14-hour spectacle",
+          "url": "https://www.gov.si/en/news/2025-01-31-european-capital-of-culture-to-open-with-14-hour-spectacle/",
+          "lang": "EN"
+        },
+        {
+          "name": "Slovenia.info – A Borderless Celebration: Nova Gorica and Gorizia open the European Capital of Culture",
+          "url": "https://www.slovenia.info/en/press-centre/press-releases/31697-a-borderless-celebration-nova-gorica-and-gorizia-open-the-european-capital-of-culture",
+          "lang": "EN"
+        }
+      ]
+    },
+    {
+      "id": "ua-full-scale-invasion",
+      "status": "published",
+      "featured": true,
+      "review": "ai",
+      "category": "politics",
+      "sub": "",
+      "countries": [
+        "우크라이나",
+        "벨라루스"
+      ],
+      "tags": [
+        "전면 침공",
+        "전쟁",
+        "유엔",
+        "안보"
+      ],
+      "title": "러시아의 우크라이나 전면 침공, 유엔 총회가 철군 요구",
+      "summary": "2022년 2월 24일 시작된 러시아의 우크라이나 전면 침공 이후, 유엔 총회는 3월 2일 찬성 141개국으로 침공을 규탄하고 러시아군 철수를 요구하는 결의를 채택했습니다.",
+      "points": [
+        "결의는 우크라이나의 주권·독립·영토 보전을 재확인했습니다.",
+        "총회 결의는 국제사회의 입장을 보여 주지만, 그 자체가 전쟁 종결이나 강제 집행을 뜻하지는 않습니다."
+      ],
+      "why": "동유럽의 안보·난민·에너지 정책을 바꾼 출발점으로, 지역의 국방 투자와 대외관계 재편을 이해하는 핵심 사건입니다.",
+      "published": "2022-03-02",
+      "added": "2026-11-12",
+      "sources": [
+        {
+          "name": "UN Sustainable Development Group – General Assembly resolution demands end to Russian offensive in Ukraine",
+          "url": "https://unsdg.un.org/latest/announcements/general-assembly-resolution-demands-end-russian-offensive-ukraine",
+          "lang": "EN"
+        }
+      ]
+    },
+    {
+      "id": "hr-euro-schengen-entry",
+      "status": "published",
+      "featured": true,
+      "review": "ai",
+      "category": "economy",
+      "sub": "",
+      "countries": [
+        "크로아티아"
+      ],
+      "tags": [
+        "유로",
+        "솅겐",
+        "관광",
+        "유럽 통합"
+      ],
+      "title": "크로아티아, 유로 도입과 솅겐 가입을 동시에 시행",
+      "summary": "크로아티아가 2023년 1월 1일 유로를 도입하고 솅겐 지역에 가입했습니다. EU 가입 10년 만에 통화와 역내 이동 체계에서 유럽 통합을 한 단계 더 진행했습니다.",
+      "points": [
+        "육로·해상 내부 국경 검문은 1월 1일, 공항 내부 국경 검문은 3월 26일부터 폐지하도록 결정됐습니다.",
+        "솅겐 내부 검문 폐지와 비회원국에 대한 외부 국경 관리는 구분됩니다."
+      ],
+      "why": "관광객의 이동, 국경 물류, 환전·결제 비용에 직접 영향을 준 제도 변화로, 크로아티아의 유럽 경제 통합을 한 단계 진전시켰습니다.",
+      "published": "2023-01-01",
+      "added": "2026-11-12",
+      "sources": [
+        {
+          "name": "AP – Croatia rings in New Year as fully integrated EU member",
+          "url": "https://apnews.com/article/7b58ad627de470eaedc7b2c7c41e12ce",
+          "lang": "EN"
+        },
+        {
+          "name": "EU Council – Schengen area: Council decides to lift border controls with Croatia",
+          "url": "https://www.consilium.europa.eu/en/press/press-releases/2022/12/08/schengen-area-council-decides-to-lift-border-controls-with-croatia/",
+          "lang": "EN"
+        }
+      ]
+    },
+    {
+      "id": "al-mk-eu-talks-open",
+      "status": "published",
+      "featured": false,
+      "review": "ai",
+      "category": "politics",
+      "sub": "",
+      "countries": [
+        "알바니아",
+        "북마케도니아"
+      ],
+      "tags": [
+        "EU 가입",
+        "서발칸",
+        "확대"
+      ],
+      "title": "알바니아·북마케도니아, EU 가입 협상 개시",
+      "summary": "2022년 7월 19일 알바니아와 북마케도니아가 EU와 첫 정부간회의를 열고 가입 협상 절차에 들어갔습니다. 오랫동안 지연됐던 서발칸 확대 과정의 전환점이 됐습니다.",
+      "points": [
+        "협상 개시는 가입 완료가 아니며, EU 규범과 국내 제도의 정합성 심사와 개혁이 뒤따릅니다.",
+        "두 나라의 협상 진도는 이후 각국의 개혁과 회원국의 결정에 따라 달라질 수 있습니다."
+      ],
+      "why": "서발칸의 장기 투자·법치 개혁·대외정책이 EU 가입 과정과 연결되는 중요한 제도적 출발점입니다.",
+      "published": "2022-07-19",
+      "added": "2026-11-12",
+      "sources": [
+        {
+          "name": "Axios – Albania, North Macedonia begin EU accession talks",
+          "url": "https://www.axios.com/2022/07/19/north-macedonia-albania-eu-talks",
+          "lang": "EN"
+        },
+        {
+          "name": "EU Council – Albania: accession process",
+          "url": "https://www.consilium.europa.eu/en/policies/albania/",
+          "lang": "EN"
+        }
+      ]
+    },
+    {
+      "id": "xk-schengen-visa-waiver",
+      "status": "published",
+      "featured": false,
+      "review": "ai",
+      "category": "society",
+      "sub": "",
+      "countries": [
+        "코소보"
+      ],
+      "tags": [
+        "비자",
+        "솅겐",
+        "이동",
+        "교류"
+      ],
+      "title": "코소보 여권 소지자 솅겐 단기 무비자 확정, 2024년 시행",
+      "summary": "EU가 2023년 코소보 여권 소지자의 단기 비자 면제를 채택했고, 2024년 1월 1일부터 적용됐습니다. 장기간 남아 있던 유럽 내 이동 장벽이 낮아졌습니다.",
+      "points": [
+        "비자 면제는 180일 중 최대 90일의 단기 체류를 대상으로 합니다.",
+        "무비자 단기 방문은 EU 가입이나 취업·장기 거주 권리 부여와는 별개입니다."
+      ],
+      "why": "가족 방문·출장·문화 교류의 접근성을 바꾸며, 서발칸 주민의 유럽 내 이동 격차를 줄인 사건입니다.",
+      "published": "2023-04-20",
+      "added": "2026-11-12",
+      "sources": [
+        {
+          "name": "European Commission – Visa liberalisation: EU adopts visa-free travel for Kosovo",
+          "url": "https://enlargement.ec.europa.eu/news/visa-liberalisation-eu-adopts-visa-free-travel-kosovo-2023-04-20_en",
+          "lang": "EN"
+        },
+        {
+          "name": "Swiss Federal Department of Foreign Affairs – Visa requirements for Kosovo citizens",
+          "url": "https://www.eda.admin.ch/content/countries/kosovo/en/home/visa/entry-ch/up-90-days/do-i-need-a-schengen-visa.html",
+          "lang": "EN"
+        }
+      ]
+    },
+    {
+      "id": "ba-eu-negotiations-greenlight",
+      "status": "published",
+      "featured": false,
+      "review": "ai",
+      "category": "politics",
+      "sub": "",
+      "countries": [
+        "보스니아 헤르체고비나"
+      ],
+      "tags": [
+        "EU 가입",
+        "서발칸",
+        "제도 개혁"
+      ],
+      "title": "EU 정상들, 보스니아 헤르체고비나 가입 협상 개시 승인",
+      "summary": "2024년 3월 21~22일 EU 정상회의에서 보스니아 헤르체고비나의 가입 협상 개시를 승인했습니다. 2022년 후보국 지위 부여에 이어 개혁 진전을 인정한 결정입니다.",
+      "points": [
+        "정상회의의 정치적 승인과 구체적인 협상 틀 채택·협상 진행은 별도 단계입니다.",
+        "EU 가입까지는 법치와 국가 차원의 제도 개혁 등 추가 과제가 남습니다."
+      ],
+      "why": "복잡한 권력 분점 구조를 가진 보스니아의 개혁 동력과 EU의 서발칸 관여를 판단하는 기준점입니다.",
+      "published": "2024-03-22",
+      "added": "2026-11-12",
+      "sources": [
+        {
+          "name": "European Council – European Council, 21–22 March 2024",
+          "url": "https://www.consilium.europa.eu/en/meetings/european-council/2024/03/21-22/",
+          "lang": "EN"
+        },
+        {
+          "name": "Directorate for European Integration of Bosnia and Herzegovina – Accession process",
+          "url": "https://www.dei.gov.ba/en/accession-process",
+          "lang": "EN"
+        }
+      ]
+    },
+    {
+      "id": "me-milatovic-presidential-election",
+      "status": "published",
+      "featured": false,
+      "review": "ai",
+      "category": "politics",
+      "sub": "",
+      "countries": [
+        "몬테네그로"
+      ],
+      "tags": [
+        "대선",
+        "정치 변화",
+        "유럽 나우"
+      ],
+      "title": "몬테네그로 대선에서 밀라토비치 승리, 주카노비치 시대 전환",
+      "summary": "2023년 4월 2일 몬테네그로 대선 결선에서 야코브 밀라토비치가 밀로 주카노비치를 꺾었습니다. 장기간 대통령과 총리를 지낸 주카노비치의 정치적 지배가 끝나는 상징적 사건이었습니다.",
+      "points": [
+        "밀라토비치는 신생 정치 세력인 ‘유럽 나우’의 공동 창립자입니다.",
+        "대통령 선거 결과와 의회 다수·정부 구성은 구분해 볼 필요가 있습니다."
+      ],
+      "why": "몬테네그로의 엘리트 교체와 EU 통합 노선을 이해하는 핵심 선거입니다.",
+      "published": "2023-04-04",
+      "added": "2026-11-12",
+      "sources": [
+        {
+          "name": "OSW – Presidential elections in Montenegro: the end of the Djukanovic era",
+          "url": "https://www.osw.waw.pl/en/publikacje/analyses/2023-04-04/presidential-elections-montenegro-end-djukanovic-era",
+          "lang": "EN"
+        }
+      ]
+    },
+    {
+      "id": "md-eu-constitutional-referendum",
+      "status": "published",
+      "featured": false,
+      "review": "ai",
+      "category": "politics",
+      "sub": "",
+      "countries": [
+        "몰도바"
+      ],
+      "tags": [
+        "국민투표",
+        "헌법",
+        "EU 통합"
+      ],
+      "title": "몰도바, 국민투표로 EU 통합 노선을 헌법에 명시",
+      "summary": "2024년 10월 20일 몰도바의 EU 통합 관련 개헌 국민투표에서 찬성이 50.35%로 근소하게 앞섰습니다. 헌법재판소는 10월 31일 결과를 승인했습니다.",
+      "points": [
+        "EU 통합을 헌법적 방향으로 규정하는 결정이며 EU 회원국 지위를 얻은 것은 아닙니다.",
+        "찬반 격차가 작아 국내 정치의 분열도 함께 드러났습니다."
+      ],
+      "why": "몰도바 유권자가 EU 통합 노선을 국내 헌법에 명시한 사건으로, 대외정책 방향을 둘러싼 국내 정치의 중요성을 보여 줍니다.",
+      "published": "2024-10-31",
+      "added": "2026-11-12",
+      "sources": [
+        {
+          "name": "Moldova 1 – Referendum results validated by the Constitutional Court",
+          "url": "https://www.moldova1.md/p/38059/live-text--referendum-results--validated-the-constitutional-court-gives-the-green-light-for-amending-the-constitution",
+          "lang": "EN"
+        }
+      ]
+    },
+    {
+      "id": "pl-tusk-government-change",
+      "status": "published",
+      "featured": true,
+      "review": "ai",
+      "category": "politics",
+      "sub": "",
+      "countries": [
+        "폴란드"
+      ],
+      "tags": [
+        "총선",
+        "정권 교체",
+        "투스크",
+        "EU"
+      ],
+      "title": "폴란드 투스크 정부 출범, 법과정의당 8년 집권 종료",
+      "summary": "2023년 10월 총선 뒤 연정 구성에 나선 도날트 투스크가 12월 11일 의회에서 총리로 선출됐고, 13일 내각이 취임했습니다. 법과정의당의 8년 집권이 끝났습니다.",
+      "points": [
+        "서로 다른 야권 정치 연합들이 새 정부에 참여했습니다.",
+        "정부 교체는 EU와의 관계 회복 및 국내 제도 개혁 논의의 전환점이 됐습니다."
+      ],
+      "why": "폴란드 정부와 EU의 관계, 사법·공공기관 개혁의 방향을 바꾼 정권 교체로 이후 권력 구도를 이해하는 출발점입니다.",
+      "published": "2023-12-13",
+      "added": "2026-11-12",
+      "sources": [
+        {
+          "name": "AP – Eight years of conservative rule in Poland ends as Donald Tusk becomes prime minister",
+          "url": "https://apnews.com/article/8fd0ac25be8fee9f51ece920f493dc1f",
+          "lang": "EN"
+        },
+        {
+          "name": "PAP – Tusk elected PM by parliament",
+          "url": "https://www.pap.pl/en/news/tusk-elected-pm-parliament",
+          "lang": "EN"
+        }
+      ]
+    },
+    {
+      "id": "lt-german-permanent-brigade",
+      "status": "published",
+      "featured": false,
+      "review": "ai",
+      "category": "politics",
+      "sub": "",
+      "countries": [
+        "리투아니아"
+      ],
+      "tags": [
+        "NATO",
+        "독일",
+        "상주 여단",
+        "안보"
+      ],
+      "title": "독일, 리투아니아 상주 여단 출범으로 NATO 동부 방어 강화",
+      "summary": "2025년 5월 22일 독일의 리투아니아 주둔 여단 출범 행사가 빌뉴스에서 열렸습니다. 독일은 병력을 장기 배치해 NATO 동부 방어를 강화하는 계획을 진행했습니다.",
+      "points": [
+        "발표 당시 계획은 2027년 말까지 약 5,000명 규모에 도달하는 것이었습니다.",
+        "여단 출범 행사와 완전한 병력·시설 배치 완료는 구분됩니다."
+      ],
+      "why": "순환 배치 중심의 억지력에서 장기 주둔과 기반시설 투자로 무게가 이동하는 사례입니다.",
+      "published": "2025-05-22",
+      "added": "2026-11-12",
+      "sources": [
+        {
+          "name": "AP – Merz inaugurates a historic German brigade in Lithuania",
+          "url": "https://apnews.com/article/1eb668fc6bf8a345fbd36aa3e7cdd040",
+          "lang": "EN"
+        },
+        {
+          "name": "Bundeswehr – German 45 Armoured Brigade entered service in Lithuania",
+          "url": "https://www.bundeswehr.de/en/news/eastern-flank-new-brigade-5929244",
+          "lang": "EN"
+        }
+      ]
+    },
+    {
+      "id": "lv-state-defence-service",
+      "status": "published",
+      "featured": false,
+      "review": "ai",
+      "category": "politics",
+      "sub": "",
+      "countries": [
+        "라트비아"
+      ],
+      "tags": [
+        "징병제",
+        "국가방위복무",
+        "안보"
+      ],
+      "title": "라트비아 의회, 국가방위복무법 통과로 징병제 재도입",
+      "summary": "라트비아 의회가 2023년 4월 5일 국가방위복무법을 통과시켰습니다. 성인 남성 시민을 대상으로 방위복무를 도입하는 제도적 변화입니다.",
+      "points": [
+        "법은 18세가 된 남성 시민의 소집을 규정했습니다.",
+        "양심·종교 등의 사유로 군 복무가 어려운 경우 민간 대체복무가 가능하도록 했습니다."
+      ],
+      "why": "발트 지역의 안보 위협이 국방 인력 제도와 청년층의 생활에 직접 반영된 사례입니다.",
+      "published": "2023-04-05",
+      "added": "2026-11-12",
+      "sources": [
+        {
+          "name": "Saeima – State Defence Service introduced in Latvia",
+          "url": "https://www.saeima.lv/en/news/saeima-news/22361-saeima-/32125-state-defence-service-introduced-in-latvia",
+          "lang": "EN"
+        }
+      ]
+    },
+    {
+      "id": "ee-marriage-equality",
+      "status": "published",
+      "featured": false,
+      "review": "ai",
+      "category": "society",
+      "sub": "",
+      "countries": [
+        "에스토니아"
+      ],
+      "tags": [
+        "혼인 평등",
+        "가족법",
+        "인권"
+      ],
+      "title": "에스토니아 의회, 동성혼 허용 법안 통과",
+      "summary": "에스토니아 의회가 2023년 6월 20일 성별과 관계없이 두 성인이 결혼할 수 있도록 법을 바꿨습니다. 법의 적용 시점은 2024년 1월 1일로 정해졌습니다.",
+      "points": [
+        "혼인 평등과 함께 동성 배우자의 공동 입양 권리도 규정했습니다."
+      ],
+      "why": "발트 지역의 가족법과 성소수자 권리 변화에서 중요한 입법 사례입니다.",
+      "published": "2023-06-20",
+      "added": "2026-11-12",
+      "sources": [
+        {
+          "name": "ERR – Historic decision: Estonia legalizes same-sex marriage",
+          "url": "https://news.err.ee/1609012469/historic-decision-estonia-legalizes-same-sex-marriage",
+          "lang": "EN"
+        },
+        {
+          "name": "Riigikogu – The Riigikogu passed the Act allowing gender neutral marriage",
+          "url": "https://www.riigikogu.ee/en/pressiteated/the-riigikogu-passed-the-act-allowing-gender-neutral-marriage/",
+          "lang": "EN"
+        }
+      ]
+    },
+    {
+      "id": "si-2023-flood-disaster",
+      "status": "published",
+      "featured": false,
+      "review": "ai",
+      "category": "society",
+      "sub": "",
+      "countries": [
+        "슬로베니아"
+      ],
+      "tags": [
+        "홍수",
+        "재난",
+        "기후 적응"
+      ],
+      "title": "슬로베니아, 2023년 대홍수로 대규모 대피·국제 지원 요청",
+      "summary": "2023년 8월 초 슬로베니아에 대홍수가 발생해 인명 피해와 대규모 대피가 이어졌습니다. EU는 시민보호 체계를 통해 장비와 구조 지원을 조정했습니다.",
+      "points": [
+        "슬로베니아 당국은 당시 최근 역사에서 가장 심각한 홍수 상황이라고 설명했습니다.",
+        "독일·프랑스 등의 지원과 EU 위성 지도 분석이 재난 대응에 동원됐습니다."
+      ],
+      "why": "주택·교통망 복구와 재난 예방 투자를 국가 과제로 만들고, EU 공동 재난 대응의 중요성을 드러낸 사건입니다.",
+      "published": "2023-08-07",
+      "added": "2026-11-12",
+      "sources": [
+        {
+          "name": "European Commission DG ECHO – Extreme weather conditions: EU sends assistance to Slovenia and Cyprus",
+          "url": "https://civil-protection-humanitarian-aid.ec.europa.eu/news-stories/news/extreme-weather-conditions-eu-sends-assistance-slovenia-and-cyprus-2023-08-07_en",
+          "lang": "EN"
+        }
+      ]
+    },
+    {
+      "id": "by-ua-nobel-peace-civil-society",
+      "status": "published",
+      "featured": false,
+      "review": "ai",
+      "category": "society",
+      "sub": "",
+      "countries": [
+        "벨라루스",
+        "우크라이나"
+      ],
+      "tags": [
+        "노벨평화상",
+        "인권",
+        "시민사회"
+      ],
+      "title": "벨라루스·우크라이나·러시아 인권 활동에 노벨평화상",
+      "summary": "2022년 노벨평화상은 벨라루스 인권운동가 알레스 비알리아츠키, 러시아 인권단체 메모리알, 우크라이나 시민자유센터에 공동 수여됐습니다.",
+      "points": [
+        "노벨위원회는 권력 비판, 시민의 기본권 보호, 전쟁범죄·인권침해 기록 활동을 평가했습니다.",
+        "수상자들의 활동은 국가 간 대립 속에서도 시민사회의 역할을 드러냈습니다."
+      ],
+      "why": "정부·군사 중심의 뉴스만으로 놓치기 쉬운 동유럽 인권·시민사회 연대의 전환점입니다.",
+      "published": "2022-10-07",
+      "added": "2026-11-12",
+      "sources": [
+        {
+          "name": "Nobel Prize – The Nobel Peace Prize 2022: Press release",
+          "url": "https://www.nobelprize.org/prizes/peace/2022/press-release/",
+          "lang": "EN"
+        },
+        {
+          "name": "TIME – Why Ales Bialiatski Won the 2022 Nobel Peace Prize",
+          "url": "https://time.com/6220520/nobel-peace-prize-2022-ales-bialiatski/",
+          "lang": "EN"
+        }
+      ]
+    },
+    {
+      "id": "rs-xk-ohrid-normalisation",
+      "status": "published",
+      "featured": false,
+      "review": "ai",
+      "category": "politics",
+      "sub": "",
+      "countries": [
+        "세르비아",
+        "코소보"
+      ],
+      "tags": [
+        "오흐리드",
+        "관계 정상화",
+        "서발칸"
+      ],
+      "title": "세르비아·코소보, 오흐리드에서 관계 정상화 이행안 합의",
+      "summary": "EU는 2023년 3월 18일 세르비아·코소보 관계 정상화 합의의 이행 부속서를 발표했습니다. 합의 이행을 양측의 EU 통합 과정과 연계하는 틀이 마련됐습니다.",
+      "points": [
+        "실종자 문제와 코소보 세르비아계 공동체의 자치 관련 협의 등이 포함됐습니다.",
+        "합의 도출을 상호 국가 승인이나 모든 의무의 이행 완료로 해석해서는 안 됩니다."
+      ],
+      "why": "서발칸의 주요 분쟁을 EU 가입 조건과 연결한 외교적 이정표입니다.",
+      "published": "2023-03-18",
+      "added": "2026-11-12",
+      "sources": [
+        {
+          "name": "EEAS – Implementation Annex to the Agreement on the Path to Normalisation of Relations between Kosovo and Serbia",
+          "url": "https://www.eeas.europa.eu/eeas/belgrade-pristina-dialogue-implementation-annex-agreement-path-normalisation-relations-between_en",
+          "lang": "EN"
+        }
+      ]
+    },
+    {
+      "id": "rs-eu-critical-materials-partnership",
+      "status": "published",
+      "featured": false,
+      "review": "ai",
+      "category": "economy",
+      "sub": "",
+      "countries": [
+        "세르비아"
+      ],
+      "tags": [
+        "핵심 원자재",
+        "배터리",
+        "리튬",
+        "공급망"
+      ],
+      "title": "EU·세르비아, 핵심 원자재·배터리 공급망 전략적 협력 체결",
+      "summary": "EU와 세르비아가 2024년 7월 19일 지속가능한 원자재, 배터리 가치사슬, 전기차 분야의 전략적 협력 양해각서를 체결했습니다.",
+      "points": [
+        "협력은 세르비아의 원자재 잠재력과 EU의 친환경 산업 공급망을 연결하는 데 초점을 뒀습니다.",
+        "양해각서 체결은 개별 광산의 환경 심사나 생산 개시가 완료됐다는 뜻은 아닙니다."
+      ],
+      "why": "서발칸이 원자재 공급과 전기차 산업 정책의 핵심 파트너로 부상하는 흐름을 보여 줍니다.",
+      "published": "2024-07-19",
+      "added": "2026-11-12",
+      "sources": [
+        {
+          "name": "European Commission – EU and Serbia sign strategic partnership on sustainable raw materials, battery value chains and electric vehicles",
+          "url": "https://enlargement.ec.europa.eu/news/eu-and-serbia-sign-strategic-partnership-sustainable-raw-materials-battery-value-chains-and-electric-2024-07-19_en",
+          "lang": "EN"
+        }
+      ]
+    },
+    {
+      "id": "hu-catl-debrecen-investment",
+      "status": "published",
+      "featured": false,
+      "review": "ai",
+      "category": "industry",
+      "sub": "auto",
+      "countries": [
+        "헝가리"
+      ],
+      "tags": [
+        "CATL",
+        "배터리",
+        "중국 투자",
+        "데브레첸"
+      ],
+      "title": "CATL, 헝가리 데브레첸에 73억 유로 배터리 공장 투자 발표",
+      "summary": "중국 CATL이 2022년 8월 12일 헝가리 데브레첸에 약 73억4천만 유로를 투자해 배터리 공장을 건설하겠다고 발표했습니다. 발표 당시 계획 생산능력은 연간 100GWh였습니다.",
+      "points": [
+        "독일에 이은 CATL의 두 번째 유럽 배터리 공장 계획입니다.",
+        "투자액과 생산능력은 발표 당시 계획치이며 실제 준공·가동 실적과 구분됩니다."
+      ],
+      "why": "헝가리의 대규모 아시아 배터리 투자 유치와 유럽 전기차 공급망 경쟁을 보여 주는 대표적인 투자입니다.",
+      "published": "2022-08-12",
+      "added": "2026-11-12",
+      "sources": [
+        {
+          "name": "CATL – CATL announces its second European battery plant in Hungary",
+          "url": "https://www.catl.com/en/news/983.html",
+          "lang": "EN"
+        }
+      ]
+    },
+    {
+      "id": "sk-volvo-kosice-ev-investment",
+      "status": "published",
+      "featured": false,
+      "review": "ai",
+      "category": "industry",
+      "sub": "auto",
+      "countries": [
+        "슬로바키아"
+      ],
+      "tags": [
+        "볼보",
+        "전기차",
+        "코시체",
+        "외국인 투자"
+      ],
+      "title": "볼보, 슬로바키아 코시체에 전기차 전용 공장 계획 발표",
+      "summary": "볼보자동차가 2022년 7월 1일 슬로바키아 동부 코시체 인근에 약 12억 유로 규모의 전기차 공장을 짓겠다고 발표했습니다.",
+      "points": [
+        "발표 당시 연간 최대 25만 대 규모의 생산능력을 계획했습니다.",
+        "기존 자동차 공급망을 활용하되 슬로바키아 동부에 새로운 제조 거점을 조성하는 투자입니다."
+      ],
+      "why": "내연기관 중심의 자동차 생산국이 전기차 제조 거점으로 전환하는 흐름과 지역 균형 발전을 함께 보여 줍니다.",
+      "published": "2022-07-01",
+      "added": "2026-11-12",
+      "sources": [
+        {
+          "name": "Volvo Cars – New Slovakia electric car manufacturing plant",
+          "url": "https://www.volvocars.com/us/media/press-releases/51C94CF16A0CA1AF/",
+          "lang": "EN"
+        },
+        {
+          "name": "SARIO – Strategic investment of Volvo",
+          "url": "https://www.sario.sk/sk/novinky/geneza-rokovani-sario-ku-strategickej-investicii-skupiny-volvo",
+          "lang": "EN"
+        }
+      ]
+    },
+    {
+      "id": "ro-neptun-deep-investment",
+      "status": "published",
+      "featured": false,
+      "review": "ai",
+      "category": "industry",
+      "sub": "energy",
+      "countries": [
+        "루마니아"
+      ],
+      "tags": [
+        "가스전",
+        "흑해",
+        "넵툰딥",
+        "에너지 안보"
+      ],
+      "title": "루마니아 흑해 넵툰딥 가스전, 최종 투자 결정",
+      "summary": "OMV페트롬과 롬가스가 2023년 6월 21일 흑해 넵툰딥 가스전 개발에 대한 최종 투자 결정을 내렸습니다. 루마니아의 첫 심해 해상 가스 개발을 본격 추진하는 단계입니다.",
+      "points": [
+        "개발 계획 승인은 탐사에서 본격 개발로 넘어가는 결정입니다.",
+        "최종 투자 결정과 가스 생산 개시는 별개의 단계입니다."
+      ],
+      "why": "흑해의 자체 에너지 자원 개발이 루마니아와 주변국의 공급 안보에 어떤 역할을 할지 보여 주는 주요 사업입니다.",
+      "published": "2023-06-21",
+      "added": "2026-11-12",
+      "sources": [
+        {
+          "name": "OMV Petrom – Final Investment Decision for the Neptun Deep project",
+          "url": "https://www.omvpetrom.com/en/investors/news-and-events/2023/adhoc-report-omv-petrom-takes-the-final-investment-decision-for-the-neptun-deep-project-and-together-with-its-partner-romgaz-approves-the-development-plan",
+          "lang": "EN"
+        }
+      ]
+    },
+    {
+      "id": "pl-baltic-pipe-opening",
+      "status": "published",
+      "featured": false,
+      "review": "ai",
+      "category": "industry",
+      "sub": "energy",
+      "countries": [
+        "폴란드"
+      ],
+      "tags": [
+        "발틱파이프",
+        "가스관",
+        "노르웨이",
+        "에너지 안보"
+      ],
+      "title": "폴란드, 노르웨이 가스 도입 노선 발틱파이프 개통",
+      "summary": "2022년 9월 27일 폴란드 골레니우프에서 발틱파이프 개통 행사가 열렸습니다. 노르웨이 가스를 덴마크를 거쳐 폴란드로 공급하는 노선입니다.",
+      "points": [
+        "폴란드 GAZ-SYSTEM과 덴마크 Energinet이 공동 추진했습니다.",
+        "개통 이후 단계적으로 수송을 확대했고, 같은 해 11월 완전 가동에 들어갔습니다."
+      ],
+      "why": "폴란드가 러시아산 가스 의존을 줄이기 위해 확보한 구체적인 대체 공급망입니다.",
+      "published": "2022-09-27",
+      "added": "2026-11-12",
+      "sources": [
+        {
+          "name": "Polish Ministry of Climate and Environment – Opening of the Baltic Pipe gas pipeline",
+          "url": "https://www.gov.pl/web/climate/opening-of-the-baltic-pipe-gas-pipeline",
+          "lang": "EN"
+        },
+        {
+          "name": "CINEA – The Baltic Pipe",
+          "url": "https://cinea.ec.europa.eu/featured-projects/baltic-pipe-subsea-pipeline-transport-natural-gas-under-north-sea_en",
+          "lang": "EN"
+        }
+      ]
+    },
+    {
+      "id": "lt-russian-gas-imports-end",
+      "status": "published",
+      "featured": false,
+      "review": "ai",
+      "category": "industry",
+      "sub": "energy",
+      "countries": [
+        "리투아니아"
+      ],
+      "tags": [
+        "LNG",
+        "가스",
+        "클라이페다",
+        "에너지 안보"
+      ],
+      "title": "리투아니아, 자국 수요용 러시아산 가스 수입 중단",
+      "summary": "리투아니아 에너지부는 2022년 4월부터 자국 수요를 위한 러시아산 가스 수입을 중단했다고 밝혔습니다. 클라이페다 LNG 터미널을 대체 공급의 핵심 수단으로 제시했습니다.",
+      "points": [
+        "에너지부가 제시한 4월 2일 수입량은 리투아니아 수요 기준 0MWh였습니다."
+      ],
+      "why": "미리 구축한 LNG 인프라가 실제 공급원 전환으로 연결된 사례입니다.",
+      "published": "2022-04-02",
+      "added": "2026-11-12",
+      "sources": [
+        {
+          "name": "Lithuanian Ministry of Energy – Lithuania completely abandons Russian gas imports",
+          "url": "https://enmin.lrv.lt/en/news/lithuania-completely-abandons-russian-gas-imports/",
+          "lang": "EN"
+        }
+      ]
+    },
+    {
+      "id": "ua-kakhovka-dam-disaster",
+      "status": "published",
+      "featured": false,
+      "review": "ai",
+      "category": "society",
+      "sub": "",
+      "countries": [
+        "우크라이나"
+      ],
+      "tags": [
+        "카호우카댐",
+        "환경",
+        "수질",
+        "재난"
+      ],
+      "title": "카호우카댐 붕괴, 우크라이나 남부의 수질·생태계 재난으로",
+      "summary": "2023년 6월 6일 우크라이나 카호우카댐이 붕괴해 하류가 침수됐습니다. OSCE가 지원한 현장 조사에서는 오염물질 확산과 장기적인 환경 피해 위험이 확인됐습니다.",
+      "points": [
+        "조사는 6월 10일~7월 14일 우크라이나 정부 통제 지역에서 진행됐습니다.",
+        "안전 문제로 드니프로강 남쪽 강변은 조사하지 못해 평가의 공간적 한계가 있습니다."
+      ],
+      "why": "전쟁 피해가 군사시설을 넘어 생활용수·환경 복구 비용으로 장기간 이어진다는 점을 보여 줍니다.",
+      "published": "2023-08-10",
+      "added": "2026-11-12",
+      "sources": [
+        {
+          "name": "OSCE – Environmental impact of Kakhovka hydroelectric power plant dam breach",
+          "url": "https://www.osce.org/support-programme-for-ukraine/549643",
+          "lang": "EN"
+        }
+      ]
+    },
+    {
+      "id": "ua-black-sea-grain-initiative",
+      "status": "published",
+      "featured": false,
+      "review": "ai",
+      "category": "economy",
+      "sub": "",
+      "countries": [
+        "우크라이나"
+      ],
+      "tags": [
+        "곡물",
+        "흑해",
+        "식량 안보",
+        "수출"
+      ],
+      "title": "흑해 곡물 협정 체결로 우크라이나 해상 수출 통로 마련",
+      "summary": "2022년 7월 22일 유엔과 튀르키예의 중재로 우크라이나 항구에서 곡물·식량을 안전하게 수출하기 위한 흑해 곡물 협정이 출범했습니다.",
+      "points": [
+        "전쟁으로 막힌 해상 수출을 제한적으로 재개하기 위한 제도였습니다.",
+        "러시아는 2023년 7월 참여를 중단했습니다. 협정은 현재 운영 중인 제도가 아닙니다."
+      ],
+      "why": "우크라이나의 농산물 수출과 세계 식량 공급이 외교·안보 협상에 직접 연결되는 사례입니다.",
+      "published": "2022-07-22",
+      "added": "2026-11-12",
+      "sources": [
+        {
+          "name": "Axios – Russia and Ukraine sign deal to resume crucial grain exports",
+          "url": "https://www.axios.com/2022/07/22/russia-ukraine-grain-export-deal-black-sea-blockade",
+          "lang": "EN"
+        },
+        {
+          "name": "AP – UN chief sends Russia new proposals to revive Black Sea grain deal",
+          "url": "https://apnews.com/article/58dc4d816c239435a35118848c55e841",
+          "lang": "EN"
+        }
+      ]
+    },
+    {
+      "id": "pl-oder-river-ecological-disaster",
+      "status": "published",
+      "featured": false,
+      "review": "ai",
+      "category": "society",
+      "sub": "",
+      "countries": [
+        "폴란드"
+      ],
+      "tags": [
+        "오데르강",
+        "수질",
+        "환경",
+        "산업 오염"
+      ],
+      "title": "오데르강 물고기 집단 폐사, 염분·독성 조류 복합 위험 드러내",
+      "summary": "2022년 여름 폴란드와 독일을 흐르는 오데르강에서 대규모 물고기 폐사가 발생했습니다. 2023년 EU 공동연구센터 보고서는 독성 조류와 높은 염분, 가뭄 등이 결합한 위험을 분석했습니다.",
+      "points": [
+        "보고서는 물고기 피해를 약 360톤으로 추산했습니다.",
+        "산업 배출수의 염분 관리와 국경을 넘는 오염 정보 공유·상시 감시를 개선할 것을 권고했습니다."
+      ],
+      "why": "기후 요인과 산업 오염이 결합한 하천 재난으로, 국경을 공유하는 국가들의 공동 관리 필요성을 드러냈습니다.",
+      "published": "2023-02-17",
+      "added": "2026-11-12",
+      "sources": [
+        {
+          "name": "European Commission JRC – An EU analysis of the ecological disaster in the Oder River of 2022",
+          "url": "https://publications.jrc.ec.europa.eu/repository/handle/JRC132271",
+          "lang": "EN"
+        }
+      ]
+    },
+    {
+      "id": "al-iran-cyberattack-diplomatic-break",
+      "status": "published",
+      "featured": false,
+      "review": "ai",
+      "category": "politics",
+      "sub": "",
+      "countries": [
+        "알바니아"
+      ],
+      "tags": [
+        "사이버 공격",
+        "이란",
+        "단교",
+        "NATO"
+      ],
+      "title": "알바니아, 정부 전산망 공격 책임 물어 이란과 단교",
+      "summary": "알바니아는 2022년 7월 정부 전산망 공격의 배후로 이란을 지목하고 9월 외교 관계를 끊었습니다. NATO와 EU도 알바니아의 사이버 복원력 지원에 나섰습니다.",
+      "points": [
+        "공격은 온라인 공공서비스에 차질을 일으켰습니다.",
+        "NATO는 알바니아 및 동맹국들이 이란 정부에 책임을 귀속시켰다고 설명했습니다."
+      ],
+      "why": "사이버 공격이 기술 문제를 넘어 단교와 동맹 대응으로 이어진 동유럽의 주요 안보 사례입니다.",
+      "published": "2022-09-09",
+      "added": "2026-11-12",
+      "sources": [
+        {
+          "name": "Axios – Why Albania’s cyberattacks matter to the U.S.",
+          "url": "https://www.axios.com/2022/09/09/albania-cyberattack-us-iran",
+          "lang": "EN"
+        },
+        {
+          "name": "NATO – NATO reaffirms support for Albania following cyber attacks",
+          "url": "https://www.nato.int/en/news-and-events/articles/news/2022/09/22/nato-reaffirms-support-for-albania-following-cyber-attacks",
+          "lang": "EN"
+        }
+      ]
+    },
+    {
+      "id": "mk-kocani-nightclub-fire",
+      "status": "published",
+      "featured": false,
+      "review": "ai",
+      "category": "society",
+      "sub": "",
+      "countries": [
+        "북마케도니아"
+      ],
+      "tags": [
+        "코차니",
+        "화재",
+        "안전",
+        "부패"
+      ],
+      "title": "북마케도니아 코차니 나이트클럽 화재, 안전·허가 관리 책임 논란",
+      "summary": "2025년 3월 16일 북마케도니아 코차니의 나이트클럽에서 공연 중 화재가 발생해 다수의 젊은이가 숨지거나 다쳤습니다. 참사는 영업 허가와 안전 감독에 대한 책임 논란으로 이어졌습니다.",
+      "points": [
+        "당일 AP 보도는 사망 59명, 부상 155명으로 전했습니다. 이는 보도 시점의 집계입니다.",
+        "참사 직후 수사와 책임 규명 요구가 이어졌습니다."
+      ],
+      "why": "단일 사고를 넘어 공공 안전·부패·감독 체계의 신뢰를 둘러싼 사회적 사건이 됐습니다.",
+      "published": "2025-03-16",
+      "added": "2026-11-12",
+      "sources": [
+        {
+          "name": "AP – Fire rips through overcrowded nightclub in North Macedonia",
+          "url": "https://apnews.com/article/abc2033472aeb494b975d34555b13f72",
+          "lang": "EN"
+        },
+        {
+          "name": "RFE/RL – At Least 59 Killed At Nightclub Fire In North Macedonia",
+          "url": "https://www.rferl.org/a/dozens-dead-night-club-fire-north-macedonia-kocani/33349430.html",
+          "lang": "EN"
+        }
+      ]
+    },
+    {
+      "id": "kr-sk-kia-ev4-production",
+      "status": "published",
+      "featured": false,
+      "review": "ai",
+      "category": "korea",
+      "sub": "",
+      "countries": [
+        "슬로바키아"
+      ],
+      "tags": [
+        "한국",
+        "기아",
+        "전기차",
+        "EV4",
+        "현지 생산"
+      ],
+      "title": "기아, 슬로바키아에서 첫 유럽산 전기차 EV4 생산 시작",
+      "summary": "기아가 2025년 8월 슬로바키아 공장에서 EV4 해치백 생산을 시작했다고 발표했습니다. 기아가 유럽에서 생산하는 첫 순수 전기차입니다.",
+      "points": [
+        "회사는 생산라인 현대화에 1억800만 유로를 투자했다고 밝혔습니다.",
+        "배터리 운반 설비 등 전기차 조립에 필요한 생산 공정을 도입했습니다."
+      ],
+      "why": "한국 완성차 기업의 유럽 생산 기반이 내연기관에서 전기차로 전환되는 실제 가동 사례입니다.",
+      "published": "2025-08-20",
+      "added": "2026-11-12",
+      "sources": [
+        {
+          "name": "Kia – Kia launches EV production in Europe with the EV4",
+          "url": "https://www.kia.com/ie/about-kia/news-and-events/kia-launches-ev-production-in-europe-with-the-ev4/",
+          "lang": "EN"
+        }
+      ]
+    },
+    {
+      "id": "kr-sk-mobis-novaky-investment",
+      "status": "published",
+      "featured": false,
+      "review": "ai",
+      "category": "korea",
+      "sub": "",
+      "countries": [
+        "슬로바키아"
+      ],
+      "tags": [
+        "한국",
+        "현대모비스",
+        "전기차 부품",
+        "지역 전환"
+      ],
+      "title": "현대모비스, 슬로바키아 옛 탄광 지역에 전기차 부품 공장 투자",
+      "summary": "현대모비스와 슬로바키아 정부가 2024년 10월 15일 노바키 전기차 부품 공장 계획에 관한 양해각서를 체결했습니다. 발표된 투자 규모는 1억7천만 유로 이상입니다.",
+      "points": [
+        "슬로바키아 정부는 약 2,600만 유로의 투자 인센티브를 제공할 계획이라고 밝혔습니다.",
+        "노바키는 석탄 산업이 축소된 지역으로, 신규 제조업 투자가 지역 전환과 연결됩니다."
+      ],
+      "why": "한국 기업의 전기차 부품 투자가 동유럽의 탈석탄 지역 재편과 만나는 사례입니다.",
+      "published": "2024-10-15",
+      "added": "2026-11-12",
+      "sources": [
+        {
+          "name": "AP – Slovak government and South Korea’s Hyundai Mobis sign a deal to build an electric car parts plant",
+          "url": "https://apnews.com/article/7935a67ef9ed5e2c20f6e78e1babb08c",
+          "lang": "EN"
+        }
+      ]
+    },
+    {
+      "id": "kr-ua-edcf-framework",
+      "status": "published",
+      "featured": false,
+      "review": "ai",
+      "category": "korea",
+      "sub": "",
+      "countries": [
+        "우크라이나"
+      ],
+      "tags": [
+        "한국",
+        "EDCF",
+        "재건",
+        "개발협력",
+        "금융"
+      ],
+      "title": "한국·우크라이나, 최대 21억 달러 EDCF 차관 기본약정 체결",
+      "summary": "한국과 우크라이나가 2024년 4월 19일 대외경제협력기금(EDCF) 기본약정을 체결했습니다. 2024~2029년 우크라이나 사업에 최대 21억 달러 상당의 차관을 제공할 수 있는 틀입니다.",
+      "points": [
+        "2023년 공여협정에 이어 구체적인 지원 한도와 기간을 정한 단계입니다.",
+        "약정 한도는 실제 집행액이 아니며, 개별 사업 심사와 차관 계약을 거쳐야 합니다."
+      ],
+      "why": "한국의 우크라이나 재건 참여가 외교적 지원에서 사업 금융의 틀로 연결된 사례입니다.",
+      "published": "2024-04-19",
+      "added": "2026-11-12",
+      "sources": [
+        {
+          "name": "Ukrainian Ministry of Finance – Agreement on loans up to $2.1 billion from South Korea",
+          "url": "https://www.mof.gov.ua/uk/news/ukraine_will_be_able_to_attract_loans_totaling_up_to_21_billion_from_south_korea_the_governments_signed_the_relevant_agreement-4571",
+          "lang": "현지어"
+        },
+        {
+          "name": "외교부 – 한-우크라이나 대외경제협력기금 공여협정 정식 체결",
+          "url": "https://www.mofa.go.kr/www/brd/m_4080/view.do?seq=374093",
+          "lang": "KR"
+        }
+      ]
+    },
+    {
+      "id": "kr-si-seoul-embassy-opening",
+      "status": "published",
+      "featured": false,
+      "review": "ai",
+      "category": "korea",
+      "sub": "",
+      "countries": [
+        "슬로베니아"
+      ],
+      "tags": [
+        "한국",
+        "대사관",
+        "외교",
+        "경제 교류"
+      ],
+      "title": "슬로베니아, 주한대사관 공식 개관 행사와 경제사절단 방한",
+      "summary": "슬로베니아 외교·경제 장관이 경제사절단과 함께 방한해 2023년 6월 서울 주재 대사관 공식 개관 행사에 참석했습니다. 투자·통상·관광 협력 확대도 논의했습니다.",
+      "points": [
+        "대사관은 공식 행사 전부터 운영 중이었으므로 행사 날짜를 외교 관계 수립일로 보지 않습니다.",
+        "슬로베니아 기업들이 한국수입박람회에 공동 참가했습니다."
+      ],
+      "why": "양국 기업과 시민이 상시 외교 창구를 활용할 기반을 넓힌 사건입니다.",
+      "published": "2023-06-29",
+      "added": "2026-11-12",
+      "sources": [
+        {
+          "name": "GOV.SI – Ministers Fajon and Han visit South Korea to strengthen cooperation",
+          "url": "https://www.gov.si/en/news/2023-06-29-ministers-fajon-and-han-accompanied-by-a-business-delegation-visit-south-korea-to-strengthen-cooperation/",
+          "lang": "EN"
+        }
+      ]
+    },
+    {
+      "id": "kr-sk-strategic-partnership",
+      "status": "published",
+      "featured": false,
+      "review": "ai",
+      "category": "korea",
+      "sub": "",
+      "countries": [
+        "슬로바키아"
+      ],
+      "tags": [
+        "한국",
+        "정상회담",
+        "전략적 동반자",
+        "외교"
+      ],
+      "title": "한국·슬로바키아, 전략적 동반자 관계 수립",
+      "summary": "2024년 9월 30일 한·슬로바키아 정상회담에서 양국 관계를 전략적 동반자 관계로 격상하는 공동성명이 채택됐습니다.",
+      "points": [
+        "정치·안보, 경제, 과학기술 등 여러 분야의 협력 확대를 약속했습니다.",
+        "같은 방문에서 무역·투자 촉진과 에너지 협력에 관한 양해각서도 체결됐습니다."
+      ],
+      "why": "자동차 제조 중심으로 성장한 양국 관계를 외교·에너지·기술 협력으로 넓히는 공식 틀입니다.",
+      "published": "2024-09-30",
+      "added": "2026-11-12",
+      "sources": [
+        {
+          "name": "외교부 – 대한민국과 슬로바키아 공화국 간 전략적 동반자 관계 수립에 관한 공동성명",
+          "url": "https://www.mofa.go.kr/www/brd/m_27793/view.do?page=1&seq=2",
+          "lang": "KR"
+        },
+        {
+          "name": "Slovak Ministry of Economy – Cooperation memoranda with South Korea",
+          "url": "https://www.economy.gov.sk/top/slovensko-a-juzna-korea-dnes-podpisali-memoranda-o-spolupraci-v-energetike-aj-o-rozvoji-ekonomickej-spoluprace",
+          "lang": "현지어"
+        }
       ]
     }
   ]

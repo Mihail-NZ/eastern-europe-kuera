@@ -710,7 +710,8 @@ a.cc .cc-state { color: #fff; background: var(--rc); padding: 3px 10px; border-r
 }
 
 /* ---------- 뉴스: 데일리 / 주요 뉴스 ---------- */
-.news-tabs { margin-bottom: 18px; }
+.news-tabs { margin-bottom: 18px; flex-wrap: wrap; }
+.news-tabs button { line-height: 1.4; }
 .news-tabs .n { display: inline-block; margin-left: 4px; padding: 1px 8px; border-radius: 999px; background: #e8eef8; color: #33456c; font-size: 12.5px; }
 .news-tabs button[aria-selected="true"] .n { background: rgba(255, 255, 255, .18); color: #fff; }
 .np-lead { max-width: 46em; color: var(--muted); font-size: 15px; margin-bottom: 18px; }
