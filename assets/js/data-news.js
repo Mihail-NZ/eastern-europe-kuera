@@ -1,6 +1,226 @@
 /* 원본: _news-data/*.json (최신순, _tools/build-news.mjs로 생성) */
 window.NEWS_DATA=[
     {
+        "date": "2026-11-11",
+        "home": [
+            0,
+            2,
+            4
+        ],
+        "overview": "11월 10일 아부다비에서 우크라이나·러시아·미국 3자 협상이 9개월 만에 재개돼 첫날 4시간 넘게 이어졌고 11일 2일차가 열렸습니다. 같은 밤 벨라루스·러시아 방면에서 온 드론이 리투아니아·라트비아·에스토니아 영공을 가로지르며 발트 3국 전역에 공습 경보가 울렸습니다. 불가리아에서는 11월 10일 트라키아 고속도로 연쇄추돌로 11명이 숨져 11일 국가 애도일이 선포됐습니다. 폴란드 크라쿠프 총격 수사에서는 범인의 극우 극단주의 흔적이 확인됐다는 발표가 나왔습니다.",
+        "stories": [
+            {
+                "region": "top",
+                "title": "아부다비 3자 협상 9개월 만에 재개…첫날 4시간 넘게 협상, 포로 교환·해상·에너지 휴전 논의",
+                "countries": [
+                    "우크라이나"
+                ],
+                "period": "2026-11-10 ~ 11-11",
+                "points": [
+                    "키이우인디펜던트에 따르면 우크라이나·러시아·미국 대표단은 11월 10일 아부다비에서 4시간 넘게 협상했고, 2월 제네바 회담 이후 처음 열린 3자 회담은 11일에 이어졌습니다. 위트코프 특사와 쿠슈너가 미국 측으로, 메딘스키가 러시아 측으로 참석했습니다.",
+                    "젤렌스키 대통령은 회담이 건설적이고 상당히 실질적이었다고 평가하며 포로 석방을 최우선 과제로 꼽았습니다. 1,000명 대 1,000명 또는 1,500명 대 1,500명 교환이 거론됐고, 해상·에너지 부문 휴전 가능성도 논의됐습니다.",
+                    "러시아 측이 영토 문제를 제기하자 젤렌스키는 정상 차원에서 다뤄야 한다고 밝혔습니다. 모스크바가 돈바스 절반을 점령했다고 주장한 데 대해 키이우는 사실이 아니라고 반박했습니다.",
+                    "회담 전날 우크라이나 대표단은 영국·프랑스·독일·이탈리아·NATO·EU 관계자와 따로 만났고, 11일 2일차 이후에는 유럽 파트너와의 별도 회의가 예정돼 있습니다. 협상 결과는 아직 나오지 않았습니다."
+                ],
+                "why": "2월 이후 막혀 있던 3자 협상이 재개돼 포로 교환과 부분 휴전 같은 제한적 합의 가능성이 열렸지만, 영토와 안보 보장 문제는 여전히 평행선입니다. 2일차 결과와 유럽의 참여 방식이 다음 확인 지점입니다.",
+                "korea": "",
+                "sources": [
+                    {
+                        "name": "Kyiv Independent – Ukraine, Russia, US resume trilateral peace talks in Abu Dhabi after 9-month pause",
+                        "url": "https://kyivindependent.com/ukraine-russia-us-resume-trilateral-peace-talks-in-abu-dhabi-after-9-month-pause/",
+                        "lang": "EN"
+                    },
+                    {
+                        "name": "Kyiv Independent – 2nd day of trilateral peace talks begins in Abu Dhabi",
+                        "url": "https://kyivindependent.com/2nd-day-of-trilateral-peace-talks-begins-between-ukraine-russia-us-in-abu-dhabi/",
+                        "lang": "EN"
+                    }
+                ]
+            },
+            {
+                "region": "v4",
+                "title": "크라쿠프 총격범에 극우 극단주의 흔적…폴란드, 러시아 위해 일한 우크라이나인 2명 기소",
+                "countries": [
+                    "폴란드"
+                ],
+                "period": "2026-11-09 ~ 11-10",
+                "points": [
+                    "노츠프롬폴란드에 따르면 주렉 법무장관 겸 검찰총장은 11월 10일 범인 미하우 옥신스키의 활동에서 매우 강한 극우 극단주의 흔적이 확인됐다고 밝혔습니다. 검색 기록에 노르웨이 테러범 브레이비크 관련 자료가 있었고, 집에서 가즈던 깃발이 발견됐습니다.",
+                    "범인은 동기를 밝힌 글을 남기지 않았고, 수사당국은 정신질환 영향 가능성도 함께 보고 있습니다. 범인은 11월 9일 병원에서 숨졌고 그가 숨지게 한 사람은 가족 3명을 포함해 9명으로 추정됩니다.",
+                    "내무장관의 초기 발언을 둘러싼 논란 속에 범인이 좌파라는 조작·AI 생성 이미지가 SNS에 퍼졌고, 디지털부 장관은 거대한 허위정보 물결이 있었다고 말했습니다.",
+                    "내부보안국(ABW)은 11월 3일 러시아를 위해 기반시설·군사시설을 정찰하고 차량에 불을 지른 혐의로 우크라이나 국적 남성 2명(24세·25세)을 체포했고, 법원은 3개월 구속 수사를 명령했습니다."
+                ],
+                "why": "총기 난사의 이념적 성격이 드러나면서 총기 규제와 극단주의 대응이 정치 쟁점이 됐고, 러시아 연계 파괴 공작 적발도 이어지고 있습니다.",
+                "korea": "",
+                "sources": [
+                    {
+                        "name": "Notes from Poland – Strong traces of right-wing extremism in activity of Kraków terrorist, says justice minister",
+                        "url": "https://notesfrompoland.com/2026/11/10/strong-traces-of-right-wing-extremism-in-activity-of-krakow-terrorist-says-justice-minister/",
+                        "lang": "EN"
+                    },
+                    {
+                        "name": "Notes from Poland – Two Ukrainians charged with spying and sabotage for Russia in Poland",
+                        "url": "https://notesfrompoland.com/2026/11/10/two-ukrainians-charged-with-spying-and-sabotage-for-russia-in-poland/",
+                        "lang": "EN"
+                    }
+                ]
+            },
+            {
+                "region": "baltic",
+                "title": "발트 3국 밤새 드론 경보…리투아니아 NATO 전투기 출격·공항 폐쇄, 라트비아는 영공 진입 3대 확인",
+                "countries": [
+                    "리투아니아",
+                    "라트비아",
+                    "에스토니아"
+                ],
+                "period": "2026-11-10 ~ 11-11",
+                "points": [
+                    "LRT에 따르면 11월 10일 밤 11시경 빌뉴스·우테나 지역에 경보가 발령된 뒤 곧 중부·북부 대부분으로 확대돼 적색 경보와 대피 요구까지 나왔습니다. NATO 전투기가 두 차례 출격했지만 드론을 격추하지 못했고, 비르자이 인근에서 NATO 전투기가 쏜 미사일 잔해가 발견됐습니다.",
+                    "시누케비추스 총리는 무인기 4대와 밀수 풍선으로 보이는 수십 개의 레이더 흔적이 있었고 그중 1대가 리투아니아 영토를 통과했다고 밝혔습니다. 빌뉴스·카우나스 공항이 폐쇄돼 항공편 3편, 승객 400명 이상이 영향을 받은 것으로 예비 집계됐습니다.",
+                    "LSM에 따르면 라트비아군은 드론 3대가 영공에 들어왔다고 정정했습니다. 2대는 동부 국경을 잠깐 넘었고 1대는 남쪽에서 북쪽으로 국토를 횡단해 에스토니아로 넘어간 뒤 레이더에서 사라졌습니다.",
+                    "라트비아군 사령관은 경보가 러시아 레닌그라드주 항만·석유시설에 대한 우크라이나 드론 공격과 관련됐을 가능성이 크다고 말했지만 물증은 없다고 덧붙였습니다. ERR도 에스토니아 남·동부에 잠재적 공중 위협 경보가 발령됐고 러시아 우스트루가 항구 화재가 에스토니아에서 보였다고 전했습니다."
+                ],
+                "why": "하룻밤 사이 3개국 영공과 공항이 동시에 영향을 받았지만 격추에는 실패해, 탐지·요격 체계와 민간 안전 사이의 한계가 드러났습니다. 드론의 출처와 요격 부대 확대 여부가 다음 쟁점입니다.",
+                "korea": "",
+                "sources": [
+                    {
+                        "name": "LRT – Drone incursions trigger air alerts across Lithuania, NATO jets scrambled",
+                        "url": "https://www.lrt.lt/en/news-in-english/19/3111025/drone-incursions-trigger-air-alerts-across-lithuania-nato-jets-scrambled",
+                        "lang": "EN"
+                    },
+                    {
+                        "name": "LSM – Latvian armed forces outline reasons for multiple drone alerts",
+                        "url": "https://eng.lsm.lv/article/society/defence/11.11.2026-latvian-armed-forces-outline-reasons-for-multiple-drone-alerts.a671452/",
+                        "lang": "EN"
+                    },
+                    {
+                        "name": "ERR – 홈페이지 헤드라인",
+                        "url": "https://news.err.ee/",
+                        "lang": "EN"
+                    }
+                ]
+            },
+            {
+                "region": "wbalkan",
+                "title": "크로아티아 유해 폐기물 스캔들이 집권 HDZ 위협…세르비아에서는 시위대 사건 수사 부실 의혹",
+                "countries": [
+                    "크로아티아",
+                    "세르비아"
+                ],
+                "period": "2026-11-10 ~ 11-11",
+                "points": [
+                    "발칸인사이트 분석에 따르면 크로아티아에서 불법 투기된 유해 폐기물 문제가 10년째 집권 중인 HDZ에 큰 타격이 될 수 있습니다. 문제는 지역 주민의 분노에서 전국 이슈를 거쳐 EU 차원까지 번졌습니다(전문은 유료라 공개 부분만 확인).",
+                    "2025년 2월 고스피치 인근 옛 식품공장 부지에서 수만 톤의 불법 폐기물이 확인됐고, 자그레브 대학 분석에서 지하수의 PFAS가 검출됐다고 전해졌습니다. 2026년 9월 자그레브에서 대규모 시위가 열렸습니다.",
+                    "발칸인사이트는 11월 10일 세르비아 검찰이 반정부 시위대 사건을 부실하게 처리했다는 보고서가 나왔다고 보도했습니다(제목·요약 기준).",
+                    "토탈크로아티아뉴스는 크로아티아 10월 실업률이 계속 하락했다고 전했습니다(제목 기준)."
+                ],
+                "why": "크로아티아에서는 환경 문제가 여당의 정치적 부담이 되고 있고, 세르비아에서는 정권 교체기 속 시위 관련 사법 처리가 논란입니다.",
+                "korea": "",
+                "sources": [
+                    {
+                        "name": "Balkan Insight – Croatian Waste Scandal Turns Environment into Political Battleground",
+                        "url": "https://balkaninsight.com/2026/11/11/croatian-waste-scandal-turns-environment-into-political-battleground/bi/",
+                        "lang": "EN"
+                    },
+                    {
+                        "name": "Balkan Insight – Serbia Prosecution Accused of Mishandling Cases of Anti-Govt Protesters",
+                        "url": "https://balkaninsight.com/2026/11/10/serbia-prosecution-accused-of-mishandling-cases-of-anti-govt-protesters/bi/",
+                        "lang": "EN"
+                    },
+                    {
+                        "name": "Total Croatia News – Croatian Unemployment Rate Continued to Fall in October 2026",
+                        "url": "https://total-croatia-news.com/news/croatian-unemployment-rate-2026/",
+                        "lang": "EN"
+                    }
+                ]
+            },
+            {
+                "region": "sbalkan",
+                "title": "불가리아 트라키아 고속도로 86대 연쇄추돌로 11명 사망…11일 국가 애도일",
+                "countries": [
+                    "불가리아"
+                ],
+                "period": "2026-11-10 ~ 11-11",
+                "points": [
+                    "BTA에 따르면 11월 10일(화) 오전 불가리아 남동부 얌볼주 트라키아 고속도로에서 차량 86대가 얽힌 두 건의 연쇄추돌이 발생해 11명이 숨지고 51명이 다쳤습니다. 11일 현재 26명이 슬리벤·얌볼 병원에 입원 중이고, 루마니아인 부상자 1명이 부르가스 병원에서 위독한 상태입니다.",
+                    "내각은 11월 11일을 국가 애도일로 선포했고 EU 기관 건물에도 조기가 게양됐습니다. 총리는 안전 운전을 촉구했습니다.",
+                    "원인은 조사 중입니다. 얌볼 검찰은 트럭 운전사 1명을 조사차 구금했지만 기소하지는 않았고, 주지사는 사고 전 안개 관련 긴급 신고는 없었다고 밝혔습니다.",
+                    "의회는 11일 사고와 소피아 지역난방 문제에 대한 청문회 요구를 부결했습니다."
+                ],
+                "why": "불가리아 근래 최악 수준의 도로 참사로, 고속도로 안전 관리와 책임 소재가 정치 쟁점이 되고 있습니다. 구금된 운전사의 기소 여부와 사고 원인 조사 결과가 다음 확인 지점입니다.",
+                "korea": "",
+                "sources": [
+                    {
+                        "name": "BTA – Day of national mourning in Bulgaria for victims of tragic pile-ups on Trakia Motorway",
+                        "url": "https://www.bta.bg/en/news/bulgaria/1244289-day-of-national-mourning-in-bulgaria-for-victims-of-tragic-pile-ups-on-trakia-mo",
+                        "lang": "EN"
+                    },
+                    {
+                        "name": "BTA – MPs reject calls for hearings on Trakia Motorway pile-ups",
+                        "url": "https://www.bta.bg/en/news/bulgaria/1244364-mps-reject-calls-for-hearings-on-trakia-motorway-pile-ups-sofia-district-heatin",
+                        "lang": "EN"
+                    }
+                ]
+            },
+            {
+                "region": "east",
+                "title": "루마니아, 유로그룹서 최전선 국가 재정 지원 요구…흑해 상선 드론 공격 위험 지적",
+                "countries": [
+                    "루마니아"
+                ],
+                "period": "2026-11-10",
+                "points": [
+                    "RRI에 따르면 나자레 루마니아 재무장관은 11월 10일 브뤼셀 확대 유로그룹 회의에서 뤼터 NATO 사무총장을 만나, 루마니아처럼 최전선에 있는 나라가 적절한 재정 장치로 지원받아야 한다고 주장했습니다.",
+                    "그는 최근 상선에 대한 드론 공격으로 흑해 항행 위험이 커졌다고 말했습니다. 회의에서는 공동 군사 조달(지난해 회원국 조달의 24%, 목표 40%)과 우크라이나 지원이 논의됐습니다.",
+                    "RRI에 따르면 폰 데어 라이엔 집행위원장의 부쿠레슈티 방문에서 흑해 해상안보 허브 5,000만 유로 외에 수색·구조 작업에 1,000만 유로가 추가 배정됐고, 단 대통령은 안전한 흑해 없이는 우크라이나의 안정적 평화를 논할 수 없다고 말했습니다.",
+                    "KOTRA 홈페이지에는 루마니아 로봇 시장이 제조업 자동화에서 기회를 찾고 있다는 기사가 올라와 있습니다(날짜·본문은 확인하지 못했습니다)."
+                ],
+                "why": "루마니아는 흑해 안보와 동부 측면 방어의 재정 부담을 EU 차원에서 나누자는 목소리를 키우고 있습니다.",
+                "korea": "루마니아 제조업 자동화 수요가 커지고 있다는 KOTRA 기사가 있어, 로봇·자동화 설비 분야 진출 여지를 살펴볼 만합니다(제목 기준).",
+                "sources": [
+                    {
+                        "name": "RRI – Europe and defence spending",
+                        "url": "https://www.rri.ro/en/news-and-current-affairs/today-in-the-news/europe-and-defence-spending-id1081908.html",
+                        "lang": "EN"
+                    },
+                    {
+                        "name": "RRI – European Commission President Ursula von der Leyen travels to Bucharest",
+                        "url": "https://www.rri.ro/en/news-and-current-affairs/today-in-the-news/european-commission-president-ursula-von-der-leyen-travels-to-bucharest-id1081911.html",
+                        "lang": "EN"
+                    },
+                    {
+                        "name": "KOTRA 해외시장뉴스 – 루마니아 로봇 시장, 제조업 자동화에서 기회를 찾다",
+                        "url": "https://dream.kotra.or.kr/kotranews/index.do",
+                        "lang": "KOTRA"
+                    }
+                ]
+            }
+        ],
+        "countries": {
+            "폴란드": "크라쿠프 총격범에서 극우 극단주의 흔적 확인, 러시아 위해 일한 우크라이나인 2명 기소, MiG-29 2대를 드론 기술과 교환해 우크라이나에 이전하는 방안 검토(11/9~10, 노츠프롬폴란드·키이우인디펜던트).",
+            "체코": "최근 48시간 내 주요 보도 확인되지 않음. Expats.cz는 접속 오류(503)로 읽지 못했음.",
+            "슬로바키아": "최근 48시간 내 주요 보도 확인되지 않음. 이번에 조회한 매체에서 슬로바키아 기사는 찾지 못했음.",
+            "헝가리": "최근 48시간 내 주요 보도 확인되지 않음. 텔렉스 영문판은 접속 오류(403)로 읽지 못했음.",
+            "에스토니아": "남·동부에 잠재적 공중 위협 경보 발령, 러시아 우스트루가 항구 화재가 에스토니아에서 관측, 중앙당 지지율이 이스마 앞서 나가고 개혁당 하락(11/10~11, ERR 헤드라인 기준).",
+            "라트비아": "드론 3대 영공 진입 확인, 쿨베르그스 총리가 긴축 의지를 밝히고 10월 물가상승률 3.1%(11/10~11, LSM).",
+            "리투아니아": "밤새 드론 경보로 NATO 전투기 출격·빌뉴스·카우나스 공항 폐쇄, 러시아 곡물 통과 검사 강화, 스웨드뱅크가 성장 전망 하향(11/10~11, LRT).",
+            "슬로베니아": "최근 48시간 내 주요 보도 확인되지 않음. Sloveniatimes는 접속 오류(403)로 읽지 못했음.",
+            "크로아티아": "유해 폐기물 스캔들이 집권 HDZ에 부담, 10월 실업률 계속 하락, 임대인 세금 인상 가능성(11/10~11, 발칸인사이트·토탈크로아티아뉴스).",
+            "세르비아": "검찰이 반정부 시위대 사건을 부실 처리했다는 보고서, 새 정부의 EU 협상 재개 방안을 다룬 분석(11/10, 발칸인사이트·EWB).",
+            "보스니아 헤르체고비나": "공영방송 이사회 교착이 국영 TV 체계 존속을 위협, 코미치·베치로비치가 COP31 정상회의 참석, 유엔 법정이 스타니시치 조기 석방 재차 거부(11/10, N1·발칸인사이트).",
+            "몬테네그로": "최근 48시간 내 주요 보도 확인되지 않음. 배경으로 11/6 협상 장 2개 잠정 종료로 33개 중 23개 완료, EU 가입 막바지 단계로 평가하는 분석 게재(11/10, EWB).",
+            "코소보": "최근 48시간 내 주요 보도 확인되지 않음. 배경으로 헤이그 법정에서 유죄 판결을 받은 전 지도부 이후 PDK가 변화를 요구받고 있다는 분석 게재(11/10, 발칸인사이트).",
+            "알바니아": "정부와 판사·검사가 급여를 두고 대립해 사법 독립성 논란, TV 규제기관의 토크쇼 벌금을 두고 비판(11/10~11, 발칸인사이트).",
+            "북마케도니아": "분석가가 이웃 국가들이 앞서가는 가운데 EU 가입에서 뒤처지고 있다고 경고, 불가리아와의 갈등이 걸림돌(11/11, 발칸인사이트).",
+            "불가리아": "트라키아 고속도로 연쇄추돌로 11명 사망, 11일 국가 애도일, 하원은 첫 독회에서 자녀 가정 세금 감면 확대안 통과(11/10~11, BTA).",
+            "우크라이나": "아부다비 3자 협상 1일차 종료·2일차 개시, 크라마토르스크 드론 공습으로 공공근로자 2명 사망, 우스트루가 항구 공격 보도(11/10~11, Kyiv Independent).",
+            "벨라루스": "최근 48시간 내 주요 보도 확인되지 않음. 리투아니아 보도에서 드론 일부가 벨라루스 방면에서 접근한 것으로 언급됨(LRT).",
+            "몰도바": "최근 48시간 내 주요 보도 확인되지 않음. 배경으로 11/8 산두 대통령이 러시아 가스 구매 중단과 EU 연결 송전선 개통을 밝힘.",
+            "루마니아": "나자레 재무장관이 유로그룹에서 최전선 국가 지원과 흑해 항행 위험 지적, 폰 데어 라이엔 방문 중 수색·구조에 1,000만 유로 추가 배정(11/10, RRI)."
+        },
+        "note": "작성 기준: 2026-11-11 저녁(한국시간). Kyiv Independent, Radio Romania International, LSM, LRT, ERR, Notes from Poland, Balkan Insight, BTA, European Western Balkans, Total Croatia News, N1, KOTRA 해외시장뉴스 첫 화면을 확인했고 아부다비 협상, 트라키아 사고, 발트 드론 경보, 크라쿠프 수사, 루마니아 기사는 본문을 열어 확인했습니다. Expats.cz(503), Sloveniatimes·Telex(403)는 읽지 못했고 한국 언론은 조회하지 않았습니다. ERR 기사는 홈페이지 요약만 확인했고 발칸인사이트 크로아티아 기사는 유료 구간이 있어 공개 부분만 확인했습니다. 리투아니아 드론 대수는 매체·발표 시점별로 달라 총리 발언과 군 발표를 구분해 적었습니다. 아부다비 협상 2일차 결과는 아직 나오지 않았습니다. 체코·슬로바키아·헝가리·슬로베니아·벨라루스·몰도바·몬테네그로·코소보는 새 주요 보도가 확인되지 않았습니다. 출처 표시: KR = 한국 언론, KOTRA = KOTRA 해외시장뉴스, EN = 해외 매체."
+    },
+    {
         "date": "2026-11-10",
         "home": [
             0,
