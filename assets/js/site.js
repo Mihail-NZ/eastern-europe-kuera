@@ -246,7 +246,7 @@
     <div class="story-tags">${storyTags(s)}</div>
     <h3 class="story-title">${esc(s.title)}</h3>
     ${s.points && s.points[0] ? `<p class="story-lead">${esc(s.points[0])}</p>` : ''}
-    <div class="story-foot"><time datetime="${esc(s.date)}">${fmtDate(s.date)} 브리핑</time>${storySource(s)}</div>
+    <div class="story-foot"><time datetime="${esc(s.date)}">${fmtDate(s.date)}</time>${storySource(s)}</div>
   </div>
 </li>`;
   }
@@ -289,11 +289,11 @@
 <section class="home-news wrap" aria-labelledby="news-title">
   <div class="section-head">
     <div><p class="kicker">Latest updates</p><h2 id="news-title">Daily News</h2></div>
-    <a class="more" href="${ROOT}news/index.html">브리핑 전체 보기</a>
+    <a class="more" href="${ROOT}news/index.html">뉴스 전체 보기</a>
   </div>
   ${latest ? `<p class="news-overview"><strong>${fmtDate(latest.date)}의 흐름</strong>${esc(latest.overview)}</p>
   <ul class="card-list">${stories.map(storyCard).join('')}</ul>`
-    : '<p class="empty">아직 올라온 브리핑이 없습니다.</p>'}
+    : '<p class="empty">아직 올라온 뉴스가 없습니다.</p>'}
 </section>`;
     mountThumbs(main, stories);
 
@@ -311,7 +311,7 @@
   }
 
   /* ---------- 페이지: 국가 목록 ---------- */
-  /* 뉴스 브리핑과 같은 5개 권역으로 나누고, 나라마다 가장 최근 브리핑의 동향 한 줄을 붙인다 */
+  /* 데일리 뉴스와 같은 5개 권역으로 나눈다 */
   /* 주차 이름: 월요일 날짜(YYYY-MM-DD)로 "10월 3주차"를 만든다. 그 주 목요일이 속한 달의 몇 번째 주인지로 센다 */
   function weekLabel(mondayIso) {
     const [y, m, d] = mondayIso.split('-').map(Number);
@@ -561,8 +561,7 @@ ${window.REPORTS ? `<section class="home-reports wrap" id="reports" aria-labelle
   const SECTION_DEFS = [
     { id: 'overview', ko: '개요', en: 'Overview' }, { id: 'travel', ko: '관광', en: 'Travel' },
     { id: 'food', ko: '음식', en: 'Food' }, { id: 'language', ko: '언어', en: 'Language' },
-    { id: 'culture', ko: '문화', en: 'Culture' }, { id: 'industry', ko: '산업', en: 'Industry' },
-    { id: 'news', ko: '뉴스', en: 'News' }
+    { id: 'culture', ko: '문화', en: 'Culture' }, { id: 'industry', ko: '산업', en: 'Industry' }
   ];
   const sectionsFor = slug => SECTION_DEFS.filter(s => s.id !== 'travel' || (DEEP[slug] && DEEP[slug].places));
   const sectionUrl = (slug, id) => `${ROOT}countries/${slug}/${id}/index.html`;
@@ -631,17 +630,6 @@ ${window.REPORTS ? `<section class="home-reports wrap" id="reports" aria-labelle
       default: return [];
     }
   }
-  function newsSections(c) {
-    const stories = allStories().filter(s => (s.countries || []).includes(c.name_ko));
-    return [
-      { id: 'n-brief', title: '학회 브리핑', html: stories.length
-        ? `<ul class="card-list is-stack">${stories.map(storyCard).join('')}</ul>`
-        : `<p class="empty">최근 학회 브리핑에 ${esc(c.name_ko)} 관련 기사가 없습니다. 아래 매체에서 최신 소식을 확인할 수 있습니다.</p>`, stories },
-      countryMajorSection(c),
-      { id: 'n-outlets', title: '참고 매체', html: `<ul class="outlets">${c.news.map(n => `<li><a href="${esc(n.url)}" target="_blank" rel="noopener">${esc(n.name)}</a><span>${esc(n.description)}</span></li>`).join('')}</ul>` }
-    ].filter(Boolean);
-  }
-
   /* 국가 첫 화면의 명소 영상: 사진 4장을 천천히 확대하며 교차 전환하는 반복 클립(CSS 애니메이션, 첫 장면 2.5초·나머지 2초).
    * 한 나라 안에서 요새·성·구시가지처럼 같은 종류의 명소는 한 장면만 넣는다.
    * 동영상 파일로 만들면 확대할 때 픽셀 단위로 끊겨 흔들려 보여서, 모든 나라를 브라우저가 부드럽게 그리는 이 방식으로 통일했다.
@@ -927,8 +915,7 @@ ${window.REPORTS ? `<section class="home-reports wrap" id="reports" aria-labelle
         return mdParse(deep.md[id]).sections.filter(s => !/출처/.test(s.title)).slice(0, 4).map(s => s.title).join(', ');
       }
       return { overview: '기본 정보와 소개', culture: c.culture.map(x => x.title).join(', '), food: c.food.map(x => x.title).join(', '),
-        language: `기본 표현 ${c.language.length}가지와 언어의 특징`, industry: c.industry.map(x => x.title).join(', '),
-        news: stories.length ? `학회 브리핑 ${stories.length}건과 참고 매체` : '참고 매체 모음' }[id];
+        language: `기본 표현 ${c.language.length}가지와 언어의 특징`, industry: c.industry.map(x => x.title).join(', ') }[id];
     };
     const art = id => {
       const pick = deep && { travel: deep.places && deep.places[0], food: deep.foods && deep.foods[0] }[id];
@@ -941,7 +928,7 @@ ${window.REPORTS ? `<section class="home-reports wrap" id="reports" aria-labelle
       if (ca) return `<img src="${ROOT}assets/images/cards/${slug}/${id}.${ca.svg ? 'svg' : 'jpg'}" alt="" loading="lazy" decoding="async">` +
         (ca.a ? `<span class="ai-badge">사진 ${esc(ca.a)} · ${esc(ca.l)}</span>` : '');
       const word = { overview: c.name_local, culture: c.culture[0].local, food: c.food[0].local, language: c.language[0].local,
-        industry: c.industry[0].title, news: c.name_local }[id] || c.name_local;
+        industry: c.industry[0].title }[id] || c.name_local;
       return `<span class="disc-word" lang="und">${esc(word)}</span>`;
     };
 
@@ -972,8 +959,8 @@ ${countryTabs(c, '')}
   ${deep ? '' : `<p class="hub-note">${esc(c.name_ko)}는 기본 정보만 정리되어 있습니다. 상세 원고가 준비되면 각 항목 페이지가 더 풍부해집니다.</p>`}
 </section>
 ${stories.length ? `<section class="hub-news wrap" aria-labelledby="hub-news-title">
-  <div class="section-head"><div><p class="kicker">Latest updates</p><h2 id="hub-news-title">${esc(c.name_ko)} 관련 브리핑</h2></div>
-  <a class="more" href="${sectionUrl(slug, 'news')}">뉴스 페이지에서 모두 보기</a></div>
+  <div class="section-head"><div><p class="kicker">Latest updates</p><h2 id="hub-news-title">${esc(c.name_ko)} 최근 뉴스</h2></div>
+  <a class="more" href="${ROOT}news/index.html?country=${encodeURIComponent(c.name_ko)}#daily">${esc(c.name_ko)} 뉴스 모두 보기</a></div>
   <ul class="card-list">${stories.slice(0, 3).map(storyCard).join('')}</ul>
 </section>` : ''}`;
     if (stories.length) mountThumbs(main.querySelector('.hub-news'), stories);
@@ -1025,6 +1012,7 @@ ${stories.length ? `<section class="hub-news wrap" aria-labelledby="hub-news-tit
 
   function renderSection(main, slug, id) {
     const c = bySlug(slug);
+    if (id === 'news') { location.replace(`${ROOT}news/index.html${c ? `?country=${encodeURIComponent(c.name_ko)}` : ''}#daily`); return; }
     const iso3 = ISO3_BY_SLUG[slug];
     const list = c ? sectionsFor(slug) : [];
     const def = list.find(s => s.id === id);
@@ -1044,12 +1032,6 @@ ${stories.length ? `<section class="hub-news wrap" aria-labelledby="hub-news-tit
       const rs = { id: 'b-reports', title: '대표 보고서·자료', html: reportListHtml(slug) };
       const at = secs.findIndex(s => /출처/.test(s.title));
       if (at >= 0) secs.splice(at, 0, rs); else secs.push(rs);
-    }
-    let newsStories = [];
-    if (id === 'news') {
-      const ns = newsSections(c);
-      newsStories = ns[0].stories;
-      secs = deep ? [...ns.filter(s => s.id !== 'n-outlets'), ...secs] : ns;
     }
     document.title = `${title} | ${c.name_ko} | Eastern Europe`;
 
@@ -1091,8 +1073,6 @@ ${countryTabs(c, id)}
   ${prev ? `<a class="pg-prev" href="${sectionUrl(slug, prev.id)}"><span>이전</span>${prev.ko}</a>` : `<a class="pg-prev" href="${countryUrl(slug)}"><span>이전</span>${esc(c.name_ko)} 홈</a>`}
   ${next ? `<a class="pg-next" href="${sectionUrl(slug, next.id)}"><span>다음</span>${next.ko}</a>` : ''}
 </nav>`;
-    if (newsStories.length) mountThumbs(main.querySelector('#n-brief'), newsStories);
-    if (main.querySelector('#n-major')) bindMajor(main.querySelector('#n-major'));
 
     // 탭: 클릭과 좌우 화살표로 전환
     main.querySelectorAll('[data-tabs]').forEach(box => {
@@ -1122,7 +1102,7 @@ ${countryTabs(c, id)}
 
   /* ---------- 주요 뉴스(Major News) ----------
    * 데이터: data-major.js(window.MAJOR_NEWS) ← _major-data/major.json, 관리: _tools/news-admin.html.
-   * 데일리 브리핑과 따로 저장하고, 데일리 기사에서 고른 경우 daily_ref("날짜#기사번호")로만 연결한다. */
+   * 데일리 뉴스와 따로 저장하고, 데일리 기사에서 고른 경우 daily_ref("날짜#기사번호")로만 연결한다. */
   const MAJOR = window.MAJOR_NEWS || { categories: [], items: [] };
   const MAJOR_CATS = MAJOR.categories || [];
   const ARCHIVE_YEARS = 3; // 원문 발행 후 3년이 지나면 보관 기사로 본다(지우지 않음)
@@ -1176,7 +1156,7 @@ ${countryTabs(c, id)}
   ${(it.tags || []).length ? `<p class="mj-d-tags">${it.tags.map(t => `<span>${esc(t)}</span>`).join('')}</p>` : ''}
   <h3 class="mj-d-h">원문</h3>
   <ul class="mj-d-src">${(it.sources || []).map(s => `<li><a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.name)}</a><span>${esc(host(s.url))}</span></li>`).join('')}</ul>
-  ${daily ? `<p class="mj-d-daily"><a href="${ROOT}news/index.html?date=${esc(daily)}#daily">${fmtLong(daily)} 데일리 브리핑에서 처음 다룬 기사입니다</a></p>` : ''}
+  ${daily ? `<p class="mj-d-daily"><a href="${ROOT}news/index.html?date=${esc(daily)}#daily">${fmtLong(daily)} 데일리 뉴스에서 처음 다룬 기사입니다</a></p>` : ''}
   <p class="mj-d-note">요약과 시사점은 학회가 원문을 바탕으로 작성했습니다. 수치와 발언은 원문에서 확인하세요.</p>
 </article>`;
     dlg.querySelector('.mj-close').addEventListener('click', () => dlg.close());
@@ -1196,15 +1176,6 @@ ${countryTabs(c, id)}
       if (onOpen) onOpen(it); else openMajor(it);
     });
   }
-  /* 국가 페이지용: 그 나라 주요 뉴스(보관 기사 제외) */
-  function countryMajorSection(c) {
-    const list = majorItems().filter(it => !isArchived(it) && (it.countries || []).includes(c.name_ko)).sort(byKey);
-    if (!list.length) return null;
-    return { id: 'n-major', title: '주요 뉴스', html: `<p class="mj-intro">최근 3년 사이 ${esc(c.name_ko)}에서 일어난 구조적 변화를 분야별로 고른 기사입니다.</p>
-      <ul class="mj-list is-stack">${list.slice(0, 6).map(majorCard).join('')}</ul>
-      <a class="more" href="${ROOT}news/index.html?country=${encodeURIComponent(c.name_ko)}#major">${esc(c.name_ko)} 주요 뉴스 ${list.length}건 모두 보기</a>` };
-  }
-
   /* ---------- 페이지: 뉴스 (데일리 / 주요 뉴스 두 탭) ---------- */
   function renderNews(main) {
     const qs = new URLSearchParams(location.search);
@@ -1230,7 +1201,7 @@ ${countryTabs(c, id)}
     `<button type="button" role="tab" id="nt-${id}" aria-controls="np-${id}" data-tab="${id}">${label} <span class="n">${n}</span></button>`).join('')}</div>
 
   <section id="np-daily" class="news-panel" role="tabpanel" aria-labelledby="nt-daily">
-    <p class="np-lead">매일 저녁 동유럽 20개국 소식을 권역별 6건으로 정리한 브리핑입니다. 최근 30일 치를 날짜순으로 보여 줍니다.</p>
+    <p class="np-lead">매일 저녁 동유럽 20개국 소식을 권역별로 6건씩 정리합니다. 최근 30일 치를 날짜순으로 보여 줍니다.</p>
     <form class="nf-bar" role="search" onsubmit="return false">
       <label class="nf-q"><span>검색</span><input type="search" data-f="dq" placeholder="제목·내용·나라"></label>
       ${sel('dc', '나라')}${sel('dd', '날짜')}
@@ -1287,7 +1258,7 @@ ${countryTabs(c, id)}
       const total = matched.reduce((n, x) => n + x.list.length, 0);
       const shown = matched.slice(0, st.dShown), thumbs = [];
       pD.querySelector('.nf-count').textContent = filtering || st.dd ? `${matched.length}일 · 기사 ${total}건` : '';
-      pD.querySelector('.daily-list').innerHTML = !days.length ? '<p class="empty">아직 올라온 브리핑이 없습니다.</p>'
+      pD.querySelector('.daily-list').innerHTML = !days.length ? '<p class="empty">아직 올라온 뉴스가 없습니다.</p>'
         : !matched.length ? '<p class="empty">조건에 맞는 기사가 없습니다. 검색어나 나라를 바꿔 보세요.</p>'
         : shown.map(({ d, list }) => `
   <section class="news-day" aria-labelledby="d-${d.date}">
@@ -1297,7 +1268,7 @@ ${countryTabs(c, id)}
   </section>`).join('');
       mountThumbs(pD.querySelector('.daily-list'), thumbs);
       const rest = matched.length - shown.length;
-      pD.querySelector('.nf-more').innerHTML = rest > 0 ? `<button type="button" class="more-btn">이전 브리핑 더 보기 <span>${rest}일 남음</span></button>` : '';
+      pD.querySelector('.nf-more').innerHTML = rest > 0 ? `<button type="button" class="more-btn">이전 뉴스 더 보기 <span>${rest}일 남음</span></button>` : '';
     }
 
     /* 주요 뉴스 */

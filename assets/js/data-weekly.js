@@ -58,7 +58,7 @@ window.WEEKLY_NEWS = [
   },
   {
     week_start: '2026-10-19', week_end: '2026-10-25', updated: '2026-10-27',
-    note: '웹 검색과 학회 브리핑(10/19·10/20)으로 확인한 보도를 바탕으로 골랐습니다. 이번 주 주요 보도를 확인하지 못한 나라는 비워 두었고, 조사 시점이 일요일이 아닌 화요일(10/27)이어서 10/19~10/25 주를 반영했습니다.',
+    note: '웹 검색과 데일리 뉴스(10/19·10/20)으로 확인한 보도를 바탕으로 골랐습니다. 이번 주 주요 보도를 확인하지 못한 나라는 비워 두었고, 조사 시점이 일요일이 아닌 화요일(10/27)이어서 10/19~10/25 주를 반영했습니다.',
     countries: {
       '폴란드': { title: '폴란드 하원, 중대 태아 기형 시 낙태 허용 복원 등 낙태법 완화안 통과', source: 'Notes from Poland', url: 'https://notesfrompoland.com/2026/10/21/parliament-approves-liberalisation-of-polands-abortion-laws/' },
       '체코': { title: null },
@@ -84,7 +84,7 @@ window.WEEKLY_NEWS = [
   },
   {
     week_start: '2026-10-12', week_end: '2026-10-18', updated: '2026-10-18',
-    note: '학회 브리핑(10/17·10/18)과 웹 검색으로 확인한 보도를 바탕으로 골랐습니다. 링크가 없는 항목은 브리핑 정리 문장에서 가져왔습니다.',
+    note: '데일리 뉴스(10/17·10/18)와 웹 검색으로 확인한 보도를 바탕으로 골랐습니다. 링크가 없는 항목은 데일리 뉴스 요약 문장에서 가져왔습니다.',
     countries: {
       '폴란드': { title: '폴란드, 제2원전 역할 분담 협약 체결', source: 'Notes from Poland', url: 'https://notesfrompoland.com/2026/10/15/poland-signs-agreement-on-planned-second-nuclear-plant/' },
       '체코': { title: '바비시 총리, EU 정상회의서 트럼프의 러시아산 경유 합의 비판', source: 'Expats.cz', url: 'https://www.expats.cz/czech-news/article/trump-betrayed-us-babis-criticizes-russian-diesel-deal-at-eu-summit' },
@@ -96,7 +96,7 @@ window.WEEKLY_NEWS = [
       '보스니아 헤르체고비나': { title: null },
       '코소보': { title: '이탈리아 베르고리 소장, KFOR 신임 사령관 취임', source: 'European Western Balkans', url: 'https://europeanwesternbalkans.com/2026/10/14/italian-general-roberto-vergori-becomes-new-kfor-commander/' },
       '몬테네그로': { title: 'EU 정상들, 몬테네그로 가입조약 초안 작업 환영…‘연내 협상 종료’ 지지는 빠져', source: 'European Western Balkans', url: 'https://europeanwesternbalkans.com/2026/10/16/eu-leaders-welcome-the-ongoing-work-on-drafting-the-accession-treaty-with-montenegro/' },
-      '북마케도니아': { title: '북마케도니아, 이중국적자 이바 미하일로바 사건 두고 불가리아와 갈등', source: '학회 브리핑' },
+      '북마케도니아': { title: '북마케도니아, 이중국적자 이바 미하일로바 사건 두고 불가리아와 갈등', source: '데일리 뉴스' },
       '알바니아': { title: '알바니아 학생 반정부 시위 닷새째 격화…라마 총리는 사퇴 거부', source: 'Balkan Insight', url: 'https://balkaninsight.com/2026/10/16/albania-pm-defiant-as-protests-spread-to-provincial-cities/bi/' },
       '불가리아': { title: '흑해 상선 드론 피격…불가리아, NATO에 전투기·대드론 체계 지원 공식 요청', source: '해운의소리', url: 'https://www.shippingvoice.kr/news/articleView.html?idxno=11405' },
       '루마니아': { title: '루마니아 F-16, 영공 침범 러시아 제트 드론 2기 격추', source: 'Kyiv Independent', url: 'https://kyivindependent.com/romanian-f-16s-down-two-jet-powered-drones-after-airspace-incursion/' },

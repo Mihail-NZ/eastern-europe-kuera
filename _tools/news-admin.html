@@ -15,7 +15,7 @@
 <!-- 관리자 도구: 공개 사이트에는 올라가지 않는다(_tools 폴더는 GitHub Pages가 제공하지 않음).
      여는 법: site 폴더에서 serve.ps1 실행 → http://localhost:8080/_tools/news-admin.html (Chrome·Edge)
      '사이트 폴더 열기'로 site 폴더를 고르면 _major-data/major.json과 _news-data/*.json(데일리)을 읽고,
-     '저장'하면 major.json과 assets/js/data-major.js를 함께 씁니다. 데일리 브리핑 파일은 읽기만 합니다.
+     '저장'하면 major.json과 assets/js/data-major.js를 함께 씁니다. 데일리 뉴스 파일은 읽기만 합니다.
      검사 규칙은 _tools/build-major.ps1과 같습니다. 한쪽을 바꾸면 다른 쪽도 고치세요. -->
 <style>
   :root { --ink: #0f1b36; --muted: #586683; --rule: #dbe3ef; --paper: #f3f6fb; --blue: #2457b3; --night: #081433; --ok: #166534; --warn: #92400e; --bad: #991b1b; }
@@ -176,7 +176,7 @@ $('#open').onclick = async () => {
     dir = await window.showDirectoryPicker({ mode: 'readwrite' });
     D = await readJson('_major-data/major.json');
     DAYS = await readDays();
-    msg(`${dir.name} 폴더: 주요 뉴스 ${D.items.length}건, 데일리 브리핑 ${DAYS.length}일을 읽었습니다.`); setDirty(false); render(); showChecks();
+    msg(`${dir.name} 폴더: 주요 뉴스 ${D.items.length}건, 데일리 뉴스 ${DAYS.length}일을 읽었습니다.`); setDirty(false); render(); showChecks();
   } catch (e) { dir = null; msg(`폴더를 읽지 못했습니다: ${e.message} (site 폴더를 골랐는지 확인)`); }
 };
 $('#save').onclick = async () => {
@@ -306,19 +306,19 @@ function renderEdit() {
 /* ---- 데일리에서 선정 ---- */
 function renderDaily() {
   const picked = {}; D.items.forEach(it => { if (it.daily_ref) picked[it.daily_ref] = it.id; });
-  $('#view').innerHTML = `<h2>데일리 브리핑에서 주요 뉴스 고르기</h2>
-  <p class="muted">데일리 기사를 복사하지 않고 연결(daily_ref)만 해 둔 초안을 만듭니다. 초안에서 원문 발행일·분야·요약을 확인한 뒤 게시하세요. 데일리 브리핑 파일은 바꾸지 않습니다.</p>
+  $('#view').innerHTML = `<h2>데일리 뉴스에서 주요 뉴스 고르기</h2>
+  <p class="muted">데일리 기사를 복사하지 않고 연결(daily_ref)만 해 둔 초안을 만듭니다. 초안에서 원문 발행일·분야·요약을 확인한 뒤 게시하세요. 데일리 뉴스 파일은 바꾸지 않습니다.</p>
   ${DAYS.length ? DAYS.map((d, di) => `<details class="day"${di === 0 ? ' open' : ''}><summary>${esc(d.date)} · ${(d.stories || []).length}건</summary>
     ${(d.stories || []).map((s, i) => { const ref = `${d.date}#${i}`; return `<div class="story"><p><strong>${esc(s.title)}</strong><br><span class="muted">${esc((s.countries || []).join(', '))} · ${esc(((s.sources || [])[0] || {}).name || '')}</span></p>
       ${picked[ref] ? `<span class="pill published">선정됨 (${esc(picked[ref])})</span>` : `<button data-ref="${ref}">주요 뉴스로 선정</button>`}</div>`; }).join('')}</details>`).join('')
-    : '<p class="empty">_news-data 폴더에서 데일리 브리핑을 찾지 못했습니다.</p>'}`;
+    : '<p class="empty">_news-data 폴더에서 데일리 뉴스을 찾지 못했습니다.</p>'}`;
   $('#view').querySelectorAll('[data-ref]').forEach(b => b.onclick = () => {
     const [date, i] = b.dataset.ref.split('#'), d = DAYS.find(x => x.date === date), s = d.stories[+i];
     editing = blankItem({ daily_ref: b.dataset.ref, title: s.title, summary: (s.points || [])[0] || '', points: (s.points || []).slice(1), why: s.why || '',
       countries: (s.countries || []).filter(c => COUNTRIES.includes(c)), sources: (s.sources || []).map(x => ({ name: x.name, url: x.url, lang: x.lang || 'EN' })),
       published: date });
     editIsNew = true; tab = 'edit'; render();
-    msg('데일리 기사로 초안을 채웠습니다. 원문 발행일은 브리핑 날짜로 넣었으니 원문에서 확인해 고치세요.');
+    msg('데일리 기사로 초안을 채웠습니다. 원문 발행일은 뉴스 날짜로 넣었으니 원문에서 확인해 고치세요.');
   });
 }
 
