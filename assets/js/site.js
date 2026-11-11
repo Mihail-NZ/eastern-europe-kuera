@@ -556,6 +556,105 @@ ${window.REPORTS ? `<section class="home-reports wrap" id="reports" aria-labelle
     }).join('')}</ul>`;
   }
 
+  /* ---------- 여행 실전 정보 (data-travel-guide.js) ----------
+   * 관광 페이지에 직항·시기·축제·공휴일·물가·교통·팁 섹션을 더한다. 반환: { pre, routes, post }. */
+  const TRAVEL = window.TRAVEL_GUIDE || {};
+  function travelGuideSections(slug) {
+    const g = TRAVEL[slug];
+    if (!g) return null;
+    const S = (id, title, html) => ({ id: 'tg-' + id, title, html });
+    const won = n => (Math.round(n / 100) * 100).toLocaleString('ko-KR') + '원';
+    const num = n => n.toLocaleString('ko-KR', { maximumFractionDigits: 2 });
+    const unit = g.rate.unit;
+    const list = (items, cls) => `<ul class="${cls}">${items.map(t => `<li>${esc(t)}</li>`).join('')}</ul>`;
+
+    const glance = `<ul class="tg-glance">${g.glance.map(x => `<li><span class="tg-k">${esc(x.k)}</span><strong>${esc(x.v)}</strong><span class="tg-n">${esc(x.n)}</span></li>`).join('')}</ul>`;
+
+    const flights = `<div class="tg-flights">${g.flights.direct.map(f => `<article class="tg-flight">
+  <header><h3>${esc(f.airline)}</h3><span class="tg-freq">${esc(f.freq)}</span></header>
+  <dl>${[['노선', f.route], ['편명', f.code], ['운항 요일', f.days], ['비행 시간', f.time], ['기종', f.aircraft]].filter(([, v]) => v)
+      .map(([k, v]) => `<div><dt>${k}</dt><dd>${esc(v)}</dd></div>`).join('')}</dl>
+  ${f.note ? `<p>${esc(f.note)}</p>` : ''}
+</article>`).join('')}</div>
+<h3>직항 말고 이렇게도 갈 수 있어요</h3>${list(g.flights.via, '')}
+<p class="tg-note">${esc(g.flights.tip)}</p>`;
+
+    const lv = ['', '비수기', '좋음', '최적'];
+    const T0 = -10, T1 = 30, pct = t => ((t - T0) / (T1 - T0) * 100).toFixed(1);
+    const climate = `<p>${esc(g.climate.city)}의 월평균 최고·최저 기온과 강수량입니다. 아래 칸의 색은 여행하기 좋은 정도입니다.</p>
+<div class="tg-climate" role="list" aria-label="${esc(g.climate.city)} 월별 기후">${g.climate.months.map(([hi, lo, rain, l], i) => `
+  <div class="tg-mo lv${l}" role="listitem" aria-label="${i + 1}월: 최고 ${hi}도, 최저 ${lo}도, 강수 ${rain}mm, ${lv[l]}">
+    <div class="tg-temp" aria-hidden="true"><span class="tg-bar" style="bottom:${pct(lo)}%;height:${(pct(hi) - pct(lo)).toFixed(1)}%"><b>${hi}°</b><i>${lo}°</i></span></div>
+    <div class="tg-rain" aria-hidden="true"><span style="height:${Math.min(100, rain / 90 * 100).toFixed(0)}%"></span></div>
+    <span class="tg-m" aria-hidden="true">${i + 1}월</span>
+  </div>`).join('')}
+</div>
+<p class="tg-legend" aria-hidden="true"><span class="lv3">최적</span><span class="lv2">좋음</span><span class="lv1">비수기</span><span class="tg-rain-key">강수량</span></p>
+<p class="tg-note">${esc(g.climate.note)}</p>
+<div class="tg-seasons">${g.seasons.map(s => `<article class="tg-season">
+  <header><h3>${esc(s.name)}</h3><span>${esc(s.months)}</span></header>
+  <p>${esc(s.mood)}</p>
+  <div class="tg-pc"><div><p class="tg-pc-h is-pro">좋은 점</p>${list(s.pros, 'tg-pro')}</div><div><p class="tg-pc-h is-con">아쉬운 점</p>${list(s.cons, 'tg-con')}</div></div>
+  <p class="tg-wear"><span>옷차림</span>${esc(s.wear)}</p>
+</article>`).join('')}</div>`;
+
+    const events = `<ol class="tg-events">${g.events.map(e => `<li>
+  <span class="tg-when">${esc(e.m)}</span>
+  <div><h3>${esc(e.name)}<span class="local" lang="und">${esc(e.local)}</span></h3><p>${esc(e.desc)}</p>${e.tip ? `<p class="tg-tip"><span>여행 팁</span>${esc(e.tip)}</p>` : ''}</div>
+</li>`).join('')}</ol>`;
+
+    const holidays = `<div class="md-table"><table><thead><tr><th scope="col">날짜</th><th scope="col">공휴일</th><th scope="col">여행자에게 미치는 영향</th></tr></thead><tbody>${
+      g.holidays.map(h => `<tr><td>${esc(h.date)}</td><td>${esc(h.name)}${h.meaning ? `<span class="tg-sub">${esc(h.meaning)}</span>` : ''}</td><td>${esc(h.impact)}</td></tr>`).join('')}</tbody></table></div>
+<p class="tg-note">${esc(g.holidayNote)}</p>`;
+
+    const rows = g.prices.rows.map(r => {
+      const [lo, hi] = r.cur, klo = lo * g.rate.krw, khi = hi * g.rate.krw;
+      const ratio = (klo + khi) / 2 / r.kr;
+      const [cls, word] = ratio < 0.9 ? ['cheap', `약 ${Math.round((1 - ratio) * 100)}% 저렴`]
+        : ratio > 1.1 ? ['dear', ratio >= 2 ? `약 ${ratio.toFixed(ratio >= 10 ? 0 : 1)}배` : `약 ${Math.round((ratio - 1) * 100)}% 비쌈`] : ['same', '비슷'];
+      const scale = Math.max(khi, r.kr) * 1.05, w = v => (v / scale * 100).toFixed(1);
+      return `<li class="tg-price">
+  <div class="tg-price-head"><span class="tg-item">${esc(r.item)}</span><span class="tg-ratio is-${cls}">${word}</span></div>
+  <div class="tg-bars">
+    <div class="tg-row"><span class="tg-who">현지</span><span class="tg-track"><span class="tg-fill is-local" style="width:${w(khi)}%"><span style="width:${(klo / khi * 100).toFixed(1)}%"></span></span></span>
+      <span class="tg-val">${lo === hi ? num(lo) : `${num(lo)}–${num(hi)}`} ${unit}<small>${lo === hi ? won(klo) : `${won(klo)}–${won(khi)}`}</small></span></div>
+    <div class="tg-row"><span class="tg-who">서울</span><span class="tg-track"><span class="tg-fill is-kr" style="width:${w(r.kr)}%"></span></span>
+      <span class="tg-val">${won(r.kr)}<small>${esc(r.krLabel)}</small></span></div>
+  </div>
+</li>`;
+    }).join('');
+    const prices = `<p class="tg-summary">${esc(g.prices.summary)}</p>
+<p class="tg-rate">환율 기준: ${esc(g.rate.label)} · 막대의 진한 부분은 최저가, 연한 부분은 최고가까지입니다.</p>
+<ul class="tg-prices">${rows}</ul>
+<p class="tg-note">${esc(g.prices.note)}</p>`;
+
+    const transport = `<div class="tg-cards">${g.transport.map(t => `<article class="tg-card"><h3>${esc(t.title)}</h3><p>${esc(t.body)}</p><p class="tg-chip">${esc(t.price)}</p></article>`).join('')}</div>`;
+    const proscons = `<div class="tg-pc tg-pc-big"><div><p class="tg-pc-h is-pro">이래서 좋아요</p>${list(g.pros, 'tg-pro')}</div><div><p class="tg-pc-h is-con">이건 알고 가세요</p>${list(g.cons, 'tg-con')}</div></div>`;
+    const tips = `<dl class="tg-tips">${g.tips.map(t => `<div><dt>${esc(t.k)}</dt><dd>${esc(t.v)}</dd></div>`).join('')}</dl>`;
+    const sources = `<ul>${g.sources.map(s => `<li><a href="${esc(s.u)}" target="_blank" rel="noopener">${esc(s.t)}</a></li>`).join('')}</ul>
+<p class="img-note">항공 운항·요금·가격은 ${esc(g.checked.replace(/-/g, '.'))}에 확인한 내용입니다. 시즌과 정책에 따라 바뀌므로 출발 전에 공식 사이트에서 다시 확인하세요.</p>`;
+
+    return {
+      pre: [S('glance', '한눈에 보기', glance), S('flights', '한국에서 가는 법', flights), S('when', '언제 가면 좋을까', climate),
+        S('events', '여행자도 즐길 수 있는 축제·행사', events), S('holidays', '공휴일과 기념일', holidays),
+        S('prices', '물가: 서울과 비교하면', prices), S('transport', '현지 교통', transport), S('proscons', '장점과 단점', proscons)],
+      routes: g.routes ? [S('routes', '추천 동선', `<div class="md-table"><table><thead><tr><th scope="col">테마</th><th scope="col">동선</th><th scope="col">포인트</th></tr></thead><tbody>${
+        g.routes.map(r => `<tr>${r.map(c => `<td>${esc(c)}</td>`).join('')}</tr>`).join('')}</tbody></table></div><p class="tg-note">기차·버스 시간은 대략적인 소요 시간입니다.</p>`)] : [],
+      post: [S('tips', '여행 실전 팁', tips)],
+      sources: [S('sources', '여행 정보 출처', sources)]
+    };
+  }
+  /* 관광 페이지: 원고 섹션 사이에 여행 실전 정보를 끼워 넣는다(원고의 계절 섹션은 새 계절 정보로 대신) */
+  function mergeTravelGuide(secs, slug) {
+    const g = travelGuideSections(slug);
+    if (!g) return secs;
+    const at = secs.findIndex(s => /관광 명소/.test(s.raw || ''));
+    const cut = at < 0 ? secs.length : at;
+    const rest = secs.slice(cut + 1).filter(s => !/계절/.test(s.title));
+    return [g.pre[0], ...secs.slice(0, cut), ...g.pre.slice(1), ...(at < 0 ? [] : [secs[at]]), ...g.routes,
+      ...rest.filter(s => !/출처/.test(s.title)), ...g.post, ...rest.filter(s => /출처/.test(s.title)), ...g.sources];
+  }
+
   /* 한 나라의 하위 페이지 목록. 관광은 상세 원고가 있는 나라만 */
   const DEEP = window.COUNTRY_DEEP || {};
   const SECTION_DEFS = [
@@ -579,9 +678,9 @@ ${window.REPORTS ? `<section class="home-reports wrap" id="reports" aria-labelle
       else if (id === 'industry' && hasH3 >= 3) html = accordion(s.lines);
       else if (hasH3 >= 3) html = topicCards(s.lines);
       else html = mdBlocks(s.lines);
-      return { id: `s${i + 1}`, title: s.title, html, tab: id === 'language' && /인사말|여행 회화|^(인사·기본|자기소개|식당·쇼핑|교통·긴급|인사·예절|소개·기초|길·교통·숙소)$/.test(s.raw) };
+      return { id: `s${i + 1}`, title: s.title, raw: s.raw, html, tab: id === 'language' && /인사말|여행 회화|^(인사·기본|자기소개|식당·쇼핑|교통·긴급|인사·예절|소개·기초|길·교통·숙소)$/.test(s.raw) };
     });
-    return { title: doc.title, lead: doc.lead, intro: mdBlocks(doc.intro), secs };
+    return { title: doc.title, lead: doc.lead, intro: mdBlocks(doc.intro), secs: id === 'travel' ? mergeTravelGuide(secs, slug) : secs };
   }
   /* ---------- 대표 보고서·자료 (data-reports.js) ---------- */
   function reportGroups(slug) {
@@ -910,6 +1009,7 @@ ${window.REPORTS ? `<section class="home-reports wrap" id="reports" aria-labelle
     // 항목 카드 설명: 상세 원고가 있으면 그 페이지의 섹션 제목을, 없으면 기본 정보를 요약한다
     const desc = id => {
       if (deep && deep.md[id]) {
+        if (id === 'travel' && TRAVEL[slug]) return `직항·추천 시기·축제·물가·교통 정보와 명소 ${deep.places.length}곳`;
         if (id === 'travel') return deep.places.map(p => p.title).slice(0, 5).join(', ') + ` 등 ${deep.places.length}곳`;
         if (id === 'food') return deep.foods.map(p => p.title).slice(0, 5).join(', ') + ` 등 ${deep.foods.length}가지`;
         return mdParse(deep.md[id]).sections.filter(s => !/출처/.test(s.title)).slice(0, 4).map(s => s.title).join(', ');
