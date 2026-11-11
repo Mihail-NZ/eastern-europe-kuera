@@ -1,0 +1,138 @@
+{
+  "date": "2026-11-03",
+  "home": [0, 1, 3],
+  "overview": "러시아가 11월 3일 새벽 드론 약 300기와 탄도미사일 17발, 순항미사일 수십 발로 우크라이나 에너지 시설을 대규모 공격했고, 젤렌스키 대통령은 자포리자주 코미슈바하에서 29명이 숨졌다고 밝혔습니다. 폴란드에서는 정부 측 판사 8명이 헌법재판소 전체회의를 열어 2027년 예산을 처리했지만 소장과 대통령은 이를 인정하지 않았습니다. 세르비아 법원은 경찰 수뇌부 2명에 대해 30일 구금을 명령했고, 보스니아 국가법원은 1992년 소콜라츠 전쟁범죄 가담자 6명에게 모두 83년형을 선고했습니다. 라트비아에서는 제15대 의회가 첫 회의를 열어 스밀텐스를 의장으로 선출했습니다.",
+  "stories": [
+    {
+      "region": "top",
+      "title": "러시아, 우크라이나 에너지 시설 대규모 공습…젤렌스키 “코미슈바하 29명 사망”, 하르키우 병원 피격",
+      "countries": ["우크라이나"],
+      "period": "2026-11-02 ~ 11-03",
+      "points": [
+        "신화통신에 따르면 젤렌스키 대통령은 11월 3일 러시아가 밤사이 드론 약 300기, 탄도미사일 17발, 순항미사일 수십 발로 에너지 시설을 공격했다고 밝혔습니다. 발전 시설과 변전소가 있는 9개 지역에서 비상 정전이 발생했습니다.",
+        "젤렌스키 대통령은 남부 자포리자주 코미슈바하에서 29명이 숨졌으며 구조 작업이 계속되고 있다고 말했습니다. 하르키우 시내 병원도 피격돼 73명이 다쳤습니다.",
+        "우크라이나 최대 민간 에너지 기업 DTEK은 화력발전소 3곳이 공격으로 발전을 중단했고 큰 피해가 났다고 밝혔습니다.",
+        "우크라이나 공군은 요격·격추한 목표물이 300개를 넘고 그중 미사일이 52발이라고 밝혔습니다."
+      ],
+      "why": "겨울을 앞두고 발전·송전 설비가 집중 타격을 받으면서 전력 공급 차질과 민간 피해가 커지고 있습니다. 이 소식은 며칠 뒤 열린 미국·우크라이나·러시아 실무 협상 이전의 상황이며, 소급 작성 시점에는 이후 전개를 반영하지 않았습니다.",
+      "korea": "발전·송전 설비 피해가 커 복구 수요가 늘 수 있고, 현지 진출 기업은 전력 차질과 직원 안전에 유의해야 합니다.",
+      "sources": [
+        { "name": "Xinhua – Ukraine says Russia attacked energy infrastructure overnight with roughly 300 drones", "url": "https://english.news.cn/20261103/de45d17bbb634bad89573daf68608c3a/c.html", "lang": "EN" }
+      ]
+    },
+    {
+      "region": "v4",
+      "title": "폴란드 헌법재판소, 정부 측 판사 8명이 전체회의 개최…소장은 “쿠데타”, 대통령은 불인정",
+      "countries": ["폴란드"],
+      "period": "2026-10-30 ~ 11-03",
+      "points": [
+        "노츠프롬폴란드에 따르면 지난주 재판소 지휘권을 잡은 정부 측 판사 8명이 11월 3일 전체회의를 열었고, 재판소 회의가 처음으로 생중계됐습니다. 회의는 안나 코르빈-피오트로프스카가 소집했으며, 그는 금요일 시비엥치코프스키 소장과 소하인스키 부소장의 직무를 정지했습니다.",
+        "재판소 정원은 15명이라 보통 10명이 있어야 하지만 8명만 참석했습니다. 참석자들은 직무정지된 2명과 불법 임명 판사의 자리를 이어받은 1명을 제외하면 인원이 12명이라며, 그 3분의 2인 8명으로 의결정족수가 충족됐다고 판단했습니다. 기존 PiS 시절 임명된 나머지 7명은 불참했습니다.",
+        "회의에서는 소장이 처리하지 못한 2027년 재판소 예산안을 채택하고, 소장·부소장에 대한 징계 위원 추첨을 진행했습니다. 시비엥치코프스키 소장은 회의를 쿠데타라고 규정했습니다.",
+        "나브로츠키 대통령은 정부가 재판소를 불법적으로 장악하고 있으며 투스크 총리가 모든 책임을 진다고 말했습니다. 같은 날 노츠프롬폴란드는 폴란드 가계 전기요금이 구매력 기준 EU 2위라고 전했습니다."
+      ],
+      "why": "정족수 계산을 둘러싼 법적 논란이 커져 재판소 결정의 효력이 계속 다퉈질 수 있습니다. 대통령과 정부의 대립이 2027년 총선까지 이어질지가 관건입니다.",
+      "korea": "",
+      "sources": [
+        { "name": "Notes from Poland – Disputed Polish constitutional court holds first meeting after takeover by government-backed judges", "url": "https://notesfrompoland.com/2026/11/03/disputed-polish-constitutional-court-holds-first-meeting-after-takeover-by-government-backed-judges/", "lang": "EN" },
+        { "name": "Notes from Poland – Poland has EU's second-highest electricity prices accounting for cost of living", "url": "https://notesfrompoland.com/2026/11/03/poland-has-eus-second-highest-electricity-prices-accounting-for-cost-of-living/", "lang": "EN" }
+      ]
+    },
+    {
+      "region": "baltic",
+      "title": "라트비아 제15대 의회 첫 회의…스밀텐스 의장 선출, 리투아니아 아담쿠스 전 대통령 100세 생일",
+      "countries": ["라트비아", "리투아니아"],
+      "period": "2026-11-03",
+      "points": [
+        "라트비아 포털 lvportals에 따르면 제15대 의회는 11월 3일 첫 회의를 열어 에드바르즈 스밀텐스를 의장으로 선출했고, 찬성 79표 반대 15표였습니다. 소속 정당은 기사에서 확인하지 못했습니다.",
+        "회의 안내 기사에 따르면 의원들은 선서를 하고 의원 자격을 승인받았으며, 신임 의회가 소집되면 내각은 사퇴한 것으로 간주됩니다. 현 정부는 새 내각이 신임을 받을 때까지 직무를 이어갑니다.",
+        "LRT는 11월 3일 발다스 아담쿠스 전 리투아니아 대통령이 100세 생일을 맞았다며 그의 생애를 정리했습니다. 그는 1997~98년 대선에서 당선돼 NATO·EU 가입 노선을 밀었고 2004~2009년에 다시 대통령을 지냈습니다."
+      ],
+      "why": "라트비아는 새 의회 구성으로 신임 내각 구성 절차에 들어갑니다. 의장 선출 표수는 이후 연정 협상의 출발점으로 볼 수 있습니다.",
+      "korea": "",
+      "sources": [
+        { "name": "lvportals – Saeimas priekšsēdētāja amatā ievēlēts Edvards Smiltēns (라트비아어)", "url": "https://lvportals.lv/dienaskartiba/396618-saeimas-priekssedetaja-amata-ievelets-edvards-smiltens-2026", "lang": "EN" },
+        { "name": "lvportals – Otrdien uz pirmo sēdi sanāks 15. Saeima (라트비아어)", "url": "https://lvportals.lv/dienaskartiba/396526-otrdien-uz-pirmo-sedi-sanaks-15-saeima-2026", "lang": "EN" },
+        { "name": "LRT – Valdas Adamkus at 100: The Lithuanian president who helped steer his country West", "url": "https://www.lrt.lt/en/news-in-english/19/3102074/valdas-adamkus-at-100-the-lithuanian-president-who-helped-steer-his-country-west", "lang": "EN" }
+      ]
+    },
+    {
+      "region": "wbalkan",
+      "title": "세르비아 법원, 경찰 수뇌부 2명 30일 구금…보스니아 국가법원은 소콜라츠 범죄에 83년형",
+      "countries": ["세르비아", "보스니아 헤르체고비나"],
+      "period": "2026-11-03",
+      "points": [
+        "발칸인사이트에 따르면 베오그라드 고등법원은 형사경찰국장 마르코 크리차크와 범죄진압국장 보슈코 세쿨로비치에게 30일 구금을 명령했습니다. 둘 다 직권남용 혐의이며, 크리차크는 가혹행위·고문 혐의도 받습니다.",
+        "혐의는 5월 12일 베오그라드 식당에서 벌어진 살인 사건 수사와 관련됩니다. 검찰은 5월 16일 용의자 한 명을 때리고 머리에 두건을 씌운 뒤 벨트로 구타했다고 주장하며 구금 결정에 항고하겠다고 밝혔습니다. 체포는 SNS가 14년 만에 정권을 잃은 총선 일주일 뒤에 이뤄졌고, 검찰총장은 선거와 무관하다고 말했습니다.",
+        "보스니아 국가법원은 11월 3일 1992년 소콜라츠 지역 반인도 범죄로 전 제2로마니야 여단원 6명에게 모두 83년형을 선고했습니다. 형량은 20년 1명, 15년 1명, 12년 4명이며 2명은 무죄입니다.",
+        "법원은 노보세오치 마을에서 끌려온 남성 44명이 이반 폴례 싱크홀에서 살해됐다고 인정했습니다. 판결에는 항소할 수 있습니다."
+      ],
+      "why": "세르비아는 정권 교체 직후 경찰 수뇌부 수사가 이어지면서 사법·치안 기관의 정비 방향이 시험대에 올랐습니다. 보스니아에서는 전쟁범죄 재판이 계속돼 사회적 화해 문제가 다시 부각됩니다.",
+      "korea": "",
+      "sources": [
+        { "name": "Balkan Insight – Serbia Detains Police Officials Over Abuse of Position, Torture, Allegations", "url": "https://balkaninsight.com/2026/11/03/serbia-detains-police-officials-over-abuse-of-position-torture-allegations/bi/", "lang": "EN" },
+        { "name": "Balkan Insight – Bosnian Serb Army Ex-Members Jailed for 83 Years for Sokolac Crimes", "url": "https://balkaninsight.com/2026/11/03/bosnian-serb-army-ex-members-jailed-for-83-years-for-sokolac-crimes/btj/btj-bosnia-and-herzegovina/", "lang": "EN" },
+        { "name": "Balkan Insight – Post-Vucic Serbia Will Reengage with Europe, But It Will Not Be a Honeymoon", "url": "https://balkaninsight.com/2026/11/03/post-vucic-serbia-will-reengage-with-europe-but-it-will-not-be-a-honeymoon/bi/", "lang": "EN" }
+      ]
+    },
+    {
+      "region": "sbalkan",
+      "title": "몬테네그로 EU 협상 제1장 잠정 종결 합의…수감 중 티라나 시장 “총리가 법무장관 통해 압박” 주장",
+      "countries": ["몬테네그로", "알바니아", "코소보", "북마케도니아"],
+      "period": "2026-11-03",
+      "points": [
+        "유럽웨스턴발칸스(EWB)에 따르면 EU 회원국들은 몬테네그로 가입협상의 제1장(상품의 자유로운 이동)을 잠정 종결하기로 합의했습니다. 아일랜드 장관 토머스 번이 금요일 정부간 회의에서 이를 공식화하겠다고 밝혔고, 이로써 33개 장 중 21개가 잠정 종결됩니다.",
+        "몬테네그로 유럽업무장관 마이다 고르체비치는 2026년 말까지 남은 장을 모두 닫는 것이 현실적인 목표라고 말했습니다. 몬테네그로는 남은 12개 장의 최종 협상 입장을 제출했습니다.",
+        "발칸인사이트에 따르면 수감 중인 에리온 벨리아이 티라나 시장은 에디 라마 총리가 토니 고구 법무장관을 통해 사퇴와 시위 지지 인정을 압박했다고 주장했습니다. 고구 장관은 면회는 인정했지만 그런 메시지를 전달하지 않았다고 반박했습니다.",
+        "유로저스트는 독일 주도로 알바니아·코소보·북마케도니아 등이 참여한 투자사기 단속에서 7명을 체포하고 서버 100여 대를 폐쇄했다고 밝혔습니다. 코소보에서는 3명이 체포됐고 피해액은 400만 유로가 넘습니다."
+      ],
+      "why": "몬테네그로가 EU 가입협상에서 한 걸음 더 나아가는 반면 알바니아는 약 5개월째 이어진 반정부 시위와 사법 논란으로 정치적 긴장이 계속됩니다.",
+      "korea": "",
+      "sources": [
+        { "name": "European Western Balkans – Montenegro to close chapter on free movement of goods on Friday", "url": "https://europeanwesternbalkans.com/2026/11/03/montenegro-to-close-chapter-on-free-movement-of-goods-on-friday/", "lang": "EN" },
+        { "name": "Balkan Insight – Jailed Albanian Mayor Accuses PM of Sending Threats Via Minister", "url": "https://balkaninsight.com/2026/11/03/jailed-albanian-mayor-accuses-pm-of-sending-threats-via-minister/bi/", "lang": "EN" },
+        { "name": "Balkan Insight – Seven Arrested in International Investment Fraud Crackdown in Balkans", "url": "https://balkaninsight.com/2026/11/03/seven-arrested-in-international-investment-fraud-crackdown-in-balkans/bi/", "lang": "EN" }
+      ]
+    },
+    {
+      "region": "east",
+      "title": "루마니아·몰도바, EU SAFE 틀에서 군사 파트너십 체결…루마니아 9개월 재정적자 GDP 대비 3.81%",
+      "countries": ["루마니아", "몰도바"],
+      "period": "2026-11-03",
+      "points": [
+        "RRI에 따르면 루마니아와 몰도바는 EU SAFE 프로그램 틀에서 군사 파트너십을 맺었습니다. 몰도바 군은 이탈리아 기업이 루마니아에서 만드는 차량을 구입할 수 있으며, 양국은 드론 대응 기술 접근도 협상 중입니다.",
+        "루마니아의 올해 1~9월 재정적자는 GDP 대비 3.81%로 전년 같은 기간(5.31%)보다 낮아졌습니다. 공공투자는 약 30% 늘어난 약 215억 유로이고 65%가 EU 자금입니다.",
+        "연간 목표 6.2%를 지키려면 복구기금(PNRR) 5·6차 지급신청에서 42억 3천만 유로를 받아야 한다고 RRI는 전했습니다.",
+        "정부와 주요 노조는 니쿨레스쿠 총리와의 첫 면담에 이어 대화를 계속하기로 했고, 정부는 연금 연동과 행정 부담 완화를 약속했습니다. 이날 남부·남동부에는 폭우가 내려 20여 개 지역이 피해를 봤고 콘스탄차 카운티에는 적색·주황 경보가 내려졌습니다."
+      ],
+      "why": "몰도바 방위 협력이 EU 재원 틀로 구체화되고 있고, 루마니아는 EU 자금 수령 여부에 재정 목표가 걸려 있습니다.",
+      "korea": "",
+      "sources": [
+        { "name": "RRI – Newsflash, November 3, 2026", "url": "https://www.rri.ro/en/news-and-current-affairs/newsflash/november-3-2026-id1078400.html", "lang": "EN" }
+      ]
+    }
+  ],
+  "countries": {
+    "폴란드": "정부 측 판사 8명이 헌법재판소 전체회의를 열어 2027년 예산 채택, 소장은 쿠데타라 반발(11/3, 노츠프롬폴란드). 폴란드 언론인 우카시 바제하가 우크라이나 국경에서 7시간 억류 끝에 3년 입국금지를 통보받음(11/2~3, Interfax-Ukraine, 우크라이나 보안국 공식 확인은 없음).",
+    "체코": "최근 48시간 내 주요 보도 확인되지 않음. 배경으로 체코TV·라디오 직원이 11월 3일 하루 파업을 예고했다는 보도(Rio Times, 실제 진행은 확인 못함)와 바비시 정부 불만족 53% 여론조사(11/2).",
+    "슬로바키아": "연정이 11월 3일 무소속 의원 이탈로 안정적 과반을 잃어 75석(150석 중)이 됐다는 Euractiv 보도를 FrontPages.EU가 11월 7일자로 전함. 76석이라는 다른 집계도 있어 정확한 수치는 확인되지 않음.",
+    "헝가리": "최근 48시간 내 주요 보도 확인되지 않음. 배경으로 마자르 총리의 티서 정부가 2026년 재정적자 목표를 7.5%로 잡고 있다는 보도(Telex 등 검색 결과, 게재일 미확인).",
+    "에스토니아": "최근 48시간 내 주요 보도 확인되지 않음. 배경으로 미할 총리 소수정부가 10월 19일 불신임안을 넘겼고 사회민주당이 브세비오프 총리 도전을 지지했음.",
+    "라트비아": "제15대 의회 첫 회의에서 스밀텐스가 79 대 15로 의장에 선출, 현 정부는 신임 내각 승인 때까지 직무 유지(11/3, lvportals).",
+    "리투아니아": "발다스 아담쿠스 전 대통령 100세 생일, LRT가 생애 정리(11/3).",
+    "슬로베니아": "최근 48시간 내 주요 보도 확인되지 않음. 정부 사이트 검색 결과에 11월 3~4일 슬로베니아 남동부 지역 방문 일정이 있었으나 기사 본문은 확인하지 못함. Sloveniatimes는 접속 오류(403).",
+    "크로아티아": "최근 48시간 내 주요 보도 확인되지 않음. 배경으로 밀라노비치 대통령이 EU가 초국가가 되려 한다고 비판(11/2, Total Croatia News).",
+    "세르비아": "베오그라드 고등법원이 경찰 수뇌부 2명에게 30일 구금 명령, 직권남용·고문 혐의(11/3, 발칸인사이트). 정권 교체 이후 EU 관계 재조정 전망 기사도 게재.",
+    "보스니아 헤르체고비나": "국가법원이 소콜라츠 반인도 범죄로 전 여단원 6명에게 모두 83년형 선고(11/3, 발칸인사이트).",
+    "몬테네그로": "EU 회원국이 가입협상 제1장 잠정 종결에 합의, 33개 장 중 21개 종결(11/3, EWB).",
+    "코소보": "프리슈티나 시장 페르파림 라마가 총리 도전 의사를 밝히자 쓰레기 수거 위기가 비판받음(11/3, 발칸인사이트). 투자사기 단속에서 3명 체포(11/3).",
+    "알바니아": "수감 중 티라나 시장 벨리아이가 총리의 법무장관 통한 압박을 주장, 언론인들은 시위 중 경찰 폭력을 호소(11/3, 발칸인사이트).",
+    "북마케도니아": "최근 48시간 내 주요 보도 확인되지 않음. 유로저스트 투자사기 단속에 참여국으로 이름이 올랐으나(11/3) 자국 관련 세부는 확인되지 않음.",
+    "불가리아": "최근 48시간 내 주요 보도 확인되지 않음. BTA 영문 사이트의 11월 3일 기사는 접근하지 못했고, 배경으로 요토바가 11월 1일 결선에서 57.6%로 당선됐음.",
+    "우크라이나": "러시아가 드론 약 300기·미사일로 에너지 시설 공습, 젤렌스키 대통령 코미슈바하 29명 사망 발표, 하르키우 병원 피격 73명 부상(11/3, 신화통신).",
+    "벨라루스": "루카셴코가 11월 3일 민스크 안보 회의에서 우크라이나 전쟁이 몇 달 안에 끝날 수 있다고 말했다는 보도(informat.ro 검색 결과 요약, 본문은 접속 오류로 확인하지 못함).",
+    "몰도바": "루마니아와 EU SAFE 틀에서 군사 파트너십 체결, 몰도바 군이 루마니아산 차량 구입 가능(11/3, RRI).",
+    "루마니아": "몰도바와 군사 파트너십 체결, 1~9월 재정적자 GDP 대비 3.81%, 남부·남동부 폭우 피해(11/3, RRI)."
+  },
+  "note": "이 브리핑은 서비스 장애로 빠졌던 2026-11-03자 브리핑을 2026-11-11에 소급 작성한 것입니다. 노츠프롬폴란드와 발칸인사이트는 날짜별 목록 페이지에서 11월 3일 기사를 찾아 본문을 열었고, 신화통신, EWB, RRI, LRT, lvportals, Interfax-Ukraine 기사도 열어 확인했습니다. 체코, 슬로바키아, 헝가리, 슬로베니아, 크로아티아, 에스토니아, 불가리아, 벨라루스는 11월 3일 당일 기사를 직접 확인하지 못해 배경 동향이나 검색 결과 요약으로 대신했으며, 슬로바키아 연정 과반 상실은 2차 요약 기사(FrontPages.EU 경유 Euractiv 보도)에 근거해 수치가 엇갈립니다. 벨라루스 단신은 본문을 열지 못했고 Sloveniatimes는 403 오류였습니다. Wayback Machine, Kyiv Independent, ERR, BTA는 열지 못했거나 11월 3일 기사를 찾지 못했으며 Expats.cz, Total Croatia News, Telex, N1, 한국 언론, KOTRA는 대상 날짜 기사를 확인하지 못했습니다. 우크라이나 공습 기사는 신화통신 한 곳 기준이라 사망자 수 등은 다른 매체로 교차 확인하지 못했습니다. 11월 3일 이후 사건은 반영하지 않았습니다. 출처 표시: KR = 한국 언론, KOTRA = KOTRA 해외시장뉴스, EN = 해외 매체(라트비아어 기사 포함)."
+}

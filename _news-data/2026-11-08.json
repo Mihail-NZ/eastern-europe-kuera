@@ -1,0 +1,140 @@
+{
+  "date": "2026-11-08",
+  "home": [0, 5, 3],
+  "overview": "폴란드는 11월 7일 크라쿠프 중앙광장 총격으로 6명이 숨진 데 이어 용의자의 가족 3명이 집에서 숨진 채 발견돼 8일부터 이틀간 국가 애도기간에 들어갔고, 검찰은 테러 수사를 시작했습니다. 우크라이나에서는 러시아의 에너지 시설 공습으로 전국에서 85만 명 이상이 정전을 겪었습니다. 루마니아는 국경 인근에서 새 공중 표적이 탐지되자 F-16을 출격시켰고, 세르비아에서는 군 정보기관의 감청 의혹과 전 경찰 수뇌부 구금 결정이 보도됐습니다.",
+  "stories": [
+    {
+      "region": "top",
+      "title": "크라쿠프 총격 사망 6명에 가족 3명 사망 추가 확인…폴란드 이틀간 국가 애도, 검찰 테러 수사 착수",
+      "countries": ["폴란드"],
+      "period": "2026-11-07 ~ 11-08",
+      "points": [
+        "AP에 따르면 11월 7일(토) 오후 3시경 24세 남성이 크라쿠프 중앙 시장광장에서 총격을 벌여 6명이 숨지고 15명이 다쳤습니다. 사망자 중에는 영국인 1명과 오스트리아 여성이 포함됐고, 부상자 가운데 5명은 영국·포르투갈·러시아·독일·오스트리아 국적 외국인입니다. 용의자는 경찰의 총에 맞아 중태입니다.",
+        "노츠프롬폴란드에 따르면 용의자의 집(오스트로비에츠 시비엥토크시스키)에서 부모와 여동생으로 보이는 시신 3구가 발견돼 총 사망자는 9명으로 집계됐고, 국가검찰청은 일요일 크라쿠프 사건에 대해 공식 테러 수사를 시작했습니다. 키에르빈스키 내무장관은 용의자가 매우 급진적인 극우 성향이었다고 초기 조사 결과를 밝혔으나 동기는 확인 중입니다.",
+        "나브로츠키 대통령과 투스크 총리가 서명한 대통령령으로 11월 8일부터 이틀간 국가 애도기간이 시작됐고, 크라쿠프 성모마리아 성당의 시간 알림 나팔 연주가 2차 대전 이후 처음으로 하룻밤 중단됐다고 AP가 전했습니다. 메르츠 독일 총리, 마크롱 프랑스 대통령, 폰데어라이엔 집행위원장, 젤렌스키 우크라이나 대통령 등이 애도와 연대를 표명했습니다(유로뉴스).",
+        "별도로 S&P는 11월 7일 폴란드 신용등급 전망을 부정적으로 바꾸고 현지통화 장기등급을 A에서 A-로 낮췄습니다. 2027년 예산안 적자는 GDP의 7.1%로 EU 목표 3.7%를 크게 웃돕니다."
+      ],
+      "why": "총기 소지율이 유럽에서 가장 낮은 편인 폴란드에서 유례없는 대량 총격이 일어났고 극우 성향이 거론되면서, 총기 허가 제도와 온라인 폭력 선동에 대한 정치권 논쟁으로 이어질 수 있습니다. 공식 동기와 용의자 상태가 다음 확인 지점입니다.",
+      "korea": "",
+      "sources": [
+        { "name": "Notes from Poland – Prosecutors launch terror investigation as Poland reels from fatal shootings", "url": "https://notesfrompoland.com/2026/11/08/prosecutors-launcher-terror-investigation-as-poland-reels-from-fatal-shootings/", "lang": "EN" },
+        { "name": "AP (Atlanta News First) – Poles mourn rare mass killing as authorities say attacker had far-right views", "url": "https://www.atlantanewsfirst.com/2026/11/08/poles-mourn-rare-mass-killing-authorities-say-attacker-had-far-right-views/", "lang": "EN" },
+        { "name": "Euronews – Condolences and solidarity: European and world leaders react to Krakow shooting", "url": "https://euronews.com/2026/11/08/condolences-and-solidarity-european-and-world-leaders-react-to-krakow-shooting", "lang": "EN" },
+        { "name": "Notes from Poland – Rating agency S&P shifts Poland's credit outlook to negative and lowers currency rating", "url": "https://notesfrompoland.com/2026/11/07/rating-agency-sp-shifts-polands-credit-outlook-to-negative-and-lowers-currency-rating/", "lang": "EN" }
+      ]
+    },
+    {
+      "region": "v4",
+      "title": "체코 정부 로마 학교 5곳 폐쇄 추진·슬로바키아 연정 과반 상실 여진·헝가리 마자르 총리 예산 사용처 공개",
+      "countries": ["체코", "슬로바키아", "헝가리"],
+      "period": "2026-11-07 ~ 11-08",
+      "points": [
+        "FrontPages.EU가 인용한 세즈남 즈프라비에 따르면 바비시 총리 정부는 로마(집시) 학교 5곳을 폐쇄하고 다른 학교의 운영 방식을 크게 바꿀 계획입니다. 엑스팻츠닷체코는 콘네치나 유럽의회 의원이 공산당(KSČM)을 21년 만에 탈당했다고 전했습니다.",
+        "FrontPages.EU 슬로바키아 요약(11월 7일자)에 따르면 11월 3일 의원 1명이 이탈하면서 피초 총리 연정의 의석이 150석 중 75석(76석이라는 보도도 있음)으로 줄었고, 야당은 조기 총선을 요구하고 있습니다.",
+        "헝가리에서는 텔렉스·24.hu 보도로 비테지 교통투자장관이 잘라에게르세그의 M76 고속도로 접속을 불허한다고 밝혔고, 마자르 총리가 578억 포린트의 사용처를 공개했습니다. 헝가리의 아니타 오르반 외무장관은 크라쿠프 총격에 애도를 표했습니다(유로뉴스).",
+        "FrontPages.EU 체코 요약에 따르면 트르제비치 인근 우회 비포장도로에 누군가 금속 못 등을 깔아 약 20대의 차량이 파손됐습니다."
+      ],
+      "why": "슬로바키아는 과반이 무너진 소수 정부 상태가 이어지고, 체코는 교육·소수민족 정책이 쟁점이 되며, 헝가리는 정권 교체 이후 예산 재편이 진행 중입니다. 3국 모두 국내 정치 현안 위주의 하루였습니다. 이 요약은 FrontPages.EU 기사 정리를 통해 확인한 것으로 원문 기사를 직접 열지는 못했습니다.",
+      "korea": "",
+      "sources": [
+        { "name": "FrontPages.EU – Czechia: Spikes hidden in a muddy detour (11/8)", "url": "https://buttondown.com/frontpageseu/archive/czechia-spikes-hidden-in-a-muddy-detour/", "lang": "EN" },
+        { "name": "FrontPages.EU – Slovakia: New highway opens without gas stations (11/7)", "url": "https://buttondown.com/frontpageseu/archive/slovakia-new-highway-opens-without-gas-stations/", "lang": "EN" },
+        { "name": "FrontPages.EU – Hungary: The sixteen-year departure from normal (11/8)", "url": "https://buttondown.com/frontpageseu/archive/hungary-the-sixteen-year-departure-from-normal/", "lang": "EN" }
+      ]
+    },
+    {
+      "region": "baltic",
+      "title": "라트비아·리투아니아 정상, 크라쿠프 총격에 폴란드와 연대 표명…라트비아 동부 올겨울 첫눈",
+      "countries": ["라트비아", "리투아니아"],
+      "period": "2026-11-07 ~ 11-08",
+      "points": [
+        "유로뉴스에 따르면 라트비아 린케비치스 대통령은 폴란드의 친구이자 동맹으로서 연대한다며 애도를 전했고, 리투아니아 나우세다 대통령은 나브로츠키 대통령과 폴란드 국민에게 전적인 연대를 표명했습니다.",
+        "LSM에 따르면 11월 7일 오전 라트비아 동부 레제크네 관측소에서 올해 첫눈이 관측됐지만 눈은 쌓이지 않았고, 기온은 영상 1도였습니다. 다음 주에는 영하로 떨어지는 날이 있을 것으로 예보됐습니다.",
+        "유로뉴스에 따르면 EU 기관들은 조기를 게양했고, 에스토니아 출신인 칼라스 EU 외교안보 고위대표는 이번 비극의 여파가 폴란드 국경 너머까지 느껴질 것이라고 밝혔습니다."
+      ],
+      "why": "폴란드와 안보·정치적으로 밀접한 발트 국가들이 즉각 연대 메시지를 냈습니다. 이날 발트 3국 영문 매체에서는 이 밖에 11월 8일자 주요 정치·안보 기사가 확인되지 않았습니다.",
+      "korea": "",
+      "sources": [
+        { "name": "Euronews – Condolences and solidarity: European and world leaders react to Krakow shooting", "url": "https://euronews.com/2026/11/08/condolences-and-solidarity-european-and-world-leaders-react-to-krakow-shooting", "lang": "EN" },
+        { "name": "LSM – First snow of winter falls in Latgale region", "url": "https://eng.lsm.lv/article/weather/weather/07.11.2026-first-snow-of-winter-falls-in-latgale-region.a670946/", "lang": "EN" }
+      ]
+    },
+    {
+      "region": "wbalkan",
+      "title": "세르비아, 군 정보기관 감청 의혹·전 경찰 수뇌부 구금 결정·알타은행 파산 파장",
+      "countries": ["세르비아"],
+      "period": "2026-11-07 ~ 11-08",
+      "points": [
+        "FrontPages.EU가 인용한 브레메·N1에 따르면 군경 노조 전 위원장 노비차 안티치는 군사보안정보국(VBA) 국장 주라 요바노비치가 언론인과 정치·야권 활동가를 감시·도청하도록 조직했다고 주장했습니다.",
+        "브레메·인사이더 보도로 베오그라드 상급법원은 검찰의 항고를 받아들여 마르코 크리차크 전 형사경찰국장과 네젤코 세쿨로비치 범죄대응국장의 구금을 명령했습니다.",
+        "인사이더에 따르면 알타은행의 영업 허가가 취소된 뒤 세르비아로 이주한 러시아인 예금자들이 저축을 잃었고, 브레메는 국립은행이 훨씬 일찍 조사에 나설 근거가 있었다는 문서가 있다고 전했습니다.",
+        "N1 보도로 영국 대사는 선거가 흥미로웠다고 평가했고, 브레메에서 밀로라드 푸포바츠는 정권 교체로 베오그라드와 자그레브의 관계가 나아질 것으로 전망했습니다."
+      ],
+      "why": "선거 이후 세르비아에서는 수사·구금 조치와 과거 정보기관 활동에 대한 폭로가 잇따르고 있습니다. 이 요약은 FrontPages.EU의 현지 매체 정리를 통해 확인한 것이어서 개별 기사 본문은 직접 확인하지 못했습니다.",
+      "korea": "",
+      "sources": [
+        { "name": "FrontPages.EU – Serbia: Military bot centers and wiretapping claims (11/8)", "url": "https://buttondown.com/frontpageseu/archive/serbia-military-bot-centers-and-wiretapping-claims/", "lang": "EN" }
+      ]
+    },
+    {
+      "region": "sbalkan",
+      "title": "불가리아 판사 총회, 최고사법위원회 위원 1차 선출 실패…흑해 선박 드론 피격 관련 3국 국방장관 회의",
+      "countries": ["불가리아"],
+      "period": "2026-11-07 ~ 11-08",
+      "points": [
+        "FrontPages.EU가 인용한 세가·메디아풀에 따르면 판사 총회가 최고사법위원회(VSS) 사법위원 선거를 마쳤으나 필요한 과반을 얻은 후보가 없어 첫 시도에서 선출에 실패했습니다.",
+        "같은 정리에서 메디아풀은 샤블라 해안 앞 선박을 타격한 드론이 러시아제 무레나-300S 계열로 보이며, 불가리아·튀르키예·루마니아 국방장관이 소피아에서 흑해 안보를 논의했다고 전했습니다. 행사 날짜는 요약에 나와 있지 않습니다.",
+        "RRI는 11월 7일 폰데어라이엔 집행위원장이 월요일 루마니아에 이어 화요일 불가리아 바르나를 방문한다고 전했습니다. 루마니아·불가리아 해안 인근 상선에 대한 러시아 드론 공격이 최근 이어진 데 따른 일정입니다."
+      ],
+      "why": "사법부 수장 선출 난항과 흑해 안보 위협이 겹친 가운데 유럽연합 집행위원장의 방문이 예정돼 있어, 흑해 안보 협력과 사법 개혁이 다음 주 의제가 될 것입니다.",
+      "korea": "",
+      "sources": [
+        { "name": "FrontPages.EU – Bulgaria: Judges fail to elect their own leaders (11/8)", "url": "https://buttondown.com/frontpageseu/archive/bulgaria-judges-fail-to-elect-their-own-leaders/", "lang": "EN" },
+        { "name": "RRI – November 7, 2026 UPDATE", "url": "https://www.rri.ro/en/news-and-current-affairs/newsflash/november-7-2026-update-id1080986.html", "lang": "EN" }
+      ]
+    },
+    {
+      "region": "east",
+      "title": "러시아 공습으로 우크라이나 85만 명 정전…루마니아 국경 인근 새 공중 표적에 F-16 긴급 출격",
+      "countries": ["우크라이나", "루마니아"],
+      "period": "2026-11-07 ~ 11-08",
+      "points": [
+        "유로뉴스에 따르면 11월 8일 러시아의 야간 공습으로 우크라이나 전역에서 85만 명 이상이 정전을 겪었습니다. 드니프로페트롭스크주에서는 DTEK 발표로 60만 명 이상, 하르키우에서는 약 25만 가구가 정전됐다가 복구됐고, 젤렌스키 대통령은 지토미르에서 아파트 140개 동의 난방이 끊겼다고 말했습니다.",
+        "젤렌스키 대통령은 러시아가 지난 한 주 동안 미사일 115발, 유도폭탄 약 1,900발, 공격 드론 3,000대 이상을 사용했다고 밝히고, 아부다비에서 예정된 우크라이나·러시아·미국 3자 회담을 앞두고 크렘린이 협상 입장을 압박하려 공습을 강화하고 있다고 비판했습니다.",
+        "키이우인디펜던트의 11월 8일자 일일 집계에 따르면 최근 하루 동안 7~8명이 숨지고 19명이 다쳤습니다(기사 제목과 본문 수치가 다름). 도네츠크주에서는 5명이 숨졌고 자포리자주에서는 53개 마을에 725차례 공격이 있었으며, 코미슈바하는 11월 2일 55명이 숨진 데 이어 다시 공격받았습니다.",
+        "RRI에 따르면 11월 8일 루마니아 국경 인근에서 또 다른 공중 표적이 탐지돼 페테슈티 86공군기지의 F-16 2대가 출격했고, 스네이크섬 인근 표적 2건에는 스페인 공군 F-18 2기와 NH-90 헬기 2대가 투입돼 RO-ALERT 경보가 발령됐습니다. 루마니아 정부 부채는 8월 말 GDP의 61.1%로 늘었습니다."
+      ],
+      "why": "겨울을 앞두고 우크라이나의 에너지·난방 취약성이 커지고 있으며, 루마니아는 흑해 접경 영공 방어 부담이 지속되고 있습니다. 월요일 예정된 폰데어라이엔 집행위원장의 루마니아 방문에서 흑해 안보가 주요 의제로 거론될 예정입니다.",
+      "korea": "",
+      "sources": [
+        { "name": "Euronews – Russian strikes on Ukraine leave 850,000 without power as Zelenskyy reports drone attack on Komyshuvakha", "url": "https://www.euronews.com/2026/11/08/russian-strikes-on-ukraine-leave-850000-without-power-as-zelenskyy-reports-drone-attack-on", "lang": "EN" },
+        { "name": "Kyiv Independent – Russian attacks kill 7, injure 19 in Ukraine over the past day, striking Zaporizhzhia Oblast over 700 times", "url": "https://kyivindependent.com/russian-attacks-kill-5-injure-10-in-ukraine-over-the-past-day-striking-zaporizhzhia-oblast-over-700-times/", "lang": "EN" },
+        { "name": "RRI – November 8, 2026 UPDATE", "url": "https://www.rri.ro/en/news-and-current-affairs/newsflash/november-8-2026-update-id1081259.html", "lang": "EN" },
+        { "name": "RRI – November 8, 2026", "url": "https://www.rri.ro/en/news-and-current-affairs/newsflash/november-8-2026-id1081163.html", "lang": "EN" }
+      ]
+    }
+  ],
+  "countries": {
+    "폴란드": "크라쿠프 총격 사망 6명에 용의자 가족 3명 사망 확인, 11월 8일부터 이틀간 국가 애도·검찰 테러 수사(11/8, 노츠프롬폴란드·AP). S&P는 신용등급 전망을 부정적으로 하향(11/7).",
+    "체코": "정부가 로마 학교 5곳 폐쇄 추진, 콘네치나 의원이 공산당 탈당(11/8, FrontPages.EU가 인용한 세즈남 즈프라비·엑스팻츠닷체코).",
+    "슬로바키아": "연정이 11월 3일 의원 이탈로 의석 75~76석에 그쳐 소수 정부 상태, 야당은 조기 총선 요구(11/7, FrontPages.EU 요약). 브라티슬라바 경찰은 드론 탐지 시스템 도입.",
+    "헝가리": "마자르 총리가 578억 포린트 사용처 공개, 비테지 장관이 M76 고속도로 접속 불허 발표(11/8, 텔렉스·24.hu를 인용한 FrontPages.EU). 아니타 오르반 외무장관은 크라쿠프 총격에 애도(유로뉴스).",
+    "에스토니아": "최근 48시간 내 주요 보도 확인되지 않음. 배경으로 사민당 위원회가 브세비오프 총리 도전 지지(11/2, ERR).",
+    "라트비아": "린케비치스 대통령이 크라쿠프 총격에 애도 표명(유로뉴스), 동부 레제크네에서 올겨울 첫눈 관측(11/7, LSM).",
+    "리투아니아": "나우세다 대통령이 폴란드 국민에게 전적인 연대 표명(11/8, 유로뉴스). LRT 첫 화면에서는 11/8자 주요 기사를 확인하지 못했음.",
+    "슬로베니아": "최근 48시간 내 주요 보도 확인되지 않음. Sloveniatimes 등에서 11/8자 기사를 찾지 못했음.",
+    "크로아티아": "최근 48시간 내 주요 보도 확인되지 않음. 배경으로 세르비아 정권 교체 이후 자그레브-베오그라드 관계 개선 전망(11/8, FrontPages.EU가 인용한 브레메)과 밀라노비치 대통령의 EU 초국가 비판(11/2, Total Croatia News).",
+    "세르비아": "VBA 감청 의혹 주장, 전 경찰 수뇌부 2명 구금 명령, 알타은행 파산 파장(11/8, 브레메·인사이더·N1을 인용한 FrontPages.EU).",
+    "보스니아 헤르체고비나": "최근 48시간 내 주요 보도 확인되지 않음. 배경으로 미국이 선거 승자들에 신속한 정부 구성 촉구(10/31, N1).",
+    "몬테네그로": "최근 48시간 내 주요 보도 확인되지 않음. 배경으로 EU가 선두 후보국에 확대 일정표를 제시하되 보장은 없다는 EWB 11/6자 보도 제목.",
+    "코소보": "최근 48시간 내 주요 보도 확인되지 않음. 배경으로 프리슈티나에서 반파시즘 전시가 독일 밖 첫 개최(11/2, 발칸인사이트).",
+    "알바니아": "최근 48시간 내 주요 보도 확인되지 않음. 배경으로 EU가 선두 후보국(몬테네그로·알바니아 등)에 확대 일정표를 제시(EWB 11/6자 보도 제목).",
+    "북마케도니아": "불가리아-북마케도니아 역사·교육 공동위원회가 성과 없이 종료(11/7, BTA 보도 제목 기준, 본문 미확인).",
+    "불가리아": "판사 총회가 최고사법위원회 위원 1차 선출에 실패, 흑해 선박 드론 피격 관련 3국 국방장관 회의 보도(11/8, 세가·메디아풀을 인용한 FrontPages.EU).",
+    "우크라이나": "러시아 야간 공습으로 85만 명 이상 정전, 드니프로페트롭스크 60만 명, 최근 하루 7~8명 사망·19명 부상(11/8, 유로뉴스·Kyiv Independent).",
+    "벨라루스": "최근 48시간 내 주요 보도 확인되지 않음. 배경으로 미국의 벨라루스 칼륨 항만 재개방 압박 보도(10/30, LRT).",
+    "몰도바": "최근 48시간 내 주요 보도 확인되지 않음. 배경으로 폰데어라이엔 집행위원장의 루마니아 방문 의제에 몰도바 지원이 포함(11/7, RRI).",
+    "루마니아": "국경 인근 공중 표적 탐지로 F-16 2대 출격, 스네이크섬 인근에 스페인 F-18 투입(11/8, RRI). 8월 정부 부채 GDP 대비 61.1%, 월요일 ECOFIN 참석 예정."
+  },
+  "note": "이 브리핑은 서비스 장애로 누락된 2026-11-08자 분을 2026-11-11에 소급 작성한 것입니다. 사용한 매체는 노츠프롬폴란드, 유로뉴스, AP(미국 지역방송 전재), Kyiv Independent, RRI, LSM, LRT 첫 화면, ERR 첫 화면, BTA 목록 검색 결과, FrontPages.EU(현지 매체 요약 뉴스레터)입니다. 11월 8일자 기사는 날짜가 URL이나 본문에 확인되는 것만 사용했고, 이후 날짜 사건은 제외했습니다. 체코·슬로바키아·헝가리·세르비아·불가리아 내용은 FrontPages.EU의 요약을 통해 확인한 것으로 원문 기사는 열지 못했습니다. Wayback Machine은 접속이 차단됐고, 발칸인사이트·유럽웨스턴발칸스·BTA·ERR·LRT에서는 11/8자 기사를 직접 찾지 못했습니다. Telex·N1·Total Croatia News·Sloveniatimes·Expats.cz·한국 언론·KOTRA는 11/8자 기사를 확인하지 못했습니다. 슬로베니아·크로아티아·보스니아·몬테네그로·코소보·알바니아·벨라루스·몰도바·에스토니아는 배경 동향으로 대신했고, 북마케도니아는 BTA 제목만 확인했습니다. 우크라이나 일일 피해 집계는 기사 제목과 본문 수치가 달라 범위로 적었고, 크라쿠프 사건의 사망자 수와 동기는 보도에 따라 달라 확인된 수치만 적었습니다. 출처 표시: KR = 한국 언론, KOTRA = KOTRA 해외시장뉴스, EN = 해외 매체."
+}
