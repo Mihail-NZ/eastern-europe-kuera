@@ -1,0 +1,343 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>주요 뉴스 관리자</title>
+<!-- 관리자 도구: 공개 사이트에는 올라가지 않는다(_tools 폴더는 GitHub Pages가 제공하지 않음).
+     여는 법: site 폴더에서 serve.ps1 실행 → http://localhost:8080/_tools/news-admin.html (Chrome·Edge)
+     '사이트 폴더 열기'로 site 폴더를 고르면 _major-data/major.json과 _news-data/*.json(데일리)을 읽고,
+     '저장'하면 major.json과 assets/js/data-major.js를 함께 씁니다. 데일리 브리핑 파일은 읽기만 합니다.
+     검사 규칙은 _tools/build-major.ps1과 같습니다. 한쪽을 바꾸면 다른 쪽도 고치세요. -->
+<style>
+  :root { --ink: #0f1b36; --muted: #586683; --rule: #dbe3ef; --paper: #f3f6fb; --blue: #2457b3; --night: #081433; --ok: #166534; --warn: #92400e; --bad: #991b1b; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--paper); color: var(--ink); font: 14.5px/1.6 'Malgun Gothic', system-ui, sans-serif; }
+  header { position: sticky; top: 0; z-index: 5; display: flex; flex-wrap: wrap; align-items: center; gap: 10px 16px; padding: 12px 20px; background: var(--night); color: #fff; }
+  header h1 { font-size: 17px; margin: 0 12px 0 0; }
+  header .msg { font-size: 13px; color: #c3d2ec; }
+  button { font: inherit; padding: 7px 13px; border-radius: 7px; border: 1px solid var(--rule); background: #fff; color: var(--ink); cursor: pointer; }
+  button.primary { background: var(--blue); border-color: var(--blue); color: #fff; }
+  button:disabled { opacity: .5; cursor: default; }
+  main { padding: 20px; max-width: 1280px; margin: 0 auto; }
+  nav.tabs { display: flex; gap: 6px; margin-bottom: 16px; flex-wrap: wrap; }
+  nav.tabs button[aria-selected="true"] { background: var(--night); color: #fff; border-color: var(--night); }
+  .panel { background: #fff; border-radius: 12px; padding: 16px 18px; box-shadow: 0 1px 2px rgba(15,27,54,.06), 0 8px 24px -12px rgba(15,27,54,.2); }
+  table { width: 100%; border-collapse: collapse; font-size: 13.5px; }
+  th, td { text-align: left; padding: 7px 8px; border-bottom: 1px solid var(--rule); vertical-align: top; }
+  th { font-size: 12px; color: var(--muted); font-weight: 600; }
+  td .acts { display: flex; flex-wrap: wrap; gap: 4px; }
+  td .acts button { padding: 3px 8px; font-size: 12.5px; }
+  .pill { display: inline-block; padding: 1px 8px; border-radius: 999px; font-size: 12px; background: #e8eef8; white-space: nowrap; }
+  .pill.draft { background: #fef3c7; color: var(--warn); } .pill.published { background: #dcfce7; color: var(--ok); } .pill.archived { background: #e5e7eb; }
+  .pill.ai { background: #fee2e2; color: var(--bad); } .pill.checked { background: #dcfce7; color: var(--ok); } .pill.key { background: var(--night); color: #fff; }
+  .bar { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-bottom: 12px; }
+  .bar input, .bar select { width: auto; }
+  .grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px 14px; }
+  .grid label { display: flex; flex-direction: column; gap: 3px; font-size: 12px; color: var(--muted); }
+  .grid label.wide { grid-column: 1 / -1; }
+  .grid label.chk { flex-direction: row; align-items: center; gap: 6px; }
+  input, select, textarea { font: inherit; font-size: 14px; padding: 6px 8px; border: 1px solid var(--rule); border-radius: 6px; color: var(--ink); background: #fff; width: 100%; }
+  input[type="checkbox"] { width: auto; }
+  textarea { min-height: 64px; }
+  .countries { display: flex; flex-wrap: wrap; gap: 4px 12px; font-size: 13px; color: var(--ink); }
+  .countries label { flex-direction: row; gap: 4px; align-items: center; color: var(--ink); font-size: 13px; }
+  .checks { margin: 12px 0 0; padding: 10px 14px; border-radius: 8px; font-size: 13px; white-space: pre-wrap; }
+  .checks.bad { background: #fee2e2; color: var(--bad); } .checks.good { background: #dcfce7; color: var(--ok); } .checks.warn { background: #fef3c7; color: var(--warn); }
+  .muted { color: var(--muted); font-size: 13px; }
+  h2 { font-size: 16px; margin: 0 0 10px; }
+  h3 { font-size: 14px; margin: 18px 0 6px; }
+  .empty { padding: 30px; text-align: center; color: var(--muted); }
+  .day { border-top: 1px solid var(--rule); padding: 10px 0; }
+  .day > summary { cursor: pointer; font-weight: 600; }
+  .story { display: flex; gap: 10px; align-items: flex-start; padding: 6px 0 6px 12px; }
+  .story p { margin: 0; flex: 1; }
+  @media (max-width: 800px) { .grid { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<header>
+  <h1>주요 뉴스 관리자</h1>
+  <button id="open" class="primary">사이트 폴더 열기</button>
+  <button id="save" disabled>저장 (major.json + data-major.js)</button>
+  <span class="msg" id="msg">site 폴더(index.html이 있는 폴더)를 선택하세요.</span>
+</header>
+<main>
+  <nav class="tabs" role="tablist">
+    <button data-t="list" aria-selected="true">기사 목록·검수</button>
+    <button data-t="edit">기사 등록·수정</button>
+    <button data-t="daily">데일리에서 선정</button>
+    <button data-t="cats">분야 관리</button>
+  </nav>
+  <section class="panel" id="view"><p class="empty">폴더를 열면 데이터가 표시됩니다.</p></section>
+  <div id="checks"></div>
+</main>
+<script>
+'use strict';
+const COUNTRIES = ['폴란드', '체코', '슬로바키아', '헝가리', '슬로베니아', '크로아티아', '세르비아', '보스니아 헤르체고비나', '코소보', '몬테네그로', '북마케도니아', '알바니아', '불가리아', '루마니아', '몰도바', '우크라이나', '벨라루스', '리투아니아', '라트비아', '에스토니아'];
+const STATUS = ['draft', 'published', 'archived'], REVIEW = ['ai', 'checked'];
+const STATUS_KO = { draft: '비공개(초안)', published: '게시', archived: '보관' }, REVIEW_KO = { ai: '사실 확인 전', checked: '확인 완료' };
+const today = () => new Date(Date.now() + 9 * 36e5).toISOString().slice(0, 10);
+const esc = s => String(s == null ? '' : s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+let dir = null, D = { updated: '', categories: [], items: [] }, DAYS = [], tab = 'list', editing = null, editIsNew = false, dirty = false;
+const F = { q: '', status: '', review: '', cat: '' };
+const $ = s => document.querySelector(s);
+const msg = t => { $('#msg').textContent = t; };
+function setDirty(v) { dirty = v; $('#save').disabled = !dir || !v; if (v) msg('저장하지 않은 변경이 있습니다.'); }
+window.addEventListener('beforeunload', e => { if (dirty) { e.preventDefault(); e.returnValue = ''; } });
+
+async function fileIn(path, create) {
+  let h = dir; const parts = path.split('/');
+  for (const p of parts.slice(0, -1)) h = await h.getDirectoryHandle(p, { create });
+  return h.getFileHandle(parts[parts.length - 1], { create });
+}
+async function readJson(path) { const f = await (await fileIn(path, false)).getFile(); return JSON.parse((await f.text()).replace(/^﻿/, '')); }
+async function writeText(path, text) { const w = await (await fileIn(path, true)).createWritable(); await w.write(text); await w.close(); }
+async function readDays() {
+  const out = [];
+  try {
+    const h = await dir.getDirectoryHandle('_news-data');
+    for await (const [name, fh] of h.entries()) {
+      if (!/^\d{4}-\d{2}-\d{2}\.json$/.test(name)) continue;
+      try { out.push(JSON.parse((await (await fh.getFile()).text()).replace(/^﻿/, ''))); } catch (e) { /* 형식 오류 파일은 건너뜀 */ }
+    }
+  } catch (e) { /* 데일리 폴더가 없으면 빈 목록 */ }
+  return out.sort((a, b) => String(b.date).localeCompare(String(a.date)));
+}
+
+const catOf = id => D.categories.find(c => c.id === id);
+const catLabel = it => [catOf(it.category), ((catOf(it.category) || {}).subs || []).find(s => s.id === it.sub)].filter(Boolean).map(c => c.ko).join(' · ');
+
+/* 검사: _tools/build-major.ps1과 같은 규칙 */
+function validate() {
+  const errs = [], warns = [], cats = {}, ids = {}, urls = {}, refs = {}, date = /^\d{4}-\d{2}-\d{2}$/;
+  for (const c of D.categories) {
+    if (!c.id || !c.ko) { errs.push('category: id·ko 필요'); continue; }
+    if (cats[c.id]) errs.push(`category ${c.id}: ID 중복`);
+    cats[c.id] = (c.subs || []).map(s => s.id);
+  }
+  for (const it of D.items) {
+    const n = `item ${it.id}`;
+    if (!it.id) { errs.push('item: id 없음'); continue; }
+    if (ids[it.id]) errs.push(`${n}: id 중복`); ids[it.id] = 1;
+    for (const f of ['title', 'summary']) if (!it[f]) errs.push(`${n}: ${f} 없음`);
+    if (!STATUS.includes(it.status)) errs.push(`${n}: status 값 이상(draft/published/archived)`);
+    if (it.review && !REVIEW.includes(it.review)) errs.push(`${n}: review 값 이상(ai/checked)`);
+    if (!cats[it.category]) errs.push(`${n}: 모르는 category ${it.category}`);
+    else {
+      const subs = cats[it.category];
+      if (subs.length && !subs.includes(it.sub)) errs.push(`${n}: 하위 분야(sub)가 필요하거나 값이 이상함`);
+      if (!subs.length && it.sub) errs.push(`${n}: 이 분야에는 하위 분야가 없음`);
+    }
+    for (const c of it.countries || []) if (!COUNTRIES.includes(c)) errs.push(`${n}: 모르는 나라 ${c}`);
+    for (const f of ['published', 'added']) if (!date.test(it[f] || '')) errs.push(`${n}: ${f} 날짜 형식 이상`);
+    if (date.test(it.published || '') && date.test(it.added || '') && it.published > it.added) errs.push(`${n}: 원문 발행일이 등록일보다 늦음`);
+    const src = (it.sources || []).filter(Boolean);
+    if (!src.length) errs.push(`${n}: 출처 없음`);
+    for (const s of src) {
+      if (!/^https?:\/\//.test(s.url || '')) errs.push(`${n}: 출처 주소 이상(${s.name})`);
+      const k = String(s.url || '').toLowerCase().replace(/\/+$/, '');
+      if (urls[k] && urls[k] !== it.id) errs.push(`${n}: 같은 원문이 ${urls[k]}에도 있음(중복 등록)`);
+      urls[k] = it.id;
+    }
+    if (it.daily_ref) {
+      if (!/^\d{4}-\d{2}-\d{2}#\d+$/.test(it.daily_ref)) errs.push(`${n}: daily_ref 형식 이상(YYYY-MM-DD#번호)`);
+      if (refs[it.daily_ref]) errs.push(`${n}: 같은 데일리 기사가 ${refs[it.daily_ref]}에도 연결됨`);
+      refs[it.daily_ref] = it.id;
+    }
+    if (it.status === 'published' && it.review !== 'checked') warns.push(`${n}: 게시 중이지만 사실 확인 전 — 원문과 대조 후 '확인 완료'로 바꾸세요`);
+  }
+  return { errs, warns };
+}
+function buildJs() {
+  const pub = D.items.filter(it => it.status !== 'draft').sort((a, b) => b.published.localeCompare(a.published))
+    .map(it => { const o = Object.assign({}, it); delete o.review; return o; });
+  const out = { updated: D.updated, categories: D.categories, items: pub };
+  return `/* 원본: _major-data/major.json (_tools/build-major.ps1 또는 _tools/news-admin.html로 생성). 직접 고치지 마세요. */\nwindow.MAJOR_NEWS=${JSON.stringify(out, null, 1)};\n`;
+}
+function showChecks() {
+  const { errs, warns } = validate();
+  $('#checks').innerHTML = errs.length ? `<p class="checks bad">저장할 수 없는 문제 ${errs.length}건\n${esc(errs.join('\n'))}</p>`
+    : `<p class="checks good">검사 통과 · 공개 ${D.items.filter(it => it.status !== 'draft').length}건 / 전체 ${D.items.length}건</p>` + (warns.length ? `<p class="checks warn">${esc(warns.join('\n'))}</p>` : '');
+  return errs;
+}
+
+$('#open').onclick = async () => {
+  if (!window.showDirectoryPicker) { msg('이 브라우저는 폴더 열기를 지원하지 않습니다. Chrome 또는 Edge에서 localhost로 여세요.'); return; }
+  try {
+    dir = await window.showDirectoryPicker({ mode: 'readwrite' });
+    D = await readJson('_major-data/major.json');
+    DAYS = await readDays();
+    msg(`${dir.name} 폴더: 주요 뉴스 ${D.items.length}건, 데일리 브리핑 ${DAYS.length}일을 읽었습니다.`); setDirty(false); render(); showChecks();
+  } catch (e) { dir = null; msg(`폴더를 읽지 못했습니다: ${e.message} (site 폴더를 골랐는지 확인)`); }
+};
+$('#save').onclick = async () => {
+  if (showChecks().length) { msg('검사 실패로 저장하지 않았습니다. 아래 문제를 고치세요.'); return; }
+  D.updated = today();
+  await writeText('_major-data/major.json', JSON.stringify(D, null, 2) + '\n');
+  await writeText('assets/js/data-major.js', buildJs());
+  setDirty(false); msg('저장했습니다. 공개 사이트 반영은 GitHub에 올려야 합니다(Claude에게 "주요 뉴스 올려줘"라고 요청).');
+};
+document.querySelectorAll('nav.tabs button').forEach(b => b.onclick = () => {
+  tab = b.dataset.t;
+  if (tab === 'edit' && !editing) { editing = blankItem(); editIsNew = true; }
+  render();
+});
+
+function blankItem(from) {
+  const t = today();
+  return Object.assign({ id: `major-${t}-${D.items.filter(i => i.id.startsWith(`major-${t}`)).length + 1}`, status: 'draft', featured: false, review: 'ai',
+    category: D.categories[0] ? D.categories[0].id : '', sub: '', countries: [], tags: [], title: '', summary: '', points: [], why: '',
+    published: '', added: t, sources: [{ name: '', url: '', lang: 'EN' }] }, from || {});
+}
+
+function render() {
+  document.querySelectorAll('nav.tabs button').forEach(b => b.setAttribute('aria-selected', String(b.dataset.t === tab)));
+  if (!dir) return;
+  ({ list: renderList, edit: renderEdit, daily: renderDaily, cats: renderCats })[tab]();
+}
+
+/* ---- 기사 목록·검수 ---- */
+function renderList() {
+  const list = D.items.filter(it => (!F.status || it.status === F.status) && (!F.review || (it.review || 'ai') === F.review) && (!F.cat || it.category === F.cat) &&
+    (!F.q || [it.title, it.summary, (it.countries || []).join(' '), (it.tags || []).join(' ')].join(' ').toLowerCase().includes(F.q.toLowerCase())))
+    .sort((a, b) => b.published.localeCompare(a.published));
+  $('#view').innerHTML = `<div class="bar">
+    <input id="f-q" placeholder="검색" value="${esc(F.q)}">
+    <select id="f-status"><option value="">상태 전체</option>${STATUS.map(s => `<option value="${s}"${F.status === s ? ' selected' : ''}>${STATUS_KO[s]}</option>`).join('')}</select>
+    <select id="f-review"><option value="">검토 전체</option>${REVIEW.map(s => `<option value="${s}"${F.review === s ? ' selected' : ''}>${REVIEW_KO[s]}</option>`).join('')}</select>
+    <select id="f-cat"><option value="">분야 전체</option>${D.categories.map(c => `<option value="${c.id}"${F.cat === c.id ? ' selected' : ''}>${esc(c.ko)}</option>`).join('')}</select>
+    <span class="muted">${list.length}건</span>
+    <button id="new" class="primary" style="margin-left:auto">새 기사</button></div>
+  ${list.length ? `<table><thead><tr><th>원문 발행일</th><th>제목</th><th>분야</th><th>나라</th><th>상태</th><th>작업</th></tr></thead><tbody>${list.map(it => `<tr>
+    <td>${esc(it.published)}</td>
+    <td>${esc(it.title)}${it.daily_ref ? `<br><span class="muted">데일리 ${esc(it.daily_ref)}</span>` : ''}</td>
+    <td>${esc(catLabel(it))}</td><td>${esc((it.countries || []).join(', '))}</td>
+    <td><span class="pill ${it.status}">${STATUS_KO[it.status] || it.status}</span> <span class="pill ${it.review || 'ai'}">${REVIEW_KO[it.review || 'ai']}</span>${it.featured ? ' <span class="pill key">핵심</span>' : ''}</td>
+    <td><div class="acts" data-id="${esc(it.id)}">
+      <button data-a="edit">수정</button>
+      <button data-a="key">${it.featured ? '핵심 해제' : '핵심 지정'}</button>
+      ${it.status !== 'published' ? '<button data-a="pub">게시</button>' : '<button data-a="hide">비공개</button>'}
+      ${it.status !== 'archived' ? '<button data-a="arch">보관</button>' : ''}
+      ${(it.review || 'ai') !== 'checked' ? '<button data-a="ok">확인 완료</button>' : ''}
+      <button data-a="del">삭제</button></div></td></tr>`).join('')}</tbody></table>` : '<p class="empty">조건에 맞는 기사가 없습니다.</p>'}`;
+  $('#f-q').oninput = e => { F.q = e.target.value; renderList(); $('#f-q').focus(); $('#f-q').setSelectionRange(F.q.length, F.q.length); };
+  ['status', 'review', 'cat'].forEach(k => { $(`#f-${k}`).onchange = e => { F[k] = e.target.value; renderList(); }; });
+  $('#new').onclick = () => { editing = blankItem(); editIsNew = true; tab = 'edit'; render(); };
+  $('#view').querySelectorAll('.acts button').forEach(b => b.onclick = () => {
+    const id = b.parentNode.dataset.id, it = D.items.find(x => x.id === id), a = b.dataset.a;
+    if (a === 'edit') { editing = JSON.parse(JSON.stringify(it)); editIsNew = false; tab = 'edit'; render(); return; }
+    if (a === 'del') { if (!confirm(`'${it.title}'을(를) 삭제할까요? 저장하기 전에는 되돌릴 수 있습니다(새로고침).`)) return; D.items = D.items.filter(x => x !== it); }
+    if (a === 'key') it.featured = !it.featured;
+    if (a === 'pub') it.status = 'published';
+    if (a === 'hide') it.status = 'draft';
+    if (a === 'arch') it.status = 'archived';
+    if (a === 'ok') it.review = 'checked';
+    setDirty(true); renderList(); showChecks();
+  });
+}
+
+/* ---- 기사 등록·수정 ---- */
+function renderEdit() {
+  const it = editing, cat = catOf(it.category), subs = (cat && cat.subs) || [];
+  $('#view').innerHTML = `<h2>${editIsNew ? '새 기사' : '기사 수정'}</h2>
+  <p class="muted">실제로 열어 확인한 기사만 등록하세요. 요약은 원문을 옮기지 말고 직접 짧게 씁니다. 원문 발행일(기사 날짜)과 등록일(오늘)을 구분합니다.</p>
+  <div class="grid">
+    <label>기사 ID (영문·숫자·하이픈)<input data-k="id" value="${esc(it.id)}"></label>
+    <label>분야<select data-k="category">${D.categories.map(c => `<option value="${c.id}"${it.category === c.id ? ' selected' : ''}>${esc(c.ko)}</option>`).join('')}</select></label>
+    <label>세부 분야${subs.length ? `<select data-k="sub"><option value="">선택</option>${subs.map(s => `<option value="${s.id}"${it.sub === s.id ? ' selected' : ''}>${esc(s.ko)}</option>`).join('')}</select>` : '<input value="없음" disabled>'}</label>
+    <label class="wide">제목<input data-k="title" value="${esc(it.title)}"></label>
+    <label class="wide">요약 (2~3문장, 카드에 표시)<textarea data-k="summary">${esc(it.summary)}</textarea></label>
+    <label class="wide">핵심 내용 (한 줄에 하나)<textarea data-k="points" data-type="lines">${esc((it.points || []).join('\n'))}</textarea></label>
+    <label class="wide">Why it matters · 왜 중요한가<textarea data-k="why">${esc(it.why)}</textarea></label>
+    <label>원문 발행일<input type="date" data-k="published" value="${esc(it.published)}"></label>
+    <label>사이트 등록일<input type="date" data-k="added" value="${esc(it.added)}"></label>
+    <label>키워드 (쉼표로 구분)<input data-k="tags" data-type="list" value="${esc((it.tags || []).join(', '))}"></label>
+    <label>게시 상태<select data-k="status">${STATUS.map(s => `<option value="${s}"${it.status === s ? ' selected' : ''}>${STATUS_KO[s]}</option>`).join('')}</select></label>
+    <label>사실 확인<select data-k="review">${REVIEW.map(s => `<option value="${s}"${(it.review || 'ai') === s ? ' selected' : ''}>${REVIEW_KO[s]}</option>`).join('')}</select></label>
+    <label class="chk"><input type="checkbox" data-k="featured"${it.featured ? ' checked' : ''}> 핵심 이슈(위쪽에 강조)</label>
+    <label class="wide">관련 국가<span class="countries">${COUNTRIES.map(c => `<label><input type="checkbox" data-country="${esc(c)}"${(it.countries || []).includes(c) ? ' checked' : ''}>${esc(c)}</label>`).join('')}</span></label>
+    <label class="wide">썸네일 이미지 주소 (선택, 라이선스 확인한 것만)<input data-k="image" value="${esc(it.image || '')}"></label>
+    ${it.daily_ref ? `<label class="wide">연결된 데일리 기사<input value="${esc(it.daily_ref)}" disabled></label>` : ''}
+  </div>
+  <h3>원문 출처</h3>
+  <div id="srcs">${(it.sources || []).map((s, i) => `<div class="grid" data-src="${i}" style="margin-bottom:8px">
+    <label>매체 – 기사 제목<input data-s="name" value="${esc(s.name)}"></label>
+    <label>원문 주소<input data-s="url" value="${esc(s.url)}"></label>
+    <label>언어<select data-s="lang">${['EN', 'KR', 'KOTRA', '현지어'].map(l => `<option${s.lang === l ? ' selected' : ''}>${l}</option>`).join('')}</select></label></div>`).join('')}</div>
+  <div class="bar"><button id="add-src">출처 추가</button><button id="rm-src">마지막 출처 빼기</button></div>
+  <div class="bar"><button id="apply" class="primary">${editIsNew ? '목록에 추가' : '변경 적용'}</button><button id="cancel">취소</button>
+  <span class="muted">적용한 뒤 위의 '저장'을 눌러야 파일에 기록됩니다.</span></div>`;
+  const v = $('#view');
+  const read = () => {
+    v.querySelectorAll('[data-k]').forEach(el => {
+      const k = el.dataset.k;
+      if (el.type === 'checkbox') it[k] = el.checked;
+      else if (el.dataset.type === 'lines') it[k] = el.value.split('\n').map(s => s.trim()).filter(Boolean);
+      else if (el.dataset.type === 'list') it[k] = el.value.split(',').map(s => s.trim()).filter(Boolean);
+      else it[k] = el.value.trim();
+    });
+    if (!subs.length) it.sub = '';
+    if (!it.image) delete it.image;
+    it.countries = [...v.querySelectorAll('[data-country]')].filter(x => x.checked).map(x => x.dataset.country);
+    it.sources = [...v.querySelectorAll('[data-src]')].map(row => ({ name: row.querySelector('[data-s="name"]').value.trim(), url: row.querySelector('[data-s="url"]').value.trim(), lang: row.querySelector('[data-s="lang"]').value }));
+  };
+  v.querySelector('[data-k="category"]').onchange = () => { read(); it.sub = ''; renderEdit(); };
+  $('#add-src').onclick = () => { read(); it.sources.push({ name: '', url: '', lang: 'EN' }); renderEdit(); };
+  $('#rm-src').onclick = () => { read(); if (it.sources.length > 1) it.sources.pop(); renderEdit(); };
+  $('#cancel').onclick = () => { editing = null; tab = 'list'; render(); };
+  $('#apply').onclick = () => {
+    read();
+    if (!/^[a-z0-9-]+$/.test(it.id)) { alert('기사 ID는 영문 소문자·숫자·하이픈만 쓸 수 있습니다.'); return; }
+    if (editIsNew) { if (D.items.some(x => x.id === it.id)) { alert('같은 ID가 이미 있습니다.'); return; } D.items.push(it); }
+    else { const i = D.items.findIndex(x => x.id === it.id); if (i >= 0) D.items[i] = it; else D.items.push(it); }
+    editing = null; tab = 'list'; setDirty(true); render(); showChecks();
+  };
+}
+
+/* ---- 데일리에서 선정 ---- */
+function renderDaily() {
+  const picked = {}; D.items.forEach(it => { if (it.daily_ref) picked[it.daily_ref] = it.id; });
+  $('#view').innerHTML = `<h2>데일리 브리핑에서 주요 뉴스 고르기</h2>
+  <p class="muted">데일리 기사를 복사하지 않고 연결(daily_ref)만 해 둔 초안을 만듭니다. 초안에서 원문 발행일·분야·요약을 확인한 뒤 게시하세요. 데일리 브리핑 파일은 바꾸지 않습니다.</p>
+  ${DAYS.length ? DAYS.map((d, di) => `<details class="day"${di === 0 ? ' open' : ''}><summary>${esc(d.date)} · ${(d.stories || []).length}건</summary>
+    ${(d.stories || []).map((s, i) => { const ref = `${d.date}#${i}`; return `<div class="story"><p><strong>${esc(s.title)}</strong><br><span class="muted">${esc((s.countries || []).join(', '))} · ${esc(((s.sources || [])[0] || {}).name || '')}</span></p>
+      ${picked[ref] ? `<span class="pill published">선정됨 (${esc(picked[ref])})</span>` : `<button data-ref="${ref}">주요 뉴스로 선정</button>`}</div>`; }).join('')}</details>`).join('')
+    : '<p class="empty">_news-data 폴더에서 데일리 브리핑을 찾지 못했습니다.</p>'}`;
+  $('#view').querySelectorAll('[data-ref]').forEach(b => b.onclick = () => {
+    const [date, i] = b.dataset.ref.split('#'), d = DAYS.find(x => x.date === date), s = d.stories[+i];
+    editing = blankItem({ daily_ref: b.dataset.ref, title: s.title, summary: (s.points || [])[0] || '', points: (s.points || []).slice(1), why: s.why || '',
+      countries: (s.countries || []).filter(c => COUNTRIES.includes(c)), sources: (s.sources || []).map(x => ({ name: x.name, url: x.url, lang: x.lang || 'EN' })),
+      published: date });
+    editIsNew = true; tab = 'edit'; render();
+    msg('데일리 기사로 초안을 채웠습니다. 원문 발행일은 브리핑 날짜로 넣었으니 원문에서 확인해 고치세요.');
+  });
+}
+
+/* ---- 분야 관리 ---- */
+function renderCats() {
+  const used = id => D.items.filter(it => it.category === id).length;
+  $('#view').innerHTML = `<h2>분야</h2>
+  <p class="muted">ID는 기사와 연결되는 값이라 쓰는 중이면 바꿀 수 없습니다. 이름과 영문 이름은 언제든 고칠 수 있습니다. 세부 분야는 '산업'처럼 필요한 분야에만 둡니다.</p>
+  <table><thead><tr><th>ID</th><th>이름</th><th>영문</th><th>세부 분야 (id:이름:영문, 한 줄에 하나)</th><th>기사</th></tr></thead><tbody>
+  ${D.categories.map((c, i) => `<tr data-i="${i}"><td>${esc(c.id)}</td><td><input data-c="ko" value="${esc(c.ko)}"></td><td><input data-c="en" value="${esc(c.en)}"></td>
+    <td><textarea data-c="subs">${esc((c.subs || []).map(s => `${s.id}:${s.ko}:${s.en}`).join('\n'))}</textarea></td><td>${used(c.id)}</td></tr>`).join('')}</tbody></table>
+  <div class="bar" style="margin-top:12px"><input id="nc-id" placeholder="새 분야 ID (영문)" style="max-width:180px"><input id="nc-ko" placeholder="이름" style="max-width:180px"><input id="nc-en" placeholder="영문 이름" style="max-width:220px"><button id="nc-add">분야 추가</button>
+  <button id="cats-apply" class="primary" style="margin-left:auto">변경 적용</button></div>`;
+  $('#nc-add').onclick = () => {
+    const id = $('#nc-id').value.trim(), ko = $('#nc-ko').value.trim();
+    if (!/^[a-z0-9-]+$/.test(id) || !ko || catOf(id)) { alert('ID(영문 소문자)와 이름을 넣으세요. 같은 ID는 쓸 수 없습니다.'); return; }
+    D.categories.push({ id, ko, en: $('#nc-en').value.trim(), subs: [] }); setDirty(true); renderCats(); showChecks();
+  };
+  $('#cats-apply').onclick = () => {
+    $('#view').querySelectorAll('tr[data-i]').forEach(tr => {
+      const c = D.categories[+tr.dataset.i];
+      c.ko = tr.querySelector('[data-c="ko"]').value.trim(); c.en = tr.querySelector('[data-c="en"]').value.trim();
+      c.subs = tr.querySelector('[data-c="subs"]').value.split('\n').map(l => l.trim()).filter(Boolean).map(l => { const [id, ko, en] = l.split(':').map(x => (x || '').trim()); return { id, ko: ko || id, en: en || '' }; });
+    });
+    setDirty(true); renderCats(); showChecks();
+  };
+}
+</script>
+</body>
+</html>

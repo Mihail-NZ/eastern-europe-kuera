@@ -708,3 +708,103 @@ a.cc .cc-state { color: #fff; background: var(--rc); padding: 3px 10px; border-r
   .src-row { grid-template-columns: 1fr; }
   .src-meta { white-space: normal; flex-wrap: wrap; }
 }
+
+/* ---------- 뉴스: 데일리 / 주요 뉴스 ---------- */
+.news-tabs { margin-bottom: 18px; }
+.news-tabs .n { display: inline-block; margin-left: 4px; padding: 1px 8px; border-radius: 999px; background: #e8eef8; color: #33456c; font-size: 12.5px; }
+.news-tabs button[aria-selected="true"] .n { background: rgba(255, 255, 255, .18); color: #fff; }
+.np-lead { max-width: 46em; color: var(--muted); font-size: 15px; margin-bottom: 18px; }
+.nf-bar { display: flex; flex-wrap: wrap; align-items: flex-end; gap: 10px 14px; background: var(--card); border-radius: 14px; box-shadow: var(--shadow); padding: 14px 18px; margin-bottom: 14px; }
+.nf-bar label { display: flex; flex-direction: column; gap: 5px; font-size: 12.5px; color: var(--muted); min-width: 0; }
+.nf-bar .nf-q { flex: 1 1 220px; }
+.nf-bar input[type="search"], .nf-bar select { font: 400 14.5px/1.3 var(--sans); padding: 8px 10px; border: 1px solid var(--rule); border-radius: 8px; background: #fff; color: var(--ink); width: 100%; min-width: 0; }
+.nf-bar select { min-width: 120px; }
+.nf-bar .nf-chk { flex-direction: row; align-items: center; gap: 7px; font-size: 13.5px; color: var(--ink); padding-bottom: 9px; cursor: pointer; }
+.nf-bar .nf-chk input { width: 16px; height: 16px; margin: 0; accent-color: var(--blue); }
+.nf-reset { font: 500 14px/1 var(--sans); padding: 9px 14px; border-radius: 8px; border: 1px solid var(--rule); background: transparent; color: var(--muted); cursor: pointer; }
+.nf-reset:hover { color: var(--ink); border-color: #b9c6db; }
+.nf-count { min-height: 1.4em; font-size: 13.5px; color: var(--muted); margin: 0 0 14px; }
+.nf-more { margin-top: 30px; text-align: center; }
+.more-btn { font: 500 15px/1 var(--sans); padding: 13px 26px; border-radius: 999px; border: 1px solid var(--rule); background: var(--card); color: var(--ink); cursor: pointer; box-shadow: var(--shadow); }
+.more-btn span { color: var(--muted); font-size: 13px; margin-left: 6px; }
+.more-btn:hover { border-color: #b9cff5; }
+.news-panel .news-day + .news-day { margin-top: 56px; }
+a.tag.is-major { background: var(--night); color: #fff; }
+a.tag.is-major:hover { background: var(--blue-ink); color: #fff; }
+
+.chip-row { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px; }
+.chip-row button { font: 500 14px/1 var(--sans); padding: 9px 14px; border-radius: 8px; border: 1px solid var(--rule); background: transparent; color: var(--muted); cursor: pointer; }
+.chip-row button .n { font-size: 12px; margin-left: 2px; opacity: .75; }
+.chip-row button[aria-pressed="true"] { background: #dce8fd; border-color: #b9cff5; color: var(--blue-ink); }
+.mj-subs { padding-left: 14px; border-left: 2px solid #b9cff5; }
+.mj-subs button { font-size: 13.5px; padding: 7px 12px; }
+
+.mj-list { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+.mj-card { position: relative; display: flex; flex-direction: column; background: var(--card); border-radius: 14px; padding: 20px 22px 18px; box-shadow: var(--shadow);
+  border-top: 3px solid var(--rule); transition: transform .2s ease, box-shadow .2s ease; }
+.mj-card:hover { transform: translateY(-3px); box-shadow: 0 1px 2px rgba(15, 27, 54, .06), 0 22px 44px -16px rgba(15, 27, 54, .28); }
+.mj-top { display: flex; align-items: center; gap: 8px; margin: 0 0 10px; font-size: 12.5px; }
+.mj-cat { font-weight: 600; letter-spacing: .02em; color: var(--blue); }
+.mj-key { margin-left: auto; padding: 2px 9px; border-radius: 999px; font-weight: 500; background: rgba(120, 190, 255, .16); color: var(--sky); white-space: nowrap; }
+.mj-title { font-size: 18.5px; line-height: 1.45; margin-bottom: 10px; }
+.mj-title a { color: inherit; text-decoration: none; }
+.mj-title a::after { content: ''; position: absolute; inset: 0; border-radius: 14px; }
+.mj-title a:focus-visible { outline: none; }
+.mj-title a:focus-visible::after { outline: 2px solid #ffd166; outline-offset: 3px; }
+.mj-card:hover .mj-title a { color: var(--blue-ink); }
+.mj-sum { color: #44506c; font-size: 14.5px; line-height: 1.7; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+.mj-card .story-tags { position: relative; z-index: 1; margin: 0 0 4px; }
+.mj-foot { display: flex; flex-wrap: wrap; gap: 4px 12px; margin: auto 0 0; padding-top: 12px; border-top: 1px solid var(--rule); font-size: 13px; color: var(--muted); }
+.mj-foot span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; min-width: 0; }
+/* 핵심 이슈: 사이트의 야간 네이비로 강조 */
+.mj-card.is-key { background: linear-gradient(160deg, #0d2357, var(--night) 70%); color: #fff; border-top-color: var(--glow);
+  box-shadow: 0 0 0 1px rgba(110, 170, 255, .28), 0 18px 40px -18px rgba(8, 20, 51, .7); }
+.mj-card.is-key .mj-cat { color: var(--sky); }
+.mj-card.is-key .mj-sum { color: #c3d2ec; }
+.mj-card.is-key:hover .mj-title a { color: #fff; }
+.mj-card.is-key .mj-foot { border-top-color: rgba(140, 190, 255, .22); color: #8fa9d4; }
+.mj-card.is-key .tag { background: rgba(120, 170, 255, .16); color: #dbe6f7; }
+.mj-card.is-key a.tag.is-live:hover { background: rgba(120, 170, 255, .3); }
+.mj-list.is-stack { grid-template-columns: 1fr; gap: 14px; margin-bottom: 18px; }
+.mj-intro { color: var(--muted); font-size: 15px; }
+.mj-criteria { margin-top: 56px; padding-top: 22px; border-top: 1px solid var(--rule); max-width: 52em; }
+.mj-criteria h2 { font-size: 17px; margin-bottom: 8px; }
+.mj-criteria p { color: var(--muted); font-size: 14.5px; line-height: 1.8; margin: 0; }
+
+/* 상세 창 */
+.mj-dialog { width: min(720px, calc(100vw - 32px)); max-height: calc(100vh - 48px); padding: 0; border: 0; border-radius: 16px; background: var(--card); color: var(--ink);
+  box-shadow: 0 30px 80px -20px rgba(4, 10, 28, .6); overflow: auto; }
+.mj-dialog::backdrop { background: rgba(4, 10, 28, .62); backdrop-filter: blur(3px); }
+.mj-d { position: relative; padding: 34px 38px 30px; }
+.mj-d h2 { font-size: 26px; line-height: 1.4; margin: 0 0 10px; padding-right: 56px; }
+.mj-close { position: absolute; top: 20px; right: 20px; font: 500 13.5px/1 var(--sans); padding: 9px 13px; border-radius: 8px; border: 1px solid var(--rule); background: var(--card); color: var(--muted); cursor: pointer; }
+.mj-close:hover { color: var(--ink); }
+.mj-d-meta { font-size: 13.5px; color: var(--muted); margin-bottom: 12px; }
+.mj-d .story-tags { margin-bottom: 18px; }
+.mj-d-sum { font-size: 16.5px; line-height: 1.85; }
+.mj-d-points { margin: 0 0 20px; padding-left: 1.2em; color: #33405e; font-size: 15px; line-height: 1.8; }
+.mj-d-points li + li { margin-top: 6px; }
+.mj-why { background: var(--paper); border-left: 3px solid var(--blue); border-radius: 0 12px 12px 0; padding: 16px 20px; margin-bottom: 18px; }
+.mj-why p { margin: 0; font-size: 15px; line-height: 1.8; color: #33405e; }
+.mj-why .mj-why-h { font: 400 19px/1.2 var(--display); color: var(--ink); margin-bottom: 6px; }
+.mj-why-h span { font: 500 12.5px/1 var(--sans); color: var(--muted); margin-left: 8px; }
+.mj-d-tags { display: flex; flex-wrap: wrap; gap: 6px 10px; font-size: 13px; color: var(--muted); }
+.mj-d-tags span::before { content: '#'; opacity: .6; }
+.mj-d-h { font: 600 14px/1 var(--sans); color: var(--muted); letter-spacing: .04em; margin: 22px 0 10px; }
+.mj-d-src { list-style: none; margin: 0; padding: 0; }
+.mj-d-src li { display: flex; flex-direction: column; gap: 2px; padding: 9px 0; border-top: 1px solid var(--rule); font-size: 14.5px; }
+.mj-d-src li span { font-size: 12.5px; color: var(--muted); }
+.mj-d-daily { margin: 14px 0 0; font-size: 14px; }
+.mj-d-note { margin: 18px 0 0; font-size: 12.5px; color: var(--muted); }
+
+@media (max-width: 960px) { .mj-list { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 760px) {
+  .mj-list { grid-template-columns: 1fr; gap: 16px; }
+  .nf-bar { padding: 12px 14px; }
+  .nf-bar label:not(.nf-q):not(.nf-chk) { flex: 1 1 calc(50% - 7px); }
+  .nf-bar select { min-width: 0; }
+  .nf-bar .nf-chk { flex: 1 1 100%; padding-bottom: 0; }
+  .mj-d { padding: 26px 20px 22px; }
+  .mj-d h2 { font-size: 21px; }
+  .mj-close { top: 14px; right: 14px; }
+}

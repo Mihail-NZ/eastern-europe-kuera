@@ -96,7 +96,7 @@
   function header() {
     const nav = [
       ['home', 'Home', 'index.html'], ['countries', 'Countries', 'countries/index.html'],
-      ['news', 'Daily News', 'news/index.html'], ['jobs', 'Careers', 'jobs/index.html'], ['games', 'Mini Game', 'games/index.html'], ['about', 'About KUERA', 'about/index.html']
+      ['news', 'News', 'news/index.html'], ['jobs', 'Careers', 'jobs/index.html'], ['games', 'Mini Game', 'games/index.html'], ['about', 'About KUERA', 'about/index.html']
     ];
     const current = PAGE === 'country' || PAGE === 'section' ? 'countries' : PAGE;
     return `<a class="skip" href="#main">본문으로 건너뛰기</a>
@@ -637,8 +637,9 @@ ${window.REPORTS ? `<section class="home-reports wrap" id="reports" aria-labelle
       { id: 'n-brief', title: '학회 브리핑', html: stories.length
         ? `<ul class="card-list is-stack">${stories.map(storyCard).join('')}</ul>`
         : `<p class="empty">최근 학회 브리핑에 ${esc(c.name_ko)} 관련 기사가 없습니다. 아래 매체에서 최신 소식을 확인할 수 있습니다.</p>`, stories },
+      countryMajorSection(c),
       { id: 'n-outlets', title: '참고 매체', html: `<ul class="outlets">${c.news.map(n => `<li><a href="${esc(n.url)}" target="_blank" rel="noopener">${esc(n.name)}</a><span>${esc(n.description)}</span></li>`).join('')}</ul>` }
-    ];
+    ].filter(Boolean);
   }
 
   /* 국가 첫 화면의 명소 영상: 사진 4장을 천천히 확대하며 교차 전환하는 반복 클립(CSS 애니메이션, 첫 장면 2.5초·나머지 2초).
@@ -1048,7 +1049,7 @@ ${stories.length ? `<section class="hub-news wrap" aria-labelledby="hub-news-tit
     if (id === 'news') {
       const ns = newsSections(c);
       newsStories = ns[0].stories;
-      secs = deep ? [ns[0], ...secs] : ns;
+      secs = deep ? [...ns.filter(s => s.id !== 'n-outlets'), ...secs] : ns;
     }
     document.title = `${title} | ${c.name_ko} | Eastern Europe`;
 
@@ -1091,6 +1092,7 @@ ${countryTabs(c, id)}
   ${next ? `<a class="pg-next" href="${sectionUrl(slug, next.id)}"><span>다음</span>${next.ko}</a>` : ''}
 </nav>`;
     if (newsStories.length) mountThumbs(main.querySelector('#n-brief'), newsStories);
+    if (main.querySelector('#n-major')) bindMajor(main.querySelector('#n-major'));
 
     // 탭: 클릭과 좌우 화살표로 전환
     main.querySelectorAll('[data-tabs]').forEach(box => {
@@ -1118,26 +1120,271 @@ ${countryTabs(c, id)}
     main.querySelectorAll('.md-sec').forEach(s => io.observe(s));
   }
 
-  /* ---------- 페이지: 뉴스 ---------- */
+  /* ---------- 주요 뉴스(Major News) ----------
+   * 데이터: data-major.js(window.MAJOR_NEWS) ← _major-data/major.json, 관리: _tools/news-admin.html.
+   * 데일리 브리핑과 따로 저장하고, 데일리 기사에서 고른 경우 daily_ref("날짜#기사번호")로만 연결한다. */
+  const MAJOR = window.MAJOR_NEWS || { categories: [], items: [] };
+  const MAJOR_CATS = MAJOR.categories || [];
+  const ARCHIVE_YEARS = 3; // 원문 발행 후 3년이 지나면 보관 기사로 본다(지우지 않음)
+  const catOf = id => MAJOR_CATS.find(c => c.id === id);
+  const subOf = (cat, id) => ((catOf(cat) || {}).subs || []).find(s => s.id === id);
+  const majorItems = () => (MAJOR.items || []).filter(it => it.status === 'published' || it.status === 'archived');
+  const isArchived = it => {
+    if (it.status === 'archived') return true;
+    const d = new Date(it.published + 'T00:00:00'); d.setFullYear(d.getFullYear() + ARCHIVE_YEARS);
+    return d < new Date();
+  };
+  const byKey = (a, b) => (!!b.featured - !!a.featured) || b.published.localeCompare(a.published);
+  const byDate = (a, b) => b.published.localeCompare(a.published);
+  const dotDate = iso => iso.replace(/-/g, '.');
+  const srcName = s => (s && s.name ? s.name.split(/\s+[–-]\s+/)[0] : '');
+  const catLabel = it => [catOf(it.category), subOf(it.category, it.sub)].filter(Boolean).map(c => c.ko).join(' · ');
+  const majorHref = id => `${ROOT}news/index.html#major/${encodeURIComponent(id)}`;
+
+  /* 카드 한 장. 제목 링크가 카드 전체를 덮고, 나라 태그만 따로 누를 수 있다 */
+  function majorCard(it) {
+    const src = (it.sources || [])[0];
+    return `<li class="mj-card${it.featured ? ' is-key' : ''}">
+  <p class="mj-top"><span class="mj-cat">${esc(catLabel(it))}</span>${it.featured ? '<span class="mj-key">핵심 이슈</span>' : ''}</p>
+  <h3 class="mj-title"><a href="${majorHref(it.id)}" data-major="${esc(it.id)}">${esc(it.title)}</a></h3>
+  <p class="mj-sum">${esc(it.summary)}</p>
+  ${(it.countries || []).length ? `<div class="story-tags">${storyTags(it)}</div>` : ''}
+  <p class="mj-foot"><time datetime="${esc(it.published)}">${dotDate(it.published)}</time>${src ? `<span>${esc(srcName(src))}</span>` : ''}</p>
+</li>`;
+  }
+  function majorDialog() {
+    let dlg = document.getElementById('mj-dialog');
+    if (dlg) return dlg;
+    dlg = document.createElement('dialog');
+    dlg.id = 'mj-dialog'; dlg.className = 'mj-dialog'; dlg.setAttribute('aria-labelledby', 'mj-d-title');
+    dlg.addEventListener('click', e => { if (e.target === dlg) dlg.close(); }); // 바깥 어두운 영역을 누르면 닫기
+    document.body.appendChild(dlg);
+    return dlg;
+  }
+  function openMajor(it, onClose) {
+    const dlg = majorDialog();
+    const daily = it.daily_ref ? it.daily_ref.split('#')[0] : '';
+    dlg.innerHTML = `<article class="mj-d">
+  <button type="button" class="mj-close">닫기</button>
+  <p class="kicker">${esc(catLabel(it))}${it.featured ? ' · 핵심 이슈' : ''}</p>
+  <h2 id="mj-d-title">${esc(it.title)}</h2>
+  <p class="mj-d-meta">원문 발행 ${fmtLong(it.published)} · 사이트 등록 ${fmtLong(it.added)}${isArchived(it) ? ' · 보관 기사' : ''}</p>
+  ${(it.countries || []).length ? `<div class="story-tags">${storyTags(it)}</div>` : ''}
+  <p class="mj-d-sum">${esc(it.summary)}</p>
+  ${(it.points || []).length ? `<ul class="mj-d-points">${it.points.map(p => `<li>${esc(p)}</li>`).join('')}</ul>` : ''}
+  ${it.why ? `<div class="mj-why"><p class="mj-why-h">Why it matters<span>왜 중요한가</span></p><p>${esc(it.why)}</p></div>` : ''}
+  ${(it.tags || []).length ? `<p class="mj-d-tags">${it.tags.map(t => `<span>${esc(t)}</span>`).join('')}</p>` : ''}
+  <h3 class="mj-d-h">원문</h3>
+  <ul class="mj-d-src">${(it.sources || []).map(s => `<li><a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.name)}</a><span>${esc(host(s.url))}</span></li>`).join('')}</ul>
+  ${daily ? `<p class="mj-d-daily"><a href="${ROOT}news/index.html?date=${esc(daily)}#daily">${fmtLong(daily)} 데일리 브리핑에서 처음 다룬 기사입니다</a></p>` : ''}
+  <p class="mj-d-note">요약과 시사점은 학회가 원문을 바탕으로 작성했습니다. 수치와 발언은 원문에서 확인하세요.</p>
+</article>`;
+    dlg.querySelector('.mj-close').addEventListener('click', () => dlg.close());
+    dlg.onclose = onClose || null;
+    if (!dlg.open) dlg.showModal();
+    dlg.scrollTop = 0;
+    dlg.querySelector('.mj-close').focus();
+  }
+  /* root 안의 [data-major] 링크를 눌렀을 때 상세 창을 연다 (뉴스 페이지·국가 뉴스 페이지 공용) */
+  function bindMajor(root, onOpen) {
+    root.addEventListener('click', e => {
+      const a = e.target.closest('[data-major]');
+      if (!a || e.ctrlKey || e.metaKey || e.shiftKey) return;
+      const it = majorItems().find(x => x.id === a.dataset.major);
+      if (!it) return;
+      e.preventDefault();
+      if (onOpen) onOpen(it); else openMajor(it);
+    });
+  }
+  /* 국가 페이지용: 그 나라 주요 뉴스(보관 기사 제외) */
+  function countryMajorSection(c) {
+    const list = majorItems().filter(it => !isArchived(it) && (it.countries || []).includes(c.name_ko)).sort(byKey);
+    if (!list.length) return null;
+    return { id: 'n-major', title: '주요 뉴스', html: `<p class="mj-intro">최근 3년 사이 ${esc(c.name_ko)}에서 일어난 구조적 변화를 분야별로 고른 기사입니다.</p>
+      <ul class="mj-list is-stack">${list.slice(0, 6).map(majorCard).join('')}</ul>
+      <a class="more" href="${ROOT}news/index.html?country=${encodeURIComponent(c.name_ko)}#major">${esc(c.name_ko)} 주요 뉴스 ${list.length}건 모두 보기</a>` };
+  }
+
+  /* ---------- 페이지: 뉴스 (데일리 / 주요 뉴스 두 탭) ---------- */
   function renderNews(main) {
-    let all = [];
+    const qs = new URLSearchParams(location.search);
+    const majors = majorItems();
+    const byRef = {};
+    majors.forEach(it => { if (it.daily_ref) byRef[it.daily_ref] = it; });
+    const days = NEWS.map(day => ({ date: day.date, overview: day.overview,
+      stories: (day.stories || []).map((s, i) => Object.assign({ date: day.date, _ref: `${day.date}#${i}` }, s)) }));
+    const KO = Object.keys(EAST).map(k => EAST[k].ko);
+    const pickCountry = v => (KO.includes(v) ? v : '');
+    const tabFromHash = () => (/^#major/.test(location.hash) ? 'major' : 'daily');
+    const st = { tab: tabFromHash(), dq: '', dc: pickCountry(qs.get('country')), dd: days.some(d => d.date === qs.get('date')) ? qs.get('date') : '', dShown: 5,
+      cat: '', sub: '', mq: '', mc: pickCountry(qs.get('country')), my: '', sort: 'key', arch: false, mShown: 12 };
+    const TABS = [['daily', '데일리 뉴스', `${days.length}일`], ['major', '주요 뉴스', `${majors.filter(it => !isArchived(it)).length}건`]];
+    const sel = (f, label) => `<label><span>${label}</span><select data-f="${f}"></select></label>`;
     main.innerHTML = `
 <section class="page-head night">
-  <div class="wrap"><p class="kicker">Daily News</p><h1>데일리 뉴스</h1>
-  <p>학회 데일리 브리핑을 날짜별로 모았습니다. 기사 본문은 옮기지 않고 요약과 원문 링크만 싣습니다.</p></div>
+  <div class="wrap"><p class="kicker">News</p><h1>뉴스</h1>
+  <p>데일리 뉴스는 동유럽의 오늘을, 주요 뉴스는 최근 3년 사이 이 지역을 바꾼 사건을 분야별로 정리합니다. 기사 본문은 옮기지 않고 요약과 원문 링크만 싣습니다.</p></div>
 </section>
-<div class="wrap news-wrap">${NEWS.length ? NEWS.map(day => {
-      const list = (day.stories || []).map(s => Object.assign({ date: day.date }, s));
-      const start = all.length; all = all.concat(list);
-      return `
-  <section class="news-day" aria-labelledby="d-${day.date}">
-    <h2 id="d-${day.date}">${fmtDate(day.date)}</h2>
-    <p class="news-overview">${esc(day.overview)}</p>
-    <ul class="card-list">${list.map((s, i) => storyCard(s, start + i)).join('')}</ul>
-  </section>`;
-    }).join('') : '<p class="empty">아직 올라온 브리핑이 없습니다.</p>'}
+<div class="wrap news-wrap">
+  <div class="tab-bar news-tabs" role="tablist" aria-label="뉴스 구분">${TABS.map(([id, label, n]) =>
+    `<button type="button" role="tab" id="nt-${id}" aria-controls="np-${id}" data-tab="${id}">${label} <span class="n">${n}</span></button>`).join('')}</div>
+
+  <section id="np-daily" class="news-panel" role="tabpanel" aria-labelledby="nt-daily">
+    <p class="np-lead">매일 저녁 동유럽 20개국 소식을 권역별 6건으로 정리한 브리핑입니다. 최근 30일 치를 날짜순으로 보여 줍니다.</p>
+    <form class="nf-bar" role="search" onsubmit="return false">
+      <label class="nf-q"><span>검색</span><input type="search" data-f="dq" placeholder="제목·내용·나라"></label>
+      ${sel('dc', '나라')}${sel('dd', '날짜')}
+      <button type="button" class="nf-reset">초기화</button>
+    </form>
+    <p class="nf-count" aria-live="polite"></p>
+    <div class="daily-list"></div>
+    <div class="nf-more"></div>
+  </section>
+
+  <section id="np-major" class="news-panel" role="tabpanel" aria-labelledby="nt-major" hidden>
+    <p class="np-lead">최근 3년 동안 동유럽의 정치·경제·산업·사회 흐름을 바꾼 사건을 골라 핵심 내용과 시사점을 함께 정리했습니다.</p>
+    <div class="chip-row mj-cats" role="group" aria-label="분야"></div>
+    <div class="chip-row mj-subs" role="group" aria-label="산업 세부 분야" hidden></div>
+    <form class="nf-bar" role="search" onsubmit="return false">
+      <label class="nf-q"><span>검색</span><input type="search" data-f="mq" placeholder="제목·요약·키워드"></label>
+      ${sel('mc', '나라')}${sel('my', '연도')}
+      <label><span>정렬</span><select data-f="sort"><option value="key">중요 뉴스 먼저</option><option value="date">최신순</option></select></label>
+      <label class="nf-chk"><input type="checkbox" data-f="arch"> <span>3년 지난 보관 기사 포함</span></label>
+      <button type="button" class="nf-reset">초기화</button>
+    </form>
+    <p class="nf-count" aria-live="polite"></p>
+    <ul class="mj-list"></ul>
+    <div class="nf-more"></div>
+    <aside class="mj-criteria">
+      <h2>선정 기준</h2>
+      <p>원문 발행일 기준 최근 3년 안의 기사 가운데 나라나 지역 전체의 방향을 바꾼 사건, 산업·경제 구조의 변화, 한국 기업과 직접 이어지는 사안, 외교·안보·통상의 전환점, 오래 참고할 만한 사회·문화 변화를 고릅니다. 화제성보다 이후 흐름에 미친 영향을 봅니다. 3년이 지난 기사는 지우지 않고 보관 기사로 옮깁니다.</p>
+    </aside>
+  </section>
 </div>`;
-    mountThumbs(main, all);
+    const $ = s => main.querySelector(s);
+    const pD = $('#np-daily'), pM = $('#np-major');
+    const norm = s => String(s || '').toLowerCase();
+    const has = (text, q) => !q || norm(text).includes(norm(q.trim()));
+    const fillSelect = (box, f, opts, cur, all = '전체') => {
+      box.querySelector(`select[data-f="${f}"]`).innerHTML = `<option value="">${all}</option>` +
+        opts.map(([v, l]) => `<option value="${esc(v)}"${v === cur ? ' selected' : ''}>${esc(l)}</option>`).join('');
+    };
+    const koSort = arr => [...new Set(arr)].sort((a, b) => a.localeCompare(b, 'ko'));
+
+    /* 데일리 */
+    fillSelect(pD, 'dc', koSort(days.flatMap(d => d.stories.flatMap(s => s.countries || []))).map(c => [c, c]), st.dc);
+    fillSelect(pD, 'dd', days.map(d => [d.date, fmtLong(d.date)]), st.dd);
+    pD.querySelector('[data-f="dq"]').value = st.dq;
+    const markMajor = (html, s) => {
+      const it = byRef[s._ref];
+      return it ? html.replace('<div class="story-tags">', `<div class="story-tags"><a class="tag is-major" href="${majorHref(it.id)}" data-major="${esc(it.id)}">주요 뉴스</a>`) : html;
+    };
+    function drawDaily() {
+      const filtering = !!(st.dq || st.dc);
+      const matched = days.filter(d => !st.dd || d.date === st.dd).map(d => ({ d, list: d.stories.filter(s =>
+        (!st.dc || (s.countries || []).includes(st.dc)) &&
+        has([s.title, (s.points || []).join(' '), s.why, (s.countries || []).join(' ')].join(' '), st.dq)) })).filter(x => x.list.length);
+      const total = matched.reduce((n, x) => n + x.list.length, 0);
+      const shown = matched.slice(0, st.dShown), thumbs = [];
+      pD.querySelector('.nf-count').textContent = filtering || st.dd ? `${matched.length}일 · 기사 ${total}건` : '';
+      pD.querySelector('.daily-list').innerHTML = !days.length ? '<p class="empty">아직 올라온 브리핑이 없습니다.</p>'
+        : !matched.length ? '<p class="empty">조건에 맞는 기사가 없습니다. 검색어나 나라를 바꿔 보세요.</p>'
+        : shown.map(({ d, list }) => `
+  <section class="news-day" aria-labelledby="d-${d.date}">
+    <h2 id="d-${d.date}">${fmtDate(d.date)}</h2>
+    ${filtering ? '' : `<p class="news-overview">${esc(d.overview)}</p>`}
+    <ul class="card-list">${list.map(s => { thumbs.push(s); return markMajor(storyCard(s, thumbs.length - 1), s); }).join('')}</ul>
+  </section>`).join('');
+      mountThumbs(pD.querySelector('.daily-list'), thumbs);
+      const rest = matched.length - shown.length;
+      pD.querySelector('.nf-more').innerHTML = rest > 0 ? `<button type="button" class="more-btn">이전 브리핑 더 보기 <span>${rest}일 남음</span></button>` : '';
+    }
+
+    /* 주요 뉴스 */
+    const inArch = it => st.arch || !isArchived(it);
+    const catBtn = (attr, id, label, n, on) => `<button type="button" ${attr}="${id}" aria-pressed="${on}">${esc(label)} <span class="n">${n}</span></button>`;
+    function drawCats(pool) {
+      $('.mj-cats').innerHTML = catBtn('data-cat', '', '전체', pool.length, !st.cat) +
+        MAJOR_CATS.map(c => catBtn('data-cat', c.id, c.ko, pool.filter(it => it.category === c.id).length, st.cat === c.id)).join('');
+      const cat = catOf(st.cat), subs = (cat && cat.subs) || [];
+      const sp = pool.filter(it => it.category === st.cat);
+      $('.mj-subs').hidden = !subs.length;
+      $('.mj-subs').innerHTML = subs.length ? catBtn('data-sub', '', `${cat.ko} 전체`, sp.length, !st.sub) +
+        subs.map(s => [s, sp.filter(it => it.sub === s.id).length]).filter(([s, n]) => n || st.sub === s.id)
+          .map(([s, n]) => catBtn('data-sub', s.id, s.ko, n, st.sub === s.id)).join('') : '';
+    }
+    fillSelect(pM, 'mc', koSort(majors.flatMap(it => it.countries || [])).map(c => [c, c]), st.mc);
+    fillSelect(pM, 'my', [...new Set(majors.map(it => it.published.slice(0, 4)))].sort().reverse().map(y => [y, `${y}년`]), st.my);
+    function drawMajor() {
+      // 분야 버튼의 숫자는 나라·연도·검색 조건을 반영한다
+      const base = majors.filter(it => inArch(it) &&
+        (!st.mc || (it.countries || []).includes(st.mc)) && (!st.my || it.published.startsWith(st.my)) &&
+        has([it.title, it.summary, it.why, (it.points || []).join(' '), (it.tags || []).join(' '), (it.countries || []).join(' '), catLabel(it)].join(' '), st.mq));
+      drawCats(base);
+      const list = base.filter(it => (!st.cat || it.category === st.cat) && (!st.sub || it.sub === st.sub))
+        .sort(st.sort === 'date' ? byDate : byKey);
+      pM.querySelector('.nf-count').textContent = list.length ? `${list.length}건` : '';
+      pM.querySelector('.mj-list').innerHTML = list.slice(0, st.mShown).map(majorCard).join('');
+      const rest = list.length - st.mShown;
+      pM.querySelector('.nf-more').innerHTML = !majors.length ? '<p class="empty">아직 등록된 주요 뉴스가 없습니다.</p>'
+        : !list.length ? '<p class="empty">조건에 맞는 주요 뉴스가 없습니다. 분야나 나라를 바꿔 보세요.</p>'
+        : rest > 0 ? `<button type="button" class="more-btn">더 보기 <span>${rest}건 남음</span></button>` : '';
+    }
+
+    /* 탭 */
+    function drawTabs() {
+      TABS.forEach(([id]) => {
+        const b = main.querySelector(`[data-tab="${id}"]`);
+        b.setAttribute('aria-selected', String(id === st.tab)); b.tabIndex = id === st.tab ? 0 : -1;
+      });
+      pD.hidden = st.tab !== 'daily'; pM.hidden = st.tab !== 'major';
+    }
+    const openFromHash = () => {
+      const m = location.hash.match(/^#major\/(.+)$/);
+      const it = m && majors.find(x => x.id === decodeURIComponent(m[1]));
+      if (it) openMajor(it, () => { if (/^#major\//.test(location.hash)) history.replaceState(null, '', location.pathname + location.search + '#major'); });
+    };
+    main.querySelectorAll('[data-tab]').forEach(b => {
+      b.addEventListener('click', () => { st.tab = b.dataset.tab; history.replaceState(null, '', location.pathname + location.search + '#' + st.tab); drawTabs(); });
+      b.addEventListener('keydown', e => {
+        const d = e.key === 'ArrowRight' ? 1 : e.key === 'ArrowLeft' ? -1 : 0;
+        if (!d) return;
+        e.preventDefault();
+        const i = TABS.findIndex(t => t[0] === st.tab), next = main.querySelector(`[data-tab="${TABS[(i + d + TABS.length) % TABS.length][0]}"]`);
+        next.click(); next.focus();
+      });
+    });
+    window.addEventListener('hashchange', () => { st.tab = tabFromHash(); drawTabs(); openFromHash(); });
+
+    /* 필터 입력 */
+    const onInput = (panel, draw, resetShown) => panel.querySelectorAll('[data-f]').forEach(el => el.addEventListener(el.type === 'search' ? 'input' : 'change', () => {
+      st[el.dataset.f] = el.type === 'checkbox' ? el.checked : el.value; resetShown(); draw();
+    }));
+    onInput(pD, drawDaily, () => { st.dShown = 5; });
+    onInput(pM, drawMajor, () => { st.mShown = 12; });
+    pD.querySelector('.nf-reset').addEventListener('click', () => {
+      Object.assign(st, { dq: '', dc: '', dd: '', dShown: 5 });
+      pD.querySelectorAll('[data-f]').forEach(el => { el.value = ''; }); drawDaily();
+    });
+    pM.querySelector('.nf-reset').addEventListener('click', () => {
+      Object.assign(st, { cat: '', sub: '', mq: '', mc: '', my: '', sort: 'key', arch: false, mShown: 12 });
+      pM.querySelectorAll('[data-f]').forEach(el => { if (el.type === 'checkbox') el.checked = false; else el.value = el.dataset.f === 'sort' ? 'key' : ''; });
+      drawMajor();
+    });
+    pD.querySelector('.nf-more').addEventListener('click', e => { if (e.target.closest('.more-btn')) { st.dShown += 5; drawDaily(); } });
+    pM.querySelector('.nf-more').addEventListener('click', e => { if (e.target.closest('.more-btn')) { st.mShown += 12; drawMajor(); } });
+    pM.addEventListener('click', e => {
+      const c = e.target.closest('[data-cat]'), s = e.target.closest('[data-sub]');
+      if (c) { st.cat = c.dataset.cat; st.sub = ''; st.mShown = 12; drawMajor(); }
+      if (s) { st.sub = s.dataset.sub; st.mShown = 12; drawMajor(); }
+    });
+    // 카드를 누르면 주소에 #major/기사ID를 남겨 링크로 공유할 수 있게 한다
+    bindMajor(main, it => {
+      history.replaceState(null, '', location.pathname + location.search + '#major/' + encodeURIComponent(it.id));
+      openMajor(it, () => { if (/^#major\//.test(location.hash)) history.replaceState(null, '', location.pathname + location.search + (st.tab === 'major' ? '#major' : '#daily')); });
+    });
+
+    drawTabs(); drawDaily(); drawMajor(); openFromHash();
   }
 
   /* ---------- 페이지: 미니 게임 (games/* 의 게임을 iframe으로) ---------- */
