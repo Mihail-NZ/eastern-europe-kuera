@@ -1,0 +1,142 @@
+{
+  "date": "2026-11-13",
+  "home": [0, 1, 2],
+  "overview": "미국 특사 위트코프와 쿠슈너가 모스크바에서 푸틴 대통령을 만난 뒤 더블린에서 젤렌스키 대통령과 회동했고, 다음 협상부터 유럽이 참여하며 다음 포로 교환은 역대 최대 규모가 될 것이라는 발언이 나왔습니다. 한편 슬로바키아·체코·헝가리 지도부는 독일의 우크라이나 장기 자금 지원 요구에 반발했고, 리투아니아는 중국 대표단과 외교 대표부 복원을 둘러싼 협의에 들어갔습니다. 불가리아는 트라키아 고속도로 사고 수사가 이어지고 있습니다.",
+  "stories": [
+    {
+      "region": "top",
+      "title": "더블린 회동: 푸틴 면담 마친 미국 특사들, 젤렌스키에게 보고…다음 협상에 유럽 참여·역대 최대 포로 교환 예고",
+      "countries": ["우크라이나"],
+      "period": "2026-11-12 ~ 11-13",
+      "points": [
+        "키이우인디펜던트에 따르면 위트코프와 쿠슈너는 12일 저녁 더블린 인근 군 기지에서 젤렌스키 대통령과 만났고, 우멜로우 협상대표도 참석했습니다.",
+        "쿠슈너는 푸틴과의 대화가 매우 상세하고 생산적이었다고 평가했으며, 푸틴이 유럽의 협상 참여에 동의했다고 전했습니다. 다만 유럽 대표가 누구인지, 참여 방식은 공개되지 않았습니다.",
+        "젤렌스키는 다음 포로 교환이 지금까지 중 가장 큰 규모가 될 것이라고 전달받았다고 밝혔고, 의지연합이 다음 주 베를린에서 우크라이나 관련 정상회의를 연다고 말했습니다.",
+        "13일 새벽 러시아 드론 공격으로 키이우 의료시설이 피해를 입어 3명이 다쳤고, 모스크바 일대에는 대규모 드론 공격으로 공항 운항이 차질을 빚었다고 보도됐습니다."
+      ],
+      "why": "협상 형식에 유럽이 들어오게 된 점이 핵심 변화이지만, 포로 교환 규모와 다음 회담 일정은 아직 공개되지 않아 후속 발표가 확인 지점입니다.",
+      "korea": "",
+      "sources": [
+        { "name": "Kyiv Independent – Zelensky meets with Trump's envoys in Dublin after their summit with Putin", "url": "https://kyivindependent.com/zelensky-meets-with-trumps-envoys-in-dublin-after-their-summit-with-putin/", "lang": "EN" },
+        { "name": "Kyiv Independent – 3 injured, dozens evacuated after Russian drone damages Kyiv medical facility", "url": "https://kyivindependent.com/3-injured-dozens-evacuated-after-russian-drone-damages-kyiv-medical-facility-in-overnight-attack/", "lang": "EN" },
+        { "name": "Kyiv Independent – Mass drone attack on Moscow grounds flights at region's airports", "url": "https://kyivindependent.com/mass-drone-attack-on-moscow-grounds-flights-at-regions-airports/", "lang": "EN" }
+      ]
+    },
+    {
+      "region": "v4",
+      "title": "피초 총리, 독일의 우크라이나 자금 요구를 블랙메일이라 비난…슬로바키아 연정은 의회 과반 흔들려",
+      "countries": ["슬로바키아", "체코", "헝가리"],
+      "period": "2026-11-10 ~ 11-13",
+      "points": [
+        "발칸인사이트 주간 정리에 따르면 피초 슬로바키아 총리는 메르츠 독일 총리의 요구를 블랙메일이라고 비난했습니다. 메르츠 총리는 2027년 이후 우크라이나 장기 자금 지원에 모든 EU 회원국이 참여해야 하며, 합의가 없으면 다음 7년 예산안을 막을 수 있다고 경고했다고 합니다.",
+        "피초 총리는 바비시 체코 총리와 함께한 브라티슬라바 기자회견에서 슬로바키아가 우크라이나 추가 대출에 단 1유로도 내지 않겠다고 밝혔고, 체코도 추가 대출 보증을 거부하고 있습니다.",
+        "헝가리의 마기아르 총리는 EU 예산 협상과 우크라이나 지원을 연계하는 데 반대한다고 베를린에서 말하면서 독일과의 관계를 새롭게 시작하겠다고 했습니다.",
+        "슬로바키아에서는 11일 형사소송법 개정안이 150석 의회에서 75표(과반 76표)에 그쳤고, 연정 이탈 의원들이 반대·기권했습니다."
+      ],
+      "why": "2028~2034년 EU 예산은 만장일치가 필요해, 우크라이나 지원 분담을 둘러싼 중부유럽 3국의 입장이 협상 변수가 됩니다. 우크라이나 내년 재정 부족분은 약 700억 유로, EU 분담 예상은 약 450억 유로로 소개됐습니다.",
+      "korea": "",
+      "sources": [
+        { "name": "Balkan Insight – Democracy Digest: Czechia, Slovakia, Hungary Pick Fight with Berlin Over Ukraine Aid", "url": "https://balkaninsight.com/2026/11/13/democracy-digest-czechia-slovakia-hungary-pick-fight-with-berlin-over-ukraine-aid/rd/", "lang": "EN" }
+      ]
+    },
+    {
+      "region": "baltic",
+      "title": "리투아니아, 중국 대표단과 외교 대표부 복원 협의…대만 대표처 명칭 변경 거론",
+      "countries": ["리투아니아"],
+      "period": "2026-11-12 ~ 11-13",
+      "points": [
+        "LRT에 따르면 중국 외교부 유럽국 부국장 등 대표단이 리투아니아를 방문했고, 외교부와의 공식 협의는 13일로 예정돼 있습니다.",
+        "2021년 대만 대표처 설치 이후 관계가 악화돼 지난해 5월부터 중국 외교관이 리투아니아에 상주하지 않는 상태입니다.",
+        "부드리스 외교장관은 이번 회담에서 큰 돌파구도 실망스러운 결과도 기대하지 않는다고 밝혔습니다. 델피 보도에 따르면 외교부는 9월 대만 대표처 명칭 변경을 제안했고, 장관은 명칭 변경이 논의된 사실은 확인했으나 최후통첩은 아니었다고 설명했습니다.",
+        "의회 임시 그룹이 주선한 면담을 두고 외교위원장은 적절하지 않다고 평가했고, 같은 날 연정은 연료 생산업체 초과이익세 도입에 합의했습니다."
+      ],
+      "why": "대중 관계 복원 시도가 대만 문제와 맞물려 국내 논란을 낳고 있어, 13일 협의 결과와 대표처 명칭 문제가 확인 지점입니다.",
+      "korea": "",
+      "sources": [
+        { "name": "LRT – Chinese delegation visits Lithuania amid efforts to repair diplomatic relations", "url": "https://www.lrt.lt/en/news-in-english/19/3112124/chinese-delegation-visits-lithuania-amid-efforts-to-repair-diplomatic-relations", "lang": "EN" },
+        { "name": "LRT – Lithuania's MFA hold talks with Chinese delegation, keeps mum on details", "url": "https://www.lrt.lt/en/news-in-english/19/3112343/lithuania-s-mfa-hold-talks-with-chinese-delegation-keeps-mum-on-details", "lang": "EN" },
+        { "name": "LRT – Lithuania's ruling coalition agrees on windfall tax for fuel producers", "url": "https://www.lrt.lt/en/news-in-english/19/3112092/lithuania-s-ruling-coalition-agrees-on-windfall-tax-for-fuel-producers", "lang": "EN" }
+      ]
+    },
+    {
+      "region": "wbalkan",
+      "title": "보스니아 헤르체고비나: 반마피아 작전 15명 체포, 전쟁범죄 3명 유죄, 중앙은행 성장률 전망 상향",
+      "countries": ["보스니아 헤르체고비나"],
+      "period": "2026-11-11 ~ 11-12",
+      "points": [
+        "N1에 따르면 전국 반마피아 작전으로 15명이 체포되고 대규모 마약이 압수됐습니다(11일).",
+        "발칸인사이트에 따르면 보스니아 법원은 1992년 보산스키 노비 민간인 수감자 학대 혐의로 피고 3명에게 합계 41년형을 선고했습니다(12일).",
+        "중앙은행은 2026년 실질 GDP 성장률 전망을 1.9%에서 2.3%로 올렸습니다.",
+        "N1은 석탄 공급 부족과 노후 발전소로 국영전력공사(엘렉트로프리브레다 BiH)의 발전 비용이 오르고 있다고 전했습니다."
+      ],
+      "why": "치안·사법 사안과 경제 전망 상향, 에너지 비용 부담이 함께 나타나고 있습니다.",
+      "korea": "",
+      "sources": [
+        { "name": "N1 – Fifteen arrested and massive drug haul seized in major anti-mafia operation across Bosnia", "url": "https://n1info.ba/english/news/fifteen-arrested-and-massive-drug-haul-seized-in-major-anti-mafia-operation-across-bosnia/", "lang": "EN" },
+        { "name": "Balkan Insight – Bosnian Court Convicts Three of Wartime Abuses of Civilian Prisoners", "url": "https://balkaninsight.com/2026/11/12/bosnian-court-convicts-three-of-wartime-abuses-of-civilian-prisoners/btj/", "lang": "EN" },
+        { "name": "N1 – CBBH revises 2026 real GDP growth forecast upward from 1.9 to 2.3 percent", "url": "https://n1info.ba/english/news/cbbh-revises-2026-real-gdp-growth-forecast-upward-from-19-to-23-percent/", "lang": "EN" }
+      ]
+    },
+    {
+      "region": "sbalkan",
+      "title": "불가리아 트라키아 고속도로 사고 수사 계속·총리 프랑스 안보 구상 조건부 지지, 북마케도니아는 알타은행 논란",
+      "countries": ["불가리아", "북마케도니아"],
+      "period": "2026-11-12 ~ 11-13",
+      "points": [
+        "BTA에 따르면 수사당국은 안개 속 트라키아 고속도로 연쇄 추돌 수사를 위해 통행료 카메라 영상을 요청했고, 부상자 16명은 안정적인 상태입니다.",
+        "라데프 총리는 프랑스의 유럽 안보 구상을 유보 조건을 달아 지지한다고 밝혔고, 전날에는 유럽도 우크라이나 종전 협상 테이블에 자리가 있어야 한다고 말했습니다.",
+        "불가리아 의회는 모피 생산용 동물 사육을 금지하는 법안을 2독회에서 통과시켰습니다.",
+        "EWB에 따르면 북마케도니아 정부가 몰락한 세르비아 은행의 자회사인 알타은행의 시장 진입을 승인한 것을 두고 야당이 강하게 비판했습니다."
+      ],
+      "why": "불가리아는 사고 수습과 대외 안보 입장 정리가, 북마케도니아는 금융 감독 논란이 각각 현안입니다.",
+      "korea": "",
+      "sources": [
+        { "name": "BTA – 헤드라인 목록(11월 13일)", "url": "https://www.bta.bg/en", "lang": "EN" },
+        { "name": "European Western Balkans – Government fiercely criticized for greenlighting Alta Bank into the market", "url": "https://europeanwesternbalkans.com/2026/11/12/government-fiercely-criticized-for-greenlighting-alta-bank-into-the-market/", "lang": "EN" },
+        { "name": "Balkan Insight – North Macedonia Opposition Accuses Govt Over Subsidiary of Failed Serbian Bank", "url": "https://balkaninsight.com/2026/11/12/north-macedonia-opposition-accuses-govt-over-subsidiary-of-failed-serbian-bank/bi/", "lang": "EN" }
+      ]
+    },
+    {
+      "region": "east",
+      "title": "몰도바 국경 포도밭서 드론 잔해 발견, 루마니아 상원은 재무장관 불신임안 기각",
+      "countries": ["몰도바", "루마니아"],
+      "period": "2026-11-12",
+      "points": [
+        "키이우인디펜던트에 따르면 몰도바 경찰이 오데사 지역에 대규모 러시아 드론 공격이 있은 뒤 우크라이나 국경 인근 포도밭에서 드론 잔해를 발견했습니다.",
+        "RRI에 따르면 루마니아 상원은 나자레 재무장관에 대한 단순 불신임안을 기각했습니다.",
+        "루마니아 에너지부는 최우선 과제가 이번 겨울을 안전하게 넘기는 것이라고 밝혔습니다.",
+        "전날 단 대통령은 신용등급 강등을 피하려면 예산 규율이 필요하다고 강조했고, 재무부는 재정 상황 보고서를 준비 중입니다."
+      ],
+      "why": "몰도바는 국경 인접 안보 위험이, 루마니아는 재정·에너지 관리가 부각되고 있습니다.",
+      "korea": "",
+      "sources": [
+        { "name": "Kyiv Independent – Moldovan police find drone fragments in vineyard near Ukrainian border", "url": "https://kyivindependent.com/moldovan-police-find-drone-fragments-in-vineyard-near-ukrainian-border/", "lang": "EN" },
+        { "name": "RRI – Parliament dismisses motion against Finance Minister", "url": "https://www.rri.ro/en/news-and-current-affairs/today-in-the-news/parliament-dismisses-motion-against-finance-minister-id1082836.html", "lang": "EN" },
+        { "name": "RRI – Measures in the energy sector", "url": "https://www.rri.ro/en/news-and-current-affairs/today-in-the-news/measures-in-the-energy-sector-id1082832.html", "lang": "EN" }
+      ]
+    }
+  ],
+  "countries": {
+    "폴란드": "러시아 연계 철도 파괴 공작을 도운 우크라이나인 기소, 러시아의 폴란드 간첩망 적발 주장을 허위정보라고 일축(11/12, 노츠프롬폴란드).",
+    "체코": "바비시 총리가 더블린 EPC 정상회의에서 메르츠 총리와 우크라이나 대출 보증 문제를 논의할 예정, 외무장관은 L-39 스카이폭스 4대를 2027년 우크라이나에 인도할 수 있다고 언급(11/12~13, 발칸인사이트·키이우인디펜던트).",
+    "슬로바키아": "피초 총리가 우크라이나 추가 대출에 1유로도 내지 않겠다고 선언, 연정이 의회 표결에서 과반(76표)에 1표 부족(11/10~11, 발칸인사이트).",
+    "헝가리": "마기아르 총리가 베를린에서 EU 예산과 우크라이나 지원 연계에 반대한다고 발언(11/10 전후, 발칸인사이트). 텔렉스 영문판은 접속하지 못함.",
+    "에스토니아": "국방장관이 드론이 북동·남동쪽에서 영공에 들어왔다고 밝힘, 의회가 2027년 예산안 처리 중, 발트 3국에 걸친 문자 메시지 1억 2,500만 건 유출 가능성 보도(11/12~13, ERR).",
+    "라트비아": "은행·서비스 업체 관련 데이터 유출 문제를 서비스 업체가 해결했다고 밝힘, 방산 산업 성장 보도, 대통령은 정부 구성 속도를 우려하지 않는다고 발언(11/12~13, LSM).",
+    "리투아니아": "중국 대표단과 외교 대표부 복원 협의, 연료 생산업체 초과이익세 합의, 팔란티어의 발트 군사 분야 진출 논란(11/12~13, LRT).",
+    "슬로베니아": "최근 48시간 내 주요 보도 확인되지 않음. Sloveniatimes는 접속 오류(403)로 읽지 못함.",
+    "크로아티아": "최근 48시간 내 주요 보도 확인되지 않음. Total Croatia News는 접속 오류(503)로 읽지 못했고, 배경으로 11/11 유해 폐기물 스캔들이 집권 HDZ에 부담이라는 분석이 있었음.",
+    "세르비아": "최근 48시간 내 주요 보도 확인되지 않음. 배경으로 11/11 전 경제장관 바스타가 직권남용 혐의로 체포되었고 새 정부의 EU 협상 재개 방안이 논의됨.",
+    "보스니아 헤르체고비나": "반마피아 작전 15명 체포, 전쟁범죄 3명 유죄(합계 41년형), 중앙은행이 성장률 전망을 2.3%로 상향(11/11~12, N1·발칸인사이트).",
+    "몬테네그로": "최근 48시간 내 주요 보도 확인되지 않음. 배경으로 EWB가 11/10 EU 가입 막바지 단계라는 분석 게재.",
+    "코소보": "최근 48시간 내 주요 보도 확인되지 않음. 이번에 조회한 매체에서 코소보 기사는 찾지 못함.",
+    "알바니아": "수감 중인 티라나 시장이 라마 총리를 공격(11/12), 높은 카드 수수료가 현금 거래 단속에 걸림돌(11/13, 발칸인사이트).",
+    "북마케도니아": "정부가 몰락한 세르비아 은행 자회사 알타은행의 시장 진입을 승인해 야당이 비판(11/12, EWB·발칸인사이트).",
+    "불가리아": "트라키아 고속도로 연쇄 추돌 수사, 모피 사육 금지 법안 2독회 통과, 재정위원회 예측 승인 기한 단축 개정안 1독회 통과(11/13, BTA).",
+    "우크라이나": "더블린 회동에서 다음 협상에 유럽 참여·역대 최대 포로 교환 예고, 케르넬이 러시아 공격으로 전 공장 가동 중단, 키이우 의료시설 드론 피해(11/12~13, 키이우인디펜던트).",
+    "벨라루스": "최근 48시간 내 주요 보도 확인되지 않음. 이번에 조회한 매체에서 벨라루스 기사는 찾지 못함.",
+    "몰도바": "우크라이나 국경 인근 포도밭에서 드론 잔해 발견(11/12, 키이우인디펜던트).",
+    "루마니아": "상원이 재무장관 불신임안 기각, 에너지부는 겨울 안정 운영이 최우선이라고 밝힘(11/12, RRI)."
+  },
+  "note": "작성 기준: 2026-11-13 저녁(한국시간). Kyiv Independent, Radio Romania International, LSM, LRT, ERR, Notes from Poland, Balkan Insight, BTA, European Western Balkans, Expats.cz, N1, KOTRA 해외시장뉴스 첫 화면 헤드라인을 확인했고, 더블린 회동·중부유럽 3국 갈등·리투아니아 중국 협의는 본문을 열어 확인했습니다. Total Croatia News(503), Sloveniatimes(403), Telex(403)는 읽지 못했고 한국 언론은 조회하지 않았습니다. KOTRA에서는 유럽 관련 신규 기사를 찾지 못했습니다. 포로 교환 규모와 시기, 다음 협상 일정과 유럽 대표, 13일 리투아니아-중국 협의 결과는 아직 공개되지 않았습니다. 일부 국가는 헤드라인 기준의 단신입니다. 출처 표시: KR = 한국 언론, KOTRA = KOTRA 해외시장뉴스, EN = 해외 매체."
+}
