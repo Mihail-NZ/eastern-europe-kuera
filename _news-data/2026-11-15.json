@@ -1,0 +1,138 @@
+{
+  "date": "2026-11-15",
+  "home": [0, 5, 1],
+  "overview": "러시아가 오데사주 등에 대규모 드론 공격을 이어가는 가운데, 미국 특사 쿠슈너는 아부다비 회담 뒤 러시아와 유럽의 직접 대화를 돕겠다고 밝혔고 젤렌스키는 미국이 NATO 가입 대가로 돈바스 철수를 물었다고 전했습니다. 루마니아 흑해 연안에서는 이틀간 상선 3척이 드론에 피격됐습니다. 체코·슬로바키아·헝가리는 독일의 우크라이나 장기 재원 분담 요구에 반발했고, 불가리아는 S&P가 신용등급 전망을 안정적으로 낮췄습니다.",
+  "stories": [
+    {
+      "region": "top",
+      "title": "러시아, 오데사주 등 대규모 드론 공습 지속…쿠슈너는 러시아-유럽 직접 대화 촉진, 젤렌스키는 NATO 가입-돈바스 철수 맞교환 제기 주장",
+      "countries": ["우크라이나"],
+      "period": "2026-11-13 ~ 11-15",
+      "points": [
+        "키이우인디펜던트에 따르면 우크라이나 당국은 15일 지난 24시간 러시아 공격으로 4명이 숨지고 69명이 다쳤다고 밝혔습니다. 공군은 밤사이 장거리 드론 132대(제트 드론 78대)가 발사돼 106대가 요격됐다고 했습니다.",
+        "오데사주에서는 DTEK 에너지 시설이 피격돼 약 4만 1천 가구가 일시 정전됐고 6명이 다쳤으며, 자포리자주에서는 어린이 4명을 포함해 32명이 부상했습니다.",
+        "미국 특사 쿠슈너는 14일 아부다비에서 열린 미국 중재 우크라이나-러시아 회담 뒤 X에 올린 글에서, 미국이 모스크바와 유럽 간 직접 대화를 돕고 다음 3자 회담 의제를 준비 중이라고 밝혔습니다. 이틀간의 회담은 광범위한 휴전이나 합의로 이어지지 않았습니다.",
+        "젤렌스키는 13일 기자들에게 미국 측이 NATO 가입 대가로 돈바스에서 철수할 의향이 있는지 처음 물었다고 말했습니다. 14일에는 푸틴의 코스티안티니우카 인도적 임무 제안이 도시 점령 구실이 될 수 있다고 주장했습니다."
+      ],
+      "why": "유럽 공동 협상팀 구성 이후 미국이 아부다비 회담과 러시아-유럽 직접 대화로 협상 틀을 넓히고 있어, 다음 3자 회담 일정과 영토 문제 진전이 확인 지점입니다. 다음 회담의 날짜와 장소는 공개되지 않았습니다.",
+      "korea": "",
+      "sources": [
+        { "name": "Kyiv Independent – Russia launches mass attack on Odesa Oblast as strikes kill 4, injure 69 across Ukraine over past day", "url": "https://kyivindependent.com/russia-launches-mass-attack-on-odesa-oblast-as-strikes-kill-4-injure-69-across-ukraine-over-past-day/", "lang": "EN" },
+        { "name": "Kyiv Independent – US now focused on facilitating direct engagement between Russia, Europe, Kushner says", "url": "https://kyivindependent.com/us-now-focused-on-facilitating-direct-engagement-between-russia-europe-kushner-says-after-ukraine-peace-talks/", "lang": "EN" },
+        { "name": "Kyiv Independent – US floats NATO membership for Ukraine in exchange for Donbas withdrawal, Zelensky says", "url": "https://kyivindependent.com/us-floats-nato-membership-for-ukraine-in-exchange-for-donbas-withdrawal-zelensky-says/", "lang": "EN" }
+      ]
+    },
+    {
+      "region": "v4",
+      "title": "체코·슬로바키아·헝가리, 우크라이나 장기 재원 분담 요구한 독일에 반발",
+      "countries": ["체코", "슬로바키아", "헝가리"],
+      "period": "2026-11-10 ~ 11-13",
+      "points": [
+        "발칸인사이트 다이제스트에 따르면 독일 메르츠 총리는 2027년 이후 우크라이나 장기 재원을 모든 EU 회원국이 분담해야 하며, 합의가 없으면 독일이 2028~2034년 EU 예산을 막을 수 있다고 경고했습니다.",
+        "피초 슬로바키아 총리는 10일 이를 협박이라고 비난하며 우크라이나 차관에 단 1유로도 내지 않겠다고 했고, 슬로바키아도 같은 거부권이 있다고 강조했습니다.",
+        "바비시 체코 총리는 추가 차관 보증을 거부하고 있으며 이견을 더블린 EPC 정상회의에서 메르츠와 논의하겠다고 했습니다.",
+        "마자르 헝가리 총리는 10일 베를린에서 예산 협상을 우크라이나 재정 지원과 연계하는 것은 좋은 생각이 아니라고 하면서도 독일과의 관계 개선을 강조했습니다. 우크라이나는 내년 약 700억 유로가 부족하고 EU가 약 450억 유로를 메울 것으로 전해집니다."
+      ],
+      "why": "11월 26~27일 유럽이사회에서 2027년 이후 재원을 다루는 만큼, 중부유럽 3국의 거부 입장이 EU 예산 협상의 변수로 떠올랐습니다.",
+      "korea": "",
+      "sources": [
+        { "name": "Balkan Insight – Democracy Digest: Czechia, Slovakia, Hungary Pick Fight with Berlin Over Ukraine Aid", "url": "https://balkaninsight.com/2026/11/13/democracy-digest-czechia-slovakia-hungary-pick-fight-with-berlin-over-ukraine-aid/rd/", "lang": "EN" }
+      ]
+    },
+    {
+      "region": "baltic",
+      "title": "에스토니아 국방장관 드론이 북동·남동쪽에서 영공 진입, 라트비아는 블러드 곡물 통과 금지 추진",
+      "countries": ["에스토니아", "라트비아"],
+      "period": "2026-11-11 ~ 11-13",
+      "points": [
+        "ERR에 따르면 에스토니아 헤렘 국방장관은 드론이 북동쪽과 남동쪽에서 에스토니아 영공에 들어왔다고 밝혔습니다. 기사 본문은 열지 못해 제목 기준입니다.",
+        "ERR은 러시아 우스트루가 항 화재가 실라메에서 보였다고 전했고, 한 장교가 발트해에서 러시아 군함이 여러 차례 피격돼 사상자가 났다고 말했다는 기사도 실었습니다.",
+        "LSM에 따르면 라트비아 외무부는 13일 이른바 블러드 곡물의 국내 통과 운송을 금지하는 조치를 제안했고, 연정 협상은 일정 성과에 가까워졌다고 전했습니다."
+      ],
+      "why": "러시아 서북부 발트해 항만에 대한 공격과 발트 영공 드론 진입이 겹쳐 지역 안보 긴장이 커지고 있으나, 드론 출처 등은 아직 확인되지 않았습니다.",
+      "korea": "",
+      "sources": [
+        { "name": "ERR – Defense minister: Drones entered Estonian airspace from northeast and southeast", "url": "https://news.err.ee/1610193178/defense-minister-drones-entered-estonian-airspace-from-northeast-and-southeast", "lang": "EN" },
+        { "name": "ERR – Officer: Russian warship hit multiple times in Baltic, with casualties", "url": "https://news.err.ee/1610195272/officer-russian-warship-hit-multiple-times-in-baltic-with-casualties", "lang": "EN" },
+        { "name": "LSM – Latvian Foreign Ministry proposes national blood grain transit ban", "url": "https://eng.lsm.lv/article/politics/diplomacy/13.11.2026-latvian-foreign-ministry-proposes-national-blood-grain-transit-ban.a671921/", "lang": "EN" }
+      ]
+    },
+    {
+      "region": "wbalkan",
+      "title": "보스니아: 선관위 스캐너 자료 비공개에 TI 소송 예고, 전쟁범죄 10년형 선고…세르비아 안보회의 16일 개막",
+      "countries": ["보스니아 헤르체고비나", "세르비아"],
+      "period": "2026-11-12 ~ 11-15",
+      "points": [
+        "N1에 따르면 보스니아 선관위는 스캐너와 지문인식기 자료 공개를 거부했고, 국제투명성기구 BiH가 법적 대응을 예고했습니다.",
+        "법원은 제니차 인근 두시나 전쟁범죄로 셰리프 파트코비치에게 징역 10년을 선고했고(13일), 헬싱키위원회는 보스니아가 반나치즘 유엔 결의에 반대표를 던진 경위 해명을 요구했습니다.",
+        "EWB에 따르면 제5회 베오그라드 안보회의가 11월 16~18일 열리고, 11월 15~16일에는 EU 확대 포럼이 개최됩니다."
+      ],
+      "why": "보스니아는 선거 관리 투명성 논란이 이어지고, 세르비아는 안보회의가 역내 외교 일정의 계기가 됩니다. 일부는 헤드라인 기준입니다.",
+      "korea": "",
+      "sources": [
+        { "name": "N1 – Bosnia's election commission refuses to release scanner and fingerprint reader data, TI BiH announces legal action", "url": "https://n1info.ba/english/news/bosnias-election-commission-refuses-to-release-scanner-and-fingerprint-reader-data-ti-bih-announces-legal-action/", "lang": "EN" },
+        { "name": "N1 – Serif Patkovic sentenced to 10 years in prison for war crime in Dusina near Zenica", "url": "https://n1info.ba/english/news/serif-patkovic-sentenced-to-10-years-in-prison-for-war-crime-in-dusina-near-zenica/", "lang": "EN" },
+        { "name": "European Western Balkans – Belgrade Security Conference to take place from 16 to 18 November", "url": "https://europeanwesternbalkans.com/2026/11/13/belgrade-security-conference-to-take-place-from-16-to-18-november/", "lang": "EN" }
+      ]
+    },
+    {
+      "region": "sbalkan",
+      "title": "S&P, 불가리아 신용등급 전망을 긍정적에서 안정적으로 하향…북마케도니아는 알타 은행 승인 논란",
+      "countries": ["불가리아", "북마케도니아"],
+      "period": "2026-11-12 ~ 11-15",
+      "points": [
+        "BTA에 따르면 S&P는 14일 불가리아 장기 신용등급 전망을 긍정적에서 안정적으로 낮췄고 등급 BBB+/A-2는 유지했습니다.",
+        "이유로 재정·대외 지표 약화를 들었으며 2026년 재정적자 전망을 GDP 대비 5.1%로 올리고 2029년까지 3%로 줄일 것으로 봤습니다. 경상수지 적자 악화와 임금·대출·주택가격 상승도 지적했습니다.",
+        "GERB와 민주불가리아는 정부에 대응을 촉구하고 2027년 예산 재작성을 요구했으며, 바즈라즈데네는 유로존 가입 탓이라고 주장했습니다.",
+        "EWB와 발칸인사이트에 따르면 북마케도니아 야당은 파산한 세르비아 은행의 현지 자회사인 알타 은행의 시장 진입 승인을 두고 정부를 비판하고 있습니다."
+      ],
+      "why": "유로 도입 직후 불가리아의 재정 건전화 속도가 시장과 정치권 쟁점이 됐고, 2027년 예산안이 다음 평가의 변수입니다.",
+      "korea": "",
+      "sources": [
+        { "name": "BTA – S&P downgrades outlook on Bulgaria's long-term credit rating, opposition reacts", "url": "https://www.bta.bg/en/news/bulgaria/1247107-s-p-downgrades-outlook-on-bulgaria-s-long-term-credit-rating-opposition-reacts", "lang": "EN" },
+        { "name": "European Western Balkans – Government fiercely criticized for greenlighting Alta Bank into the market", "url": "https://europeanwesternbalkans.com/2026/11/12/government-fiercely-criticized-for-greenlighting-alta-bank-into-the-market/", "lang": "EN" }
+      ]
+    },
+    {
+      "region": "east",
+      "title": "루마니아 흑해 연안에서 이틀간 상선 3척 드론 피격, F-16 출격",
+      "countries": ["루마니아"],
+      "period": "2026-11-13 ~ 11-14",
+      "points": [
+        "키이우인디펜던트에 따르면 13일 밤 팔라우 선적 화물선 라리사 1호가 술리나 항 인근에서 피격돼 크레인이 손상됐고, 14일 저녁에는 그리스 선적 유조선 에비아 페트롤 V호와 벌크선 마르솔호가 잇따라 피격돼 화재가 났으나 승무원이 진화했습니다.",
+        "인명 피해는 보고되지 않았습니다. 국방부는 뱀섬 동쪽에서 공중 표적을 탐지해 F-16 2대를 출격시키고 툴체아군에 드론 경보를 발령했습니다.",
+        "오프레아 국방장관은 조사가 진행 중이라고 했고, 드론의 발원지는 아직 특정되지 않았습니다.",
+        "10월 23일 콘스탄차 인근 공격에서는 선원 1명이 숨지고 3명이 실종됐다고 합니다."
+      ],
+      "why": "나토 회원국 연안에서 상선 피격이 반복돼 흑해 항행 안전과 우크라이나 곡물 수출 경로에 부담이 되고 있으며, 발원지 조사 결과가 확인 지점입니다.",
+      "korea": "",
+      "sources": [
+        { "name": "Kyiv Independent – Three commercial ships struck by drones near Romania's Black Sea coast over two days", "url": "https://kyivindependent.com/three-commercial-ships-struck-by-drones-near-romanias-black-sea-coast-over-two-days/", "lang": "EN" },
+        { "name": "Radio Romania International – 뉴스 목록(11월 11~14일)", "url": "https://www.rri.ro/en/news-and-current-affairs/", "lang": "EN" }
+      ]
+    }
+  ],
+  "countries": {
+    "폴란드": "대통령이 유해 온라인 콘텐츠 삭제법에 검열 우려를 들어 거부권 행사(11/14), 우크라이나 난민 장기 체류 현실화, 벨기에 법원이 PANSA 자금 압류 결정을 뒤집음(11/13, 노츠프롬폴란드).",
+    "체코": "독일의 우크라이나 장기 재원 분담 요구에 추가 차관 보증 거부 입장, 부동산 가격 사상 최고·가뭄으로 채소 수확 타격(11/15, Expats.cz).",
+    "슬로바키아": "피초 총리가 우크라이나 차관에 1유로도 내지 않겠다며 독일의 요구를 협박이라고 비난(11/10, 발칸인사이트).",
+    "헝가리": "마자르 총리가 베를린에서 EU 예산과 우크라이나 지원 연계에 부정적 입장 표명(11/10, 발칸인사이트). 전 피데스 시기 장관 현금 압수 수사는 직전 보도 이후 새 소식 없음.",
+    "에스토니아": "국방장관이 드론이 북동·남동쪽에서 영공에 들어왔다고 밝힘, 국방재판소 법안 진행, 네이션스리그 플레이오프 확정(ERR).",
+    "라트비아": "외무부가 블러드 곡물 통과 금지 제안, 연정 협상 일정 성과 근접, 12월부터 리가 난방비 상승(11/13, LSM).",
+    "리투아니아": "하이브리드 위협 해설 기사와 러시아 활동가 송환·투옥 사건 보도(11/14, LRT). 최근 48시간 내 큰 신규 전개는 확인되지 않음.",
+    "슬로베니아": "최근 48시간 내 주요 보도 확인되지 않음. Sloveniatimes는 접속이 막혀 확인하지 못함.",
+    "크로아티아": "단기임대 규칙·감시 강화와 새 관광법 재분류 기한 보도, 향후 10년 호텔 침대 10만 개 필요 전망(11/13~14, Total Croatia News).",
+    "세르비아": "베오그라드 안보회의가 11/16~18 개최 예정(EWB). 최근 48시간 내 다른 주요 신규 보도는 확인되지 않음.",
+    "보스니아 헤르체고비나": "선관위가 스캐너 자료 공개를 거부해 TI BiH가 법적 대응 예고, 두시나 전쟁범죄 10년형, 각료회의가 NASA GLOBE 참여 승인 못 함(11/13~15, N1).",
+    "몬테네그로": "최근 48시간 내 주요 보도 확인되지 않음. 직전 배경으로 EU 가입 막바지 단계라는 분석이 있었음.",
+    "코소보": "최근 48시간 내 새 전개는 확인되지 않음. 배경으로 헤이그 특별재판소 권한 축소 법 개정에 EU·영국이 우려(11/13, 발칸인사이트).",
+    "알바니아": "높은 카드 수수료가 현금 거래 단속의 걸림돌(11/13), 수감 중인 티라나 시장이 라마 총리를 공격(11/12, 발칸인사이트).",
+    "북마케도니아": "야당이 파산한 세르비아 은행 자회사 알타 은행 시장 진입 승인으로 정부를 비판(11/12, 발칸인사이트·EWB).",
+    "불가리아": "S&P가 신용등급 전망을 안정적으로 하향, 불가르가스가 겨울철 소피아 난방공사에 가스 공급 방침(11/14~15, BTA).",
+    "우크라이나": "오데사주 등 대규모 드론 공격으로 24시간 4명 사망·69명 부상, 쿠슈너 발언과 NATO-돈바스 맞교환 제기 주장(11/13~15, 키이우인디펜던트).",
+    "벨라루스": "벨라루스 선수의 우크라이나 선수 모욕 논란으로 야당 측이 WTA 대회 퇴출 요구(11/14, 키이우인디펜던트).",
+    "몰도바": "최근 48시간 내 주요 보도 확인되지 않음. 이번에 조회한 매체에서 몰도바 관련 신규 기사가 없었음.",
+    "루마니아": "흑해 연안 상선 3척 드론 피격, 10월 물가상승률 6.9%로 두 달 연속 상승(11/13, RRI), AUR 대표 법치 발언(11/14)."
+  },
+  "note": "작성 기준: 2026-11-15 저녁(한국시간). Kyiv Independent, Radio Romania International, LSM, LRT, ERR, Notes from Poland, Balkan Insight, BTA, European Western Balkans, Expats.cz, Total Croatia News, N1, KOTRA 첫 화면을 확인했고, 오데사 공습·쿠슈너 발언·루마니아 상선 피격·체코/슬로바키아/헝가리 독일 갈등·S&P 전망 변경은 본문을 열어 확인했습니다. Sloveniatimes와 Telex는 접근이 막혀(403) 확인하지 못했고 한국 언론은 조회하지 않았으며 KOTRA에서는 동유럽 신규 기사로 폴란드 물류시장 동향만 확인됐습니다. 에스토니아 드론 영공 진입과 러시아 군함 피격은 제목·캡션 기준이며 본문은 확인하지 못했습니다. 직전 브리핑(11/14)의 불가리아 S&P 항목은 전망 상향이라고 적었으나 BTA 확인 결과 긍정적에서 안정적으로의 하향 조정이므로 이번에 바로잡습니다. 루마니아 선박 피격의 발원지와 다음 3자 회담 일정은 아직 공개되지 않았습니다. 출처 표시: KR = 한국 언론, KOTRA = KOTRA 해외시장뉴스, EN = 해외 매체."
+}
