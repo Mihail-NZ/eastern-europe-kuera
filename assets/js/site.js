@@ -7,6 +7,8 @@
   const body = document.body;
   const ROOT = body.dataset.root || '';
   const PAGE = body.dataset.page || 'home';
+  // 사이트 이름: _tools/prerender.ps1이 정적 <title> 끝에 넣은 이름을 그대로 쓴다
+  const BRAND = (document.title.match(/\| ([^|]+)$/) || [0, '동유럽 산책'])[1].trim();
   const COUNTRIES = (window.COUNTRY_DATA && window.COUNTRY_DATA.countries) || [];
   const MAP = window.MAP_DATA || {};
   const NEWS = window.NEWS_DATA || [];
@@ -102,9 +104,9 @@
     return `<a class="skip" href="#main">본문으로 건너뛰기</a>
 <header class="site-header">
   <div class="wrap header-inner">
-    <a class="brand" href="${ROOT}index.html" aria-label="Eastern Europe by KUERA, 고려대학교 동유럽지역 전략학회 아카이브 홈">
+    <a class="brand" href="${ROOT}index.html" aria-label="동유럽 산책 CEE Side by KUERA 홈">
       <img class="brand-logo" src="${ROOT}assets/images/kuera/kuera-badge.png" alt="" width="44" height="44" decoding="async">
-      <span class="brand-text"><span class="brand-en">Eastern Europe<span class="brand-by">by KUERA</span></span><span class="brand-ko">고려대학교 동유럽지역 전략학회</span></span>
+      <span class="brand-text"><span class="brand-en">CEE Side<span class="brand-by">by KUERA</span></span><span class="brand-ko">동유럽 산책 · 고려대학교 동유럽지역 전략학회</span></span>
     </a>
     <nav aria-label="주 메뉴"><ul>${nav.map(([id, label, href]) =>
       `<li><a href="${ROOT}${href}"${id === current ? ' aria-current="page"' : ''}>${label}</a></li>`).join('')}</ul></nav>
@@ -115,10 +117,10 @@
     return `<footer class="site-footer"><div class="wrap footer-inner">
   <div class="footer-id">
     <img class="footer-logo" src="${ROOT}assets/images/kuera/kuera-badge.png" alt="KUERA 로고" width="56" height="56" loading="lazy" decoding="async">
-    <div><p class="footer-brand">Eastern Europe <span class="brand-by">by KUERA</span></p>
+    <div><p class="footer-brand">CEE Side <span class="brand-by">동유럽 산책 · by KUERA</span></p>
     <p class="footer-org">고려대학교 동유럽지역 전략학회<span lang="en"> · Korea University Eastern Europe Research Association</span></p></div>
   </div>
-  <p>동유럽 학회원을 위한 국가 정보 아카이브. 국가 정보는 2026년 10월 기준으로 정리했으며, 각 항목 아래 출처를 함께 적었습니다. 운영시간·가격·통계는 바뀔 수 있으니 방문 전 공식 안내를 확인하세요.</p>
+  <p>누구나 가볍게 둘러보는 동유럽 20개국 여행·문화·뉴스·취업 정보. 국가 정보는 2026년 10월 기준으로 정리했으며, 각 항목 아래 출처를 함께 적었습니다. 운영시간·가격·통계는 바뀔 수 있으니 방문 전 공식 안내를 확인하세요.</p>
   <p>지도 경계: Natural Earth · 국기: <a href="https://flagpedia.net/" target="_blank" rel="noopener">Flagpedia</a> · 사진: <a href="https://commons.wikimedia.org/" target="_blank" rel="noopener">Wikimedia Commons</a>(저작자와 라이선스는 사진마다 표시)</p>
 </div></footer>`;
   }
@@ -1001,7 +1003,7 @@ ${window.REPORTS ? `<section class="home-reports wrap" id="reports" aria-labelle
     const c = bySlug(slug);
     const iso3 = ISO3_BY_SLUG[slug];
     if (!c) { main.innerHTML = '<section class="page-head wrap"><h1>페이지를 찾을 수 없습니다</h1><p><a href="../index.html">국가 목록으로 돌아가기</a></p></section>'; return; }
-    document.title = `${c.name_ko} | Eastern Europe`;
+    document.title = `${c.name_ko} 여행·음식·언어·문화·산업 정보 | ${BRAND}`;
     const f = c.fact, deep = DEEP[slug];
     const band = flagBand(iso3);
     const stories = allStories().filter(s => (s.countries || []).includes(c.name_ko));
@@ -1133,7 +1135,7 @@ ${stories.length ? `<section class="hub-news wrap" aria-labelledby="hub-news-tit
       const at = secs.findIndex(s => /출처/.test(s.title));
       if (at >= 0) secs.splice(at, 0, rs); else secs.push(rs);
     }
-    document.title = `${title} | ${c.name_ko} | Eastern Europe`;
+    document.title = `${title.includes(c.name_ko) ? title : `${c.name_ko} ${title}`} | ${BRAND}`;
 
     // 연달아 오는 탭 섹션(폴란드어의 인사말·여행 회화)은 한 섹션 안의 탭으로 묶는다
     const blocks = [];

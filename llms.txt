@@ -1,0 +1,31 @@
+# 동유럽 산책 (CEE Side)
+> 동유럽 20개국 여행·문화·뉴스·취업 정보. 고려대학교 동유럽지역 전략학회(KUERA)가 만들고 관리하는 한국어 사이트입니다. 동유럽 20개국의 국가 정보와 매일 업데이트되는 뉴스, 최근 5년 주요 이슈, 취업·인턴 정보를 다룹니다. 모든 항목에 원문 출처 링크를 함께 적습니다.
+
+## 주요 페이지
+- [홈](https://mihail-nz.github.io/eastern-europe-kuera/): 동유럽 지도와 오늘의 뉴스
+- [국가 목록](https://mihail-nz.github.io/eastern-europe-kuera/countries/): 20개국을 권역별(비셰그라드·발트·서발칸·남발칸·동부권)로 정리
+- [뉴스](https://mihail-nz.github.io/eastern-europe-kuera/news/): 데일리 뉴스(매일 저녁 갱신)와 주요 뉴스(분야·국가별 아카이브)
+- [취업·인턴](https://mihail-nz.github.io/eastern-europe-kuera/jobs/): 동유럽 근무·동유럽 관련 채용 공고(매주 확인)
+- [소개](https://mihail-nz.github.io/eastern-europe-kuera/about/): KUERA 소개와 자료 원칙
+
+## 국가별 페이지
+- [폴란드](https://mihail-nz.github.io/eastern-europe-kuera/countries/poland/): 개요·여행·음식·언어·문화·산업
+- [체코](https://mihail-nz.github.io/eastern-europe-kuera/countries/czechia/): 개요·여행·음식·언어·문화·산업
+- [헝가리](https://mihail-nz.github.io/eastern-europe-kuera/countries/hungary/): 개요·여행·음식·언어·문화·산업
+- [슬로바키아](https://mihail-nz.github.io/eastern-europe-kuera/countries/slovakia/): 개요·여행·음식·언어·문화·산업
+- [슬로베니아](https://mihail-nz.github.io/eastern-europe-kuera/countries/slovenia/): 개요·여행·음식·언어·문화·산업
+- [크로아티아](https://mihail-nz.github.io/eastern-europe-kuera/countries/croatia/): 개요·여행·음식·언어·문화·산업
+- [세르비아](https://mihail-nz.github.io/eastern-europe-kuera/countries/serbia/): 개요·여행·음식·언어·문화·산업
+- [에스토니아](https://mihail-nz.github.io/eastern-europe-kuera/countries/estonia/): 개요·여행·음식·언어·문화·산업
+- [몰도바](https://mihail-nz.github.io/eastern-europe-kuera/countries/moldova/): 개요·여행·음식·언어·문화·산업
+- [불가리아](https://mihail-nz.github.io/eastern-europe-kuera/countries/bulgaria/): 개요·여행·음식·언어·문화·산업
+- [루마니아](https://mihail-nz.github.io/eastern-europe-kuera/countries/romania/): 개요·여행·음식·언어·문화·산업
+- [라트비아](https://mihail-nz.github.io/eastern-europe-kuera/countries/latvia/): 개요·여행·음식·언어·문화·산업
+- [리투아니아](https://mihail-nz.github.io/eastern-europe-kuera/countries/lithuania/): 개요·여행·음식·언어·문화·산업
+- [우크라이나](https://mihail-nz.github.io/eastern-europe-kuera/countries/ukraine/): 개요·여행·음식·언어·문화·산업
+- [벨라루스](https://mihail-nz.github.io/eastern-europe-kuera/countries/belarus/): 개요·여행·음식·언어·문화·산업
+- [북마케도니아](https://mihail-nz.github.io/eastern-europe-kuera/countries/north-macedonia/): 개요·여행·음식·언어·문화·산업
+- [알바니아](https://mihail-nz.github.io/eastern-europe-kuera/countries/albania/): 개요·여행·음식·언어·문화·산업
+- [보스니아 헤르체고비나](https://mihail-nz.github.io/eastern-europe-kuera/countries/bosnia-herzegovina/): 개요·여행·음식·언어·문화·산업
+- [몬테네그로](https://mihail-nz.github.io/eastern-europe-kuera/countries/montenegro/): 개요·여행·음식·언어·문화·산업
+- [코소보](https://mihail-nz.github.io/eastern-europe-kuera/countries/kosovo/): 개요·여행·음식·언어·문화·산업

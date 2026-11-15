@@ -1,0 +1,5 @@
+# 검색엔진과 AI 검색 수집기 모두 허용
+User-agent: *
+Allow: /
+
+Sitemap: https://mihail-nz.github.io/eastern-europe-kuera/sitemap.xml
