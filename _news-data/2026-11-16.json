@@ -1,0 +1,133 @@
+{
+  "date": "2026-11-16",
+  "home": [0, 1, 2],
+  "overview": "EU 이사회가 우크라이나 지원 프로그램 사상 최대인 79억 유로 지급을 승인했습니다. 체코 프라하에서는 공영방송 개편에 반대하는 대규모 집회가 열렸고, 에스토니아는 러시아 정보기관 연계 방화 시도에 대응해 12월 1일부터 러시아와의 육로 국경 검문소를 닫기로 했습니다. 불가리아는 2027년 예산안을 승인했고, 몰도바 가가우지아 지도자 선거는 결선으로 갑니다.",
+  "stories": [
+    {
+      "region": "top",
+      "title": "EU, 우크라이나에 사상 최대 79억 유로 개혁 연계 지원금 지급 승인",
+      "countries": ["우크라이나"],
+      "period": "2026-11-15 ~ 11-16",
+      "points": [
+        "키이우인디펜던트에 따르면 EU는 16일 우크라이나에 79억 유로(약 87억 달러)의 재정 지원 지급을 승인했으며, 이 방식으로는 역대 최대 규모입니다.",
+        "사법·반부패·자금세탁 방지·에너지·농업·환경 분야에서 20개가 넘는 개혁 이행 항목을 충족한 데 따른 우크라이나 퍼실리티 분할 지급금입니다.",
+        "이 가운데 약 50억 유로는 4월에 승인된 900억 유로 규모 우크라이나 지원 대출에서 나오는 것으로 전해집니다.",
+        "우크라이나와 EU는 15일 2027년 가입협상 진전을 위한 개혁 단계에도 합의했으나, 법치와 반부패는 여전히 취약 분야로 지적됐습니다."
+      ],
+      "why": "11월 26~27일 EU 정상회의에서 별도의 약 450억 유로 대출이 논의될 예정이어서 우크라이나의 내년 재정 공백 해소 여부가 다음 확인 지점입니다.",
+      "korea": "",
+      "sources": [
+        { "name": "Kyiv Independent – EU greenlights largest ever cash-for-reforms payment to Ukraine", "url": "https://kyivindependent.com/eu-greenlights-largest-ever-cash-for-reforms-payment-to-ukraine/", "lang": "EN" },
+        { "name": "Kyiv Independent – Ukraine, EU agree on reform steps to advance accession talks in 2027", "url": "https://kyivindependent.com/ukraine-eu-agree-on-reform-steps-to-advance-accession-talks-in-2027/", "lang": "EN" }
+      ]
+    },
+    {
+      "region": "v4",
+      "title": "체코 프라하에서 공영방송 재원 개편 반대 대규모 집회…주최 측 추산 40만 명",
+      "countries": ["체코"],
+      "period": "2026-11-15 ~ 11-16",
+      "points": [
+        "발칸인사이트에 따르면 15일 프라하 레트나 평원에서 열린 집회에 주최 측 추산 약 40만 명이 모였고, 경찰은 인원을 공개하지 않았습니다. 사실이라면 1989년 벨벳혁명 이후 최대 규모입니다.",
+        "바비시 총리의 3당 연정은 수신료를 폐지하고 체코 TV·라디오를 국가 예산으로 직접 지원하는 법안을 추진 중이며, 체코 TV 2027년 예산은 57억 코루나로 올해 수신료 수입보다 10억 코루나 적습니다.",
+        "바비시와 연정 측은 언론 통제 의도를 부인하고 야당이 사회를 분열시킨다고 반박했습니다.",
+        "법안은 2차 독회 단계이며 파벨 대통령은 내용과 재원 양면의 독립성 보장이 있어야 한다는 입장입니다."
+      ],
+      "why": "헝가리·슬로바키아에 이어 중부유럽에서 공영방송 재원 구조가 쟁점이 됐고, 남은 입법 절차와 대통령 서명 여부가 확인 지점입니다.",
+      "korea": "",
+      "sources": [
+        { "name": "Balkan Insight – Hundreds of Thousands Protest Czech Government Reforms to Public Media", "url": "https://balkaninsight.com/2026/11/16/hundreds-of-thousands-protest-czech-government-reforms-to-public-media/rd/", "lang": "EN" }
+      ]
+    },
+    {
+      "region": "baltic",
+      "title": "에스토니아, 드론업체 방화 시도에 12월 1일부터 러시아 육로 국경 폐쇄 추진",
+      "countries": ["에스토니아"],
+      "period": "2026-11-14 ~ 11-16",
+      "points": [
+        "ERR에 따르면 14일 탈린 북쪽 비임시의 드론 제조업체 스레오드 시스템스 부지에 침입해 폭발과 화재를 일으키려던 라트비아 국적 8명이 체포됐고, 보안국(KAPO)은 러시아 군 정보기관 GRU의 지시라고 밝혔습니다. 8월 밀렘 로보틱스 대상 시도에 이은 두 번째입니다.",
+        "미할 총리는 15일 동부 국경 폐쇄 준비를 정부에 지시했고, 외교부는 나르바·루할라·코이둘라 육로 검문소를 12월 1일 닫는다고 확인했습니다.",
+        "정부는 다음 주 폐쇄가 임시인지 무기한인지 논의하며, 현재 러시아에 있는 주민과 트럭 운전자는 앞으로 2주간 귀국할 수 있습니다.",
+        "ERR은 보안국이 러시아가 에스토니아 방산업체 약 10곳을 겨냥하고 있다고 밝혔고, 러시아 외무부는 국경 폐쇄 구상을 러시아 혐오라고 비난했다고 전했습니다."
+      ],
+      "why": "나르바는 유럽에서 여행객에게 열려 있던 몇 안 되는 러시아 육로 통로여서 폐쇄 시 국경 도시 경제와 EU 동부 국경 정책에 영향이 큽니다. 철도 검문소는 계획에 언급되지 않았습니다.",
+      "korea": "",
+      "sources": [
+        { "name": "ERR – Estonia to close border crossings with Russia after GRU-linked sabotage attacks", "url": "https://news.err.ee/1610196794/estonia-to-close-border-crossings-with-russia-after-gru-linked-sabotage-attacks", "lang": "EN" },
+        { "name": "ERR – Security service: Russia targeting around 10 Estonian defense companies", "url": "https://news.err.ee/1610197171/security-service-russia-targeting-around-10-estonian-defense-companies", "lang": "EN" },
+        { "name": "LSM – Eight Latvian nationals arrested over suspected Estonia drone arson plot", "url": "https://eng.lsm.lv/article/society/crime/15.11.2026-eight-latvian-nationals-arrested-over-suspected-estonia-drone-arson-plot.a672001/", "lang": "EN" }
+      ]
+    },
+    {
+      "region": "wbalkan",
+      "title": "세르비아, 총선 뒤 구정권 인사 연쇄 체포…개혁 기대와 정치적 의혹 교차",
+      "countries": ["세르비아"],
+      "period": "2026-10-28 ~ 11-16",
+      "points": [
+        "발칸인사이트에 따르면 지난달 선거로 부치치의 진보당 14년 집권이 끝난 뒤, 10월 28일부터 거의 매일 구정부 측 인사가 직권남용·부패 혐의로 체포되고 있습니다.",
+        "10월 28일에는 노비사드 즈마이 고교 교장이 해고 교사 4명 복직 판결 4건을 이행하지 않아 체포됐습니다.",
+        "기사는 체포가 제도 개혁으로 이어질지, 정치적 동기인지 불분명하다고 짚었으며 총 체포 인원은 제시하지 않았습니다. 기사 일부가 유료라 세부 사건은 확인하지 못했습니다."
+      ],
+      "why": "정권 교체 직후 사법 대응이 법치 회복인지 보복인지에 대한 판단이 EU 가입 논의와 국내 정치의 변수입니다. 베오그라드 안보회의가 16~18일 열립니다.",
+      "korea": "",
+      "sources": [
+        { "name": "Balkan Insight – Serbia's Post-Election Wave of Arrests Raises Hopes, But Also Questions", "url": "https://balkaninsight.com/2026/11/16/serbias-post-election-wave-of-arrests-raises-hopes-but-also-questions/bi/", "lang": "EN" }
+      ]
+    },
+    {
+      "region": "sbalkan",
+      "title": "불가리아 정부, 2027년 예산안 승인…재정적자 5.6%에서 3.5%로 축소 목표",
+      "countries": ["불가리아"],
+      "period": "2026-11-16",
+      "points": [
+        "BTA에 따르면 내각은 16일 2027년 국가예산안을 승인했으며, 통합재정 적자를 2026년 예상 GDP 대비 5.6%에서 2027년 3.5%, 2029년 2.4%로 줄이는 계획입니다.",
+        "도네프 재무장관은 EU 이사회의 과도재정적자 절차와 맞춘 틀이라고 설명했고, 신규 채무 한도는 86억 유로(만기 재융자 21억 유로 포함)입니다. 2027년 성장률 2.5%, 물가상승률 4%를 전망합니다.",
+        "라데프 총리는 상당한 적자 속에서도 수년 만에 가장 사회적인 예산이라고 했고, 총리는 신용등급이 하향되지 않았으며 경기침체 전망도 없다고 밝혔습니다. S&P의 전망 조정은 재무장관이 언급했습니다.",
+        "집권 진보불가리아가 240석 중 131석을 가져 통과에 큰 어려움이 없을 것으로 장관은 내다봤고, 법안은 18일 의회에 제출됩니다."
+      ],
+      "why": "유로 도입 직후 재정 건전화와 복지 확대의 균형이 쟁점이며, 의회 독회 과정과 신용평가사 반응이 다음 확인 지점입니다.",
+      "korea": "",
+      "sources": [
+        { "name": "BTA – Government Approves 2027 State Budget Bill, Finance Minister Says It Is Most Social in Years", "url": "https://www.bta.bg/en/news/economy/1247443-government-approves-2027-state-budget-bill-finance-minister-says-it-is-most-soc", "lang": "EN" }
+      ]
+    },
+    {
+      "region": "east",
+      "title": "몰도바 가가우지아 지도자 선거 결선으로…스토이아노글로 38.4%, 친러 후보 24.2%",
+      "countries": ["몰도바"],
+      "period": "2026-11-15 ~ 11-16",
+      "points": [
+        "키이우인디펜던트에 따르면 친러 성향의 자치지역 가가우지아 지도자 선거 1차 투표에서 과반 득표자가 없어 11월 29일 결선이 치러집니다.",
+        "알렉산드르 스토이아노글로가 38.44%, 친러 사회당의 표도르 가가우즈가 24.22%를 얻었습니다.",
+        "이번 선거는 2025년 8월 러시아 자금을 쇼르당에 전달한 혐의로 징역 7년을 선고받은 에브게니아 구툴 지도자의 후임을 뽑는 것입니다."
+      ],
+      "why": "가가우지아는 전통적으로 러시아와 가깝고 EU 통합에 소극적이어서, 결선 결과가 몰도바의 EU 가입 노선과 친러 영향력 약화 여부를 가늠하는 신호입니다.",
+      "korea": "",
+      "sources": [
+        { "name": "Kyiv Independent – Pro-Russian, autonomous Moldovan region to hold runoff elections", "url": "https://kyivindependent.com/pro-russian-autonomous-moldovan-region-to-hold-runoff-elections/", "lang": "EN" }
+      ]
+    }
+  ],
+  "countries": {
+    "폴란드": "최근 48시간 내 새 전개는 제한적입니다. 우크라이나 대사관이 바르샤바 기념물 낙서를 러시아 소행으로 지목하며 폴란드-우크라이나 적대감 조장 시도라고 주장(11/15, 노츠프롬폴란드·키이우인디펜던트).",
+    "체코": "프라하에서 공영방송 재원 개편 반대 집회, 주최 측 추산 40만 명(11/15, 발칸인사이트). 11/15 네이션스리그에서 크로아티아에 1-2 패(Total Croatia News).",
+    "슬로바키아": "최근 48시간 내 주요 보도 확인되지 않음. 직전 배경으로 피초 총리의 우크라이나 차관 분담 거부 입장(11/10)이 있음.",
+    "헝가리": "최근 48시간 내 주요 보도 확인되지 않음. Telex는 접근이 막혀 확인하지 못함. 직전 배경으로 마자르 총리의 EU 예산-우크라이나 지원 연계 반대 입장(11/10)이 있음.",
+    "에스토니아": "GRU 연계 드론업체 방화 시도로 12/1부터 러시아 육로 검문소 폐쇄 추진, 3분기 실업률 7.9%로 상승(11/15~16, ERR).",
+    "라트비아": "연합당·민족동맹이 51석 규모 연정 구성에 합의(11/16), 에스토니아 드론업체 방화 시도 관련 자국민 8명 체포 보도(11/15, LSM).",
+    "리투아니아": "출판사의 히틀러 저서 리투아니아어판 출간 계획에 비판(11/16, LRT). 안보 관련 신규 전개는 확인되지 않음.",
+    "슬로베니아": "최근 48시간 내 주요 보도 확인되지 않음. Sloveniatimes는 접근이 막혀(403) 확인하지 못함.",
+    "크로아티아": "네이션스리그 조 3위로 유로 예선 1포트 확보, 미성년자 카페 에너지드링크 판매 금지 추진(11/15~16, Total Croatia News).",
+    "세르비아": "총선 뒤 구정권 인사 연쇄 체포 분석(11/16, 발칸인사이트), 베오그라드 안보회의 16~18일 개최.",
+    "보스니아 헤르체고비나": "네이션스리그에서 스웨덴에 2-3 패했으나 플레이오프 진출, 새 대무프티 취임, 미확인 전쟁 희생자 2천여 명 유해 재검토 착수(11/15, N1).",
+    "몬테네그로": "EU 가입협상 챕터 14·15·22를 잠정 종결할 예정이며 상주대표부 승인 18일, 정부간회의 19일 예정(11/16, EWB). 현재 23개 챕터 종결 상태입니다.",
+    "코소보": "최근 48시간 내 새 전개는 확인되지 않음. 배경으로 헤이그 재판에서 전 지도부가 유죄 판결을 받은 PDK 쇄신 촉구 분석(11/10, 발칸인사이트).",
+    "알바니아": "언론 단체들이 반SLAPP 법안이 충분히 강하지 않다고 우려(11/16, 발칸인사이트).",
+    "북마케도니아": "최근 48시간 내 주요 보도 확인되지 않음. 직전 배경으로 알타 은행 시장 진입 승인 논란(11/12, EWB).",
+    "불가리아": "2027년 예산안 승인, 흑해 배타적경제수역에서 화물선 침몰 신고(11/16), 보리소프 GERB 대표는 불신임안 추진 안 한다고 밝힘(11/15, BTA).",
+    "우크라이나": "EU가 79억 유로 지급 승인, 러시아는 오데사주 등에 대규모 공습, 우크라이나는 크림대교·러시아 정유시설 타격 주장(11/15~16, 키이우인디펜던트).",
+    "벨라루스": "최근 48시간 내 주요 보도 확인되지 않음. 이번에 조회한 매체에서 벨라루스 관련 신규 기사가 없었음.",
+    "몰도바": "가가우지아 지도자 선거 1차 투표 후 11/29 결선, 스토이아노글로 38.44%(11/16, 키이우인디펜던트).",
+    "루마니아": "최근 48시간 내 큰 신규 전개는 확인되지 않음. RRI는 날짜별 뉴스플래시 목록만 확인했고 본문은 열지 못함. 바이아마레가 2027 유럽 크리스마스 도시로 선정(11/15, BTA)."
+  },
+  "note": "작성 기준: 2026-11-16 저녁(한국시간). Kyiv Independent, Radio Romania International, LSM, LRT, ERR, Notes from Poland, Balkan Insight, BTA, European Western Balkans, Total Croatia News, N1, KOTRA 첫 화면을 확인했고, EU 79억 유로 지급·체코 집회·에스토니아 국경 폐쇄·세르비아 체포·불가리아 예산·가가우지아 선거는 본문을 열어 확인했습니다. Sloveniatimes와 Telex는 접근이 막혔고(403) Expats.cz는 503 오류로 확인하지 못했으며 한국 언론은 조회하지 않았습니다. KOTRA에서는 동유럽 신규 기사가 확인되지 않았습니다. 세르비아 기사는 일부 유료라 세부 사건과 체포 인원을 확인하지 못했고, 몬테네그로 챕터 종결과 에스토니아 국경 폐쇄의 임시·무기한 여부는 아직 확정되지 않았습니다. 가가우지아 기사는 투표일을 11월 16일로 적었으나 보도 시점 기준 첫 투표 결과로만 서술했습니다. 출처 표시: KR = 한국 언론, KOTRA = KOTRA 해외시장뉴스, EN = 해외 매체."
+}
