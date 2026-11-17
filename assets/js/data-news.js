@@ -1,6 +1,197 @@
 /* 원본: _news-data/*.json (최신순, _tools/build-news.mjs로 생성) */
 window.NEWS_DATA=[
     {
+        "date": "2026-11-17",
+        "home": [
+            0,
+            1,
+            5
+        ],
+        "overview": "17일 새벽 러시아가 우크라이나 전역에 탄도미사일 공격을 가해 키이우의 드니프로강 교량 2곳이 타격을 받았고, 우크라이나는 크림대교 일부 구간을 무너뜨렸다고 밝혔습니다. 프라하 중앙역 인근에서는 열차 두 대가 충돌해 수십 명이 다쳤고, 루마니아는 세계은행 산하 중재에서 로시아 몬타나 금광 사건 최종 승소를 거뒀습니다. 세르비아 새 의회가 개원했고, 불가리아 연안에서는 LPG 운반선이 침몰했으며, 리투아니아에는 미군 대대 2개가 도착했습니다.",
+        "stories": [
+            {
+                "region": "top",
+                "title": "러, 키이우 교량 2곳 탄도미사일 타격…우크라이나는 크림대교 일부 붕괴 주장",
+                "countries": [
+                    "우크라이나"
+                ],
+                "period": "2026-11-16 ~ 11-17",
+                "points": [
+                    "키이우인디펜던트에 따르면 17일 새벽 러시아의 대규모 탄도미사일 공격으로 키이우 드니프로강의 북부·남부 교량이 피격됐고, 클리치코 시장은 두 교량 모두 교통이 전면 통제됐으며 일부 지역에서 난방·급수에 차질이 생겼다고 밝혔습니다.",
+                    "국가비상사태국은 키이우 오볼론스키구에서 2명이 숨졌다고 발표했으나 미사일 때문인지 이후 드론 경보 중인지는 불분명하고, 스밀라에서 3명이 다쳤으며 자포리자·하르키우 등도 피격됐습니다.",
+                    "젤렌스키 대통령은 크림대교 구간 붕괴가 수주에 걸친 작전의 일곱 번째 단계라고 밝혔고, 러시아 교통부는 도로·철도 운행 중단을 확인하면서 사상자는 없다고 했습니다. 러시아는 테러 공격으로 규정하고 정부위원회를 꾸렸습니다.",
+                    "한 군사 전문가는 복구에 최소 수개월에서 1년 이상 걸릴 것으로 내다봤습니다. 기사는 속보로 계속 갱신 중이며 수치는 바뀔 수 있습니다."
+                ],
+                "why": "크림반도 보급 경로와 키이우 도심 물류가 동시에 흔들린 사건으로, 러시아의 추가 보복과 우크라이나의 후속 타격 여부가 다음 확인 지점입니다.",
+                "korea": "",
+                "sources": [
+                    {
+                        "name": "Kyiv Independent – Entire section of Crimean Bridge collapses after seven-phase operation, Zelensky reveals",
+                        "url": "https://kyivindependent.com/ukrainian-forces-reportedly-strike-crimean-bridge-after-russian-missiles-hit-kyiv-bridges/",
+                        "lang": "EN"
+                    },
+                    {
+                        "name": "Kyiv Independent – 2 key bridges in Kyiv struck in massive Russian ballistic missile attack across Ukraine",
+                        "url": "https://kyivindependent.com/key-bridges-in-kyiv-struck-in-massive-russian-ballistic-missile-attack-across-ukraine/",
+                        "lang": "EN"
+                    }
+                ]
+            },
+            {
+                "region": "v4",
+                "title": "프라하 중앙역 인근에서 여객열차 2대 충돌…수십 명 부상, 일부 중상",
+                "countries": [
+                    "체코"
+                ],
+                "period": "2026-11-17",
+                "points": [
+                    "Expats.cz에 따르면 17일 화요일 오전 7시경 프라하 3구 자이페르토바 거리 위 철교, 프라하 중앙역 인근에서 여객열차 두 대가 충돌했습니다.",
+                    "프라하 구급대는 수십 명이 다쳤고 그중 일부는 생명을 위협하는 중상으로 병원에 이송됐다고 밝혔습니다. 대부분은 경상으로 전해졌고 최종 집계는 확정되지 않았습니다.",
+                    "구조 당국은 열차가 저속으로 달리고 있었다고 설명했으며 사고 원인은 아직 확인되지 않았습니다.",
+                    "프라하 중앙역과 비소차니·리베니 구간 운행이 중단됐고 체코철도(ČD)는 차질이 오전 11시까지 이어질 수 있다고 잠정 공지했습니다."
+                ],
+                "why": "수도 핵심 철도축의 사고로 원인 조사 결과(신호·인적 요인 등)와 운행 정상화 시점이 다음 확인 지점입니다.",
+                "korea": "",
+                "sources": [
+                    {
+                        "name": "Expats.cz – Dozens injured as two trains collide near Prague's main railway station",
+                        "url": "https://www.expats.cz/czech-news/article/dozens-injured-as-two-trains-collide-near-prague-s-main-railway-station",
+                        "lang": "EN"
+                    }
+                ]
+            },
+            {
+                "region": "baltic",
+                "title": "미 육군 대대 2개 리투아니아 도착…리투아니아는 미국에 상설 기지 제안",
+                "countries": [
+                    "리투아니아"
+                ],
+                "period": "2026-11-16",
+                "points": [
+                    "LRT에 따르면 16일 빌뉴스 인근 파브라데 훈련장에 미 육군 제1보병사단 소속 중기갑 대대와 공병 대대가 도착했습니다. 병력 수는 기사에 명시돼 있지 않습니다.",
+                    "카우나스 국방장관은 동맹군의 지속적 주둔이 중요한 억제력이라고 말했습니다. 올여름 미국의 유럽 주둔 재검토 때 리투아니아의 미군은 100명을 조금 넘는 수준이었고, 2개 대대 배치는 9월에 발표됐습니다.",
+                    "LRT는 같은 날 국방장관이 미국에 상설 군사기지 설치 제안서를 제출했고, 나우세다 대통령은 에스토니아 사건을 계기로 러시아 국경 폐쇄를 검토할 수 있다고 밝혔다고 전했습니다.",
+                    "훈련장 인프라와 주둔국 지원에 2030년까지 5,500만 유로 이상이 추가 계획돼 있습니다."
+                ],
+                "why": "미국의 유럽 주둔 축소 논의 속에서 발트 동부 억제력이 보강되는 흐름이며, 상설기지 제안에 대한 미국의 답과 러시아 국경 조치가 확인 지점입니다.",
+                "korea": "",
+                "sources": [
+                    {
+                        "name": "LRT – Two new US Army battalions arrive in Lithuania for NATO's eastern flank deployment",
+                        "url": "https://www.lrt.lt/en/news-in-english/19/3116184/two-new-us-army-battalions-arrive-in-lithuania-for-nato-s-eastern-flank-deployment",
+                        "lang": "EN"
+                    },
+                    {
+                        "name": "LRT – Lithuania submits proposal to US for permanent military base",
+                        "url": "https://www.lrt.lt/en/news-in-english/19/3116117/lithuania-submits-proposal-to-us-for-permanent-military-base",
+                        "lang": "EN"
+                    },
+                    {
+                        "name": "LRT – Nauseda: Lithuania may consider closing border with Russia following plot in Estonia",
+                        "url": "https://www.lrt.lt/en/news-in-english/19/3116219/nauseda-lithuania-may-consider-closing-border-with-russia-following-plot-in-estonia",
+                        "lang": "EN"
+                    }
+                ]
+            },
+            {
+                "region": "wbalkan",
+                "title": "세르비아 새 의회 개원…학생명단 140석으로 단독 과반",
+                "countries": [
+                    "세르비아"
+                ],
+                "period": "2026-11-17",
+                "points": [
+                    "발칸인사이트에 따르면 17일 총선 뒤 첫 구성 회의가 열렸습니다. 250석 중 학생명단이 140석, 집권 14년의 세르비아진보당이 103석(직전 129석), 소수민족 정당이 7석입니다.",
+                    "기사 시점에는 의장이 아직 선출되지 않아 최고령 의원이 회의를 주재했고, 이날 의원 자격 확인과 의장·부의장 선출 등이 예정돼 있었습니다.",
+                    "학생 대표단의 방청 요청이 사무총장 결정으로 거부되자 학생 측은 의회 밖 집회를 계속하겠다고 밝혔습니다.",
+                    "의회 구성일로부터 90일 안에 정부를 구성하지 못하면 대통령이 의회를 해산합니다. 투표율은 68.9%로 역대 최고였습니다."
+                ],
+                "why": "정권 교체 이후 새 정부 구성과 EU 확대 논의 재개의 출발점으로, 의장 선출과 총리 지명 일정이 다음 확인 지점입니다.",
+                "korea": "",
+                "sources": [
+                    {
+                        "name": "Balkan Insight – Serbia's New Parliament Convenes After Historic Election",
+                        "url": "https://balkaninsight.com/2026/11/17/serbias-new-parliament-convenes-after-historic-election/bi/",
+                        "lang": "EN"
+                    }
+                ]
+            },
+            {
+                "region": "sbalkan",
+                "title": "불가리아 흑해 연안서 LPG 운반선 가스 허스키 침몰…구조 작전",
+                "countries": [
+                    "불가리아"
+                ],
+                "period": "2026-11-16 ~ 11-17",
+                "points": [
+                    "BTA에 따르면 LPG 운반선 가스 허스키가 17일 자정 직후 레이더에서 사라졌고, 오전 8시 2분 비상 부표가 작동해 침몰 신호가 확인됐습니다. 위치는 바랴 마을 동쪽 약 50해리 해상입니다.",
+                    "국방부는 공군 Su-25가 발칙에서 출동해 구명정을 투하했고 쿠거 헬기가 구조 대기에 들어갔다고 밝혔습니다. 승선 인원과 인명 피해는 기사에 나오지 않았고 침몰 원인도 언급되지 않았습니다.",
+                    "전날 16일에는 소말리아 선적 화물선이 불가리아 흑해에서 침몰해 승무원 12명이 모두 구조됐으며 키이우인디펜던트는 드론 공격 보도가 있었다고 전했습니다.",
+                    "BTA는 당국이 최근 배타적경제수역 선박 사고에서 드론 공격을 언급했으나 가해 측에 대한 공식 발표는 없다고 전했습니다."
+                ],
+                "why": "NATO·EU 회원국 연안에서 연이은 선박 침몰이어서 원인 규명과 흑해 항행 안전 대응이 확인 지점입니다.",
+                "korea": "",
+                "sources": [
+                    {
+                        "name": "BTA – LPG Tanker Gas Husky Sinks Near Bulgarian Coast",
+                        "url": "https://www.bta.bg/en/news/bulgaria/1248291-lpg-tanker-gas-husky-sinks-near-bulgarian-coast",
+                        "lang": "EN"
+                    },
+                    {
+                        "name": "Kyiv Independent – Cargo ship sinks in Bulgaria's Black Sea after reported drone attack, all 12 crew rescued",
+                        "url": "https://kyivindependent.com/cargo-ship-sinks-in-bulgarias-black-sea-after-reported-drone-attack-all-12-crew-rescued/",
+                        "lang": "EN"
+                    }
+                ]
+            },
+            {
+                "region": "east",
+                "title": "루마니아, 로시아 몬타나 금광 중재 최종 승소…청구액 약 65억 달러",
+                "countries": [
+                    "루마니아"
+                ],
+                "period": "2026-11-16",
+                "points": [
+                    "RRI에 따르면 세계은행 산하 중재위원회는 캐나다 기업 가브리엘 리소시스가 2024년 3월 루마니아에 유리하게 내려진 판정의 취소를 구한 신청을 기각하고 절차 비용을 청구인 부담으로 했습니다.",
+                    "RRI는 청구액을 6.5 billion 달러로 전했고, 루마니아 역대 국제중재 사상 최대 금전 청구이며 2026년 추정 GDP의 약 1.5%라고 설명했습니다.",
+                    "나자레 재무장관은 지속적인 제도·법적 노력의 결과라고 했고, 니쿠쇼르 단 대통령은 사업이 심각하게 불법적이었다고 주장했습니다. 총리는 국가가 이익을 지킬 능력을 보여줬다고 말했습니다."
+                ],
+                "why": "2015년 시작된 장기 분쟁이 루마니아에 유리하게 종결돼 배상 부담이 사라졌고, 투자자 보호 논란과 금광 개발 재추진 여부가 후속 쟁점입니다.",
+                "korea": "",
+                "sources": [
+                    {
+                        "name": "RRI – Romania wins legal battle over Roșia Montană",
+                        "url": "https://www.rri.ro/en/news-and-current-affairs/today-in-the-news/romania-wins-legal-battle-over-rosia-montana-id1084071.html",
+                        "lang": "EN"
+                    }
+                ]
+            }
+        ],
+        "countries": {
+            "폴란드": "네오나치 성향 청소년들이 테러 음모 혐의로 체포됨(11/16, 노츠프롬폴란드). 크라쿠프 성당이 총격 가해자를 위한 미사를 열어 논란, 해당 성당은 범죄 정당화가 아니라고 해명(11/16).",
+            "체코": "프라하 중앙역 인근에서 여객열차 2대 충돌, 수십 명 부상(11/17, Expats.cz). 11/17 벨벳혁명 기념행사 안내, 식량 기부 운동 사상 최대 800톤 모금.",
+            "슬로바키아": "최근 48시간 내 주요 보도 확인되지 않음. 직전 배경으로 피초 총리의 우크라이나 차관 분담 거부 입장(11/10)이 있음.",
+            "헝가리": "최근 48시간 내 주요 보도 확인되지 않음. Telex는 접근이 막혀(403) 확인하지 못함. 직전 배경으로 마자르 총리의 EU 예산-우크라이나 지원 연계 반대 입장(11/10)이 있음.",
+            "에스토니아": "GRU 연계 방화 시도 이후 12/1 러시아 육로 검문소 폐쇄 추진 관련, 보안국은 러시아가 방산업체 약 10곳을 겨냥한다고 밝혔고 나르바 시장은 인도적·경제적 영향을 우려(11/16, ERR). 여론조사에서 사민당이 이사모아를 앞서고 개혁당 지지는 9%.",
+            "라트비아": "쿨베르그스 총리가 새 내각 구성을 확정하고 기후에너지부 폐지를 검토(11/16~17, LSM). 통합리스트와 국민연합이 연정 구성에 합의.",
+            "리투아니아": "미군 대대 2개 도착, 미국에 상설기지 제안(11/16, LRT). 교사들이 임금 분쟁으로 전국 파업에 돌입, 내무장관은 EU 연대 메커니즘에 따른 이주민 수용을 거부.",
+            "슬로베니아": "최근 48시간 내 주요 보도 확인되지 않음. Sloveniatimes는 접근이 막혀(403) 확인하지 못함.",
+            "크로아티아": "부코바르가 10만 명 이상 방문 인파에 대비 중이고 실종자 가족 관련 보도(11/16, Total Croatia News). 상점 가격 표시 의무가 상시 규정으로 도입됨.",
+            "세르비아": "새 의회 개원, 학생명단 140석 단독 과반(11/17, 발칸인사이트). 학생 활동가의 망명 생활 종료 인터뷰 등 후속 보도.",
+            "보스니아 헤르체고비나": "새 대통령단이 2026~2030년 임기를 시작(11/16~17, N1·발칸인사이트). RS 대통령은 미니치로 교체되고 6개 정당이 연정 협약에 서명, 연방 2027 최저임금 협상은 노조 반대로 교착.",
+            "몬테네그로": "EU 가입협상 챕터 3개 추가 종결 예정, 폰 데어 라이엔 위원장은 몬테네그로가 협상 종결을 눈앞에 두고 있다고 평가(11/16, EWB).",
+            "코소보": "타치 전 대통령의 사법방해 혐의 두 번째 재판이 종결에 가까워졌고(11/16, 발칸인사이트), 마르타 코스 위원은 브뤼셀 행사에서 코소보 관련 세르비아 민족주의 노래가 불린 데 유감을 표명.",
+            "알바니아": "양대 정당 구도에 도전하는 항의 시위가 2027년 지방선거를 앞두고 확산(11/17, 발칸인사이트). 반SLAPP 법안이 약하다는 우려도 있음.",
+            "북마케도니아": "총리가 추가 헌법 개정에 시민 피로가 크다고 발언(11/16, BTA), 올해 일곱 번째 여성살해 의심 사건 이후 판사가 예방 강화 촉구(11/17, 발칸인사이트).",
+            "불가리아": "LPG 운반선 가스 허스키 침몰, 승무원 수색·구조 진행(11/17, BTA). 부총리 도네프는 투자자에게 예측 가능한 환경이 핵심이라고 밝혔고 주미 대사로 밀코프 지명 예정.",
+            "우크라이나": "키이우 교량 2곳 피격과 크림대교 붕괴 주장(11/17, 키이우인디펜던트). 센스뱅크는 자금세탁 연루 CEO를 해임했고, 에스토니아가 기관차 70여 대 지원을 계획 중.",
+            "벨라루스": "최근 48시간 내 주요 보도 확인되지 않음. 이번에 조회한 매체에서 벨라루스 관련 신규 기사가 확인되지 않았음.",
+            "몰도바": "최근 48시간 내 새 전개는 확인되지 않음. 배경으로 가가우지아 지도자 선거 결선이 11/29 예정(키이우인디펜던트, 11/16).",
+            "루마니아": "로시아 몬타나 금광 중재에서 최종 승소(11/16, RRI). 크리스티안 문주 감독의 영화 Fjord가 유럽영화상 5개 부문 후보, 하지 감독이 대표팀 복귀 후 첫 승리."
+        },
+        "note": "작성 기준: 2026-11-17 저녁(한국시간). Kyiv Independent, Radio Romania International, LSM, LRT, ERR, Notes from Poland, Balkan Insight, BTA, European Western Balkans, Expats.cz, Total Croatia News, N1 첫 화면을 확인했고, 키이우 교량·크림대교, 프라하 열차 충돌, 로시아 몬타나, 리투아니아 미군, 세르비아 의회, 가스 허스키 침몰은 본문을 열어 확인했습니다. Sloveniatimes와 Telex는 접근이 막혔고(403) KOTRA 첫 화면에는 동유럽 신규 기사가 없었으며 한국 언론은 조회하지 않았습니다. 키이우·크림대교 기사는 속보로 갱신 중이며 키이우 사망자 2명의 원인은 불분명하고 크림대교 피해는 우크라이나·러시아 측 발표 기준입니다. 프라하 열차 사고의 부상자 수와 원인, 가스 허스키 승무원 안위와 침몰 원인은 확인되지 않았습니다. 로시아 몬타나 청구액은 RRI 표기(6.5 billion 달러)를 따랐습니다. 출처 표시: KR = 한국 언론, KOTRA = KOTRA 해외시장뉴스, EN = 해외 매체."
+    },
+    {
         "date": "2026-11-16",
         "home": [
             0,
