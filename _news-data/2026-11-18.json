@@ -1,0 +1,139 @@
+{
+  "date": "2026-11-18",
+  "home": [0, 2, 4],
+  "overview": "EU 집행위가 우크라이나에 2027년 450억 유로 추가 대출을 제안할 예정이고, 미 국방차관의 심층 타격 비판에 독일·영국이 반박했습니다. 에스토니아는 GRU 연계 방화 시도 뒤 12월 1일부터 러시아 접경 검문소 3곳을 닫기로 했고, 코소보 특별재판소는 타치 전 대통령에게 사법방해로 징역 17개월을 선고했습니다. 폴란드에서는 헌법재판소 지도부 분쟁 속에 중앙은행이 재판소 계좌 이체를 동결했고, 루마니아에서는 규모 5.7 지진이 발생했습니다.",
+  "stories": [
+    {
+      "region": "top",
+      "title": "EU, 우크라이나에 2027년 450억 유로 추가 대출 제안…미 국방차관 ‘심층 타격 효과 없다’ 발언에 독일·영국 반박",
+      "countries": ["우크라이나"],
+      "period": "2026-11-17 ~ 11-18",
+      "points": [
+        "키이우인디펜던트가 입수한 초안에 따르면 유럽집행위는 18일 우크라이나에 2027년 450억 유로 규모 대출을 제안할 예정입니다. 250억 유로는 방위산업, 200억 유로는 거시금융지원과 우크라이나 시설 지원에 쓰이며 EU 예산 여유분이 보증합니다.",
+        "대출은 러시아 배상금을 받은 뒤에만 상환하는 조건이며, 11월 26~27일 유럽이사회에서 논의해 12월 17~18일 정상회의에서 합의하는 것이 목표입니다. 젤렌스키 대통령이 말한 2027년 700억 유로 부족분 중 약 250억 유로는 여전히 메워지지 않는 것으로 보도됐습니다.",
+        "17일 브뤼셀 우크라이나방위연락그룹 회의에서 콜비 미 국방차관은 우크라이나의 러시아 내 심층 타격이 전쟁 종식에 효과적이지 않았다고 말했고, 피스토리우스 독일 국방장관은 ‘어리석은 소리’라며, 스트리팅 영국 국방장관은 타격이 러시아 군사력을 약화시켰다며 반박했습니다.",
+        "18일에는 오데사 도심 드론 공격으로 3명이 숨졌다는 보도(BTA)와 하르키우주 시장 공격으로 최소 11명 부상 보도(키이우인디펜던트)가 이어졌습니다."
+      ],
+      "why": "미국이 신규 무기 지원 직접 재원을 중단한 가운데 EU가 재정 공백을 메우려는 움직임이며, 11월 말 유럽이사회 논의와 미국·유럽 간 전략 이견이 다음 확인 지점입니다.",
+      "korea": "",
+      "sources": [
+        { "name": "Kyiv Independent – Exclusive: EU proposes additional 45 billion euros for Ukraine", "url": "https://kyivindependent.com/exclusive-eu-proposes-additional-45-billion-euros-for-ukraine-seeks-to-incentivize-allies-to-step-up/", "lang": "EN" },
+        { "name": "Kyiv Independent – Germany, UK push back after US criticizes Ukraine's deep strikes into Russia", "url": "https://kyivindependent.com/germany-uk-push-back-after-us-criticizes-ukraines-deep-strikes-into-russia/", "lang": "EN" },
+        { "name": "BTA – Three killed, several injured in drone attack in central Odesa", "url": "https://www.bta.bg/en/news/world/1249098-three-killed-several-injured-in-drone-attack-in-central-odesa", "lang": "EN" }
+      ]
+    },
+    {
+      "region": "v4",
+      "title": "폴란드 중앙은행, 헌법재판소 계좌 이체 동결…지도부 분쟁 격화",
+      "countries": ["폴란드"],
+      "period": "2026-11-16 ~ 11-17",
+      "points": [
+        "노츠프롬폴란드에 따르면 폴란드 중앙은행(NBP)은 16일 서로 상충하는 서류가 제출됐다며 헌법재판소 계좌의 출금 이체를 동결했고, 재판소를 누가 통제할지 결정할 권한이 없다고 밝혔습니다.",
+        "올해 집권 다수당이 선출한 판사 8명이 재판소를 장악하고 슈비엥츠코프스키 재판소장과 부소장을 직무정지한 반면, 나브로츠키 대통령은 그중 5명의 선서를 받지 않았습니다. 재판소장은 이를 불법 쿠데타라고 부릅니다.",
+        "대법원은 10일 직무정지를 취소했지만 그 효력은 다툼이 있고, 도만스키 재무장관은 정부가 재판소 재원 마련 방안을 모두 검토하겠다고, 주레크 법무장관은 NBP가 기존 체제를 지키려 한다고 비판했습니다.",
+        "투스크 정부는 2023년 집권 이후 PiS 시기 임명이 위법이라며 헌법재판소의 정통성을 인정하지 않고 있습니다."
+      ],
+      "why": "사법 정통성 분쟁이 재정 문제로 번진 사례로, 징계 절차 진행과 정부의 재원 대책이 다음 확인 지점입니다.",
+      "korea": "",
+      "sources": [
+        { "name": "Notes from Poland – Poland's central bank freezes Constitutional Court's accounts amid leadership dispute", "url": "https://notesfrompoland.com/2026/11/17/polands-central-bank-freezes-constitutional-courts-accounts-amid-leadership-dispute/", "lang": "EN" }
+      ]
+    },
+    {
+      "region": "baltic",
+      "title": "에스토니아, 12월 1일부터 러시아 접경 검문소 3곳 폐쇄…GRU 연계 방화 시도 대응",
+      "countries": ["에스토니아"],
+      "period": "2026-11-15 ~ 11-18",
+      "points": [
+        "ERR에 따르면 에스토니아는 드론 업체 스레오드 시스템스에 대한 방화 시도(GRU 연계로 지목, 8명 구금)를 계기로 12월 1일부터 러시아 접경 검문소 3곳을 닫기로 했습니다. 기사에 룩 하무아와 코이둘라가 명시됐고 세 번째는 확인되지 않았습니다.",
+        "버스와 화물차 통행이 멈춥니다. 에콜라인스는 탈린–상트페테르부르크·모스크바 노선을 하루 1회씩 운행하며, 룩스 익스프레스는 12월 1일 이후 승차권 2,000여 장이 팔렸다고 전해졌습니다. 해당 검문소의 화물차는 하루 10대 미만입니다.",
+        "차히크나 외무장관은 러시아의 강한 반응이 압박이 통하고 있다는 증거라고 말했습니다. 보안국은 러시아가 에스토니아 방산업체 약 10곳을 겨냥한다고 밝혔고, 나르바 시장은 인도적·경제적 영향을 우려했습니다.",
+        "에스토니아는 라트비아에도 러시아 국경 폐쇄를 요청했으나 라트비아는 아직 결정하지 않았습니다."
+      ],
+      "why": "NATO 동부 측면에서 러시아 접경을 실제로 닫는 첫 사례급 조치로, 라트비아·리투아니아의 동조 여부와 러시아의 대응이 다음 확인 지점입니다.",
+      "korea": "",
+      "sources": [
+        { "name": "ERR – Estonia's eastern border closure will stop bus and truck traffic to Russia", "url": "https://news.err.ee/1610198117/estonia-s-eastern-border-closure-will-stop-bus-and-truck-traffic-to-russia", "lang": "EN" },
+        { "name": "ERR – Estonia to close border crossings with Russia after GRU-linked sabotage attacks", "url": "https://news.err.ee/1610196794/estonia-to-close-border-crossings-with-russia-after-gru-linked-sabotage-attacks", "lang": "EN" }
+      ]
+    },
+    {
+      "region": "wbalkan",
+      "title": "보스니아 새 대통령단 취임…스릅스카공화국은 미니치 대통령 체제",
+      "countries": ["보스니아 헤르체고비나"],
+      "period": "2026-11-16 ~ 11-17",
+      "points": [
+        "유럽웨스턴발칸과 N1에 따르면 보스니아 헤르체고비나 대통령단이 17일 공식 취임했고 임기는 2030년까지입니다. N1은 안정과 개혁을 촉구하는 목소리 속에 사라예보에서 취임했다고 전했습니다.",
+        "N1은 16일 사보 미니치가 시니샤 카란에게서 스릅스카공화국 대통령직을 공식 인계받았고, 스테반디치가 의원 52명의 지지로 스릅스카 국민의회 의장에 재선됐으며 스릅스카 6개 정당 대표가 연정 협약에 서명했다고 보도했습니다.",
+        "연방 정부의 2027년 최저임금 제안은 노조 반대로 협상이 교착 상태입니다. 이 부분은 N1 헤드라인 기준이며 본문은 확인하지 못했습니다."
+      ],
+      "why": "새 임기의 출발점으로, 스릅스카공화국 연정의 대(對)중앙정부 노선과 EU 개혁 이행이 다음 확인 지점입니다.",
+      "korea": "",
+      "sources": [
+        { "name": "European Western Balkans – Members of BiH's Presidency officially take office", "url": "https://europeanwesternbalkans.com/2026/11/17/members-of-bihs-presidency-officially-take-office/", "lang": "EN" },
+        { "name": "N1 – New Bosnia Presidency takes office in Sarajevo amid calls for stability and reform", "url": "https://n1info.ba/english/news/new-bosnia-presidency-takes-office-in-sarajevo-amid-calls-for-stability-and-reform/", "lang": "EN" },
+        { "name": "N1 – Savo Minic formally takes office as RS entity president from Sinisa Karan", "url": "https://n1info.ba/english/news/savo-minic-formally-takes-office-as-rs-entity-president-from-sinisa-karan/", "lang": "EN" }
+      ]
+    },
+    {
+      "region": "sbalkan",
+      "title": "코소보 특별재판소, 타치 전 대통령에 사법방해 징역 17개월 선고",
+      "countries": ["코소보"],
+      "period": "2026-11-17",
+      "points": [
+        "유럽웨스턴발칸에 따르면 헤이그 코소보 특별재판소는 17일 하심 타치에게 사법방해 등 혐의로 징역 17개월을 선고했습니다. 이미 전쟁범죄 본안에서 25년형을 복역 중이며, 이 형은 본안 판결이 항소심에서 유지된 뒤에 집행됩니다.",
+        "공범 격인 스마카이와 파즐리우는 각 12개월, 쿠치는 1개월 집행유예가 선고됐고 킬라이는 증거 불충분으로 무죄였습니다. 이들은 면회 때 재판 정보와 증인 신원을 흘리고 증언 방식을 전달하도록 한 혐의로, 판결은 항소할 수 있습니다.",
+        "재판소 앞에서는 정치인과 KLA 참전용사, 유족이 참여한 항의 시위가 있었습니다. 코소보 의회는 10월 5일 재판소 권한을 제한하는 개정안을 1차로 가결했으나 국제 파트너가 반대했고 시로카풀라 대통령이 돌려보냈으며, 11월 13일 표결은 정족수 부족으로 무산됐습니다.",
+        "발칸인사이트는 세르비아 법원이 2023년 바냐 총격 사건 수사와 관련해 라도이치치 체포영장 발부를 경찰에 요청했다고 전했습니다."
+      ],
+      "why": "코소보 내부의 특별재판소 권한 축소 시도와 서방의 반대가 맞부딪치는 시점의 판결로, 의회 개정안 재논의가 다음 확인 지점입니다.",
+      "korea": "",
+      "sources": [
+        { "name": "European Western Balkans – Thaçi sentenced to 17 months in prison for obstructing justice", "url": "https://europeanwesternbalkans.com/2026/11/17/thaci-sentenced-to-17-months-in-prison-for-obstructing-justice/", "lang": "EN" },
+        { "name": "Balkan Insight – Serbian Court Seeks Arrest of Kosovo Serb Kingpin Radoicic", "url": "https://balkaninsight.com/2026/11/17/serbian-court-seeks-arrest-of-kosovo-serb-kingpin-radoicic/bi/", "lang": "EN" }
+      ]
+    },
+    {
+      "region": "east",
+      "title": "루마니아 브란체아 인근 규모 5.7 지진…수년래 최강, 몰도바·우크라이나서도 진동",
+      "countries": ["루마니아"],
+      "period": "2026-11-18",
+      "points": [
+        "키이우인디펜던트는 루마니아 지구물리연구소를 인용해 18일 새벽 규모 5.7 지진이 깊이 약 120km에서 발생했다고 전했습니다. BTA는 브랜체아(Vrancea) 지진대에서 났고 불가리아 북부에서도 느껴졌다고 보도했습니다.",
+        "구조적 피해는 보고되지 않았고, 응급당국은 공황 증상 관련 구급 요청과 경상 몇 건에 대응했습니다.",
+        "진동은 루마니아, 몰도바, 우크라이나의 키이우·오데사·폴타바 등에서 감지됐습니다.",
+        "같은 날 RRI는 루마니아 물가가 에너지·연료 가격 탓에 높은 수준을 유지한다는 인플레이션 보고서와 흑해 안보 위험 관련 기사를 실었습니다."
+      ],
+      "why": "브란체아는 지진 위험이 큰 지대로 여진과 피해 점검, 노후 건물 안전 논의가 다음 확인 지점입니다.",
+      "korea": "",
+      "sources": [
+        { "name": "Kyiv Independent – Strongest earthquake in years hits Romania, tremors felt in Ukraine", "url": "https://kyivindependent.com/strongest-earthquake-in-years-hits-romania-tremors-felt-in-ukraine/", "lang": "EN" },
+        { "name": "BTA – Magnitude 5.7 earthquake hits Romania's Vrancea seismic zone", "url": "https://www.bta.bg/en/news/bulgaria/1248963-magnitude-5-7-earthquake-hits-romania-s-vrancea-seismic-zone-felt-in-northern-b", "lang": "EN" },
+        { "name": "RRI – Report on inflation", "url": "https://www.rri.ro/en/news-and-current-affairs/today-in-the-news/report-on-inflation-2-id1084451.html", "lang": "EN" }
+      ]
+    }
+  ],
+  "countries": {
+    "폴란드": "중앙은행이 헌법재판소 계좌 이체를 동결하고 정부는 소비자 가스 가격 상한제 도입을 추진(11/17, 노츠프롬폴란드).",
+    "체코": "프라하 열차 충돌 사고는 부상자 46명으로 집계됐고 경찰이 과실 가능성을 수사 중(11/18, Expats.cz). 외무장관은 주이스라엘 대사관 예루살렘 이전 가능성을 언급.",
+    "슬로바키아": "최근 48시간 내 주요 보도 확인되지 않음. 이번에 조회한 매체에서 슬로바키아 관련 신규 기사가 확인되지 않았음.",
+    "헝가리": "텔렉스는 외무부가 베트남 주재 영사에게 오르반 총리 관련 인사 회사들의 비자 처리를 서두르라고 지시했다는 이메일이 공개됐고 총리실은 명예훼손이라며 반발했다고 보도(11/18, Telex).",
+    "에스토니아": "12월 1일부터 러시아 접경 검문소 3곳 폐쇄 추진, 라트비아 국경 통제 도입 비용 추산도 발표(11/17~18, ERR·LSM). 축구 대표팀이 불가리아를 2-1로 꺾음.",
+    "라트비아": "의회가 쿨베르그스 새 정부를 최종 승인(11/17, LSM). 18일은 독립기념일, 에스토니아가 라트비아 국경 통제 비용을 추산함.",
+    "리투아니아": "유럽집행위가 성장률 전망을 2.7%로 낮추고 물가 전망을 5.1%로 올림(11/17, LRT). 군 수장이 칼리닌그라드 국경 물리적 장벽을 제안하고 미군 도착 후 안보 우려가 줄었다고 밝힘.",
+    "슬로베니아": "최근 48시간 내 주요 보도 확인되지 않음. Sloveniatimes는 접근이 막혀(403) 확인하지 못함.",
+    "크로아티아": "부코바르 함락 35주년 관련 기사가 이어짐(11/17~18, Total Croatia News·발칸인사이트). 상점 가격표시 의무가 상시화됨.",
+    "세르비아": "법원이 코소보 세르비아계 인사 라도이치치 체포영장을 경찰에 요청(11/17, 발칸인사이트). 17일 개원한 새 의회의 의장 선출 등 후속 일정이 남음.",
+    "보스니아 헤르체고비나": "새 대통령단 취임, 미니치가 스릅스카공화국 대통령직 인계(11/16~17, N1). UN 재판소가 밀로셰비치 조기 석방 신청을 기각.",
+    "몬테네그로": "폰 데어 라이엔 위원장이 몬테네그로 EU 가입협상이 막바지에 이르렀다고 평가(11/16, EWB). 최근 48시간 내 새 전개는 확인되지 않음.",
+    "코소보": "특별재판소가 타치 전 대통령에게 징역 17개월 선고(11/17, EWB). 발칸인사이트는 인프라 전략 비판 기사를 게재(11/18).",
+    "알바니아": "양대 정당 구도에 맞선 항의 시위가 2027년 선거를 앞두고 확산(11/17, 발칸인사이트). 폰 데어 라이엔 위원장은 알바니아의 뚜렷한 진전을 평가(11/16).",
+    "북마케도니아": "올해 일곱 번째 여성살해 의심 사건 이후 판사가 예방 강화를 촉구(11/17, 발칸인사이트). BTA는 불가리아 국경 스트루미아니–베로보 신규 검문소 착공이 2027년 10월로 예상된다고 보도.",
+    "불가리아": "LPG 운반선 가스 허스키 승무원 19명 전원 구조, 정부는 EU·NATO에 지원을 요청하고 흑해 상선 공격 중단 협의를 추진(11/17, BTA). 2027 예산안에 배터리 저장 사업자 5% 부담금 등 논란.",
+    "우크라이나": "EU 450억 유로 추가 대출 제안, 미국 국방차관의 심층 타격 비판과 독일·영국 반박(11/17~18, 키이우인디펜던트). 오데사 도심 드론 공격으로 3명 사망(BTA).",
+    "벨라루스": "최근 48시간 내 주요 보도 확인되지 않음. 이번에 조회한 매체에서 벨라루스 관련 신규 기사가 확인되지 않았음.",
+    "몰도바": "러시아의 대우크라이나 공격 중 드론 7대가 몰도바 영공을 침범하고 1대는 키시너우 상공에서 목격됨(11/17, 키이우인디펜던트). 루마니아 지진 진동도 감지됨.",
+    "루마니아": "브란체아 지진대에서 규모 5.7 지진, 구조적 피해 보고 없음(11/18, 키이우인디펜던트·BTA). 축구는 보스니아에 역전패(11/17, N1)."
+  },
+  "note": "작성 기준: 2026-11-18 저녁(한국시간). Kyiv Independent, Radio Romania International, LSM, LRT, ERR, Notes from Poland, Balkan Insight, BTA, European Western Balkans, Expats.cz, Total Croatia News, Telex, N1, KOTRA 첫 화면을 확인했고, EU 대출 제안, 콜비 발언 논란, 폴란드 헌재 계좌 동결, 에스토니아 국경 폐쇄, 타치 판결, 루마니아 지진, 가스 허스키 구조는 본문을 열어 확인했습니다. Sloveniatimes는 접근이 막혔고(403) KOTRA 첫 화면에는 동유럽 신규 기사가 없었으며 한국 언론은 조회하지 않았습니다. EU 대출안은 초안 보도이며 집행위 공식 발표 내용은 확인하지 못했습니다. 에스토니아 세 번째 검문소 이름, 보스니아 기사 일부는 헤드라인 기준이고 본문은 확인하지 못했습니다. 지진 진원지(브란체아)는 BTA 표기를 따랐습니다. 출처 표시: KR = 한국 언론, KOTRA = KOTRA 해외시장뉴스, EN = 해외 매체."
+}
