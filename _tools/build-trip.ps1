@@ -97,7 +97,7 @@ Get-ChildItem "$root\travel" -Directory | Where-Object { $ids -notcontains $_.Na
 # ---- 3) 점검 ----
 $cityIds = [regex]::Matches($data, "(?m)^\s{4}'?([a-z-]+)'?: \{ ko: '") | ForEach-Object { $_.Groups[1].Value }
 $gwIds = [regex]::Matches($data, "(?m)^\s{4}([A-Z]{3}): \{ ko: '") | ForEach-Object { $_.Groups[1].Value }
-foreach ($m in [regex]::Matches($routesJs, "\['([a-z-]+)', \d\]")) { if ($cityIds -notcontains $m.Groups[1].Value) { $warn += "route stop without city data: $($m.Groups[1].Value)" } }
+foreach ($m in [regex]::Matches($routesJs, "(?<=stops: [^\n]*)\['([a-z-]+)', \d+, \d+")) { if ($cityIds -notcontains $m.Groups[1].Value) { $warn += "route stop without city data: $($m.Groups[1].Value)" } }
 foreach ($m in [regex]::Matches($routesJs, "(?:in|out): '([A-Z]{3})'")) { if ($gwIds -notcontains $m.Groups[1].Value) { $warn += "unknown gateway: $($m.Groups[1].Value)" } }
 if (($ids | Sort-Object -Unique).Count -ne $ids.Count) { $warn += 'duplicate route id' }
 
