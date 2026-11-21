@@ -55,3 +55,11 @@ Capacitor에서도 기존 콘텐츠, 관심 설정 규격, 운영자 발송 API�
 - 실제 iPhone 설치·APNs 수신·잠금 화면·알림 클릭·실기기 업데이트는 사용자와 운영 배포 후 확인할 항목이다. 자동 테스트로 대체하지 않는다.
 
 병합 직전 추가된 main `29fd504`도 통합했다. 최신 뉴스·여행 Best 10 별도 페이지와 전체 재생성 본문을 유지하고 7개 최상위 페이지에 설치 메타데이터만 추가했다. 통합 뒤 Edge 회귀 검사를 다시 실행했다.
+
+## 실제 iPhone 발송 오류 수정
+
+Cloudflare Workers는 fetch의 redirect:error를 지원하지 않아 Apple 요청 전에 TypeError가 발생했다. redirect:manual로 바꾸어 리디렉션을 따라가지 않으면서 실제 발송이 가능하게 했다. Node 모의 테스트만으로 런타임 차이를 발견하지 못했으므로 manual 옵션과 302 미추적 회귀 검사를 추가했다.
+
+관리자 인증이 필요한 /admin/test는 필수 subscriptionId로 한 기기만 선택하고 상태 코드·제한된 오류 분류만 반환한다. 전체 발송 요청은 받지 않는다. VAPID와 구독 키는 응답이나 로그에 출력하지 않는다. 수정 Worker에서 해당 iPhone에만 발송한 요청은 Apple HTTP 201로 접수됐고 사용자가 실제 알림 도착을 확인했다. 잠금 상태 수신과 클릭 후 뉴스 페이지 열기는 별도 확인이 필요하다.
+
+공식 근거: https://developers.cloudflare.com/workers/runtime-apis/request/

@@ -1,4 +1,4 @@
-import {deliver,decode,encode} from './webpush.mjs';
+import {deliver,deliverDetailed,decode,encode} from './webpush.mjs';
 import {countries,categories} from '../pwa/topics.mjs';
 const origin='https://mihail-nz.github.io';
 const root=origin+'/eastern-europe-kuera/';
@@ -83,6 +83,17 @@ async function route(request,env,ctx){
   if(path==='/key' && request.method==='GET')return json({publicKey:env.VAPID_PUBLIC_KEY});
   requireThat(request.method==='POST',405);
   const auth=request.headers.get('Authorization') || '';
+  if(path==='/admin/test'){
+    requireThat(env.ADMIN_TOKEN?.length>=32 && await digest(auth)===await digest('Bearer '+env.ADMIN_TOKEN),401);
+    const body=await readBody(request);
+    requireThat(Number.isSafeInteger(body.subscriptionId) && body.subscriptionId>0);
+    const row=await env.DB.prepare('SELECT * FROM subscriptions WHERE id=?').bind(body.subscriptionId).first();
+    requireThat(row,404);
+    let delivery;
+    try{delivery=await deliverDetailed({endpoint:row.endpoint,keys:row},{id:'cee-diagnostic',title:'CEE Side 수신 확인',body:'등록한 이 기기에만 보낸 확인 알림입니다.',url:root+'news/'},env);}
+    catch{delivery={status:-1,reason:'TransportOrCryptoError'};}
+    return json({subscriptionId:row.id,accepted:delivery.status>=200 && delivery.status<300,...delivery});
+  }
   if(path==='/admin/send'){
     requireThat(env.ADMIN_TOKEN?.length>=32 && await digest(auth)===await digest('Bearer '+env.ADMIN_TOKEN),401);
     return admin(await readBody(request),env);

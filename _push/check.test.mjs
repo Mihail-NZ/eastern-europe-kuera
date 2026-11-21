@@ -4,7 +4,7 @@ import {createECDH,createDecipheriv,hkdfSync,createPublicKey,verify} from 'node:
 import {DatabaseSync} from 'node:sqlite';
 import {readFileSync} from 'node:fs';
 import worker,{validEndpoint,message} from './worker.mjs';
-import {authorization,encrypt,encode} from './webpush.mjs';
+import {authorization,encrypt,encode,deliverDetailed} from './webpush.mjs';
 const origin='https://mihail-nz.github.io';
 const endpoint='https://web.push.apple.com/Qtest';
 const utf8=s=>Buffer.from(s);
@@ -111,5 +111,21 @@ test('delayed test only sends to its owner and cancels after unsubscribe',async 
     await call('/delete',{endpoint});
     t.mock.timers.tick(15000);await Promise.all(pending);
     assert.deepEqual(destinations,[endpoint]);
+    assert.equal((await call('/admin/test',{subscriptionId:2})).status,401);
+    assert.equal((await call('/admin/test',{all:true},env.ADMIN_TOKEN)).status,400);
+    assert.equal((await call('/admin/test',{subscriptionId:999},env.ADMIN_TOKEN)).status,404);
+    const diagnostic=await (await call('/admin/test',{subscriptionId:2},env.ADMIN_TOKEN)).json();
+    assert.equal(diagnostic.accepted,true);assert.equal(diagnostic.status,201);
+    assert.deepEqual(destinations,[endpoint,endpoint+'2']);
   }finally{sqlite.close();}
+});
+
+test('Workers-compatible manual redirect never follows a push redirect',async t=>{
+  let calls=0;
+  t.mock.method(globalThis,'fetch',async(url,options)=>{
+    calls++;assert.equal(url,endpoint);assert.equal(options.redirect,'manual');
+    return new Response(null,{status:302,headers:{Location:'https://untrusted.example/'}});
+  });
+  const result=await deliverDetailed(sub,news,variables());
+  assert.equal(result.status,302);assert.equal(calls,1);
 });
