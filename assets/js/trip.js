@@ -70,6 +70,11 @@
     return (rangeCache[route.id] = { min, max });
   }
   const idealMid = route => Math.round((route.ideal[0] + route.ideal[1]) / 2);
+  const BUCKETS = [['short', '단기', '2~4박', [2, 4]], ['mid', '중기', '5~8박', [5, 8]], ['long', '장기', '9박 이상', [9, 40]]];
+  const inBucket = (route, b) => route.ideal[0] <= b[3][1] && route.ideal[1] >= b[3][0];
+  const bucketsOf = route => BUCKETS.filter(b => inBucket(route, b));
+  const nightsIn = (route, b) => Math.max(Math.max(b[3][0], route.ideal[0]), Math.min(Math.min(b[3][1], route.ideal[1]), idealMid(route)));
+  const bucketOfN = n => BUCKETS.find(b => n >= b[3][0] && n <= b[3][1]) || BUCKETS[0];
   const idealText = route => (route.ideal[0] === route.ideal[1] ? `${route.ideal[0]}박` : `${route.ideal[0]}~${route.ideal[1]}박`);
   const cache = {};
   function plan(route, n) {
@@ -139,11 +144,11 @@
     return v;
   }
   const isDirect = (g, months) => g.status === 'direct' || (g.status === 'seasonal' && months.length && months.every(m => g.months.includes(m)));
+  /* 기간은 단기·중기·장기 세 구간. 루트의 권장 기간(ideal)이 구간과 겹치면 그 구간에 속하고,
+   * 일정은 겹치는 범위 안에서 권장 기간 가운데에 가장 가까운 박수로 짠다. */
   function chooseNights(route, p) {
-    const r = rangeOf(route);
-    if (p.nights == null) return { n: p.pace === 'slow' ? route.ideal[1] : p.pace === 'fast' ? route.ideal[0] : idealMid(route), fits: true };
-    if (p.nightsPlus) return { n: Math.max(r.min, Math.min(r.max, Math.max(p.nights, route.ideal[1]))), fits: r.max >= p.nights };
-    return { n: p.nights, fits: p.nights >= r.min && p.nights <= r.max };
+    if (!p.dur) return { n: p.pace === 'slow' ? route.ideal[1] : p.pace === 'fast' ? route.ideal[0] : idealMid(route), fits: true };
+    return inBucket(route, p.dur) ? { n: nightsIn(route, p.dur), fits: true } : { n: idealMid(route), fits: false };
   }
   function evaluate(route, p, skip) {
     skip = skip || {};
@@ -154,8 +159,7 @@
     const ex = (key, why) => { if (!out.excluded && !skip[key]) out.excluded = { key, why }; };
     const names = codes => codes.map(c => N[c].ko).join('·');
     // 1단계: 필수 조건
-    if (!ch.fits) ex('nights', `가능한 기간은 ${r.min}~${r.max}박`);
-    else if (p.nights != null && !p.nightsPlus && (p.nights < route.ideal[0] || p.nights > route.ideal[1])) ex('nightsNear', `권장 기간 ${idealText(route)}과 1박 차이`);
+    if (!ch.fits) ex('nights', `${p.dur[1]}(${p.dur[2]})에 맞지 않음 · 권장 ${idealText(route)}`);
     if (months.length) {
       const hit = months.filter(m => route.months.includes(m));
       if (!hit.length) ex('season', `추천 월(${monthsText(route.months)})이 아님`);
@@ -193,10 +197,9 @@
     if (tMiss.length && tHit.length) out.warn.push(`${tMiss.map(t => label(THEMES, t)).join(', ')} 요소는 이 루트에 거의 없습니다`);
     else if (selT.length && !tHit.length) out.warn.push('고른 여행 목적과는 거리가 있습니다');
 
-    const n = vr.nights, idl = route.ideal, dist = n < idl[0] ? idl[0] - n : n > idl[1] ? n - idl[1] : 0;
-    out.parts.duration = p.nights == null ? 19 : Math.max(8, 25 - dist * 5);
-    if (p.nights != null && dist === 0) out.good.push(`${n}박은 자료에서 가장 많이 권하는 기간(${idl[0] === idl[1] ? idl[0] : idl.join('~')}박)입니다`);
-    else if (p.nights != null) out.warn.push(`${n}박은 ${n < idl[0] ? '빠듯한' : '넉넉한'} 편입니다(많이 권하는 기간 ${idl[0] === idl[1] ? idl[0] : idl.join('~')}박)`);
+    const n = vr.nights;
+    out.parts.duration = p.dur ? 25 : 19;
+    if (p.dur) out.good.push(`${p.dur[1]} 일정(${n}박)으로 자료에서 권하는 기간에 들어갑니다`);
 
     if (months.length) {
       const k = months.filter(m => route.months.includes(m)).length;
@@ -237,7 +240,7 @@
   const HARD = { nightsNear: '권장 기간 정확히 일치', excl: '제외한 나라', incl: '꼭 가고 싶은 나라', transit: '대중교통만', nights: '여행 기간', flight: '직항 필수', musts: '필수 요소', level: '초보자 난이도', season: '여행 시기' };
 
   /* ---------- 저장(브라우저 로컬) ---------- */
-  const KEY = 'kuera-trip-saved', PKEY = 'kuera-trip-prefs3';
+  const KEY = 'kuera-trip-saved', PKEY = 'kuera-trip-prefs4';
   const load = (k, d) => { try { return JSON.parse((k === PKEY ? sessionStorage : localStorage).getItem(k)) || d; } catch (e) { return d; } };
   const store = (k, v) => { try { (k === PKEY ? sessionStorage : localStorage).setItem(k, JSON.stringify(v)); } catch (e) { /* 저장이 막힌 브라우저에서는 그냥 넘어간다 */ } };
   const saved = () => load(KEY, []);
@@ -274,24 +277,22 @@ ${P.map((p, i) => `<g transform="translate(${p[0].toFixed(1)},${p[1].toFixed(1)}
     });
   }
   function miniCard(route, sub) {
-    const vr = plan(route), ph = photoOf(route), rg = rangeOf(route);
+    const vr = plan(route), ph = photoOf(route);
     return `<li class="tp-mini"><a href="${routeUrl(route.id)}">
   <div class="tp-mini-img">${ph ? `<img src="${esc(ph.src)}" alt="" loading="lazy" decoding="async">` : sketch(vr)}</div>
-  <div class="tp-mini-txt"><h4>${esc(route.ko)}</h4><p>${rg.min}~${rg.max}박(추천 ${idealText(route)}) · ${vr.countries.length}개국 · 추천 ${monthsText(route.months)}</p>${sub ? `<p class="tp-mini-sub">${esc(sub)}</p>` : ''}</div></a></li>`;
+  <div class="tp-mini-txt"><h4>${esc(route.ko)}</h4><p>${bucketsOf(route).map(b => b[1]).join('·')}(${idealText(route)}) · ${vr.countries.length}개국 · 추천 ${monthsText(route.months)}</p>${sub ? `<p class="tp-mini-sub">${esc(sub)}</p>` : ''}</div></a></li>`;
   }
 
   /* ---------- 여행 메인 ---------- */
-  const NIGHT_VALUES = Array.from({ length: 13 }, (_, i) => String(i + 3)).concat(['16+']);
   const CORE = Object.keys(N).filter(c => N[c].core);
-  const DEFAULTS = { basis: 'nights', n: '', when: '', themes: [], moods: [], pace: '', incl: [], excl: [], flight: 'prefer', transit: '', comp: '', moves: '', musts: [], level: '', sort: 'fit' };
+  const DEFAULTS = { dur: '', when: '', themes: [], moods: [], pace: '', incl: [], excl: [], flight: 'prefer', transit: '', comp: '', moves: '', musts: [], level: '', sort: 'fit' };
   function toPrefs(s) {
     const p = { themes: s.themes, moods: s.moods, pace: s.pace, incl: s.incl, excl: s.excl, flight: s.flight, transit: s.transit, comp: s.comp, moves: s.moves, musts: s.musts, level: s.level };
-    if (s.n) { p.nights = parseInt(s.n, 10); p.nightsPlus = /\+$/.test(s.n); }
+    if (s.dur) p.dur = BUCKETS.find(b => b[0] === s.dur);
     const season = SEASONS.find(x => x[0] === s.when);
     p.months = season ? season[2] : s.when ? [+s.when] : [];
     return p;
   }
-  const nightLabel = (v, basis) => { const plus = /\+$/.test(v), n = parseInt(v, 10); return basis === 'days' ? `${n + 2}일${plus ? ' 이상' : ''}` : `${n}박${plus ? ' 이상' : ''}`; };
 
   function renderTrip(main) {
     const state = Object.assign(JSON.parse(JSON.stringify(DEFAULTS)), load(PKEY, {}));
@@ -304,7 +305,7 @@ ${P.map((p, i) => `<g transform="translate(${p[0].toFixed(1)},${p[1].toFixed(1)}
     main.innerHTML = `
 <section class="page-head night tp-head">
   <div class="wrap"><p class="kicker">Travel</p><h1>동유럽 여행 루트 찾기</h1>
-  <p>박수와 여행 달을 고르면 그 조건에 정말 맞는 루트만 남깁니다. ${ROUTES.length}개 루트는 국내 여행사·블로그와 해외 일정 가이드, 교통 자료, 방문 통계를 근거로 골랐고, 루트마다 근거 링크를 붙였습니다.</p>
+  <p>여행 기간(단기·중기·장기)과 달을 고르면 그 조건에 정말 맞는 루트만 남깁니다. ${ROUTES.length}개 루트는 국내 여행사·블로그와 해외 일정 가이드, 교통 자료, 방문 통계를 근거로 골랐고, 루트마다 근거 링크를 붙였습니다.</p>
   <p class="jobs-edition">중동부유럽·발칸·발트 및 인접 연계 여행지 · 루트 ${ROUTES.length}개 · 도시 ${Object.keys(C).length}곳 · ${D.checked} 확인</p>
   <nav class="tp-jump" aria-label="여행 페이지 안에서 이동"><a href="#finder">맞춤 루트 찾기</a><a href="#season">계절별</a><a href="#region">지역별</a><a href="#theme">테마별</a><a href="#prep">여행 준비</a></nav></div>
 </section>
@@ -314,9 +315,8 @@ ${P.map((p, i) => `<g transform="translate(${p[0].toFixed(1)},${p[1].toFixed(1)}
     <p class="tp-lead">기간과 달은 꼭 맞는 루트만 남기는 조건입니다. 나머지 조건은 순위에 반영하고, 비워 둔 항목은 중립으로 봅니다.</p>
     <form class="tp-form" onsubmit="return false">
       <div class="tp-grid">
-        ${field('여행 기간', '1박 단위', `<div class="tp-basis" role="group" aria-label="기간 기준">${chips('basis', [['nights', '현지 숙박 기준'], ['days', '인천 출발~귀국 기준']])}</div>
-          <div class="tp-chips tp-nights" role="group" data-name="n">${NIGHT_VALUES.map(v => `<button type="button" data-v="${v}" aria-pressed="false"></button>`).join('')}</div>
-          <p class="tp-hint" data-out="nights-hint"></p>`, 'f-nights')}
+        ${field('여행 기간', '현지 숙박 기준', `<div class="tp-chips tp-dur" role="group" data-name="dur">${BUCKETS.map(b => `<button type="button" data-v="${b[0]}" aria-pressed="false"><strong>${b[1]}</strong><small>${b[2]}</small></button>`).join('')}</div>
+          <p class="tp-hint">인천 출발부터 귀국까지는 현지 숙박에 약 2일을 더합니다(단기 4~6일, 중기 7~10일, 장기 11일 이상). 고른 구간에 권장 기간이 들어가는 루트만 남깁니다.</p>`, 'f-nights')}
         ${field('여행 시기', '추천 월이 맞는 루트만', `<div class="tp-month-grid">${chips('when', monthOpts)}</div>${chips('when', SEASONS.map(s => [s[0], s[1]]))}<p class="tp-hint">루트마다 정말 추천하는 달만 1~4개 골라 두었습니다. 그 달이 아닌 루트는 결과에서 빠집니다.</p>`, 'f-when')}
         ${field('여행 속도', '', chips('pace', [['slow', '여유로운 여행'], ['mid', '적당한 관광'], ['fast', '최대한 많은 곳']]))}
         ${field('여행 목적', '여러 개 선택', chips('themes', THEMES, true), 'f-themes')}
@@ -390,10 +390,6 @@ ${P.map((p, i) => `<g transform="translate(${p[0].toFixed(1)},${p[1].toFixed(1)}
         const v = state[g.dataset.name];
         g.querySelectorAll('button').forEach(b => b.setAttribute('aria-pressed', String(Array.isArray(v) ? v.includes(b.dataset.v) : v === b.dataset.v)));
       });
-      $$('.tp-nights button').forEach(b => { b.textContent = nightLabel(b.dataset.v, state.basis); });
-      const n = state.n ? parseInt(state.n, 10) : null;
-      $('[data-out="nights-hint"]').textContent = n == null ? '고르지 않으면 루트마다 자료에서 가장 많이 권하는 기간으로 보여 줍니다.'
-        : `현지 ${n}박${/\+/.test(state.n) ? ' 이상' : ''} = 인천 출발~귀국 ${n + 2}일${/\+/.test(state.n) ? ' 이상' : ''}(갈 때 당일 도착, 올 때 다음 날 도착 기준). 이 박수로 짤 수 있는 루트만 남깁니다.`;
       $$('[data-in]').forEach(el => { if (el.type === 'checkbox') el.checked = !!state[el.dataset.in]; else el.value = state[el.dataset.in]; });
       $$('[data-show]').forEach(el => { const [k, v] = el.dataset.show.split('='); el.hidden = v ? state[k] !== v : !state[k]; });
       const cnt = ['incl', 'excl', 'musts'].reduce((a, k) => a + state[k].length, 0) + ['transit', 'comp', 'moves', 'level'].filter(k => state[k]).length + (state.flight !== 'prefer' ? 1 : 0);
@@ -413,9 +409,9 @@ ${P.map((p, i) => `<g transform="translate(${p[0].toFixed(1)},${p[1].toFixed(1)}
 
     /* 결과 카드 */
     function card(r, i, p) {
-      const { route, vr } = r, ph = photoOf(route), rg = rangeOf(route);
+      const { route, vr } = r, ph = photoOf(route);
       const parts = [['taste', '취향', 30], ['duration', '기간', 25], ['season', '시기', 20], ['flight', '항공', 15], ['move', '이동', 10]];
-      const facts = [['여행 기간', `현지 ${vr.nights}박 · 총 ${vr.nights + 2}일 <small>가능 ${rg.min}~${rg.max}박 · 많이 권하는 기간 ${idealText(route)}</small>`],
+      const facts = [['여행 기간', `${bucketOfN(vr.nights)[1]} · 현지 ${vr.nights}박(총 ${vr.nights + 2}일) <small>권장 ${idealText(route)} · ${bucketsOf(route).map(b => b[1]).join('·')}</small>`],
         ['추천 월', `${monthsText(route.months)}`], ['여행 스타일', themeNames(route).join(' · ') + ` <small>${moodNames(route).join(' · ')}</small>`],
         ['도시 간 이동', vr.legs.length ? `평균 ${dur(vr.avgMin).replace('약 ', '')}${vr.maxLeg ? ` <small>가장 긴 구간 ${esc(C[vr.maxLeg.a].ko)}→${esc(C[vr.maxLeg.b].ko)} ${dur(vr.maxLeg.min).replace('약 ', '')}</small>` : ''}` : '숙소 이동 없음'],
         ['난이도', DIFF[route.diff] + (route.car === 'required' ? ' · 렌터카 필요' : route.car === 'optional' ? ' · 렌터카 있으면 편함' : ' · 대중교통 가능')],
@@ -435,12 +431,12 @@ ${P.map((p, i) => `<g transform="translate(${p[0].toFixed(1)},${p[1].toFixed(1)}
       ${ev ? `<p class="tp-evline"><a href="${routeUrl(route.id, vr.nights)}#evidence">추천 근거 ${evOf(route).length}건</a> <span>${esc(ev)}</span></p>` : ''}</div>
     <div class="tp-bars" aria-label="점수 내역">${parts.map(([k, l, max]) => `<span title="${l} ${r.parts[k].toFixed(1)} / ${max}"><i>${l}</i><b><u style="width:${Math.round(r.parts[k] / max * 100)}%"></u></b><em>${Math.round(r.parts[k])}/${max}</em></span>`).join('')}</div>
     <div class="tp-card-foot"><div class="tp-mapmini">${sketch(vr)}</div>${monthBar(route.months, p.months)}
-      <div class="tp-btns">${saveBtn(route.id)}<a class="tp-detail" href="${routeUrl(route.id, vr.nights)}">${vr.nights}박 일정 보기</a></div></div>
+      <div class="tp-btns">${saveBtn(route.id)}<a class="tp-detail" href="${routeUrl(route.id, vr.nights)}">${bucketOfN(vr.nights)[1]} 일정 보기</a></div></div>
   </div></li>`;
     }
     function compareTable(ids) {
       const rs = ids.map(id => ROUTES.find(r => r.id === id)).filter(Boolean).slice(0, 4);
-      const rows = [['방문 도시', r => plan(r).stops.map(s => s.city.ko).join(' → ')], ['가능 기간', r => `${rangeOf(r).min}~${rangeOf(r).max}박(추천 ${idealText(r)})`], ['방문 국가', r => plan(r).countries.map(c => N[c].ko).join(', ')],
+      const rows = [['방문 도시', r => plan(r).stops.map(s => s.city.ko).join(' → ')], ['기간', r => `${bucketsOf(r).map(b => b[1]).join('·')} (권장 ${idealText(r)})`], ['방문 국가', r => plan(r).countries.map(c => N[c].ko).join(', ')],
         ['추천 월', r => monthsText(r.months)], ['이동', r => { const v = plan(r); return `평균 ${dur(v.avgMin).replace('약 ', '')}${v.maxLeg ? ` · 최장 ${dur(v.maxLeg.min).replace('약 ', '')}` : ''}`; }],
         ['항공', r => flightLine(r)], ['난이도', r => DIFF[r.diff]], ['렌터카', r => ({ no: '필요 없음', optional: '있으면 편함', required: '필요' }[r.car])]];
       return `<div class="tp-compare" tabindex="0"><table class="tp-table"><thead><tr><th></th>${rs.map(r => `<th><a href="${routeUrl(r.id)}">${esc(r.ko)}</a></th>`).join('')}</tr></thead>
@@ -460,33 +456,28 @@ ${P.map((p, i) => `<g transform="translate(${p[0].toFixed(1)},${p[1].toFixed(1)}
       const all = ROUTES.map(r => evaluate(r, p));
       const sorter = SORTS.find(s => s[0] === state.sort)[2];
       const ok = all.filter(r => !r.excluded).sort(sorter);
-      // 1박 차이로만 빠진 루트는 따로 접어서 보여 준다(다른 조건은 모두 만족하는 경우만)
-      const near = all.filter(r => r.excluded && r.excluded.key === 'nightsNear').map(r => evaluate(r.route, p, { nightsNear: 1 })).filter(r => !r.excluded).sort(sorter);
-      const out = all.filter(r => r.excluded && !(r.excluded.key === 'nightsNear' && near.some(x => x.route === r.route)));
-      const any = Object.keys(DEFAULTS).some(k => k !== 'sort' && k !== 'basis' && JSON.stringify(state[k]) !== JSON.stringify(DEFAULTS[k]));
+      const out = all.filter(r => r.excluded);
+      const any = Object.keys(DEFAULTS).some(k => k !== 'sort' && JSON.stringify(state[k]) !== JSON.stringify(DEFAULTS[k]));
       $('.tp-go-n').textContent = `${ok.length}개`;
-      $('.tp-count').textContent = ok.length ? `조건에 맞는 루트 ${ok.length}개${near.length ? ` · 1박 차이로 가능한 루트 ${near.length}개` : ''}${out.length ? ` · 제외 ${out.length}개` : ''}${any ? '' : ' · 기간과 달을 고르면 맞는 루트만 남습니다'}` : '';
+      $('.tp-count').textContent = ok.length ? `조건에 맞는 루트 ${ok.length}개${out.length ? ` · 제외 ${out.length}개` : ''}${any ? '' : ' · 기간과 달을 고르면 맞는 루트만 남습니다'}` : '';
       $('.tp-list').innerHTML = ok.map((r, i) => card(r, i, p)).join('');
       let after = '';
-      if (near.length) after += `<details class="tp-near"${ok.length ? '' : ' open'}><summary>${nightLabel(state.n, state.basis)}과 1박 차이로 짤 수 있는 루트 ${near.length}개</summary>
-  <p class="tp-hint">근거 자료가 권한 기간보다 1박 짧거나 긴 일정입니다. ${state.n ? `${parseInt(state.n, 10)}박` : ''} 그대로 배분한 일정을 보여 주지만, 권장 기간보다 빠듯하거나 느슨할 수 있습니다.</p>
-  <ol class="tp-list">${near.map((r, i) => card(r, i, p).replace(/추천 \d+위/, '1박 차이').replace(' is-top', '')).join('')}</ol></details>`;
       if (ok.length < 4 && out.length) {
-        const keys = [...new Set(out.map(r => r.excluded.key))].filter(k => k !== 'nightsNear');
+        const keys = [...new Set(out.map(r => r.excluded.key))];
         const tips = keys.map(k => { const s = {}; s[k] = 1; return [k, ROUTES.filter(r => !evaluate(r, p, s).excluded).length - ok.length]; }).filter(x => x[1] > 0).sort((a, b) => b[1] - a[1]);
-        const near = p.nights != null && !p.nightsPlus ? [-1, 1, -2, 2].map(d => p.nights + d).filter(x => x >= 2).map(x => [x, ROUTES.filter(r => !evaluate(r, Object.assign({}, p, { nights: x })).excluded).length]).filter(x => x[1] > ok.length) : [];
-        after += `<div class="tp-empty"><h3>${ok.length ? '맞는 루트가 적습니다' : near.length ? '기간까지 정확히 맞는 루트는 없습니다. 위에 1박 차이 루트가 있습니다' : '조건을 모두 만족하는 루트가 없습니다'}</h3>
+        const near = p.dur ? BUCKETS.filter(b => b !== p.dur).map(b => [b, ROUTES.filter(r => !evaluate(r, Object.assign({}, p, { dur: b })).excluded).length]).filter(x => x[1] > ok.length) : [];
+        after += `<div class="tp-empty"><h3>${ok.length ? '맞는 루트가 적습니다' : '조건을 모두 만족하는 루트가 없습니다'}</h3>
   <p>점수를 억지로 올려 보여 주지 않습니다. 아래처럼 바꾸면 더 많은 루트가 나옵니다.</p>
-  <ul>${near.slice(0, 2).map(([x, c]) => `<li><button type="button" data-setn="${x}">${nightLabel(String(x), state.basis)}로 바꾸기</button> <span>루트 ${c}개</span></li>`).join('')}${tips.map(([k, c]) => `<li><button type="button" data-relax="${k}">‘${HARD[k]}’ 조건 풀기</button> <span>루트 ${c}개 추가</span></li>`).join('')}${!near.length && !tips.length ? '<li>조건 하나만 풀어서는 늘지 않습니다. 조건 초기화 후 꼭 필요한 것부터 다시 골라 보세요.</li>' : ''}</ul></div>`;
+  <ul>${near.map(([b, c]) => `<li><button type="button" data-setd="${b[0]}">${b[1]}(${b[2]})로 바꾸기</button> <span>루트 ${c}개</span></li>`).join('')}${tips.map(([k, c]) => `<li><button type="button" data-relax="${k}">‘${HARD[k]}’ 조건 풀기</button> <span>루트 ${c}개 추가</span></li>`).join('')}${!near.length && !tips.length ? '<li>조건 하나만 풀어서는 늘지 않습니다. 조건 초기화 후 꼭 필요한 것부터 다시 골라 보세요.</li>' : ''}</ul></div>`;
       }
       if (out.length) after += `<details class="tp-excluded"><summary>제외된 루트 ${out.length}개와 이유</summary><ul>${out.map(r => `<li><a href="${routeUrl(r.route.id)}">${esc(r.route.ko)}</a> <span>${esc(r.excluded.why)}</span></li>`).join('')}</ul></details>`;
       $('.tp-after').innerHTML = after;
     }
     $('.tp-after').addEventListener('click', e => {
-      const s = e.target.closest('[data-setn]'); if (s) { state.n = s.dataset.setn; update(); return; }
+      const s = e.target.closest('[data-setd]'); if (s) { state.dur = s.dataset.setd; update(); return; }
       const b = e.target.closest('[data-relax]'); if (!b) return;
       const k = b.dataset.relax;
-      if (k === 'excl' || k === 'incl' || k === 'musts') state[k] = []; else if (k === 'transit') state.transit = ''; else if (k === 'nights') state.n = '';
+      if (k === 'excl' || k === 'incl' || k === 'musts') state[k] = []; else if (k === 'transit') state.transit = ''; else if (k === 'nights') state.dur = '';
       else if (k === 'flight') state.flight = 'prefer'; else if (k === 'level') state.level = ''; else if (k === 'season') state.when = '';
       update();
     });
@@ -530,9 +521,10 @@ ${P.map((p, i) => `<g transform="translate(${p[0].toFixed(1)},${p[1].toFixed(1)}
     const route = ROUTES.find(r => r.id === id);
     if (!route) { main.innerHTML = `<section class="page-head night"><div class="wrap"><h1>루트를 찾을 수 없습니다</h1><p><a href="${ROOT}travel/index.html" style="color:#fff">여행 루트 목록으로</a></p></div></section>`; return; }
     document.title = `${route.ko} | 여행 루트 | ` + (document.title.split('|').pop() || '').trim();
-    const rg = rangeOf(route);
-    let nights = parseInt(new URLSearchParams(location.search).get('n'), 10);
-    if (!(nights >= rg.min && nights <= rg.max)) nights = idealMid(route);
+    // 기간 탭: 이 루트가 속하는 구간(단기·중기·장기)마다 하나. URL의 ?n= 박수가 속한 구간 탭을 연다.
+    const tabs = bucketsOf(route).map(b => [b, nightsIn(route, b)]);
+    const want = parseInt(new URLSearchParams(location.search).get('n'), 10);
+    let nights = (tabs.find(t => t[1] === want) || tabs.find(t => want >= t[0][3][0] && want <= t[0][3][1]) || tabs.find(t => t[1] === idealMid(route)) || tabs[0])[1];
     let map = null, layer = null;
     const ph = photoOf(route), gin = G[route.in], gout = G[route.out];
     const themeTop = themeNames(route);
@@ -540,8 +532,7 @@ ${P.map((p, i) => `<g transform="translate(${p[0].toFixed(1)},${p[1].toFixed(1)}
     const ev = evOf(route);
     const gwBlock = (g, role) => `<div class="tp-gw"><h4>${role} · ${esc(g.ko)} <span class="tp-code">${g.iata}</span> <span class="tp-v ${g.status === 'direct' ? 'vc' : g.status === 'seasonal' ? 'vg' : 'vv'}">${g.status === 'direct' ? '인천 직항' : g.status === 'seasonal' ? `계절 직항 ${g.months[0]}~${g.months[g.months.length - 1]}월` : '경유'}</span></h4>
   ${g.by ? `<p class="tp-gw-by">${g.src ? `<a href="${esc(g.src)}" target="_blank" rel="noopener">${esc(g.by)}</a>` : esc(g.by)}</p>` : ''}<p>${esc(g.note)}</p></div>`;
-    const nightBtns = [];
-    for (let n = rg.min; n <= rg.max; n++) nightBtns.push(`<button type="button" role="tab" data-nn="${n}"${n >= route.ideal[0] && n <= route.ideal[1] ? ' class="is-ideal"' : ''}>${n}박<small>${n + 2}일${n >= route.ideal[0] && n <= route.ideal[1] ? ' · 추천' : ''}</small></button>`);
+    const nightBtns = tabs.map(([b, n]) => `<button type="button" role="tab" data-nn="${n}">${b[1]}<small>${b[2]} · 이 루트는 ${n}박</small></button>`);
     main.innerHTML = `
 <section class="page-head night tp-route-head">
   <div class="wrap"><nav class="crumbs" aria-label="현재 위치"><a href="${ROOT}index.html">Home</a><span aria-hidden="true">/</span><a href="${ROOT}travel/index.html">Travel</a><span aria-hidden="true">/</span><span aria-current="page">${esc(route.ko)}</span></nav>
@@ -614,13 +605,13 @@ ${P.map((p, i) => `<g transform="translate(${p[0].toFixed(1)},${p[1].toFixed(1)}
       const vr = plan(route, nights);
       main.querySelectorAll('[data-nn]').forEach(b => b.setAttribute('aria-selected', String(+b.dataset.nn === nights)));
       out('facts').innerHTML = [['방문 국가', `<span class="tp-countries">${countryList(vr)}</span>`], ['방문 도시', `<span class="tp-chain">${chain(vr)}</span>`],
-        ['여행 기간', `현지 ${vr.nights}박 ${vr.nights + 1}일 <small>인천 출발~귀국 약 ${vr.nights + 2}일 · 가능 ${rg.min}~${rg.max}박 · 많이 권하는 기간 ${idealText(route)}</small>`],
+        ['여행 기간', `${bucketOfN(vr.nights)[1]} · 현지 ${vr.nights}박 ${vr.nights + 1}일 <small>인천 출발~귀국 약 ${vr.nights + 2}일 · 자료에서 권하는 기간 ${idealText(route)}</small>`],
         ['추천 월', `${monthsText(route.months)} <small>${esc(route.seasonNote)}</small>`],
         ['여행 성격', themeTop.join(' · ') + ` <small>${moodNames(route).join(' · ')}</small>`],
         ['난이도', `${DIFF[route.diff]} <small>${{ no: '대중교통으로 충분', optional: '렌터카가 있으면 편함', required: '렌터카 필요' }[route.car]}</small>`],
         ['추천 대상', esc(route.who)], ['핵심 지역 숙박 비율', `${Math.round(vr.coreShare * 100)}% <small>중동부유럽·발칸·발트 기준</small>`]]
         .map(([k, v]) => `<div><dt>${k}</dt><dd>${v}</dd></div>`).join('');
-      out('days-lead').textContent = `현지 ${vr.nights}박 ${vr.nights + 1}일 · ${vr.stops.map(s => `${s.city.ko} ${s.n}박`).join(' → ')}. 위의 박수 버튼을 누르면 도시별 박수와 일정이 바로 바뀝니다.`;
+      out('days-lead').textContent = `현지 ${vr.nights}박 ${vr.nights + 1}일 · ${vr.stops.map(s => `${s.city.ko} ${s.n}박`).join(' → ')}. 위의 단기·중기·장기 탭이 여럿이면 눌러서 일정을 바꿔 볼 수 있습니다.`;
       out('days').innerHTML = vr.days.map(d => {
         const mv = d.move ? `<p class="tp-move"><span>이동</span> ${esc(C[d.move.a].ko)} → ${esc(C[d.move.b].ko)} · ${MODE[d.move.mode]} ${dur(d.move.min)} <span class="tp-v v${d.move.v}">${VLABEL[d.move.v][0]}</span></p>` : '';
         if (d.depart) return `<li class="tp-day is-end"><div class="tp-day-n">Day ${d.n}</div><div class="tp-day-body"><h3>출국 · ${esc(gout.ko)} 공항</h3>${mv}<p>${d.move ? `${esc(C[d.from].ko)}에서 ${esc(gout.ko)}(으)로 이동해 출국합니다. 이동 시간에 공항 수속 2~3시간을 더해 항공편을 고르세요.` : '오전에 못 본 곳을 둘러보고 공항으로 이동합니다.'} 귀국편은 대부분 다음 날 한국에 도착합니다.</p></div></li>`;

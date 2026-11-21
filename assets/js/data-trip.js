@@ -693,7 +693,18 @@ window.TRIP_DATA = {
     ['zadar', 'split', 'bus', 170, 0, 'c', '직행 버스(하루 9회 안팎)', 'https://global.flixbus.com/', '2시간 30분~3시간.'],
     ['sarajevo', 'dubrovnik', 'bus', 345, 0, 'c', '국제 버스(모스타르 경유)', 'https://sarajevofunkytours.com/sarajevo-to-dubrovnik-what-is-the-best-way-to-travel/', '약 5시간 45분. 국경 통과, 여권 필요.'],
     ['prague', 'budapest', 'train', 410, 0, 'c', 'EC·RegioJet 직행(브르노·브라티슬라바 경유)', 'https://www.seat61.com/trains-and-routes/prague-to-budapest-by-train.htm', '6시간 40분~7시간. 야간열차도 있습니다.'],
-    ['wroclaw', 'prague', 'bus', 250, 0, 'c', 'FlixBus·RegioJet 버스(거의 매시간)', 'https://www.thetrainline.com/buses/wroclaw-central-to-prague', '약 4시간~4시간 20분. 직행 열차도 있습니다(약 4~5시간).']
+    ['wroclaw', 'prague', 'bus', 250, 0, 'c', 'FlixBus·RegioJet 버스(거의 매시간)', 'https://www.thetrainline.com/buses/wroclaw-central-to-prague', '약 4시간~4시간 20분. 직행 열차도 있습니다(약 4~5시간).'],
+    ['budapest', 'ljubljana', 'train', 450, 0, 'c', '직행 열차(하루 1편 안팎) · 버스', 'https://www.ricksteves.com/europe/eastern-europe-itinerary', '열차 약 7시간 30분, 버스는 6시간 안팎.'],
+    ['zagreb', 'split', 'bus', 300, 0, 'g', '직행 버스·기차', 'https://www.akz.hr/en', '버스 5~6시간, 기차(야간 포함)도 비슷합니다.'],
+    ['poznan', 'wroclaw', 'train', 160, 0, 'g', 'PKP Intercity 직행', 'https://www.intercity.pl/en/', '약 2시간 30분.'],
+    ['veliko-tarnovo', 'plovdiv', 'bus', 240, 0, 'g', '시외버스(하루 몇 편)', 'https://www.centralnaavtogara.bg/', '약 4시간. 편수가 적어 전날 확인하세요.'],
+    ['warsaw', 'vilnius', 'train', 500, 1, 'c', 'PKP Intercity + LTG Link(모츠카바 환승)', 'https://www.seat61.com/trains-and-routes/warsaw-to-vilnius-by-train.htm', '2026년 하루 2회, 7시간 40분~9시간. 버스는 7~8시간.'],
+    ['bled', 'plitvice', 'car', 210, 0, 'g', '렌터카(류블랴나·자그레브 우회 고속도로)', '', '대중교통은 자그레브 환승으로 하루가 걸립니다.'],
+    ['zagreb', 'belgrade', 'train', 390, 0, 'g', '직행 열차·버스', 'https://www.hzpp.hr/en', '6~7시간. 크로아티아(솅겐)→세르비아 국경 심사.'],
+    ['ohrid', 'berat', 'bus', 270, 0, 'v', '버스(엘바산 경유, 하루 1편 안팎)', '', '편수가 적어 숙소에 시간을 확인하세요. 맞는 편이 없으면 티라나에서 갈아탑니다.'],
+    ['rovinj', 'plitvice', 'car', 210, 0, 'g', '렌터카(A8·A6 고속도로)', '', ''],
+    ['klaipeda', 'riga', 'bus', 270, 0, 'v', '국제 버스(하루 1~2편)', 'https://luxexpress.eu/', '약 4시간 30분. 렌터카라면 십자가 언덕을 지나갑니다.'],
+    ['prague', 'kutna-hora', 'train', 60, 0, 'g', 'ČD 직행', 'https://www.cd.cz/en/', '약 1시간.']
   ],
 
   /* 한국 출발 여행자가 공통으로 확인할 공식 정보 */
@@ -793,7 +804,32 @@ window.TRIP_DATA = {
     seat61PB: ['교통', 'Seat61 – 프라하→부다페스트 열차', 'https://www.seat61.com/trains-and-routes/prague-to-budapest-by-train.htm'],
     mrtPkg68: ['국내', '마이리얼트립 – 교원투어 동유럽 6박 8일 패키지', 'https://www.myrealtrip.com/pkc/detail/5968828'],
     tripBud: ['국내', '트립닷컴 – 부다페스트 여행 가이드 여행기', 'https://kr.trip.com/moments/tata-20582/'],
-    tlWroPrg: ['교통', 'Trainline – 브로츠와프→프라하 버스', 'https://www.thetrainline.com/buses/wroclaw-central-to-prague']
+    tlWroPrg: ['교통', 'Trainline – 브로츠와프→프라하 버스', 'https://www.thetrainline.com/buses/wroclaw-central-to-prague'],
+    rsEE3: ['해외', 'Rick Steves – 동유럽·중부유럽 3주 일정', 'https://www.ricksteves.com/europe/eastern-europe-itinerary'],
+    savvyGateway: ['해외', 'The Savvy Backpacker – 동유럽 2~4주 일정', 'https://thesavvybackpacker.com/gateway-eastern-europe-itinerary/'],
+    kimkimCE19: ['해외', 'kimkim – 체코·오스트리아·슬로베니아·크로아티아 19일', 'https://kimkim.com/c/best-of-central-europe-czech-republic-austria-slovenia-croatia-19-days'],
+    tmWKBPB: ['해외', 'Tripmasters – 바르샤바·크라쿠프·프라하·부다페스트 기차 일정', 'https://www.tripmasters.com/europe/poland/warsaw_-_krakow_-_bratislava_-_prague_-_budapest_by_train/package-47899'],
+    bucketPL2: ['해외', 'Bucketlistly – 폴란드 2주 배낭여행', 'https://www.bucketlistly.blog/posts/two-weeks-poland-itinerary-europe'],
+    alexxPL2: ['해외', 'Finding Alexx – 폴란드 2주 일정', 'https://findingalexx.com/2-weeks-in-poland-itinerary/'],
+    frommersPL2: ['해외', "Frommer's – 폴란드 2주 추천 일정", 'https://www.frommers.com/destinations/poland/suggested-itineraries/in-two-weeks'],
+    jaywayROBG: ['해외', 'Jayway – 루마니아·불가리아 2주', 'https://jaywaytravel.com/itineraries/romania-and-bulgaria-2-week-tour'],
+    kimkimROBG: ['해외', 'kimkim – 루마니아·불가리아 세계유산 15일', 'https://www.kimkim.com/c/unesco-world-heritage-sites-in-romania-and-bulgaria-15-days'],
+    goaheadPB: ['해외', 'Go Ahead Tours – 폴란드·발트: 바르샤바→탈린', 'https://www.goaheadtours.com/guided-tours/poland-and-the-baltics-adventure'],
+    jaywayKWV: ['해외', 'Jayway – 크라쿠프·바르샤바·빌뉴스', 'https://jaywaytravel.com/itineraries/krakow-warsaw-vilnius'],
+    zannaSCM: ['해외', 'Zanna van Dijk – 슬로베니아·크로아티아·몬테네그로 2주 로드트립', 'https://zannavandijk.co.uk/slovenia-croatia-and-montenegro-itinerary/'],
+    kimkimAdriatic21: ['해외', 'kimkim – 몬테네그로·크로아티아·슬로베니아 21일', 'https://www.kimkim.com/c/flavors-of-the-adriatic-montenegro-croatia-slovenia-21-days'],
+    albaniaSpiritBalkans: ['해외', 'Albania Spirit – 알바니아를 포함한 발칸 일정', 'https://www.albania-spirit.com/itineraries/balkans-albania-itinerary/'],
+    albaniaSpirit3w: ['해외', 'Albania Spirit – 알바니아 3주', 'https://www.albania-spirit.com/itineraries/3-weeks-albania/'],
+    kimkimCapitals: ['해외', 'kimkim – 발칸 수도와 문화 21일', 'https://kimkim.com/c/balkan-capitals-culture-21-days'],
+    kimkimBalkan3w: ['해외', 'kimkim – 발칸 3주 일정 모음', 'https://www.kimkim.com/c/3-weeks-in-the-balkans-unique-itineraries'],
+    tsPrague34: ['국내', '트립스토어 – 프라하 3박 4일 코스(구시가지·성 지구)', 'https://www.tripstore.kr/blog/%ED%94%84%EB%9D%BC%ED%95%98-%EC%BD%94%EC%8A%A4-%EA%B5%AC%EC%8B%9C%EA%B0%80%EC%A7%80-%EC%84%B1%EC%A7%80%EA%B5%AC-3%EB%B0%954%EC%9D%BC'],
+    tsPragueDay: ['국내', '트립스토어 – 프라하 거점 당일치기 체코 일정', 'https://www.tripstore.kr/blog/%EC%B2%B4%EC%BD%94-%EC%9D%BC%EC%A0%95-%ED%94%84%EB%9D%BC%ED%95%98-%EA%B1%B0%EC%A0%90-%EB%8B%B9%EC%9D%BC%EC%B9%98%EA%B8%B0-%EC%BD%94%EC%8A%A4-%EB%B9%84%EC%9A%A9'],
+    tripPrague: ['국내', '트립닷컴 – 프라하 일정별 코스 정리', 'https://kr.trip.com/guide/destination/prague-travel-itinerary.html'],
+    dltKrakow: ['해외', 'Destination Less Travel – 크라쿠프 3일', 'https://destinationlesstravel.com/best-three-days-krakow-poland-itinerary/'],
+    dannyVilnius: ['해외', 'Danny – 빌뉴스 3일 일정', 'https://danny-cph.com/vilnius-3-day-itinerary/'],
+    kateDubrovnik: ['해외', 'Adventurous Kate – 두브로브니크 3일', 'https://www.adventurouskate.com/three-days-in-dubrovnik-itinerary/'],
+    kimkimBalticFD: ['해외', 'kimkim – 발트 3국 셀프 렌터카 여행', 'https://www.kimkim.com/c/self-guided-baltic-states-fly-drive'],
+    kimkimBaltic7: ['해외', 'kimkim – 발트 수도 7일', 'https://www.kimkim.com/c/exploring-the-baltic-capitals-vilnius-riga-tallinn-7-days']
   },
 
   /* 한국인 여행 통계(여행 준비 가이드에 표시). 국가 공식 통계를 인용한 기사·자료이며 기준이 서로 다를 수 있다. */
