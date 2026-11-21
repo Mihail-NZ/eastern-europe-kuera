@@ -113,16 +113,6 @@
   </div>
 </header>`;
   }
-  function footer() {
-    return `<footer class="site-footer"><div class="wrap footer-inner">
-  <div class="footer-id">
-    <img class="footer-logo" src="${ROOT}assets/images/kuera/kuera-badge.png" alt="KUERA 로고" width="56" height="56" loading="lazy" decoding="async">
-    <div><p class="footer-brand">CEE Side <span class="brand-by">동유럽 산책 · by KUERA</span></p>
-    <p class="footer-org">고려대학교 동유럽지역 전략학회<span lang="en"> · Korea University Eastern Europe Research Association</span></p></div>
-  </div>
-</div></footer>`;
-  }
-
   /* ---------- 지도 ----------
    * mode 'hero'   : 홈 화면. 동유럽 전체를 국기로 채우고 경계에 빛, 서유럽에 도시 불빛
    * mode 'locator': 국가 페이지. focus 나라만 선명하게, 이웃은 흐리게(열린 나라는 링크)
@@ -1722,7 +1712,7 @@ ${countryTabs(c, id)}
     document.head.appendChild(ic);
   }
   document.getElementById('site-header').outerHTML = header();
-  document.getElementById('site-footer').outerHTML = footer();
+  document.getElementById('site-footer')?.remove();
   const main = document.getElementById('main');
   const TRIP = window.TRIP_RENDER || {}; // 여행 카테고리(trip.js)
   ({ home: renderHome, countries: renderCountries, news: renderNews, jobs: renderJobs, games: renderGames, about: renderAbout,

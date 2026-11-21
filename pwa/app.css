@@ -2,7 +2,7 @@
 /* 사이트 본문: 배경은 화면 끝까지, 내용만 노치·홈바 안쪽으로 */
 .wrap { padding-left: max(16px, env(safe-area-inset-left)); padding-right: max(16px, env(safe-area-inset-right)); }
 @media (min-width: 761px) { .wrap { padding-left: max(40px, env(safe-area-inset-left)); padding-right: max(40px, env(safe-area-inset-right)); } }
-.site-footer .footer-inner { padding-bottom: max(44px, calc(24px + env(safe-area-inset-bottom))); }
+body { padding-bottom: max(32px, calc(16px + env(safe-area-inset-bottom))); }
 /* 맨 위 알림 설정 줄: 헤더와 같은 야간 톤 */
 .cee-entry-bar { background: #040a1c; border-bottom: 1px solid rgba(110,170,255,.18); padding: 7px max(16px, env(safe-area-inset-right)) 7px max(16px, env(safe-area-inset-left)); text-align: right; }
 .cee-entry-bar .cee-entry { display: inline-flex; align-items: center; gap: 6px; padding: 4px 2px; background: none; color: #a8d4ff; font: 500 13px/1.4 'IBM Plex Sans','IBM Plex Sans KR','Malgun Gothic',system-ui,sans-serif; text-decoration: none; }
