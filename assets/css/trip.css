@@ -341,3 +341,18 @@
 .tp-photo .tp-collage { aspect-ratio: 4 / 3; border-radius: 12px; overflow: hidden; }
 .tp-photo .tp-collage.n1 img { border-radius: 12px; }
 .tp-credit a { color: #e6edf8; }
+
+/* ---------- 실험: 대표 사진 3장 전환(크로스페이드) ---------- */
+.tp-slides { position: relative; width: 100%; height: 100%; overflow: hidden; background: #0d1f47; }
+.tp-card-media > .tp-slides { position: absolute; inset: 0; }
+.tp-photo .tp-slides { aspect-ratio: 4 / 3; border-radius: 12px; }
+.tp-mini-img .tp-slides { position: absolute; inset: 0; }
+.tp-mini-img { position: relative; }
+.tp-slides img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; animation: tpFade 12s ease-in-out infinite both; }
+.tp-slides img:first-child { opacity: 1; }
+@keyframes tpFade { 0% { opacity: 0; transform: scale(1.04); } 6% { opacity: 1; } 33% { opacity: 1; } 40% { opacity: 0; transform: scale(1); } 100% { opacity: 0; } }
+.tp-slide-dots { position: absolute; right: 10px; bottom: 30px; display: flex; gap: 5px; z-index: 2; }
+.tp-photo .tp-slide-dots { bottom: 10px; }
+.tp-slide-dots i { width: 7px; height: 7px; border-radius: 50%; background: rgba(255,255,255,.45); animation: tpDot 12s infinite both; }
+@keyframes tpDot { 0%, 33% { background: #fff; } 34%, 100% { background: rgba(255,255,255,.45); } }
+@media (prefers-reduced-motion: reduce) { .tp-slides img { animation: none; } .tp-slides img:first-child { opacity: 1; } .tp-slide-dots { display: none; } }

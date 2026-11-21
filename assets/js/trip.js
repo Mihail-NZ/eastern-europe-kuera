@@ -138,10 +138,13 @@
     });
   })();
   const toPh = p => ({ src: ROOT + p[0], author: p[1], license: p[2], source: p[3], alt: p[4] });
-  const photosOf = route => (photoPick[route.id] || []).map(toPh);
+  // 실험: TRIP_SLIDES에 있는 루트는 직접 고른 고화질 사진 3장을 콜라주 대신 차례로 바꿔 보여 준다
+  const SLIDES = window.TRIP_SLIDES || {};
+  const photosOf = route => (SLIDES[route.id] ? SLIDES[route.id].map(p => Object.assign(toPh(p), { slide: true })) : (photoPick[route.id] || []).map(toPh));
   const photoOf = route => photosOf(route)[0] || null;
   const credit = phs => phs.map(ph => `<a href="${esc(ph.source)}" target="_blank" rel="noopener">${esc(ph.author)}</a> · ${esc(ph.license)}`).join(' / ');
-  const collage = (phs, cls) => `<div class="tp-collage n${phs.length} ${cls || ''}">${phs.map(ph => `<img src="${esc(ph.src)}" alt="${esc(ph.alt)}" loading="lazy" decoding="async" referrerpolicy="no-referrer">`).join('')}</div>`;
+  const slideshow = phs => `<div class="tp-slides" role="img" aria-label="${esc(phs.map(ph => ph.alt).join(" · "))}">${phs.map((ph, i) => `<img src="${esc(ph.src)}" alt="" loading="${i ? "lazy" : "eager"}" decoding="async" style="animation-delay:${i * 4}s">`).join("")}<span class="tp-slide-dots" aria-hidden="true">${phs.map((_, i) => `<i style="animation-delay:${i * 4}s"></i>`).join("")}</span></div>`;
+  const collage = (phs, cls) => phs[0] && phs[0].slide ? slideshow(phs) : `<div class="tp-collage n${phs.length} ${cls || ''}">${phs.map(ph => `<img src="${esc(ph.src)}" alt="${esc(ph.alt)}" loading="lazy" decoding="async" referrerpolicy="no-referrer">`).join('')}</div>`;
   const evOf = route => (route.ev || []).map(k => REFS[k] && { k, type: REFS[k][0], t: REFS[k][1], u: REFS[k][2] }).filter(Boolean);
   const evSummary = route => { const c = {}; evOf(route).forEach(e => { c[e.type] = (c[e.type] || 0) + 1; }); return ['국내', '해외', '교통', '통계'].filter(t => c[t]).map(t => `${t} ${c[t]}`).join(' · '); };
 

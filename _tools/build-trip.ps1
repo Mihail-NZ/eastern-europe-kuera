@@ -78,6 +78,7 @@ $fonts
 <script src="${rel}assets/js/data-trip-routes.js?v=$V"></script>
 <script src="${rel}assets/js/data-trip-photos.js?v=$V"></script>
 <script src="${rel}assets/js/data-trip-webphotos.js?v=$V"></script>
+<script src="${rel}assets/js/data-trip-slides.js?v=$V"></script>
 <script src="${rel}assets/js/trip.js?v=$V"></script>
 <script src="${rel}assets/js/site.js?v=$V"></script>
 </body>
