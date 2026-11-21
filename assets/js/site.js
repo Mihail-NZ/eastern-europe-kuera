@@ -100,7 +100,7 @@
       ['home', 'Home', 'index.html'], ['countries', 'Countries', 'countries/index.html'], ['trip', 'Travel', 'travel/index.html'],
       ['news', 'News', 'news/index.html'], ['jobs', 'Careers', 'jobs/index.html'], ['games', 'Mini Game', 'games/index.html'], ['about', 'About KUERA', 'about/index.html']
     ];
-    const current = PAGE === 'country' || PAGE === 'section' ? 'countries' : PAGE === 'trip-route' ? 'trip' : PAGE;
+    const current = PAGE === 'country' || PAGE === 'section' ? 'countries' : PAGE === 'trip-route' || PAGE === 'trip-best' ? 'trip' : PAGE;
     return `<a class="skip" href="#main">본문으로 건너뛰기</a>
 <header class="site-header">
   <div class="wrap header-inner">
@@ -314,25 +314,25 @@
 
   /* ---------- 페이지: 국가 목록 ---------- */
   /* 데일리 뉴스와 같은 5개 권역으로 나눈다 */
-  /* 주차 이름: 월요일 날짜(YYYY-MM-DD)로 "10월 3주차"를 만든다. 그 주 목요일이 속한 달의 몇 번째 주인지로 센다 */
-  function weekLabel(mondayIso) {
-    const [y, m, d] = mondayIso.split('-').map(Number);
-    const thu = new Date(Date.UTC(y, m - 1, d + 3));
-    return `${thu.getUTCMonth() + 1}월 ${Math.floor((thu.getUTCDate() - 1) / 7) + 1}주차`;
-  }
-  /* 나라마다 가장 최근 주차의 대표 뉴스 제목 한 줄(data-weekly.js)을 붙인다 */
+  /* 나라마다 '최근 주요뉴스' 한 줄을 붙인다. 최신 주차부터 거슬러 올라가 제목이 있는 첫 주차의 뉴스를 쓰고,
+   * 주간 데이터에 전혀 없으면 주요 뉴스(data-major.js)의 최신 기사로 채운다. 둘 다 없을 때만 줄을 비운다. */
   function renderCountries(main) {
-    const week = (window.WEEKLY_NEWS || [])[0];
-    const picks = (week && week.countries) || {};
+    const weeks = window.WEEKLY_NEWS || [];
+    const majors = ((window.MAJOR_NEWS || {}).items || []).filter(it => it.status === 'published')
+      .sort((x, y) => y.published.localeCompare(x.published));
+    const majorSrc = it => { const s = (it.sources || [])[0]; return s && s.name ? s.name.split(/\s+[–-]\s+/)[0] : ''; };
+    const recentPick = ko => {
+      for (const w of weeks) { const p = (w.countries || {})[ko]; if (p && p.title) return p; }
+      const m = majors.find(it => (it.countries || []).includes(ko));
+      return m ? { title: m.title, source: majorSrc(m) } : null;
+    };
     const card = code => {
       const e = EAST[code], slug = SLUG_BY_ISO3[code];
-      const pick = picks[e.ko];
-      const body = !week || !pick ? ''
-        : pick.title ? `${esc(pick.title)}${pick.source ? `<span class="cc-src"> · ${esc(pick.source)}</span>` : ''}`
-        : '<span class="cc-none">이번 주 확인된 주요 보도 없음</span>';
+      const pick = recentPick(e.ko);
+      const body = pick ? `${esc(pick.title)}${pick.source ? `<span class="cc-src"> · ${esc(pick.source)}</span>` : ''}` : '';
       const inner = `<span class="cc-head">${flagIcon(code, 'flag flag-md')}<span class="cc-name">${esc(e.ko)}<span class="cc-en">${esc(e.en)}</span></span>
           <span class="cc-state">${slug ? '상세 보기' : '준비 중'}</span></span>
-        ${body ? `<span class="cc-note"><span class="cc-date">${weekLabel(week.week_start)} 뉴스</span>${body}</span>` : ''}`;
+        ${body ? `<span class="cc-note"><span class="cc-date">최근 주요뉴스</span>${body}</span>` : ''}`;
       return slug
         ? `<li><a class="cc is-live" href="${countryUrl(slug)}">${inner}</a></li>`
         : `<li><div class="cc is-soon">${inner}</div></li>`;
@@ -1728,7 +1728,7 @@ ${countryTabs(c, id)}
   const main = document.getElementById('main');
   const TRIP = window.TRIP_RENDER || {}; // 여행 카테고리(trip.js)
   ({ home: renderHome, countries: renderCountries, news: renderNews, jobs: renderJobs, games: renderGames, about: renderAbout,
-     trip: m => TRIP.main && TRIP.main(m), 'trip-route': m => TRIP.route && TRIP.route(m, body.dataset.route),
+     trip: m => TRIP.main && TRIP.main(m), 'trip-route': m => TRIP.route && TRIP.route(m, body.dataset.route), 'trip-best': m => TRIP.best && TRIP.best(m),
      country: m => renderCountry(m, body.dataset.slug),
      section: m => renderSection(m, body.dataset.slug, body.dataset.section) }[PAGE] || renderHome)(main);
 })();

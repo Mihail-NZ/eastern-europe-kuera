@@ -361,23 +361,37 @@
 @media (prefers-reduced-motion: reduce) { .tp-slides img:first-child { opacity: 1; } }
 .tp-more-hint { margin: 0 0 14px; }
 
-/* 베스트 10 */
-.tp-best { margin: 8px 0 40px; }
-.tp-best-list { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
-.tp-best-item { position: relative; display: grid; grid-template-columns: 116px minmax(0, 1fr); gap: 14px; background: var(--card); border-radius: 14px; box-shadow: var(--shadow); padding: 12px; }
-.tp-best-rank { position: absolute; top: 8px; left: 8px; z-index: 1; min-width: 28px; height: 28px; padding: 0 6px; border-radius: 14px; background: var(--blue); color: #fff; font: 600 14px/28px var(--sans, inherit); text-align: center; }
+/* 여행 탭(맞춤 찾기 / 베스트 10) */
+.tp-tabs { display: inline-flex; gap: 4px; margin-top: 22px; padding: 4px; border-radius: 999px; background: rgba(255, 255, 255, .08); border: 1px solid rgba(160, 200, 255, .3); }
+.tp-tabs a { padding: 9px 18px; border-radius: 999px; color: #dbe8ff; text-decoration: none; font-size: 15px; font-weight: 600; }
+.tp-tabs a:hover { color: #fff; background: rgba(120, 170, 255, .16); }
+.tp-tabs a[aria-current="page"] { background: #fff; color: var(--ink); }
+.tp-tabs + .tp-jump { margin-top: 14px; }
+
+/* 베스트 10 페이지 */
+.tp-best-how { background: var(--card); border-radius: 14px; box-shadow: var(--shadow); padding: 18px 22px; margin: 28px 0 22px; }
+.tp-best-how h2 { font: 600 18px/1.4 var(--serif); margin: 0 0 8px; }
+.tp-best-how ul { margin: 0; padding-left: 18px; font-size: 14px; line-height: 1.7; color: #3d4760; }
+.tp-best-list { list-style: none; margin: 0 0 24px; padding: 0; display: grid; gap: 16px; }
+.tp-best-item { position: relative; display: grid; grid-template-columns: 300px minmax(0, 1fr); gap: 20px; background: var(--card); border-radius: 16px; box-shadow: var(--shadow); padding: 14px; }
+.tp-best-rank { position: absolute; top: 22px; left: 22px; z-index: 2; min-width: 36px; height: 36px; padding: 0 8px; border-radius: 18px; background: var(--blue); color: #fff; font-size: 18px; font-weight: 700; line-height: 36px; text-align: center; box-shadow: 0 2px 8px rgba(0, 0, 0, .25); }
 .tp-best-item:nth-child(-n+3) .tp-best-rank { background: #c2410c; }
-.tp-best-img { display: block; border-radius: 10px; overflow: hidden; aspect-ratio: 1; background: #e6ecf5; }
-.tp-best-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
-.tp-best-txt { min-width: 0; }
-.tp-best-head { margin: 0 0 2px; font-size: 12px; font-weight: 600; color: var(--blue); }
-.tp-best-txt h3 { font: 600 15.5px/1.4 var(--serif); margin: 0 0 4px; }
-.tp-best-txt h3 a { color: var(--ink); text-decoration: none; }
-.tp-best-txt h3 a:hover { text-decoration: underline; }
-.tp-best-meta, .tp-best-src { margin: 0 0 4px; font-size: 12px; color: #6b7893; }
-.tp-best-why { margin: 0 0 4px; font-size: 13px; line-height: 1.55; color: #3d4760; }
+.tp-best-img { display: block; border-radius: 12px; overflow: hidden; aspect-ratio: 4 / 3; background: #e6ecf5; position: relative; }
+.tp-best-img .tp-slides { position: absolute; inset: 0; height: 100%; }
+.tp-best-txt { min-width: 0; display: flex; flex-direction: column; }
+.tp-best-head { margin: 4px 0 2px; font-size: 13px; font-weight: 600; color: var(--blue); }
+.tp-best-txt h2 { font: 600 19px/1.4 var(--serif); margin: 0 0 6px; }
+.tp-best-txt h2 a { color: var(--ink); text-decoration: none; }
+.tp-best-txt h2 a:hover { text-decoration: underline; }
+.tp-best-meta, .tp-best-src { margin: 0 0 8px; font-size: 12.5px; color: #6b7893; line-height: 1.6; }
 .tp-best-src a { color: inherit; }
+.tp-best-why { margin: 0 0 8px; display: grid; gap: 6px; }
+.tp-best-why div { display: grid; grid-template-columns: 38px minmax(0, 1fr); gap: 8px; font-size: 14px; line-height: 1.6; color: #3d4760; }
+.tp-best-why dt { font-size: 12px; font-weight: 700; color: #fff; background: #6b7893; border-radius: 6px; text-align: center; height: 22px; line-height: 22px; margin-top: 1px; }
+.tp-best-why div + div dt { background: #0f766e; }
+.tp-best-why dd { margin: 0; }
+.tp-best-txt .tp-detail { align-self: flex-start; margin-top: auto; }
 @media (max-width: 760px) {
-  .tp-best-list { grid-template-columns: 1fr; }
-  .tp-best-item { grid-template-columns: 88px minmax(0, 1fr); }
+  .tp-best-item { grid-template-columns: 1fr; gap: 12px; }
+  .tp-best-rank { top: 20px; left: 20px; }
 }
