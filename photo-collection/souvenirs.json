@@ -1,0 +1,1427 @@
+[
+  {
+    "id": "ee-01",
+    "countryCode": "ee",
+    "titleEn": "Kalev Kama Chocolate"
+  },
+  {
+    "id": "ee-02",
+    "countryCode": "ee",
+    "titleEn": "Maiasmokk Marzipan"
+  },
+  {
+    "id": "ee-03",
+    "countryCode": "ee",
+    "titleEn": "Kama"
+  },
+  {
+    "id": "ee-04",
+    "countryCode": "ee",
+    "titleEn": "Sea Buckthorn Jam/Syrup"
+  },
+  {
+    "id": "ee-05",
+    "countryCode": "ee",
+    "titleEn": "Saaremaa Juniper Syrup"
+  },
+  {
+    "id": "ee-06",
+    "countryCode": "ee",
+    "titleEn": "Vana Tallinn"
+  },
+  {
+    "id": "ee-07",
+    "countryCode": "ee",
+    "titleEn": "Estonian Rhubarb Wine"
+  },
+  {
+    "id": "ee-08",
+    "countryCode": "ee",
+    "titleEn": "Saaremaa Juniper Wood Crafts"
+  },
+  {
+    "id": "ee-09",
+    "countryCode": "ee",
+    "titleEn": "Muhu Embroidery Knitwear"
+  },
+  {
+    "id": "ee-10",
+    "countryCode": "ee",
+    "titleEn": "Haapsalu Lace Shawl"
+  },
+  {
+    "id": "ee-11",
+    "countryCode": "ee",
+    "titleEn": "JOIK Scented Candle"
+  },
+  {
+    "id": "ee-12",
+    "countryCode": "ee",
+    "titleEn": "TurBliss Peat Cosmetics"
+  },
+  {
+    "id": "ee-13",
+    "countryCode": "ee",
+    "titleEn": "Stella Soomlais Leather Goods"
+  },
+  {
+    "id": "ee-14",
+    "countryCode": "ee",
+    "titleEn": "Reet Aus Upcycled Fashion"
+  },
+  {
+    "id": "lv-01",
+    "countryCode": "lv",
+    "titleEn": "Skrīveru Gotiņa"
+  },
+  {
+    "id": "lv-02",
+    "countryCode": "lv",
+    "titleEn": "Laima Chocolate"
+  },
+  {
+    "id": "lv-03",
+    "countryCode": "lv",
+    "titleEn": "Ādažu Chips"
+  },
+  {
+    "id": "lv-04",
+    "countryCode": "lv",
+    "titleEn": "Riga Sprats"
+  },
+  {
+    "id": "lv-05",
+    "countryCode": "lv",
+    "titleEn": "Latvian Rye Bread Crisps"
+  },
+  {
+    "id": "lv-06",
+    "countryCode": "lv",
+    "titleEn": "Riga Black Balsam"
+  },
+  {
+    "id": "lv-07",
+    "countryCode": "lv",
+    "titleEn": "PLŪKT Nordic Herbal Tea"
+  },
+  {
+    "id": "lv-08",
+    "countryCode": "lv",
+    "titleEn": "Latgale Pottery"
+  },
+  {
+    "id": "lv-09",
+    "countryCode": "lv",
+    "titleEn": "Latvian Knitted Mittens"
+  },
+  {
+    "id": "lv-10",
+    "countryCode": "lv",
+    "titleEn": "Lielvārde Belt Textile"
+  },
+  {
+    "id": "lv-11",
+    "countryCode": "lv",
+    "titleEn": "the MUNIO Botanical Candle"
+  },
+  {
+    "id": "lv-12",
+    "countryCode": "lv",
+    "titleEn": "MÁDARA Cosmetics"
+  },
+  {
+    "id": "lv-13",
+    "countryCode": "lv",
+    "titleEn": "Piparmētra Stationery"
+  },
+  {
+    "id": "lv-14",
+    "countryCode": "lv",
+    "titleEn": "an&angel Glass Design"
+  },
+  {
+    "id": "lt-01",
+    "countryCode": "lt",
+    "titleEn": "Šakotis"
+  },
+  {
+    "id": "lt-02",
+    "countryCode": "lt",
+    "titleEn": "Grybukai"
+  },
+  {
+    "id": "lt-03",
+    "countryCode": "lt",
+    "titleEn": "Obuolių Sūris"
+  },
+  {
+    "id": "lt-04",
+    "countryCode": "lt",
+    "titleEn": "Lithuanian Quince Candy/Syrup"
+  },
+  {
+    "id": "lt-05",
+    "countryCode": "lt",
+    "titleEn": "Lithuanian Rye Bread Snacks"
+  },
+  {
+    "id": "lt-06",
+    "countryCode": "lt",
+    "titleEn": "Stakliškės Mead"
+  },
+  {
+    "id": "lt-07",
+    "countryCode": "lt",
+    "titleEn": "Trejos Devynerios"
+  },
+  {
+    "id": "lt-08",
+    "countryCode": "lt",
+    "titleEn": "Lithuanian Linen"
+  },
+  {
+    "id": "lt-09",
+    "countryCode": "lt",
+    "titleEn": "Baltic Amber Jewellery"
+  },
+  {
+    "id": "lt-10",
+    "countryCode": "lt",
+    "titleEn": "Lithuanian Folk Pottery"
+  },
+  {
+    "id": "lt-11",
+    "countryCode": "lt",
+    "titleEn": "Smells Like Spells Candle"
+  },
+  {
+    "id": "lt-12",
+    "countryCode": "lt",
+    "titleEn": "Chocolate Naive"
+  },
+  {
+    "id": "lt-13",
+    "countryCode": "lt",
+    "titleEn": "Rūta Chocolate"
+  },
+  {
+    "id": "lt-14",
+    "countryCode": "lt",
+    "titleEn": "Vilnius Verba"
+  },
+  {
+    "id": "pl-01",
+    "countryCode": "pl",
+    "titleEn": "Toruń Pierniki"
+  },
+  {
+    "id": "pl-02",
+    "countryCode": "pl",
+    "titleEn": "Krówki"
+  },
+  {
+    "id": "pl-03",
+    "countryCode": "pl",
+    "titleEn": "Śliwka Nałęczowska"
+  },
+  {
+    "id": "pl-04",
+    "countryCode": "pl",
+    "titleEn": "Ptasie Mleczko"
+  },
+  {
+    "id": "pl-05",
+    "countryCode": "pl",
+    "titleEn": "Kashubian Strawberry Jam"
+  },
+  {
+    "id": "pl-06",
+    "countryCode": "pl",
+    "titleEn": "Miód Pitny"
+  },
+  {
+    "id": "pl-07",
+    "countryCode": "pl",
+    "titleEn": "Wiśniówka"
+  },
+  {
+    "id": "pl-08",
+    "countryCode": "pl",
+    "titleEn": "Kraków Szopka"
+  },
+  {
+    "id": "pl-09",
+    "countryCode": "pl",
+    "titleEn": "Łowicz Paper Cuttings"
+  },
+  {
+    "id": "pl-10",
+    "countryCode": "pl",
+    "titleEn": "Zakopane Goral Wool Slippers"
+  },
+  {
+    "id": "pl-11",
+    "countryCode": "pl",
+    "titleEn": "KABAK Socks"
+  },
+  {
+    "id": "pl-12",
+    "countryCode": "pl",
+    "titleEn": "Mydlarnia Cztery Szpaki Soap"
+  },
+  {
+    "id": "pl-13",
+    "countryCode": "pl",
+    "titleEn": "Polish School of Posters Prints"
+  },
+  {
+    "id": "pl-14",
+    "countryCode": "pl",
+    "titleEn": "Wawel Mieszanka Krakowska"
+  },
+  {
+    "id": "cz-01",
+    "countryCode": "cz",
+    "titleEn": "Karlovy Vary Spa Wafers"
+  },
+  {
+    "id": "cz-02",
+    "countryCode": "cz",
+    "titleEn": "Pardubický Perník"
+  },
+  {
+    "id": "cz-03",
+    "countryCode": "cz",
+    "titleEn": "Hořické Trubičky"
+  },
+  {
+    "id": "cz-04",
+    "countryCode": "cz",
+    "titleEn": "Štramberské Uši"
+  },
+  {
+    "id": "cz-05",
+    "countryCode": "cz",
+    "titleEn": "Hašlerky"
+  },
+  {
+    "id": "cz-06",
+    "countryCode": "cz",
+    "titleEn": "Moravian Pálava Wine"
+  },
+  {
+    "id": "cz-07",
+    "countryCode": "cz",
+    "titleEn": "Czech Craft Beer"
+  },
+  {
+    "id": "cz-08",
+    "countryCode": "cz",
+    "titleEn": "Bohemian Glass"
+  },
+  {
+    "id": "cz-09",
+    "countryCode": "cz",
+    "titleEn": "Czech Handmade Marionette"
+  },
+  {
+    "id": "cz-10",
+    "countryCode": "cz",
+    "titleEn": "Jablonec Glass Bead Jewellery"
+  },
+  {
+    "id": "cz-11",
+    "countryCode": "cz",
+    "titleEn": "Manufaktura Beer/Spa Cosmetics"
+  },
+  {
+    "id": "cz-12",
+    "countryCode": "cz",
+    "titleEn": "papelote Stationery"
+  },
+  {
+    "id": "cz-13",
+    "countryCode": "cz",
+    "titleEn": "Vasky/Botas Sneakers"
+  },
+  {
+    "id": "cz-14",
+    "countryCode": "cz",
+    "titleEn": "Krtek Merchandise"
+  },
+  {
+    "id": "cz-15",
+    "countryCode": "cz",
+    "titleEn": "KOH-I-NOOR Art Supplies"
+  },
+  {
+    "id": "sk-01",
+    "countryCode": "sk",
+    "titleEn": "Skalický Trdelník"
+  },
+  {
+    "id": "sk-02",
+    "countryCode": "sk",
+    "titleEn": "Bratislavské Rožky"
+  },
+  {
+    "id": "sk-03",
+    "countryCode": "sk",
+    "titleEn": "Sedita Horalky"
+  },
+  {
+    "id": "sk-04",
+    "countryCode": "sk",
+    "titleEn": "Sedita Kávenky"
+  },
+  {
+    "id": "sk-05",
+    "countryCode": "sk",
+    "titleEn": "Slovak Mountain Berry Jam"
+  },
+  {
+    "id": "sk-06",
+    "countryCode": "sk",
+    "titleEn": "Slovak Medovina"
+  },
+  {
+    "id": "sk-07",
+    "countryCode": "sk",
+    "titleEn": "Skalický Rubín"
+  },
+  {
+    "id": "sk-08",
+    "countryCode": "sk",
+    "titleEn": "Modra Majolica Pottery"
+  },
+  {
+    "id": "sk-09",
+    "countryCode": "sk",
+    "titleEn": "Čičmany Pattern Textile"
+  },
+  {
+    "id": "sk-10",
+    "countryCode": "sk",
+    "titleEn": "Drotárstvo Wire Craft"
+  },
+  {
+    "id": "sk-11",
+    "countryCode": "sk",
+    "titleEn": "Tatratea"
+  },
+  {
+    "id": "sk-12",
+    "countryCode": "sk",
+    "titleEn": "Kofola"
+  },
+  {
+    "id": "sk-13",
+    "countryCode": "sk",
+    "titleEn": "Vinea"
+  },
+  {
+    "id": "sk-14",
+    "countryCode": "sk",
+    "titleEn": "PUOJD Folk Pattern Socks"
+  },
+  {
+    "id": "hu-01",
+    "countryCode": "hu",
+    "titleEn": "Kalocsa/Szeged Paprika"
+  },
+  {
+    "id": "hu-02",
+    "countryCode": "hu",
+    "titleEn": "Erős Pista"
+  },
+  {
+    "id": "hu-03",
+    "countryCode": "hu",
+    "titleEn": "Szamos Marzipan"
+  },
+  {
+    "id": "hu-04",
+    "countryCode": "hu",
+    "titleEn": "Szaloncukor"
+  },
+  {
+    "id": "hu-05",
+    "countryCode": "hu",
+    "titleEn": "Tokaj Wine Vinegar"
+  },
+  {
+    "id": "hu-06",
+    "countryCode": "hu",
+    "titleEn": "Pálinka"
+  },
+  {
+    "id": "hu-07",
+    "countryCode": "hu",
+    "titleEn": "Soproni Kékfrankos"
+  },
+  {
+    "id": "hu-08",
+    "countryCode": "hu",
+    "titleEn": "Matyó Embroidery"
+  },
+  {
+    "id": "hu-09",
+    "countryCode": "hu",
+    "titleEn": "Zsolnay Eosin Ceramics"
+  },
+  {
+    "id": "hu-10",
+    "countryCode": "hu",
+    "titleEn": "Mohács Busó Mask"
+  },
+  {
+    "id": "hu-11",
+    "countryCode": "hu",
+    "titleEn": "Tisza Cipő Sneakers"
+  },
+  {
+    "id": "hu-12",
+    "countryCode": "hu",
+    "titleEn": "Printa Budapest Design Goods"
+  },
+  {
+    "id": "hu-13",
+    "countryCode": "hu",
+    "titleEn": "Bomo Art Notebook"
+  },
+  {
+    "id": "hu-14",
+    "countryCode": "hu",
+    "titleEn": "Zwack Unicum"
+  },
+  {
+    "id": "hu-15",
+    "countryCode": "hu",
+    "titleEn": "Sport Szelet"
+  },
+  {
+    "id": "si-01",
+    "countryCode": "si",
+    "titleEn": "Piran Salt Flower"
+  },
+  {
+    "id": "si-02",
+    "countryCode": "si",
+    "titleEn": "Styrian Pumpkin Seed Oil"
+  },
+  {
+    "id": "si-03",
+    "countryCode": "si",
+    "titleEn": "Karst Honey"
+  },
+  {
+    "id": "si-04",
+    "countryCode": "si",
+    "titleEn": "Slovenian Istrian Olive Oil"
+  },
+  {
+    "id": "si-05",
+    "countryCode": "si",
+    "titleEn": "Potica"
+  },
+  {
+    "id": "si-06",
+    "countryCode": "si",
+    "titleEn": "Karst Teran Wine"
+  },
+  {
+    "id": "si-07",
+    "countryCode": "si",
+    "titleEn": "Slovenian Honey Liqueur"
+  },
+  {
+    "id": "si-08",
+    "countryCode": "si",
+    "titleEn": "Idrija Lace"
+  },
+  {
+    "id": "si-09",
+    "countryCode": "si",
+    "titleEn": "Panjske Končnice"
+  },
+  {
+    "id": "si-10",
+    "countryCode": "si",
+    "titleEn": "Ribnica Woodcraft"
+  },
+  {
+    "id": "si-11",
+    "countryCode": "si",
+    "titleEn": "Lepa Vida Salt Cosmetics"
+  },
+  {
+    "id": "si-12",
+    "countryCode": "si",
+    "titleEn": "Pomelaj Corn Husk Crafts"
+  },
+  {
+    "id": "si-13",
+    "countryCode": "si",
+    "titleEn": "Postojna Cave Olm Plush"
+  },
+  {
+    "id": "si-14",
+    "countryCode": "si",
+    "titleEn": "Almira Sadar Fashion"
+  },
+  {
+    "id": "hr-01",
+    "countryCode": "hr",
+    "titleEn": "Pag Sea Salt"
+  },
+  {
+    "id": "hr-02",
+    "countryCode": "hr",
+    "titleEn": "Arancini"
+  },
+  {
+    "id": "hr-03",
+    "countryCode": "hr",
+    "titleEn": "Paprenjak"
+  },
+  {
+    "id": "hr-04",
+    "countryCode": "hr",
+    "titleEn": "Smokvenjak"
+  },
+  {
+    "id": "hr-05",
+    "countryCode": "hr",
+    "titleEn": "Istrian Olive Oil"
+  },
+  {
+    "id": "hr-06",
+    "countryCode": "hr",
+    "titleEn": "Maraschino"
+  },
+  {
+    "id": "hr-07",
+    "countryCode": "hr",
+    "titleEn": "Plavac Mali Wine"
+  },
+  {
+    "id": "hr-08",
+    "countryCode": "hr",
+    "titleEn": "Pag Lace"
+  },
+  {
+    "id": "hr-09",
+    "countryCode": "hr",
+    "titleEn": "Šibenski Botun Jewellery"
+  },
+  {
+    "id": "hr-10",
+    "countryCode": "hr",
+    "titleEn": "Licitar Heart"
+  },
+  {
+    "id": "hr-11",
+    "countryCode": "hr",
+    "titleEn": "Borovo Startas Sneakers"
+  },
+  {
+    "id": "hr-12",
+    "countryCode": "hr",
+    "titleEn": "Šestine Umbrella"
+  },
+  {
+    "id": "hr-13",
+    "countryCode": "hr",
+    "titleEn": "CROATA Silk Necktie"
+  },
+  {
+    "id": "hr-14",
+    "countryCode": "hr",
+    "titleEn": "Hvar Lavender Sachet"
+  },
+  {
+    "id": "hr-15",
+    "countryCode": "hr",
+    "titleEn": "Vučedol Dove Replica"
+  },
+  {
+    "id": "ba-01",
+    "countryCode": "ba",
+    "titleEn": "Zlatna Džezva Coffee"
+  },
+  {
+    "id": "ba-02",
+    "countryCode": "ba",
+    "titleEn": "Rahat Lokum"
+  },
+  {
+    "id": "ba-03",
+    "countryCode": "ba",
+    "titleEn": "Herzegovinian Dried Figs"
+  },
+  {
+    "id": "ba-04",
+    "countryCode": "ba",
+    "titleEn": "Smokvenjak"
+  },
+  {
+    "id": "ba-05",
+    "countryCode": "ba",
+    "titleEn": "Bosnian Ajvar"
+  },
+  {
+    "id": "ba-06",
+    "countryCode": "ba",
+    "titleEn": "Žilavka Wine"
+  },
+  {
+    "id": "ba-07",
+    "countryCode": "ba",
+    "titleEn": "Blatina Wine"
+  },
+  {
+    "id": "ba-08",
+    "countryCode": "ba",
+    "titleEn": "Sarajevo Copper Džezva"
+  },
+  {
+    "id": "ba-09",
+    "countryCode": "ba",
+    "titleEn": "Zmijanje Embroidery"
+  },
+  {
+    "id": "ba-10",
+    "countryCode": "ba",
+    "titleEn": "Konjic Woodcarving"
+  },
+  {
+    "id": "ba-11",
+    "countryCode": "ba",
+    "titleEn": "Vučko Sarajevo 1984 Mascot"
+  },
+  {
+    "id": "ba-12",
+    "countryCode": "ba",
+    "titleEn": "BHcrafts Knitwear"
+  },
+  {
+    "id": "ba-13",
+    "countryCode": "ba",
+    "titleEn": "BOSFAM Handmade Textiles"
+  },
+  {
+    "id": "ba-14",
+    "countryCode": "ba",
+    "titleEn": "Sevdalinka Music Album"
+  },
+  {
+    "id": "rs-01",
+    "countryCode": "rs",
+    "titleEn": "Leskovac Ajvar"
+  },
+  {
+    "id": "rs-02",
+    "countryCode": "rs",
+    "titleEn": "Slatko"
+  },
+  {
+    "id": "rs-03",
+    "countryCode": "rs",
+    "titleEn": "Vanilice"
+  },
+  {
+    "id": "rs-04",
+    "countryCode": "rs",
+    "titleEn": "Kitnikez"
+  },
+  {
+    "id": "rs-05",
+    "countryCode": "rs",
+    "titleEn": "Serbian Dried Plums"
+  },
+  {
+    "id": "rs-06",
+    "countryCode": "rs",
+    "titleEn": "Šljivovica"
+  },
+  {
+    "id": "rs-07",
+    "countryCode": "rs",
+    "titleEn": "Prokupac Wine"
+  },
+  {
+    "id": "rs-08",
+    "countryCode": "rs",
+    "titleEn": "Pirot Kilim"
+  },
+  {
+    "id": "rs-09",
+    "countryCode": "rs",
+    "titleEn": "Zlakusa Pottery"
+  },
+  {
+    "id": "rs-10",
+    "countryCode": "rs",
+    "titleEn": "Kovačica Naive Art"
+  },
+  {
+    "id": "rs-11",
+    "countryCode": "rs",
+    "titleEn": "Smoki Peanut Snack"
+  },
+  {
+    "id": "rs-12",
+    "countryCode": "rs",
+    "titleEn": "Bambi Plazma Biscuit"
+  },
+  {
+    "id": "rs-13",
+    "countryCode": "rs",
+    "titleEn": "Sirogojno Knitwear"
+  },
+  {
+    "id": "rs-14",
+    "countryCode": "rs",
+    "titleEn": "Zastava Fića Car Miniature"
+  },
+  {
+    "id": "rs-15",
+    "countryCode": "rs",
+    "titleEn": "Nikola Tesla Museum Merchandise"
+  },
+  {
+    "id": "me-01",
+    "countryCode": "me",
+    "titleEn": "Bar Olive Oil"
+  },
+  {
+    "id": "me-02",
+    "countryCode": "me",
+    "titleEn": "Adriatic Dried Figs"
+  },
+  {
+    "id": "me-03",
+    "countryCode": "me",
+    "titleEn": "Wild Pomegranate Syrup"
+  },
+  {
+    "id": "me-04",
+    "countryCode": "me",
+    "titleEn": "Montenegrin Mountain Honey"
+  },
+  {
+    "id": "me-05",
+    "countryCode": "me",
+    "titleEn": "Bar Olive Preserves"
+  },
+  {
+    "id": "me-06",
+    "countryCode": "me",
+    "titleEn": "Vranac Wine"
+  },
+  {
+    "id": "me-07",
+    "countryCode": "me",
+    "titleEn": "Medovača"
+  },
+  {
+    "id": "me-08",
+    "countryCode": "me",
+    "titleEn": "Dobrota Lace"
+  },
+  {
+    "id": "me-09",
+    "countryCode": "me",
+    "titleEn": "Kotor Cat Art Prints"
+  },
+  {
+    "id": "me-10",
+    "countryCode": "me",
+    "titleEn": "Bar Olive Wood Crafts"
+  },
+  {
+    "id": "me-11",
+    "countryCode": "me",
+    "titleEn": "Montenegrin Kapa"
+  },
+  {
+    "id": "me-12",
+    "countryCode": "me",
+    "titleEn": "Kotor Maritime Art Prints"
+  },
+  {
+    "id": "me-13",
+    "countryCode": "me",
+    "titleEn": "Da Figura Painted Stones"
+  },
+  {
+    "id": "me-14",
+    "countryCode": "me",
+    "titleEn": "Luštica Olive & Lavender Soap"
+  },
+  {
+    "id": "xk-01",
+    "countryCode": "xk",
+    "titleEn": "Kosovo Ajvar"
+  },
+  {
+    "id": "xk-02",
+    "countryCode": "xk",
+    "titleEn": "Feferona Peppers"
+  },
+  {
+    "id": "xk-03",
+    "countryCode": "xk",
+    "titleEn": "Šar Mountains Honey"
+  },
+  {
+    "id": "xk-04",
+    "countryCode": "xk",
+    "titleEn": "Šar Mountains Herbal Tea"
+  },
+  {
+    "id": "xk-05",
+    "countryCode": "xk",
+    "titleEn": "Prizren Lokum"
+  },
+  {
+    "id": "xk-06",
+    "countryCode": "xk",
+    "titleEn": "Rahovec Wine"
+  },
+  {
+    "id": "xk-07",
+    "countryCode": "xk",
+    "titleEn": "Kosovo Raki"
+  },
+  {
+    "id": "xk-08",
+    "countryCode": "xk",
+    "titleEn": "Prizren Filigree Silver"
+  },
+  {
+    "id": "xk-09",
+    "countryCode": "xk",
+    "titleEn": "Plis Felt Cap"
+  },
+  {
+    "id": "xk-10",
+    "countryCode": "xk",
+    "titleEn": "Kosovo Handmade Kilim"
+  },
+  {
+    "id": "xk-11",
+    "countryCode": "xk",
+    "titleEn": "Hyjnesha në Fron Replica"
+  },
+  {
+    "id": "xk-12",
+    "countryCode": "xk",
+    "titleEn": "VIPA Potato Chips"
+  },
+  {
+    "id": "xk-13",
+    "countryCode": "xk",
+    "titleEn": "Trepça Minerals"
+  },
+  {
+    "id": "xk-14",
+    "countryCode": "xk",
+    "titleEn": "DHE Kosovo Ceramics"
+  },
+  {
+    "id": "mk-01",
+    "countryCode": "mk",
+    "titleEn": "Macedonian Ajvar"
+  },
+  {
+    "id": "mk-02",
+    "countryCode": "mk",
+    "titleEn": "Pindjur"
+  },
+  {
+    "id": "mk-03",
+    "countryCode": "mk",
+    "titleEn": "Skopje Lokum"
+  },
+  {
+    "id": "mk-04",
+    "countryCode": "mk",
+    "titleEn": "Macedonian Halva"
+  },
+  {
+    "id": "mk-05",
+    "countryCode": "mk",
+    "titleEn": "Macedonian Honey"
+  },
+  {
+    "id": "mk-06",
+    "countryCode": "mk",
+    "titleEn": "Tikveš Vranec Wine"
+  },
+  {
+    "id": "mk-07",
+    "countryCode": "mk",
+    "titleEn": "Strumica Mastika"
+  },
+  {
+    "id": "mk-08",
+    "countryCode": "mk",
+    "titleEn": "Ohrid Pearl Jewellery"
+  },
+  {
+    "id": "mk-09",
+    "countryCode": "mk",
+    "titleEn": "Ohrid Silver Filigree"
+  },
+  {
+    "id": "mk-10",
+    "countryCode": "mk",
+    "titleEn": "Ohrid Handmade Paper"
+  },
+  {
+    "id": "mk-11",
+    "countryCode": "mk",
+    "titleEn": "Vitaminka Stobi Flips"
+  },
+  {
+    "id": "mk-12",
+    "countryCode": "mk",
+    "titleEn": "Alkaloid Becutan Cream"
+  },
+  {
+    "id": "mk-13",
+    "countryCode": "mk",
+    "titleEn": "Stanušina Wine"
+  },
+  {
+    "id": "mk-14",
+    "countryCode": "mk",
+    "titleEn": "Skopsko Beer"
+  },
+  {
+    "id": "al-01",
+    "countryCode": "al",
+    "titleEn": "Përmet Gliko"
+  },
+  {
+    "id": "al-02",
+    "countryCode": "al",
+    "titleEn": "Çaj Mali"
+  },
+  {
+    "id": "al-03",
+    "countryCode": "al",
+    "titleEn": "Zagoria Honey"
+  },
+  {
+    "id": "al-04",
+    "countryCode": "al",
+    "titleEn": "Albanian Southern Olive Oil"
+  },
+  {
+    "id": "al-05",
+    "countryCode": "al",
+    "titleEn": "Albanian Dried Figs"
+  },
+  {
+    "id": "al-06",
+    "countryCode": "al",
+    "titleEn": "Kallmet Wine"
+  },
+  {
+    "id": "al-07",
+    "countryCode": "al",
+    "titleEn": "Tepelena Raki"
+  },
+  {
+    "id": "al-08",
+    "countryCode": "al",
+    "titleEn": "Krujë Kilim"
+  },
+  {
+    "id": "al-09",
+    "countryCode": "al",
+    "titleEn": "Shkodër Filigree Jewellery"
+  },
+  {
+    "id": "al-10",
+    "countryCode": "al",
+    "titleEn": "Qeleshe"
+  },
+  {
+    "id": "al-11",
+    "countryCode": "al",
+    "titleEn": "Gjirokastër Stone House Miniature"
+  },
+  {
+    "id": "al-12",
+    "countryCode": "al",
+    "titleEn": "Skënderbeu Brandy"
+  },
+  {
+    "id": "al-13",
+    "countryCode": "al",
+    "titleEn": "Mulliri Vjetër Coffee"
+  },
+  {
+    "id": "al-14",
+    "countryCode": "al",
+    "titleEn": "Bunk'Art Museum Merchandise"
+  },
+  {
+    "id": "ro-01",
+    "countryCode": "ro",
+    "titleEn": "Magiun de Prune Topoloveni"
+  },
+  {
+    "id": "ro-02",
+    "countryCode": "ro",
+    "titleEn": "Zacuscă"
+  },
+  {
+    "id": "ro-03",
+    "countryCode": "ro",
+    "titleEn": "Dulceață de Nuci Verzi"
+  },
+  {
+    "id": "ro-04",
+    "countryCode": "ro",
+    "titleEn": "ROM Chocolate"
+  },
+  {
+    "id": "ro-05",
+    "countryCode": "ro",
+    "titleEn": "Eugenia Biscuits"
+  },
+  {
+    "id": "ro-06",
+    "countryCode": "ro",
+    "titleEn": "Fetească Neagră Wine"
+  },
+  {
+    "id": "ro-07",
+    "countryCode": "ro",
+    "titleEn": "Țuică"
+  },
+  {
+    "id": "ro-08",
+    "countryCode": "ro",
+    "titleEn": "Horezu Pottery"
+  },
+  {
+    "id": "ro-09",
+    "countryCode": "ro",
+    "titleEn": "Bucovina Painted Eggs"
+  },
+  {
+    "id": "ro-10",
+    "countryCode": "ro",
+    "titleEn": "Romanian Ie Blouse"
+  },
+  {
+    "id": "ro-11",
+    "countryCode": "ro",
+    "titleEn": "Farmec Gerovital Cosmetics"
+  },
+  {
+    "id": "ro-12",
+    "countryCode": "ro",
+    "titleEn": "Gusto Pufuleți"
+  },
+  {
+    "id": "ro-13",
+    "countryCode": "ro",
+    "titleEn": "Dacia Classic Car Miniature"
+  },
+  {
+    "id": "ro-14",
+    "countryCode": "ro",
+    "titleEn": "Cărturești Stationery"
+  },
+  {
+    "id": "ro-15",
+    "countryCode": "ro",
+    "titleEn": "Covrigi de Buzău"
+  },
+  {
+    "id": "bg-01",
+    "countryCode": "bg",
+    "titleEn": "Bulgarian Rose Petal Jam"
+  },
+  {
+    "id": "bg-02",
+    "countryCode": "bg",
+    "titleEn": "Rose Lokum"
+  },
+  {
+    "id": "bg-03",
+    "countryCode": "bg",
+    "titleEn": "Lyutenitsa"
+  },
+  {
+    "id": "bg-04",
+    "countryCode": "bg",
+    "titleEn": "Sharena Sol"
+  },
+  {
+    "id": "bg-05",
+    "countryCode": "bg",
+    "titleEn": "Mursalski Chai"
+  },
+  {
+    "id": "bg-06",
+    "countryCode": "bg",
+    "titleEn": "Mavrud Wine"
+  },
+  {
+    "id": "bg-07",
+    "countryCode": "bg",
+    "titleEn": "Bulgarian Rakia"
+  },
+  {
+    "id": "bg-08",
+    "countryCode": "bg",
+    "titleEn": "Troyan Pottery"
+  },
+  {
+    "id": "bg-09",
+    "countryCode": "bg",
+    "titleEn": "Chiprovtsi Kilim"
+  },
+  {
+    "id": "bg-10",
+    "countryCode": "bg",
+    "titleEn": "Kukeri Mask"
+  },
+  {
+    "id": "bg-11",
+    "countryCode": "bg",
+    "titleEn": "Medenka Honey Cake"
+  },
+  {
+    "id": "bg-12",
+    "countryCode": "bg",
+    "titleEn": "Strandzha Manov Honey"
+  },
+  {
+    "id": "bg-13",
+    "countryCode": "bg",
+    "titleEn": "Strandzha Herbal Tea"
+  },
+  {
+    "id": "bg-14",
+    "countryCode": "bg",
+    "titleEn": "Shevitsa Design Accessories"
+  },
+  {
+    "id": "md-01",
+    "countryCode": "md",
+    "titleEn": "Bucuria Chocolate"
+  },
+  {
+    "id": "md-02",
+    "countryCode": "md",
+    "titleEn": "Green Walnut Jam"
+  },
+  {
+    "id": "md-03",
+    "countryCode": "md",
+    "titleEn": "Moldovan Dried Fruit"
+  },
+  {
+    "id": "md-04",
+    "countryCode": "md",
+    "titleEn": "Moldovan Honey"
+  },
+  {
+    "id": "md-05",
+    "countryCode": "md",
+    "titleEn": "Cozonac"
+  },
+  {
+    "id": "md-06",
+    "countryCode": "md",
+    "titleEn": "Rară Neagră Wine"
+  },
+  {
+    "id": "md-07",
+    "countryCode": "md",
+    "titleEn": "Divin Brandy"
+  },
+  {
+    "id": "md-08",
+    "countryCode": "md",
+    "titleEn": "Moldovan Handmade Carpet"
+  },
+  {
+    "id": "md-09",
+    "countryCode": "md",
+    "titleEn": "Mărțișor"
+  },
+  {
+    "id": "md-10",
+    "countryCode": "md",
+    "titleEn": "Ceramica Triboi"
+  },
+  {
+    "id": "md-11",
+    "countryCode": "md",
+    "titleEn": "Cricova Sparkling Wine"
+  },
+  {
+    "id": "md-12",
+    "countryCode": "md",
+    "titleEn": "Viorica Cosmetics"
+  },
+  {
+    "id": "md-13",
+    "countryCode": "md",
+    "titleEn": "Guguță Books & Merchandise"
+  },
+  {
+    "id": "md-14",
+    "countryCode": "md",
+    "titleEn": "Gagauzia Folk Dolls"
+  },
+  {
+    "id": "by-01",
+    "countryCode": "by",
+    "titleEn": "Kommunarka Chocolate"
+  },
+  {
+    "id": "by-02",
+    "countryCode": "by",
+    "titleEn": "Spartak Wafers"
+  },
+  {
+    "id": "by-03",
+    "countryCode": "by",
+    "titleEn": "Cranberries in Sugar"
+  },
+  {
+    "id": "by-04",
+    "countryCode": "by",
+    "titleEn": "Belarusian Zefir"
+  },
+  {
+    "id": "by-05",
+    "countryCode": "by",
+    "titleEn": "Belarusian Pryanik"
+  },
+  {
+    "id": "by-06",
+    "countryCode": "by",
+    "titleEn": "Krambambula"
+  },
+  {
+    "id": "by-07",
+    "countryCode": "by",
+    "titleEn": "Belovezhskaya Herbal Tincture"
+  },
+  {
+    "id": "by-08",
+    "countryCode": "by",
+    "titleEn": "Belarus Straw Weaving"
+  },
+  {
+    "id": "by-09",
+    "countryCode": "by",
+    "titleEn": "Belarus Linen Embroidery"
+  },
+  {
+    "id": "by-10",
+    "countryCode": "by",
+    "titleEn": "Slutsk Belt Pattern Goods"
+  },
+  {
+    "id": "by-11",
+    "countryCode": "by",
+    "titleEn": "Luch Wristwatch"
+  },
+  {
+    "id": "by-12",
+    "countryCode": "by",
+    "titleEn": "Neman Glassware"
+  },
+  {
+    "id": "by-13",
+    "countryCode": "by",
+    "titleEn": "BELARUS MTZ Tractor Miniature"
+  },
+  {
+    "id": "by-14",
+    "countryCode": "by",
+    "titleEn": "Belita-Vitex Cosmetics"
+  },
+  {
+    "id": "ua-01",
+    "countryCode": "ua",
+    "titleEn": "Kyiv Dry Jam"
+  },
+  {
+    "id": "ua-02",
+    "countryCode": "ua",
+    "titleEn": "Lviv Handmade Chocolate"
+  },
+  {
+    "id": "ua-03",
+    "countryCode": "ua",
+    "titleEn": "Lviv Yurashky Gingerbread"
+  },
+  {
+    "id": "ua-04",
+    "countryCode": "ua",
+    "titleEn": "Carpathian Berry Jam"
+  },
+  {
+    "id": "ua-05",
+    "countryCode": "ua",
+    "titleEn": "Ukrainian Honey"
+  },
+  {
+    "id": "ua-06",
+    "countryCode": "ua",
+    "titleEn": "Carpathian Herbal Tea"
+  },
+  {
+    "id": "ua-07",
+    "countryCode": "ua",
+    "titleEn": "Zakarpattia Wine"
+  },
+  {
+    "id": "ua-08",
+    "countryCode": "ua",
+    "titleEn": "Petrykivka Painting"
+  },
+  {
+    "id": "ua-09",
+    "countryCode": "ua",
+    "titleEn": "Pysanka"
+  },
+  {
+    "id": "ua-10",
+    "countryCode": "ua",
+    "titleEn": "Hutsul Lizhnyk Wool Blanket"
+  },
+  {
+    "id": "ua-11",
+    "countryCode": "ua",
+    "titleEn": "Dodo Socks"
+  },
+  {
+    "id": "ua-12",
+    "countryCode": "ua",
+    "titleEn": "GUNIA Project"
+  },
+  {
+    "id": "ua-13",
+    "countryCode": "ua",
+    "titleEn": "Ukrposhta Commemorative Stamps"
+  },
+  {
+    "id": "ua-14",
+    "countryCode": "ua",
+    "titleEn": "Gifty Ukraine Design Goods"
+  }
+]
