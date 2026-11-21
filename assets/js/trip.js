@@ -291,7 +291,7 @@
     out.score = Math.round(Object.values(out.parts).reduce((a, b) => a + b, 0) * 10) / 10;
     return out;
   }
-  const SORTS = [['fit', '나에게 가장 적합한 순', (a, b) => b.score - a.score || b.parts.pop - a.parts.pop || b.parts.move - a.parts.move], ['evidence', '근거 자료가 많은 순', (a, b) => (b.route.ev || []).length - (a.route.ev || []).length || b.score - a.score],
+  const SORTS = [['fit', '나에게 가장 적합한 순', (a, b) => b.score - a.score || b.parts.pop - a.parts.pop || b.parts.move - a.parts.move], ['evidence', '출처가 많은 순', (a, b) => (b.route.ev || []).length - (a.route.ev || []).length || b.score - a.score],
     ['move', '이동이 편리한 순', (a, b) => b.parts.move - a.parts.move || a.vr.avgMin - b.vr.avgMin], ['slow', '여유로운 순', (a, b) => a.vr.density - b.vr.density],
     ['multi', '많은 국가를 방문하는 순', (a, b) => b.vr.countries.length - a.vr.countries.length || b.score - a.score]];
   const HARD = { nightsNear: '권장 기간 정확히 일치', excl: '제외한 나라', incl: '꼭 가고 싶은 나라', transit: '대중교통만', nights: '여행 기간', flight: '직항 필수', musts: '필수 요소', style: '초보자 위주', season: '여행 시기' };
@@ -354,7 +354,7 @@ ${P.map((p, i) => `<g transform="translate(${p[0].toFixed(1)},${p[1].toFixed(1)}
   <div class="tp-best-txt"><p class="tp-best-head">${esc(b[1])}</p><h2><a href="${routeUrl(route.id)}">${esc(route.ko)}</a></h2>
   <p class="tp-best-meta">${bucketsOf(route).map(x => x[1]).join('·')}(${idealText(route)}) · ${vr.countries.map(c => N[c].ko).join('·')} · 추천 ${monthsText(route.months)}</p>
   <dl class="tp-best-why"><div><dt>국내</dt><dd>${esc(b[2])}</dd></div><div><dt>해외</dt><dd>${esc(b[3])}</dd></div></dl>
-  <p class="tp-best-src">근거 ${refLinks(b[4])}</p>
+  <p class="tp-best-src">출처 ${refLinks(b[4])}</p>
   <a class="tp-detail" href="${routeUrl(route.id)}">일정 보기</a></div></li>`;
     }).join('');
     main.innerHTML = `
@@ -508,7 +508,7 @@ ${P.map((p, i) => `<g transform="translate(${p[0].toFixed(1)},${p[1].toFixed(1)}
     <dl class="tp-facts">${facts.map(([k, v]) => `<div><dt>${k}</dt><dd>${v}</dd></div>`).join('')}</dl>
     <div class="tp-why"><h4>왜 이 코스인가</h4><p>${r.good.length ? esc(r.good.slice(0, 4).join('. ')) + '.' : '고른 조건과 뚜렷하게 맞는 점은 적지만 무난한 루트입니다.'}</p>
       ${r.warn.length ? `<p class="tp-warn"><strong>주의</strong> ${esc(r.warn.slice(0, 3).join('. '))}.</p>` : ''}
-      ${ev ? `<p class="tp-evline"><a href="${routeUrl(route.id, vr.nights)}#evidence">추천 근거 ${evOf(route).length}건</a> <span>${esc(ev)}</span></p>` : ''}</div>
+      ${ev ? `<p class="tp-evline"><a href="${routeUrl(route.id, vr.nights)}#evidence">출처 ${evOf(route).length}건</a> <span>${esc(ev)}</span></p>` : ''}</div>
     <div class="tp-bars" aria-label="점수 내역">${parts.map(([k, l, max]) => `<span title="${l} ${r.parts[k].toFixed(1)} / ${max}"><i>${l}</i><b><u style="width:${Math.round(r.parts[k] / max * 100)}%"></u></b><em>${r.parts[k].toFixed(1)}/${max}</em></span>`).join('')}</div>
     <div class="tp-card-foot"><div class="tp-mapmini">${sketch(vr)}</div>${monthBar(route.months, p.months)}
       <div class="tp-btns">${saveBtn(route.id)}<a class="tp-detail" href="${routeUrl(route.id, vr.nights)}">${bucketOfN(vr.nights)[1]} 일정 보기</a></div></div>
@@ -643,7 +643,7 @@ ${P.map((p, i) => `<g transform="translate(${p[0].toFixed(1)},${p[1].toFixed(1)}
     <div class="tp-season"><div><h3>추천 월</h3><p>${monthsText(route.months)}</p></div><div><h3>피할 시기</h3><p>${esc(route.avoid)}</p></div><div class="tp-season-wide"><h3>월별</h3>${monthBar(route.months)}<p class="tp-hint">${esc(route.seasonNote)}</p></div></div>
     <ul class="tp-tips">${route.tips.map(t => `<li>${esc(t)}</li>`).join('')}<li>이런 분께: ${esc(route.who)}</li><li>현지 통화: <span data-out="cur"></span></li></ul>
     <h3>여행 전 확인할 공식 정보</h3><ul class="tp-links">${D.official.map(o => `<li><a href="${o.u}" target="_blank" rel="noopener">${esc(o.t)}</a></li>`).join('')}</ul></section>
-  ${ev.length ? `<section class="tp-sec" id="evidence"><h2>추천 근거</h2>
+  ${ev.length ? `<section class="tp-sec" id="evidence"><h2>출처</h2>
     <ul class="tp-evlist">${ev.map(e => `<li><span class="tp-ev-t t-${{ 국내: 'ko', 해외: 'en', 교통: 'tr', 통계: 'st' }[e.type] || 'en'}">${esc(e.type)}</span><a href="${esc(e.u)}" target="_blank" rel="noopener">${esc(e.t)}</a></li>`).join('')}</ul></section>` : ''}
   <section class="tp-sec" id="more"><h2>관련 콘텐츠</h2>
     <h3>이 루트의 국가 페이지</h3><ul class="tp-country-links" data-out="countries"></ul>
