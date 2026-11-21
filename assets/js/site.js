@@ -106,7 +106,7 @@
   <div class="wrap header-inner">
     <a class="brand" href="${ROOT}index.html" aria-label="동유럽 산책 CEE Side by KUERA 홈">
       <img class="brand-logo" src="${ROOT}assets/images/kuera/kuera-badge.png" alt="" width="44" height="44" decoding="async">
-      <span class="brand-text"><span class="brand-en">CEE Side<span class="brand-by">by KUERA</span></span><span class="brand-ko">동유럽 산책 · 고려대학교 동유럽지역 전략학회</span></span>
+      <span class="brand-text"><span class="brand-en">CEE Side<span class="brand-by">by KUERA</span></span><span class="brand-ko">동유럽 산책</span></span>
     </a>
     <nav aria-label="주 메뉴"><ul>${nav.map(([id, label, href]) =>
       `<li><a href="${ROOT}${href}"${id === current ? ' aria-current="page"' : ''}>${label}</a></li>`).join('')}</ul></nav>
