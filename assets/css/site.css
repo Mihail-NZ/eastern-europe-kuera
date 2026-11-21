@@ -343,7 +343,6 @@ a.cc .cc-state { color: #fff; background: var(--rc); padding: 3px 10px; border-r
   .is-stack .story-thumb { min-height: 0; aspect-ratio: 16 / 8; }
   .home-news { padding-top: 48px; }
   .news-overview { padding: 16px 18px; font-size: 15px; }
-  .home-news .news-overview { display: -webkit-box; -webkit-line-clamp: 7; -webkit-box-orient: vertical; overflow: hidden; }
   .section-nav { top: 94px; }
   .crumbs { margin-bottom: 28px; }
   .flag-lg { width: 60px; height: 40px; }
