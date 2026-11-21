@@ -1732,3 +1732,8 @@ ${countryTabs(c, id)}
      country: m => renderCountry(m, body.dataset.slug),
      section: m => renderSection(m, body.dataset.slug, body.dataset.section) }[PAGE] || renderHome)(main);
 })();
+
+// Load the optional app controls under the published project scope.
+if (location.pathname.startsWith('/eastern-europe-kuera/')) {
+  import('/eastern-europe-kuera/pwa/app.js').catch(() => {});
+}

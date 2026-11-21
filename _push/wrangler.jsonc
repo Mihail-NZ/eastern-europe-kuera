@@ -1,0 +1,27 @@
+{
+  "name": "cee-side-push",
+  "main": "worker.mjs",
+  "compatibility_date": "2025-10-01",
+  "workers_dev": true,
+  "observability": {
+    "enabled": false
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "cee-side-push",
+      "database_id": "REPLACE_WITH_D1_DATABASE_ID",
+      "migrations_dir": "migrations"
+    }
+  ],
+  "ratelimits": [
+    {
+      "name": "LIMIT",
+      "namespace_id": "7418",
+      "simple": {
+        "limit": 20,
+        "period": 60
+      }
+    }
+  ]
+}
