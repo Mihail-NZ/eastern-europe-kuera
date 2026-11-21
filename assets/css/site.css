@@ -295,7 +295,7 @@ a.cc .cc-state { color: #fff; background: var(--rc); padding: 3px 10px; border-r
 .prose h2 { font-size: 24px; margin: 0 0 14px; }
 
 /* ---------- 푸터 ---------- */
-.site-footer { background: var(--space); color: #8fa9d4; font-size: 14px; border-top: 1px solid rgba(110, 170, 255, .2); }
+.site-footer { background: var(--card); color: var(--muted); font-size: 14px; border-top: 1px solid var(--rule); }
 .footer-inner { padding-top: 44px; padding-bottom: 44px; }
 .about-org { display: flex; align-items: center; gap: 22px; margin: 6px 0 34px; padding: 22px 26px; background: var(--card); border-radius: 16px; box-shadow: var(--shadow); }
 .about-org img { width: 96px; height: 96px; flex: none; }
@@ -305,10 +305,10 @@ a.cc .cc-state { color: #fff; background: var(--rc); padding: 3px 10px; border-r
 @media (max-width: 560px) { .about-org { flex-direction: column; align-items: flex-start; gap: 14px; padding: 20px; } .about-org img { width: 76px; height: 76px; } .about-org-ko { font-size: 21px; } }
 .footer-id { display: flex; align-items: center; gap: 16px; margin-bottom: 18px; }
 .footer-logo { width: 56px; height: 56px; flex: none; }
-.footer-brand { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; font: 400 26px/1 var(--display); color: #fff; margin-bottom: 8px !important; }
-.footer-brand .brand-by { font-size: 11.5px; }
-.footer-org { color: #c3d2ec; font-size: 13.5px; line-height: 1.5; margin: 0 !important; }
-.footer-inner a { color: #a8d4ff; }
+.footer-brand { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; font: 400 26px/1 var(--display); color: var(--night); margin-bottom: 8px !important; }
+.footer-brand .brand-by { font-size: 11.5px; color: var(--blue); }
+.footer-org { color: var(--muted); font-size: 13.5px; line-height: 1.5; margin: 0 !important; }
+.footer-inner a { color: var(--blue); }
 .footer-inner p { max-width: 52em; margin-bottom: 6px; }
 
 /* ---------- 반응형 ---------- */

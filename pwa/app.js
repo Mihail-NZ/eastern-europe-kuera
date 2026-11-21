@@ -24,8 +24,12 @@ if (!location.pathname.includes('/pwa/')) {
   const settings = document.createElement('a');
   settings.className = 'cee-entry';
   settings.href = root + 'pwa/settings.html';
-  settings.textContent = '뉴스 알림 받기 · 설정';
-  (document.querySelector('.site-footer .footer-inner') || document.body).append(settings);
+  settings.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.7 21a2 2 0 0 1-3.4 0"/></svg><span>데일리 뉴스 알림 설정</span>';
+  const bar = document.createElement('div');
+  bar.className = 'cee-entry-bar';
+  bar.append(settings);
+  const header = document.querySelector('.site-header');
+  if (header) header.before(bar); else document.body.prepend(bar);
 }
 let banner;
 function offline(message) {

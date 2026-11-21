@@ -3,12 +3,15 @@
 .wrap { padding-left: max(16px, env(safe-area-inset-left)); padding-right: max(16px, env(safe-area-inset-right)); }
 @media (min-width: 761px) { .wrap { padding-left: max(40px, env(safe-area-inset-left)); padding-right: max(40px, env(safe-area-inset-right)); } }
 .site-footer .footer-inner { padding-bottom: max(44px, calc(24px + env(safe-area-inset-bottom))); }
-.site-footer .cee-entry { display: inline-block; margin-top: 14px; padding: 8px 14px; background: rgba(110,170,255,.12); border: 1px solid rgba(110,170,255,.28); border-radius: 999px; color: #a8d4ff; font-size: 13.5px; text-decoration: none; }
+/* 맨 위 알림 설정 줄: 헤더와 같은 야간 톤 */
+.cee-entry-bar { background: #040a1c; border-bottom: 1px solid rgba(110,170,255,.18); padding: 7px max(16px, env(safe-area-inset-right)) 7px max(16px, env(safe-area-inset-left)); text-align: right; }
+.cee-entry-bar .cee-entry { display: inline-flex; align-items: center; gap: 6px; padding: 4px 2px; background: none; color: #a8d4ff; font: 500 13px/1.4 'IBM Plex Sans','IBM Plex Sans KR','Malgun Gothic',system-ui,sans-serif; text-decoration: none; }
+.cee-entry-bar .cee-entry svg { width: 15px; height: 15px; flex: none; }
+.cee-entry-bar .cee-entry:hover { color: #fff; }
 .cee-page { margin:0; background:#f3f6fb; color:#0f1b36; font:1rem/1.6 system-ui,sans-serif; }
 .cee-page main { max-width:36rem; margin:auto; padding:max(2rem,env(safe-area-inset-top)) 1.25rem max(3rem,env(safe-area-inset-bottom)); }
 .cee-page button,.cee-notice button { font:inherit; padding:.6rem .9rem; margin:.25rem; }
 .cee-page select { display:block; font:inherit; min-height:44px; width:100%; }
 .cee-page label { display:block; margin:1rem 0; }
 .cee-notice { position:fixed; bottom:max(1rem,env(safe-area-inset-bottom)); left:50%; transform:translateX(-50%); width:max-content; max-width:88vw; z-index:10000; padding:.75rem; background:#081433; color:white; border-radius:.5rem; font:1rem/1.5 system-ui; }
-.cee-status,.cee-entry {display:block;text-align:center;padding:.65rem max(1rem,env(safe-area-inset-right));font: .95rem/1.5 system-ui;background:#f3f6fb;color:#173f8a}
-.cee-entry {padding-bottom:max(.65rem,env(safe-area-inset-bottom))}
+.cee-status {display:block;text-align:center;padding:.65rem max(1rem,env(safe-area-inset-right));font: .95rem/1.5 system-ui;background:#f3f6fb;color:#173f8a}
