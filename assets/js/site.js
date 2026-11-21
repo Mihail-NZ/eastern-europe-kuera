@@ -1248,7 +1248,7 @@ ${countryTabs(c, id)}
   <h3 class="mj-d-h">원문</h3>
   <ul class="mj-d-src">${(it.sources || []).map(s => `<li><a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.name)}</a><span>${esc(host(s.url))}</span></li>`).join('')}</ul>
   ${daily ? `<p class="mj-d-daily"><a href="${ROOT}news/index.html?date=${esc(daily)}#daily">${fmtLong(daily)} 데일리 뉴스에서 처음 다룬 기사입니다</a></p>` : ''}
-  <p class="mj-d-note">요약은 원문을 바탕으로 작성했으며, ‘왜 중요한가’는 편집상 해석입니다. 수치·계획은 보도 시점을 기준으로 하므로 이후 진행 상황은 원문에서 확인하세요.</p>
+  <p class="mj-d-note">요약과 ‘왜 중요한가’는 편집 해석입니다. 자세한 내용은 원문을 확인하세요.</p>
 </article>`;
     dlg.querySelector('.mj-close').addEventListener('click', () => dlg.close());
     dlg.onclose = onClose || null;
@@ -1292,7 +1292,7 @@ ${countryTabs(c, id)}
     `<button type="button" role="tab" id="nt-${id}" aria-controls="np-${id}" data-tab="${id}">${label} <span class="n">${n}</span></button>`).join('')}</div>
 
   <section id="np-daily" class="news-panel" role="tabpanel" aria-labelledby="nt-daily">
-    <p class="np-lead">매일 저녁 동유럽 20개국 소식을 권역별로 6건씩 정리합니다. 최근 30일 치를 날짜순으로 보여 줍니다.</p>
+    <p class="np-lead">매일 저녁 20개국 소식을 권역별로 정리합니다.</p>
     <form class="nf-bar" role="search" onsubmit="return false">
       <label class="nf-q"><span>검색</span><input type="search" data-f="dq" placeholder="제목·내용·나라"></label>
       ${sel('dc', '나라')}${sel('dd', '날짜')}
@@ -1304,7 +1304,7 @@ ${countryTabs(c, id)}
   </section>
 
   <section id="np-major" class="news-panel" role="tabpanel" aria-labelledby="nt-major" hidden>
-    <p class="np-lead">최근 5년 동안 동유럽의 정치·경제·산업·사회 흐름을 바꾼 사건을 골라 핵심 내용과 시사점을 함께 정리했습니다. 한국과 직접 관련된 외교·산업·협력 소식은 ‘한국-동유럽’에서 모아 볼 수 있습니다.</p>
+    <p class="np-lead">최근 5년간 동유럽의 흐름을 바꾼 사건을 분야별로 정리했습니다.</p>
     <div class="chip-row mj-cats" role="group" aria-label="분야"></div>
     <div class="chip-row mj-subs" role="group" aria-label="산업 세부 분야" hidden></div>
     <form class="nf-bar" role="search" onsubmit="return false">
@@ -1609,7 +1609,7 @@ ${countryTabs(c, id)}
     return `<section class="jobs-sources" id="sources" aria-labelledby="src-h">
   <div class="section-head"><h2 id="src-h">출처 목록</h2></div>
   <p class="src-summary">출처 ${all.length}곳 — 수동 검토 ${count('수동 검토')} · 링크 안내 ${count('링크 안내')} · 검토 대기 ${off.length} · <strong>자동 수집 연결 ${count('자동 수집')}</strong></p>
-  <p class="src-lead">'수동 검토'는 운영자가 매주 목록을 열어 공고를 고르는 출처, '링크 안내'는 자동 접근이 막혀 있거나 이용 조건을 확인하지 못해 직접 찾아보도록 안내하는 출처입니다. 공식 API·RSS를 확인한 곳은 아직 없어 자동 수집으로 연결된 출처는 없습니다.</p>
+  <p class="src-lead">수동 검토: 운영자가 매주 직접 확인 · 링크 안내: 직접 찾아보도록 안내하는 출처</p>
   ${SRC_GROUPS.map(([label, fn]) => { const list = act.filter(fn); return list.length ? `<h3 class="src-h3">${esc(label)} <span>${list.length}</span></h3><ul class="src-list">${list.map(sourceRow).join('')}</ul>` : ''; }).join('')}
   ${off.length ? `<details class="src-off"><summary>검토 대기·비활성 출처 ${off.length}곳</summary><ul class="src-list">${off.map(sourceRow).join('')}</ul></details>` : ''}
 </section>`;

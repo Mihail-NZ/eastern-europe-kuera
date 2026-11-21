@@ -1,6 +1,6 @@
 const ROOT = new URL(self.registration.scope);
 const PREFIX = 'cee-side-eastern-europe-kuera-';
-const VERSION = '2026-11-21.9';
+const VERSION = '2026-11-21.10';
 const CORE = PREFIX + VERSION + '-core';
 const PAGES = PREFIX + VERSION + '-visited';
 const essentials = ['', 'index.html','pwa/offline.html','pwa/settings.html','manifest.webmanifest','pwa/app.css','pwa/app.js','pwa/settings.js','pwa/config.js','pwa/icon-180.png','pwa/icon-192.png','pwa/icon-512.png','assets/images/kuera/kuera-badge.png','assets/css/site.css','assets/js/site.js','assets/js/data-map.js','assets/js/data-countries.js','assets/js/data-news.js'];
