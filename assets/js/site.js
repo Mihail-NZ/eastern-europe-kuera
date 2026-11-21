@@ -1285,7 +1285,7 @@ ${countryTabs(c, id)}
     main.innerHTML = `
 <section class="page-head night">
   <div class="wrap"><p class="kicker">News</p><h1>뉴스</h1>
-  <p>데일리 뉴스는 동유럽의 오늘을, 최근 5개년 주요 뉴스는 이 지역을 바꾼 사건을 분야별로 정리합니다. 기사 본문은 옮기지 않고 요약과 원문 링크만 싣습니다.</p></div>
+  <p>동유럽의 오늘과, 이 지역을 바꾼 사건을 정리합니다.</p></div>
 </section>
 <div class="wrap news-wrap">
   <div class="tab-bar news-tabs" role="tablist" aria-label="뉴스 구분">${TABS.map(([id, label, n]) =>

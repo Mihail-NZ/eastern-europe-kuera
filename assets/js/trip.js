@@ -360,8 +360,7 @@ ${P.map((p, i) => `<g transform="translate(${p[0].toFixed(1)},${p[1].toFixed(1)}
     main.innerHTML = `
 <section class="page-head night tp-head">
   <div class="wrap"><p class="kicker">Travel</p><h1>많이 다녀온 동유럽 루트 베스트 10</h1>
-  <p>한국 여행자와 해외 여행자가 실제로 많이 가는 루트를 함께 봤습니다. 국내 패키지 후기 수와 일정 글, 해외 방문 통계와 일정 가이드, 여행 포럼에서 자주 언급되는 동선을 비교해 순위를 정했습니다.</p>
-  <p class="jobs-edition">${D.checked} 확인 · 루트별 상세 일정·지도·이동 정보 연결</p>
+  <p>한국·해외 여행자가 많이 찾는 루트를 비교해 순위를 정했습니다.</p>
   ${tripTabs('best')}</div>
 </section>
 <div class="wrap tp-wrap">
