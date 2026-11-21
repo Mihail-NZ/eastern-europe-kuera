@@ -92,6 +92,9 @@ New-Item -ItemType Directory -Force "$root\travel" | Out-Null
 # 베스트 10 페이지(travel/best/). 'best'는 루트 id로 쓰지 않는다.
 New-Item -ItemType Directory -Force "$root\travel\best" | Out-Null
 [IO.File]::WriteAllText("$root\travel\best\index.html", (Page '../../' 'trip-best' '' '많이 다녀온 동유럽 루트 베스트 10' '국내 패키지 후기 수·일정 글과 해외 방문 통계·일정 가이드·여행 포럼 언급을 함께 보고 정한 동유럽·발칸·발트 여행 루트 베스트 10.'), $utf8)
+# 루트 시뮬레이터 페이지(travel/sim/). 'sim'도 루트 id로 쓰지 않는다.
+New-Item -ItemType Directory -Force "$root\travel\sim" | Out-Null
+[IO.File]::WriteAllText("$root\travel\sim\index.html", (Page '../../' 'trip-sim' '' '동유럽 루트 시뮬레이터' '기간·시기·동행·이동 방법·취향·대중픽/힙스터픽 질문에 하나씩 답하면 동유럽·발칸·발트 루트 가운데 나에게 맞는 여행을 골라 주는 시뮬레이터.'), $utf8)
 $ids = @()
 foreach ($r in $routes) {
   $id = $r.Groups[1].Value; $ids += $id
@@ -99,14 +102,14 @@ foreach ($r in $routes) {
   [IO.File]::WriteAllText("$root\travel\$id\index.html", (Page '../../' 'trip-route' " data-route=`"$id`"" "$($r.Groups[2].Value) 여행 루트" $r.Groups[4].Value), $utf8)
 }
 # 데이터에서 빠진 루트의 옛 페이지는 지운다
-Get-ChildItem "$root\travel" -Directory | Where-Object { $ids -notcontains $_.Name -and $_.Name -ne 'best' } | ForEach-Object { Remove-Item $_.FullName -Recurse -Force -Confirm:$false; $warn += "removed stale page travel/$($_.Name)" }
+Get-ChildItem "$root\travel" -Directory | Where-Object { $ids -notcontains $_.Name -and @('best', 'sim') -notcontains $_.Name } | ForEach-Object { Remove-Item $_.FullName -Recurse -Force -Confirm:$false; $warn += "removed stale page travel/$($_.Name)" }
 
 # ---- 3) 점검 ----
 $cityIds = [regex]::Matches($data, "(?m)^\s{4}'?([a-z-]+)'?: \{ ko: '") | ForEach-Object { $_.Groups[1].Value }
 $gwIds = [regex]::Matches($data, "(?m)^\s{4}([A-Z]{3}): \{ ko: '") | ForEach-Object { $_.Groups[1].Value }
 foreach ($m in [regex]::Matches($routesJs, "(?<=stops: [^\n]*)\['([a-z-]+)', \d+, \d+")) { if ($cityIds -notcontains $m.Groups[1].Value) { $warn += "route stop without city data: $($m.Groups[1].Value)" } }
 foreach ($m in [regex]::Matches($routesJs, "(?:in|out): '([A-Z]{3})'")) { if ($gwIds -notcontains $m.Groups[1].Value) { $warn += "unknown gateway: $($m.Groups[1].Value)" } }
-if ($ids -contains 'best') { $warn += "route id 'best' is reserved for the Best 10 page" }
+if ($ids -contains 'best' -or $ids -contains 'sim') { $warn += "route ids 'best' and 'sim' are reserved for the Best 10 / simulator pages" }
 if (($ids | Sort-Object -Unique).Count -ne $ids.Count) { $warn += 'duplicate route id' }
 
 "routes: $($ids.Count) | cities: $($cityIds.Count) | gateways: $($gwIds.Count) | photos: $($photos.Count)/$($used.Count)"
