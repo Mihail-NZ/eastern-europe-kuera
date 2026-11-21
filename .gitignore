@@ -3,3 +3,10 @@ HANDOFF.md
 serve.ps1
 # 더 이상 쓰지 않는 AI 생성 이미지(폴란드 사진은 실제 사진 jpg로 교체됨)
 assets/images/poland/**/*.webp
+
+_push/.dev.vars*
+.wrangler/
+_push/.wrangler/
+_push/node_modules/
+.env
+.env.*
