@@ -32,7 +32,8 @@ window.TRIP_DATA = {
     DE: { ko: '독일', core: false, tier: 'D', cur: '유로' },
     IT: { ko: '이탈리아', core: false, tier: 'D', cur: '유로' },
     FI: { ko: '핀란드', core: false, tier: 'D', cur: '유로' },
-    TR: { ko: '튀르키예', core: false, tier: 'B', cur: '리라(TRY)' }
+    TR: { ko: '튀르키예', core: false, tier: 'B', cur: '리라(TRY)' },
+    GR: { ko: '그리스', core: false, tier: 'C', cur: '유로' }
   },
 
   /* 1인 1박(하루) 기준 현지 비용 추정(원). [저예산, 표준, 여유]
@@ -62,6 +63,8 @@ window.TRIP_DATA = {
     WRO: { ko: '브로츠와프', city: 'wroclaw', lat: 51.1027, lon: 16.8858, status: 'direct', by: 'LOT 폴란드항공', note: 'LOT 한국어 사이트에 서울발 브로츠와프 직항이 안내되어 있습니다. 운항 요일이 적으므로 날짜를 넣어 확인하세요.', src: 'https://www.lot.com/kr/ko' },
     VIE: { ko: '비엔나', city: 'vienna', lat: 48.1103, lon: 16.5697, status: 'direct', by: '대한항공', note: '대한항공 KE937/938편 운항 확인(2026년 7월 운항 기록 기준). 주당 횟수는 시즌별로 확인하세요.', src: 'https://www.koreanair.com/' },
     HEL: { ko: '헬싱키', city: 'helsinki', lat: 60.3172, lon: 24.9633, status: 'direct', by: '핀에어', note: '매일 운항(2026년 하계·동계 스케줄 기준). 발트 3국·폴란드 북부로 갈아타기 좋습니다.', src: 'https://www.finnair.com/kr-ko' },
+    SKG: { ko: '테살로니키', city: 'thessaloniki', lat: 40.5197, lon: 22.9709, status: 'via', note: '이스탄불·아테네·뮌헨·프랑크푸르트 등에서 1회 경유.' },
+    CFU: { ko: '코르푸', city: 'corfu', lat: 39.6019, lon: 19.9117, status: 'via', note: '여름에는 유럽 각지에서 직항·전세편이 많고, 겨울에는 아테네 경유가 일반적입니다.' },
     IST: { ko: '이스탄불', city: 'istanbul', lat: 41.2753, lon: 28.7519, status: 'direct', by: '터키항공 외', note: '터키항공 TK090/091편 운항 확인(2026년 7월 기준). 발칸 대부분의 도시로 1회 환승 연결이 많습니다.', src: 'https://www.turkishairlines.com/ko-kr/' },
     ZAG: { ko: '자그레브', city: 'zagreb', lat: 45.7429, lon: 16.0688, status: 'seasonal', months: [7, 8, 9, 10], by: '티웨이항공', note: '2026년에는 7~10월에 직항을 운영했습니다. 다음 시즌 운항 여부와 기간은 발표를 확인하세요. 그 밖의 달에는 경유가 필요합니다.', src: 'https://www.twayair.com/' },
     VCE: { ko: '베네치아', city: 'venice', lat: 45.5053, lon: 12.3519, status: 'via', note: '2026년 인천 직항 운항은 확인하지 못했습니다. 유럽 주요 공항에서 1회 경유로 봅니다.' },
@@ -508,6 +511,13 @@ window.TRIP_DATA = {
       days: [['은광 도시', '구성 → 신성 → 성 삼위일체 광장 → 칼바리아 언덕 일몰.', '가파른 돌길이라 편한 신발이 필요합니다.'], ['광산과 호수', '야외 광산 박물관 갱도 체험 → 타이흐 인공 호수(여름 수영).']] },
     nis: { ko: '니시', en: 'Niš', c: 'RS', lat: 43.3209, lon: 21.8958, img: 'serbia/nis', must: ['castle', 'museum'],
       days: [['요새와 해골탑', '니시 요새 → 해골탑(첼레 쿨라) → 메디아나 로마 유적(콘스탄티누스 대제의 출생지) → 코차 카피탄 거리 구이 식당.']] },
+    thessaloniki: { ko: '테살로니키', en: 'Thessaloniki', c: 'GR', lat: 40.6401, lon: 22.9444, must: ['beach', 'museum', 'castle'],
+      days: [['해안 산책로와 비잔틴 도시', '화이트 타워 → 해안 산책로 → 아리스토텔레스 광장 → 아기오스 디미트리오스 교회 → 로톤다·갈레리우스 개선문.', '비잔틴 기념물들이 유네스코 세계유산입니다.'],
+        ['윗마을과 시장', '아노 폴리(윗마을) 성벽 전망 → 모디아노·카파니 시장 → 해 질 녘 해안에서 우산 조형물까지 산책.'],
+        ['근교', '베르기나 왕릉 박물관(차·투어 약 1시간) 또는 할키디키 해변(여름).']] },
+    corfu: { ko: '코르푸', en: 'Corfu', c: 'GR', lat: 39.6243, lon: 19.9217, must: ['beach', 'castle'],
+      days: [['베네치아풍 구시가지', '구 요새 → 리스톤 회랑 → 스피아난다 광장 → 신 요새 전망 → 구시가지 골목.', '구시가지가 유네스코 세계유산입니다.'],
+        ['섬 해변', '팔레오카스트리차 해변·수도원(버스 약 50분) 또는 아킬레이온 궁전.']] },
     istanbul: { ko: '이스탄불', en: 'Istanbul', c: 'TR', lat: 41.0082, lon: 28.9784, must: ['museum', 'castle'],
       days: [
         ['술탄아흐메트', '아야 소피아 → 블루 모스크 → 지하 궁전 → 톱카프 궁전 → 그랜드 바자르.', '아야 소피아·톱카프는 줄이 길어 이른 아침 방문을 권합니다.'],
@@ -704,7 +714,10 @@ window.TRIP_DATA = {
     ['ohrid', 'berat', 'bus', 270, 0, 'v', '버스(엘바산 경유, 하루 1편 안팎)', '', '편수가 적어 숙소에 시간을 확인하세요. 맞는 편이 없으면 티라나에서 갈아탑니다.'],
     ['rovinj', 'plitvice', 'car', 210, 0, 'g', '렌터카(A8·A6 고속도로)', '', ''],
     ['klaipeda', 'riga', 'bus', 270, 0, 'v', '국제 버스(하루 1~2편)', 'https://luxexpress.eu/', '약 4시간 30분. 렌터카라면 십자가 언덕을 지나갑니다.'],
-    ['prague', 'kutna-hora', 'train', 60, 0, 'g', 'ČD 직행', 'https://www.cd.cz/en/', '약 1시간.']
+    ['thessaloniki', 'skopje', 'bus', 225, 0, 'c', '국제 버스(FlixBus 등)', 'https://global.flixbus.com/bus-routes/bus-skopje-thessaloniki', '3시간 30분~4시간 45분. 기차는 게브겔리야에서 버스로 갈아탑니다.'],
+    ['sofia', 'thessaloniki', 'bus', 285, 0, 'c', '국제 버스(FlixBus·Union Ivkoni 등)', 'https://global.flixbus.com/bus-routes/bus-sofia-thessaloniki', '4시간 40분~5시간 15분. 직행 열차는 없습니다.'],
+    ['sarande', 'corfu', 'ferry', 45, 0, 'c', '쾌속선·일반 페리(Finikas Lines 등)', 'https://www.ferryhopper.com/en/ferry-routes/direct/sarande-corfu', '30분~1시간 30분. 겨울에는 편수가 줄어듭니다. 알바니아(비솅겐)→그리스(솅겐) 출입국 심사.'],
+    ['belgrade', 'sofia', 'bus', 480, 0, 'g', '국제 버스(니시 경유)', 'https://polazak.rs/en', '7~8시간.']
   ],
 
   /* 한국 출발 여행자가 공통으로 확인할 공식 정보 */
@@ -829,7 +842,12 @@ window.TRIP_DATA = {
     dannyVilnius: ['해외', 'Danny – 빌뉴스 3일 일정', 'https://danny-cph.com/vilnius-3-day-itinerary/'],
     kateDubrovnik: ['해외', 'Adventurous Kate – 두브로브니크 3일', 'https://www.adventurouskate.com/three-days-in-dubrovnik-itinerary/'],
     kimkimBalticFD: ['해외', 'kimkim – 발트 3국 셀프 렌터카 여행', 'https://www.kimkim.com/c/self-guided-baltic-states-fly-drive'],
-    kimkimBaltic7: ['해외', 'kimkim – 발트 수도 7일', 'https://www.kimkim.com/c/exploring-the-baltic-capitals-vilnius-riga-tallinn-7-days']
+    kimkimBaltic7: ['해외', 'kimkim – 발트 수도 7일', 'https://www.kimkim.com/c/exploring-the-baltic-capitals-vilnius-riga-tallinn-7-days'],
+    intrepidEEX: ['해외', 'Intrepid – 이스턴 유럽 익스프레스(부쿠레슈티→이스탄불 10일)', 'https://www.intrepidtravel.com/uk/bulgaria/eastern-europe-express-167103'],
+    ferryCorfu: ['교통', 'Ferryhopper – 사란더→코르푸 페리', 'https://www.ferryhopper.com/en/ferry-routes/direct/sarande-corfu'],
+    dfCorfu: ['교통', 'Direct Ferries – 사란더→코르푸 이동 가이드', 'https://www.directferries.com/blog/travelling-from-saranda-to-corfu-complete-ferry-and-travel-guide'],
+    flixSkpSkg: ['교통', 'FlixBus – 스코페→테살로니키', 'https://global.flixbus.com/bus-routes/bus-skopje-thessaloniki'],
+    flixSofSkg: ['교통', 'FlixBus – 소피아→테살로니키', 'https://global.flixbus.com/bus-routes/bus-sofia-thessaloniki']
   },
 
   /* 한국인 여행 통계(여행 준비 가이드에 표시). 국가 공식 통계를 인용한 기사·자료이며 기준이 서로 다를 수 있다. */

@@ -70,7 +70,7 @@
     return (rangeCache[route.id] = { min, max });
   }
   const idealMid = route => Math.round((route.ideal[0] + route.ideal[1]) / 2);
-  const BUCKETS = [['short', '단기', '2~4박', [2, 4]], ['mid', '중기', '5~8박', [5, 8]], ['long', '장기', '9박 이상', [9, 40]]];
+  const BUCKETS = [['short', '단기', '2~4박', [2, 4]], ['mid', '중기', '5~7박', [5, 7]], ['long', '장기', '8~10박', [8, 10]], ['xlong', '초장기', '11박 이상', [11, 40]]];
   const inBucket = (route, b) => route.ideal[0] <= b[3][1] && route.ideal[1] >= b[3][0];
   const bucketsOf = route => BUCKETS.filter(b => inBucket(route, b));
   const nightsIn = (route, b) => Math.max(Math.max(b[3][0], route.ideal[0]), Math.min(Math.min(b[3][1], route.ideal[1]), idealMid(route)));
@@ -112,24 +112,36 @@
       unsure: legs.filter(l => l.v === 'v'), density: stops.length / n };
     cache[ck] = out; return out;
   }
-  /* 대표 사진: 루트마다 숙박 도시의 사진 후보(cityPhotos) 가운데 지금까지 가장 적게 쓰인 사진을 고른다.
-   * 같은 사용 횟수면 오래 머무는 도시 → 앞 순서 도시의 사진. 루트 순서대로 한 번만 계산하므로 항상 같은 결과가 나온다. */
-  const photoPool = cid => (D.cityPhotos && D.cityPhotos[cid] ? D.cityPhotos[cid] : []).concat(C[cid].img ? [C[cid].img] : []).filter(k => PHOTOS[k]);
+  /* 대표 사진(최대 3장 콜라주): 사진 후보 = 국가 페이지 사진(cityPhotos) + 도시별 Commons 사진(TRIP_WEBPHOTOS).
+   * 루트마다 서로 다른 나라 → 오래 머무는 도시 순으로 최대 3곳을 고르고(도시가 적으면 같은 도시에서 여러 장),
+   * 각 자리에 지금까지 가장 적게 쓰인 사진을 넣는다. 루트 순서대로 한 번만 계산하므로 항상 같은 결과가 나온다. */
+  const WEB = window.TRIP_WEBPHOTOS || {};
+  const photoPool = cid => (WEB[cid] || []).map(p => ({ key: p[0], p })).concat(
+    (D.cityPhotos && D.cityPhotos[cid] ? D.cityPhotos[cid] : []).concat(C[cid].img ? [C[cid].img] : []).filter(k => PHOTOS[k]).map(k => ({ key: k, p: PHOTOS[k] })));
   const photoPick = {};
   (function assignPhotos() {
     const used = {};
     ROUTES.forEach(route => {
-      if (route.img && PHOTOS[route.img]) { photoPick[route.id] = route.img; used[route.img] = (used[route.img] || 0) + 1; return; }
-      const cand = [];
-      route.stops.forEach((s, si) => photoPool(s[0]).forEach((k, ki) => cand.push({ k, uses: used[k] || 0, stay: s[2], si, ki })));
-      cand.sort((a, b) => a.uses - b.uses || a.ki - b.ki || b.stay - a.stay || a.si - b.si);
-      if (cand.length) { photoPick[route.id] = cand[0].k; used[cand[0].k] = (used[cand[0].k] || 0) + 1; }
+      const st = route.stops.map((s, i) => ({ id: s[0], c: C[s[0]].c, stay: s[2], i, core: N[C[s[0]].c].core }));
+      const byStay = st.slice().sort((a, b) => b.core - a.core || b.stay - a.stay || a.i - b.i);
+      const slots = [], seenC = new Set();
+      byStay.forEach(s => { if (!seenC.has(s.c) && slots.length < 3) { slots.push(s); seenC.add(s.c); } });
+      byStay.forEach(s => { if (slots.length < 3 && !slots.includes(s)) slots.push(s); });
+      for (let k = 0; slots.length < 3 && k < 3; k++) byStay.forEach(s => { if (slots.length < 3) slots.push(s); });
+      const pick = [];
+      slots.forEach(s => {
+        const cand = photoPool(s.id).filter(x => !pick.some(y => y.key === x.key)).map((x, ki) => Object.assign({ uses: used[x.key] || 0, ki }, x));
+        cand.sort((a, b) => a.uses - b.uses || a.ki - b.ki);
+        if (cand.length) { pick.push(cand[0]); used[cand[0].key] = (used[cand[0].key] || 0) + 1; }
+      });
+      photoPick[route.id] = pick.sort((a, b) => route.stops.findIndex(s => photoPool(s[0]).some(x => x.key === a.key)) - route.stops.findIndex(s => photoPool(s[0]).some(x => x.key === b.key))).map(x => x.p);
     });
   })();
-  function photoOf(route) {
-    const p = PHOTOS[photoPick[route.id]];
-    return p ? { src: ROOT + p[0], author: p[1], license: p[2], source: p[3], alt: p[4] } : null;
-  }
+  const toPh = p => ({ src: ROOT + p[0], author: p[1], license: p[2], source: p[3], alt: p[4] });
+  const photosOf = route => (photoPick[route.id] || []).map(toPh);
+  const photoOf = route => photosOf(route)[0] || null;
+  const credit = phs => phs.map(ph => `<a href="${esc(ph.source)}" target="_blank" rel="noopener">${esc(ph.author)}</a> · ${esc(ph.license)}`).join(' / ');
+  const collage = (phs, cls) => `<div class="tp-collage n${phs.length} ${cls || ''}">${phs.map(ph => `<img src="${esc(ph.src)}" alt="${esc(ph.alt)}" loading="lazy" decoding="async" referrerpolicy="no-referrer">`).join('')}</div>`;
   const evOf = route => (route.ev || []).map(k => REFS[k] && { k, type: REFS[k][0], t: REFS[k][1], u: REFS[k][2] }).filter(Boolean);
   const evSummary = route => { const c = {}; evOf(route).forEach(e => { c[e.type] = (c[e.type] || 0) + 1; }); return ['국내', '해외', '교통', '통계'].filter(t => c[t]).map(t => `${t} ${c[t]}`).join(' · '); };
 
@@ -266,7 +278,7 @@ ${P.map((p, i) => `<g transform="translate(${p[0].toFixed(1)},${p[1].toFixed(1)}
     const one = g => `${esc(g.ko)}(${g.iata}) ${g.status === 'direct' ? '<em class="ok">직항</em>' : g.status === 'seasonal' ? `<em class="mid">계절 직항 ${g.months[0]}~${g.months[g.months.length - 1]}월</em>` : '<em>경유</em>'}`;
     return route.in === route.out ? `${one(G[route.in])} 왕복` : `입국 ${one(G[route.in])} · 출국 ${one(G[route.out])}`;
   }
-  const photoFig = (ph, cls) => (ph ? `<figure class="${cls}"><img src="${esc(ph.src)}" alt="${esc(ph.alt)}" loading="lazy" decoding="async"><figcaption>사진: <a href="${esc(ph.source)}" target="_blank" rel="noopener">${esc(ph.author)}</a> · ${esc(ph.license)} · Wikimedia Commons</figcaption></figure>` : '');
+  const photoFig = (phs, cls) => (phs.length ? `<figure class="${cls}">${collage(phs)}<figcaption>사진: ${credit(phs)} · Wikimedia Commons</figcaption></figure>` : '');
   const saveBtn = id => { const on = saved().includes(id); return `<button type="button" class="tp-save" data-save="${id}" aria-pressed="${on}"><span aria-hidden="true">${on ? '★' : '☆'}</span> ${on ? '저장됨' : '저장'}</button>`; };
   function bindSave(root, after) {
     root.addEventListener('click', e => {
@@ -277,9 +289,9 @@ ${P.map((p, i) => `<g transform="translate(${p[0].toFixed(1)},${p[1].toFixed(1)}
     });
   }
   function miniCard(route, sub) {
-    const vr = plan(route), ph = photoOf(route);
+    const vr = plan(route), phs = photosOf(route);
     return `<li class="tp-mini"><a href="${routeUrl(route.id)}">
-  <div class="tp-mini-img">${ph ? `<img src="${esc(ph.src)}" alt="" loading="lazy" decoding="async">` : sketch(vr)}</div>
+  <div class="tp-mini-img">${phs.length ? collage(phs) : sketch(vr)}</div>
   <div class="tp-mini-txt"><h4>${esc(route.ko)}</h4><p>${bucketsOf(route).map(b => b[1]).join('·')}(${idealText(route)}) · ${vr.countries.length}개국 · 추천 ${monthsText(route.months)}</p>${sub ? `<p class="tp-mini-sub">${esc(sub)}</p>` : ''}</div></a></li>`;
   }
 
@@ -305,7 +317,7 @@ ${P.map((p, i) => `<g transform="translate(${p[0].toFixed(1)},${p[1].toFixed(1)}
     main.innerHTML = `
 <section class="page-head night tp-head">
   <div class="wrap"><p class="kicker">Travel</p><h1>동유럽 여행 루트 찾기</h1>
-  <p>여행 기간(단기·중기·장기)과 달을 고르면 그 조건에 정말 맞는 루트만 남깁니다. ${ROUTES.length}개 루트는 국내 여행사·블로그와 해외 일정 가이드, 교통 자료, 방문 통계를 근거로 골랐고, 루트마다 근거 링크를 붙였습니다.</p>
+  <p>여행 기간(단기·중기·장기·초장기)과 달을 고르면 그 조건에 정말 맞는 루트만 남깁니다. ${ROUTES.length}개 루트는 국내 여행사·블로그와 해외 일정 가이드, 교통 자료, 방문 통계를 근거로 골랐고, 루트마다 근거 링크를 붙였습니다.</p>
   <p class="jobs-edition">중동부유럽·발칸·발트 및 인접 연계 여행지 · 루트 ${ROUTES.length}개 · 도시 ${Object.keys(C).length}곳 · ${D.checked} 확인</p>
   <nav class="tp-jump" aria-label="여행 페이지 안에서 이동"><a href="#finder">맞춤 루트 찾기</a><a href="#season">계절별</a><a href="#region">지역별</a><a href="#theme">테마별</a><a href="#prep">여행 준비</a></nav></div>
 </section>
@@ -316,7 +328,7 @@ ${P.map((p, i) => `<g transform="translate(${p[0].toFixed(1)},${p[1].toFixed(1)}
     <form class="tp-form" onsubmit="return false">
       <div class="tp-grid">
         ${field('여행 기간', '현지 숙박 기준', `<div class="tp-chips tp-dur" role="group" data-name="dur">${BUCKETS.map(b => `<button type="button" data-v="${b[0]}" aria-pressed="false"><strong>${b[1]}</strong><small>${b[2]}</small></button>`).join('')}</div>
-          <p class="tp-hint">인천 출발부터 귀국까지는 현지 숙박에 약 2일을 더합니다(단기 4~6일, 중기 7~10일, 장기 11일 이상). 고른 구간에 권장 기간이 들어가는 루트만 남깁니다.</p>`, 'f-nights')}
+          <p class="tp-hint">인천 출발부터 귀국까지는 현지 숙박에 약 2일을 더합니다(단기 4~6일, 중기 7~9일, 장기 10~12일, 초장기 13일 이상). 고른 구간에 권장 기간이 들어가는 루트만 남깁니다.</p>`, 'f-nights')}
         ${field('여행 시기', '추천 월이 맞는 루트만', `<div class="tp-month-grid">${chips('when', monthOpts)}</div>${chips('when', SEASONS.map(s => [s[0], s[1]]))}<p class="tp-hint">루트마다 정말 추천하는 달만 1~4개 골라 두었습니다. 그 달이 아닌 루트는 결과에서 빠집니다.</p>`, 'f-when')}
         ${field('여행 속도', '', chips('pace', [['slow', '여유로운 여행'], ['mid', '적당한 관광'], ['fast', '최대한 많은 곳']]))}
         ${field('여행 목적', '여러 개 선택', chips('themes', THEMES, true), 'f-themes')}
@@ -409,7 +421,7 @@ ${P.map((p, i) => `<g transform="translate(${p[0].toFixed(1)},${p[1].toFixed(1)}
 
     /* 결과 카드 */
     function card(r, i, p) {
-      const { route, vr } = r, ph = photoOf(route);
+      const { route, vr } = r, phs = photosOf(route), ph = phs[0];
       const parts = [['taste', '취향', 30], ['duration', '기간', 25], ['season', '시기', 20], ['flight', '항공', 15], ['move', '이동', 10]];
       const facts = [['여행 기간', `${bucketOfN(vr.nights)[1]} · 현지 ${vr.nights}박(총 ${vr.nights + 2}일) <small>권장 ${idealText(route)} · ${bucketsOf(route).map(b => b[1]).join('·')}</small>`],
         ['추천 월', `${monthsText(route.months)}`], ['여행 스타일', themeNames(route).join(' · ') + ` <small>${moodNames(route).join(' · ')}</small>`],
@@ -418,8 +430,8 @@ ${P.map((p, i) => `<g transform="translate(${p[0].toFixed(1)},${p[1].toFixed(1)}
         ['항공 접근성', flightLine(route)]];
       const ev = evSummary(route);
       return `<li class="tp-card${i < 3 ? ' is-top' : ''}">
-  <div class="tp-card-media">${ph ? `<img src="${esc(ph.src)}" alt="${esc(ph.alt)}" loading="lazy" decoding="async">` : `<div class="tp-card-noimg">${sketch(vr)}</div>`}
-    <span class="tp-rank">추천 ${i + 1}위</span>${ph ? `<span class="tp-credit">사진: <a href="${esc(ph.source)}" target="_blank" rel="noopener">${esc(ph.author)}</a> · ${esc(ph.license)}</span>` : ''}</div>
+  <div class="tp-card-media">${ph ? collage(phs) : `<div class="tp-card-noimg">${sketch(vr)}</div>`}
+    <span class="tp-rank">추천 ${i + 1}위</span>${ph ? `<span class="tp-credit">사진: ${credit(phs)}</span>` : ''}</div>
   <div class="tp-card-body">
     <div class="tp-card-top"><div><h3><a href="${routeUrl(route.id, vr.nights)}">${esc(route.ko)}</a></h3><p class="tp-en" lang="en">${esc(route.en)}</p></div>
       <div class="tp-score" title="100점 만점 참고 점수"><strong>${r.score}</strong><span>점</span></div></div>
@@ -526,7 +538,7 @@ ${P.map((p, i) => `<g transform="translate(${p[0].toFixed(1)},${p[1].toFixed(1)}
     const want = parseInt(new URLSearchParams(location.search).get('n'), 10);
     let nights = (tabs.find(t => t[1] === want) || tabs.find(t => want >= t[0][3][0] && want <= t[0][3][1]) || tabs.find(t => t[1] === idealMid(route)) || tabs[0])[1];
     let map = null, layer = null;
-    const ph = photoOf(route), gin = G[route.in], gout = G[route.out];
+    const phs = photosOf(route), gin = G[route.in], gout = G[route.out];
     const themeTop = themeNames(route);
     const related = ROUTES.filter(r => r.id !== route.id && r.region.some(x => route.region.includes(x))).slice(0, 4);
     const ev = evOf(route);
@@ -543,7 +555,7 @@ ${P.map((p, i) => `<g transform="translate(${p[0].toFixed(1)},${p[1].toFixed(1)}
 <div class="wrap tp-wrap tp-route">
   <div class="tp-variant" role="tablist" aria-label="여행 기간(현지 숙박)">${nightBtns.join('')}</div>
   <section class="tp-sec" id="overview"><h2>여행 개요</h2>
-    <div class="tp-over">${photoFig(ph, 'tp-photo')}
+    <div class="tp-over">${photoFig(phs, 'tp-photo')}
       <div><p class="tp-desc">${esc(route.desc)}</p>
       <dl class="tp-facts tp-facts-wide" data-out="facts"></dl>
       <div class="tp-proscons"><div><h3>이 코스의 장점</h3><ul>${route.pros.map(x => `<li>${esc(x)}</li>`).join('')}</ul></div><div><h3>알아 둘 점</h3><ul>${route.cons.map(x => `<li>${esc(x)}</li>`).join('')}</ul></div></div></div></div>
@@ -611,7 +623,7 @@ ${P.map((p, i) => `<g transform="translate(${p[0].toFixed(1)},${p[1].toFixed(1)}
         ['난이도', `${DIFF[route.diff]} <small>${{ no: '대중교통으로 충분', optional: '렌터카가 있으면 편함', required: '렌터카 필요' }[route.car]}</small>`],
         ['추천 대상', esc(route.who)], ['핵심 지역 숙박 비율', `${Math.round(vr.coreShare * 100)}% <small>중동부유럽·발칸·발트 기준</small>`]]
         .map(([k, v]) => `<div><dt>${k}</dt><dd>${v}</dd></div>`).join('');
-      out('days-lead').textContent = `현지 ${vr.nights}박 ${vr.nights + 1}일 · ${vr.stops.map(s => `${s.city.ko} ${s.n}박`).join(' → ')}. 위의 단기·중기·장기 탭이 여럿이면 눌러서 일정을 바꿔 볼 수 있습니다.`;
+      out('days-lead').textContent = `현지 ${vr.nights}박 ${vr.nights + 1}일 · ${vr.stops.map(s => `${s.city.ko} ${s.n}박`).join(' → ')}. 위의 기간 탭이 여럿이면 눌러서 일정을 바꿔 볼 수 있습니다.`;
       out('days').innerHTML = vr.days.map(d => {
         const mv = d.move ? `<p class="tp-move"><span>이동</span> ${esc(C[d.move.a].ko)} → ${esc(C[d.move.b].ko)} · ${MODE[d.move.mode]} ${dur(d.move.min)} <span class="tp-v v${d.move.v}">${VLABEL[d.move.v][0]}</span></p>` : '';
         if (d.depart) return `<li class="tp-day is-end"><div class="tp-day-n">Day ${d.n}</div><div class="tp-day-body"><h3>출국 · ${esc(gout.ko)} 공항</h3>${mv}<p>${d.move ? `${esc(C[d.from].ko)}에서 ${esc(gout.ko)}(으)로 이동해 출국합니다. 이동 시간에 공항 수속 2~3시간을 더해 항공편을 고르세요.` : '오전에 못 본 곳을 둘러보고 공항으로 이동합니다.'} 귀국편은 대부분 다음 날 한국에 도착합니다.</p></div></li>`;
@@ -640,5 +652,5 @@ ${P.map((p, i) => `<g transform="translate(${p[0].toFixed(1)},${p[1].toFixed(1)}
     });
   }
 
-  window.TRIP_RENDER = { main: renderTrip, route: renderRoute, _debug: { evaluate, plan, rangeOf, allocate, toPrefs, DEFAULTS, photoPick } };
+  window.TRIP_RENDER = { main: renderTrip, route: renderRoute, _debug: { evaluate, plan, rangeOf, allocate, toPrefs, DEFAULTS, photoPick, BUCKETS } };
 })();
