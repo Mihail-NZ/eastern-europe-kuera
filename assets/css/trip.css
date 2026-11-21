@@ -360,3 +360,24 @@
 .tp-slides img:first-child { opacity: 0; }
 @media (prefers-reduced-motion: reduce) { .tp-slides img:first-child { opacity: 1; } }
 .tp-more-hint { margin: 0 0 14px; }
+
+/* 베스트 10 */
+.tp-best { margin: 8px 0 40px; }
+.tp-best-list { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+.tp-best-item { position: relative; display: grid; grid-template-columns: 116px minmax(0, 1fr); gap: 14px; background: var(--card); border-radius: 14px; box-shadow: var(--shadow); padding: 12px; }
+.tp-best-rank { position: absolute; top: 8px; left: 8px; z-index: 1; min-width: 28px; height: 28px; padding: 0 6px; border-radius: 14px; background: var(--blue); color: #fff; font: 600 14px/28px var(--sans, inherit); text-align: center; }
+.tp-best-item:nth-child(-n+3) .tp-best-rank { background: #c2410c; }
+.tp-best-img { display: block; border-radius: 10px; overflow: hidden; aspect-ratio: 1; background: #e6ecf5; }
+.tp-best-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.tp-best-txt { min-width: 0; }
+.tp-best-head { margin: 0 0 2px; font-size: 12px; font-weight: 600; color: var(--blue); }
+.tp-best-txt h3 { font: 600 15.5px/1.4 var(--serif); margin: 0 0 4px; }
+.tp-best-txt h3 a { color: var(--ink); text-decoration: none; }
+.tp-best-txt h3 a:hover { text-decoration: underline; }
+.tp-best-meta, .tp-best-src { margin: 0 0 4px; font-size: 12px; color: #6b7893; }
+.tp-best-why { margin: 0 0 4px; font-size: 13px; line-height: 1.55; color: #3d4760; }
+.tp-best-src a { color: inherit; }
+@media (max-width: 760px) {
+  .tp-best-list { grid-template-columns: 1fr; }
+  .tp-best-item { grid-template-columns: 88px minmax(0, 1fr); }
+}

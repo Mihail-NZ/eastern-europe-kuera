@@ -7,7 +7,7 @@
  *   'v' = 확인 필요. 편수가 적거나 계절 운행이거나 자료마다 값이 다른 구간
  * 숫자는 모두 참고용이다. 화면에도 등급과 확인일을 함께 보여준다. */
 window.TRIP_DATA = {
-  checked: '2026-11-15',
+  checked: '2026-11-21',
 
   /* core: 사이트의 중심 지역(중동부유럽·발칸·발트). core가 false면 인접 연계 여행지.
    * tier: 현지 물가 구간(A 저렴 → D 비쌈). slug: 사이트 국가 페이지가 있으면 연결. */
@@ -717,7 +717,8 @@ window.TRIP_DATA = {
     ['thessaloniki', 'skopje', 'bus', 225, 0, 'c', '국제 버스(FlixBus 등)', 'https://global.flixbus.com/bus-routes/bus-skopje-thessaloniki', '3시간 30분~4시간 45분. 기차는 게브겔리야에서 버스로 갈아탑니다.'],
     ['sofia', 'thessaloniki', 'bus', 285, 0, 'c', '국제 버스(FlixBus·Union Ivkoni 등)', 'https://global.flixbus.com/bus-routes/bus-sofia-thessaloniki', '4시간 40분~5시간 15분. 직행 열차는 없습니다.'],
     ['sarande', 'corfu', 'ferry', 45, 0, 'c', '쾌속선·일반 페리(Finikas Lines 등)', 'https://www.ferryhopper.com/en/ferry-routes/direct/sarande-corfu', '30분~1시간 30분. 겨울에는 편수가 줄어듭니다. 알바니아(비솅겐)→그리스(솅겐) 출입국 심사.'],
-    ['belgrade', 'sofia', 'bus', 480, 0, 'g', '국제 버스(니시 경유)', 'https://polazak.rs/en', '7~8시간.']
+    ['belgrade', 'sofia', 'bus', 480, 0, 'g', '국제 버스(니시 경유)', 'https://polazak.rs/en', '7~8시간.'],
+    ['kotor', 'tirana', 'bus', 330, 0, 'g', '국제 직행 버스(슈코더르 경유)', 'https://www.busticket4.me/EN/blog/details/Voyage-From-Montenegro-To-Albania', '5~6시간(국경 대기 포함).'],
   ],
 
   /* 한국 출발 여행자가 공통으로 확인할 공식 정보 */
@@ -733,7 +734,7 @@ window.TRIP_DATA = {
     tsPL4: ['국내', '트립스토어 – 폴란드 철도 4대 도시 종단', 'https://www.tripstore.kr/blog/%ED%8F%B4%EB%9E%80%EB%93%9C-%EC%B2%A0%EB%8F%84%EC%B2%AD-4%EB%8C%80-%EB%8F%84%EC%8B%9C-%EC%A2%85%EB%8B%A8-%EC%BD%94%EC%8A%A4'],
     tsPLwinter: ['국내', '트립스토어 – 폴란드 14박 15일 겨울 소도시 기차여행', 'https://www.tripstore.kr/blog/%ED%8F%B4%EB%9E%80%EB%93%9C-%EC%97%AC%ED%96%89-%EB%B9%84%EC%9A%A9-14%EB%B0%95-15%EC%9D%BC-%EA%B2%A8%EC%9A%B8-%EC%86%8C%EB%8F%84%EC%8B%9C-%EA%B8%B0%EC%B0%A8%EC%97%AC%ED%96%89'],
     tsHRSI: ['국내', '트립스토어 – 크로아티아·슬로베니아 남하 핵심 코스', 'https://www.tripstore.kr/blog/%ED%81%AC%EB%A1%9C%EC%95%84%ED%8B%B0%EC%95%84-%EC%8A%AC%EB%A1%9C%EB%B2%A0%EB%8B%88%EC%95%84-%EC%97%AC%ED%96%89-%EB%82%A8%ED%95%98-%ED%95%B5%EC%8B%AC-%EC%BD%94%EC%8A%A4'],
-    mrtBalkan: ['국내', '마이리얼트립 – 발칸 패키지(참좋은여행, 후기 689건)', 'https://www.myrealtrip.com/pkc/detail/6245602'],
+    mrtBalkan: ['국내', '마이리얼트립 – 참좋은여행 발칸 4개국 9일(크·슬·보·몬, 후기 747건)', 'https://www.myrealtrip.com/pkc/detail/6245602'],
     cafeBalkan: ['국내', '다음 카페 3040 배낭여행 – 발칸 일정 후기', 'https://m.cafe.daum.net/3040backpackers/rO9t/410'],
     tripBosnia: ['국내', '트립닷컴 – 보스니아와 세르비아 여행 가이드', 'https://kr.trip.com/moments/prcanj-20840/'],
     tripDong: ['국내', '트립닷컴 – 동유럽 소수 국가 추천 여행기', 'https://kr.trip.com/moments/ladis-46751/'],
@@ -847,11 +848,35 @@ window.TRIP_DATA = {
     ferryCorfu: ['교통', 'Ferryhopper – 사란더→코르푸 페리', 'https://www.ferryhopper.com/en/ferry-routes/direct/sarande-corfu'],
     dfCorfu: ['교통', 'Direct Ferries – 사란더→코르푸 이동 가이드', 'https://www.directferries.com/blog/travelling-from-saranda-to-corfu-complete-ferry-and-travel-guide'],
     flixSkpSkg: ['교통', 'FlixBus – 스코페→테살로니키', 'https://global.flixbus.com/bus-routes/bus-skopje-thessaloniki'],
-    flixSofSkg: ['교통', 'FlixBus – 소피아→테살로니키', 'https://global.flixbus.com/bus-routes/bus-sofia-thessaloniki']
+    flixSofSkg: ['교통', 'FlixBus – 소피아→테살로니키', 'https://global.flixbus.com/bus-routes/bus-sofia-thessaloniki'],
+    mrtCOH9: ['국내', '마이리얼트립 – 참좋은여행 동유럽 3개국 9일(체·오·헝, 후기 396건)', 'https://www.myrealtrip.com/pkc/detail/6245619'],
+    mrtKS2: ['국내', '마이리얼트립 – 참좋은여행 발칸 2개국 9일(크·슬, 후기 160건)', 'https://www.myrealtrip.com/pkc/detail/6245647'],
+    mrtHOC7: ['국내', '마이리얼트립 – 참좋은여행 동유럽 3개국 7일(헝·오·체, 후기 145건)', 'https://www.myrealtrip.com/pkc/detail/6245639'],
+    mrtKSB3: ['국내', '마이리얼트립 – 참좋은여행 발칸 3개국 9일(크·슬·보, 후기 99건)', 'https://www.myrealtrip.com/pkc/detail/6245591'],
+    mrtEast5: ['국내', '마이리얼트립 – 참좋은여행 발칸 동북부 5개국 10일(몬·알·마·불·루, 후기 64건)', 'https://www.myrealtrip.com/pkc/detail/6245650'],
+    satisfy2025: ['통계', '텔트립 – 2025 한국인 해외여행 만족도(체코 3위·크로아티아 5위)', 'https://www.telltrip.com/news/korea-overseas-travel-satisfaction-ranking-2025/'],
+    jaywayPVB: ['해외', 'Jayway – 프라하·비엔나·부다페스트(가장 인기 있는 루트)', 'https://jaywaytravel.com/trip-ideas/prague-vienna-budapest'],
+    rtPVB: ['해외', 'Responsible Travel – 프라하·비엔나·부다페스트 묶기', 'https://www.responsibletravel.com/holidays/european-tours/travel-guide/combining-prague-vienna-and-budapest'],
+    clienVienna: ['국내', '클리앙 – 비엔나 직항으로 비엔나·브라티슬라바·부다페스트 12월 여행기', 'https://www.clien.net/service/board/use/14425879']
   },
 
   /* 한국인 여행 통계(여행 준비 가이드에 표시). 국가 공식 통계를 인용한 기사·자료이며 기준이 서로 다를 수 있다. */
+  /* 베스트 10: 국내 패키지 후기 수, 여행사·블로그 일정 글, 해외 일정 가이드, 방문 통계를 함께 보고 정한 순위(2026-11 확인). */
+  best10: [
+    ['eastern-europe-package', '국내에서 가장 많이 팔리는 동유럽 동선', '체·오·헝 3국 패키지 후기 396건(9일)·145건(7일). 2024년 체코 방문 한국인 25만 명, 2025 만족도 체코 3위.', ['mrtCOH9', 'mrtHOC7', 'statCZ', 'satisfy2025']],
+    ['balkan-four', '후기가 가장 많은 발칸 상품과 같은 동선', '발칸 4국(크·슬·보·몬) 9일 패키지 후기 747건으로 동유럽·발칸 상품 중 최다. 크로아티아 만족도 5위.', ['mrtBalkan', 'statHR', 'satisfy2025']],
+    ['prague-vienna-budapest', '자유여행 첫 동유럽의 정석', '세 도시 모두 인천 직항. 국내 여행사·블로그 7박 9일 일정 글 대부분이 이 순서입니다.', ['ts79', 'jaywayPVB', 'rtPVB', 'mrtPkg']],
+    ['croatia-slovenia-grand', '크로아티아·슬로베니아 남하 일주', '발칸 2국(크·슬) 패키지 후기 160건. 유레일·해외 가이드가 같은 남하 순서를 권합니다.', ['mrtKS2', 'eurailSICR', 'tsHRSI']],
+    ['balkan-package', '슬·크·보 3국 패키지 동선', '발칸 3국 패키지 후기 99건. 교원투어 등 여러 여행사가 같은 구성을 판매합니다.', ['mrtKSB3', 'mrtKyowonBalkan']],
+    ['croatia-classic', '크로아티아 단독 종단', '자그레브·두브로브니크 직항 덕분에 자유여행 비중이 큰 코스. 2024년 크로아티아 한국인 방문 16만 명(37% 증가).', ['tsHRSI', 'statHR', 'statHRspend']],
+    ['prague-budapest-duo', '직항 두 도시를 잇는 짧은 일정', '프라하·부다페스트 모두 직항. 국내 6박 8일 상품과 해외 가이드에서 자주 쓰는 조합입니다.', ['mrtPkg68', 'seat61PB', 'statCZ']],
+    ['baltic-capitals', '발트 3국 수도 종단', '유레일 한국어 일정과 해외 블로그 대부분이 탈린·리가·빌뉴스를 버스로 잇는 1주 일정을 권합니다.', ['eurailBaltic', 'bucketBaltic', 'balticTimes']],
+    ['warsaw-krakow', '폴란드 첫 방문 핵심', '바르샤바 직항. 국내 폴란드 일정 글이 바르샤바·크라쿠프 두 도시를 기본으로 잡습니다.', ['tsPLtrain', 'tsPL', 'mywlWaw']],
+    ['balkan-two-weeks', '해외 여행자가 가장 많이 쓰는 발칸 2주', 'kimkim·해외 블로그에서 반복되는 차 없는 서발칸 2주 동선입니다.', ['kimkimBalkan', 'kimkimBalkan12', 'imperfectBalkan']]
+  ],
   stats: [
+    { k: '패키지 후기 수', v: '발칸 4국 747 · 동유럽 3국 396', n: '마이리얼트립 참좋은여행 상품 후기(2026-11 확인). 발칸 4국(크·슬·보·몬) 9일 747건, 동유럽 3국(체·오·헝) 9일 396건, 발칸 2국 160건, 동유럽 3국 7일 145건, 발칸 3국 99건.', refs: ['mrtBalkan', 'mrtCOH9'] },
+    { k: '한국인 만족도(2025)', v: '체코 3위 · 크로아티아 5위', n: '2025 한국인 해외여행 만족도 조사. 헝가리는 12계단 올라 13위.', refs: ['satisfy2025'] },
     { k: '체코', v: '25만 5,424명', n: '2024년 체코를 찾은 한국인(체코 통계청, 전년 대비 약 7% 증가). 2019년에는 38만 7,563명이었습니다.', refs: ['statCZ', 'statCZwiki'] },
     { k: '크로아티아', v: '약 16만 명 · 21만 박', n: '2024년 한국인 도착객·숙박(크로아티아관광청, 도착 37%·숙박 34% 증가). 한국인 하루 평균 소비 155유로로 아시아 1위.', refs: ['statHR', 'statHRspend'] },
     { k: '크로아티아 성수기', v: '6~9월', n: '2024년 전체 방문객 2,130만 명 중 8월 한 달이 469만 명. 한국인 여행이 몰리는 6~9월은 숙박비가 가장 비쌉니다.', refs: ['statHRall', 'statHRkotra'] },

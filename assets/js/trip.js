@@ -158,6 +158,15 @@
   const collage = phs => slideshow(phs);
   const evOf = route => (route.ev || []).map(k => REFS[k] && { k, type: REFS[k][0], t: REFS[k][1], u: REFS[k][2] }).filter(Boolean);
   const evSummary = route => { const c = {}; evOf(route).forEach(e => { c[e.type] = (c[e.type] || 0) + 1; }); return ['국내', '해외', '교통', '통계'].filter(t => c[t]).map(t => `${t} ${c[t]}`).join(' · '); };
+  /* 인기·검증 점수(10점): 근거 자료(국내 1 · 해외 0.7 · 통계 0.5 · 교통 0.25), 국내 상품 후기 수(로그), 베스트 10 순위 */
+  const BEST = D.best10 || [], BEST_RANK = {}; BEST.forEach((b, i) => { BEST_RANK[b[0]] = i + 1; });
+  const popOf = route => {
+    const w = { '국내': 1, '해외': 0.7, '통계': 0.5, '교통': 0.25 };
+    const evs = evOf(route), evW = evs.reduce((a, e) => a + (w[e.type] || 0.3), 0);
+    const reviews = Math.max(0, ...evs.map(e => { const m = /후기 ([\d,]+)건/.exec(e.t); return m ? +m[1].replace(/,/g, '') : 0; }));
+    const rank = BEST_RANK[route.id];
+    return Math.min(10, 1 + Math.min(3.5, evW * 0.5) + Math.min(2, Math.log10(reviews + 1) * 0.7) + (rank ? 1.5 + (10 - rank) * 0.28 : 0));
+  };
 
   /* ---------- 추천 엔진 ---------- */
   function gatewayValue(g, months, pref) {
@@ -209,30 +218,38 @@
     const style = p.style || [];
     if (style.includes('easy') && route.diff === 3) ex('style', '여행 경험자에게 맞는 난이도');
 
-    // 2단계: 점수 — 목적·분위기 25 · 기간 25 · 시기 20 · 항공 15 · 이동·편의 15
+    // 2단계: 점수 — 취향 20 · 기간 20 · 시기 20 · 항공 15 · 이동·편의 15 · 인기·검증 10 (소수 첫째 자리까지)
     const selT = p.themes || [], selM = p.moods || [];
     const th = {}; selT.forEach(t => { th[t] = themeScore(route, t); });
     const moodHit = m => MOODS.find(g => g[0] === m)[2].some(x => route.moods.includes(x));
     const tHit = selT.filter(t => th[t] >= 2), mHit = selM.filter(moodHit);
     const tMiss = selT.filter(t => th[t] < 1);
-    const tRate = selT.length ? selT.reduce((a, t) => a + [0, 0.25, 0.7, 1][Math.round(th[t])], 0) / selT.length * (tMiss.length ? 0.7 : 1) : null;
+    const curve = v => v <= 1 ? v * 0.25 : v <= 2 ? 0.25 + (v - 1) * 0.45 : 0.7 + Math.min(1, v - 2) * 0.3;
+    const tRate = selT.length ? selT.reduce((a, t) => a + curve(th[t]), 0) / selT.length * (tMiss.length ? 0.7 : 1) : null;
     const mRate = selM.length ? mHit.length / selM.length : null;
-    const taste = tRate == null && mRate == null ? 15 : tRate != null && mRate != null ? tRate * 17 + mRate * 8 : (tRate != null ? tRate : mRate) * 25;
-    out.parts.taste = Math.max(0, Math.min(25, taste));
+    // 아무것도 고르지 않으면 중립 12점 + 루트가 가진 테마의 폭(0~2점)
+    const breadth = Object.values(route.themes || {}).filter(v => v >= 3).length;
+    const taste = tRate == null && mRate == null ? 12 + Math.min(2, breadth * 0.4) : tRate != null && mRate != null ? tRate * 14 + mRate * 6 : (tRate != null ? tRate : mRate) * 20;
+    out.parts.taste = Math.max(0, Math.min(20, taste));
     if (tHit.length) out.good.push(`${tHit.map(t => label(THEMES, t)).join(', ')} 취향과 잘 맞습니다`);
     if (mHit.length >= 2 || (mHit.length && !tHit.length)) out.good.push(`${mHit.map(m => label(MOODS, m)).join(', ')} 분위기입니다`);
     if (tMiss.length && tHit.length) out.warn.push(`${tMiss.map(t => label(THEMES, t)).join(', ')} 요소는 이 루트에 거의 없습니다`);
     else if (selT.length && !tHit.length) out.warn.push('고른 여행 목적과는 거리가 있습니다');
 
-    const n = vr.nights;
-    out.parts.duration = p.dur ? 25 : 19;
-    if (p.dur) out.good.push(`${p.dur[1]} 일정(${n}박)으로 자료에서 권하는 기간에 들어갑니다`);
+    // 기간: 루트의 권장 기간이 고른 구간 안에 얼마나 들어가는지(겹침 비율) + 짠 박수가 권장 기간 가운데에 가까운지
+    const n = vr.nights, mid = (route.ideal[0] + route.ideal[1]) / 2, span = route.ideal[1] - route.ideal[0] + 1;
+    if (p.dur) {
+      const ov = Math.max(0, Math.min(p.dur[3][1], route.ideal[1]) - Math.max(p.dur[3][0], route.ideal[0]) + 1) / span;
+      out.parts.duration = 14 + 5 * ov + Math.max(0, 1 - Math.abs(n - mid) * 0.5);
+      out.good.push(`${p.dur[1]} 일정(${n}박)으로 자료에서 권하는 기간에 들어갑니다`);
+    } else out.parts.duration = 15 - Math.min(1.5, Math.max(0, span - 2) * 0.5);
 
+    // 시기: 고른 달 가운데 추천 월에 드는 비율. 고르지 않으면 추천 월이 많은(시기를 덜 타는) 루트가 조금 높다
     if (months.length) {
       const k = months.filter(m => route.months.includes(m)).length;
-      out.parts.season = !k ? 0 : months.length === 1 || k >= 2 || route.months.length === 1 ? 20 : 16;
+      out.parts.season = !k ? 0 : 15 + 5 * k / months.length - (route.months.length > 3 && months.length === 1 ? 0.3 : 0);
       if (k) out.good.push(`${months.length === 1 ? months[0] + '월' : '이 계절'}은 추천 월(${monthsText(route.months)})에 들어갑니다`);
-    } else out.parts.season = 13;
+    } else out.parts.season = 12 + route.months.length * 0.5;
 
     out.parts.flight = (gatewayValue(gin, months, p.flight) + gatewayValue(gout, months, p.flight)) / 2 * 15;
     const dIn = isDirect(gin, months), dOut = isDirect(gout, months);
@@ -240,19 +257,21 @@
     else if (dIn || dOut) out.good.push(`${dIn ? '입국' : '출국'}은 직항(${(dIn ? gin : gout).ko}), ${dIn ? '출국' : '입국'}은 경유입니다`);
     else out.warn.push('입출국 모두 경유가 필요합니다');
 
-    // 3단계: 현실성
+    // 3단계: 현실성 — 구간마다 끊지 않고 시간에 비례해 깎는다
     let mob = 10;
-    if (vr.avgMin > 240) mob -= 2.5; else if (vr.avgMin > 180) mob -= 1;
-    if (vr.maxLeg && vr.maxLeg.min > 480) mob -= 3; else if (vr.maxLeg && vr.maxLeg.min > 330) mob -= 2;
+    if (vr.legs.length) {
+      mob -= Math.min(3, Math.max(0, vr.avgMin - 120) / 60);
+      mob -= Math.min(3.5, Math.max(0, vr.maxLeg.min - 240) / 75);
+    } else mob -= 0.5;
     mob -= Math.min(2.5, vr.unsure.length * 0.8);
     mob -= vr.legs.reduce((a, l) => a + l.chg, 0) * 0.4;
     // 여행 속도: 숙소 이동 빈도(도시 수 ÷ 박수)를 얼마나 너그럽게 볼지
     const dens = vr.density, tol = p.pace === 'fast' ? 0.12 : p.pace === 'slow' ? -0.1 : 0;
-    if (dens > 0.65 + tol) mob -= 3; else if (dens > 0.5 + tol) mob -= 1.5;
-    if (p.pace === 'slow' && vr.stops.length > 3) mob -= 1.5;
-    if (p.pace === 'fast' && vr.stops.length >= 4) out.good.push(`${vr.stops.length}곳을 도는 알찬 동선입니다`);
+    mob -= Math.min(3.5, Math.max(0, dens - (0.4 + tol)) * 10);
+    if (p.pace === 'slow') mob -= Math.min(2, Math.max(0, vr.stops.length - 3) * 0.7);
+    if (p.pace === 'fast' && vr.stops.length >= 4) { mob += Math.min(1, (vr.stops.length - 3) * 0.3); out.good.push(`${vr.stops.length}곳을 도는 알찬 동선입니다`); }
     // 편의(5점): 여행 스타일·현지 교통이 이 루트와 맞는지
-    let ease = 5;
+    let ease = 5 - (route.diff - 1) * 0.4;
     if (style.includes('easy')) { if (route.diff === 2) ease -= 2; else out.good.push('초보자도 다니기 무난한 루트입니다'); }
     if (style.includes('family')) { if (!route.comp.includes('family')) { ease -= 3; out.warn.push('가족·부모님 동반으로는 이동이나 일정이 빠듯한 편입니다'); } else out.good.push('가족·부모님 동반에도 맞습니다'); }
     if (p.transit === 'public' && route.car === 'optional') { ease -= 2; out.warn.push('일부 구간은 렌터카가 없으면 불편합니다'); }
@@ -264,10 +283,15 @@
     if (dens > 0.5 + tol) out.warn.push(`${n}박에 ${vr.stops.length}곳을 옮겨 다녀 숙소 이동이 잦습니다`);
     if (route.car === 'required') out.warn.push('렌터카가 필요합니다');
 
-    out.score = Math.round(Object.values(out.parts).reduce((a, b) => a + b, 0));
+    // 인기·검증(10점): 근거 자료의 수와 종류, 국내 후기 수, 베스트 10 순위
+    out.parts.pop = popOf(route);
+    const b10 = BEST_RANK[route.id];
+    if (b10) out.good.push(`많이 다녀온 루트 베스트 10 중 ${b10}위입니다`);
+
+    out.score = Math.round(Object.values(out.parts).reduce((a, b) => a + b, 0) * 10) / 10;
     return out;
   }
-  const SORTS = [['fit', '나에게 가장 적합한 순', (a, b) => b.score - a.score], ['evidence', '근거 자료가 많은 순', (a, b) => (b.route.ev || []).length - (a.route.ev || []).length || b.score - a.score],
+  const SORTS = [['fit', '나에게 가장 적합한 순', (a, b) => b.score - a.score || b.parts.pop - a.parts.pop || b.parts.move - a.parts.move], ['evidence', '근거 자료가 많은 순', (a, b) => (b.route.ev || []).length - (a.route.ev || []).length || b.score - a.score],
     ['move', '이동이 편리한 순', (a, b) => b.parts.move - a.parts.move || a.vr.avgMin - b.vr.avgMin], ['slow', '여유로운 순', (a, b) => a.vr.density - b.vr.density],
     ['multi', '많은 국가를 방문하는 순', (a, b) => b.vr.countries.length - a.vr.countries.length || b.score - a.score]];
   const HARD = { nightsNear: '권장 기간 정확히 일치', excl: '제외한 나라', incl: '꼭 가고 싶은 나라', transit: '대중교통만', nights: '여행 기간', flight: '직항 필수', musts: '필수 요소', style: '초보자 위주', season: '여행 시기' };
@@ -316,6 +340,23 @@ ${P.map((p, i) => `<g transform="translate(${p[0].toFixed(1)},${p[1].toFixed(1)}
   <div class="tp-mini-txt"><h4>${esc(route.ko)}</h4><p>${bucketsOf(route).map(b => b[1]).join('·')}(${idealText(route)}) · ${vr.countries.length}개국 · 추천 ${monthsText(route.months)}</p>${sub ? `<p class="tp-mini-sub">${esc(sub)}</p>` : ''}</div></a></li>`;
   }
 
+  // 베스트 10: 후기 수·일정 글·통계로 고른 많이 다녀온 루트
+  function bestSection() {
+    const rows = BEST.map((b, i) => {
+      const route = ROUTES.find(r => r.id === b[0]); if (!route) return '';
+      const ph = photosOf(route)[0];
+      return `<li class="tp-best-item"><span class="tp-best-rank">${i + 1}</span>
+  <a class="tp-best-img" href="${routeUrl(route.id)}">${ph ? `<img src="${esc(ph.src)}" alt="${esc(ph.alt)}" loading="lazy" decoding="async">` : ''}</a>
+  <div class="tp-best-txt"><p class="tp-best-head">${esc(b[1])}</p><h3><a href="${routeUrl(route.id)}">${esc(route.ko)}</a></h3>
+  <p class="tp-best-meta">${bucketsOf(route).map(x => x[1]).join('·')}(${idealText(route)}) · 추천 ${monthsText(route.months)}</p>
+  <p class="tp-best-why">${esc(b[2])}</p>
+  <p class="tp-best-src">${(b[3] || []).filter(k => REFS[k]).map(k => `<a href="${esc(REFS[k][2])}" target="_blank" rel="noopener">${esc(REFS[k][1].split(' – ')[0])}</a>`).join(' · ')}</p></div></li>`;
+    }).join('');
+    return `<section class="tp-best" id="best" aria-labelledby="best-h"><h2 id="best-h">많이 다녀온 동유럽 루트 베스트 10</h2>
+    <p class="tp-lead">국내 여행사 패키지 후기 수, 국내 여행사·블로그 일정 글, 해외 일정 가이드, 각국 방문 통계를 함께 보고 정한 순위입니다(${D.checked} 확인). 이 순위는 맞춤 추천의 인기·검증 점수에도 반영됩니다.</p>
+    <ol class="tp-best-list">${rows}</ol></section>`;
+  }
+
   /* ---------- 여행 메인 ---------- */
   const CORE = Object.keys(N).filter(c => N[c].core);
   const DEFAULTS = { dur: '', when: '', themes: [], moods: [], pace: '', incl: [], excl: [], flight: 'prefer', transit: '', style: [], musts: [], sort: 'fit' };
@@ -340,9 +381,10 @@ ${P.map((p, i) => `<g transform="translate(${p[0].toFixed(1)},${p[1].toFixed(1)}
   <div class="wrap"><p class="kicker">Travel</p><h1>동유럽 여행 루트 찾기</h1>
   <p>여행 기간(단기·중기·장기·초장기)과 달을 고르면 그 조건에 정말 맞는 루트만 남깁니다. ${ROUTES.length}개 루트는 국내 여행사·블로그와 해외 일정 가이드, 교통 자료, 방문 통계를 근거로 골랐고, 루트마다 근거 링크를 붙였습니다.</p>
   <p class="jobs-edition">중동부유럽·발칸·발트와 주변 나라 · 루트 ${ROUTES.length}개 · 도시 ${Object.keys(C).length}곳 · ${D.checked} 확인</p>
-  <nav class="tp-jump" aria-label="여행 페이지 안에서 이동"><a href="#finder">맞춤 루트 찾기</a><a href="#season">계절별</a><a href="#region">지역별</a><a href="#theme">테마별</a><a href="#prep">여행 준비</a></nav></div>
+  <nav class="tp-jump" aria-label="여행 페이지 안에서 이동"><a href="#best">베스트 10</a><a href="#finder">맞춤 루트 찾기</a><a href="#season">계절별</a><a href="#region">지역별</a><a href="#theme">테마별</a><a href="#prep">여행 준비</a></nav></div>
 </section>
 <div class="wrap tp-wrap">
+  ${bestSection()}
   <section class="tp-finder" id="finder" aria-labelledby="finder-h">
     <h2 id="finder-h">맞춤 여행 루트 찾기</h2>
     <p class="tp-lead">기간과 달은 꼭 맞는 루트만 남기는 조건입니다. 나머지 조건은 순위에 반영하고, 비워 둔 항목은 중립으로 봅니다.</p>
@@ -353,7 +395,7 @@ ${P.map((p, i) => `<g transform="translate(${p[0].toFixed(1)},${p[1].toFixed(1)}
         ${field('여행 시기', '추천 월이 맞는 루트만', `<div class="tp-month-grid">${chips('when', monthOpts)}</div>${chips('when', SEASONS.map(s => [s[0], s[1]]))}<p class="tp-hint">루트마다 정말 추천하는 달만 1~4개 골라 두었습니다. 그 달이 아닌 루트는 결과에서 빠집니다.</p>`, 'f-when')}
       </div>
       <details class="tp-more"><summary>상세 조건 <span class="tp-more-n"></span></summary>
-        <p class="tp-hint tp-more-hint"><strong>순위에 반영</strong> 여행 목적·분위기(25점), 여행 속도·여행 스타일·현지 교통(이동·편의 15점), 항공편(항공 15점). <strong>결과를 거름</strong> 꼭 가고 싶은 나라·제외할 나라·필수 요소·직항 필수·대중교통만·초보자 위주(어려운 루트 제외).</p>
+        <p class="tp-hint tp-more-hint"><strong>순위에 반영</strong> 여행 목적·분위기(취향 20점), 여행 속도·여행 스타일·현지 교통(이동·편의 15점), 항공편(항공 15점). 근거 자료·후기 수·베스트 10 순위는 인기·검증(10점)으로 자동 반영됩니다. <strong>결과를 거름</strong> 꼭 가고 싶은 나라·제외할 나라·필수 요소·직항 필수·대중교통만·초보자 위주(어려운 루트 제외).</p>
         <div class="tp-grid">
           ${field('여행 목적', '여러 개 선택', chips('themes', THEMES, true), 'f-themes')}
           ${field('여행 분위기', '여러 개 선택', chips('moods', MOODS, true), 'f-moods')}
@@ -377,7 +419,7 @@ ${P.map((p, i) => `<g transform="translate(${p[0].toFixed(1)},${p[1].toFixed(1)}
     <div class="tp-saved"></div>
     <ol class="tp-list"></ol>
     <div class="tp-after"></div>
-    <p class="tp-disclaimer">추천 점수는 사이트가 정리한 루트 데이터(${D.checked} 확인)와 고른 조건을 견준 참고값입니다. 실시간 항공권·시간표·숙박 요금을 반영하지 않으며, 같은 조건이면 언제나 같은 결과가 나옵니다. 배점: 목적·분위기 25 · 기간 25 · 시기 20 · 항공 접근성 15 · 이동·편의 15.</p>
+    <p class="tp-disclaimer">추천 점수는 사이트가 정리한 루트 데이터(${D.checked} 확인)와 고른 조건을 견준 참고값입니다. 실시간 항공권·시간표·숙박 요금을 반영하지 않으며, 같은 조건이면 언제나 같은 결과가 나옵니다. 배점: 취향 20 · 기간 20 · 시기 20 · 항공 접근성 15 · 이동·편의 15 · 인기·검증 10. 동점이 적도록 구간을 끊지 않고 연속값으로 계산해 소수 첫째 자리까지 보여 줍니다.</p>
   </section>
 
   <section class="tp-browse" id="season" aria-labelledby="season-h"><h2 id="season-h">계절별 추천 여행</h2>
@@ -442,7 +484,7 @@ ${P.map((p, i) => `<g transform="translate(${p[0].toFixed(1)},${p[1].toFixed(1)}
     /* 결과 카드 */
     function card(r, i, p) {
       const { route, vr } = r, phs = photosOf(route), ph = phs[0];
-      const parts = [['taste', '취향', 25], ['duration', '기간', 25], ['season', '시기', 20], ['flight', '항공', 15], ['move', '이동·편의', 15]];
+      const parts = [['taste', '취향', 20], ['duration', '기간', 20], ['season', '시기', 20], ['flight', '항공', 15], ['move', '이동·편의', 15], ['pop', '인기', 10]];
       const facts = [['여행 기간', `${bucketOfN(vr.nights)[1]} · 현지 ${vr.nights}박(총 ${vr.nights + 2}일) <small>권장 ${idealText(route)} · ${bucketsOf(route).map(b => b[1]).join('·')}</small>`],
         ['추천 월', `${monthsText(route.months)}`], ['여행 스타일', themeNames(route).join(' · ') + ` <small>${moodNames(route).join(' · ')}</small>`],
         ['도시 간 이동', vr.legs.length ? `평균 ${dur(vr.avgMin).replace('약 ', '')}${vr.maxLeg ? ` <small>가장 긴 구간 ${esc(C[vr.maxLeg.a].ko)}→${esc(C[vr.maxLeg.b].ko)} ${dur(vr.maxLeg.min).replace('약 ', '')}</small>` : ''}` : '숙소 이동 없음'],
@@ -454,14 +496,14 @@ ${P.map((p, i) => `<g transform="translate(${p[0].toFixed(1)},${p[1].toFixed(1)}
     <span class="tp-rank">추천 ${i + 1}위</span>${ph ? `<span class="tp-credit">사진: ${credit(phs)}</span>` : ''}</div>
   <div class="tp-card-body">
     <div class="tp-card-top"><div><h3><a href="${routeUrl(route.id, vr.nights)}">${esc(route.ko)}</a></h3><p class="tp-en" lang="en">${esc(route.en)}</p></div>
-      <div class="tp-score" title="100점 만점 참고 점수"><strong>${r.score}</strong><span>점</span></div></div>
+      <div class="tp-score" title="100점 만점 참고 점수"><strong>${r.score.toFixed(1)}</strong><span>점</span></div></div>
     <div class="tp-countries">${countryList(vr)}</div>
     <p class="tp-chain">${chain(vr)}</p>
     <dl class="tp-facts">${facts.map(([k, v]) => `<div><dt>${k}</dt><dd>${v}</dd></div>`).join('')}</dl>
     <div class="tp-why"><h4>왜 이 코스인가</h4><p>${r.good.length ? esc(r.good.slice(0, 4).join('. ')) + '.' : '고른 조건과 뚜렷하게 맞는 점은 적지만 무난한 루트입니다.'}</p>
       ${r.warn.length ? `<p class="tp-warn"><strong>주의</strong> ${esc(r.warn.slice(0, 3).join('. '))}.</p>` : ''}
       ${ev ? `<p class="tp-evline"><a href="${routeUrl(route.id, vr.nights)}#evidence">추천 근거 ${evOf(route).length}건</a> <span>${esc(ev)}</span></p>` : ''}</div>
-    <div class="tp-bars" aria-label="점수 내역">${parts.map(([k, l, max]) => `<span title="${l} ${r.parts[k].toFixed(1)} / ${max}"><i>${l}</i><b><u style="width:${Math.round(r.parts[k] / max * 100)}%"></u></b><em>${Math.round(r.parts[k])}/${max}</em></span>`).join('')}</div>
+    <div class="tp-bars" aria-label="점수 내역">${parts.map(([k, l, max]) => `<span title="${l} ${r.parts[k].toFixed(1)} / ${max}"><i>${l}</i><b><u style="width:${Math.round(r.parts[k] / max * 100)}%"></u></b><em>${r.parts[k].toFixed(1)}/${max}</em></span>`).join('')}</div>
     <div class="tp-card-foot"><div class="tp-mapmini">${sketch(vr)}</div>${monthBar(route.months, p.months)}
       <div class="tp-btns">${saveBtn(route.id)}<a class="tp-detail" href="${routeUrl(route.id, vr.nights)}">${bucketOfN(vr.nights)[1]} 일정 보기</a></div></div>
   </div></li>`;
