@@ -396,8 +396,7 @@ ${P.map((p, i) => `<g transform="translate(${p[0].toFixed(1)},${p[1].toFixed(1)}
     main.innerHTML = `
 <section class="page-head night tp-head">
   <div class="wrap"><p class="kicker">Travel</p><h1>동유럽 여행 루트 찾기</h1>
-  <p>여행 기간(단기·중기·장기·초장기)과 달을 고르면 그 조건에 정말 맞는 루트만 남깁니다. ${ROUTES.length}개 루트는 국내 여행사·블로그와 해외 일정 가이드, 교통 자료, 방문 통계를 근거로 골랐고, 루트마다 근거 링크를 붙였습니다.</p>
-  <p class="jobs-edition">중동부유럽·발칸·발트와 주변 나라 · 루트 ${ROUTES.length}개 · 도시 ${Object.keys(C).length}곳 · ${D.checked} 확인</p>
+  <p>기간과 달을 고르면 맞는 루트만 남습니다.</p>
   ${tripTabs('finder')}
   <nav class="tp-jump" aria-label="여행 페이지 안에서 이동"><a href="#finder">맞춤 루트 찾기</a><a href="#season">계절별</a><a href="#region">지역별</a><a href="#theme">테마별</a><a href="#prep">여행 준비</a></nav></div>
 </section>

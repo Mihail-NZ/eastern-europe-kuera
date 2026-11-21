@@ -1624,13 +1624,10 @@ ${countryTabs(c, id)}
     main.innerHTML = `
 <section class="page-head night">
   <div class="wrap"><p class="kicker">Careers</p><h1>취업·인턴</h1>
-  <p>동유럽에서 일하거나 동유럽 시장을 맡는 채용·인턴 공고를 매주 월요일 모아 확인합니다. 공고 본문은 옮기지 않고 핵심 조건과 원문 링크만 싣습니다.</p>
-  <p class="jobs-edition">${JOBS.updated ? `${fmtLong(JOBS.updated)} 기준 · 공고 ${jobs.length}건${run ? ` · ${esc(run.kind)}` : ''}` : '아직 발행된 공고가 없습니다'}</p></div>
+  <p>채용·인턴 공고를 매주 월요일 모아 확인합니다.</p>
+  <p class="jobs-edition">${JOBS.updated ? `${fmtLong(JOBS.updated)} 기준 · 공고 ${jobs.length}건` : '아직 발행된 공고가 없습니다'}</p></div>
 </section>
 <div class="wrap jobs-wrap">
-  <div class="jobs-note">
-    <p><strong>읽는 법.</strong> 한국 국적 지원 가능 여부와 비자 지원은 공고 원문에 근거가 있을 때만 표시합니다. 한국 기업 공고나 영어 공고라는 이유만으로 지원 가능하다고 보지 않으니, '미확인'은 원문과 회사에 직접 확인하세요. '주재원'은 보통 본사 채용 후 파견, '현지 채용'은 현지 법인 직접 고용이라 체류·취업 조건이 다를 수 있습니다. 마감일은 기업 사정으로 바뀔 수 있습니다.</p>
-  </div>
   <div class="tab-bar jobs-tabs" role="tablist" aria-label="근무지 구분">${TABS.map(([id, label]) =>
     `<button type="button" role="tab" id="jt-${id}" aria-controls="jobs-panel" data-tab="${id}">${label} <span class="n"></span></button>`).join('')}</div>
   <div class="jobs-views" role="group" aria-label="보기">${[['all', '전체'], ['new', '이번 주 신규'], ['soon', '마감 임박 (7일 이내)']].map(([id, label]) =>
