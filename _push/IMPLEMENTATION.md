@@ -63,3 +63,9 @@ Cloudflare Workers는 fetch의 redirect:error를 지원하지 않아 Apple 요�
 관리자 인증이 필요한 /admin/test는 필수 subscriptionId로 한 기기만 선택하고 상태 코드·제한된 오류 분류만 반환한다. 전체 발송 요청은 받지 않는다. VAPID와 구독 키는 응답이나 로그에 출력하지 않는다. 수정 Worker에서 해당 iPhone에만 발송한 요청은 Apple HTTP 201로 접수됐고 사용자가 실제 알림 도착을 확인했다. 잠금 상태 수신과 클릭 후 뉴스 페이지 열기는 별도 확인이 필요하다.
 
 공식 근거: https://developers.cloudflare.com/workers/runtime-apis/request/
+
+## 데일리 뉴스 자동 알림 활성화 (2026-11-21)
+
+사용자가 iPhone 알림 수신과 뉴스 링크 열기를 확인한 뒤 내일부터 자동 발송을 요청했다. 별도 무료 스케줄러 Worker cee-side-daily를 추가하고 기존 발송 Worker를 서비스 바인딩으로 재사용했다. 매시 03·13·23·33·43·53분 운영 데이터를 확인하며 한국 날짜 2026-11-22부터 당일 브리핑만 발송한다. 뉴스 생성·GitHub Pages 호스팅·D1·VAPID는 유지했다.
+
+백엔드 및 자동 발송 테스트 9개 통과. 한국 자정 경계, 과거·미래 데이터 제외, 불완전 브리핑 거부, 같은 날짜 수정의 고정 ID/본문, 미공개 페이지 발송 거부, 인증만 하는 preview, 비활성 모드와 반복 배치 본문 일치를 확인했다. 배포된 /preview에서 senderAuthenticated:true와 후보 없음, /run에서 before-start를 확인하여 오늘 뉴스가 발송되지 않음을 검증했다. 실제 내일 뉴스의 자동 발송은 미래 실행이므로 아직 관측하지 않았다.
