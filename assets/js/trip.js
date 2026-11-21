@@ -145,7 +145,23 @@
   const toPh = p => ({ src: ROOT + p[0], hd: hdOf(p), author: p[1], license: p[2], source: p[3], alt: p[4] });
   // 직접 고른 슬라이드(TRIP_SLIDES)가 있는 루트는 그 사진을, 나머지는 자동으로 고른 3장을 쓴다
   const SLIDES = window.TRIP_SLIDES || {};
-  const photosOf = route => (SLIDES[route.id] || photoPick[route.id] || []).map(toPh).map(ph => Object.assign(ph, { rid: route.id }));
+  /* 계절 사진: 겨울 여행을 고르면 도시별 크리스마스 마켓·눈 풍경 사진(TRIP_SEASON)을 먼저 보여 준다.
+   * kind = 'xmas'(12월) | 'snow'(1~2월·겨울). 오래 머무는 도시부터 한 장씩, 모자라면 다른 겨울 사진으로 채우고, 2장이 안 되면 평소 사진을 쓴다. */
+  const SEASON = window.TRIP_SEASON || {};
+  const seasonKind = months => { const m = months || []; if (!m.length || !m.every(x => x === 12 || x === 1 || x === 2)) return ''; return m.length === 1 && m[0] === 12 ? 'xmas' : 'snow'; };
+  const seasonPick = (route, kind) => {
+    if (!kind) return null;
+    const order = plan(route).stops.slice().sort((a, b) => b.n - a.n).map(s => s.id), out = [], seen = new Set();
+    for (const k of [kind, kind === 'xmas' ? 'snow' : 'xmas']) for (const round of [0, 1]) for (const id of order) {
+      const p = (SEASON[id] || []).filter(x => x[5] === k)[round];
+      if (p && !seen.has(p[0]) && out.length < 3) { seen.add(p[0]); out.push(p); }
+    }
+    return out.length >= 2 ? out : null;
+  };
+  const photosOf = (route, kind) => {
+    const s = seasonPick(route, kind);
+    return (s ? s.map(p => ({ src: ROOT + p[0], hd: null, author: p[1], license: p[2], source: p[3], alt: p[4] })) : (SLIDES[route.id] || photoPick[route.id] || []).map(toPh)).map(ph => Object.assign(ph, { rid: route.id + (s ? '-' + kind : '') }));
+  };
   const photoOf = route => photosOf(route)[0] || null;
   const credit = phs => phs.map(ph => `<a href="${esc(ph.source)}" target="_blank" rel="noopener">${esc(ph.author)}</a> · ${esc(ph.license)}`).join(' / ');
   // 대표 사진 3장 전환. 모든 카드가 동시에 넘어가지 않게 루트마다 시작 시점을 조금씩 어긋낸다.
@@ -360,8 +376,8 @@ ${P.map((p, i) => `<g transform="translate(${p[0].toFixed(1)},${p[1].toFixed(1)}
       if (after) after();
     });
   }
-  function miniCard(route, sub) {
-    const vr = plan(route), phs = photosOf(route);
+  function miniCard(route, sub, kind) {
+    const vr = plan(route), phs = photosOf(route, kind);
     return `<li class="tp-mini"><a href="${routeUrl(route.id)}">
   <div class="tp-mini-img">${phs.length ? collage(phs) : sketch(vr)}</div>
   <div class="tp-mini-txt"><h4>${esc(route.ko)}</h4><p>${bucketsOf(route).map(b => b[1]).join('·')}(${idealText(route)}) · ${vr.countries.length}개국 · 추천 ${monthsText(route.months)}</p>${sub ? `<p class="tp-mini-sub">${esc(sub)}</p>` : ''}</div></a></li>`;
@@ -504,7 +520,7 @@ ${P.map((p, i) => `<g transform="translate(${p[0].toFixed(1)},${p[1].toFixed(1)}
       const { res, relaxed } = simRun(a);
       const persona = simPersona(a);
       if (!res.length) { box.innerHTML = `<div class="tp-sim-card"><h2>맞는 루트를 찾지 못했어요</h2><p>조건을 조금 바꿔 다시 해 보세요.</p><div class="tp-sim-nav"><button type="button" class="tp-go" data-act="restart">다시 하기</button></div></div>`; return; }
-      const top = res[0], alt = res.slice(1, 3);
+      const top = res[0], alt = res.slice(1, 3), sk = a.when === 'xmas' ? 'xmas' : a.when === 'winter' ? 'snow' : '';
       const parts = [['taste', '취향', 20], ['duration', '기간', 20], ['season', '시기', 20], ['flight', '항공', 15], ['move', '이동·편의', 15], ['pop', a.pick === 'hidden' ? '숨은 곳' : '인기', 10]];
       const stopsLine = r => r.vr.stops.map(s => `${esc(s.city.ko)} ${s.n}박`).join(' → ');
       const answers = SIM_Q.map(Q => { const v = a[Q.k]; if (v == null || v === '' || (Array.isArray(v) && !v.length)) return ''; const opts = Q.countries ? coreOpts : Q.o; const names = (Array.isArray(v) ? v : [v]).map(x => (opts.find(o => o[0] === x) || [])[1]).filter(Boolean); return names.length ? `<li><span>${esc(Q.q.replace(/\?$/, ''))}</span>${esc(names.join(', '))}</li>` : ''; }).join('');
@@ -512,7 +528,7 @@ ${P.map((p, i) => `<g transform="translate(${p[0].toFixed(1)},${p[1].toFixed(1)}
   <div class="tp-sim-card tp-sim-persona"><p class="tp-sim-badge">나의 여행 유형</p><h2>${esc(persona.name)}</h2><p>${esc(persona.line)}</p>
   ${relaxed.length ? `<p class="tp-sim-relax">조건에 꼭 맞는 루트가 적어 <strong>${relaxed.map(esc).join(', ')}</strong> 조건을 풀고 찾았습니다.</p>` : ''}</div>
   <article class="tp-sim-card tp-sim-top">
-    <div class="tp-sim-top-media">${photosOf(top.route).length ? collage(photosOf(top.route)) : sketch(top.vr)}</div>
+    <div class="tp-sim-top-media">${photosOf(top.route, sk).length ? collage(photosOf(top.route, sk)) : sketch(top.vr)}</div>
     <div class="tp-sim-top-txt"><p class="tp-sim-badge">추천 1순위 · ${top.score.toFixed(1)}점</p>
     <h3><a href="${routeUrl(top.route.id, top.vr.nights)}">${esc(top.route.ko)}</a></h3>
     <p class="tp-sim-meta">${top.vr.nights}박 · ${top.vr.countries.map(c => N[c].ko).join('·')} · 추천 ${monthsText(top.route.months)}</p>
@@ -523,7 +539,7 @@ ${P.map((p, i) => `<g transform="translate(${p[0].toFixed(1)},${p[1].toFixed(1)}
     ${top.warn.length ? `<ul class="tp-sim-warn">${top.warn.slice(0, 3).map(g => `<li>${esc(g)}</li>`).join('')}</ul>` : ''}
     <div class="tp-btns">${saveBtn(top.route.id)}<a class="tp-detail" href="${routeUrl(top.route.id, top.vr.nights)}">${top.vr.nights}박 일정·지도 보기</a></div></div>
   </article>
-  ${alt.length ? `<h3 class="tp-sim-sub">이런 루트도 잘 맞아요</h3><div class="tp-sim-alts">${alt.map((r, i) => `<a class="tp-sim-card tp-sim-alt" href="${routeUrl(r.route.id, r.vr.nights)}"><div class="tp-sim-alt-media">${photosOf(r.route).length ? collage(photosOf(r.route)) : sketch(r.vr)}</div><div><p class="tp-sim-badge">${i + 2}순위 · ${r.score.toFixed(1)}점</p><h4>${esc(r.route.ko)}</h4><p class="tp-sim-meta">${r.vr.nights}박 · ${stopsLine(r)}</p>${r.good[0] ? `<p class="tp-sim-why">${esc(r.good[0])}</p>` : ''}</div></a>`).join('')}</div>` : ''}
+  ${alt.length ? `<h3 class="tp-sim-sub">이런 루트도 잘 맞아요</h3><div class="tp-sim-alts">${alt.map((r, i) => `<a class="tp-sim-card tp-sim-alt" href="${routeUrl(r.route.id, r.vr.nights)}"><div class="tp-sim-alt-media">${photosOf(r.route, sk).length ? collage(photosOf(r.route, sk)) : sketch(r.vr)}</div><div><p class="tp-sim-badge">${i + 2}순위 · ${r.score.toFixed(1)}점</p><h4>${esc(r.route.ko)}</h4><p class="tp-sim-meta">${r.vr.nights}박 · ${stopsLine(r)}</p>${r.good[0] ? `<p class="tp-sim-why">${esc(r.good[0])}</p>` : ''}</div></a>`).join('')}</div>` : ''}
   <details class="tp-sim-card tp-sim-answers"><summary>내가 고른 답 보기</summary><ul>${answers || '<li>모든 질문을 건너뛰었습니다.</li>'}</ul></details>
   <div class="tp-sim-nav tp-sim-end"><button type="button" class="tp-go" data-act="restart">다시 하기</button><button type="button" class="tp-reset" data-act="edit">답 고치기</button><a class="tp-reset" href="${ROOT}travel/index.html" data-act="finder">이 조건으로 맞춤 루트 찾기</a></div>
   <p class="tp-disclaimer">결과는 사이트가 정리한 루트 데이터와 답을 견준 참고값이며, 같은 답이면 언제나 같은 결과가 나옵니다. 실시간 항공권·숙박 요금은 반영하지 않습니다.</p>
@@ -681,7 +697,7 @@ ${P.map((p, i) => `<g transform="translate(${p[0].toFixed(1)},${p[1].toFixed(1)}
 
     /* 결과 카드 */
     function card(r, i, p) {
-      const { route, vr } = r, phs = photosOf(route), ph = phs[0];
+      const { route, vr } = r, phs = photosOf(route, seasonKind(p && p.months)), ph = phs[0];
       const parts = [['taste', '취향', 20], ['duration', '기간', 20], ['season', '시기', 20], ['flight', '항공', 15], ['move', '이동·편의', 15], ['pop', '인기', 10]];
       const facts = [['여행 기간', `${bucketOfN(vr.nights)[1]} · 현지 ${vr.nights}박(총 ${vr.nights + 2}일) <small>권장 ${idealText(route)} · ${bucketsOf(route).map(b => b[1]).join('·')}</small>`],
         ['추천 월', `${monthsText(route.months)}`], ['여행 스타일', themeNames(route).join(' · ') + ` <small>${moodNames(route).join(' · ')}</small>`],
@@ -765,7 +781,7 @@ ${P.map((p, i) => `<g transform="translate(${p[0].toFixed(1)},${p[1].toFixed(1)}
         if (v === 'xmas') list = list.filter(x => x[0].tags.includes('xmas') || (x[0].themes.winter || 0) >= 3);
         if (v === 'resort') list = list.filter(x => (x[0].themes.beach || 0) >= 3);
         if (v === 'ski') list = list.filter(x => plan(x[0]).must.has('mountain') && (x[0].themes.winter || 0) >= 3);
-        return list.sort((a, b) => b[1] - a[1] || a[0].months.length - b[0].months.length).map(x => miniCard(x[0], `추천 월 ${monthsText(x[0].months)} · ${x[0].seasonNote}`));
+        return list.sort((a, b) => b[1] - a[1] || a[0].months.length - b[0].months.length).map(x => miniCard(x[0], `추천 월 ${monthsText(x[0].months)} · ${x[0].seasonNote}`, v === 'xmas' ? 'xmas' : v === 'winter' || v === 'ski' ? 'snow' : ''));
       }
       return ROUTES.filter(r => (kind === 'region' ? r.region : r.tags).includes(v)).map(r => miniCard(r, r.intro));
     }
