@@ -14,7 +14,9 @@ $data = ReadText "$root\assets\js\data-trip.js"
 $routesJs = ReadText "$root\assets\js\data-trip-routes.js"
 
 # ---- 1) 사진 색인 ----
-$used = [regex]::Matches($data, "img:\s*'([^']+)'") | ForEach-Object { $_.Groups[1].Value } | Sort-Object -Unique
+$cpStart = $data.IndexOf('cityPhotos: {'); $cpBlock = if ($cpStart -ge 0) { $data.Substring($cpStart, $data.IndexOf("`n  },", $cpStart) - $cpStart) } else { '' }
+$used = @([regex]::Matches($data, "img:\s*'([^']+)'") | ForEach-Object { $_.Groups[1].Value }) +
+        @([regex]::Matches($cpBlock, "'([a-z-]+/[a-z0-9-]+)'") | ForEach-Object { $_.Groups[1].Value }) | Sort-Object -Unique
 $photos = [ordered]@{}
 $warn = @()
 foreach ($key in $used) {

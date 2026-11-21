@@ -515,6 +515,28 @@ window.TRIP_DATA = {
       ] }
   },
 
+  /* 도시별 대표 사진 후보(국가 페이지의 Wikimedia Commons 사진, 키 = 국가/장소). trip.js가 루트마다 아직 덜 쓰인 사진을 골라
+   * 여러 루트가 같은 사진으로 도배되지 않게 한다. 그 도시나 근교 당일치기 장소를 실제로 찍은 사진만 넣는다. */
+  cityPhotos: {
+    prague: ['czechia/prague-castle', 'czechia/kutna-hora'], 'cesky-krumlov': ['czechia/cesky-krumlov'], brno: ['czechia/brno-villa-tugendhat', 'czechia/lednice-valtice', 'czechia/moravian-karst'],
+    'karlovy-vary': ['czechia/karlovy-vary'], plzen: ['czechia/plzen-brewery'], dresden: ['czechia/bohemian-switzerland'],
+    budapest: ['hungary/budapest-parliament', 'hungary/buda-castle', 'hungary/szechenyi-thermal-bath'], eger: ['hungary/eger-castle'], balaton: ['hungary/lake-balaton'], tokaj: ['hungary/tokaj-wine'],
+    warsaw: ['poland/warsaw-old-town'], krakow: ['poland/krakow-old-town', 'poland/wieliczka-salt-mine'], gdansk: ['poland/gdansk-long-market', 'poland/malbork-castle'], wroclaw: ['poland/wroclaw-market-square'], zakopane: ['poland/tatra-zakopane'],
+    bratislava: ['slovakia/bratislava-old-town', 'slovakia/devin-castle'], tatras: ['slovakia/high-tatras', 'slovakia/spis-castle', 'slovakia/slovak-paradise'], 'banska-stiavnica': ['slovakia/banska-stiavnica'],
+    ljubljana: ['slovenia/ljubljana', 'slovenia/postojna', 'slovenia/predjama'], bled: ['slovenia/bled'], bohinj: ['slovenia/bohinj', 'slovenia/triglav'], piran: ['slovenia/piran', 'slovenia/skocjan'], bovec: ['slovenia/soca-valley'], maribor: ['slovenia/maribor-vine', 'slovenia/ptuj'],
+    zagreb: ['croatia/zagreb-mark'], plitvice: ['croatia/plitvice'], split: ['croatia/split'], dubrovnik: ['croatia/dubrovnik', 'croatia/mljet'], hvar: ['croatia/stari-grad-plain'], korcula: ['croatia/korcula'], rovinj: ['croatia/rovinj'], pula: ['croatia/pula-arena'], zadar: ['croatia/zadar-organ'], sibenik: ['croatia/krka'],
+    tallinn: ['estonia/tallinn-old-town', 'estonia/alexander-nevsky-cathedral', 'estonia/kadriorg-palace', 'estonia/lahemaa-national-park'], tartu: ['estonia/tartu-town-hall-square'], kuressaare: ['estonia/kuressaare-castle', 'estonia/kaali-meteorite-crater'], parnu: ['estonia/p-rnu-beach'],
+    riga: ['latvia/riga-old-town', 'latvia/house-blackheads', 'latvia/riga-art-nouveau', 'latvia/sigulda-turaida', 'latvia/rundale', 'latvia/jurmala'], kuldiga: ['latvia/kuldiga'], liepaja: ['latvia/liepaja-karosta'],
+    vilnius: ['lithuania/vilnius-old-town', 'lithuania/trakai', 'lithuania/vilnius-cathedral', 'lithuania/vilnius-uzupis'], kaunas: ['lithuania/kaunas-modernism', 'lithuania/pazaislis'], klaipeda: ['lithuania/curonian-spit', 'lithuania/klaipeda', 'lithuania/palanga'],
+    kotor: ['montenegro/kotor-old-town', 'montenegro/bay-of-kotor', 'montenegro/perast', 'montenegro/lovcen'], budva: ['montenegro/budva', 'montenegro/sveti-stefan'], zabljak: ['montenegro/durmitor', 'montenegro/tara-bridge'], podgorica: ['montenegro/skadar-lake'],
+    sarajevo: ['bosnia-herzegovina/sarajevo-bascarsija', 'bosnia-herzegovina/sarajevo-latin-bridge'], mostar: ['bosnia-herzegovina/mostar-old-bridge', 'bosnia-herzegovina/blagaj-tekke', 'bosnia-herzegovina/kravica-falls', 'bosnia-herzegovina/pocitelj'], trebinje: ['bosnia-herzegovina/trebinje-old-town'],
+    belgrade: ['serbia/belgrade-fortress'], 'novi-sad': ['serbia/petrovaradin'], zlatibor: ['serbia/uvac'], tara: ['serbia/mokra-gora', 'serbia/tara'], nis: ['serbia/nis'],
+    tirana: ['albania/p08', 'albania/p07'], berat: ['albania/p01'], gjirokaster: ['albania/p02', 'albania/p12'], sarande: ['albania/p09', 'albania/p03'], shkoder: ['albania/p06'], valbona: ['albania/p05', 'albania/p15'], theth: ['albania/p04'], himare: ['albania/p10', 'albania/p11'],
+    skopje: ['north-macedonia/p05', 'north-macedonia/p06', 'north-macedonia/p07'], ohrid: ['north-macedonia/p01', 'north-macedonia/p02', 'north-macedonia/p03'],
+    bucharest: ['romania/bucharest-parliament'], brasov: ['romania/brasov', 'romania/bran', 'romania/peles'], sighisoara: ['romania/sighisoara', 'romania/biertan'], sibiu: ['romania/sibiu', 'romania/transfagarasan', 'romania/corvin'], cluj: ['romania/salina-turda'], maramures: ['romania/maramures'], bucovina: ['romania/voronet'], tulcea: ['romania/danube-delta'],
+    sofia: ['bulgaria/sofia-cathedral', 'bulgaria/rila-monastery', 'bulgaria/boyana', 'bulgaria/seven-rila-lakes'], plovdiv: ['bulgaria/plovdiv-roman-theatre'], 'veliko-tarnovo': ['bulgaria/tsarevets'], bansko: ['bulgaria/pirin'], varna: ['bulgaria/varna'], nessebar: ['bulgaria/nessebar']
+  },
+
   /* 도시 간 이동. [출발, 도착, 수단, 소요(분), 환승 횟수, 검증 등급, 운영·수단 설명, 공식·예매 링크, 메모]
    * 방향과 관계없이 한 번만 적는다(반대 방향도 같은 값으로 본다). 수단: train · bus · ferry · car · shuttle */
   legs: [
@@ -665,7 +687,13 @@ window.TRIP_DATA = {
     ['bratislava', 'banska-stiavnica', 'bus', 150, 0, 'c', '시외버스', 'https://cp.sk/en/', '약 2시간 30분. 기차는 흐론스카 두브라바 환승.'],
     ['banska-stiavnica', 'tatras', 'train', 240, 1, 'v', 'ZSSK(즈볼렌·브루트키 등 환승)', 'https://www.zssk.sk/en/', '4시간 안팎. 경로가 여러 가지라 시간표 검색이 필요합니다.'],
     ['belgrade', 'nis', 'bus', 180, 0, 'g', '시외버스(수시)', 'https://polazak.rs/en', '약 3시간.'],
-    ['nis', 'sofia', 'bus', 180, 0, 'g', '국제 버스(하루 몇 편)', 'https://polazak.rs/en', '약 3시간(국경 포함).']
+    ['nis', 'sofia', 'bus', 180, 0, 'g', '국제 버스(하루 몇 편)', 'https://polazak.rs/en', '약 3시간(국경 포함).'],
+    ['split', 'mostar', 'bus', 240, 0, 'g', '국제 버스(하루 여러 편)', 'https://getbybus.com/en/', '약 4시간. 여름에는 하루 전 예매 권장.'],
+    ['plitvice', 'zadar', 'bus', 120, 0, 'g', '직행 버스', 'https://getbybus.com/en/', '약 2시간. 겨울에는 편수가 줄어듭니다.'],
+    ['zadar', 'split', 'bus', 170, 0, 'c', '직행 버스(하루 9회 안팎)', 'https://global.flixbus.com/', '2시간 30분~3시간.'],
+    ['sarajevo', 'dubrovnik', 'bus', 345, 0, 'c', '국제 버스(모스타르 경유)', 'https://sarajevofunkytours.com/sarajevo-to-dubrovnik-what-is-the-best-way-to-travel/', '약 5시간 45분. 국경 통과, 여권 필요.'],
+    ['prague', 'budapest', 'train', 410, 0, 'c', 'EC·RegioJet 직행(브르노·브라티슬라바 경유)', 'https://www.seat61.com/trains-and-routes/prague-to-budapest-by-train.htm', '6시간 40분~7시간. 야간열차도 있습니다.'],
+    ['wroclaw', 'prague', 'bus', 250, 0, 'c', 'FlixBus·RegioJet 버스(거의 매시간)', 'https://www.thetrainline.com/buses/wroclaw-central-to-prague', '약 4시간~4시간 20분. 직행 열차도 있습니다(약 4~5시간).']
   ],
 
   /* 한국 출발 여행자가 공통으로 확인할 공식 정보 */
@@ -749,7 +777,23 @@ window.TRIP_DATA = {
     statHRspend: ['통계', '텔트립 – 한국인 하루 평균 155유로 소비, 아시아 1위(크로아티아관광청)', 'https://www.telltrip.com/overseas-travel/croatia-asia-korean-favorite-destination/'],
     statHRkotra: ['통계', 'KOTRA – 2024년 크로아티아 관광산업 정보', 'https://dream.kotra.or.kr/kotranews/cms/news/actionKotraBoardDetail.do?SITE_NO=3&MENU_ID=200&CONTENTS_NO=1&bbsSn=403&pNttSn=221863'],
     statHRall: ['통계', '크로아티아관광청 – 2024년 방문객 2,130만 명', 'https://www.htz.hr/en/node/11657'],
-    statHU: ['통계', 'Hungary Unlocked – 부다페스트 관광 통계(한국어)', 'https://hungaryunlocked.com/ko/budapest-tourism-statistics/']
+    statHU: ['통계', 'Hungary Unlocked – 부다페스트 관광 통계(한국어)', 'https://hungaryunlocked.com/ko/budapest-tourism-statistics/'],
+    mrtKyowonBalkan: ['국내', '마이리얼트립 – 교원투어 슬로베니아·크로아티아·보스니아 7박 9일', 'https://www.myrealtrip.com/pkc/detail/5968834'],
+    tsHR9: ['국내', '트립스토어 – 9일 크로아티아 여행 패키지 비교', 'https://www.tripstore.kr/blog/9%EC%9D%BC-%ED%81%AC%EB%A1%9C%EC%95%84%ED%8B%B0%EC%95%84-%EC%97%AC%ED%96%89-%ED%8C%A8%ED%82%A4%EC%A7%80-%EB%B9%84%EA%B5%90'],
+    tsHR10: ['국내', '트립스토어 – 크로아티아 10박 12일 연안 유적 여행 후기', 'https://www.tripstore.kr/blog/%ED%81%AC%EB%A1%9C%EC%95%84%ED%8B%B0%EC%95%84-%EC%97%AC%ED%96%89-%ED%9B%84%EA%B8%B0-10%EB%B0%9512%EC%9D%BC-%EC%97%B0%EC%95%88-%EC%9C%A0%EC%A0%81'],
+    eurailSICR: ['해외', 'Eurail – 슬로베니아·크로아티아 추천 일정(한국어)', 'https://www.eurail.com/ko/plan-your-trip/trip-ideas/suggested-itineraries/slovenia-and-croatia'],
+    rsSICR: ['해외', 'Rick Steves – 크로아티아·슬로베니아·보스니아·몬테네그로 일정', 'https://www.ricksteves.com/europe/slovenia-croatia-itinerary'],
+    kimkimBalkan: ['해외', 'kimkim – 발칸 2주 일정 모음', 'https://kimkim.com/c/2-weeks-in-the-balkans-unique-itineraries'],
+    kimkimBalkan12: ['해외', 'kimkim – 자그레브·류블랴나·블레드·모스타르·코토르·두브로브니크 12일', 'https://www.kimkim.com/c/explore-the-balkans-zagreb-ljubljana-lakebled-mostar-kotor-dubrovnik-12-days'],
+    imperfectBalkan: ['해외', 'Imperfect Idealist – 크로아티아·보스니아·몬테네그로 2주', 'https://imperfectidealist.com/14-days-croatia-bosnia-herzegovina-montenegro/'],
+    alexxBalkan: ['해외', 'Finding Alexx – 차 없이 2주 발칸', 'https://findingalexx.com/2-week-balkans-itinerary/'],
+    adriaBalkan: ['해외', 'Adria Forum – 발칸 2주 루트', 'https://blog.adriaforum.com/blog/balkans-2-week-route'],
+    huPB: ['해외', 'Hungary Unlocked – 부다페스트·프라하 7일 일정(한국어)', 'https://hungaryunlocked.com/ko/budapest-and-prague-itinerary/'],
+    rsPB: ['해외', 'Rick Steves – 프라하·부다페스트 투어 일정', 'https://www.ricksteves.com/tours/czech-republic/prague-budapest-tour'],
+    seat61PB: ['교통', 'Seat61 – 프라하→부다페스트 열차', 'https://www.seat61.com/trains-and-routes/prague-to-budapest-by-train.htm'],
+    mrtPkg68: ['국내', '마이리얼트립 – 교원투어 동유럽 6박 8일 패키지', 'https://www.myrealtrip.com/pkc/detail/5968828'],
+    tripBud: ['국내', '트립닷컴 – 부다페스트 여행 가이드 여행기', 'https://kr.trip.com/moments/tata-20582/'],
+    tlWroPrg: ['교통', 'Trainline – 브로츠와프→프라하 버스', 'https://www.thetrainline.com/buses/wroclaw-central-to-prague']
   },
 
   /* 한국인 여행 통계(여행 준비 가이드에 표시). 국가 공식 통계를 인용한 기사·자료이며 기준이 서로 다를 수 있다. */
