@@ -323,9 +323,9 @@ a.cc .cc-state { color: #fff; background: var(--rc); padding: 3px 10px; border-r
   .industry { grid-template-columns: 1fr; }
 }
 @media (max-width: 760px) {
-  html { scroll-padding-top: 116px; }
+  html { scroll-padding-top: 132px; }
   .wrap { padding-left: 16px; padding-right: 16px; }
-  .header-inner { height: auto; padding-top: 12px; padding-bottom: 2px; flex-direction: column; align-items: flex-start; gap: 6px; }
+  .site-header .header-inner { height: auto; padding-top: 14px; padding-bottom: 2px; flex-direction: column; align-items: flex-start; gap: 6px; }
   .brand-en { font-size: 24px; }
   .site-header nav { width: 100%; overflow-x: auto; }
   .site-header nav a { padding: 8px 10px; font-size: 14px; }
@@ -343,7 +343,7 @@ a.cc .cc-state { color: #fff; background: var(--rc); padding: 3px 10px; border-r
   .is-stack .story-thumb { min-height: 0; aspect-ratio: 16 / 8; }
   .home-news { padding-top: 48px; }
   .news-overview { padding: 16px 18px; font-size: 15px; }
-  .section-nav { top: 94px; }
+  .section-nav { top: 108px; }
   .crumbs { margin-bottom: 28px; }
   .flag-lg { width: 60px; height: 40px; }
   .country-title { gap: 16px; }
