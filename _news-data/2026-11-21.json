@@ -1,0 +1,135 @@
+{
+  "date": "2026-11-21",
+  "home": [0, 1, 2],
+  "overview": "러시아가 20일 대규모 공습에 이어 21일 새벽에도 우크라이나를 공격해 크리비리흐에서 7살 어린이 등 2명이 숨졌습니다. 폴란드 국방장관은 전날 폴란드에 떨어진 것이 미사일 2발과 드론 1기라고 밝혔고 투스크 총리는 트럼프 대통령의 발언을 비판했습니다. 에스토니아는 12월 1일부터 6개월간 러시아와의 육상 국경 도로 검문소를 모두 닫기로 했고, 보스니아에서는 연방 총리와 내무장관이 기소됐습니다.",
+  "stories": [
+    {
+      "region": "top",
+      "title": "러시아, 대공습 하루 만에 다시 우크라이나 공격…크리비리흐 ‘이중 타격’으로 7살 어린이 등 2명 사망",
+      "countries": ["우크라이나"],
+      "period": "2026-11-20 ~ 11-21",
+      "points": [
+        "키이우인디펜던트에 따르면 21일 새벽 러시아는 탄도미사일 3발과 드론 148기를 발사했고, 공군은 드론 117기를 격추 또는 무력화했다고 밝혔습니다. 19곳이 타격을 받았습니다.",
+        "드니프로페트로우시크주 크리비리흐에서 7살 어린이를 포함해 2명이 숨지고 최소 58명이 다쳤으며, 헌자 주지사는 28명이 입원 중이라고 전했습니다. 아파트와 병원 등이 피해를 입었습니다. 부상자 수는 보도마다 52~58명으로 차이가 있습니다.",
+        "젤렌스키 대통령은 러시아가 첫 타격 뒤 구조대를 노리는 ‘이중 타격’을 늘리고 있고 삼중 타격도 시작했다고 경고했습니다. 앞서 20일 공습의 사망자는 키이우인디펜던트 최신 보도에서 최소 9명으로 집계됐습니다."
+      ],
+      "why": "에너지·교량에 이어 구조 인력까지 겨냥하는 공습 양상이 이어지고 있어 민간 피해가 커질 수 있습니다. 전날 푸틴의 보복 예고 이후 추가 공습 여부와 서방의 겨울 에너지 휴전 요구에 대한 러시아의 응답이 다음 확인 지점입니다.",
+      "korea": "",
+      "sources": [
+        { "name": "Kyiv Independent – Russian attacks kill at least 2, injure 83 across Ukraine, as strikes devastate Kryvyi Rih", "url": "https://kyivindependent.com/russian-attacks-kill-at-least-2-injure-83-across-ukraine-as-strikes-devastate-kryvyi-rih/", "lang": "EN" },
+        { "name": "Kyiv Independent – Zelensky says Putin must understand Crimean Bridge will not stay", "url": "https://kyivindependent.com/zelensky-says-putin-must-understand-crimean-bridge-will-not-stay-warns-russia-increasing-double-tap-strikes/", "lang": "EN" }
+      ]
+    },
+    {
+      "region": "v4",
+      "title": "폴란드에 떨어진 것은 러시아 Kh-101 미사일 2발과 드론…국방장관 ‘의도적’, 투스크는 트럼프 발언 비판",
+      "countries": ["폴란드"],
+      "period": "2026-11-20 ~ 11-21",
+      "points": [
+        "키이우인디펜던트에 따르면 코시니아크카미시 국방장관은 20일 미사일 2발과 제트 드론 1기가 폴란드 영토에 떨어졌다고 밝혔습니다. 낙하 지점은 노비 리포비에츠, 루드니크 나드 사넴, 몰로디치이며 부상자는 없었습니다.",
+        "국방장관은 전쟁 발발 이후 폴란드에 미친 가장 큰 영향 중 하나라고 평가하고, 영국·프랑스 병력이 참여한 훈련 시기와 맞춘 의도적 행위로 보인다며 NATO에 AWACS와 F-35 지원을 요청했습니다. 스웨덴 그리펜 전투기 2대와 네덜란드 공중급유기가 방공을 지원했습니다.",
+        "뤼터 NATO 사무총장은 이번 사건이 분명히 위험하다고 비판했습니다. 트럼프 대통령은 19일 푸틴이 실수로 드론과 작은 미사일을 폴란드에 떨어뜨렸다고 말했고, 투스크 총리는 이런 친구들로부터 우리를 지켜달라고 반응했습니다.",
+        "노츠프롬폴란드에 따르면 같은 날 FedEx 주도 컨소시엄이 78억 유로 규모의 폴란드 택배사 인포스트 인수를 마쳤습니다. 체코는 21일 폴란드에 지원을 제안했다고 Expats.cz가 전했습니다."
+      ],
+      "why": "NATO 회원국 영토에 러시아 미사일이 떨어졌는데 미국 대통령의 평가가 동맹국과 엇갈려 동맹 내 대응 수위가 쟁점이 됐습니다. NATO의 AWACS·F-35 지원 여부와 후속 조사 결과가 다음 확인 지점입니다.",
+      "korea": "",
+      "sources": [
+        { "name": "Kyiv Independent – 2 Russian Kh-101 missiles, drone, fall in Poland during Russian attack on Ukraine", "url": "https://kyivindependent.com/poland-reports-airspace-violation-during-russian-attack-on-ukraine-investigates-debris-crash/", "lang": "EN" },
+        { "name": "Notes from Poland – Unidentified object hits Poland amid Russian attacks on western Ukraine", "url": "https://notesfrompoland.com/2026/11/20/unidentified-object-hits-poland-amid-russian-attacks-on-western-ukraine/", "lang": "EN" }
+      ]
+    },
+    {
+      "region": "baltic",
+      "title": "에스토니아, 12월 1일부터 6개월간 러시아와 육상 국경 도로 검문소 전면 폐쇄",
+      "countries": ["에스토니아"],
+      "period": "2026-11-20 ~ 11-21",
+      "points": [
+        "ERR에 따르면 정부는 12월 1일 오전 7시부터 6개월간 러시아와의 국경 통행을 중단하며, 이후 조정 여부를 판단합니다. 대상은 나르바-1·2, 코이둘라, 루하마, 사아트세 등 모든 도로 검문소입니다.",
+        "철도 화물은 기존 제한과 통관 통제 아래 계속 운영됩니다. 정부는 남동부 주민과 이다비루 지역의 불편을 줄일 방안도 논의하기로 했습니다.",
+        "미할 총리는 러시아의 적대 행위가 줄어들 기미가 없다고 밝혔고, 최근 방산업체 스레오드 시스템스에 대한 방화 시도가 있었습니다. 차크나 외무장관은 이번 결정이 그 사건과 직접 연관되지는 않는다고 말했습니다.",
+        "ERR은 21일 헤렘 국방장관이 국경 폐쇄를 지지한다고 전했습니다. LSM은 라트비아 국경수비대의 초과근무가 늘 것으로 전망했습니다."
+      ],
+      "why": "핀란드에 이어 발트권이 러시아와의 접점을 줄이는 흐름이 강해지고 있으며, 접경 지역 주민 지원책과 라트비아·리투아니아의 연쇄 영향이 다음 확인 지점입니다.",
+      "korea": "",
+      "sources": [
+        { "name": "ERR – Estonia to close land border with Russia from December 1", "url": "https://news.err.ee/1610201515/estonia-to-close-land-border-with-russia-from-december-1", "lang": "EN" },
+        { "name": "ERR – PM: Defense Minister Herem backs closing eastern border with Russia", "url": "https://news.err.ee/1610202649/pm-defense-minister-herem-backs-closing-eastern-border-with-russia", "lang": "EN" },
+        { "name": "LSM – Estonian-Russian border closing means overtime for Latvian border guards", "url": "https://www.lsm.lv/article/economy/transport/20.11.2026-estonian-russian-border-closing-means-overtime-for-latvian-border-guards.a672689/", "lang": "EN" }
+      ]
+    },
+    {
+      "region": "wbalkan",
+      "title": "보스니아 연방 총리·내무장관, 경찰 인사 비리 혐의로 기소…헌재는 RS의 군 상징 금지 위헌 결정",
+      "countries": ["보스니아 헤르체고비나"],
+      "period": "2026-11-20",
+      "points": [
+        "발칸인사이트에 따르면 연방 부패·조직범죄 특별검찰은 20일 니크시치 연방 총리, 이사크 내무장관 등 7명을 직권남용·영향력 거래 등 혐의로 기소했습니다. 기간은 2023년 4월부터 2024년 8월입니다.",
+        "검찰은 요건을 갖추지 못한 전 연방경찰청장 문지치를 임명하고 임기를 연장한 점과 승진·채용 비리를 문제 삼았습니다. 총리와 장관의 직무 정지를 요청했고 증인 60여 명, 증거 500여 점을 제시했습니다. 기소장은 연방대법원 특별부의 확정을 기다립니다.",
+        "N1에 따르면 같은 날 국가 헌법재판소는 보스니아 군(RBiH) 상징 전시에 징역형을 부과한 스릅스카공화국 조항을 위헌으로 판단하고 치바노비치 의장의 거부권을 뒤집었습니다."
+      ],
+      "why": "연방 정부 최고위층 기소로 정치 일정과 연정에 부담이 커질 수 있고, 법원의 기소 확정과 직무 정지 결정이 다음 확인 지점입니다. 보도에는 피고인 측 입장이 담기지 않았습니다.",
+      "korea": "",
+      "sources": [
+        { "name": "Balkan Insight – Bosnia Federation’s PM and Interior Minister Indicted Over Police Appointments", "url": "https://balkaninsight.com/2026/11/20/bosnia-federations-pm-and-interior-minister-indicted-over-police-appointments/bi/", "lang": "EN" },
+        { "name": "N1 – Constitutional Court finds RS provision on RBiH army symbols unconstitutional", "url": "https://n1info.ba/english/news/bosnias-constitutional-court-finds-rs-entity-provision-on-army-of-rbih-symbols-unconstitutional-overturns-cvijanovics-veto/", "lang": "EN" }
+      ]
+    },
+    {
+      "region": "sbalkan",
+      "title": "불가리아 의회, 최고사법위원회 위원 11명 선출…6개월 넘는 절차 끝에",
+      "countries": ["불가리아"],
+      "period": "2026-11-20",
+      "points": [
+        "BTA에 따르면 의회는 20일 의회 몫 최고사법위원회(SJC) 위원 11명을 선출했습니다. 선출 절차는 6개월 넘게 이어졌고, 시민사회와 학계가 처음으로 후보를 추천할 수 있었습니다.",
+        "여당 진보 불가리아의 탸코바는 이번 표결이 사법 개혁의 시작이라고 밝히고, 이후 감사기구 선출, 헌법 개정, 검찰총장 선출 논의를 단계적으로 진행하겠다고 했습니다. 현 SJC는 임기를 9년 넘겨 활동해 왔다고 설명했습니다.",
+        "헤드라인 기준으로 민주 불가리아는 검찰총장 권한을 줄이는 헌법 개정 논의에 열려 있다고 했고, 부활당은 이번 선출이 여당 인기 하락으로 이어질 것이라고 주장했습니다. 21일에는 수사관 몫 대표 선출 투표가 시작됐습니다."
+      ],
+      "why": "오랜 숙원이던 사법 기관 구성이 바뀌면서 검찰 개혁과 헌법 개정 논의가 이어질 전망이며, 검찰총장 선출 시점과 개헌 협상이 다음 확인 지점입니다.",
+      "korea": "",
+      "sources": [
+        { "name": "BTA – Progressive Bulgaria ‘Extremely Satisfied’ with Election of New Supreme Judicial Council Members", "url": "https://www.bta.bg/en/news/bulgaria/1251347-progressive-bulgaria-extremely-satisfied-with-election-of-new-supreme-judicial", "lang": "EN" },
+        { "name": "BTA – Investigators Begin Voting to Elect Representative to Supreme Judicial Council", "url": "https://www.bta.bg/en/news/bulgaria/1251530-investigators-begin-voting-to-elect-representative-to-supreme-judicial", "lang": "EN" }
+      ]
+    },
+    {
+      "region": "east",
+      "title": "루마니아 대통령, 베를린 ‘의지의 연합’ 회의서 평화협상에 유럽·동부 접경국 참여 촉구",
+      "countries": ["루마니아"],
+      "period": "2026-11-20",
+      "points": [
+        "RRI에 따르면 20일 베를린에서 메르츠 독일 총리 주최로 약 40개국이 참여한 ‘의지의 연합’ 회의가 열렸고, 내년 우크라이나 방위 자금과 협상 전 유럽 공통 입장이 논의됐습니다.",
+        "니쿠쇼르 단 대통령은 러시아가 진정으로 평화를 원하지 않으므로 제재를 유지해야 하며, 평화 합의는 NATO 동부 측면 보호와 흑해 안보 회복 등 지역 국가의 안보 이익을 반영해야 한다고 밝혔습니다.",
+        "루마니아는 2027년 우크라이나 자금·무기 지원을 추가로 늘릴 계획이지만 다른 지원국에 비해 규모는 작다고 했습니다. BTA는 루마니아가 국경일 행사에 NATO·파트너국 군 인원 600명을 초청했다고 전했습니다."
+      ],
+      "why": "미국 주도 협상 가능성 속에서 동부 접경국이 협상 참여와 흑해 안보 반영을 요구하는 움직임이며, 향후 협상 협의 방식이 다음 확인 지점입니다.",
+      "korea": "",
+      "sources": [
+        { "name": "RRI – Coalition of the Willing meeting on Ukraine", "url": "https://www.rri.ro/en/news-and-current-affairs/today-in-the-news/coalition-of-the-willing-meeting-on-ukraine-id1085700.html", "lang": "EN" },
+        { "name": "BTA – Romania Invites 600 Servicemen from NATO Member States, Partner Countries for Its National Day", "url": "https://www.bta.bg/en/news/balkans/1251378-romania-invites-600-servicemen-from-nato-member-states-partner-countries-for-it", "lang": "EN" }
+      ]
+    }
+  ],
+  "countries": {
+    "폴란드": "러시아 Kh-101 미사일 2발과 드론이 폴란드에 떨어져 국방장관이 NATO에 AWACS·F-35 지원 요청(11/20, 키이우인디펜던트). FedEx 컨소시엄이 인포스트 인수 완료(노츠프롬폴란드).",
+    "체코": "체코가 미사일·드론 낙하 피해를 입은 폴란드에 지원을 제안했고, 우크라이나 기부액이 작년 총액을 넘었다는 보도(11/21, Expats.cz, 헤드라인 기준). 장관은 러시아 하키팀 비자 차단을 EU에 요청.",
+    "슬로바키아": "최근 48시간 내 주요 보도 확인되지 않음. 폴란드는 19일 슬로바키아 등과의 가스 협력을 강화한다고 밝힘(노츠프롬폴란드).",
+    "헝가리": "최근 48시간 내 주요 보도 확인되지 않음. EWB는 벨그라드 안보회의 계기로 헝가리가 지역에서 다른 유형의 모범이 될 기회가 있다는 분석을 실음(11/19).",
+    "에스토니아": "12월 1일부터 6개월간 러시아와의 육상 도로 검문소를 모두 폐쇄(11/20, ERR). 사회장관 사퇴 요구와 21일 북동부 드론 경보 발령 후 해제도 보도.",
+    "라트비아": "에스토니아-러시아 국경 폐쇄로 라트비아 국경수비대 초과근무가 늘 전망(11/20, LSM). 의회는 장관 대행을 승인하고 상임위원회를 구성(헤드라인 기준).",
+    "리투아니아": "리투아니아와 유럽 병력이 종전 후 우크라이나 파병을 가정한 훈련을 실시했고, 나우세다 대통령은 트럼프가 유럽의 더 큰 역할을 기대한다고 전함(11/20, LRT, 헤드라인 기준).",
+    "슬로베니아": "최근 48시간 내 주요 보도 확인되지 않음. Sloveniatimes는 이번에 조회하지 않았음.",
+    "크로아티아": "2027년부터 외국인 근로자에게 크로아티아어 학습 의무가 생긴다는 보도(11/20, Total Croatia News). 네이션스리그 플레이오프에서 아일랜드와 맞붙음.",
+    "세르비아": "베오그라드 시장이 시의원 폭행 혐의로 기소(11/20, BTA)되고, 당국이 학생 시위대 대상 ‘폭력적 전복’ 사건을 공식 종결(발칸인사이트, 헤드라인 기준).",
+    "보스니아 헤르체고비나": "연방 총리와 내무장관이 경찰 인사 비리 혐의로 기소되고 헌재는 RS의 군 상징 금지 조항을 위헌 판단(11/20, 발칸인사이트·N1). 모스타르 등 남부에 폭우 피해.",
+    "몬테네그로": "최근 48시간 내 주요 보도 확인되지 않음. 19일 EU 협상 장 2개를 추가로 닫아 33개 중 25개를 종결한 소식이 직전 보도됨(EWB).",
+    "코소보": "북부 가지보데 호수 인근에서 빌라 2채가 추가로 철거됨(11/20, EWB, 헤드라인 기준).",
+    "알바니아": "라마 총리의 전 측근이 집권당 국정 운영을 비판(11/20, 발칸인사이트, 헤드라인 기준).",
+    "북마케도니아": "스코페에서 젠더 기반 폭력에 항의하는 여성 시위(11/20, BTA).",
+    "불가리아": "의회가 최고사법위원회 위원 11명을 선출하고 21일 수사관 몫 투표 시작(BTA). 전 환경장관은 페르니크 물 위기 사건에서 무죄.",
+    "우크라이나": "21일 새벽 크리비리흐 공격으로 어린이 포함 2명 사망·58명 부상(키이우인디펜던트). 독일이 우크라이나 설계 드론의 해외 생산 공장 계획을 지지.",
+    "벨라루스": "최근 48시간 내 주요 보도 확인되지 않음. 이번에 조회한 매체에서 벨라루스 관련 신규 기사가 확인되지 않았음.",
+    "몰도바": "최근 48시간 내 주요 보도 확인되지 않음. 라트비아 외무부가 몰도바 사업을 지원하기로 했다는 보도만 있음(11/20, LSM, 헤드라인 기준).",
+    "루마니아": "단 대통령이 베를린 ‘의지의 연합’ 회의에서 평화협상에 동부 접경국 참여를 촉구(11/20, RRI). 10월 물가상승률은 EU 최고 수준 유지."
+  },
+  "note": "작성 기준: 2026-11-21 저녁(한국시간). Kyiv Independent, Radio Romania International, LSM, LRT, ERR, Notes from Poland, Balkan Insight, BTA, European Western Balkans, Expats.cz, Total Croatia News, N1 첫 화면을 확인했고 크리비리흐 공습, 폴란드 낙하, 에스토니아 국경, 보스니아 기소, 불가리아 SJC, 루마니아 대통령 발언은 본문을 열어 확인했습니다. Sloveniatimes, Telex English, KOTRA, 한국 언론은 이번에 조회하지 않았습니다. 많은 국가 단신은 헤드라인 기준입니다. 폴란드 사건의 NATO 후속 조치, 러시아의 휴전 제안 응답, 에스토니아 국경 폐쇄의 주민 지원책은 아직 확인되지 않았습니다. 출처 표시: KR = 한국 언론, KOTRA = KOTRA 해외시장뉴스, EN = 해외 매체."
+}
