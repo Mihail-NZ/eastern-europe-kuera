@@ -172,81 +172,26 @@ Worker는 호출당 최대 한 명에게 전송한다. 중간 응답은 `id`, `c
 
 Cloudflare Workers & Pages에서 해당 Worker의 Metrics를, D1에서 해당 DB의 Metrics → Row Metrics를 본다. 운영 기록에는 공지 ID, 발송 시각, 처리 건수와 HTTP 상태만 남긴다. 구독 객체, 인증 헤더, 비밀키, 엔드포인트 전체를 출력하거나 장애 신고에 첨부하지 않는다.
 
-## 9. 자동 뉴스 발송 운영안
+## 9. 활성화된 데일리 뉴스 자동 알림
 
-수동 발송과 실기기 수신 검증을 먼저 마친다. 자동화 도입 시 기존 뉴스 생성 작업이 성공하고 Pages에 뉴스 링크가 실제로 공개된 이후를 트리거로 쓴다. GitHub Actions에서는 `workflow_dispatch`로 시험하고, 저장소 Secret에 `ADMIN_TOKEN`, 변수에 Worker 주소를 넣는다. 기존 뉴스 전체를 최초 기준점으로 저장한 뒤 새 고유 ID만 골라 보낸다. 뉴스 파일의 수정 시각만으로 신규 여부를 판단하면 기사 수정 때 재발송될 수 있다.
+사용자 요청으로 2026-11-21에 자동 알림을 활성화했다. **한국 시간 2026-11-22의 데일리 뉴스부터** 발송한다. 기존 뉴스 생성·GitHub Pages 배포 절차는 그대로 유지하며, 이 자동화가 뉴스를 작성하거나 게시하지는 않는다.
 
-워크플로에는 동시 실행 그룹을 하나 지정하고, 한 번의 신규 기사 수와 일일 발송 수 상한을 둔다. 최초 기준점 생성과 데이터 형식 오류 시에는 발송을 건너뛴다. 재시도 때 같은 뉴스 ID와 내용을 보내고 배치 종료 응답을 확인한다. 계정의 일정 실행 또는 Cron을 켜는 시점은 운영자가 실기기 인수 테스트를 통과한 후다.
+- 스케줄러: `cee-side-daily`, 설정 `_push/daily.wrangler.jsonc`, 코드 `_push/daily-worker.mjs`.
+- Cloudflare Cron은 매시 03·13·23·33·43·53분에 실행한다. 모든 시간대에서 같은 10분 간격이며, 브리핑 날짜 비교는 한국 시간이다. PC가 꺼져 있어도 실행된다.
+- 운영 사이트의 `assets/js/data-news.js`에서 **오늘 날짜**의 완성된 6개 권역 브리핑을 확인하고 뉴스 페이지 HTTP 200까지 확인한 뒤 발송한다. 오늘 데이터가 없거나 형식이 잘못됐거나 페이지가 공개되지 않았으면 발송하지 않는다. 늦은 배포는 다음 확인 때 처리하고 전날 뉴스를 소급 발송하지 않는다.
+- 발송 ID는 `briefing-YYYY-MM-DD`이고 제목·본문·링크도 날짜별로 고정한다. 기존 D1 발송 기록으로 동일 기기에 중복 전송하지 않는다. 같은 날 기사 수정도 추가 알림을 만들지 않는다.
+- 알림은 데일리 브리핑 전체 공지로 현재 구독자에게 발송하며 `news/index.html?date=YYYY-MM-DD#daily`로 열린다. 구독 해제한 기기는 대상에서 제외된다.
+- 스케줄러는 서비스 바인딩 `PUSH`로 기존 `cee-side-push`를 호출한다. 원래 VAPID 키와 D1을 유지한다. ADMIN_TOKEN은 Secret으로만 공유하고 일반 설정·Git·로그에 기록하지 않는다.
+- 무료 플랜의 호출당 CPU를 고려해 실제 암호화 발송은 기존 Worker에서 한 기기씩 수행한다. 한 번의 확인에서 최대 25개 기기를 처리하며, 더 남으면 같은 공지 ID로 다음 확인 때 이어 보낸다. 실패·결과 불확정은 자동 재발송으로 중복을 만들지 않고 실행 실패로 표시한다.
+- `POST /preview`는 관리자 인증 후 운영 데이터와 발송 서버 인증만 확인하며 알림을 보내지 않는다. `POST /run`은 실제 Cron과 같은 현재 날짜 조건을 적용한다. 두 경로는 관리자 인증 없이는 401이다.
+- 중지하려면 `AUTO_PUSH`를 `false`로 바꾸고 해당 설정 파일로 재배포한다. 날짜 기준 `START_AFTER=2026-11-21`은 유지한다. Cloudflare 스케줄 변경 전파는 최대 15분 걸릴 수 있다.
 
-현재 `_tools/build-news.mjs`는 `_news-data/YYYY-MM-DD.json`에서 날짜와 6개 권역을 검사한 후 최신 30일분을 `assets/js/data-news.js`로 만든다. 기사마다 변경되지 않는 ID가 없으므로 우선 날짜당 브리핑 1개를 발송 단위로 삼는다. 예를 들어 `briefing-2026-11-21`을 사용하면 같은 날짜의 문구를 수정해도 새 알림 ID가 만들어지지 않는다.
+검사: `node --test _push/check.test.mjs _push/daily.test.mjs`.
+스케줄러 배포: `npx.cmd wrangler@4 deploy --config _push/daily.wrangler.jsonc`.
+기존 푸시 Worker 배포: `npx.cmd wrangler@4 deploy --config _push/wrangler.jsonc`.
+두 설정 파일의 대상을 혼동하지 않는다. 실발송 상태는 기존 D1 jobs/deliveries와 Cloudflare Cron 실행 상태에서 확인한다.
 
-아래는 운영자가 검증 후 선택해서 추가할 수 있는 **하루 1건용 GitHub Actions 예시**다. 실행당 25회까지 요청하므로 이번 실행에서 최대 25개 기기에 보낸다. 대상이 더 많으면 실행 결과를 확인한 뒤 같은 공지 ID와 본문으로 이어 보낸다. GitHub Settings → Secrets and variables → Actions에 Secret `CEE_ADMIN_TOKEN`, 변수 `CEE_WORKER_ORIGIN`, `CEE_PUSH_START_AFTER`(등록 시점의 마지막 브리핑 날짜, YYYY-MM-DD)를 설정한다. 아래 내용을 `.github/workflows/cee-news-push.yml`로 저장한다. 기본 preview로 먼저 수동 실행하여 선택된 날짜를 확인한다. 다음 날 이후 본인 구독만 있는 시범 운영 환경에서 `CEE_AUTO_PUSH=true`를 설정하고 수동 실행에서 preview를 해제하면 실발송된다. 일정 발송을 중단하려면 변수를 false로 돌린다. 일일 1회 점검 사이에 공개되지 않은 브리핑은 과거 공지로 소급 발송되지 않는다.
-
-```yaml
-name: CEE Side daily briefing
-on:
-  workflow_dispatch:
-    inputs:
-      preview:
-        description: 날짜만 확인
-        type: boolean
-        default: true
-  schedule:
-    - cron: '15 12 * * *'
-permissions: {}
-concurrency:
-  group: cee-daily-push
-  cancel-in-progress: false
-jobs:
-  send:
-    if: github.event_name == 'workflow_dispatch' || vars.CEE_AUTO_PUSH == 'true'
-    runs-on: ubuntu-latest
-    timeout-minutes: 5
-    steps:
-      - name: 공개된 오늘 브리핑 확인
-        shell: bash
-        env:
-          LIVE: ${{ vars.CEE_AUTO_PUSH == 'true' && (github.event_name == 'schedule' || !inputs.preview) }}
-          START_AFTER: ${{ vars.CEE_PUSH_START_AFTER }}
-          WORKER: ${{ vars.CEE_WORKER_ORIGIN }}
-          ADMIN: ${{ secrets.CEE_ADMIN_TOKEN }}
-        run: |
-          node --input-type=module <<'JS'
-          const site = 'https://mihail-nz.github.io/eastern-europe-kuera/';
-          const today = new Date(Date.now() + 9 * 3600_000).toISOString().slice(0, 10);
-          const startAfter = process.env.START_AFTER || '';
-          if (!/^\d{4}-\d{2}-\d{2}$/.test(startAfter)) throw Error('기준 날짜 필요');
-          const url = new URL('assets/js/data-news.js', site);
-          url.searchParams.set('run', process.env.GITHUB_RUN_ID);
-          const res = await fetch(url, { redirect: 'error' });
-          if (!res.ok) throw Error('공개 뉴스 확인 실패');
-          const match = (await res.text()).match(/^\s*\/\*[^]*?\*\/\s*window\.NEWS_DATA\s*=\s*(\[[^]*\])\s*;?\s*$/);
-          if (!match) throw Error('뉴스 파일 형식 변경');
-          const day = JSON.parse(match[1])[0];
-          if (day?.date !== today || today <= startAfter) process.exit(0);
-          if (!Array.isArray(day.stories) || day.stories.length !== 6) throw Error('브리핑 확인 필요');
-          console.log('공개 확인:', today);
-          if (process.env.LIVE !== 'true') process.exit(0);
-          const target = new URL('/admin/send', process.env.WORKER);
-          if (target.protocol !== 'https:') throw Error('HTTPS Worker 주소 필요');
-          const body = JSON.stringify({
-            id: 'briefing-' + today, title: '동유럽 데일리 브리핑',
-            body: today + ' 동유럽 주요 뉴스를 확인해 보세요.',
-            url: new URL('news/index.html?date=' + today + '#daily', site).href, all: true
-          });
-          for (let batch = 0; batch < 25; batch++) {
-            const result = await fetch(target, {
-              method: 'POST', redirect: 'error',
-              headers: { Authorization: 'Bearer ' + process.env.ADMIN, 'Content-Type': 'application/json' },
-              body
-            });
-            if (!result.ok) throw Error('발송 HTTP ' + result.status);
-            if ((await result.json()).done === true) process.exit(0);
-            await new Promise(resolve => setTimeout(resolve, 2000));
-          }
-          throw Error('1회 최대 배치 도달. 관리자 도구에서 같은 ID로 재개하세요.');
-          JS
-```
+공식 참고: [Cloudflare Cron](https://developers.cloudflare.com/workers/configuration/cron-triggers/) · [서비스 바인딩](https://developers.cloudflare.com/workers/runtime-apis/bindings/service-bindings/).
 
 ## 10. 무료 플랜에서 확인할 수치
 
@@ -268,7 +213,7 @@ jobs:
 
 - Worker: https://cee-side-push.cee-side-kuera.workers.dev
 - 사이트: https://mihail-nz.github.io/eastern-europe-kuera/
-- 기존 D1 ID와 VAPID 키를 유지한다. 자동 발송용 Cron/Actions는 설치하거나 활성화하지 않았다.
+- 기존 D1 ID와 VAPID 키를 유지한다. 별도 무료 Worker cee-side-daily의 Cron 자동 발송을 활성화했다(9절).
 - 관리자 토큰은 이 PC의 `%LOCALAPPDATA%\CEESide\admin-token.clixml`에 Windows DPAPI로 암호화했다. 같은 Windows 사용자로 위 수동 발송 절차에서 읽으며, 원문을 복사하거나 채팅에 붙이지 않는다. 다른 PC/계정에서는 복호화할 수 없다.
 - ‘15초 뒤 이 기기만 테스트’는 소유권을 검증한 구독 하나만 대상으로 한다. 서버가 요청을 접수한 뒤 기다리므로 앱을 닫아도 된다. 발송 직전에 구독 해제를 다시 확인하며 1분에 한 번만 요청할 수 있다.
 - 지연 테스트는 [Cloudflare waitUntil](https://developers.cloudflare.com/workers/runtime-apis/context/)의 응답 후 최대 30초 실행 범위 안에서 15초 대기 후 발송을 시도한다. 영구 작업 큐가 아니므로 접수는 기기 도착을 보장하지 않는다. 도착하지 않으면 1분 뒤 재시도하고 수신 설정을 확인한다.

@@ -1,0 +1,11 @@
+{
+  "name": "cee-side-daily",
+  "main": "daily-worker.mjs",
+  "compatibility_date": "2025-10-01",
+  "workers_dev": true,
+  "preview_urls": false,
+  "observability": {"enabled": false},
+  "vars": {"AUTO_PUSH": "true", "START_AFTER": "2026-11-21"},
+  "services": [{"binding": "PUSH", "service": "cee-side-push"}],
+  "triggers": {"crons": ["3-59/10 * * * *"]}
+}
