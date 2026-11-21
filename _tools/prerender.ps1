@@ -14,7 +14,7 @@
 param(
   [string]$Brand = '동유럽 산책',
   [string]$BrandEn = 'CEE Side',
-  [string]$Tagline = '동유럽 20개국 여행·문화·뉴스·취업 정보',
+  [string]$Tagline = '동유럽 20개국 가이드',
   [string]$Base = 'https://mihail-nz.github.io/eastern-europe-kuera/',
   [int]$Port = 8099,
   [string]$Only = ''   # 시험용: 이 정규식에 맞는 페이지만 처리(사이트맵·robots·llms는 만들지 않음)
@@ -119,7 +119,7 @@ try {
     $heads = [regex]::Matches($main, '(?s)<h2[^>]*>(.*?)</h2>') | ForEach-Object { Strip $_.Groups[1].Value } | Where-Object { $_ -and $_.Length -lt 40 } | Select-Object -First 6
     $desc = (@($lead) -join ' ')
     if ($heads) { $desc = ($desc + ' 주요 내용: ' + (@($heads) -join ', ') + '.').Trim() }
-    if ($isHome) { $desc = '동유럽 20개국(폴란드·체코·헝가리·발트 3국·발칸 등)의 국가 정보, 여행·음식·언어·문화·산업 가이드, 매일 업데이트되는 동유럽 뉴스와 취업·인턴 정보를 한국어로 정리했습니다.' }
+    if ($isHome) { $desc = '동유럽 20개국의 여행 루트, 국가 정보, 매일 뉴스, 취업·인턴 공고를 한곳에서 확인하세요.' }
     if (-not $desc) { $desc = $Tagline }
     $desc = Cut $desc 158
 
