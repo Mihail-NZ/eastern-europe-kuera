@@ -324,7 +324,7 @@ a.cc .cc-state { color: #fff; background: var(--rc); padding: 3px 10px; border-r
 }
 @media (max-width: 760px) {
   html { scroll-padding-top: 116px; }
-  .wrap { padding: 0 16px; }
+  .wrap { padding-left: 16px; padding-right: 16px; }
   .header-inner { height: auto; padding-top: 12px; padding-bottom: 2px; flex-direction: column; align-items: flex-start; gap: 6px; }
   .brand-en { font-size: 24px; }
   .site-header nav { width: 100%; overflow-x: auto; }
