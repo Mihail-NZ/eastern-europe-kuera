@@ -340,21 +340,38 @@ ${P.map((p, i) => `<g transform="translate(${p[0].toFixed(1)},${p[1].toFixed(1)}
   <div class="tp-mini-txt"><h4>${esc(route.ko)}</h4><p>${bucketsOf(route).map(b => b[1]).join('·')}(${idealText(route)}) · ${vr.countries.length}개국 · 추천 ${monthsText(route.months)}</p>${sub ? `<p class="tp-mini-sub">${esc(sub)}</p>` : ''}</div></a></li>`;
   }
 
-  // 베스트 10: 후기 수·일정 글·통계로 고른 많이 다녀온 루트
-  function bestSection() {
+  // 여행 페이지 상단 탭: 맞춤 루트 찾기 / 베스트 10 (서로 다른 페이지)
+  const tripTabs = cur => `<nav class="tp-tabs" aria-label="여행 메뉴">${[['finder', '맞춤 루트 찾기', 'travel/index.html'], ['best', '베스트 10', 'travel/best/index.html']].map(([k, l, u]) => `<a href="${ROOT}${u}"${k === cur ? ' aria-current="page"' : ''}>${l}</a>`).join('')}</nav>`;
+  const refLinks = keys => (keys || []).filter(k => REFS[k]).map(k => `<a href="${esc(REFS[k][2])}" target="_blank" rel="noopener">${esc(REFS[k][1].split(' – ')[0])}</a>`).join(' · ');
+
+  // 베스트 10 페이지: 국내·해외 지표를 함께 본 많이 다녀온 루트
+  function renderBest(main) {
     const rows = BEST.map((b, i) => {
       const route = ROUTES.find(r => r.id === b[0]); if (!route) return '';
-      const ph = photosOf(route)[0];
+      const vr = plan(route), phs = photosOf(route);
       return `<li class="tp-best-item"><span class="tp-best-rank">${i + 1}</span>
-  <a class="tp-best-img" href="${routeUrl(route.id)}">${ph ? `<img src="${esc(ph.src)}" alt="${esc(ph.alt)}" loading="lazy" decoding="async">` : ''}</a>
-  <div class="tp-best-txt"><p class="tp-best-head">${esc(b[1])}</p><h3><a href="${routeUrl(route.id)}">${esc(route.ko)}</a></h3>
-  <p class="tp-best-meta">${bucketsOf(route).map(x => x[1]).join('·')}(${idealText(route)}) · 추천 ${monthsText(route.months)}</p>
-  <p class="tp-best-why">${esc(b[2])}</p>
-  <p class="tp-best-src">${(b[3] || []).filter(k => REFS[k]).map(k => `<a href="${esc(REFS[k][2])}" target="_blank" rel="noopener">${esc(REFS[k][1].split(' – ')[0])}</a>`).join(' · ')}</p></div></li>`;
+  <a class="tp-best-img" href="${routeUrl(route.id)}" tabindex="-1">${phs.length ? collage(phs) : sketch(vr)}</a>
+  <div class="tp-best-txt"><p class="tp-best-head">${esc(b[1])}</p><h2><a href="${routeUrl(route.id)}">${esc(route.ko)}</a></h2>
+  <p class="tp-best-meta">${bucketsOf(route).map(x => x[1]).join('·')}(${idealText(route)}) · ${vr.countries.map(c => N[c].ko).join('·')} · 추천 ${monthsText(route.months)}</p>
+  <dl class="tp-best-why"><div><dt>국내</dt><dd>${esc(b[2])}</dd></div><div><dt>해외</dt><dd>${esc(b[3])}</dd></div></dl>
+  <p class="tp-best-src">근거 ${refLinks(b[4])}</p>
+  <a class="tp-detail" href="${routeUrl(route.id)}">일정 보기</a></div></li>`;
     }).join('');
-    return `<section class="tp-best" id="best" aria-labelledby="best-h"><h2 id="best-h">많이 다녀온 동유럽 루트 베스트 10</h2>
-    <p class="tp-lead">국내 여행사 패키지 후기 수, 국내 여행사·블로그 일정 글, 해외 일정 가이드, 각국 방문 통계를 함께 보고 정한 순위입니다(${D.checked} 확인). 이 순위는 맞춤 추천의 인기·검증 점수에도 반영됩니다.</p>
-    <ol class="tp-best-list">${rows}</ol></section>`;
+    main.innerHTML = `
+<section class="page-head night tp-head">
+  <div class="wrap"><p class="kicker">Travel</p><h1>많이 다녀온 동유럽 루트 베스트 10</h1>
+  <p>한국 여행자와 해외 여행자가 실제로 많이 가는 루트를 함께 봤습니다. 국내 패키지 후기 수와 일정 글, 해외 방문 통계와 일정 가이드, 여행 포럼에서 자주 언급되는 동선을 비교해 순위를 정했습니다.</p>
+  <p class="jobs-edition">${D.checked} 확인 · 루트별 상세 일정·지도·이동 정보 연결</p>
+  ${tripTabs('best')}</div>
+</section>
+<div class="wrap tp-wrap">
+  <section class="tp-best-how" aria-labelledby="how-h"><h2 id="how-h">순위를 정한 방법</h2>
+    <ul><li><strong>국내</strong> 마이리얼트립 등 국내 여행사 패키지 후기 수, 국내 여행사·블로그 일정 글에서 반복되는 동선, 한국인 방문·만족도 통계</li>
+    <li><strong>해외</strong> 각국·도시 관광청 방문 통계(2024), Rick Steves·Eurail·kimkim 같은 해외 일정 가이드, Fodor's·Rick Steves 포럼 등 여행 커뮤니티에서 자주 나오는 일정</li>
+    <li><strong>한계</strong> 포털·구글의 실제 검색량은 공개 자료가 없어 쓰지 않았고, 집계 기준(숙박객·방문객)도 나라마다 달라 수치만으로 줄 세우지 않고 국내·해외 근거를 함께 보고 정했습니다.</li></ul></section>
+  <ol class="tp-best-list">${rows}</ol>
+  <p class="tp-disclaimer">이 순위는 맞춤 루트 찾기의 인기·검증 점수(10점)에도 반영됩니다. 내 일정·시기에 맞는 루트는 <a href="${ROOT}travel/index.html">맞춤 루트 찾기</a>에서 고르세요.</p>
+</div>`;
   }
 
   /* ---------- 여행 메인 ---------- */
@@ -381,10 +398,10 @@ ${P.map((p, i) => `<g transform="translate(${p[0].toFixed(1)},${p[1].toFixed(1)}
   <div class="wrap"><p class="kicker">Travel</p><h1>동유럽 여행 루트 찾기</h1>
   <p>여행 기간(단기·중기·장기·초장기)과 달을 고르면 그 조건에 정말 맞는 루트만 남깁니다. ${ROUTES.length}개 루트는 국내 여행사·블로그와 해외 일정 가이드, 교통 자료, 방문 통계를 근거로 골랐고, 루트마다 근거 링크를 붙였습니다.</p>
   <p class="jobs-edition">중동부유럽·발칸·발트와 주변 나라 · 루트 ${ROUTES.length}개 · 도시 ${Object.keys(C).length}곳 · ${D.checked} 확인</p>
-  <nav class="tp-jump" aria-label="여행 페이지 안에서 이동"><a href="#best">베스트 10</a><a href="#finder">맞춤 루트 찾기</a><a href="#season">계절별</a><a href="#region">지역별</a><a href="#theme">테마별</a><a href="#prep">여행 준비</a></nav></div>
+  ${tripTabs('finder')}
+  <nav class="tp-jump" aria-label="여행 페이지 안에서 이동"><a href="#finder">맞춤 루트 찾기</a><a href="#season">계절별</a><a href="#region">지역별</a><a href="#theme">테마별</a><a href="#prep">여행 준비</a></nav></div>
 </section>
 <div class="wrap tp-wrap">
-  ${bestSection()}
   <section class="tp-finder" id="finder" aria-labelledby="finder-h">
     <h2 id="finder-h">맞춤 여행 루트 찾기</h2>
     <p class="tp-lead">기간과 달은 꼭 맞는 루트만 남기는 조건입니다. 나머지 조건은 순위에 반영하고, 비워 둔 항목은 중립으로 봅니다.</p>
@@ -714,5 +731,5 @@ ${P.map((p, i) => `<g transform="translate(${p[0].toFixed(1)},${p[1].toFixed(1)}
     });
   }
 
-  window.TRIP_RENDER = { main: renderTrip, route: renderRoute, _debug: { evaluate, plan, rangeOf, allocate, toPrefs, DEFAULTS, photoPick, BUCKETS } };
+  window.TRIP_RENDER = { main: renderTrip, best: renderBest, route: renderRoute, _debug: { evaluate, plan, rangeOf, allocate, toPrefs, DEFAULTS, photoPick, BUCKETS } };
 })();

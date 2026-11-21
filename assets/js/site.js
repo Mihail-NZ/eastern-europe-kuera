@@ -100,7 +100,7 @@
       ['home', 'Home', 'index.html'], ['countries', 'Countries', 'countries/index.html'], ['trip', 'Travel', 'travel/index.html'],
       ['news', 'News', 'news/index.html'], ['jobs', 'Careers', 'jobs/index.html'], ['games', 'Mini Game', 'games/index.html'], ['about', 'About KUERA', 'about/index.html']
     ];
-    const current = PAGE === 'country' || PAGE === 'section' ? 'countries' : PAGE === 'trip-route' ? 'trip' : PAGE;
+    const current = PAGE === 'country' || PAGE === 'section' ? 'countries' : PAGE === 'trip-route' || PAGE === 'trip-best' ? 'trip' : PAGE;
     return `<a class="skip" href="#main">본문으로 건너뛰기</a>
 <header class="site-header">
   <div class="wrap header-inner">
@@ -1728,7 +1728,7 @@ ${countryTabs(c, id)}
   const main = document.getElementById('main');
   const TRIP = window.TRIP_RENDER || {}; // 여행 카테고리(trip.js)
   ({ home: renderHome, countries: renderCountries, news: renderNews, jobs: renderJobs, games: renderGames, about: renderAbout,
-     trip: m => TRIP.main && TRIP.main(m), 'trip-route': m => TRIP.route && TRIP.route(m, body.dataset.route),
+     trip: m => TRIP.main && TRIP.main(m), 'trip-route': m => TRIP.route && TRIP.route(m, body.dataset.route), 'trip-best': m => TRIP.best && TRIP.best(m),
      country: m => renderCountry(m, body.dataset.slug),
      section: m => renderSection(m, body.dataset.slug, body.dataset.section) }[PAGE] || renderHome)(main);
 })();

@@ -855,25 +855,39 @@ window.TRIP_DATA = {
     mrtKSB3: ['국내', '마이리얼트립 – 참좋은여행 발칸 3개국 9일(크·슬·보, 후기 99건)', 'https://www.myrealtrip.com/pkc/detail/6245591'],
     mrtEast5: ['국내', '마이리얼트립 – 참좋은여행 발칸 동북부 5개국 10일(몬·알·마·불·루, 후기 64건)', 'https://www.myrealtrip.com/pkc/detail/6245650'],
     satisfy2025: ['통계', '텔트립 – 2025 한국인 해외여행 만족도(체코 3위·크로아티아 5위)', 'https://www.telltrip.com/news/korea-overseas-travel-satisfaction-ranking-2025/'],
+    prague2024: ['통계', 'Prague City Tourism – 2024년 숙박 관광객 807만 9,195명(역대 최다)', 'https://praha.eu/web/tourism-unit/55'],
+    budapest2024: ['통계', 'Budapest Times – 2024년 부다페스트 외국인 관광객 약 600만 명(24% 증가)', 'https://www.budapesttimes.hu/hungary/2024-was-another-record-year-for-hungarys-tourism-sector/'],
+    htz2024: ['통계', '크로아티아 관광청 – 2024년 방문객 2,130만 명·1억 870만 박', 'https://www.htz.hr/en/node/11657'],
+    dzs2024: ['통계', '크로아티아 통계청 – 2024년 상업 숙박 도착·숙박(두브로브니크 420만 박)', 'https://podaci.dzs.hr/2024/en/76896'],
+    plitvice2024: ['통계', '플리트비체 국립공원 – 2024년 방문객 149만 2,994명(163개국)', 'https://np-plitvicka-jezera.hr/en/analysis-of-year-round-tourism-in-2024/'],
+    krakow2024: ['통계', 'Kraków Convention Bureau – 2024년 방문객 1,472만 명, 외국인 숙박객 153만 명', 'https://convention.krakow.pl/english/news_from_krakow/295216,251,komunikat,tourist_traffic_in_krakow_2024_-_what_does_the_research_say_.html'],
+    tallinn2024: ['통계', 'The Baltic Times – 탈린, 리가·빌뉴스·헬싱키보다 관광객 많아(2024년 외국인 342만 명)', 'https://www.baltictimes.com/tallinn_surpasses_riga__vilnius__and_helsinki_in_tourism_volume/'],
+    hallstattVisitors: ['통계', 'Statista – 주민 1인당 연간 관광객(할슈타트)', 'https://www.statista.com/chart/30115/annual-number-of-tourists-per-inhabitant'],
+    rickCEE: ['해외', 'Rick Steves – 중동부유럽 일정(폴란드·체코·헝가리·슬로바키아)', 'https://www.ricksteves.com/europe/eastern-europe-itinerary'],
+    eurailEE: ['해외', 'Eurail – 동유럽 기차 추천 일정', 'https://www.eurail.com/en/plan-your-trip/trip-ideas/suggested-itineraries/eastern-europe-eurail-train-itinerary'],
+    rickSICR: ['해외', 'Rick Steves – 크로아티아·슬로베니아·보스니아·몬테네그로 일정', 'https://www.ricksteves.com/europe/slovenia-croatia-itinerary'],
+    fodorsBalkan: ['해외', 'Fodor\'s 포럼 – 2주 발칸 여행 일정 토론', 'https://www.fodors.com/community/europe/2-week-balkan-adventure-1066024/'],
+    rsForumBalkan: ['해외', 'Rick Steves 포럼 – 사라예보→두브로브니크 일정 검토', 'https://community.ricksteves.com/travel-forum/croatia/sarajevo-to-dubrovnik-itinerary-review'],
     jaywayPVB: ['해외', 'Jayway – 프라하·비엔나·부다페스트(가장 인기 있는 루트)', 'https://jaywaytravel.com/trip-ideas/prague-vienna-budapest'],
     rtPVB: ['해외', 'Responsible Travel – 프라하·비엔나·부다페스트 묶기', 'https://www.responsibletravel.com/holidays/european-tours/travel-guide/combining-prague-vienna-and-budapest'],
     clienVienna: ['국내', '클리앙 – 비엔나 직항으로 비엔나·브라티슬라바·부다페스트 12월 여행기', 'https://www.clien.net/service/board/use/14425879']
   },
 
-  /* 한국인 여행 통계(여행 준비 가이드에 표시). 국가 공식 통계를 인용한 기사·자료이며 기준이 서로 다를 수 있다. */
-  /* 베스트 10: 국내 패키지 후기 수, 여행사·블로그 일정 글, 해외 일정 가이드, 방문 통계를 함께 보고 정한 순위(2026-11 확인). */
+  /* 베스트 10: 국내 지표(패키지 후기 수·여행사/블로그 일정 글)와 해외 지표(방문 통계·해외 일정 가이드·여행 포럼 언급)를 함께 보고 정한 순위(2026-11-21 확인).
+   * [루트 id, 한 줄 요약, 국내 근거, 해외 근거, 근거 키] */
   best10: [
-    ['eastern-europe-package', '국내에서 가장 많이 팔리는 동유럽 동선', '체·오·헝 3국 패키지 후기 396건(9일)·145건(7일). 2024년 체코 방문 한국인 25만 명, 2025 만족도 체코 3위.', ['mrtCOH9', 'mrtHOC7', 'statCZ', 'satisfy2025']],
-    ['balkan-four', '후기가 가장 많은 발칸 상품과 같은 동선', '발칸 4국(크·슬·보·몬) 9일 패키지 후기 747건으로 동유럽·발칸 상품 중 최다. 크로아티아 만족도 5위.', ['mrtBalkan', 'statHR', 'satisfy2025']],
-    ['prague-vienna-budapest', '자유여행 첫 동유럽의 정석', '세 도시 모두 인천 직항. 국내 여행사·블로그 7박 9일 일정 글 대부분이 이 순서입니다.', ['ts79', 'jaywayPVB', 'rtPVB', 'mrtPkg']],
-    ['croatia-slovenia-grand', '크로아티아·슬로베니아 남하 일주', '발칸 2국(크·슬) 패키지 후기 160건. 유레일·해외 가이드가 같은 남하 순서를 권합니다.', ['mrtKS2', 'eurailSICR', 'tsHRSI']],
-    ['balkan-package', '슬·크·보 3국 패키지 동선', '발칸 3국 패키지 후기 99건. 교원투어 등 여러 여행사가 같은 구성을 판매합니다.', ['mrtKSB3', 'mrtKyowonBalkan']],
-    ['croatia-classic', '크로아티아 단독 종단', '자그레브·두브로브니크 직항 덕분에 자유여행 비중이 큰 코스. 2024년 크로아티아 한국인 방문 16만 명(37% 증가).', ['tsHRSI', 'statHR', 'statHRspend']],
-    ['prague-budapest-duo', '직항 두 도시를 잇는 짧은 일정', '프라하·부다페스트 모두 직항. 국내 6박 8일 상품과 해외 가이드에서 자주 쓰는 조합입니다.', ['mrtPkg68', 'seat61PB', 'statCZ']],
-    ['baltic-capitals', '발트 3국 수도 종단', '유레일 한국어 일정과 해외 블로그 대부분이 탈린·리가·빌뉴스를 버스로 잇는 1주 일정을 권합니다.', ['eurailBaltic', 'bucketBaltic', 'balticTimes']],
-    ['warsaw-krakow', '폴란드 첫 방문 핵심', '바르샤바 직항. 국내 폴란드 일정 글이 바르샤바·크라쿠프 두 도시를 기본으로 잡습니다.', ['tsPLtrain', 'tsPL', 'mywlWaw']],
-    ['balkan-two-weeks', '해외 여행자가 가장 많이 쓰는 발칸 2주', 'kimkim·해외 블로그에서 반복되는 차 없는 서발칸 2주 동선입니다.', ['kimkimBalkan', 'kimkimBalkan12', 'imperfectBalkan']]
+    ['prague-vienna-budapest', '국내외 모두에서 가장 많이 다니는 동유럽 동선', '체·오·헝 3국 패키지 후기 396건(9일)·145건(7일). 세 도시 모두 인천 직항이고, 국내 7박 9일 일정 글 대부분이 이 순서입니다.', '2024년 프라하 숙박 관광객 808만 명(역대 최다), 부다페스트 외국인 약 600만 명(24% 증가). Rick Steves·Eurail 등 해외 일정 가이드가 가장 먼저 권하는 기본 동선입니다.', ['mrtCOH9', 'prague2024', 'budapest2024', 'rickCEE', 'eurailEE']],
+    ['croatia-slovenia-grand', '해외 여행자에게 가장 인기 있는 아드리아 일주', '발칸 2국(크·슬) 패키지 후기 160건. 국내 블로그도 류블랴나에서 두브로브니크로 내려가는 순서를 많이 씁니다.', '2024년 크로아티아 방문객 2,130만 명(역대 최다), 플리트비체 149만 명(163개국). Rick Steves·kimkim·해외 포럼 일정 대부분이 블레드–플리트비체–스플리트–두브로브니크를 잇습니다.', ['mrtKS2', 'htz2024', 'plitvice2024', 'rickSICR', 'tsHRSI']],
+    ['eastern-europe-package', '국내 패키지 판매 1위 동선(체코·오스트리아·헝가리 3국)', '국내 동유럽 상품 다수가 프라하–체스키크룸로프–할슈타트–비엔나–부다페스트 순서입니다(3국 9일 후기 396건). 2025 만족도 체코 3위.', '할슈타트는 연 100만 명 안팎이 찾는 곳이지만, 해외 자유여행 일정은 체스키크룸로프·할슈타트를 함께 넣는 경우가 국내보다 적습니다.', ['mrtCOH9', 'mrtHOC7', 'satisfy2025', 'hallstattVisitors']],
+    ['balkan-four', '국내 후기 1위 발칸 상품과 같은 4개국 동선', '참좋은여행 발칸 4국(크·슬·보·몬) 9일 후기 747건으로 동유럽·발칸 상품 중 가장 많습니다.', 'Rick Steves의 크로아티아·슬로베니아·보스니아·몬테네그로 일정과 kimkim 12일 일정이 같은 네 나라를 묶습니다.', ['mrtBalkan', 'rickSICR', 'kimkimBalkan12']],
+    ['croatia-classic', '크로아티아 단독 종단', '자그레브 직항으로 들어가 두브로브니크로 나오는 자유여행이 많습니다. 2024년 한국인 방문 16만 명(37% 증가).', '두브로브니크는 크로아티아에서 숙박이 가장 많은 도시(2024년 420만 박), 스플리트·달마티아주는 380만 명이 찾았습니다.', ['tsHRSI', 'statHR', 'htz2024', 'dzs2024']],
+    ['balkan-two-weeks', '해외 블로그·포럼에서 가장 자주 보이는 서발칸 2주', '국내에서는 패키지보다 자유여행 장기 일정으로 주로 갑니다.', 'Fodor\'s·Rick Steves 포럼과 해외 블로그의 2주 발칸 일정이 대부분 스플리트–두브로브니크–모스타르–사라예보–코토르를 잇습니다.', ['imperfectBalkan', 'kimkimBalkan', 'fodorsBalkan', 'rsForumBalkan']],
+    ['warsaw-krakow', '폴란드 첫 방문 핵심', '바르샤바 직항. 국내 폴란드 일정 글이 바르샤바·크라쿠프 두 도시를 기본으로 잡습니다.', '2024년 크라쿠프 방문객 1,472만 명(역대 최다), 외국인 숙박객 153만 명. 영국 등 서유럽 여행자가 특히 많습니다.', ['tsPLtrain', 'tsPL', 'krakow2024']],
+    ['prague-budapest-duo', '직항 두 도시를 잇는 짧은 일정', '프라하·부다페스트 모두 직항. 국내 6박 8일 상품과 짧은 연휴 일정 글에 자주 나옵니다.', '프라하–부다페스트 직행 열차가 있고, 해외 가이드에서 비엔나를 뺀 짧은 버전으로 자주 권합니다.', ['mrtPkg68', 'seat61PB', 'prague2024']],
+    ['baltic-capitals', '발트 3국 수도 종단', '국내에서는 아직 소수지만 핀에어 경유 일정 글이 늘고 있습니다.', '2024년 탈린 외국인 방문객 342만 명(이동통신 집계). 유레일과 해외 블로그 대부분이 탈린·리가·빌뉴스를 버스로 잇는 1주 일정을 권합니다.', ['tallinn2024', 'eurailBaltic', 'bucketBaltic']],
+    ['balkan-package', '슬·크·보 3국 패키지 동선', '발칸 3국 패키지 후기 99건. 교원투어 등 여러 여행사가 같은 구성을 판매합니다.', '해외에서는 몬테네그로까지 넣는 일정이 더 흔해 해외 지표는 4위 루트보다 약합니다.', ['mrtKSB3', 'mrtKyowonBalkan']]
   ],
+  /* 한국인 여행 통계(여행 준비 가이드에 표시). 국가 공식 통계를 인용한 기사·자료이며 기준이 서로 다를 수 있다. */
   stats: [
     { k: '패키지 후기 수', v: '발칸 4국 747 · 동유럽 3국 396', n: '마이리얼트립 참좋은여행 상품 후기(2026-11 확인). 발칸 4국(크·슬·보·몬) 9일 747건, 동유럽 3국(체·오·헝) 9일 396건, 발칸 2국 160건, 동유럽 3국 7일 145건, 발칸 3국 99건.', refs: ['mrtBalkan', 'mrtCOH9'] },
     { k: '한국인 만족도(2025)', v: '체코 3위 · 크로아티아 5위', n: '2025 한국인 해외여행 만족도 조사. 헝가리는 12계단 올라 13위.', refs: ['satisfy2025'] },
