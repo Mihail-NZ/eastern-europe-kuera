@@ -25,7 +25,7 @@ if (!location.pathname.includes('/pwa/')) {
   settings.className = 'cee-entry';
   settings.href = root + 'pwa/settings.html';
   settings.textContent = '뉴스 알림 받기 · 설정';
-  document.body.append(settings);
+  (document.querySelector('.site-footer .footer-inner') || document.body).append(settings);
 }
 let banner;
 function offline(message) {

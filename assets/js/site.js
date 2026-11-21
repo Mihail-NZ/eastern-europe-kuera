@@ -120,8 +120,6 @@
     <div><p class="footer-brand">CEE Side <span class="brand-by">동유럽 산책 · by KUERA</span></p>
     <p class="footer-org">고려대학교 동유럽지역 전략학회<span lang="en"> · Korea University Eastern Europe Research Association</span></p></div>
   </div>
-  <p>누구나 가볍게 둘러보는 동유럽 20개국 여행·문화·뉴스·취업 정보. 국가 정보는 2026년 10월 기준으로 정리했으며, 각 항목 아래 출처를 함께 적었습니다. 운영시간·가격·통계는 바뀔 수 있으니 방문 전 공식 안내를 확인하세요.</p>
-  <p>지도 경계: Natural Earth · 국기: <a href="https://flagpedia.net/" target="_blank" rel="noopener">Flagpedia</a> · 사진: <a href="https://commons.wikimedia.org/" target="_blank" rel="noopener">Wikimedia Commons</a>(저작자와 라이선스는 사진마다 표시)</p>
 </div></footer>`;
   }
 

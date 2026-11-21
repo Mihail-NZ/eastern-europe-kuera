@@ -1,4 +1,9 @@
-body { padding-left: env(safe-area-inset-left); padding-right: env(safe-area-inset-right); }
+.cee-page { padding-left: env(safe-area-inset-left); padding-right: env(safe-area-inset-right); }
+/* 사이트 본문: 배경은 화면 끝까지, 내용만 노치·홈바 안쪽으로 */
+.wrap { padding-left: max(16px, env(safe-area-inset-left)); padding-right: max(16px, env(safe-area-inset-right)); }
+@media (min-width: 761px) { .wrap { padding-left: max(40px, env(safe-area-inset-left)); padding-right: max(40px, env(safe-area-inset-right)); } }
+.site-footer .footer-inner { padding-bottom: max(44px, calc(24px + env(safe-area-inset-bottom))); }
+.site-footer .cee-entry { display: inline-block; margin-top: 14px; padding: 8px 14px; background: rgba(110,170,255,.12); border: 1px solid rgba(110,170,255,.28); border-radius: 999px; color: #a8d4ff; font-size: 13.5px; text-decoration: none; }
 .cee-page { margin:0; background:#f3f6fb; color:#0f1b36; font:1rem/1.6 system-ui,sans-serif; }
 .cee-page main { max-width:36rem; margin:auto; padding:max(2rem,env(safe-area-inset-top)) 1.25rem max(3rem,env(safe-area-inset-bottom)); }
 .cee-page button,.cee-notice button { font:inherit; padding:.6rem .9rem; margin:.25rem; }
