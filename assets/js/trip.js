@@ -116,7 +116,9 @@
    * 루트마다 서로 다른 나라 → 오래 머무는 도시 순으로 최대 3곳을 고르고(도시가 적으면 같은 도시에서 여러 장),
    * 각 자리에 지금까지 가장 적게 쓰인 사진을 넣는다. 루트 순서대로 한 번만 계산하므로 항상 같은 결과가 나온다. */
   const WEB = window.TRIP_WEBPHOTOS || {};
-  const photoPool = cid => (WEB[cid] || []).map(p => ({ key: p[0], p })).concat(
+  // 대표 사진으로 약한 것(동상·실내·건물 번지·탈것 등)은 후보에서 뺀다. 국가 페이지 사진은 이미 고른 명소라 그대로 쓴다.
+  const WEAK = /statue|estatua|sculpture|plastika|ceiling|interior|altar|cupola|staircase|museo|mural|locomotive|hotel|trabant|tractor|\d+ in |\b(ulica|iela|utca|strada|street|bulevardul|calea)\b[^|]*\d|\d+[a-z]?,? (bulevardul|calea|strada)|ra[uú]rica|amusement|windsor|kronst|stra(ß|ss)e \d|platz \d/i;
+  const photoPool = cid => (WEB[cid] || []).filter(p => !WEAK.test(p[4] || '')).map(p => ({ key: p[0], p })).concat(
     (D.cityPhotos && D.cityPhotos[cid] ? D.cityPhotos[cid] : []).concat(C[cid].img ? [C[cid].img] : []).filter(k => PHOTOS[k]).map(k => ({ key: k, p: PHOTOS[k] })));
   const photoPick = {};
   (function assignPhotos() {
@@ -137,14 +139,23 @@
       photoPick[route.id] = pick.sort((a, b) => route.stops.findIndex(s => photoPool(s[0]).some(x => x.key === a.key)) - route.stops.findIndex(s => photoPool(s[0]).some(x => x.key === b.key))).map(x => x.p);
     });
   })();
-  const toPh = p => ({ src: ROOT + p[0], author: p[1], license: p[2], source: p[3], alt: p[4] });
-  // 실험: TRIP_SLIDES에 있는 루트는 직접 고른 고화질 사진 3장을 콜라주 대신 차례로 바꿔 보여 준다
+  /* 도시별 Commons 사진(가로 500px로 저장)은 화면에 띄울 때 Commons 원본에서 가로 960px 판을 불러온다.
+   * 불러오지 못하면 저장해 둔 500px 사진으로 바꾼다. 국가 페이지 사진과 직접 고른 슬라이드 사진은 이미 1200px 안팎이라 그대로 쓴다. */
+  const hdOf = p => (/^assets\/images\/trip\/[^/]+$/.test(p[0]) && /\/wiki\/File:/.test(p[3] || '') ? 'https://commons.wikimedia.org/wiki/Special:FilePath/' + p[3].split('/wiki/File:')[1] + '?width=960' : '');
+  const toPh = p => ({ src: ROOT + p[0], hd: hdOf(p), author: p[1], license: p[2], source: p[3], alt: p[4] });
+  // 직접 고른 슬라이드(TRIP_SLIDES)가 있는 루트는 그 사진을, 나머지는 자동으로 고른 3장을 쓴다
   const SLIDES = window.TRIP_SLIDES || {};
-  const photosOf = route => (SLIDES[route.id] ? SLIDES[route.id].map(p => Object.assign(toPh(p), { slide: true })) : (photoPick[route.id] || []).map(toPh));
+  const photosOf = route => (SLIDES[route.id] || photoPick[route.id] || []).map(toPh).map(ph => Object.assign(ph, { rid: route.id }));
   const photoOf = route => photosOf(route)[0] || null;
   const credit = phs => phs.map(ph => `<a href="${esc(ph.source)}" target="_blank" rel="noopener">${esc(ph.author)}</a> · ${esc(ph.license)}`).join(' / ');
-  const slideshow = phs => `<div class="tp-slides" role="img" aria-label="${esc(phs.map(ph => ph.alt).join(" · "))}">${phs.map((ph, i) => `<img src="${esc(ph.src)}" alt="" loading="${i ? "lazy" : "eager"}" decoding="async" style="animation-delay:${i * 4}s">`).join("")}<span class="tp-slide-dots" aria-hidden="true">${phs.map((_, i) => `<i style="animation-delay:${i * 4}s"></i>`).join("")}</span></div>`;
-  const collage = (phs, cls) => phs[0] && phs[0].slide ? slideshow(phs) : `<div class="tp-collage n${phs.length} ${cls || ''}">${phs.map(ph => `<img src="${esc(ph.src)}" alt="${esc(ph.alt)}" loading="lazy" decoding="async" referrerpolicy="no-referrer">`).join('')}</div>`;
+  // 대표 사진 3장 전환. 모든 카드가 동시에 넘어가지 않게 루트마다 시작 시점을 조금씩 어긋낸다.
+  const offsetOf = id => { let h = 0; for (const ch of id) h = (h * 31 + ch.charCodeAt(0)) >>> 0; return (h % 40) / 10; };
+  const slideshow = phs => {
+    const off = offsetOf(phs[0].rid || ''), n = phs.length;
+    if (n === 1) return `<div class="tp-slides is-single"><img src="${esc(phs[0].hd || phs[0].src)}" alt="${esc(phs[0].alt)}" loading="lazy" decoding="async"${phs[0].hd ? ` onerror="this.onerror=null;this.src='${esc(phs[0].src)}'"` : ''}></div>`;
+    return `<div class="tp-slides" role="img" aria-label="${esc(phs.map(ph => ph.alt).join(' · '))}">${phs.map((ph, i) => `<img src="${esc(ph.hd || ph.src)}" alt="" loading="lazy" decoding="async" style="animation-delay:${(i * 4 - off).toFixed(1)}s"${ph.hd ? ` onerror="this.onerror=null;this.src='${esc(ph.src)}'"` : ''}>`).join('')}<span class="tp-slide-dots" aria-hidden="true">${phs.map((_, i) => `<i style="animation-delay:${(i * 4 - off).toFixed(1)}s"></i>`).join('')}</span></div>`;
+  };
+  const collage = phs => slideshow(phs);
   const evOf = route => (route.ev || []).map(k => REFS[k] && { k, type: REFS[k][0], t: REFS[k][1], u: REFS[k][2] }).filter(Boolean);
   const evSummary = route => { const c = {}; evOf(route).forEach(e => { c[e.type] = (c[e.type] || 0) + 1; }); return ['국내', '해외', '교통', '통계'].filter(t => c[t]).map(t => `${t} ${c[t]}`).join(' · '); };
 

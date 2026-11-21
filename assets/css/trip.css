@@ -356,3 +356,6 @@
 .tp-slide-dots i { width: 7px; height: 7px; border-radius: 50%; background: rgba(255,255,255,.45); animation: tpDot 12s infinite both; }
 @keyframes tpDot { 0%, 33% { background: #fff; } 34%, 100% { background: rgba(255,255,255,.45); } }
 @media (prefers-reduced-motion: reduce) { .tp-slides img { animation: none; } .tp-slides img:first-child { opacity: 1; } .tp-slide-dots { display: none; } }
+.tp-slides.is-single img { opacity: 1; animation: none; }
+.tp-slides img:first-child { opacity: 0; }
+@media (prefers-reduced-motion: reduce) { .tp-slides img:first-child { opacity: 1; } }
