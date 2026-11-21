@@ -288,10 +288,29 @@
     // 시뮬레이터 전용 조건. 대중픽은 인기 점수를 그대로, 힙스터픽은 뒤집어서(덜 알려질수록 높게) 쓴다.
     if (p.pick === 'hidden') { out.parts.pop = Math.max(0, Math.min(10, 10.5 - out.parts.pop)); if (out.parts.pop >= 6) out.good.push('한국인 여행자가 아직 많지 않은 루트입니다'); }
     else if (p.pick === 'balanced') out.parts.pop = 4 + out.parts.pop * 0.4;
-    // 동행: 루트 데이터의 추천 동행(comp)에 없으면 이동·편의에서 깎는다
+    // 동행(시뮬레이터): 루트의 추천 동행에 없으면 이동·편의 감점. 동행마다 잘 맞는 요소를 조금씩 더한다.
+    const clamp = (v, lo, hi) => Math.max(lo, Math.min(hi, v));
     if (p.comp) {
-      if (route.comp.includes(p.comp)) { if (p.comp !== 'solo') out.good.push(`${{ couple: '연인·배우자', friends: '친구', family: '가족', solo: '혼자' }[p.comp]}와 가기 좋은 루트입니다`); }
-      else { out.parts.move = Math.max(0, out.parts.move - 1.5); out.warn.push('고른 동행 유형에는 덜 어울리는 편입니다'); }
+      const fit = route.comp.includes(p.comp);
+      if (!fit && p.comp !== 'family') { out.parts.move = clamp(out.parts.move - 1.5, 0, 15); out.warn.push('고른 동행 유형에는 덜 어울리는 편입니다'); }
+      else if (fit && p.comp !== 'solo' && p.comp !== 'family') out.good.push(`${{ couple: '연인·배우자', friends: '친구' }[p.comp]}와 가기 좋은 루트입니다`);
+      if (p.comp === 'couple' && route.moods.some(m => m === 'romantic' || m === 'classic')) out.parts.taste = clamp(out.parts.taste + 0.8, 0, 20);
+      if (p.comp === 'friends' && ((route.themes.night || 0) >= 3 || route.moods.includes('lively'))) out.parts.taste = clamp(out.parts.taste + 0.8, 0, 20);
+      if (p.comp === 'solo') out.parts.move = clamp(out.parts.move + (route.car === 'no' ? 0.6 : -0.6), 0, 15);
+      if (p.comp === 'family' && vr.maxLeg) out.parts.move = clamp(out.parts.move - Math.min(p.kids ? 3 : 1.5, Math.max(0, vr.maxLeg.min - 210) / (p.kids ? 60 : 100)), 0, 15);
+    }
+    // 렌터카 가능: 차가 있으면 더 좋은 루트(렌터카 선택·필수)를 조금 올린다
+    if (p.transit === 'car' && route.car !== 'no') out.parts.move = clamp(out.parts.move + 1, 0, 15);
+    // 여행 경험: 처음이면 쉬운 루트, 경험자일수록 첫 방문용 루트보다 색다른 루트
+    if (p.exp) {
+      const first = route.tags.includes('first');
+      const adj = p.exp === 'first' ? (route.diff === 1 ? 0.8 : -0.4) : p.exp === 'some' ? (first ? -0.4 : 0.5) : (first ? -1.5 : 1) + (route.diff === 3 ? 0.6 : 0);
+      out.parts.taste = clamp(out.parts.taste + adj, 0, 20);
+    }
+    // 꼭 가고 싶은 나라: 그 나라에서 보내는 밤이 많을수록 높게(±1.5)
+    if ((p.incl || []).length) {
+      const share = vr.stops.filter(s => p.incl.includes(s.city.c)).reduce((a, s) => a + s.n, 0) / vr.nights;
+      out.parts.taste = clamp(out.parts.taste + (share - 0.5) * 3, 0, 20);
     }
     const b10 = BEST_RANK[route.id];
     if (b10 && p.pick !== 'hidden') out.good.push(`많이 다녀온 루트 베스트 10 중 ${b10}위입니다`);
@@ -393,21 +412,18 @@ ${P.map((p, i) => `<g transform="translate(${p[0].toFixed(1)},${p[1].toFixed(1)}
     { k: 'transit', q: '현지에서는 어떻게 움직일까요?', h: '',
       o: [['public', '뚜벅이', '기차·버스만'], ['car', '렌터카 가능', '운전할 수 있어요'], ['', '상관없어요', '']] },
     { k: 'themes', q: '여행에서 꼭 하고 싶은 건?', h: '최대 3개까지 고르세요.', multi: 3, o: THEMES.map(t => [t[0], t[1], { history: '성·광장·옛 시가지', nature: '호수·국립공원·산', beach: '아드리아해·흑해', local: '시장·와인·현지 음식', night: '야경·카페·쇼핑', winter: '눈·마켓·온천' }[t[0]]]) },
-    { k: 'moods', q: '어떤 분위기가 끌리나요?', h: '여러 개 골라도 됩니다.', multi: 4, o: MOODS.map(m => [m[0], m[1], { romantic: '동화 같은 구시가지', quiet: '한적한 소도시·자연', lively: '밤까지 붐비는 도시', adventure: '낯설고 새로운 곳' }[m[0]]]) },
     { k: 'pace', q: '여행 속도는?', h: '',
       o: [['slow', '여유롭게', '한 도시에 오래, 숙소 이동 적게'], ['mid', '보통', '2~3박마다 이동'], ['fast', '알차게', '많이 보고 자주 이동']] },
     { k: 'pick', q: '대중픽? 힙스터픽?', h: '많이 다녀온 루트일수록 정보와 후기가 많습니다.',
       o: [['popular', '대중픽', '검증된 인기 루트'], ['balanced', '반반', '유명한 곳 + 숨은 곳'], ['hidden', '힙스터픽', '한국인이 아직 적은 곳']] },
-    { k: 'incl', q: '꼭 가고 싶은 나라가 있나요?', h: '하나라도 지나는 루트를 찾습니다. 없으면 건너뛰세요.', multi: 20, skip: '없어요', countries: true },
-    { k: 'excl', q: '이미 다녀왔거나 빼고 싶은 나라는?', h: '고른 나라를 지나는 루트는 뺍니다.', multi: 20, skip: '없어요', countries: true },
-    { k: 'musts', q: '이건 꼭 있어야 해요', h: '고른 요소가 모두 있는 루트만 남깁니다.', multi: 3, skip: '딱히 없어요', o: MUSTS.map(m => [m[0], m[1], '']) },
+    { k: 'incl', q: '꼭 가고 싶은 나라가 있나요?', h: '그 나라를 지나는 루트만, 오래 머물수록 높게 봅니다.', multi: 20, skip: '없어요', countries: true },
     { k: 'flight', q: '항공편은 어떻게 할까요?', h: '인천 출발 기준입니다.',
       o: [['must', '직항만', '입출국 모두 직항'], ['prefer', '직항이면 좋아요', '경유도 괜찮음'], ['any', '상관없어요', '경유 OK']] }
   ];
-  const SIM_KEY = 'kuera-trip-sim1';
+  const SIM_KEY = 'kuera-trip-sim2';
   // 답 → 엔진 조건
   function simPrefs(a) {
-    const p = { themes: (a.themes || []).slice(), moods: a.moods || [], pace: a.pace || '', incl: a.incl || [], excl: a.excl || [], flight: a.flight || 'prefer', transit: a.transit || '', style: [], musts: (a.musts || []).slice(), pick: a.pick || '' };
+    const p = { themes: (a.themes || []).slice(), moods: [], pace: a.pace || '', incl: a.incl || [], excl: [], flight: a.flight || 'prefer', transit: a.transit || '', style: [], musts: [], pick: a.pick || '', exp: a.exp || '', kids: a.comp === 'kids' };
     if (a.dur) p.dur = BUCKETS.find(b => b[0] === a.dur);
     p.months = a.when === 'xmas' ? [12] : a.when === 'winter' ? [1, 2] : a.when ? SEASONS.find(s => s[0] === a.when)[2] : [];
     if (a.when === 'xmas' && !p.themes.includes('winter')) p.themes.push('winter');
@@ -428,8 +444,6 @@ ${P.map((p, i) => `<g transform="translate(${p[0].toFixed(1)},${p[1].toFixed(1)}
       relaxed.push(name); res = run();
     }
     // 경험자는 첫 방문 루트보다 색다른 곳을 살짝 앞으로
-    if (a.exp === 'pro') res.forEach(x => { if (x.route.tags.includes('first')) x.score = Math.round((x.score - 1.5) * 10) / 10; });
-    if (a.exp === 'pro') res.sort((x, y) => y.score - x.score);
     return { res, relaxed, p };
   }
   // 답에 따라 붙이는 여행 유형 이름
@@ -446,7 +460,7 @@ ${P.map((p, i) => `<g transform="translate(${p[0].toFixed(1)},${p[1].toFixed(1)}
       history: ['클래식 낭만파', '성과 광장, 고풍스러운 구시가지를 걷는 여행.']
     };
     let [name, line] = P[lead] || ['균형 잡힌 동유럽 입문자', '유명한 도시와 작은 마을을 고루 담는 여행이 잘 맞습니다.'];
-    if (m.includes('adventure') && a.pick === 'hidden') { name = '발칸·동쪽 탐험가'; line = '아직 덜 알려진 나라를 찾아가는 모험형 여행.'; }
+    if (a.exp === 'pro' && a.pick === 'hidden') { name = '발칸·동쪽 탐험가'; line = '아직 덜 알려진 나라를 찾아가는 모험형 여행.'; }
     else if (a.pick === 'hidden') name = '힙스터 ' + name;
     return { name, line };
   }
@@ -457,7 +471,7 @@ ${P.map((p, i) => `<g transform="translate(${p[0].toFixed(1)},${p[1].toFixed(1)}
     main.innerHTML = `
 <section class="page-head night tp-head tp-sim-head">
   <div class="wrap"><p class="kicker">Travel</p><h1>동유럽 루트 시뮬레이터</h1>
-  <p>질문 ${SIM_Q.length}개에 답하면 루트 ${ROUTES.length}개 가운데 나에게 맞는 동유럽 여행을 골라 드립니다. 맞춤 루트 찾기와 같은 추천 점수에 동행·대중픽/힙스터픽·여행 경험을 더해 계산합니다.</p>
+  <p>질문 ${SIM_Q.length}개에 답하면 루트 ${ROUTES.length}개 가운데 나에게 맞는 동유럽 여행을 골라 드립니다. 모든 답이 추천 점수에 반영됩니다.</p>
   ${tripTabs('sim')}</div>
 </section>
 <div class="wrap tp-wrap"><div class="tp-sim" aria-live="polite"></div></div>`;
@@ -469,7 +483,7 @@ ${P.map((p, i) => `<g transform="translate(${p[0].toFixed(1)},${p[1].toFixed(1)}
       box.innerHTML = `<div class="tp-sim-card tp-sim-intro">
   <p class="tp-sim-badge">질문 ${SIM_Q.length}개 · 약 1분</p>
   <h2>어떤 동유럽 여행이 나에게 맞을까?</h2>
-  <p>기간, 시기, 동행, 이동 방법, 취향, 대중픽/힙스터픽까지. 답을 고를 때마다 다음 질문으로 넘어가고, 모르는 질문은 건너뛰어도 됩니다.</p>
+  <p>기간, 시기, 동행, 이동 방법, 취향, 대중픽/힙스터픽까지. 모르는 질문은 건너뛰어도 됩니다.</p>
   <div class="tp-sim-nav"><button type="button" class="tp-go" data-act="start">시작하기</button>${done ? '<button type="button" class="tp-reset" data-act="result">지난 결과 보기</button>' : ''}</div></div>`;
     }
     function ask(i) {
