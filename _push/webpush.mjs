@@ -30,7 +30,14 @@ export async function authorization(endpoint,env) {
   const sig=await crypto.subtle.sign({name:'ECDSA',hash:'SHA-256'},key,utf8.encode(jwt));
   return 'vapid t='+jwt+'.'+encode(sig)+', k='+env.VAPID_PUBLIC_KEY;
 }
-export async function deliver(sub,message,env) {
-  const res=await fetch(sub.endpoint,{method:'POST',redirect:'error',signal:AbortSignal.timeout(12000),headers:{TTL:'3600',Authorization:await authorization(sub.endpoint,env),'Content-Encoding':'aes128gcm','Content-Type':'application/octet-stream'},body:await encrypt(sub,message)});
-  return res.status;
+export async function deliverDetailed(sub,message,env) {
+  let auth,payload;
+  try{auth=await authorization(sub.endpoint,env);}catch(e){return {status:-1,reason:'Vapid'+(['DataError','OperationError','InvalidCharacterError','TypeError'].includes(e.name)?e.name:'Error')};}
+  try{payload=await encrypt(sub,message);}catch(e){return {status:-1,reason:'Payload'+(['DataError','OperationError','InvalidCharacterError','TypeError'].includes(e.name)?e.name:'Error')};}
+  const res=await fetch(sub.endpoint,{method:'POST',redirect:'manual',signal:AbortSignal.timeout(12000),headers:{TTL:'3600',Authorization:auth,'Content-Encoding':'aes128gcm','Content-Type':'application/octet-stream'},body:payload});
+  let reason;
+  try {const body=await res.json();if(typeof body.reason==='string' && /^[A-Za-z]{1,80}$/.test(body.reason))reason=body.reason;}catch{}
+  return {status:res.status,...(reason?{reason}:{})};
 }
+
+export async function deliver(sub,message,env) {return (await deliverDetailed(sub,message,env)).status;}
