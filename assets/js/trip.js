@@ -365,12 +365,9 @@ ${P.map((p, i) => `<g transform="translate(${p[0].toFixed(1)},${p[1].toFixed(1)}
   ${tripTabs('best')}</div>
 </section>
 <div class="wrap tp-wrap">
-  <section class="tp-best-how" aria-labelledby="how-h"><h2 id="how-h">순위를 정한 방법</h2>
-    <ul><li><strong>국내</strong> 마이리얼트립 등 국내 여행사 패키지 후기 수, 국내 여행사·블로그 일정 글에서 반복되는 동선, 한국인 방문·만족도 통계</li>
-    <li><strong>해외</strong> 각국·도시 관광청 방문 통계(2024), Rick Steves·Eurail·kimkim 같은 해외 일정 가이드, Fodor's·Rick Steves 포럼 등 여행 커뮤니티에서 자주 나오는 일정</li>
-    <li><strong>한계</strong> 포털·구글의 실제 검색량은 공개 자료가 없어 쓰지 않았고, 집계 기준(숙박객·방문객)도 나라마다 달라 수치만으로 줄 세우지 않고 국내·해외 근거를 함께 보고 정했습니다.</li></ul></section>
   <ol class="tp-best-list">${rows}</ol>
-  <p class="tp-disclaimer">이 순위는 맞춤 루트 찾기의 인기·검증 점수(10점)에도 반영됩니다. 내 일정·시기에 맞는 루트는 <a href="${ROOT}travel/index.html">맞춤 루트 찾기</a>에서 고르세요.</p>
+  <details class="tp-best-how"><summary>순위를 정한 방법</summary><ul><li><strong>국내</strong> 국내 여행사 후기·일정 글, 한국인 방문 통계</li><li><strong>해외</strong> 관광청 방문 통계(2024), 해외 일정 가이드·여행 커뮤니티</li><li><strong>한계</strong> 실제 검색량은 공개 자료가 없어 쓰지 않았고, 국내·해외 근거를 함께 보고 정했습니다.</li></ul></details>
+  <p class="tp-disclaimer">내 일정에 맞는 루트는 <a href="${ROOT}travel/index.html">맞춤 루트 찾기</a>에서 고르세요.</p>
 </div>`;
   }
 
@@ -403,15 +400,12 @@ ${P.map((p, i) => `<g transform="translate(${p[0].toFixed(1)},${p[1].toFixed(1)}
 <div class="wrap tp-wrap">
   <section class="tp-finder" id="finder" aria-labelledby="finder-h">
     <h2 id="finder-h">맞춤 여행 루트 찾기</h2>
-    <p class="tp-lead">기간과 달은 꼭 맞는 루트만 남기는 조건입니다. 나머지 조건은 순위에 반영하고, 비워 둔 항목은 중립으로 봅니다.</p>
     <form class="tp-form" onsubmit="return false">
       <div class="tp-grid">
-        ${field('여행 기간', '현지 숙박 기준', `<div class="tp-chips tp-dur" role="group" data-name="dur">${BUCKETS.map(b => `<button type="button" data-v="${b[0]}" aria-pressed="false"><strong>${b[1]}</strong><small>${b[2]}</small></button>`).join('')}</div>
-          <p class="tp-hint">인천 출발부터 귀국까지는 현지 숙박에 약 2일을 더합니다(단기 4~6일, 중기 7~9일, 장기 10~12일, 초장기 13일 이상). 고른 구간에 권장 기간이 들어가는 루트만 남깁니다.</p>`, 'f-nights')}
-        ${field('여행 시기', '추천 월이 맞는 루트만', `<div class="tp-month-grid">${chips('when', monthOpts)}</div>${chips('when', SEASONS.map(s => [s[0], s[1]]))}<p class="tp-hint">루트마다 정말 추천하는 달만 1~4개 골라 두었습니다. 그 달이 아닌 루트는 결과에서 빠집니다.</p>`, 'f-when')}
+        ${field('여행 기간', '현지 숙박 기준', `<div class="tp-chips tp-dur" role="group" data-name="dur">${BUCKETS.map(b => `<button type="button" data-v="${b[0]}" aria-pressed="false"><strong>${b[1]}</strong><small>${b[2]}</small></button>`).join('')}</div>`, 'f-nights')}
+        ${field('여행 시기', '추천 월이 맞는 루트만', `<div class="tp-month-grid">${chips('when', monthOpts)}</div>${chips('when', SEASONS.map(s => [s[0], s[1]]))}`, 'f-when')}
       </div>
       <details class="tp-more"><summary>상세 조건 <span class="tp-more-n"></span></summary>
-        <p class="tp-hint tp-more-hint"><strong>순위에 반영</strong> 여행 목적·분위기(취향 20점), 여행 속도·여행 스타일·현지 교통(이동·편의 15점), 항공편(항공 15점). 근거 자료·후기 수·베스트 10 순위는 인기·검증(10점)으로 자동 반영됩니다. <strong>결과를 거름</strong> 꼭 가고 싶은 나라·제외할 나라·필수 요소·직항 필수·대중교통만·초보자 위주(어려운 루트 제외).</p>
         <div class="tp-grid">
           ${field('여행 목적', '여러 개 선택', chips('themes', THEMES, true), 'f-themes')}
           ${field('여행 분위기', '여러 개 선택', chips('moods', MOODS, true), 'f-moods')}
@@ -420,7 +414,7 @@ ${P.map((p, i) => `<g transform="translate(${p[0].toFixed(1)},${p[1].toFixed(1)}
           ${field('꼭 가고 싶은 나라', '하나 이상 포함', chips('incl', coreOpts, true))}
           ${field('제외할 나라', '이미 다녀온 나라 등', chips('excl', coreOpts, true))}
           ${field('항공편', '인천 출발 기준', chips('flight', [['must', '직항 필수'], ['prefer', '직항 우선'], ['any', '상관없음']]))}
-          ${field('현지 교통', '', chips('transit', [['public', '대중교통만'], ['car', '렌터카 가능']]) + '<p class="tp-hint">현재 등록된 루트는 모두 육로·배 이동이며 현지 항공 구간은 없습니다.</p>')}
+          ${field('현지 교통', '', chips('transit', [['public', '대중교통만'], ['car', '렌터카 가능']]) + '')}
           ${field('필수 요소', '모두 있는 루트만', chips('musts', MUSTS, true))}
         </div>
       </details>
@@ -435,7 +429,7 @@ ${P.map((p, i) => `<g transform="translate(${p[0].toFixed(1)},${p[1].toFixed(1)}
     <div class="tp-saved"></div>
     <ol class="tp-list"></ol>
     <div class="tp-after"></div>
-    <p class="tp-disclaimer">추천 점수는 사이트가 정리한 루트 데이터(${D.checked} 확인)와 고른 조건을 견준 참고값입니다. 실시간 항공권·시간표·숙박 요금을 반영하지 않으며, 같은 조건이면 언제나 같은 결과가 나옵니다. 배점: 취향 20 · 기간 20 · 시기 20 · 항공 접근성 15 · 이동·편의 15 · 인기·검증 10. 동점이 적도록 구간을 끊지 않고 연속값으로 계산해 소수 첫째 자리까지 보여 줍니다.</p>
+    <p class="tp-disclaimer">참고 점수이며, 실시간 항공권·숙박 요금은 반영하지 않습니다.</p>
   </section>
 
   <section class="tp-browse" id="season" aria-labelledby="season-h"><h2 id="season-h">계절별 추천 여행</h2>
@@ -449,12 +443,11 @@ ${P.map((p, i) => `<g transform="translate(${p[0].toFixed(1)},${p[1].toFixed(1)}
   <section class="tp-prep" id="prep" aria-labelledby="prep-h"><h2 id="prep-h">여행 준비 가이드</h2>
     <div class="tp-prep-grid">
       <article class="tp-prep-wide"><h3>숫자로 보는 한국인의 동유럽 여행</h3>
-        <ul class="tp-stats">${statRows}</ul>
-        <p class="tp-hint">각국 통계청·관광청 수치를 인용한 기사와 자료입니다. 집계 기준(도착객·숙박객)이 나라마다 달라 서로 직접 비교하기는 어렵습니다.</p></article>
+        <ul class="tp-stats">${statRows}</ul></article>
       <article><h3>한국 출발 항공 접근성</h3>
         <p>인천에서 직항으로 닿는 공항입니다(${D.checked} 확인). 운항 요일과 횟수는 3월 말·10월 말 시즌 교체 때 바뀌므로 예약 전에 항공사에서 날짜를 넣어 확인하세요.</p>
         <table class="tp-table"><thead><tr><th>공항</th><th>구분</th><th>항공사</th></tr></thead><tbody>${direct.map(g => `<tr><td>${esc(g.ko)} <span class="tp-code">${g.iata}</span></td><td>${g.status === 'direct' ? '직항' : `계절 직항(${g.months[0]}~${g.months[g.months.length - 1]}월)`}</td><td>${g.src ? `<a href="${esc(g.src)}" target="_blank" rel="noopener">${esc(g.by)}</a>` : esc(g.by)}</td></tr>`).join('')}</tbody></table>
-        <p class="tp-hint">그 밖의 도시는 위 공항이나 프랑크푸르트·뮌헨·도하 등에서 1회 경유합니다. 들어가는 도시와 나오는 도시가 다른 다구간(오픈조) 항공권을 쓰면 되돌아가는 이동을 줄일 수 있습니다. 항공료는 싣지 않습니다.</p></article>
+        <p class="tp-hint">그 밖의 도시는 1회 경유합니다.</p></article>
       <article><h3>도시 간 버스·기차</h3>
         <p>중부유럽은 직행 열차가 촘촘하고, 발트 3국과 발칸은 버스가 중심입니다. 발칸의 국제 버스는 편수가 적고 시간표가 자주 바뀌니 전날 터미널에서 확인하세요.</p>
         <ul class="tp-links">${[['체코 ČD', 'https://www.cd.cz/en/'], ['오스트리아 ÖBB', 'https://www.oebb.at/en/'], ['헝가리 MÁV', 'https://jegy.mav.hu/'], ['폴란드 PKP Intercity', 'https://www.intercity.pl/en/'], ['발트 Lux Express', 'https://luxexpress.eu/'], ['리투아니아 LTG Link', 'https://ltglink.lt/en'], ['RegioJet', 'https://regiojet.com/'], ['FlixBus', 'https://global.flixbus.com/'], ['크로아티아 Jadrolinija(배)', 'https://www.jadrolinija.hr/en'], ['루마니아 CFR', 'https://www.cfrcalatori.ro/en/'], ['세르비아 Srbijavoz', 'https://www.srbijavoz.rs/']].map(([t, u]) => `<li><a href="${u}" target="_blank" rel="noopener">${t}</a></li>`).join('')}</ul></article>
@@ -464,10 +457,8 @@ ${P.map((p, i) => `<g transform="translate(${p[0].toFixed(1)},${p[1].toFixed(1)}
         <ul class="tp-links">${D.official.map(o => `<li><a href="${o.u}" target="_blank" rel="noopener">${esc(o.t)}</a></li>`).join('')}</ul></article>
       <article class="tp-prep-wide"><h3>국가별 여행 정보</h3>
         <p>관광지·음식·문화는 국가 페이지에서 볼 수 있습니다. 폴란드·체코·헝가리는 직항·계절·물가를 정리한 여행 실전 정보가 있습니다.</p>
-        <ul class="tp-country-links">${CORE.map(c => `<li><a href="${ROOT}countries/${N[c].slug}/travel/index.html">${flagImg(c)}${esc(N[c].ko)}</a></li>`).join('')}</ul>
-        <p class="tp-hint">숙소 검색은 아직 사이트에 없습니다. 루트 상세의 숙박 도시·숙박 수를 예약 사이트에서 그대로 검색해 쓰세요.</p></article>
-      <article class="tp-prep-wide"><h3>이 페이지의 정보는 어떻게 확인했나</h3>
-        <p>루트는 국내 여행사 상품·블로그와 해외 일정 가이드에서 되풀이해 추천되는 동선을 2026년 11월에 검색으로 확인해 골랐고, 루트마다 근거 링크(국내·해외·교통·통계)를 붙였습니다. 구간마다 <span class="tp-v vc">확인</span> <span class="tp-v vg">일반</span> <span class="tp-v vv">확인 필요</span> 등급을 달았고, 운행하지 않는 노선이나 확인하지 못한 가격은 싣지 않았습니다.</p>
+        <ul class="tp-country-links">${CORE.map(c => `<li><a href="${ROOT}countries/${N[c].slug}/travel/index.html">${flagImg(c)}${esc(N[c].ko)}</a></li>`).join('')}</ul></article>
+      <article class="tp-prep-wide"><h3>참고 자료</h3>
         <details class="tp-src"><summary>참고한 자료 ${Object.keys(REFS).length + D.sources.length}건</summary><ul>${Object.values(REFS).map(r => `<li><span class="tp-ev-t">${esc(r[0])}</span> <a href="${esc(r[2])}" target="_blank" rel="noopener">${esc(r[1])}</a></li>`).join('')}${D.sources.map(s => `<li><a href="${esc(s.u)}" target="_blank" rel="noopener">${esc(s.t)}</a></li>`).join('')}</ul></details></article>
     </div>
   </section>

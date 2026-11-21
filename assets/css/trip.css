@@ -369,9 +369,9 @@
 .tp-tabs + .tp-jump { margin-top: 14px; }
 
 /* 베스트 10 페이지 */
-.tp-best-how { background: var(--card); border-radius: 14px; box-shadow: var(--shadow); padding: 18px 22px; margin: 28px 0 22px; }
-.tp-best-how h2 { font: 600 18px/1.4 var(--serif); margin: 0 0 8px; }
-.tp-best-how ul { margin: 0; padding-left: 18px; font-size: 14px; line-height: 1.7; color: #3d4760; }
+.tp-best-how { margin: 28px 0 0; padding-top: 14px; border-top: 1px solid var(--rule); }
+.tp-best-how summary { cursor: pointer; font-size: 14px; color: #6b7893; }
+.tp-best-how ul { margin: 10px 0 0; padding-left: 18px; font-size: 13.5px; line-height: 1.7; color: #3d4760; }
 .tp-best-list { list-style: none; margin: 0 0 24px; padding: 0; display: grid; gap: 16px; }
 .tp-best-item { position: relative; display: grid; grid-template-columns: 300px minmax(0, 1fr); gap: 20px; background: var(--card); border-radius: 16px; box-shadow: var(--shadow); padding: 14px; }
 .tp-best-rank { position: absolute; top: 22px; left: 22px; z-index: 2; min-width: 36px; height: 36px; padding: 0 8px; border-radius: 18px; background: var(--blue); color: #fff; font-size: 18px; font-weight: 700; line-height: 36px; text-align: center; box-shadow: 0 2px 8px rgba(0, 0, 0, .25); }

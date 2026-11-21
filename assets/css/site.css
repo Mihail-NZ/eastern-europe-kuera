@@ -930,3 +930,6 @@ a.tag.is-major:hover { background: var(--blue-ink); color: #fff; }
   .tg-glance strong { font-size: 15px; }
   .tg-pc { grid-template-columns: 1fr; }
 }
+
+/* 반복되는 안내·면책 문구는 화면에서 숨겨 깔끔하게 (사진 저작자 표기는 각 사진 아래에 그대로 둠) */
+.img-note, .hub-note, .reports-note { display: none; }
