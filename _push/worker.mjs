@@ -75,7 +75,7 @@ async function admin(body,env){
   }
   return json({id:data.id,created:job.created,done:cursor>=job.ceiling,...stats});
 }
-async function route(request,env){
+async function route(request,env,ctx){
   const path=new URL(request.url).pathname;
   const source=request.headers.get('Origin');
   if(source && source!==origin)throw new Problem(403);
@@ -114,9 +114,21 @@ async function route(request,env){
     return json({registered:false});
   }
   requireThat(row,404);
+  const delay=body.delaySeconds ?? 0;
+  requireThat(delay===0 || delay===15);
+  if(delay) requireThat(typeof ctx?.waitUntil==='function',503);
   const claim=await db.prepare('UPDATE subscriptions SET tested=unixepoch() WHERE id=? AND tested<unixepoch()-60').bind(row.id).run();
   requireThat(claim.meta.changes,429);
+  if(delay){
+    ctx.waitUntil((async()=>{
+      await new Promise(resolve=>setTimeout(resolve,15000));
+      // Recheck ownership and registration after the delay, including unsubscribe.
+      const current=await db.prepare('SELECT * FROM subscriptions WHERE id=? AND owner=? AND auth=?').bind(row.id,owner,row.auth).first();
+      if(current) await send(current,{id:'cee-test',title:'CEE Side 잠금 화면 테스트',body:'이 기기에만 보낸 테스트 알림입니다.',url:root+'news/'},env);
+    })().catch(()=>{}));
+    return json({queued:true,delaySeconds:15},202);
+  }
   const status=await send(row,{id:'cee-test',title:'CEE Side 테스트',body:'뉴스 알림이 연결되었습니다.',url:root+'news/'},env);
   return json({accepted:status>=200 && status<300},status>=200 && status<300?200:status===410 || status===404?410:502);
 }
-export default {async fetch(request,env){try{return await route(request,env);}catch(error){return json({error:'request_failed'},error instanceof Problem?error.status:500);}}};
+export default {async fetch(request,env,ctx){try{return await route(request,env,ctx);}catch(error){return json({error:'request_failed'},error instanceof Problem?error.status:500);}}};

@@ -5,6 +5,7 @@ serve.ps1
 assets/images/poland/**/*.webp
 
 _push/.dev.vars*
+.wrangler/
 _push/.wrangler/
 _push/node_modules/
 .env

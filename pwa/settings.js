@@ -7,7 +7,7 @@ let reg, publicKey, subscription, registered=false, busy=false;
 function show(message) { $('status').textContent=message; }
 function buttons() {
   $('enable').disabled=busy || !reg || !publicKey || registered || Notification.permission==='denied';
-  for (const id of ['test','save']) $(id).disabled=busy || !registered;
+  for (const id of ['test','testLater','save']) $(id).disabled=busy || !registered;
   $('disable').disabled=busy || !subscription;
 }
 async function api(path,data) {
@@ -47,7 +47,7 @@ async function disable(){
   registered=false; subscription=null;
   show('구독을 해제하고 서버의 구독 정보를 삭제했습니다.');
 }
-const actions={enable,disable,test:async()=>{await api('/test',{endpoint:subscription.endpoint}); show('푸시 서비스가 테스트 알림을 접수했습니다. 기기에서 수신을 확인해 주세요.');},save:async()=>{await api('/subscribe',{subscription:subscription.toJSON(),...prefs()});show('수신 설정을 저장했습니다.');}};
+const actions={enable,disable,testLater:async()=>{await api('/test',{endpoint:subscription.endpoint,delaySeconds:15});show('15초 뒤 이 기기에만 발송을 시도합니다. 지금 홈 화면으로 나가 iPhone을 잠가 주세요. 도착하지 않으면 1분 뒤 다시 시도해 주세요.');},test:async()=>{await api('/test',{endpoint:subscription.endpoint}); show('푸시 서비스가 테스트 알림을 접수했습니다. 기기에서 수신을 확인해 주세요.');},save:async()=>{await api('/subscribe',{subscription:subscription.toJSON(),...prefs()});show('수신 설정을 저장했습니다.');}};
 for (const [id,action] of Object.entries(actions)) $(id).onclick=async()=>{
   if(busy)return;
   busy=true; buttons();

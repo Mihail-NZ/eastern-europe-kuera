@@ -82,3 +82,34 @@ test('subscription ownership, preferences, rate limits, delivery ledger and expi
   assert.equal((await call('/subscribe',{subscription:sub})).status,429);
   sqlite.close();
 });
+
+test('delayed test only sends to its owner and cancels after unsubscribe',async t=>{
+  const sqlite=new DatabaseSync(':memory:');
+  sqlite.exec(readFileSync(new URL('migrations/0001.sql',import.meta.url),'utf8'));
+  const DB={prepare(sql){const s=sqlite.prepare(sql);let args=[];return {bind(...a){args=a;return this;},first:()=>s.get(...args),run:()=>({meta:s.run(...args)})};}};
+  const env={...variables(),DB,LIMIT:{limit:()=>({success:true})}};
+  const pending=[],destinations=[];
+  const ctx={waitUntil(p){pending.push(p);}};
+  const owner='u'.repeat(64),other='v'.repeat(64);
+  const call=(path,body,token=owner)=>worker.fetch(new Request('https://worker.example'+path,{method:'POST',headers:{Origin:origin,Authorization:'Bearer '+token,'Content-Type':'application/json'},body:JSON.stringify(body)}),env,ctx);
+  t.mock.method(globalThis,'fetch',async url=>{destinations.push(url);return new Response(null,{status:201});});
+  t.mock.timers.enable({apis:['setTimeout']});
+  try{
+    await call('/subscribe',{subscription:sub});
+    await call('/subscribe',{subscription:{...sub,endpoint:endpoint+'2'}},other);
+    assert.equal((await call('/test',{endpoint,delaySeconds:15},other)).status,404);
+    assert.equal((await call('/test',{endpoint,delaySeconds:30})).status,400);
+    assert.equal(pending.length,0);
+    assert.equal((await call('/test',{endpoint,delaySeconds:15})).status,202);
+    assert.equal((await call('/test',{endpoint,delaySeconds:15})).status,429);
+    assert.deepEqual(destinations,[]);
+    t.mock.timers.tick(14999);assert.deepEqual(destinations,[]);
+    t.mock.timers.tick(1);await Promise.all(pending);
+    assert.deepEqual(destinations,[endpoint]);
+    sqlite.exec('UPDATE subscriptions SET tested=0');
+    assert.equal((await call('/test',{endpoint,delaySeconds:15})).status,202);
+    await call('/delete',{endpoint});
+    t.mock.timers.tick(15000);await Promise.all(pending);
+    assert.deepEqual(destinations,[endpoint]);
+  }finally{sqlite.close();}
+});

@@ -10,7 +10,7 @@
     {
       "binding": "DB",
       "database_name": "cee-side-push",
-      "database_id": "REPLACE_WITH_D1_DATABASE_ID",
+      "database_id": "7e22cbaa-cf64-4ef5-9fae-d5b78987c15c",
       "migrations_dir": "migrations"
     }
   ],

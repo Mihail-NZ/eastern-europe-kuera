@@ -106,7 +106,8 @@ GitHub의 Settings → Pages에서 현재 배포 소스와 최근 성공한 배�
 
 ```powershell
 $workerOrigin = (Read-Host 'HTTPS Worker 주소').TrimEnd('/')
-$secret = Read-Host '관리자 토큰' -AsSecureString
+# 이 PC에 보관한 Windows 사용자 암호화 토큰. 원문을 출력하지 않는다.
+$secret = Import-Clixml -LiteralPath (Join-Path $env:LOCALAPPDATA 'CEESide/admin-token.clixml')
 $credential = [pscredential]::new('operator', $secret)
 $headers = @{Authorization = 'Bearer ' + $credential.GetNetworkCredential().Password}
 $message = @{
@@ -139,8 +140,8 @@ Worker는 호출당 최대 한 명에게 전송한다. 중간 응답은 `id`, `c
 | 1 | iOS 16.4 이상에서 Safari로 홈 주소를 연다. 공유 → 홈 화면에 추가를 선택한다. ‘웹 앱으로 열기’ 선택지가 보이면 켠다. | 올바른 이름과 아이콘 표시 |
 | 2 | 홈 아이콘으로 실행하고 국가·뉴스·여행·취업, 메뉴, 뒤로 가기와 외부 링크를 연다. 세로·가로 방향을 바꾼다. | 주소창 없는 실행, 본문·메뉴 접근, 노치·가로 스크롤 문제 없음 |
 | 3 | 설치된 앱에서 ‘뉴스 알림 받기’를 누르고 권한을 허용한다. | 버튼을 누른 뒤 권한 창이 뜨고 등록 성공 상태 표시 |
-| 4 | 앱의 테스트 알림을 요청한다. 앱을 닫고 기기를 잠근 뒤 PC에서 관리자 알림을 보낸다. 알림을 탭한다. | 잠금 화면에 제목·본문 표시, 지정된 CEE Side 뉴스로 이동 |
-| 5 | 같은 관리자 ID와 본문으로 다시 요청한다. | 동일 공지에 대한 추가 알림 없음 |
+| 4 | 설정에서 ‘15초 뒤 이 기기만 테스트’를 누른다. 접수 안내 뒤 홈 화면으로 나가 기기를 잠근다. 도착한 알림을 탭한다. | 잠금 화면에 제목·본문 표시, 지정된 CEE Side 뉴스로 이동 |
+| 5 | 중복 방지 자동 테스트 결과를 확인한다. 실기기 중복 시험은 별도 허가된 테스트 구독 환경에서만 수행한다. | 동일 공지에 대한 추가 알림 없음 |
 | 6 | 앱의 설정에서 알림을 끄고 동일 기기에 새 테스트를 시도한다. | 해제 상태 표시 및 이후 발송 대상에서 제외 |
 | 7 | 별도 테스트 기기에서 권한을 한 번 거절한 뒤 국가·뉴스 페이지를 이용한다. | 권한 상태 안내가 있고 콘텐츠 이용 가능 |
 | 8 | 온라인에서 국가 가이드와 뉴스를 열고 비행기 모드로 재방문한다. 처음 보는 페이지와 지도·외부 링크도 확인한다. | 캐시된 콘텐츠와 오프라인 안내가 구분되고 온라인 복귀 시 최신 뉴스 표시 |
@@ -262,3 +263,12 @@ jobs:
 푸시 한 건에는 암호화, 외부 요청, 구독 조회와 결과 기록이 포함된다. 그러므로 일일 Worker 요청 수를 그대로 하루 발송 가능 건수로 환산할 수 없다. 인덱스와 구독 수에 따라 읽고 쓰는 행 수도 달라진다. 첫 소규모 운영 기간의 실제 CPU와 행 사용량을 기준으로 배치를 조정한다.
 
 [Workers 한도](https://developers.cloudflare.com/workers/platform/limits/) · [D1 요금](https://developers.cloudflare.com/d1/platform/pricing/) · [D1 한도](https://developers.cloudflare.com/d1/platform/limits/)
+
+## 현재 배포와 관리자 토큰 보관
+
+- Worker: https://cee-side-push.cee-side-kuera.workers.dev
+- 사이트: https://mihail-nz.github.io/eastern-europe-kuera/
+- 기존 D1 ID와 VAPID 키를 유지한다. 자동 발송용 Cron/Actions는 설치하거나 활성화하지 않았다.
+- 관리자 토큰은 이 PC의 `%LOCALAPPDATA%\CEESide\admin-token.clixml`에 Windows DPAPI로 암호화했다. 같은 Windows 사용자로 위 수동 발송 절차에서 읽으며, 원문을 복사하거나 채팅에 붙이지 않는다. 다른 PC/계정에서는 복호화할 수 없다.
+- ‘15초 뒤 이 기기만 테스트’는 소유권을 검증한 구독 하나만 대상으로 한다. 서버가 요청을 접수한 뒤 기다리므로 앱을 닫아도 된다. 발송 직전에 구독 해제를 다시 확인하며 1분에 한 번만 요청할 수 있다.
+- 지연 테스트는 [Cloudflare waitUntil](https://developers.cloudflare.com/workers/runtime-apis/context/)의 응답 후 최대 30초 실행 범위 안에서 15초 대기 후 발송을 시도한다. 영구 작업 큐가 아니므로 접수는 기기 도착을 보장하지 않는다. 도착하지 않으면 1분 뒤 재시도하고 수신 설정을 확인한다.

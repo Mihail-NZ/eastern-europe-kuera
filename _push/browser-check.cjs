@@ -39,7 +39,47 @@ const types={'.html':'text/html; charset=utf-8','.js':'text/javascript','.mjs':'
    await page.goto(root+'countries/slovakia/');
    assert.ok(await page.getByRole('heading',{name:'인터넷 연결을 확인해 주세요'}).count());
    await ctx.setOffline(false);
+   const apiCalls=[];
+   const apiOrigin='https://cee-side-push.cee-side-kuera.workers.dev';
+   const ecdh=require('node:crypto').createECDH('prime256v1');ecdh.generateKeys();
+   const testPublicKey=ecdh.getPublicKey().toString('base64url');
+   let registered=false;
+   await ctx.route(apiOrigin+'/**',async route=>{
+     const req=route.request(),pathname=new URL(req.url()).pathname;
+     if(req.method()==='OPTIONS')return route.fulfill({status:204,headers:{'Access-Control-Allow-Origin':'*','Access-Control-Allow-Headers':'content-type,authorization','Access-Control-Allow-Methods':'GET,POST'}});
+     let body={};if(req.method()==='POST')body=req.postDataJSON();
+     apiCalls.push({pathname,body});
+     if(pathname==='/subscribe')registered=true;
+     if(pathname==='/delete')registered=false;
+     const response=pathname==='/key'?{publicKey:testPublicKey}:pathname==='/test'?{queued:true,delaySeconds:15}:{registered,country:'폴란드',category:''};
+     await route.fulfill({status:pathname==='/test'?202:200,contentType:'application/json',headers:{'Access-Control-Allow-Origin':'*'},body:JSON.stringify(response)});
+   });
+   await page.addInitScript(()=>{
+     let permission='default',subscription=null;
+     Object.defineProperty(Notification,'permission',{get:()=>permission});
+     Notification.requestPermission=async()=>permission='granted';
+     PushManager.prototype.getSubscription=async()=>subscription;
+     PushManager.prototype.subscribe=async options=>{
+       if(!options.userVisibleOnly || options.applicationServerKey.length!==65)throw Error('Invalid subscribe options');
+       subscription={endpoint:'https://web.push.apple.com/browser-fixture',toJSON(){return {endpoint:this.endpoint,keys:{p256dh:'fixture',auth:'fixture'}};},async unsubscribe(){subscription=null;return true;}};
+       return subscription;
+     };
+   });
    await page.goto(root+'pwa/settings.html');
+   await page.getByText('뉴스 알림이 꺼져 있습니다.',{exact:true}).waitFor();
+   await page.getByRole('button',{name:'뉴스 알림 받기',exact:true}).click();
+   await page.getByText('뉴스 알림을 받고 있습니다.',{exact:true}).waitFor();
+   await page.locator('#country').selectOption('폴란드');
+   await page.getByRole('button',{name:'수신 설정 저장',exact:true}).click();
+   await page.getByText('수신 설정을 저장했습니다.',{exact:true}).waitFor();
+   assert.equal(apiCalls.filter(c=>c.pathname==='/subscribe').at(-1).body.country,'폴란드');
+   await page.getByRole('button',{name:'15초 뒤 이 기기만 테스트',exact:true}).click();
+   await page.getByText(/15초 뒤 이 기기에만 발송을 시도합니다/).waitFor();
+   assert.deepEqual(apiCalls.find(c=>c.pathname==='/test').body,{endpoint:'https://web.push.apple.com/browser-fixture',delaySeconds:15});
+   await page.getByRole('button',{name:'구독 해제 · 정보 삭제',exact:true}).click();
+   await page.getByText('구독을 해제하고 서버의 구독 정보를 삭제했습니다.',{exact:true}).waitFor();
+   assert.equal(registered,false);
+   console.log('PASS subscription UI (mock permission/PushManager/API), preferences, device-only delayed test and unsubscribe');
    await page.getByRole('heading',{name:'뉴스 알림',exact:true}).waitFor();
    await page.evaluate(()=>{localStorage.setItem('sample-user-data','saved');window.beforeUpdate=true;});
    changed=true;
