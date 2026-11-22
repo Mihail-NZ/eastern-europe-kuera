@@ -1,6 +1,226 @@
 /* 원본: _news-data/*.json (최신순, _tools/build-news.mjs로 생성) */
 window.NEWS_DATA=[
     {
+        "date": "2026-11-22",
+        "home": [
+            0,
+            1,
+            3
+        ],
+        "overview": "러시아는 22일 새벽에도 우크라이나를 공격해 키이우주 드이메르 마을의 5층 아파트가 부분 붕괴했고 14명이 매몰됐을 가능성이 있다고 합니다. 폴란드 영공 침범과 관련해 NATO 사무총장이 바르샤바에서 폴란드 영토를 지키겠다고 밝혔고 북대서양이사회가 23일 이를 논의할 예정입니다. 세르비아에서는 14년 만에 부치치 진영이 아닌 학생 명단 의원이 국회의장에 선출됐습니다. 핀란드만에서는 드론 공격을 받은 러시아 화물선에 불이 났습니다.",
+        "stories": [
+            {
+                "region": "top",
+                "title": "러시아 드론, 키이우주 아파트 강타…14명 매몰 우려 속 구조 계속",
+                "countries": [
+                    "우크라이나"
+                ],
+                "period": "2026-11-21 ~ 11-22",
+                "points": [
+                    "키이우인디펜던트에 따르면 22일 새벽 러시아 드론이 키이우주 비시호로드 구역 드이메르 마을의 5층 아파트를 타격해 5개 층에 걸친 구간이 무너지고 화재가 났습니다. 인근 상점도 피해를 입었습니다.",
+                    "젤렌스키 대통령은 9명이 대피했고 불은 잡혔지만 14명의 소재가 확인되지 않았다고 밝혔습니다. 군정청장은 22세 여성과 어린이 등 최소 2명이 다쳤다고 전했고, 비상사태국은 구조대가 잔해 속 생존자를 수색 중이라고 했습니다.",
+                    "공군은 밤사이 공격용 드론 186기가 발사됐고 161기를 격추했다고 밝혔습니다. 우크라이나 전역에서 지난 하루 30명이 다쳤다고 보도됐습니다.",
+                    "젤렌스키 대통령은 동맹국에 PAC-2·PAC-3 요격미사일 인도를 서둘러 달라고 거듭 요청했습니다. 21일에는 NATO식 안전보장에 대한 서면 약속을 아직 받지 못했다고 말했습니다."
+                ],
+                "why": "20일 대규모 공습 이후에도 주거 건물 피해가 이어지고 있어 방공 지원 문제가 계속 쟁점입니다. 매몰자 수색 결과와 서방의 방공미사일 인도 속도가 다음 확인 지점입니다.",
+                "korea": "",
+                "sources": [
+                    {
+                        "name": "Kyiv Independent – Apartment building destroyed in Kyiv Oblast following Russian drone attack",
+                        "url": "https://kyivindependent.com/apartment-building-destroyed-in-kyiv-oblast-following-russian-drone-attack/",
+                        "lang": "EN"
+                    },
+                    {
+                        "name": "Kyiv Independent – Russian attacks across Ukraine injure 30 over past day",
+                        "url": "https://kyivindependent.com/russian-attacks-across-ukraine-injure-30-over-past-day-as-rescue-operation-continues-near-kyiv-after-drone-strike/",
+                        "lang": "EN"
+                    },
+                    {
+                        "name": "Kyiv Independent – Zelensky says Ukraine has yet to see written commitments on NATO-style security guarantees",
+                        "url": "https://kyivindependent.com/zelensky-says-ukraine-has-yet-to-see-written-commitments-on-nato-style-security-guarantees/",
+                        "lang": "EN"
+                    }
+                ]
+            },
+            {
+                "region": "v4",
+                "title": "폴란드 영공 침범: 스웨덴 그리펜, 악천후로 미사일 식별 못 해…NATO 이사회 23일 논의",
+                "countries": [
+                    "폴란드"
+                ],
+                "period": "2026-11-20 ~ 11-22",
+                "points": [
+                    "키이우인디펜던트에 따르면 20일 폴란드군은 총 11개의 잠재적 위협 물체를 추적했고, NATO 지휘 아래 있던 스웨덴 그리펜 조종사는 러시아 Kh-101 순항미사일로 추정되는 물체의 요격을 허가받았으나 악천후로 식별하지 못해 발포하지 않았습니다.",
+                    "폴란드 작전사령관 노바크 중장은 극히 어려운 기상 조건이 원인이라고 설명했습니다. 요격 작전에는 그리펜 2대, 폴란드 F-16 2대, 조기경보기와 네덜란드 공중급유기가 투입됐습니다.",
+                    "뤼터 NATO 사무총장은 21일 바르샤바에서 NATO가 폴란드 영토를 한 치도 빠짐없이 지킬 것이라고 밝혔습니다. 폴란드는 NATO 동부 방위작전 이스턴 센트리에 추가 병력과 역량을 요청할 계획이며, 북대서양이사회가 23일 브뤼셀에서 이 문제를 논의할 예정입니다.",
+                    "노츠프롬폴란드는 폴란드가 국경에서의 러시아 위장 공작을 막았다고 국방장관 자문관이 말했다고 전했습니다. 같은 매체는 우크라이나인 2명이 러시아를 위해 폴란드 기념물을 훼손한 혐의로 기소됐다고 보도했습니다."
+                ],
+                "why": "NATO 회원국 영공 침범에 대한 방공 대응의 한계와 동맹의 추가 배치 여부가 드러나는 사안입니다. 23일 북대서양이사회 결과와 이스턴 센트리 증강 규모가 다음 확인 지점입니다.",
+                "korea": "",
+                "sources": [
+                    {
+                        "name": "Kyiv Independent – Swedish Gripen pilot unable to shoot down suspected Russian missile over Poland due to poor weather",
+                        "url": "https://kyivindependent.com/swedish-gripen-pilot-unable-to-shoot-down-suspected-russian-missile-over-poland-due-to-poor-weather-commander-says/",
+                        "lang": "EN"
+                    },
+                    {
+                        "name": "Notes from Poland – Poland prevented Russian false-flag operation at border, says advisor to defence minister",
+                        "url": "https://notesfrompoland.com/2026/11/20/poland-prevented-russian-false-flag-operation-at-border-says-advisor-to-defence-minister/",
+                        "lang": "EN"
+                    },
+                    {
+                        "name": "Notes from Poland – Two Ukrainians charged with vandalising Polish monuments on behalf of Russia",
+                        "url": "https://notesfrompoland.com/2026/11/20/two-ukrainians-charged-with-vandalising-polish-monuments-on-behalf-of-russia/",
+                        "lang": "EN"
+                    }
+                ]
+            },
+            {
+                "region": "baltic",
+                "title": "핀란드만에서 드론 공격 받은 러시아 화물선 ‘스파르타 II’ 화재…에스토니아·핀란드 대응",
+                "countries": [
+                    "에스토니아"
+                ],
+                "period": "2026-11-21",
+                "points": [
+                    "ERR에 따르면 21일 오전 9시 35분경 에스토니아 구조당국이 러시아 소유 건화물선 스파르타 II의 화재·폭발 신고를 받았습니다. 선박은 에스토니아 바인들루섬 북쪽 약 11해리 국제 항로에 있었고, 러시아 측은 드론 2기가 공격했다고 주장했습니다.",
+                    "선박은 북쪽으로 표류해 에스토니아 배타적경제수역을 벗어나 핀란드 영해로 들어갔습니다. 에스토니아는 구조 헬기 대기 수준을 높였지만 러시아 구조조정센터는 지원을 요청하지 않았고, 해양 오염은 보고되지 않았습니다.",
+                    "핀란드 국경경비대가 구조와 유출 대비를 주도하고 있으며, 국방부는 공격이 국제 수역에서 발생했다고 동맹국에 통보했습니다. 키이우인디펜던트는 이 선박이 미국 제재 명단에 올라 있고 우크라이나 군 정보기관이 군사 장비 운반 선박으로 분류했다고 전했습니다.",
+                    "에스토니아 방위군은 같은 날 북동부 드론 위협 경보를 발령했다가 해제했습니다."
+                ],
+                "why": "발트해 해상에서 군사 연계 선박을 겨냥한 공격이 일어나 역내 해상 안전 우려가 커졌습니다. 공격 주체에 대한 확인과 선박 처리 상황이 다음 확인 지점이며, 현재는 러시아 측 주장 외에 확인된 정보가 제한적입니다.",
+                "korea": "",
+                "sources": [
+                    {
+                        "name": "ERR – Russian cargo ship on fire in Gulf of Finland after reported drone strike",
+                        "url": "https://news.err.ee/1610202715/russian-cargo-ship-on-fire-in-gulf-of-finland-after-reported-drone-strike",
+                        "lang": "EN"
+                    },
+                    {
+                        "name": "ERR – Drone threat warning lifted for northeast Estonia",
+                        "url": "https://news.err.ee/1610202574/defense-forces-lift-drone-threat-warning-for-northeast-estonia",
+                        "lang": "EN"
+                    },
+                    {
+                        "name": "Kyiv Independent – Russian military-linked cargo ship catches fire after reported drone strike in Gulf of Finland",
+                        "url": "https://kyivindependent.com/russian-military-linked-cargo-ship-catches-fire-after-reported-drone-strike-in-gulf-of-finland/",
+                        "lang": "EN"
+                    }
+                ]
+            },
+            {
+                "region": "wbalkan",
+                "title": "세르비아 새 의회, 학생 명단 추피치를 국회의장에 선출…부치치 진영 14년 만에 과반 상실",
+                "countries": [
+                    "세르비아"
+                ],
+                "period": "2026-11-17 ~ 11-20",
+                "points": [
+                    "발칸인사이트에 따르면 19일 세르비아 의회는 학생 명단 소속 알렉산다르 추피치 의원을 국회의장으로 선출했습니다. 기사에는 추피치 140표, 상대 후보 라데노비치 97표로 적혀 있습니다.",
+                    "새 의회는 17일 구성됐고, 14년간 여섯 차례 총선에서 부치치 전 대통령의 세르비아진보당 진영이 과반을 유지해 왔다고 매체는 설명했습니다. 진보당 의원 중심의 야당 원내그룹 대부분은 표결에 참석하지 않았습니다. 의회 구성 후 90일 안에 새 정부를 구성해야 합니다.",
+                    "추피치 의장은 베오그라드대 조교수로 2024년 말부터 학생 시위를 지지해 왔으며, 의회의 품위를 되찾겠다고 밝혔습니다. 입장 때 야당 의원이 요구르트 세례를 받은 사건은 부적절하다고 규정했습니다.",
+                    "같은 시기 반부패청은 베오그라드 시장을 형사 고발했고, 당국은 학생 시위대에 대한 폭력적 전복 사건을 공식 종결했다고 발칸인사이트가 전했습니다."
+                ],
+                "why": "오랜 집권 구도가 바뀐 세르비아에서 정부 구성과 정책 방향이 역내 정치에 영향을 줄 수 있습니다. 부의장 선출과 90일 내 새 정부 구성 협상이 다음 확인 지점입니다.",
+                "korea": "",
+                "sources": [
+                    {
+                        "name": "Balkan Insight – Dignity Promised as Serbia’s Parliament Elects New Speaker From Student List",
+                        "url": "https://balkaninsight.com/2026/11/19/dignity-promised-as-serbias-parliament-elects-new-speaker-from-student-list/bi/",
+                        "lang": "EN"
+                    },
+                    {
+                        "name": "Balkan Insight – Serbia Formally Drops ‘Violent Overthrow’ Case Against Student Protesters",
+                        "url": "https://balkaninsight.com/2026/11/20/serbia-formally-drops-violent-overthrow-case-against-student-protesters/bi/",
+                        "lang": "EN"
+                    },
+                    {
+                        "name": "European Western Balkans – Aleksandar Čupić elected Speaker of the National Assembly of Serbia",
+                        "url": "https://europeanwesternbalkans.com/2026/11/19/aleksandar-cupic-elected-speaker-of-the-national-assembly-of-serbia/",
+                        "lang": "EN"
+                    }
+                ]
+            },
+            {
+                "region": "sbalkan",
+                "title": "불가리아, 최고사법위원회 수사관 몫 위원 선출 완료…총리는 사우디 공식 방문",
+                "countries": [
+                    "불가리아"
+                ],
+                "period": "2026-11-21",
+                "points": [
+                    "BTA에 따르면 21일 수사관들이 투표로 페트코 페트코프를 최고사법위원회 위원으로 선출했습니다. 앞서 20일 의회가 의회 몫 위원 11명을 선출한 데 이어진 절차입니다.",
+                    "BTA는 같은 날 불가리아 총리가 사우디아라비아 공식 방문을 시작했고, 외무장관은 뉴델리에서 인도 외무장관과 협력 강화를 논의했다고 전했습니다.",
+                    "불가리아 중앙은행 총재는 유럽중앙은행이 12월에 추가 긴축 필요성을 평가할 것이라고 말했습니다."
+                ],
+                "why": "사법기관 구성이 단계적으로 마무리되고 있어 이후 검찰 개혁과 헌법 개정 논의의 출발점이 될 수 있습니다. 나머지 몫의 선출과 검찰총장 선출 일정이 다음 확인 지점이며, 사우디 방문의 구체적 성과는 이번에 확인하지 못했습니다.",
+                "korea": "",
+                "sources": [
+                    {
+                        "name": "BTA – Petko Petkov Elected to Supreme Judicial Council by Investigators",
+                        "url": "https://www.bta.bg/en/news/bulgaria/1251814-petko-petkov-elected-to-supreme-judicial-council-by-investigators",
+                        "lang": "EN"
+                    },
+                    {
+                        "name": "BTA – Bulgarian Prime Minister Begins Official Visit to Saudi Arabia",
+                        "url": "https://www.bta.bg/en/news/world/1251760-bulgarian-prime-minister-begins-official-visit-to-saudi-arabia",
+                        "lang": "EN"
+                    }
+                ]
+            },
+            {
+                "region": "east",
+                "title": "몰도바, 러시아 드론 영공 두 차례 침범 보고…핀란드는 러시아 헬기 침범 가능성 조사",
+                "countries": [
+                    "몰도바"
+                ],
+                "period": "2026-11-21",
+                "points": [
+                    "키이우인디펜던트에 따르면 몰도바 국방부는 21일 러시아 드론이 우크라이나 서부를 공격하던 중 몰도바 영공을 두 차례 침범했다고 밝혔습니다. 첫 침범은 오전 11시 이후 푸르카리 마을 인근이었고, 드론은 우크라이나로 돌아갔다가 다시 들어온 뒤 오데사주 방향으로 빠져나갔습니다.",
+                    "같은 날 핀란드 국방부는 러시아 헬기가 영공을 최대 4.1km 침범했을 가능성이 있다고 밝혔고, 국방장관은 핀란드만 화물선 구조·감시와 관련됐을 수 있다고 말했습니다. 국경경비대가 조사 중입니다.",
+                    "라트비아 외무부는 20일 몰도바 사업을 지원하기로 했다고 LSM이 전했습니다."
+                ],
+                "why": "우크라이나 서부 공습 때 인접국 영공 침범이 반복되고 있어 몰도바의 방공·대응 수준이 쟁점입니다. 몰도바 당국의 추가 조치와 항의 여부는 이번에 확인하지 못했습니다.",
+                "korea": "",
+                "sources": [
+                    {
+                        "name": "Kyiv Independent – Moldova, Finland report Russian airspace violations day after suspected Russian missiles flew into Poland",
+                        "url": "https://kyivindependent.com/moldova-finland-report-russian-airspace-violations-day-after-suspected-russian-missiles-flew-into-poland/",
+                        "lang": "EN"
+                    },
+                    {
+                        "name": "LSM – Latvian Foreign Ministry to support Moldovan project",
+                        "url": "https://eng.lsm.lv/article/society/society/20.11.2026-latvian-foreign-ministry-to-support-moldovan-project.a672814/",
+                        "lang": "EN"
+                    }
+                ]
+            }
+        ],
+        "countries": {
+            "폴란드": "스웨덴 그리펜이 악천후로 미사일을 식별하지 못했고 NATO 이사회가 23일 영공 침범을 논의 예정(11/20~22, 키이우인디펜던트). 국방장관 자문관은 국경 위장 공작을 막았다고 주장(노츠프롬폴란드).",
+            "체코": "프라하에서 폭주 화물열차가 시내를 지나 스미호프 인근에서 멈췄다는 보도(11/22, Expats.cz, 헤드라인 기준). 복지 개편으로 한부모 가정 지원이 줄었다는 기사도 있음.",
+            "슬로바키아": "최근 48시간 내 주요 보도 확인되지 않음. 발칸인사이트가 11/20 벨벳혁명 기념일에 체코·슬로바키아 모두 통합이 어렵다고 짚은 분석을 실음(헤드라인 기준).",
+            "헝가리": "오르반 전 총리의 동생 관련 대사 서한·비자 신속 처리 의혹이 이어짐(11/18~19, Telex, 헤드라인 기준). 최근 48시간 내 새로운 주요 보도는 확인되지 않음.",
+            "에스토니아": "러시아 화물선 스파르타 II가 바인들루섬 북쪽에서 화재·폭발 후 핀란드 쪽으로 표류, 에스토니아는 구조 헬기 대기(11/21, ERR). 12월 1일 국경 폐쇄 영향 논의도 계속.",
+            "라트비아": "최근 48시간 내 주요 보도 확인되지 않음. 11월 25일 사이렌 점검 실시 예정과 의회 장관 대행 승인 등 국내 소식만 확인됨(LSM, 헤드라인 기준).",
+            "리투아니아": "최근 48시간 내 주요 보도 확인되지 않음. LRT 첫 화면에는 생활·오피니언 기사 위주로 게재됨.",
+            "슬로베니아": "최근 48시간 내 주요 보도 확인되지 않음. Sloveniatimes는 접속이 막혀 확인하지 못함.",
+            "크로아티아": "외국 항공사 철수로 자그레브 공항 항공편이 줄고 있다는 분석(11/21)과 자그레브가 트램 20대를 약 7천만 유로에 구매할 계획(11/20, Total Croatia News).",
+            "세르비아": "학생 명단의 추피치가 국회의장에 선출돼 부치치 진영 장기 과반이 끝남(11/19, 발칸인사이트). 반부패청이 베오그라드 시장을 형사 고발.",
+            "보스니아 헤르체고비나": "최근 48시간 내 새로운 주요 보도 확인되지 않음. 11/20 모스타르·차플리나 침수와 브레자 광부 임금 체불 파업 재개 보도(N1, 헤드라인 기준).",
+            "몬테네그로": "최근 48시간 내 주요 보도 확인되지 않음. 19일 EU 협상 장 2개를 추가 종결해 33개 중 25개를 마쳤다는 기사가 직전 보도됨(EWB, 헤드라인과 URL 표기가 서로 달라 재확인 필요).",
+            "코소보": "전 대통령의 두 번째 형량이 헤이그 특별재판소 논란을 되살렸다는 분석(11/19, 발칸인사이트, 헤드라인 기준). 북부 가지보데 호수 인근 빌라 추가 철거(11/20, EWB).",
+            "알바니아": "라마 총리의 전 측근이 집권당 국정 운영을 공개 비판(11/20, 발칸인사이트, 헤드라인 기준).",
+            "북마케도니아": "최근 48시간 내 주요 보도 확인되지 않음. 직전 보도에서 스코페 여성 시위가 전해짐.",
+            "불가리아": "수사관 몫 최고사법위원회 위원으로 페트코프 선출(11/21), 총리는 사우디 공식 방문 시작(BTA).",
+            "우크라이나": "키이우주 드이메르 5층 아파트가 드론에 파괴돼 14명 매몰 우려(11/22, 키이우인디펜던트). 영국이 우크라이나용 장거리 드론을 자국에서 생산하기로 합의했다는 보도.",
+            "벨라루스": "최근 48시간 내 주요 보도 확인되지 않음. 이번에 조회한 매체에서 벨라루스 관련 신규 기사가 확인되지 않았음.",
+            "몰도바": "러시아 드론이 푸르카리 인근에서 몰도바 영공을 두 차례 침범(11/21, 키이우인디펜던트).",
+            "루마니아": "최근 48시간 내 주요 보도 확인되지 않음. RRI는 11/20 단 대통령이 베를린 회의에서 루마니아와 분쟁 인접국이 향후 협의에 계속 참여할 것이라고 밝혔다고 전함(직전 브리핑 내용)."
+        },
+        "note": "작성 기준: 2026-11-22 저녁(한국시간). Kyiv Independent, Radio Romania International, LSM, LRT, ERR, Notes from Poland, Balkan Insight, BTA, European Western Balkans, Expats.cz, Total Croatia News, Telex English, N1, KOTRA 첫 화면을 확인했고 드이메르 아파트 피해, 폴란드 영공 침범 후속, 스파르타 II 화재, 몰도바·핀란드 영공 침범, 세르비아 국회의장 선출은 본문을 열어 확인했습니다. Sloveniatimes는 접속이 막혔고(403) 한국 언론은 조회하지 않았습니다. 일부 매체는 최신 갱신이 11월 19~20일에 그쳐 많은 국가 단신은 헤드라인 기준이거나 직전 동향으로 대신했습니다. 드이메르 매몰자 수색 결과, 23일 NATO 북대서양이사회 결과, 스파르타 II 공격 주체는 아직 확인되지 않았습니다. 출처 표시: KR = 한국 언론, KOTRA = KOTRA 해외시장뉴스, EN = 해외 매체."
+    },
+    {
         "date": "2026-11-21",
         "home": [
             0,
@@ -6521,242 +6741,5 @@ window.NEWS_DATA=[
             "루마니아": "10/20 니쿨레스쿠 내각 신임투표(가결 기준 233표) 예정. 같은 날 NATO 북대서양이사회가 루마니아 요청으로 흑해 안보를 논의. 1~9월 재정적자는 GDP 대비 3.82%."
         },
         "note": "작성 기준: 2026-10-19 오후(한국시간). 한국 언론(파이낸셜뉴스, 뉴스1, 뉴시스)과 해외 매체(Kyiv Independent, LRT, ERR, The Baltic Times, Expats.cz, Around Prague, Notes from Poland, Telex, Balkan Insight, European Western Balkans, BTA, Radio Romania International 등)를 웹 검색과 각 사이트 첫 화면으로 확인했습니다. KOTRA 해외시장뉴스 첫 화면에서는 이번 기간의 동유럽 신규 기사를 찾지 못했고, 슬로베니아 관련 기사(국가 분석)만 확인했습니다. 연합뉴스·매일경제는 접근이 제한돼 검색에 쓰지 못했습니다. Balkan Insight의 세르비아·알바니아 기사와 월요 브리핑은 유료 구간이 있어 공개된 부분만 반영했습니다. 슬로바키아·슬로베니아·보스니아·몬테네그로·코소보·북마케도니아·벨라루스는 최근 48시간 내 주요 보도가 확인되지 않아 배경 동향으로 대신했습니다. 알바니아 부상자 수는 출처마다 달라(272명·295명) 함께 적었습니다. 루마니아 기사의 한국 출처는 5월 정부 붕괴를 다룬 배경 기사입니다. ‘한국·기업 시사점’은 보도를 바탕으로 한 해석입니다. 출처 표시: KR = 한국 언론, KOTRA = KOTRA 해외시장뉴스, EN = 해외 매체."
-    },
-    {
-        "date": "2026-10-18",
-        "overview": "트럼프 대통령이 대러 제재법의 핵심 조항을 대부분 면제하면서 우크라이나와 동유럽 동맹국의 대러 압박 전선이 크게 흔들리고 있습니다. 흑해에서는 루마니아 F-16이 자국 영공에 들어온 러시아 제트 드론 2기를 격추했고, 젤렌스키는 벨라루스를 통한 미사일 위협 확대를 경고했습니다. 발칸에서는 알바니아 학생 시위가 닷새째 격화됐고, 세르비아 총선(10/25)을 앞두고 정부의 디아스포라 단체 자금 지원과 방송 장악 논란이 커지고 있습니다. 라트비아는 사상 최대 의석을 얻은 ‘통합명단’ 중심으로 새 정부 구성에 들어갔고, 폴란드에서는 K2 전차 정비 부품의 현지 조달 입찰이 무응찰로 일부 취소됐습니다.",
-        "stories": [
-            {
-                "region": "top",
-                "title": "트럼프, 대러 ‘그레이엄 제재법’ 대부분 면제…러시아 “역사적 순간”, 젤렌스키 “침략자에 대한 보상”",
-                "countries": [
-                    "우크라이나"
-                ],
-                "period": "2026-10-16 ~ 17",
-                "points": [
-                    "트럼프 대통령은 10월 16일(현지시간) ‘린지 그레이엄 러시아·이란 제재법’의 일부 제재·관세·규제 적용을 면제하는 행정명령에 서명했습니다. 이 법은 발효를 이틀 앞두고 있었습니다.",
-                    "법의 골자는 러시아산 상품에 최대 500%, 러시아산 원유·가스 상위 5개 수입국 상품에 100% 관세를 물리고 러시아 은행과 그림자 선단을 제재하는 것입니다. 행정명령은 행정부가 ‘추가 조치가 적절하다’고 판단할 때까지 면제를 유지합니다.",
-                    "중간선거를 3주가량 앞두고 유가를 잡으려는 조치로 풀이됩니다. 앞서 미 재무부는 10월 9일 러시아산 경유 거래를 허용했고, 트럼프는 러시아가 경유 30만 톤을 곧 공급하고 11월에 50만 톤을 추가로 보낸다고 밝혔습니다.",
-                    "러시아 드미트리예프 특사는 ‘역사적 순간’이라며 환영했습니다. 젤렌스키 대통령은 제재 공백이 침략자에게 금전적 보상을 준다고 비판하며 유럽에 대러 압박 유지를 촉구했고, 미국 의회에서도 민주·공화 양당의 비판이 나왔습니다."
-                ],
-                "why": "미국의 대러 제재 체계가 사실상 멈추면서 러시아의 전쟁 자금 압박이 약해질 수 있습니다. EU가 700억 유로 우크라이나 지원과 22차 제재 패키지를 준비하는 가운데, 대러 압박의 무게가 유럽, 특히 최전선 동유럽 국가로 더 쏠리게 됩니다.",
-                "korea": "미국의 대러 제재 완화는 국제 유가와 러시아산 에너지 교역 구조를 바꿀 수 있습니다. 다만 EU 제재는 그대로이므로, 동유럽에 진출한 국내 기업은 미국과 EU의 제재 규정이 서로 달라지는 부분을 따로 점검할 필요가 있습니다.",
-                "sources": [
-                    {
-                        "name": "파이낸셜뉴스 – 트럼프, 대러 제재 전격 유예…러 “역사적 순간” 환호",
-                        "url": "https://www.fnnews.com/news/202610171917052225",
-                        "lang": "KR"
-                    },
-                    {
-                        "name": "VOA 한국어 – 트럼프, 러시아 관련 제재·관세 유예",
-                        "url": "https://www.voakorea.com/a/8212336.html",
-                        "lang": "KR"
-                    },
-                    {
-                        "name": "Kyiv Independent – Trump waives latest Russia sanctions",
-                        "url": "https://kyivindependent.com/trump-waives-latest-russia-sanctions-amid-growing-ukraine-us-tensions/",
-                        "lang": "EN"
-                    }
-                ]
-            },
-            {
-                "region": "v4",
-                "title": "폴란드 K2 전차 정비 부품 현지 입찰, 3개 과제 중 2개 ‘무응찰’로 취소…200대 넘는 K2 운용 지원 체계에 과제",
-                "countries": [
-                    "폴란드"
-                ],
-                "period": "2026-10-09 ~ 18",
-                "points": [
-                    "폴란드 군 제2지역물류기지가 낸 K2GF 기술 자재 공급 입찰에서 3개 과제 중 1·2번 과제에 응찰한 기업이 없었습니다. 사전 심사를 통과한 9개 기업이 초대됐지만 10월 9일 마감까지 제안서가 들어오지 않아 10월 12일 두 과제가 취소됐습니다.",
-                    "3번 과제는 제안서가 접수돼 심사가 진행 중입니다. 입찰 보증금으로 역산한 전체 규모는 약 807만 즈워티(약 28억 원)로 추정됩니다.",
-                    "계약 후 60일 이내, 늦어도 11월 30일까지 납품해야 하는 짧은 납기가 현지 업체 참여를 막은 주요 원인으로 꼽힙니다. 9월에도 K9A1 자주포 지원 조달 절차가 응찰 부족으로 취소된 바 있습니다.",
-                    "폴란드는 1차 계약분 180대를 포함해 200대가 넘는 K2GF를 운용 중이며, 2차 계약분 일부도 인도되고 있습니다. 보도는 이번 취소가 실제 전력 공백으로 이어진다고 볼 근거는 없다고 덧붙였습니다."
-                ],
-                "why": "K2 도입 규모가 빠르게 늘면서 소모성 정비 부품 수요도 커지고 있습니다. 폴란드가 요구하는 현지화와 실제 현지 공급망 역량 사이의 간극이 드러난 사례입니다.",
-                "korea": "현대로템 등 K-방산의 폴란드 사업에서 후속 군수지원(MRO)과 부품 공급망이 다음 과제로 떠올랐습니다. 폴란드 군이 납기를 완화해 재공고할지, 원제작사 공급망을 활용한 수의계약으로 바꿀지에 따라 국내 부품 협력사의 기회가 달라질 수 있습니다.",
-                "sources": [
-                    {
-                        "name": "글로벌이코노믹 – K2 전차 200대 들여온 폴란드, 현지 부품 조달 입찰은 ‘무응찰’",
-                        "url": "https://www.g-enews.com/article/Global-Biz/2026/10/202610162023513687fbbec65dfb_1",
-                        "lang": "KR"
-                    },
-                    {
-                        "name": "글로벌이코노믹 – 폴란드 달리는 한국 전차 K2, 부품 창고 채우려다 맞닥뜨린 복병",
-                        "url": "https://www.g-enews.com/article/Global-Biz/2026/10/202610181043036545fbbec65dfb_1",
-                        "lang": "KR"
-                    }
-                ]
-            },
-            {
-                "region": "baltic",
-                "title": "라트비아 총선 결과 확정…사상 최다 41석 ‘통합명단’ 중심 새 정부 구성 본격화",
-                "countries": [
-                    "라트비아"
-                ],
-                "period": "2026-10-03 ~ 16",
-                "points": [
-                    "10월 3일 치러진 라트비아 총선에서 쿨베르그스 총리가 이끄는 중도우파 ‘통합명단’이 35.76%를 얻어 100석 중 41석을 차지했습니다. 단일 정치세력으로는 라트비아 의회 역사상 최다 의석입니다. 결과는 10월 16일 공식 확정됐습니다.",
-                    "린케비치 대통령은 쿨베르그스 총리에게 새 정부 구성을 맡겼습니다. 과반은 51석이며, 통합명단은 기존 연정 파트너인 국민연합(10석), 새통합(7석)과 먼저 협의하겠다고 밝혔습니다.",
-                    "친러 성향으로 평가되는 ‘주권권력’은 15석, ‘라트비아 퍼스트’는 17석을 얻었습니다. 기존 여당 계열인 녹색농민연합은 5% 문턱을 넘지 못해 의회에서 빠졌습니다.",
-                    "부진한 성적을 낸 ‘통합(Unity)’당 지도부는 10월 16일 총사퇴했고, 11월 28일 전당대회에서 새 지도부를 뽑습니다. 통합명단은 19일(월) 연정 협상의 다음 단계를 발표할 예정입니다."
-                ],
-                "why": "러시아 위협과 생활비 문제가 쟁점이었던 선거에서 친EU·친우크라이나 노선이 재신임을 받았습니다. 동시에 포퓰리즘·친러 성향 정당도 의석을 늘려, 새 정부의 국방 지출과 대러 정책 기조가 주목됩니다.",
-                "korea": "",
-                "sources": [
-                    {
-                        "name": "LSM – President asks Kulbergs to form next Latvian government",
-                        "url": "https://eng.lsm.lv/article/politics/politics/06.10.2026-president-asks-kulbergs-to-form-next-latvian-government.a666382/",
-                        "lang": "EN"
-                    },
-                    {
-                        "name": "LSM – Election results confirmed in Latvia",
-                        "url": "https://eng.lsm.lv/article/politics/election/16.10.2026-election-results-confirmed-in-latvia.a667913/",
-                        "lang": "EN"
-                    },
-                    {
-                        "name": "The Baltic Times – Board of Unity party resigns",
-                        "url": "https://www.baltictimes.com/board_of_unity_party_resigns/",
-                        "lang": "EN"
-                    }
-                ]
-            },
-            {
-                "region": "wbalkan",
-                "title": "세르비아 총선 D-7…정부, 친부치치 해외 동포단체에 25만 유로 지원 의혹·‘방송 장악’ 논란",
-                "countries": [
-                    "세르비아",
-                    "북마케도니아",
-                    "보스니아 헤르체고비나"
-                ],
-                "period": "2026-10-15 ~ 16",
-                "points": [
-                    "탐사매체 BIRN은 세르비아 정부 산하 디아스포라국이 2023년 이후 최소 25만 유로를 해외 세르비아계 단체들에 지원했다고 보도했습니다. 이 단체들은 집권 세르비아진보당(SNS)을 홍보하거나 러시아 측 주장을 퍼뜨리고 전범을 미화한 것으로 지목됐습니다.",
-                    "수혜 단체는 북마케도니아와 보스니아 헤르체고비나(스르프스카공화국) 등에 분포합니다. 북마케도니아의 한 단체는 5월 쿠마노보에서 친부치치 집회를 열었고, 스코페 세르비아문화센터는 8만 4,500유로를 받아 가장 많은 지원을 받았습니다.",
-                    "또 다른 BIRN 분석은 친정부 방송이 TV를 지배해 선거 전 언론 환경이 ‘극단적으로 불균형’하다고 지적했습니다. 2026년 미디어 다원성 모니터는 세르비아를 고위험 국가로 분류했습니다.",
-                    "유럽지역위원회는 세르비아에서 라트코 믈라디치를 미화하는 행태를 규탄했습니다(10/15). 부치치는 9월 의회를 해산하고 10월 25일 조기 총선을 치르며, 승리하면 총리를 맡을 계획입니다."
-                ],
-                "why": "서발칸 최대 국가의 선거가 공정하게 치러지는지에 따라 세르비아의 EU 가입 경로와 주변국 관계가 달라집니다. 정부 자금이 이웃 나라의 세르비아계 단체로 흘러간 정황은 북마케도니아·보스니아의 정치에도 영향을 줄 수 있습니다.",
-                "korea": "",
-                "sources": [
-                    {
-                        "name": "파이낸셜뉴스(연합뉴스) – 세르비아 대통령, 의회 해산·조기 총선",
-                        "url": "https://www.fnnews.com/news/202609092132402884",
-                        "lang": "KR"
-                    },
-                    {
-                        "name": "Balkan Insight – Serbia channels public funds to pro-Vucic diaspora groups",
-                        "url": "https://balkaninsight.com/2026/10/16/serbia-channels-public-funds-to-pro-vucic-diaspora-groups/bi/",
-                        "lang": "EN"
-                    },
-                    {
-                        "name": "Balkan Insight – Serbia's 'captured' TV screens all tell the same story",
-                        "url": "https://balkaninsight.com/2026/10/16/serbias-captured-tv-screens-all-tell-the-same-story/bi/",
-                        "lang": "EN"
-                    }
-                ]
-            },
-            {
-                "region": "sbalkan",
-                "title": "알바니아 학생 반정부 시위 닷새째 격화…경찰 부상 132명·167명 체포, 라마 총리는 사퇴 거부",
-                "countries": [
-                    "알바니아"
-                ],
-                "period": "2026-10-13 ~ 17",
-                "points": [
-                    "10월 13일 티라나 교육부 앞에서 시작된 학생 시위가 대학 환경 개선과 높은 등록금 문제를 넘어 에디 라마 총리 사퇴 요구로 번졌습니다. 15일에는 두러스, 슈코드라, 코르처, 엘바산 등 지방 도시로도 확산됐습니다.",
-                    "17일에도 시위대는 화염병과 돌을 던지고 바리케이드를 쳤고, 경찰은 고무탄과 물대포, 최루탄으로 대응했습니다. 닷새간 경찰관 132명이 다쳤고, 일주일간 167명이 체포됐으며 388명에 대해 형사 절차가 시작됐습니다.",
-                    "라마 총리는 정권 교체는 선거로만 가능하다며 사퇴를 거부했고, 폭력의 배후로 야당과 ‘외부 세력’을 지목했습니다. 경찰관 7명은 권한 남용 혐의로 직무가 정지됐습니다.",
-                    "시위는 재러드 쿠슈너와 연관된 남부 해안 리조트 개발 반대 운동(‘플라밍고 운동’)과도 맞물려 있습니다. OSCE는 대화를 중재할 준비가 돼 있다고 밝혔습니다."
-                ],
-                "why": "EU 가입 선두 그룹인 알바니아에서 장기 집권 정부에 대한 청년층의 불만이 폭발했습니다. 사태가 길어지면 EU 가입 협상 일정과 정치 안정에 부담이 될 수 있습니다.",
-                "korea": "",
-                "sources": [
-                    {
-                        "name": "국제뉴스 – 알바니아 수도서 닷새째 폭력 시위…고무탄까지 발사",
-                        "url": "https://www.gukjenews.com/news/articleView.html?idxno=3724572",
-                        "lang": "KR"
-                    },
-                    {
-                        "name": "경향신문 – 프랑스 이어 격렬한 학생 시위 이어지는 유럽 국가는 어디?",
-                        "url": "https://www.khan.co.kr/article/202610161642001/",
-                        "lang": "KR"
-                    },
-                    {
-                        "name": "Balkan Insight – Albania PM defiant as protests spread to provincial cities",
-                        "url": "https://balkaninsight.com/2026/10/16/albania-pm-defiant-as-protests-spread-to-provincial-cities/bi/",
-                        "lang": "EN"
-                    },
-                    {
-                        "name": "European Western Balkans – OSCE stands ready to facilitate dialogue in Albania",
-                        "url": "https://europeanwesternbalkans.com/2026/10/16/osce-stands-ready-to-facilitate-dialogue-in-albania/",
-                        "lang": "EN"
-                    }
-                ]
-            },
-            {
-                "region": "east",
-                "title": "루마니아 F-16, 영공 침범 러시아 제트 드론 2기 격추…젤렌스키 “벨라루스發 미사일 위협 커질 것”",
-                "countries": [
-                    "루마니아",
-                    "우크라이나",
-                    "벨라루스",
-                    "몰도바"
-                ],
-                "period": "2026-10-16 ~ 18",
-                "points": [
-                    "루마니아 국방부는 10월 17일 저녁 흑해 쪽에서 영공에 들어온 드론 2기를 F-16 전투기가 술리나 남동쪽 약 20km 해상 상공에서 격추했다고 밝혔습니다. 국방부는 러시아가 우크라이나 공격에 쓰는 ‘게란’ 계열 제트 드론이라고 설명했습니다.",
-                    "루마니아 외무장관은 이 문제를 오는 화요일 NATO 북대서양이사회에서 논의한다고 밝혔습니다. 10월 15일에는 루마니아 연안에서 유조선 2척에 불이 나 선원 7명이 실종됐고, 올해 NATO가 루마니아 상공에서 격추한 드론은 4기로 늘었습니다.",
-                    "젤렌스키 대통령은 17일 러시아가 벨라루스에 탄도미사일을 더 배치해 우크라이나 서부를 노릴 수 있다고 경고했습니다. 벨라루스에 설치된 중계 장비가 폴란드 접경 지역으로 향하는 러시아 드론의 신호를 돕고 있다는 우크라이나 국경수비대의 주장도 나왔습니다.",
-                    "몰도바에서는 15~16일 밤 러시아 드론 여러 대가 영공을 침범했고, 그중 1기가 북부 돈두셰니 지역에 떨어져 폭발했습니다."
-                ],
-                "why": "러시아의 드론 공격이 흑해와 NATO 회원국 영공까지 번지면서 루마니아·몰도바가 사실상 전쟁의 주변 전선이 되고 있습니다. NATO의 흑해 방어 태세 조정과 해상 물류 안전이 핵심 쟁점으로 떠올랐습니다.",
-                "korea": "흑해 항로의 위험이 계속 커지고 있어, 이 항로를 쓰는 선사와 곡물·에너지 화주는 운항 리스크와 전쟁위험 보험료 상승에 대비해야 합니다. 루마니아가 대드론·방공 장비 확충을 요청하고 있어 K-방산의 수요 기회로도 볼 수 있습니다.",
-                "sources": [
-                    {
-                        "name": "국제뉴스 – 루마니아, 흑해 상공서 드론 2대 격추",
-                        "url": "https://www.gukjenews.com/news/articleView.html?idxno=3724603",
-                        "lang": "KR"
-                    },
-                    {
-                        "name": "Kyiv Independent – Romanian F-16s down two jet-powered drones",
-                        "url": "https://kyivindependent.com/romanian-f-16s-down-two-jet-powered-drones-after-airspace-incursion/",
-                        "lang": "EN"
-                    },
-                    {
-                        "name": "Kyiv Independent – Zelensky warns of missile threats from Belarus",
-                        "url": "https://kyivindependent.com/zelensky-warns-russia-may-expand-missile-threats-from-belarus-against-western-ukraine/",
-                        "lang": "EN"
-                    },
-                    {
-                        "name": "European Pravda – Drone explosion recorded in Moldova's Dondușeni district",
-                        "url": "https://www.pravda.com.ua/eng/news/2026/10/16/8058394/",
-                        "lang": "EN"
-                    }
-                ]
-            }
-        ],
-        "countries": {
-            "폴란드": "K2GF 정비 부품 현지 입찰 3개 과제 중 2개가 무응찰로 취소. 불법 이주민 지원 처벌 법안 철회(10/16), 관광세 부과 지자체 확대 추진(10/17). 총리 암살을 모의한 혐의로 남성 기소.",
-            "체코": "상원 결선투표 종료(10/17), 야권이 상원 과반을 유지할 전망. 한수원은 두코바니 원전 관련 체코 현지 기업과 16건 계약을 맺고 본계약 절차 진행 중.",
-            "슬로바키아": "피초 총리가 2027년 우크라이나 700억 유로 지원에 불참한다고 재확인하고, EU 장기예산과 우크라이나 지원을 연계하는 것은 ‘위험하다’고 언급. 10/24 지방선거 예정.",
-            "헝가리": "머저르 총리가 브뤼셀에서 젤렌스키와 회담해 관계 회복을 모색(10/16). 우크라이나 곡물의 헝가리 경유 운송에 ‘장애물 없다’고 밝힘(10/17). 10/20 중앙은행 금리 결정 예정.",
-            "에스토니아": "라트비아 측 국경 풍력단지(Lode, 2억 유로·18기)를 놓고 지역 갈등. 집권 개혁당이 선거 슬로건 공개(10/17). 국경 감시용 EU 자금 3,200만 유로 확보.",
-            "라트비아": "10/3 총선 결과 공식 확정(10/16), 통합명단이 41석으로 새 정부 구성 주도. 국세청은 러시아산 경유가 라트비아 항구를 거치지 않을 것이라고 밝힘. 리가공항 철도 연결 2억 6,400만 유로 계약 체결.",
-            "리투아니아": "미국의 압박으로 비판적 내용의 ‘Disinfo 2026’ 콘퍼런스 후원을 철회했다는 보도(10/16). 2027년 예산안의 국방비 GDP 5%에 대해 경제학자들이 부채 증가를 경고.",
-            "슬로베니아": "최근 48시간 내 주요 보도 확인되지 않음. 얀샤 정부가 2027년 예산 수정안과 2028년 예산 초안을 승인했고, 정부 싱크탱크 UMAR는 2026년 성장률 전망을 3.8%로 상향.",
-            "크로아티아": "EU 정상회의 결론에서 몬테네그로의 ‘2026년 말 가입협상 종료’ 목표 문구를 막판에 빼도록 요구해 관철(10/15). 축구 팬들의 친나치 구호로 체포자 발생(10/16).",
-            "세르비아": "10/25 조기 총선 D-7. 정부의 친부치치 해외 동포단체 자금 지원(최소 25만 유로)과 친정부 방송의 보도 독점 논란. 유럽지역위원회가 믈라디치 미화를 규탄.",
-            "보스니아 헤르체고비나": "최근 48시간 내 주요 보도 확인되지 않음. 10/4 총선 투표율 40.2%로 역대 최저, 스르프스카공화국 대통령에 SNSD의 미니치 당선. 10월 말 유엔 안보리의 EUFOR 임무 연장 표결 예정.",
-            "몬테네그로": "EU 정상들이 가입조약 초안 작업을 환영했지만, 크로아티아 요구로 ‘2026년 말 협상 종료’ 목표 문구는 결론에서 빠짐. 러시아는 몬테네그로 국민에게 비자 제도를 도입.",
-            "코소보": "최근 48시간 내 주요 보도 확인되지 않음. 10/6 의회가 시로카-풀라를 대통령으로 선출해 조기 총선을 피함. 헤이그 특별재판소 형량을 제한하는 법 개정이 계속 논란. 새 KFOR 사령관 취임(10/14).",
-            "알바니아": "학생 주도 반정부 시위 닷새째, 경찰 부상 132명·체포 167명. 라마 총리는 사퇴를 거부했고, OSCE가 대화 중재 의사를 표명.",
-            "북마케도니아": "이중국적자 이바 미하일로바 사건을 놓고 불가리아와 갈등. 인터폴 수배를 요청했으나, 불가리아 국경경찰은 출입국 기록상 위반이 없다고 밝힘(10/17). 세르비아 정부 자금이 현지 세르비아계 단체에 흘러갔다는 BIRN 보도.",
-            "불가리아": "드론에 피격된 ‘Chelsea 3’호를 부르가스항으로 예인(10/17), 군 검찰이 수사 착수. 연료·비료값 급등에 농민 지원 1억 7,000만 유로 발표. 대선을 앞두고 선거운동 본격화.",
-            "우크라이나": "트럼프의 대러 제재법 면제에 젤렌스키가 강하게 반발. 러시아의 대규모 에너지망 공습(드론 332기 중 289기 격추)이 이어졌고, 우크라이나는 상트페테르부르크와 로스토프 드론 공장을 공격.",
-            "벨라루스": "젤렌스키가 러시아의 벨라루스 내 탄도미사일 추가 배치 가능성을 경고(10/17). 벨라루스에 설치된 장비가 러시아 드론 신호를 중계한다는 우크라이나 측 주장.",
-            "몰도바": "15~16일 밤 러시아 드론 여러 대가 영공을 침범했고, 1기가 돈두셰니 지역에 추락해 폭발(10/16). 정부는 시민 대상 42일 군사훈련 프로그램을 제안.",
-            "루마니아": "F-16이 흑해 상공에서 영공을 침범한 게란 계열 드론 2기를 격추(10/17). 다음 주 NATO 북대서양이사회에서 흑해 안보 문제를 논의할 예정."
-        },
-        "note": "작성 기준: 2026-10-18 오전(한국시간). 한국 언론(파이낸셜뉴스, VOA 한국어, 글로벌이코노믹, 국제뉴스, 경향신문 등)과 해외 매체(Kyiv Independent, Balkan Insight, European Western Balkans, LSM, ERR, LRT, The Baltic Times, BTA, Expats.cz, Notes from Poland, European Pravda 등)를 웹 검색으로 확인했습니다. KOTRA 해외시장뉴스 첫 화면에서는 이번 기간의 동유럽 관련 신규 기사를 확인하지 못했습니다. Balkan Insight와 European Western Balkans 일부 기사는 유료 구간 때문에 공개된 부분만 반영했고, 보스니아·코소보·슬로베니아는 최근 48시간 내 주요 보도가 확인되지 않아 배경 동향으로 대신했습니다. ‘한국·기업 시사점’은 보도를 바탕으로 한 해석입니다. 출처 표시: KR = 한국 언론, KOTRA = KOTRA 해외시장뉴스, EN = 해외 매체."
     }
 ];
