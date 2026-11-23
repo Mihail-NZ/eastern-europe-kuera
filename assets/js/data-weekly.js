@@ -5,6 +5,32 @@
  * title이 null이면 그 주에 확인된 주요 보도가 없다는 뜻이다. */
 window.WEEKLY_NEWS = [
   {
+    week_start: '2026-11-16', week_end: '2026-11-22', updated: '2026-11-23',
+    note: '각 나라 주요 매체 첫 화면에서 이번 주(11/16~11/22) 날짜가 확인된 보도만 골랐습니다. 조사는 월요일(11/23)에 했고, 확인하지 못한 나라는 비워 두었습니다.',
+    countries: {
+      '폴란드': { title: '러시아 미사일 2발과 드론 1대, 폴란드 영토에 떨어져', source: 'Notes from Poland', url: 'https://notesfrompoland.com/2026/11/20/unidentified-object-hits-poland-amid-russian-attacks-on-western-ukraine/' },
+      '체코': { title: '체코 정부의 공영방송 개편에 반대해 수십만 명 시위', source: 'Balkan Insight', url: 'https://balkaninsight.com/2026/11/16/hundreds-of-thousands-protest-czech-government-reforms-to-public-media/rd/' },
+      '슬로바키아': { title: '벨벳혁명 37주년, 슬로바키아 곳곳서 피초 정부 반대 시위', source: 'The Slovak Spectator', url: 'https://spectator.sme.sk/politics-and-society/c/slovakia-marks-37-years-since-velvet-revolution-with-protests-against-fico' },
+      '헝가리': { title: '헝가리, 우크라이나의 EU 가입 절차 진전에 대한 거부권 철회', source: 'Daily News Hungary', url: 'https://dailynewshungary.com/hungary-lifts-veto-ukraine-eu-join/' },
+      '슬로베니아': { title: null },
+      '크로아티아': { title: '부코바르, 1991년 희생자 추모…크로아티아는 세르비아에 협력 재차 촉구', source: 'Balkan Insight', url: 'https://balkaninsight.com/2026/11/18/vukovar-remembers-1991-victims-as-croatia-renews-call-for-serbias-cooperation/btj/' },
+      '세르비아': { title: '세르비아 새 의회, 학생 명단 출신 의장 선출', source: 'Balkan Insight', url: 'https://balkaninsight.com/2026/11/19/dignity-promised-as-serbias-parliament-elects-new-speaker-from-student-list/bi/' },
+      '보스니아 헤르체고비나': { title: '보스니아 헤르체고비나 새 대통령위원회, 2026~2030년 임기 시작', source: 'Balkan Insight', url: 'https://balkaninsight.com/2026/11/16/bosnias-new-presidency-takes-office-for-2026-2030-term/bi/' },
+      '코소보': { title: '헤이그 특별재판소, 타치 전 코소보 대통령에 사법방해 유죄 판결', source: 'Balkan Insight', url: 'https://balkaninsight.com/2026/11/17/kosovos-thaci-found-guilty-of-trying-to-obstruct-justice-in-war-crimes-case/btj/' },
+      '몬테네그로': { title: '몬테네그로, EU 가입협상 2개 장 추가 종결…33개 중 25개 마쳐', source: 'European Western Balkans', url: 'https://europeanwesternbalkans.com/2026/11/19/montenegro-closes-two-more-chapters-with-eu-reaches-18-out-of-33-2/' },
+      '북마케도니아': { title: '북마케도니아·알바니아, 캬파산 국경에 통합 검문 시스템 개통', source: 'MIA', url: 'https://mia.mk/en/story/mickoski-one-stop-shop-to-facilitate-transport-bring-macedonia-and-albania-closer' },
+      '알바니아': { title: '알바니아 시위, 선거 앞두고 기존 양당 체제에 도전', source: 'Balkan Insight', url: 'https://balkaninsight.com/2026/11/17/albania-protests-challenge-traditional-party-duopoly-ahead-of-elections/bi/' },
+      '불가리아': { title: '불가리아 의회, 최고사법위원회 새 위원 선출', source: 'BTA', url: 'https://www.bta.bg/en/news/bulgaria/1251364-after-parliament-elects-new-supreme-judicial-council-members-what-politicians-s' },
+      '루마니아': { title: '니쿠쇼르 단 대통령, 베를린 우크라이나 지원국 회의서 ‘유럽 안보 양보 안 돼’', source: 'Radio Romania International', url: 'https://www.rri.ro/en/news-and-current-affairs/newsflash/november-19-2026-update-id1085636.html' },
+      '몰도바': { title: '산두 대통령, 신규 회원국 대상 EU 임시 보호장치 지지…임기 내 가입조약 서명 희망', source: 'Informat.ro', url: 'https://informat.ro/en/eu/maia-sandu-backs-temporary-guarantees-for-moldovas-eu-accession-148639' },
+      '우크라이나': { title: '우크라이나, 크림대교 대규모 타격…도로 구간 일부 붕괴', source: 'Kyiv Independent', url: 'https://kyivindependent.com/russia-could-take-a-year-to-clear-collapsed-crimean-bridge-section-ukraines-defense-minister-says/' },
+      '벨라루스': { title: '벨라루스, 여성 연금 수급 연령 상향 추진', source: 'Charter 97', url: 'https://charter97.org/en/news/2026/11/18/705971/' },
+      '리투아니아': { title: '리투아니아 의회, 비판 속 2027년 예산안 정부에 돌려보내', source: 'LRT', url: 'https://www.lrt.lt/en/news-in-english/19/3119283/lithuanian-parliament-sends-2027-budget-back-to-government-amid-criticism' },
+      '라트비아': { title: '라트비아 의회, 쿨베르그스 총리의 새 정부 승인', source: 'LSM', url: 'https://eng.lsm.lv/article/politics/saeima/17.11.2026-new-latvian-government-finally-approved-by-parliament.a672391/' },
+      '에스토니아': { title: '에스토니아, 12월 1일부터 러시아 접경 검문소 3곳 폐쇄…버스·화물 운행 중단', source: 'ERR', url: 'https://news.err.ee/1610198117/estonia-s-eastern-border-closure-will-stop-bus-and-truck-traffic-to-russia' }
+    }
+  },
+  {
     week_start: '2026-11-02', week_end: '2026-11-08', updated: '2026-11-08',
     note: '웹 검색과 주요 매체 첫 화면에서 이번 주(11/2~11/8) 날짜가 확인된 보도만 골랐습니다. 확인하지 못한 나라는 비워 두었습니다.',
     countries: {
