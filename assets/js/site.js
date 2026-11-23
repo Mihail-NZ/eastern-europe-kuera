@@ -645,6 +645,106 @@ ${window.REPORTS ? `<section class="home-reports wrap" id="reports" aria-labelle
       ...rest.filter(s => !/출처/.test(s.title)), ...g.post, ...rest.filter(s => /출처/.test(s.title)), ...g.sources];
   }
 
+  /* ---------- 쇼핑·기념품 (data-souvenirs.js ← _tools/build-souvenirs.mjs) ----------
+   * 관광 페이지에 "쇼핑·기념품" 섹션을 더한다: 소개 · TOP 3 · 카테고리 필터 · 카드 · 상세 대화상자.
+   * 사진은 Wikimedia Commons 자유 라이선스 사진만 쓰고, 없으면 다른 사진으로 대신하지 않는다. */
+  const SV = window.SOUVENIRS;
+  const svCountry = slug => SV && Object.keys(SV.countries).find(cc => SV.countries[cc].slug === slug);
+  const svCat = id => ((SV && SV.cats.find(c => c[0] === id)) || [id, id])[1];
+  function svPhoto(it, big) {
+    if (!it.img) return `<span class="sv-ph is-empty"><span>사진 준비 중</span></span>`;
+    const [f, w, h] = it.img, tall = h > w * 1.08;
+    return `<span class="sv-ph${tall ? ' is-tall' : ''}"><img src="${ROOT}${esc(f)}" alt="${esc(it.ko)}" width="${w}" height="${h}"${big ? '' : ' loading="lazy"'} decoding="async"></span>`;
+  }
+  function svCard(it, top) {
+    return `<li class="sv-card${top ? ' is-top' : ''}" data-cat="${it.c}"${top ? '' : ` id="sv-${it.id}"`}><button type="button" class="sv-open" data-sv="${it.id}" aria-haspopup="dialog">
+  ${svPhoto(it)}
+  <span class="sv-body"><span class="sv-cat">${esc(svCat(it.c))}</span>
+    <span class="sv-ko">${esc(it.ko)}</span><span class="sv-lo" lang="und">${esc(it.lo && it.lo !== it.en ? `${it.lo} · ${it.en}` : it.en)}</span>
+    <span class="sv-w">${esc(it.w)}</span>
+    ${it.rg || it.br ? `<span class="sv-meta">${esc([it.rg, it.br].filter(Boolean).join(' · '))}</span>` : ''}
+    ${(it.t || []).length ? `<span class="sv-tags">${it.t.slice(0, 2).map(t => `<span>${esc(t)}</span>`).join('')}</span>` : ''}</span></button></li>`;
+  }
+  function svDetail(it, warn) {
+    const row = (k, v) => v ? `<div><dt>${k}</dt><dd>${v}</dd></div>` : '';
+    const link = (u, t) => `<a href="${esc(u)}" target="_blank" rel="noopener">${esc(t)}</a>`;
+    const host = u => u.replace(/^https?:\/\/(www\.)?/, '').split('/')[0];
+    const refs = [it.u ? link(it.u, `공식·관련 사이트 (${host(it.u)})`) : '', ...(it.r || []).map(u => link(u, /wikipedia/.test(u) ? '위키백과 문서' : host(u)))].filter(Boolean);
+    const credit = it.img ? `사진: ${esc(it.img[3])} · ${it.img[5] ? link(it.img[5], it.img[4]) : esc(it.img[4])} · ${link(it.img[6], 'Wikimedia Commons 원본')} · 크기 축소·WebP 변환`
+      : '이 상품과 정확히 일치하는 자유 라이선스 사진을 아직 찾지 못했습니다. 다른 사진으로 대신하지 않습니다.';
+    return `<div class="sv-dlg-ph">${svPhoto(it, true)}</div>
+<div class="sv-dlg-body">
+  <p class="sv-cat">${esc(svCat(it.c))}${(it.t || []).map(t => ` · ${esc(t)}`).join('')}</p>
+  <h3 id="sv-dlg-title">${esc(it.ko)}</h3><p class="sv-lo" lang="und">${esc([it.lo, it.en].filter((x, i, a) => x && a.indexOf(x) === i).join(' · '))}</p>
+  <p>${esc(it.d)}</p>
+  <p class="sv-why"><span>추천 이유</span>${esc(it.w)}</p>
+  <dl class="sv-dl">
+    ${row('지역', esc(it.rg))}${row('브랜드·제조사', esc(it.br))}
+    ${warn ? row('구매 안내', '여행경보 지역이라 현지 구매를 안내하지 않습니다.') : row('현지에서 사기 좋은 곳', esc(it.b))}
+    ${row('예상 가격', '확인 필요 · 검증된 가격 자료가 없어 표시하지 않습니다.')}
+    ${row('국내 구매', esc(it.kr || '확인 필요'))}
+    ${row('한국 반입 유의사항', esc(it.im ? SV.imports[it.im] : '개인 사용 목적의 일반 공산품입니다. 여행자 휴대품 면세 한도(1인 US$800) 안에서 반입하세요.'))}
+    ${row('정보 확인', it.v ? '상품 존재·원산지 확인' : '상품은 확인했으나 판매처·세부 정보는 다시 확인 필요')}
+  </dl>
+  ${refs.length ? `<p class="sv-refs">참고: ${refs.join(' · ')}</p>` : ''}
+  <p class="sv-credit">${credit}</p>
+</div>`;
+  }
+  function souvenirSection(slug) {
+    const cc = svCountry(slug);
+    if (!cc) return null;
+    const meta = SV.countries[cc], list = SV.items.filter(x => x.cc === cc);
+    const top = meta.top.map(id => list.find(x => x.id === id)).filter(Boolean);
+    const cats = SV.cats.filter(([id]) => list.some(x => x.c === id));
+    const sorted = [...list].sort((a, b) => b.p - a.p);
+    const photos = list.filter(x => x.img).length;
+    const html = `<div class="sv" data-sv-root="${cc}">
+  ${meta.warn ? `<p class="sv-warn" role="note"><strong>여행경보 안내</strong> ${esc(meta.warn)}</p>` : ''}
+  <div class="sv-intro"><p class="sv-count"><strong>${list.length}</strong>개 추천 상품<small>사진 ${photos}개 확보</small></p><p>${esc(meta.why)}</p></div>
+  <h3 class="sv-h">대표 TOP 3</h3>
+  <ol class="sv-grid sv-top">${top.map(x => svCard(x, true)).join('')}</ol>
+  <h3 class="sv-h">카테고리별 전체 상품</h3>
+  <div class="sv-filter" role="group" aria-label="카테고리 필터">
+    <button type="button" data-f="" aria-pressed="true">전체 <small>${list.length}</small></button>
+    ${cats.map(([id, ko]) => `<button type="button" data-f="${id}" aria-pressed="false">${esc(ko)} <small>${list.filter(x => x.c === id).length}</small></button>`).join('')}
+  </div>
+  <ul class="sv-grid sv-all" aria-live="polite">${sorted.map(x => svCard(x)).join('')}</ul>
+  <p class="tg-note">카드를 누르면 자세한 설명·구매처·반입 유의사항·사진 출처를 볼 수 있습니다. 가격은 검증된 자료가 없어 싣지 않았고, 구매처는 ${esc(SV.checked.replace(/-/g, '.'))} 기준 정리라 바뀔 수 있습니다. 반입 규정은 관세청·농림축산검역본부 안내를 요약한 것으로 최종 판단은 입국 시 세관에서 합니다.</p>
+  <dialog class="sv-dlg" aria-labelledby="sv-dlg-title"><form method="dialog"><button class="sv-x" aria-label="닫기">×</button></form><div class="sv-dlg-in"></div></dialog>
+</div>`;
+    return { id: 'sv', title: '쇼핑·기념품', html };
+  }
+  function bindSouvenirs(main) {
+    const root = main.querySelector('[data-sv-root]');
+    if (!root) return;
+    const cc = root.dataset.svRoot, warn = !!SV.countries[cc].warn;
+    const dlg = root.querySelector('.sv-dlg'), inner = dlg.querySelector('.sv-dlg-in');
+    const open = id => {
+      const it = SV.items.find(x => x.id === id);
+      if (!it) return;
+      inner.innerHTML = svDetail(it, warn);
+      if (typeof dlg.showModal === 'function') dlg.showModal(); else dlg.setAttribute('open', '');
+      if (history.replaceState) history.replaceState(null, '', '#sv-' + id);
+    };
+    root.addEventListener('click', e => {
+      const b = e.target.closest('[data-sv]');
+      if (b) { open(b.dataset.sv); return; }
+      const f = e.target.closest('[data-f]');
+      if (!f) return;
+      root.querySelectorAll('[data-f]').forEach(x => x.setAttribute('aria-pressed', String(x === f)));
+      root.querySelectorAll('.sv-all .sv-card').forEach(card => { card.hidden = !!f.dataset.f && card.dataset.cat !== f.dataset.f; });
+    });
+    dlg.addEventListener('click', e => { if (e.target === dlg) dlg.close(); });
+    dlg.addEventListener('close', () => { if (/^#sv-/.test(location.hash) && history.replaceState) history.replaceState(null, '', location.pathname + location.search + '#sv'); });
+    // 루트 페이지 등에서 #sv-<상품 id>로 들어오면 그 카드로 가서 상세를 연다
+    const m = location.hash.match(/^#sv-([\w-]+)$/);
+    if (m && SV.items.some(x => x.id === m[1])) {
+      const card = root.querySelector('#sv-' + m[1]);
+      if (card) card.scrollIntoView({ block: 'center' });
+      open(m[1]);
+    }
+  }
+
   /* 한 나라의 하위 페이지 목록. 관광은 상세 원고가 있는 나라만 */
   const DEEP = window.COUNTRY_DEEP || {};
   const SECTION_DEFS = [
@@ -670,7 +770,11 @@ ${window.REPORTS ? `<section class="home-reports wrap" id="reports" aria-labelle
       else html = mdBlocks(s.lines);
       return { id: `s${i + 1}`, title: s.title, raw: s.raw, html, tab: id === 'language' && /인사말|여행 회화|^(인사·기본|자기소개|식당·쇼핑|교통·긴급|인사·예절|소개·기초|길·교통·숙소)$/.test(s.raw) };
     });
-    return { title: doc.title, lead: doc.lead, intro: mdBlocks(doc.intro), secs: id === 'travel' ? mergeTravelGuide(secs, slug) : secs };
+    let out = id === 'travel' ? mergeTravelGuide(secs, slug) : secs;
+    // 관광 페이지: 출처 섹션들 바로 앞에 쇼핑·기념품
+    const sv = id === 'travel' ? souvenirSection(slug) : null;
+    if (sv) { const at = out.findIndex(s => /출처/.test(s.title)); out = at < 0 ? [...out, sv] : [...out.slice(0, at), sv, ...out.slice(at)]; }
+    return { title: doc.title, lead: doc.lead, intro: mdBlocks(doc.intro), secs: out };
   }
   /* ---------- 대표 보고서·자료 (data-reports.js) ---------- */
   function reportGroups(slug) {
@@ -1181,6 +1285,8 @@ ${countryTabs(c, id)}
         });
       });
     });
+
+    bindSouvenirs(main);
 
     // 목차에 현재 읽는 섹션 표시
     const links = main.querySelectorAll('.toc a');

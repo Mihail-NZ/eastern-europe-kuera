@@ -1,0 +1,270 @@
+{
+ "ee-kama": {
+  "wp": "https://en.wikipedia.org/wiki/Kama_(food)"
+ },
+ "ee-sea-buckthorn": {
+  "wp": "https://en.wikipedia.org/wiki/Hippophae"
+ },
+ "ee-vana-tallinn": {
+  "wp": "https://en.wikipedia.org/wiki/Vana_Tallinn"
+ },
+ "lv-laima": {
+  "wp": null,
+  "u": true
+ },
+ "lv-riga-sprats": {
+  "wp": "https://en.wikipedia.org/wiki/Sprat"
+ },
+ "lv-black-balsam": {
+  "wp": "https://en.wikipedia.org/wiki/Riga_Black_Balsam"
+ },
+ "lv-lielvarde-belt": {
+  "wp": null
+ },
+ "lt-sakotis": {
+  "wp": "https://en.wikipedia.org/wiki/%C5%A0akotis"
+ },
+ "lt-amber": {
+  "wp": "https://en.wikipedia.org/wiki/Baltic_amber"
+ },
+ "lt-verba": {
+  "wp": null
+ },
+ "pl-torun-pierniki": {
+  "wp": "https://en.wikipedia.org/wiki/Toru%C5%84_gingerbread"
+ },
+ "pl-krowki": {
+  "wp": "https://en.wikipedia.org/wiki/Kr%C3%B3wki"
+ },
+ "pl-ptasie-mleczko": {
+  "wp": "https://en.wikipedia.org/wiki/Ptasie_mleczko"
+ },
+ "pl-miod-pitny": {
+  "wp": "https://en.wikipedia.org/wiki/Mead_in_Poland"
+ },
+ "pl-krakow-szopka": {
+  "wp": "https://en.wikipedia.org/wiki/Krak%C3%B3w_szopka"
+ },
+ "pl-lowicz-wycinanki": {
+  "wp": "https://en.wikipedia.org/wiki/Slavic_paper_cutting"
+ },
+ "pl-poster-prints": {
+  "wp": "https://en.wikipedia.org/wiki/Polish_School_of_Posters"
+ },
+ "cz-spa-wafers": {
+  "wp": null
+ },
+ "cz-horicke-trubicky": {
+  "wp": null
+ },
+ "cz-stramberske-usi": {
+  "wp": null
+ },
+ "cz-palava-wine": {
+  "wp": "https://en.wikipedia.org/wiki/P%C3%A1lava_(grape)"
+ },
+ "cz-bohemian-glass": {
+  "wp": "https://en.wikipedia.org/wiki/Bohemian_glass"
+ },
+ "cz-krtek": {
+  "wp": null
+ },
+ "cz-koh-i-noor": {
+  "wp": "https://en.wikipedia.org/wiki/Koh-i-Noor_Hardtmuth",
+  "u": true
+ },
+ "sk-skalicky-trdelnik": {
+  "wp": "https://en.wikipedia.org/wiki/Trdeln%C3%ADk"
+ },
+ "sk-cicmany": {
+  "wp": "https://en.wikipedia.org/wiki/%C4%8Ci%C4%8Dmany"
+ },
+ "sk-tatratea": {
+  "wp": null
+ },
+ "sk-kofola": {
+  "wp": "https://en.wikipedia.org/wiki/Kofola",
+  "u": true
+ },
+ "hu-paprika": {
+  "wp": "https://en.wikipedia.org/wiki/Paprika"
+ },
+ "hu-szaloncukor": {
+  "wp": "https://en.wikipedia.org/wiki/Szaloncukor"
+ },
+ "hu-palinka": {
+  "wp": "https://en.wikipedia.org/wiki/P%C3%A1linka"
+ },
+ "hu-matyo": {
+  "wp": "https://en.wikipedia.org/wiki/Maty%C3%B3"
+ },
+ "hu-zsolnay": {
+  "wp": "https://en.wikipedia.org/wiki/Zsolnay",
+  "u": true
+ },
+ "hu-buso-mask": {
+  "wp": "https://en.wikipedia.org/wiki/Bus%C3%B3j%C3%A1r%C3%A1s"
+ },
+ "hu-unicum": {
+  "wp": "https://en.wikipedia.org/wiki/Unicum"
+ },
+ "si-pumpkin-oil": {
+  "wp": "https://en.wikipedia.org/wiki/Pumpkin_seed_oil"
+ },
+ "si-potica": {
+  "wp": "https://en.wikipedia.org/wiki/Potica"
+ },
+ "si-teran": {
+  "wp": null
+ },
+ "si-idrija-lace": {
+  "wp": "https://en.wikipedia.org/wiki/Idrija_lace"
+ },
+ "hr-paprenjak": {
+  "wp": "https://en.wikipedia.org/wiki/Paprenjak"
+ },
+ "hr-maraschino": {
+  "wp": "https://en.wikipedia.org/wiki/Maraschino"
+ },
+ "hr-plavac-mali": {
+  "wp": "https://en.wikipedia.org/wiki/Plavac_Mali"
+ },
+ "hr-pag-lace": {
+  "wp": "https://en.wikipedia.org/wiki/Pag_lace"
+ },
+ "hr-licitar": {
+  "wp": "https://en.wikipedia.org/wiki/Licitar"
+ },
+ "ba-zilavka": {
+  "wp": "https://en.wikipedia.org/wiki/%C5%BDilavka"
+ },
+ "ba-vucko": {
+  "wp": "https://en.wikipedia.org/wiki/Vu%C4%8Dko"
+ },
+ "ba-sevdalinka": {
+  "wp": "https://en.wikipedia.org/wiki/Sevdalinka"
+ },
+ "rs-leskovac-ajvar": {
+  "wp": "https://en.wikipedia.org/wiki/Ajvar"
+ },
+ "rs-slatko": {
+  "wp": "https://en.wikipedia.org/wiki/Slatko"
+ },
+ "rs-vanilice": {
+  "wp": null
+ },
+ "rs-sljivovica": {
+  "wp": "https://en.wikipedia.org/wiki/Slivovitz"
+ },
+ "rs-prokupac": {
+  "wp": "https://en.wikipedia.org/wiki/Prokupac"
+ },
+ "rs-pirot-kilim": {
+  "wp": "https://en.wikipedia.org/wiki/Pirot_carpet"
+ },
+ "me-vranac": {
+  "wp": "https://en.wikipedia.org/wiki/Vranac"
+ },
+ "xk-plis": {
+  "wp": "https://en.wikipedia.org/wiki/Qeleshe"
+ },
+ "mk-pindjur": {
+  "wp": "https://en.wikipedia.org/wiki/Pindjur"
+ },
+ "mk-ohrid-pearl": {
+  "wp": null
+ },
+ "ro-zacusca": {
+  "wp": "https://en.wikipedia.org/wiki/Zacusc%C4%83"
+ },
+ "ro-feteasca-neagra": {
+  "wp": "https://en.wikipedia.org/wiki/Feteasc%C4%83_neagr%C4%83"
+ },
+ "ro-tuica": {
+  "wp": "https://en.wikipedia.org/wiki/%C8%9Auic%C4%83"
+ },
+ "ro-horezu": {
+  "wp": "https://en.wikipedia.org/wiki/Horezu_ceramics"
+ },
+ "ro-covrigi-buzau": {
+  "wp": "https://en.wikipedia.org/wiki/Covrigi"
+ },
+ "bg-lyutenitsa": {
+  "wp": "https://en.wikipedia.org/wiki/Lyutenitsa"
+ },
+ "bg-sharena-sol": {
+  "wp": "https://en.wikipedia.org/wiki/Sharena_sol"
+ },
+ "bg-mavrud": {
+  "wp": "https://en.wikipedia.org/wiki/Mavrud"
+ },
+ "bg-chiprovtsi": {
+  "wp": "https://en.wikipedia.org/wiki/Chiprovtsi_kilim"
+ },
+ "bg-kukeri-mask": {
+  "wp": "https://en.wikipedia.org/wiki/Kukeri"
+ },
+ "md-cozonac": {
+  "wp": "https://en.wikipedia.org/wiki/Cozonac"
+ },
+ "md-martisor": {
+  "wp": "https://en.wikipedia.org/wiki/M%C4%83r%C8%9Bi%C8%99or"
+ },
+ "by-zefir": {
+  "wp": "https://en.wikipedia.org/wiki/Zefir_(food)"
+ },
+ "by-pryanik": {
+  "wp": "https://en.wikipedia.org/wiki/Pryanik"
+ },
+ "by-krambambula": {
+  "wp": "https://en.wikipedia.org/wiki/Krambambula"
+ },
+ "by-slutsk-belt": {
+  "wp": null
+ },
+ "ua-petrykivka": {
+  "wp": "https://en.wikipedia.org/wiki/Petrykivka_painting"
+ },
+ "ua-pysanka": {
+  "wp": "https://en.wikipedia.org/wiki/Egg_decorating_in_Slavic_culture"
+ },
+ "ee-turbliss-peat": {
+  "u": true
+ },
+ "lv-madara": {
+  "u": false
+ },
+ "lv-anangel-glass": {
+  "u": true
+ },
+ "lt-smells-like-spells": {
+  "u": false
+ },
+ "si-piran-salt": {
+  "u": true
+ },
+ "si-pomelaj-cornhusk": {
+  "u": true
+ },
+ "hr-croata-tie": {
+  "u": true
+ },
+ "xk-vipa-chips": {
+  "u": true
+ },
+ "ro-carturesti": {
+  "u": true
+ },
+ "md-black-pottery": {
+  "u": true
+ },
+ "md-cricova": {
+  "u": true
+ },
+ "ua-yurashky": {
+  "u": true
+ },
+ "ua-gifty": {
+  "u": true
+ }
+}

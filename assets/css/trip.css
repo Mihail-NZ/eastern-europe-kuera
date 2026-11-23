@@ -460,3 +460,21 @@
   .tp-sim-opts.is-small { grid-template-columns: 1fr 1fr; }
   .tp-sim-answers li span { min-width: 0; display: block; }
 }
+/* 루트별 기념품 */
+.tp-sv { list-style: none; margin: 14px 0 0; padding: 0; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 14px; }
+.tp-sv a { display: flex; flex-direction: column; height: 100%; background: var(--card); border: 1px solid var(--rule); border-radius: 12px; overflow: hidden; color: inherit; text-decoration: none; transition: transform .18s ease, box-shadow .18s ease; }
+.tp-sv a:hover { transform: translateY(-2px); box-shadow: var(--shadow); }
+.tp-sv-ph { display: block; aspect-ratio: 1 / 1; background: #e9eef6; }
+.tp-sv-ph img { width: 100%; height: 100%; display: block; object-fit: cover; }
+.tp-sv-ph img.is-tall { object-fit: contain; background: #f1f4f9; }
+.tp-sv-ph.is-empty { display: flex; align-items: center; justify-content: center; background: repeating-linear-gradient(135deg, #eef2f8 0 10px, #e6ecf5 10px 20px); font-size: 12px; color: #7a88a6; }
+.tp-sv-b { display: flex; flex-direction: column; gap: 3px; padding: 10px 12px 12px; flex: 1; }
+.tp-sv-c { display: flex; align-items: center; gap: 5px; font-size: 11.5px; color: var(--muted); }
+.tp-sv-c .tp-flag { width: 16px; height: auto; }
+.tp-sv-b strong { font: 600 15px/1.35 var(--serif); }
+.tp-sv-w { font-size: 12.5px; line-height: 1.5; color: #44506c; }
+.tp-sv-at { margin-top: auto; padding-top: 6px; font-size: 11.5px; font-weight: 500; color: var(--blue); }
+@media (max-width: 1100px) { .tp-sv { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+@media (max-width: 860px) { .tp-sv { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (max-width: 560px) { .tp-sv { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; } }
+@media (prefers-reduced-motion: reduce) { .tp-sv a { transition: none; } .tp-sv a:hover { transform: none; } }

@@ -805,6 +805,73 @@ ${P.map((p, i) => `<g transform="translate(${p[0].toFixed(1)},${p[1].toFixed(1)}
     const js = document.createElement('script'); js.src = 'https://unpkg.com/leaflet@1.9.4/dist/leaflet.js';
     js.onload = () => cb(true); js.onerror = () => cb(false); document.head.appendChild(js);
   }
+  /* ---------- 루트별 기념품 (data-souvenirs.js) ----------
+   * 방문 나라를 숙박 비중대로 나눠 최대 10개를 고른다. 같은 개념(와인끼리, 증류주끼리, 꿀끼리 …)은 한 번만,
+   * 한 카테고리는 3개까지, 술은 2개까지. 지나가는 도시에서 살 수 있는 상품을 먼저 고른다. */
+  const SV_GROUP = { 'red-wine': 'wine', 'white-wine': 'wine', 'fruit-wine': 'wine', sparkling: 'wine', 'fruit-brandy': 'spirit', brandy: 'spirit', 'anise-spirit': 'spirit',
+    'herbal-liqueur': 'liqueur', 'fruit-liqueur': 'liqueur', 'honey-liqueur': 'liqueur', mead: 'liqueur', 'craft-chocolate': 'chocolate', candy: 'chocolate', caramel: 'chocolate',
+    'fruit-preserve': 'jam', 'berry-jam': 'jam', 'fruit-paste': 'jam', syrup: 'jam', rose: 'jam', ajvar: 'spread', sauce: 'spread', pickle: 'spread', halva: 'lokum', marshmallow: 'lokum',
+    'rye-snack': 'chips', biscuit: 'wafer', cookie: 'gingerbread', pastry: 'cake', 'dried-fruit': 'figs', 'candied-fruit': 'figs', oil: 'olive-oil', vinegar: 'olive-oil',
+    porcelain: 'pottery', woven: 'textile', 'folk-pattern': 'textile', kilim: 'textile', linen: 'textile', wool: 'knit', scarf: 'textile', soap: 'cosmetics', lavender: 'cosmetics', candle: 'cosmetics',
+    filigree: 'jewel', pearl: 'jewel', amber: 'jewel', beads: 'jewel', 'design-goods': 'stationery', paper: 'stationery', papercut: 'folk-art', painting: 'folk-art', poster: 'folk-art',
+    'museum-goods': 'character', plush: 'character', 'car-model': 'miniature', replica: 'miniature', puppet: 'miniature', decoration: 'folk-art', 'painted-egg': 'folk-art', mask: 'folk-art' };
+  function souvenirPicks(vr, max) {
+    const SV = window.SOUVENIRS;
+    if (!SV) return [];
+    const cs = vr.countries.filter(cc => SV.countries[cc] && !SV.countries[cc].warn);
+    if (!cs.length) return [];
+    const cities = new Set(vr.stops.map(s => s.id));
+    const nightsOf = cc => vr.stops.filter(s => s.city.c === cc).reduce((a, s) => a + s.n, 0) || 1;
+    const total = cs.reduce((a, cc) => a + nightsOf(cc), 0);
+    // 정원: 나라마다 최소 1개(5개국 이하면 2개), 나머지는 숙박 비중대로
+    const floor = cs.length <= 5 ? Math.min(2, Math.floor(max / cs.length)) : 1;
+    const quota = Object.fromEntries(cs.map(cc => [cc, floor]));
+    let left = max - floor * cs.length;
+    const want = cs.map(cc => [cc, nightsOf(cc) / total * max - floor]).sort((a, b) => b[1] - a[1]);
+    while (left > 0 && want.length) { for (const w of want) { if (left <= 0) break; if (w[1] > 0 || want.every(x => x[1] <= 0)) { quota[w[0]]++; w[1] -= 1; left--; } } }
+    const top = new Set(cs.flatMap(cc => SV.countries[cc].top));
+    const rank = it => {
+      const hit = (it.ci || []).filter(c => cities.has(c));
+      return it.p + (hit.length ? 1 : (it.ci || []).length ? -0.8 : 0) + (it.img ? 0.35 : -0.3) + (top.has(it.id) ? 0.4 : 0) + (it.v ? 0.15 : 0);
+    };
+    const pool = Object.fromEntries(cs.map(cc => [cc, SV.items.filter(x => x.cc === cc).map(x => [x, rank(x)]).sort((a, b) => b[1] - a[1]).map(x => x[0])]));
+    const used = new Set(), catN = {}, picks = [], got = {};
+    let alc = 0;
+    const fits = it => !used.has(SV_GROUP[it.k] || it.k) && (catN[it.c] || 0) < 3 && !(it.im === 'alc' && alc >= 2);
+    // 같은 나라 안에서는 카테고리가 겹치지 않는 상품을 먼저(없으면 겹쳐도 됨)
+    const best = cc => pool[cc].find(it => fits(it) && !picks.some(p => p.cc === cc && p.c === it.c)) || pool[cc].find(fits);
+    const take = (cc, it) => { picks.push(it); used.add(SV_GROUP[it.k] || it.k); catN[it.c] = (catN[it.c] || 0) + 1; if (it.im === 'alc') alc++; got[cc] = (got[cc] || 0) + 1; pool[cc] = pool[cc].filter(x => x !== it); };
+    // 1차: 정원 안에서 나라 순서대로 한 개씩 돌아가며
+    for (let round = 0, moved = true; moved && picks.length < max; round++) {
+      moved = false;
+      for (const cc of cs) {
+        if (picks.length >= max || (got[cc] || 0) >= quota[cc]) continue;
+        const it = best(cc);
+        if (it) { take(cc, it); moved = true; }
+      }
+    }
+    // 2차: 채우지 못한 자리는 다른 나라에서(겹치지 않는 것만)
+    for (let moved = true; moved && picks.length < max;) {
+      moved = false;
+      for (const cc of cs) { if (picks.length >= max) break; const it = best(cc); if (it) { take(cc, it); moved = true; } }
+    }
+    // 방문 순서 → 같은 나라 안에서는 고른 순서
+    return cs.flatMap(cc => picks.filter(p => p.cc === cc)).map(it => ({ it, at: (it.ci || []).filter(c => cities.has(c)).map(c => C[c].ko) }));
+  }
+  function souvenirHtml(vr) {
+    const SV = window.SOUVENIRS, list = souvenirPicks(vr, 10);
+    if (!list.length) return '<p class="tp-hint">이 루트의 나라는 아직 기념품 정보가 없습니다.</p>';
+    const cat = id => (SV.cats.find(c => c[0] === id) || [id, id])[1];
+    return `<ul class="tp-sv">${list.map(({ it, at }) => {
+      const slug = SV.countries[it.cc].slug;
+      const ph = it.img ? `<img src="${ROOT}${esc(it.img[0])}" alt="${esc(it.ko)}" width="${it.img[1]}" height="${it.img[2]}" loading="lazy" decoding="async"${it.img[2] > it.img[1] * 1.08 ? ' class="is-tall"' : ''}>` : '<span>사진 준비 중</span>';
+      return `<li><a href="${ROOT}countries/${slug}/travel/index.html#sv-${it.id}">
+  <span class="tp-sv-ph${it.img ? '' : ' is-empty'}">${ph}</span>
+  <span class="tp-sv-b"><span class="tp-sv-c">${flagImg(it.cc)}${esc(N[it.cc].ko)} · ${esc(cat(it.c))}</span><strong>${esc(it.ko)}</strong><span class="tp-sv-w">${esc(it.w)}</span>
+  <span class="tp-sv-at">${at.length ? `${esc(at.join('·'))}에서` : esc(it.rg || '')}</span></span></a></li>`;
+    }).join('')}</ul>`;
+  }
+
   function renderRoute(main, id) {
     const route = ROUTES.find(r => r.id === id);
     if (!route) { main.innerHTML = `<section class="page-head night"><div class="wrap"><h1>루트를 찾을 수 없습니다</h1><p><a href="${ROOT}travel/index.html" style="color:#fff">여행 루트 목록으로</a></p></div></section>`; return; }
@@ -851,6 +918,10 @@ ${P.map((p, i) => `<g transform="translate(${p[0].toFixed(1)},${p[1].toFixed(1)}
     <div class="tp-season"><div><h3>추천 월</h3><p>${monthsText(route.months)}</p></div><div><h3>피할 시기</h3><p>${esc(route.avoid)}</p></div><div class="tp-season-wide"><h3>월별</h3>${monthBar(route.months)}<p class="tp-hint">${esc(route.seasonNote)}</p></div></div>
     <ul class="tp-tips">${route.tips.map(t => `<li>${esc(t)}</li>`).join('')}<li>이런 분께: ${esc(route.who)}</li><li>현지 통화: <span data-out="cur"></span></li></ul>
     <h3>여행 전 확인할 공식 정보</h3><ul class="tp-links">${D.official.map(o => `<li><a href="${o.u}" target="_blank" rel="noopener">${esc(o.t)}</a></li>`).join('')}</ul></section>
+  ${window.SOUVENIRS ? `<section class="tp-sec" id="souvenirs"><h2>이 루트에서 사 올 기념품</h2>
+    <p class="tp-lead">지나가는 나라마다 머무는 기간에 맞춰 골랐고, 비슷한 상품(와인끼리, 꿀끼리 등)은 하나만 넣어 10개 이내로 추렸습니다. 기간 탭을 바꾸면 도시에 맞게 다시 고릅니다.</p>
+    <div data-out="sv"></div>
+    <p class="tp-hint">카드를 누르면 나라별 쇼핑·기념품 페이지에서 구매처·반입 유의사항·사진 출처를 볼 수 있습니다. 사진은 Wikimedia Commons 자유 라이선스 사진입니다.</p></section>` : ''}
   ${ev.length ? `<section class="tp-sec" id="evidence"><h2>출처</h2>
     <ul class="tp-evlist">${ev.map(e => `<li><span class="tp-ev-t t-${{ 국내: 'ko', 해외: 'en', 교통: 'tr', 통계: 'st' }[e.type] || 'en'}">${esc(e.type)}</span><a href="${esc(e.u)}" target="_blank" rel="noopener">${esc(e.t)}</a></li>`).join('')}</ul></section>` : ''}
   <section class="tp-sec" id="more"><h2>관련 콘텐츠</h2>
@@ -905,6 +976,7 @@ ${P.map((p, i) => `<g transform="translate(${p[0].toFixed(1)},${p[1].toFixed(1)}
       }).join('');
       out('legs').innerHTML = (vr.inLeg ? legHtml(vr.inLeg, '공항 도시에서 첫 숙박지까지의 이동입니다.') : '') + vr.legs.map(l => legHtml(l)).join('') + (vr.outLeg ? legHtml(vr.outLeg, '마지막 숙박지에서 출국 공항 도시까지의 이동입니다.') : '') || '<p>도시를 옮기지 않는 일정입니다.</p>';
       out('cur').textContent = vr.countries.map(x => `${N[x].ko} ${N[x].cur}`).join(' · ');
+      if (out('sv')) out('sv').innerHTML = souvenirHtml(vr);
       out('countries').innerHTML = vr.countries.map(x => (N[x].slug ? `<li><a href="${ROOT}countries/${N[x].slug}/travel/index.html">${flagImg(x)}${esc(N[x].ko)} 관광·여행 정보</a></li>` : `<li class="is-adj">${flagImg(x)}${esc(N[x].ko)} <small>국가 정보 페이지 준비 중</small></li>`)).join('');
       drawMap(vr);
     }
@@ -923,5 +995,5 @@ ${P.map((p, i) => `<g transform="translate(${p[0].toFixed(1)},${p[1].toFixed(1)}
     });
   }
 
-  window.TRIP_RENDER = { main: renderTrip, best: renderBest, sim: renderSim, route: renderRoute, _debug: { simRun, evaluate, plan, rangeOf, allocate, toPrefs, DEFAULTS, photoPick, BUCKETS } };
+  window.TRIP_RENDER = { main: renderTrip, best: renderBest, sim: renderSim, route: renderRoute, _debug: { simRun, evaluate, plan, rangeOf, allocate, toPrefs, DEFAULTS, photoPick, BUCKETS, souvenirPicks } };
 })();

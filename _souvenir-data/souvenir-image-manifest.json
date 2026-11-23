@@ -1,0 +1,3548 @@
+{
+ "ee-kalev-kama-chocolate": {
+  "searchQueries": [
+   "Kalev chocolate",
+   "Kalev kama"
+  ],
+  "candidatesFound": 0,
+  "status": "missing",
+  "note": "검토 결과 정확히 일치하는 자유 라이선스 사진 없음"
+ },
+ "ee-maiasmokk-marzipan": {
+  "searchQueries": [
+   "Maiasmokk marzipan",
+   "Tallinn marzipan figures",
+   "marzipan Tallinn"
+  ],
+  "candidatesFound": 3,
+  "status": "missing",
+  "note": "검토 결과 정확히 일치하는 자유 라이선스 사진 없음"
+ },
+ "ee-kama": {
+  "searchQueries": [
+   "kama Estonian",
+   "kama flour",
+   "kama jahu"
+  ],
+  "candidatesFound": 24,
+  "status": "verified",
+  "file": "assets/images/souvenirs/ee/ee-kama.webp",
+  "width": 960,
+  "height": 720,
+  "sourceTitle": "File:Kama.jpg",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kama.jpg",
+  "author": "Mmh",
+  "license": "CC BY-SA 3.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+  "modified": "크기 축소·WebP 변환",
+  "verifiedAt": "2026-11-21"
+ },
+ "ee-sea-buckthorn": {
+  "searchQueries": [
+   "sea buckthorn jam",
+   "sea buckthorn syrup",
+   "astelpaju"
+  ],
+  "candidatesFound": 7,
+  "status": "verified",
+  "file": "assets/images/souvenirs/ee/ee-sea-buckthorn.webp",
+  "width": 960,
+  "height": 960,
+  "sourceTitle": "File:Original sea buckthorn juice and 5-times diluted sea buckthorn juice.jpg",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Original_sea_buckthorn_juice_and_5-times_diluted_sea_buckthorn_juice.jpg",
+  "author": "François Nguyen",
+  "license": "CC BY 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+  "modified": "크기 축소·WebP 변환",
+  "verifiedAt": "2026-11-21"
+ },
+ "ee-saaremaa-juniper-syrup": {
+  "searchQueries": [
+   "juniper syrup",
+   "kadakasiirup",
+   "Saaremaa juniper"
+  ],
+  "candidatesFound": 4,
+  "status": "missing",
+  "note": "검토 결과 정확히 일치하는 자유 라이선스 사진 없음"
+ },
+ "ee-vana-tallinn": {
+  "searchQueries": [
+   "Vana Tallinn"
+  ],
+  "candidatesFound": 20,
+  "status": "verified",
+  "file": "assets/images/souvenirs/ee/ee-vana-tallinn.webp",
+  "width": 640,
+  "height": 960,
+  "sourceTitle": "File:Vana Tallinn 40 percent.jpg",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Vana_Tallinn_40_percent.jpg",
+  "author": "Fanny Schertzer",
+  "license": "CC BY-SA 2.5",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.5",
+  "modified": "크기 축소·WebP 변환",
+  "verifiedAt": "2026-11-21"
+ },
+ "ee-rhubarb-wine": {
+  "searchQueries": [
+   "rhubarb wine",
+   "rabarberivein"
+  ],
+  "candidatesFound": 19,
+  "status": "missing",
+  "note": "검토 결과 정확히 일치하는 자유 라이선스 사진 없음"
+ },
+ "ee-juniper-wood": {
+  "searchQueries": [
+   "juniper wood butter knife",
+   "juniper wood Saaremaa",
+   "kadakas puit"
+  ],
+  "candidatesFound": 9,
+  "status": "missing",
+  "note": "자동 검색에서 조건에 맞는 사진 없음"
+ },
+ "ee-muhu-embroidery": {
+  "searchQueries": [
+   "Muhu embroidery",
+   "Muhu tikand",
+   "Muhu mittens"
+  ],
+  "candidatesFound": 3,
+  "status": "missing",
+  "note": "자동 검색에서 조건에 맞는 사진 없음"
+ },
+ "ee-haapsalu-shawl": {
+  "searchQueries": [
+   "Haapsalu shawl",
+   "Haapsalu sall"
+  ],
+  "candidatesFound": 1,
+  "status": "verified",
+  "file": "assets/images/souvenirs/ee/ee-haapsalu-shawl.webp",
+  "width": 641,
+  "height": 960,
+  "sourceTitle": "File:Haapsalu sall, 218750 ERM A1050 14.jpg",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Haapsalu_sall,_218750_ERM_A1050_14.jpg",
+  "author": "Eesti Rahva Muuseum",
+  "license": "CC0",
+  "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "modified": "크기 축소·WebP 변환",
+  "verifiedAt": "2026-11-21"
+ },
+ "ee-joik-candle": {
+  "searchQueries": [
+   "JOIK Estonia cosmetics"
+  ],
+  "candidatesFound": 20,
+  "status": "verified",
+  "file": "assets/images/souvenirs/ee/ee-joik-candle.webp",
+  "width": 720,
+  "height": 960,
+  "sourceTitle": "File:Joik.jpg",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Joik.jpg",
+  "author": "Ettena01",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "modified": "크기 축소·WebP 변환",
+  "verifiedAt": "2026-11-21"
+ },
+ "ee-turbliss-peat": {
+  "searchQueries": [
+   "TurBliss peat"
+  ],
+  "candidatesFound": 0,
+  "status": "missing",
+  "note": "자동 검색에서 조건에 맞는 사진 없음"
+ },
+ "ee-stella-soomlais": {
+  "searchQueries": [
+   "Stella Soomlais"
+  ],
+  "candidatesFound": 1,
+  "status": "missing",
+  "note": "자동 검색에서 조건에 맞는 사진 없음"
+ },
+ "ee-reet-aus": {
+  "searchQueries": [
+   "Reet Aus"
+  ],
+  "candidatesFound": 20,
+  "status": "missing",
+  "note": "검토 결과 정확히 일치하는 자유 라이선스 사진 없음"
+ },
+ "lv-skriveru-gotina": {
+  "searchQueries": [
+   "Skrīveru gotiņa",
+   "Gotiņa candy"
+  ],
+  "candidatesFound": 49,
+  "status": "missing",
+  "note": "후보는 있으나 검토에서 채택하지 않음"
+ },
+ "lv-laima": {
+  "searchQueries": [
+   "Laima chocolate",
+   "Laima Riga"
+  ],
+  "candidatesFound": 22,
+  "status": "missing",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Laima_Riga_white_chocolate_caraway_seeds.jpg",
+  "note": "내려받기 실패: 썸네일을 받지 못함(429·잘림)"
+ },
+ "lv-adazu-chips": {
+  "searchQueries": [
+   "Ādažu čipsi",
+   "Adazu chips"
+  ],
+  "candidatesFound": 0,
+  "status": "missing",
+  "note": "검토 결과 정확히 일치하는 자유 라이선스 사진 없음"
+ },
+ "lv-riga-sprats": {
+  "searchQueries": [
+   "Riga sprats",
+   "Rīgas šprotes",
+   "sprats tin Latvia"
+  ],
+  "candidatesFound": 17,
+  "status": "missing",
+  "note": "후보는 있으나 검토에서 채택하지 않음"
+ },
+ "lv-rye-crisps": {
+  "searchQueries": [
+   "rupjmaize",
+   "Latvian rye bread"
+  ],
+  "candidatesFound": 11,
+  "status": "missing",
+  "note": "검토 결과 정확히 일치하는 자유 라이선스 사진 없음"
+ },
+ "lv-black-balsam": {
+  "searchQueries": [
+   "Riga Black Balsam",
+   "Rīgas Melnais balzams"
+  ],
+  "candidatesFound": 18,
+  "status": "verified",
+  "file": "assets/images/souvenirs/lv/lv-black-balsam.webp",
+  "width": 960,
+  "height": 573,
+  "sourceTitle": "File:Rīgas Melnais balzams (Upeņu, klasiskais un Element).jpg",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:R%C4%ABgas_Melnais_balzams_(Upe%C5%86u,_klasiskais_un_Element).jpg",
+  "author": "Turaids",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "modified": "크기 축소·WebP 변환",
+  "verifiedAt": "2026-11-21"
+ },
+ "lv-plukt-tea": {
+  "searchQueries": [
+   "PLŪKT tea",
+   "Plukt tea Latvia"
+  ],
+  "candidatesFound": 2,
+  "status": "missing",
+  "note": "검토 결과 정확히 일치하는 자유 라이선스 사진 없음"
+ },
+ "lv-latgale-pottery": {
+  "searchQueries": [
+   "Latgalian ceramics",
+   "Latgale pottery",
+   "Latgales keramika"
+  ],
+  "candidatesFound": 24,
+  "status": "verified",
+  "file": "assets/images/souvenirs/lv/lv-latgale-pottery.webp",
+  "width": 960,
+  "height": 896,
+  "sourceTitle": "File:Antona Ušpeļa Latgales keramika - panoramio.jpg",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Antona_U%C5%A1pe%C4%BCa_Latgales_keramika_-_panoramio.jpg",
+  "author": "Andris Pienkauss",
+  "license": "CC BY-SA 3.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+  "modified": "크기 축소·WebP 변환",
+  "verifiedAt": "2026-11-21"
+ },
+ "lv-mittens": {
+  "searchQueries": [
+   "Latvian mittens",
+   "Latvian knitted mittens",
+   "cimdi"
+  ],
+  "candidatesFound": 40,
+  "status": "verified",
+  "file": "assets/images/souvenirs/lv/lv-mittens.webp",
+  "width": 960,
+  "height": 640,
+  "sourceTitle": "File:Close Up of unique mitten oranament by Kerolaina Bula.jpg",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Close_Up_of_unique_mitten_oranament_by_Kerolaina_Bula.jpg",
+  "author": "Lin23da",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "modified": "크기 축소·WebP 변환",
+  "verifiedAt": "2026-11-21"
+ },
+ "lv-lielvarde-belt": {
+  "searchQueries": [
+   "Lielvārde belt",
+   "Lielvārdes josta"
+  ],
+  "candidatesFound": 12,
+  "status": "verified",
+  "file": "assets/images/souvenirs/lv/lv-lielvarde-belt.webp",
+  "width": 639,
+  "height": 960,
+  "sourceTitle": "File:Lielvārdes jostas fragments - panoramio.jpg",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Lielv%C4%81rdes_jostas_fragments_-_panoramio.jpg",
+  "author": "Laima Gūtmane (simka…",
+  "license": "CC BY-SA 3.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+  "modified": "크기 축소·WebP 변환",
+  "verifiedAt": "2026-11-21"
+ },
+ "lv-munio-candle": {
+  "searchQueries": [
+   "the MUNIO candle",
+   "Munio Candela"
+  ],
+  "candidatesFound": 0,
+  "status": "missing",
+  "note": "자동 검색에서 조건에 맞는 사진 없음"
+ },
+ "lv-madara": {
+  "searchQueries": [
+   "MÁDARA cosmetics",
+   "Madara organic skincare"
+  ],
+  "candidatesFound": 0,
+  "status": "missing",
+  "note": "자동 검색에서 조건에 맞는 사진 없음"
+ },
+ "lv-anangel-glass": {
+  "searchQueries": [
+   "an&angel glass",
+   "anangel glass"
+  ],
+  "candidatesFound": 21,
+  "status": "missing",
+  "note": "자동 검색에서 조건에 맞는 사진 없음"
+ },
+ "lt-sakotis": {
+  "searchQueries": [
+   "Šakotis",
+   "Sakotis cake"
+  ],
+  "candidatesFound": 30,
+  "status": "verified",
+  "file": "assets/images/souvenirs/lt/lt-sakotis.webp",
+  "width": 666,
+  "height": 960,
+  "sourceTitle": "File:Šakotis 3799.jpg",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:%C5%A0akotis_3799.jpg",
+  "author": "Sven Teschke",
+  "license": "CC BY-SA 3.0 de",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/de/deed.en",
+  "modified": "크기 축소·WebP 변환",
+  "verifiedAt": "2026-11-21"
+ },
+ "lt-grybukai": {
+  "searchQueries": [
+   "Grybukai",
+   "Lithuanian mushroom cookies"
+  ],
+  "candidatesFound": 17,
+  "status": "missing",
+  "note": "자동 검색에서 조건에 맞는 사진 없음"
+ },
+ "lt-obuoliu-suris": {
+  "searchQueries": [
+   "obuolių sūris",
+   "apple cheese Lithuania"
+  ],
+  "candidatesFound": 6,
+  "status": "verified",
+  "file": "assets/images/souvenirs/lt/lt-obuoliu-suris.webp",
+  "width": 960,
+  "height": 720,
+  "sourceTitle": "File:Lithuanian Apple Cheese.jpg",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Lithuanian_Apple_Cheese.jpg",
+  "author": "Bearas",
+  "license": "CC BY 3.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+  "modified": "크기 축소·WebP 변환",
+  "verifiedAt": "2026-11-21"
+ },
+ "lt-quince": {
+  "searchQueries": [
+   "svarainių sirupas",
+   "Chaenomeles syrup"
+  ],
+  "candidatesFound": 2,
+  "status": "missing",
+  "note": "검토 결과 정확히 일치하는 자유 라이선스 사진 없음"
+ },
+ "lt-rye-snacks": {
+  "searchQueries": [
+   "kepta duona",
+   "Lithuanian fried bread"
+  ],
+  "candidatesFound": 3,
+  "status": "verified",
+  "file": "assets/images/souvenirs/lt/lt-rye-snacks.webp",
+  "width": 960,
+  "height": 720,
+  "sourceTitle": "File:Kepta duona.JPG",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kepta_duona.JPG",
+  "author": "Bearas",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "modified": "크기 축소·WebP 변환",
+  "verifiedAt": "2026-11-21"
+ },
+ "lt-stakliskes-mead": {
+  "searchQueries": [
+   "Stakliškės mead",
+   "Lithuanian mead midus"
+  ],
+  "candidatesFound": 0,
+  "status": "missing",
+  "note": "검토 결과 정확히 일치하는 자유 라이선스 사진 없음"
+ },
+ "lt-trejos-devynerios": {
+  "searchQueries": [
+   "Trejos devynerios"
+  ],
+  "candidatesFound": 1,
+  "status": "verified",
+  "file": "assets/images/souvenirs/lt/lt-trejos-devynerios.webp",
+  "width": 960,
+  "height": 640,
+  "sourceTitle": "File:Malunininku, Trejos Devynerios, Stumbro Starka.jpg",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Malunininku,_Trejos_Devynerios,_Stumbro_Starka.jpg",
+  "author": "Quinn Dombrowski",
+  "license": "CC BY-SA 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+  "modified": "크기 축소·WebP 변환",
+  "verifiedAt": "2026-11-21"
+ },
+ "lt-linen": {
+  "searchQueries": [
+   "Lithuanian linen",
+   "linen Vilnius"
+  ],
+  "candidatesFound": 1,
+  "status": "missing",
+  "note": "검토 결과 정확히 일치하는 자유 라이선스 사진 없음"
+ },
+ "lt-amber": {
+  "searchQueries": [
+   "Baltic amber jewellery",
+   "amber necklace Lithuania",
+   "amber jewelry"
+  ],
+  "candidatesFound": 44,
+  "status": "verified",
+  "file": "assets/images/souvenirs/lt/lt-amber.webp",
+  "width": 960,
+  "height": 720,
+  "sourceTitle": "File:Palanga Amber Museum - Necklaces.jpg",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Palanga_Amber_Museum_-_Necklaces.jpg",
+  "author": "GraceKelly",
+  "license": "CC BY-SA 3.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+  "modified": "크기 축소·WebP 변환",
+  "verifiedAt": "2026-11-21"
+ },
+ "lt-folk-pottery": {
+  "searchQueries": [
+   "Lithuanian black ceramics",
+   "juodoji keramika",
+   "Lithuanian pottery"
+  ],
+  "candidatesFound": 2,
+  "status": "missing",
+  "note": "자동 검색에서 조건에 맞는 사진 없음"
+ },
+ "lt-smells-like-spells": {
+  "searchQueries": [
+   "Smells Like Spells"
+  ],
+  "candidatesFound": 14,
+  "status": "missing",
+  "note": "자동 검색에서 조건에 맞는 사진 없음"
+ },
+ "lt-chocolate-naive": {
+  "searchQueries": [
+   "Chocolate Naive"
+  ],
+  "candidatesFound": 2,
+  "status": "missing",
+  "note": "검토 결과 정확히 일치하는 자유 라이선스 사진 없음"
+ },
+ "lt-ruta": {
+  "searchQueries": [
+   "Rūta chocolate",
+   "Ruta chocolate factory"
+  ],
+  "candidatesFound": 4,
+  "status": "verified",
+  "file": "assets/images/souvenirs/lt/lt-ruta.webp",
+  "width": 960,
+  "height": 829,
+  "sourceTitle": "File:Rūta chocolate store, Vilnius old town, May 2026.jpg",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:R%C5%ABta_chocolate_store,_Vilnius_old_town,_May_2026.jpg",
+  "author": "Bdx",
+  "license": "CC0",
+  "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "modified": "크기 축소·WebP 변환",
+  "verifiedAt": "2026-11-21"
+ },
+ "lt-verba": {
+  "searchQueries": [
+   "Vilnius palm verba",
+   "Verbos Vilnius",
+   "Kaziuko mugė verbos"
+  ],
+  "candidatesFound": 9,
+  "status": "verified",
+  "file": "assets/images/souvenirs/lt/lt-verba.webp",
+  "width": 960,
+  "height": 640,
+  "sourceTitle": "File:Verbos Kaziuko mugeje.jpg",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Verbos_Kaziuko_mugeje.jpg",
+  "author": "Evaldas Liutkus from Vilnius, Lithuania",
+  "license": "CC BY 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+  "modified": "크기 축소·WebP 변환",
+  "verifiedAt": "2026-11-21"
+ },
+ "pl-torun-pierniki": {
+  "searchQueries": [
+   "Toruń gingerbread",
+   "Pierniki toruńskie",
+   "Katarzynki"
+  ],
+  "candidatesFound": 90,
+  "status": "verified",
+  "file": "assets/images/souvenirs/pl/pl-torun-pierniki.webp",
+  "width": 960,
+  "height": 521,
+  "sourceTitle": "File:PL gingerbread from Torun.jpg",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:PL_gingerbread_from_Torun.jpg",
+  "author": "Marcin Floryan",
+  "license": "CC BY 2.5",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.5",
+  "modified": "크기 축소·WebP 변환",
+  "verifiedAt": "2026-11-21"
+ },
+ "pl-krowki": {
+  "searchQueries": [
+   "Krówki",
+   "Krówka candy"
+  ],
+  "candidatesFound": 35,
+  "status": "verified",
+  "file": "assets/images/souvenirs/pl/pl-krowki.webp",
+  "width": 960,
+  "height": 720,
+  "sourceTitle": "File:Krówki Milanówek.jpg",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kr%C3%B3wki_Milan%C3%B3wek.jpg",
+  "author": "Anonymous photographer working for \" L. Pomorski i Syn: company",
+  "license": "CC BY-SA 3.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+  "modified": "크기 축소·WebP 변환",
+  "verifiedAt": "2026-11-21"
+ },
+ "pl-sliwka-naleczowska": {
+  "searchQueries": [
+   "Śliwka Nałęczowska",
+   "chocolate covered plum Solidarność"
+  ],
+  "candidatesFound": 1,
+  "status": "missing",
+  "note": "검토 결과 정확히 일치하는 자유 라이선스 사진 없음"
+ },
+ "pl-ptasie-mleczko": {
+  "searchQueries": [
+   "Ptasie mleczko",
+   "Ptasie mleczko Wedel"
+  ],
+  "candidatesFound": 34,
+  "status": "missing",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ptasie_mleczko_2007_by_RaBoe_02.jpg",
+  "note": "내려받기 실패: 썸네일을 받지 못함(429·잘림)"
+ },
+ "pl-kashubian-strawberry": {
+  "searchQueries": [
+   "Truskawka kaszubska",
+   "Kashubian strawberry"
+  ],
+  "candidatesFound": 2,
+  "status": "verified",
+  "file": "assets/images/souvenirs/pl/pl-kashubian-strawberry.webp",
+  "width": 960,
+  "height": 638,
+  "sourceTitle": "File:2015, Fair Smaki Regionow, Poznan (truskawka kaszubska).JPG",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:2015,_Fair_Smaki_Regionow,_Poznan_(truskawka_kaszubska).JPG",
+  "author": "MOs810",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "modified": "크기 축소·WebP 변환",
+  "verifiedAt": "2026-11-21"
+ },
+ "pl-miod-pitny": {
+  "searchQueries": [
+   "Miód pitny",
+   "Polish mead"
+  ],
+  "candidatesFound": 60,
+  "status": "verified",
+  "file": "assets/images/souvenirs/pl/pl-miod-pitny.webp",
+  "width": 638,
+  "height": 960,
+  "sourceTitle": "File:Miód Pitny Półtorak.JPG",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Mi%C3%B3d_Pitny_P%C3%B3%C5%82torak.JPG",
+  "author": "Beemwej",
+  "license": "CC BY-SA 3.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+  "modified": "크기 축소·WebP 변환",
+  "verifiedAt": "2026-11-21"
+ },
+ "pl-wisniowka": {
+  "searchQueries": [
+   "Wiśniówka",
+   "wisniowka cherry"
+  ],
+  "candidatesFound": 35,
+  "status": "verified",
+  "file": "assets/images/souvenirs/pl/pl-wisniowka.webp",
+  "width": 698,
+  "height": 960,
+  "sourceTitle": "File:Nalewka Wiśniówka.JPG",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Nalewka_Wi%C5%9Bni%C3%B3wka.JPG",
+  "author": null,
+  "license": "CC BY-SA 3.0",
+  "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+  "modified": "크기 축소·WebP 변환",
+  "verifiedAt": "2026-11-21"
+ },
+ "pl-krakow-szopka": {
+  "searchQueries": [
+   "Szopka krakowska",
+   "Kraków nativity scene szopka"
+  ],
+  "candidatesFound": 45,
+  "status": "verified",
+  "file": "assets/images/souvenirs/pl/pl-krakow-szopka.webp",
+  "width": 720,
+  "height": 960,
+  "sourceTitle": "File:Szopka krakowska4.JPG",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Szopka_krakowska4.JPG",
+  "author": "user:cancre",
+  "license": "CC BY-SA 2.5",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.5",
+  "modified": "크기 축소·WebP 변환",
+  "verifiedAt": "2026-11-21"
+ },
+ "pl-lowicz-wycinanki": {
+  "searchQueries": [
+   "Wycinanki łowickie",
+   "Łowicz paper cutting",
+   "wycinanka"
+  ],
+  "candidatesFound": 30,
+  "status": "verified",
+  "file": "assets/images/souvenirs/pl/pl-lowicz-wycinanki.webp",
+  "width": 960,
+  "height": 654,
+  "sourceTitle": "File:Wycinanka lowicka. 1909 (106673350).jpg",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Wycinanka_lowicka._1909_(106673350).jpg",
+  "author": "Unknown author Unknown author",
+  "license": "Public domain",
+  "licenseUrl": null,
+  "modified": "크기 축소·WebP 변환",
+  "verifiedAt": "2026-11-21"
+ },
+ "pl-zakopane-slippers": {
+  "searchQueries": [
+   "Zakopane sheepskin slippers",
+   "Gubałówka market",
+   "Zakopane market wool"
+  ],
+  "candidatesFound": 0,
+  "status": "missing",
+  "note": "자동 검색에서 조건에 맞는 사진 없음"
+ },
+ "pl-kabak-socks": {
+  "searchQueries": [
+   "KABAK socks"
+  ],
+  "candidatesFound": 0,
+  "status": "missing",
+  "note": "자동 검색에서 조건에 맞는 사진 없음"
+ },
+ "pl-cztery-szpaki": {
+  "searchQueries": [
+   "Cztery Szpaki"
+  ],
+  "candidatesFound": 0,
+  "status": "missing",
+  "note": "자동 검색에서 조건에 맞는 사진 없음"
+ },
+ "pl-poster-prints": {
+  "searchQueries": [
+   "Polish School of Posters",
+   "Polish poster"
+  ],
+  "candidatesFound": 38,
+  "status": "missing",
+  "note": "검토 결과 정확히 일치하는 자유 라이선스 사진 없음"
+ },
+ "pl-wawel-mieszanka": {
+  "searchQueries": [
+   "Wawel chocolate",
+   "Mieszanka Krakowska",
+   "Wawel Kraków confectionery"
+  ],
+  "candidatesFound": 0,
+  "status": "missing",
+  "note": "검토 결과 정확히 일치하는 자유 라이선스 사진 없음"
+ },
+ "cz-spa-wafers": {
+  "searchQueries": [
+   "Karlovarské oplatky",
+   "Karlovy Vary wafers",
+   "spa wafers"
+  ],
+  "candidatesFound": 5,
+  "status": "verified",
+  "file": "assets/images/souvenirs/cz/cz-spa-wafers.webp",
+  "width": 960,
+  "height": 720,
+  "sourceTitle": "File:Nakousaná karlovarská oplatka.JPG",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Nakousan%C3%A1_karlovarsk%C3%A1_oplatka.JPG",
+  "author": "Juan de Vojníkov",
+  "license": "CC BY-SA 3.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+  "modified": "크기 축소·WebP 변환",
+  "verifiedAt": "2026-11-21"
+ },
+ "cz-pardubice-pernik": {
+  "searchQueries": [
+   "Pardubický perník",
+   "Pardubice gingerbread"
+  ],
+  "candidatesFound": 15,
+  "status": "missing",
+  "note": "검토 결과 정확히 일치하는 자유 라이선스 사진 없음"
+ },
+ "cz-horicke-trubicky": {
+  "searchQueries": [
+   "Hořické trubičky"
+  ],
+  "candidatesFound": 6,
+  "status": "verified",
+  "file": "assets/images/souvenirs/cz/cz-horicke-trubicky.webp",
+  "width": 960,
+  "height": 640,
+  "sourceTitle": "File:Hořické trubičky.JPG",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ho%C5%99ick%C3%A9_trubi%C4%8Dky.JPG",
+  "author": "Hadonos",
+  "license": "Public domain",
+  "licenseUrl": null,
+  "modified": "크기 축소·WebP 변환",
+  "verifiedAt": "2026-11-21"
+ },
+ "cz-stramberske-usi": {
+  "searchQueries": [
+   "Štramberské uši",
+   "Stramberk ears"
+  ],
+  "candidatesFound": 7,
+  "status": "verified",
+  "file": "assets/images/souvenirs/cz/cz-stramberske-usi.webp",
+  "width": 960,
+  "height": 720,
+  "sourceTitle": "File:Štramberské uši.JPG",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:%C5%A0trambersk%C3%A9_u%C5%A1i.JPG",
+  "author": "Original uploader was Manka at cs.wikipedia",
+  "license": "CC BY-SA 3.0",
+  "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+  "modified": "크기 축소·WebP 변환",
+  "verifiedAt": "2026-11-21"
+ },
+ "cz-haslerky": {
+  "searchQueries": [
+   "Hašlerky"
+  ],
+  "candidatesFound": 30,
+  "status": "verified",
+  "file": "assets/images/souvenirs/cz/cz-haslerky.webp",
+  "width": 960,
+  "height": 689,
+  "sourceTitle": "File:Hašlerka1.jpg",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ha%C5%A1lerka1.jpg",
+  "author": "Anatol Svahilec",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "modified": "크기 축소·WebP 변환",
+  "verifiedAt": "2026-11-21"
+ },
+ "cz-palava-wine": {
+  "searchQueries": [
+   "Pálava wine",
+   "Pálava grape"
+  ],
+  "candidatesFound": 3,
+  "status": "missing",
+  "note": "검토 결과 정확히 일치하는 자유 라이선스 사진 없음"
+ },
+ "cz-craft-beer": {
+  "searchQueries": [
+   "Czech microbrewery beer",
+   "minipivovar"
+  ],
+  "candidatesFound": 9,
+  "status": "verified",
+  "file": "assets/images/souvenirs/cz/cz-craft-beer.webp",
+  "width": 639,
+  "height": 960,
+  "sourceTitle": "File:Beer from U Medvídků.jpg",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Beer_from_U_Medv%C3%ADdk%C5%AF.jpg",
+  "author": "John M",
+  "license": "CC BY-SA 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+  "modified": "크기 축소·WebP 변환",
+  "verifiedAt": "2026-11-21"
+ },
+ "cz-bohemian-glass": {
+  "searchQueries": [
+   "Bohemian glass",
+   "Moser glass",
+   "Czech crystal glass"
+  ],
+  "candidatesFound": 30,
+  "status": "verified",
+  "file": "assets/images/souvenirs/cz/cz-bohemian-glass.webp",
+  "width": 640,
+  "height": 960,
+  "sourceTitle": "File:Bohemian Glass 05.jpg",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Bohemian_Glass_05.jpg",
+  "author": "Kritzolina",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "modified": "크기 축소·WebP 변환",
+  "verifiedAt": "2026-11-21"
+ },
+ "cz-marionette": {
+  "searchQueries": [
+   "Czech marionette",
+   "Prague marionettes shop"
+  ],
+  "candidatesFound": 30,
+  "status": "verified",
+  "file": "assets/images/souvenirs/cz/cz-marionette.webp",
+  "width": 960,
+  "height": 720,
+  "sourceTitle": "File:Marionettes for Sale - Prague - Czech Republic.jpg",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Marionettes_for_Sale_-_Prague_-_Czech_Republic.jpg",
+  "author": "Adam Jones, Ph.D.",
+  "license": "CC BY-SA 3.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+  "modified": "크기 축소·WebP 변환",
+  "verifiedAt": "2026-11-21"
+ },
+ "cz-jablonec-beads": {
+  "searchQueries": [
+   "Jablonec glass beads",
+   "Czech glass beads"
+  ],
+  "candidatesFound": 16,
+  "status": "verified",
+  "file": "assets/images/souvenirs/cz/cz-jablonec-beads.webp",
+  "width": 960,
+  "height": 720,
+  "sourceTitle": "File:Jablonec nad Nisou, Muzeum skla a bižuterie, expozice (04).jpg",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Jablonec_nad_Nisou,_Muzeum_skla_a_bi%C5%BEuterie,_expozice_(04).jpg",
+  "author": "Palickap",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "modified": "크기 축소·WebP 변환",
+  "verifiedAt": "2026-11-21"
+ },
+ "cz-manufaktura": {
+  "searchQueries": [
+   "Manufaktura shop Prague",
+   "Manufaktura cosmetics"
+  ],
+  "candidatesFound": 0,
+  "status": "missing",
+  "note": "검토 결과 정확히 일치하는 자유 라이선스 사진 없음"
+ },
+ "cz-papelote": {
+  "searchQueries": [
+   "papelote Prague"
+  ],
+  "candidatesFound": 0,
+  "status": "missing",
+  "note": "자동 검색에서 조건에 맞는 사진 없음"
+ },
+ "cz-botas-vasky": {
+  "searchQueries": [
+   "Botas 66 sneakers",
+   "Botas shoes Czech"
+  ],
+  "candidatesFound": 45,
+  "status": "missing",
+  "note": "자동 검색에서 조건에 맞는 사진 없음"
+ },
+ "cz-krtek": {
+  "searchQueries": [
+   "Krtek mole toy",
+   "Krteček plush"
+  ],
+  "candidatesFound": 30,
+  "status": "missing",
+  "note": "검토 결과 정확히 일치하는 자유 라이선스 사진 없음"
+ },
+ "cz-koh-i-noor": {
+  "searchQueries": [
+   "Koh-i-noor Hardtmuth pencils",
+   "Koh-i-noor pencil"
+  ],
+  "candidatesFound": 16,
+  "status": "verified",
+  "file": "assets/images/souvenirs/cz/cz-koh-i-noor.webp",
+  "width": 960,
+  "height": 720,
+  "sourceTitle": "File:Koh-i-noor Hardtmuth pencils.jpg",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Koh-i-noor_Hardtmuth_pencils.jpg",
+  "author": "Marius J. Svoboda ( Ria )",
+  "license": "CC BY-SA 3.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+  "modified": "크기 축소·WebP 변환",
+  "verifiedAt": "2026-11-21"
+ },
+ "sk-skalicky-trdelnik": {
+  "searchQueries": [
+   "Skalický trdelník",
+   "trdelník Skalica"
+  ],
+  "candidatesFound": 30,
+  "status": "missing",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:SkalickyTrdelnik.JPG",
+  "note": "내려받기 실패: 썸네일을 받지 못함(429·잘림)"
+ },
+ "sk-bratislavske-rozky": {
+  "searchQueries": [
+   "Bratislavské rožky",
+   "Pressburger Kipferl"
+  ],
+  "candidatesFound": 2,
+  "status": "verified",
+  "file": "assets/images/souvenirs/sk/sk-bratislavske-rozky.webp",
+  "width": 960,
+  "height": 643,
+  "sourceTitle": "File:Bratislavské rožky.jpg",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Bratislavsk%C3%A9_ro%C5%BEky.jpg",
+  "author": "Bratislavská župa",
+  "license": "CC BY 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+  "modified": "크기 축소·WebP 변환",
+  "verifiedAt": "2026-11-21"
+ },
+ "sk-sedita-wafers": {
+  "searchQueries": [
+   "Horalky",
+   "Sedita Horalky",
+   "Kávenky"
+  ],
+  "candidatesFound": 35,
+  "status": "missing",
+  "note": "후보는 있으나 검토에서 채택하지 않음"
+ },
+ "sk-berry-jam": {
+  "searchQueries": [
+   "bilberry jam Slovakia",
+   "čučoriedkový džem"
+  ],
+  "candidatesFound": 0,
+  "status": "missing",
+  "note": "자동 검색에서 조건에 맞는 사진 없음"
+ },
+ "sk-medovina": {
+  "searchQueries": [
+   "medovina Slovakia",
+   "Apimed medovina"
+  ],
+  "candidatesFound": 30,
+  "status": "verified",
+  "file": "assets/images/souvenirs/sk/sk-medovina.webp",
+  "width": 720,
+  "height": 960,
+  "sourceTitle": "File:Medovina 2017 obr.01.jpg",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Medovina_2017_obr.01.jpg",
+  "author": "Pohled 111",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "modified": "크기 축소·WebP 변환",
+  "verifiedAt": "2026-11-21"
+ },
+ "sk-skalicky-rubin": {
+  "searchQueries": [
+   "Skalický rubín"
+  ],
+  "candidatesFound": 0,
+  "status": "missing",
+  "note": "자동 검색에서 조건에 맞는 사진 없음"
+ },
+ "sk-modra-majolica": {
+  "searchQueries": [
+   "Modra majolica",
+   "Modranská majolika"
+  ],
+  "candidatesFound": 27,
+  "status": "verified",
+  "file": "assets/images/souvenirs/sk/sk-modra-majolica.webp",
+  "width": 960,
+  "height": 639,
+  "sourceTitle": "File:Tanier keramický, modranská majolika, Modra, okres Pezinok 02.JPG",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tanier_keramick%C3%BD,_modransk%C3%A1_majolika,_Modra,_okres_Pezinok_02.JPG",
+  "author": "Horakvlado",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "modified": "크기 축소·WebP 변환",
+  "verifiedAt": "2026-11-21"
+ },
+ "sk-cicmany": {
+  "searchQueries": [
+   "Čičmany",
+   "Čičmany pattern"
+  ],
+  "candidatesFound": 3,
+  "status": "missing",
+  "note": "검토 결과 정확히 일치하는 자유 라이선스 사진 없음"
+ },
+ "sk-drotarstvo": {
+  "searchQueries": [
+   "drotárstvo",
+   "Slovak wire craft tinker"
+  ],
+  "candidatesFound": 30,
+  "status": "missing",
+  "note": "검토 결과 정확히 일치하는 자유 라이선스 사진 없음"
+ },
+ "sk-tatratea": {
+  "searchQueries": [
+   "Tatratea"
+  ],
+  "candidatesFound": 8,
+  "status": "verified",
+  "file": "assets/images/souvenirs/sk/sk-tatratea.webp",
+  "width": 960,
+  "height": 720,
+  "sourceTitle": "File:Tatratea line.JPG",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tatratea_line.JPG",
+  "author": "Barbara007",
+  "license": "CC BY-SA 3.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+  "modified": "크기 축소·WebP 변환",
+  "verifiedAt": "2026-11-21"
+ },
+ "sk-kofola": {
+  "searchQueries": [
+   "Kofola"
+  ],
+  "candidatesFound": 30,
+  "status": "verified",
+  "file": "assets/images/souvenirs/sk/sk-kofola.webp",
+  "width": 960,
+  "height": 641,
+  "sourceTitle": "File:Sklenice Kofola.jpg",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Sklenice_Kofola.jpg",
+  "author": "Martin Strachoň",
+  "license": "CC BY-SA 3.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+  "modified": "크기 축소·WebP 변환",
+  "verifiedAt": "2026-11-21"
+ },
+ "sk-vinea": {
+  "searchQueries": [
+   "Vinea drink",
+   "Vinea soda Slovakia"
+  ],
+  "candidatesFound": 30,
+  "status": "verified",
+  "file": "assets/images/souvenirs/sk/sk-vinea.webp",
+  "width": 720,
+  "height": 960,
+  "sourceTitle": "File:Vinea 3 flavours.JPG",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Vinea_3_flavours.JPG",
+  "author": "Panoha",
+  "license": "CC BY-SA 3.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+  "modified": "크기 축소·WebP 변환",
+  "verifiedAt": "2026-11-21"
+ },
+ "sk-puojd-socks": {
+  "searchQueries": [
+   "PUOJD socks"
+  ],
+  "candidatesFound": 0,
+  "status": "missing",
+  "note": "자동 검색에서 조건에 맞는 사진 없음"
+ },
+ "hu-paprika": {
+  "searchQueries": [
+   "Hungarian paprika",
+   "Szegedi paprika",
+   "Kalocsa paprika"
+  ],
+  "candidatesFound": 30,
+  "status": "verified",
+  "file": "assets/images/souvenirs/hu/hu-paprika.webp",
+  "width": 754,
+  "height": 960,
+  "sourceTitle": "File:Hamburg, Gewürzmuseum, Paprika edelsüß aus Ungarn.jpg",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Hamburg,_Gew%C3%BCrzmuseum,_Paprika_edels%C3%BC%C3%9F_aus_Ungarn.jpg",
+  "author": "Dguendel",
+  "license": "CC BY 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+  "modified": "크기 축소·WebP 변환",
+  "verifiedAt": "2026-11-21"
+ },
+ "hu-eros-pista": {
+  "searchQueries": [
+   "Erős Pista"
+  ],
+  "candidatesFound": 5,
+  "status": "missing",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Eros_Pista_termekfoto_uj.png",
+  "note": "내려받기 실패: 썸네일을 받지 못함(429·잘림)"
+ },
+ "hu-szamos-marzipan": {
+  "searchQueries": [
+   "Szamos marzipan",
+   "Szamos Marcipán"
+  ],
+  "candidatesFound": 8,
+  "status": "verified",
+  "file": "assets/images/souvenirs/hu/hu-szamos-marzipan.webp",
+  "width": 960,
+  "height": 638,
+  "sourceTitle": "File:Marzipanmuseum Szentendre.JPG",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Marzipanmuseum_Szentendre.JPG",
+  "author": "MOs810",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "modified": "크기 축소·WebP 변환",
+  "verifiedAt": "2026-11-21"
+ },
+ "hu-szaloncukor": {
+  "searchQueries": [
+   "szaloncukor"
+  ],
+  "candidatesFound": 13,
+  "status": "verified",
+  "file": "assets/images/souvenirs/hu/hu-szaloncukor.webp",
+  "width": 960,
+  "height": 719,
+  "sourceTitle": "File:Szaloncukor2.jpg",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Szaloncukor2.jpg",
+  "author": "Alensha",
+  "license": "Public domain",
+  "licenseUrl": null,
+  "modified": "크기 축소·WebP 변환",
+  "verifiedAt": "2026-11-21"
+ },
+ "hu-tokaj-vinegar": {
+  "searchQueries": [
+   "Tokaji vinegar",
+   "Tokaj wine vinegar"
+  ],
+  "candidatesFound": 1,
+  "status": "missing",
+  "note": "후보는 있으나 검토에서 채택하지 않음"
+ },
+ "hu-palinka": {
+  "searchQueries": [
+   "Pálinka"
+  ],
+  "candidatesFound": 8,
+  "status": "verified",
+  "file": "assets/images/souvenirs/hu/hu-palinka.webp",
+  "width": 720,
+  "height": 960,
+  "sourceTitle": "File:Kecskeméti barack pálinka.jpg",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kecskem%C3%A9ti_barack_p%C3%A1linka.jpg",
+  "author": "Rachael Ludwick",
+  "license": "CC BY-SA 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+  "modified": "크기 축소·WebP 변환",
+  "verifiedAt": "2026-11-21"
+ },
+ "hu-soproni-kekfrankos": {
+  "searchQueries": [
+   "Kékfrankos wine",
+   "Sopron wine"
+  ],
+  "candidatesFound": 4,
+  "status": "missing",
+  "note": "검토 결과 정확히 일치하는 자유 라이선스 사진 없음"
+ },
+ "hu-matyo": {
+  "searchQueries": [
+   "Matyó embroidery",
+   "Matyó hímzés"
+  ],
+  "candidatesFound": 30,
+  "status": "verified",
+  "file": "assets/images/souvenirs/hu/hu-matyo.webp",
+  "width": 960,
+  "height": 800,
+  "sourceTitle": "File:Matyó kollekció.jpg",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Maty%C3%B3_kollekci%C3%B3.jpg",
+  "author": "Zema porcelán",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "modified": "크기 축소·WebP 변환",
+  "verifiedAt": "2026-11-21"
+ },
+ "hu-zsolnay": {
+  "searchQueries": [
+   "Zsolnay eosin",
+   "Zsolnay porcelain"
+  ],
+  "candidatesFound": 19,
+  "status": "missing",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Zsolnay_eosin_glaze_vase_side.jpg",
+  "note": "내려받기 실패: 썸네일을 받지 못함(429·잘림)"
+ },
+ "hu-buso-mask": {
+  "searchQueries": [
+   "Busó mask",
+   "Busójárás mask"
+  ],
+  "candidatesFound": 45,
+  "status": "missing",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Bus%C3%B3j%C3%A1r%C3%A1s_(Moh%C3%A1cs),_2009.jpg",
+  "note": "내려받기 실패: 썸네일을 받지 못함(429·잘림)"
+ },
+ "hu-tisza-cipo": {
+  "searchQueries": [
+   "Tisza Cipő",
+   "Tisza shoes"
+  ],
+  "candidatesFound": 13,
+  "status": "missing",
+  "note": "검토 결과 정확히 일치하는 자유 라이선스 사진 없음"
+ },
+ "hu-printa": {
+  "searchQueries": [
+   "Printa Budapest"
+  ],
+  "candidatesFound": 0,
+  "status": "missing",
+  "note": "자동 검색에서 조건에 맞는 사진 없음"
+ },
+ "hu-bomo-art": {
+  "searchQueries": [
+   "Bomo Art Budapest"
+  ],
+  "candidatesFound": 0,
+  "status": "missing",
+  "note": "자동 검색에서 조건에 맞는 사진 없음"
+ },
+ "hu-unicum": {
+  "searchQueries": [
+   "Zwack Unicum",
+   "Unicum bottle"
+  ],
+  "candidatesFound": 13,
+  "status": "verified",
+  "file": "assets/images/souvenirs/hu/hu-unicum.webp",
+  "width": 720,
+  "height": 960,
+  "sourceTitle": "File:Unicum bottle.JPG",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Unicum_bottle.JPG",
+  "author": "Bujdosó Attila",
+  "license": "CC BY-SA 2.5",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.5",
+  "modified": "크기 축소·WebP 변환",
+  "verifiedAt": "2026-11-21"
+ },
+ "hu-sport-szelet": {
+  "searchQueries": [
+   "Sport szelet"
+  ],
+  "candidatesFound": 10,
+  "status": "missing",
+  "note": "자동 검색에서 조건에 맞는 사진 없음"
+ },
+ "si-piran-salt": {
+  "searchQueries": [
+   "Piran fleur de sel",
+   "Sečovlje salt pans",
+   "Piranske soline"
+  ],
+  "candidatesFound": 30,
+  "status": "missing",
+  "note": "검토 결과 정확히 일치하는 자유 라이선스 사진 없음"
+ },
+ "si-pumpkin-oil": {
+  "searchQueries": [
+   "pumpkin seed oil",
+   "bučno olje"
+  ],
+  "candidatesFound": 30,
+  "status": "missing",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:K%C3%BCrbiskern%C3%B6lflaschen.jpg",
+  "note": "내려받기 실패: 썸네일을 받지 못함(429·잘림)"
+ },
+ "si-karst-honey": {
+  "searchQueries": [
+   "Kraški med",
+   "Slovenian honey"
+  ],
+  "candidatesFound": 30,
+  "status": "missing",
+  "note": "검토 결과 정확히 일치하는 자유 라이선스 사진 없음"
+ },
+ "si-istrian-olive-oil": {
+  "searchQueries": [
+   "Slovenian Istria olive oil",
+   "olive oil Slovenia"
+  ],
+  "candidatesFound": 30,
+  "status": "missing",
+  "note": "검토 결과 정확히 일치하는 자유 라이선스 사진 없음"
+ },
+ "si-potica": {
+  "searchQueries": [
+   "Potica"
+  ],
+  "candidatesFound": 26,
+  "status": "verified",
+  "file": "assets/images/souvenirs/si/si-potica.webp",
+  "width": 960,
+  "height": 720,
+  "sourceTitle": "File:Potica na Bledu.jpg",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Potica_na_Bledu.jpg",
+  "author": "Selena N. B. H. from Fayetteville, USA",
+  "license": "CC BY 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+  "modified": "크기 축소·WebP 변환",
+  "verifiedAt": "2026-11-21"
+ },
+ "si-teran": {
+  "searchQueries": [
+   "Teran wine",
+   "Teran Kras"
+  ],
+  "candidatesFound": 2,
+  "status": "missing",
+  "note": "검토 결과 정확히 일치하는 자유 라이선스 사진 없음"
+ },
+ "si-medica": {
+  "searchQueries": [
+   "medica honey liqueur",
+   "Slovenian honey brandy"
+  ],
+  "candidatesFound": 1,
+  "status": "missing",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Slovenian_Medeno_%C5%BEganje_bottled_from_Leskovica.png",
+  "note": "내려받기 실패: 썸네일을 받지 못함(429·잘림)"
+ },
+ "si-idrija-lace": {
+  "searchQueries": [
+   "Idrija lace",
+   "Idrijska čipka"
+  ],
+  "candidatesFound": 8,
+  "status": "verified",
+  "file": "assets/images/souvenirs/si/si-idrija-lace.webp",
+  "width": 960,
+  "height": 947,
+  "sourceTitle": "File:Idrijska cipka.jpg",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Idrijska_cipka.jpg",
+  "author": "Lace: Pavla Podobnik Photograph: Ines Zgonc",
+  "license": "Public domain",
+  "licenseUrl": null,
+  "modified": "크기 축소·WebP 변환",
+  "verifiedAt": "2026-11-21"
+ },
+ "si-panjske-koncnice": {
+  "searchQueries": [
+   "panjska končnica",
+   "beehive panel painting Slovenia"
+  ],
+  "candidatesFound": 30,
+  "status": "verified",
+  "file": "assets/images/souvenirs/si/si-panjske-koncnice.webp",
+  "width": 960,
+  "height": 472,
+  "sourceTitle": "File:Beehive panel at the Museum of Apiculture, Radovljica (alt).jpg",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Beehive_panel_at_the_Museum_of_Apiculture,_Radovljica_(alt).jpg",
+  "author": "Unknown author Unknown author",
+  "license": "Public domain",
+  "licenseUrl": null,
+  "modified": "크기 축소·WebP 변환",
+  "verifiedAt": "2026-11-21"
+ },
+ "si-ribnica-woodenware": {
+  "searchQueries": [
+   "Ribnica suha roba",
+   "Ribnica woodenware"
+  ],
+  "candidatesFound": 1,
+  "status": "verified",
+  "file": "assets/images/souvenirs/si/si-ribnica-woodenware.webp",
+  "width": 638,
+  "height": 960,
+  "sourceTitle": "File:SuhaRoba-Ribnica1.JPG",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:SuhaRoba-Ribnica1.JPG",
+  "author": "Sl-Ziga",
+  "license": "CC BY-SA 3.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+  "modified": "크기 축소·WebP 변환",
+  "verifiedAt": "2026-11-21"
+ },
+ "si-lepa-vida": {
+  "searchQueries": [
+   "Lepa Vida Sečovlje",
+   "Lepa Vida thalasso"
+  ],
+  "candidatesFound": 0,
+  "status": "missing",
+  "note": "자동 검색에서 조건에 맞는 사진 없음"
+ },
+ "si-pomelaj-cornhusk": {
+  "searchQueries": [
+   "corn husk weaving Slovenia",
+   "Pomelaj"
+  ],
+  "candidatesFound": 0,
+  "status": "missing",
+  "note": "검토 결과 정확히 일치하는 자유 라이선스 사진 없음"
+ },
+ "si-olm-plush": {
+  "searchQueries": [
+   "olm plush toy",
+   "Proteus anguinus toy"
+  ],
+  "candidatesFound": 6,
+  "status": "missing",
+  "note": "검토 결과 정확히 일치하는 자유 라이선스 사진 없음"
+ },
+ "si-almira-sadar": {
+  "searchQueries": [
+   "Almira Sadar"
+  ],
+  "candidatesFound": 0,
+  "status": "missing",
+  "note": "자동 검색에서 조건에 맞는 사진 없음"
+ },
+ "hr-pag-salt": {
+  "searchQueries": [
+   "Pag salt",
+   "Solana Pag",
+   "Paška sol"
+  ],
+  "candidatesFound": 31,
+  "status": "missing",
+  "note": "검토 결과 정확히 일치하는 자유 라이선스 사진 없음"
+ },
+ "hr-arancini": {
+  "searchQueries": [
+   "arancini Dubrovnik candied orange peel",
+   "candied orange peel"
+  ],
+  "candidatesFound": 30,
+  "status": "verified",
+  "file": "assets/images/souvenirs/hr/hr-arancini.webp",
+  "width": 665,
+  "height": 960,
+  "sourceTitle": "File:Candied Orange Peels (14631748550).jpg",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Candied_Orange_Peels_(14631748550).jpg",
+  "author": "Turku Gingerbread from Finland",
+  "license": "CC BY 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+  "modified": "크기 축소·WebP 변환",
+  "verifiedAt": "2026-11-21"
+ },
+ "hr-paprenjak": {
+  "searchQueries": [
+   "Paprenjak"
+  ],
+  "candidatesFound": 2,
+  "status": "missing",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Paprenjak_biscuit.jpg",
+  "note": "내려받기 실패: 썸네일을 받지 못함(429·잘림)"
+ },
+ "hr-smokvenjak": {
+  "searchQueries": [
+   "Smokvenjak"
+  ],
+  "candidatesFound": 1,
+  "status": "verified",
+  "file": "assets/images/souvenirs/hr/hr-smokvenjak.webp",
+  "width": 960,
+  "height": 540,
+  "sourceTitle": "File:Smokvenjak (right) 20240721 173.jpg",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Smokvenjak_(right)_20240721_173.jpg",
+  "author": "Argo Navis",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "modified": "크기 축소·WebP 변환",
+  "verifiedAt": "2026-11-21"
+ },
+ "hr-istrian-olive-oil": {
+  "searchQueries": [
+   "Istrian olive oil",
+   "olive oil Istria"
+  ],
+  "candidatesFound": 0,
+  "status": "missing",
+  "note": "자동 검색에서 조건에 맞는 사진 없음"
+ },
+ "hr-maraschino": {
+  "searchQueries": [
+   "Maraschino Maraska",
+   "Maraschino liqueur"
+  ],
+  "candidatesFound": 30,
+  "status": "missing",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Maraschino_Maraska_Bottle.jpg",
+  "note": "내려받기 실패: 썸네일을 받지 못함(429·잘림)"
+ },
+ "hr-plavac-mali": {
+  "searchQueries": [
+   "Plavac mali",
+   "Dingač wine"
+  ],
+  "candidatesFound": 8,
+  "status": "verified",
+  "file": "assets/images/souvenirs/hr/hr-plavac-mali.webp",
+  "width": 720,
+  "height": 960,
+  "sourceTitle": "File:Plavac-mali-blato-1902.jpg",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Plavac-mali-blato-1902.jpg",
+  "author": "Cro-Cop",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "modified": "크기 축소·WebP 변환",
+  "verifiedAt": "2026-11-21"
+ },
+ "hr-pag-lace": {
+  "searchQueries": [
+   "Pag lace",
+   "Paška čipka"
+  ],
+  "candidatesFound": 28,
+  "status": "missing",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Pa%C5%A1ka_%C4%8Dipka.JPG",
+  "note": "내려받기 실패: 썸네일을 받지 못함(429·잘림)"
+ },
+ "hr-sibenik-botun": {
+  "searchQueries": [
+   "Šibenski botun",
+   "Sibenik button"
+  ],
+  "candidatesFound": 0,
+  "status": "missing",
+  "note": "자동 검색에서 조건에 맞는 사진 없음"
+ },
+ "hr-licitar": {
+  "searchQueries": [
+   "Licitar heart",
+   "licitarsko srce"
+  ],
+  "candidatesFound": 30,
+  "status": "verified",
+  "file": "assets/images/souvenirs/hr/hr-licitar.webp",
+  "width": 960,
+  "height": 671,
+  "sourceTitle": "File:Licitars2.jpg",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Licitars2.jpg",
+  "author": "Seanpu1",
+  "license": "CC BY-SA 3.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+  "modified": "크기 축소·WebP 변환",
+  "verifiedAt": "2026-11-21"
+ },
+ "hr-borovo-startas": {
+  "searchQueries": [
+   "Borovo Startas",
+   "Startas sneakers"
+  ],
+  "candidatesFound": 2,
+  "status": "verified",
+  "file": "assets/images/souvenirs/hr/hr-borovo-startas.webp",
+  "width": 960,
+  "height": 720,
+  "sourceTitle": "File:Startasice.jpg",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Startasice.jpg",
+  "author": "Deborah Hustic from Zagreb, Croatia",
+  "license": "CC BY-SA 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+  "modified": "크기 축소·WebP 변환",
+  "verifiedAt": "2026-11-21"
+ },
+ "hr-sestine-umbrella": {
+  "searchQueries": [
+   "Šestine umbrella",
+   "Šestinski kišobran"
+  ],
+  "candidatesFound": 3,
+  "status": "missing",
+  "note": "자동 검색에서 조건에 맞는 사진 없음"
+ },
+ "hr-croata-tie": {
+  "searchQueries": [
+   "Croata necktie",
+   "cravat Croatia"
+  ],
+  "candidatesFound": 60,
+  "status": "missing",
+  "note": "검토 결과 정확히 일치하는 자유 라이선스 사진 없음"
+ },
+ "hr-hvar-lavender": {
+  "searchQueries": [
+   "Hvar lavender",
+   "lavender Hvar"
+  ],
+  "candidatesFound": 0,
+  "status": "missing",
+  "note": "검토 결과 정확히 일치하는 자유 라이선스 사진 없음"
+ },
+ "hr-vucedol-dove": {
+  "searchQueries": [
+   "Vučedol dove replica",
+   "Vučedolska golubica replika",
+   "Vučedol dove souvenir"
+  ],
+  "candidatesFound": 0,
+  "status": "missing",
+  "note": "자동 검색에서 조건에 맞는 사진 없음"
+ },
+ "ba-zlatna-dzezva": {
+  "searchQueries": [
+   "Zlatna džezva",
+   "Bosnian coffee"
+  ],
+  "candidatesFound": 0,
+  "status": "missing",
+  "note": "검토 결과 정확히 일치하는 자유 라이선스 사진 없음"
+ },
+ "ba-rahat-lokum": {
+  "searchQueries": [
+   "rahat lokum Sarajevo",
+   "Bosnian coffee lokum"
+  ],
+  "candidatesFound": 30,
+  "status": "missing",
+  "note": "후보는 있으나 검토에서 채택하지 않음"
+ },
+ "ba-herzegovina-figs": {
+  "searchQueries": [
+   "dried figs Herzegovina",
+   "dried figs"
+  ],
+  "candidatesFound": 30,
+  "status": "verified",
+  "file": "assets/images/souvenirs/ba/ba-herzegovina-figs.webp",
+  "width": 960,
+  "height": 960,
+  "sourceTitle": "File:Dried figs (2).jpg",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Dried_figs_(2).jpg",
+  "author": "Fumikas Sagisavas",
+  "license": "CC0",
+  "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "modified": "크기 축소·WebP 변환",
+  "verifiedAt": "2026-11-21"
+ },
+ "ba-ajvar": {
+  "searchQueries": [
+   "ajvar jar",
+   "ajvar"
+  ],
+  "candidatesFound": 10,
+  "status": "missing",
+  "note": "검토 결과 정확히 일치하는 자유 라이선스 사진 없음"
+ },
+ "ba-zilavka": {
+  "searchQueries": [
+   "Žilavka wine",
+   "Žilavka grape"
+  ],
+  "candidatesFound": 0,
+  "status": "missing",
+  "note": "자동 검색에서 조건에 맞는 사진 없음"
+ },
+ "ba-blatina": {
+  "searchQueries": [
+   "Blatina wine"
+  ],
+  "candidatesFound": 1,
+  "status": "verified",
+  "file": "assets/images/souvenirs/ba/ba-blatina.webp",
+  "width": 720,
+  "height": 960,
+  "sourceTitle": "File:Blatina 2019.jpg",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Blatina_2019.jpg",
+  "author": "AnToni",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "modified": "크기 축소·WebP 변환",
+  "verifiedAt": "2026-11-21"
+ },
+ "ba-copper-dzezva": {
+  "searchQueries": [
+   "džezva copper Sarajevo",
+   "Kazandžiluk",
+   "Bosnian coffee set copper"
+  ],
+  "candidatesFound": 1,
+  "status": "missing",
+  "note": "검토 결과 정확히 일치하는 자유 라이선스 사진 없음"
+ },
+ "ba-zmijanje": {
+  "searchQueries": [
+   "Zmijanje embroidery",
+   "Zmijanjski vez"
+  ],
+  "candidatesFound": 5,
+  "status": "verified",
+  "file": "assets/images/souvenirs/ba/ba-zmijanje.webp",
+  "width": 960,
+  "height": 540,
+  "sourceTitle": "File:Zmijanje embroidery in BL store 2.jpg",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Zmijanje_embroidery_in_BL_store_2.jpg",
+  "author": "Smooth O",
+  "license": "CC BY-SA 3.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+  "modified": "크기 축소·WebP 변환",
+  "verifiedAt": "2026-11-21"
+ },
+ "ba-konjic-woodcarving": {
+  "searchQueries": [
+   "Konjic woodcarving",
+   "Konjic wood carving"
+  ],
+  "candidatesFound": 3,
+  "status": "missing",
+  "note": "자동 검색에서 조건에 맞는 사진 없음"
+ },
+ "ba-vucko": {
+  "searchQueries": [
+   "Vučko mascot",
+   "Vučko Sarajevo 1984"
+  ],
+  "candidatesFound": 30,
+  "status": "missing",
+  "note": "검토 결과 정확히 일치하는 자유 라이선스 사진 없음"
+ },
+ "ba-bhcrafts": {
+  "searchQueries": [
+   "BHcrafts"
+  ],
+  "candidatesFound": 0,
+  "status": "missing",
+  "note": "자동 검색에서 조건에 맞는 사진 없음"
+ },
+ "ba-bosfam": {
+  "searchQueries": [
+   "Bosfam Tuzla"
+  ],
+  "candidatesFound": 0,
+  "status": "missing",
+  "note": "자동 검색에서 조건에 맞는 사진 없음"
+ },
+ "ba-sevdalinka": {
+  "searchQueries": [
+   "sevdalinka"
+  ],
+  "candidatesFound": 30,
+  "status": "missing",
+  "note": "검토 결과 정확히 일치하는 자유 라이선스 사진 없음"
+ },
+ "rs-leskovac-ajvar": {
+  "searchQueries": [
+   "Leskovački ajvar",
+   "ajvar Serbia"
+  ],
+  "candidatesFound": 6,
+  "status": "missing",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ajvar,_Srbija.jpg",
+  "note": "내려받기 실패: 썸네일을 받지 못함(429·잘림)"
+ },
+ "rs-slatko": {
+  "searchQueries": [
+   "slatko preserve",
+   "slatko Serbian"
+  ],
+  "candidatesFound": 30,
+  "status": "verified",
+  "file": "assets/images/souvenirs/rs/rs-slatko.webp",
+  "width": 960,
+  "height": 960,
+  "sourceTitle": "File:Slatko fragaria vesca sumske jagode woodland strawberry Vlasotince.jpg",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Slatko_fragaria_vesca_sumske_jagode_woodland_strawberry_Vlasotince.jpg",
+  "author": "Vl",
+  "license": "CC BY-SA 3.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+  "modified": "크기 축소·WebP 변환",
+  "verifiedAt": "2026-11-21"
+ },
+ "rs-vanilice": {
+  "searchQueries": [
+   "vanilice cookies",
+   "vanilice"
+  ],
+  "candidatesFound": 4,
+  "status": "missing",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Doma%C4%87e_vanilice.jpg",
+  "note": "내려받기 실패: 썸네일을 받지 못함(429·잘림)"
+ },
+ "rs-kitnikez": {
+  "searchQueries": [
+   "kitnikez",
+   "quince cheese"
+  ],
+  "candidatesFound": 60,
+  "status": "missing",
+  "note": "자동 검색에서 조건에 맞는 사진 없음"
+ },
+ "rs-dried-plums": {
+  "searchQueries": [
+   "dried plums Serbia",
+   "suve šljive"
+  ],
+  "candidatesFound": 3,
+  "status": "verified",
+  "file": "assets/images/souvenirs/rs/rs-dried-plums.webp",
+  "width": 720,
+  "height": 960,
+  "sourceTitle": "File:Dry plum.jpg",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Dry_plum.jpg",
+  "author": "Madlena70",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "modified": "크기 축소·WebP 변환",
+  "verifiedAt": "2026-11-21"
+ },
+ "rs-sljivovica": {
+  "searchQueries": [
+   "Šljivovica",
+   "slivovitz bottle"
+  ],
+  "candidatesFound": 30,
+  "status": "verified",
+  "file": "assets/images/souvenirs/rs/rs-sljivovica.webp",
+  "width": 960,
+  "height": 760,
+  "sourceTitle": "File:Šljivovica (Serbian Slivovitz).jpg",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:%C5%A0ljivovica_(Serbian_Slivovitz).jpg",
+  "author": "Petar Milošević",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "modified": "크기 축소·WebP 변환",
+  "verifiedAt": "2026-11-21"
+ },
+ "rs-prokupac": {
+  "searchQueries": [
+   "Prokupac wine",
+   "Prokupac grape"
+  ],
+  "candidatesFound": 3,
+  "status": "verified",
+  "file": "assets/images/souvenirs/rs/rs-prokupac.webp",
+  "width": 720,
+  "height": 960,
+  "sourceTitle": "File:Prokupac varieties in Seria - Tri crvene Vinarije TEMET - Prokupac Vinarije IVANOVIC - Triada Vinarije VINO Budimir.JPG",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Prokupac_varieties_in_Seria_-_Tri_crvene_Vinarije_TEMET_-_Prokupac_Vinarije_IVANOVIC_-_Triada_Vinarije_VINO_Budimir.JPG",
+  "author": "Orjen",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "modified": "크기 축소·WebP 변환",
+  "verifiedAt": "2026-11-21"
+ },
+ "rs-pirot-kilim": {
+  "searchQueries": [
+   "Pirot kilim",
+   "Pirotski ćilim"
+  ],
+  "candidatesFound": 30,
+  "status": "missing",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Pirot_carpet,_%22dulovi_na_lancu%22.jpg",
+  "note": "내려받기 실패: 썸네일을 받지 못함(429·잘림)"
+ },
+ "rs-zlakusa-pottery": {
+  "searchQueries": [
+   "Zlakusa pottery",
+   "Zlakuska grnčarija"
+  ],
+  "candidatesFound": 8,
+  "status": "verified",
+  "file": "assets/images/souvenirs/rs/rs-zlakusa-pottery.webp",
+  "width": 960,
+  "height": 720,
+  "sourceTitle": "File:Zlakusa 003.JPG",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Zlakusa_003.JPG",
+  "author": "Јелена Продановић",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "modified": "크기 축소·WebP 변환",
+  "verifiedAt": "2026-11-21"
+ },
+ "rs-kovacica-naive": {
+  "searchQueries": [
+   "Kovačica naive art",
+   "Kovačica painting"
+  ],
+  "candidatesFound": 30,
+  "status": "missing",
+  "note": "검토 결과 정확히 일치하는 자유 라이선스 사진 없음"
+ },
+ "rs-smoki": {
+  "searchQueries": [
+   "Smoki snack",
+   "Smoki Štark"
+  ],
+  "candidatesFound": 30,
+  "status": "verified",
+  "file": "assets/images/souvenirs/rs/rs-smoki.webp",
+  "width": 960,
+  "height": 720,
+  "sourceTitle": "File:Smoki grickalica.jpg",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Smoki_grickalica.jpg",
+  "author": "Михаило Јовановић",
+  "license": "CC BY-SA 3.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+  "modified": "크기 축소·WebP 변환",
+  "verifiedAt": "2026-11-21"
+ },
+ "rs-plazma": {
+  "searchQueries": [
+   "Plazma keks",
+   "Plazma biscuit Bambi"
+  ],
+  "candidatesFound": 30,
+  "status": "verified",
+  "file": "assets/images/souvenirs/rs/rs-plazma.webp",
+  "width": 960,
+  "height": 640,
+  "sourceTitle": "File:Cockta and Plazma biscuit on Zastava car (Serbia).jpg",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Cockta_and_Plazma_biscuit_on_Zastava_car_(Serbia).jpg",
+  "author": "flowcomm",
+  "license": "CC BY 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+  "modified": "크기 축소·WebP 변환",
+  "verifiedAt": "2026-11-21"
+ },
+ "rs-sirogojno": {
+  "searchQueries": [
+   "Sirogojno sweater",
+   "Sirogojno knitwear"
+  ],
+  "candidatesFound": 0,
+  "status": "missing",
+  "note": "자동 검색에서 조건에 맞는 사진 없음"
+ },
+ "rs-fica": {
+  "searchQueries": [
+   "Zastava 750 model",
+   "Fića Zastava"
+  ],
+  "candidatesFound": 30,
+  "status": "verified",
+  "file": "assets/images/souvenirs/rs/rs-fica.webp",
+  "width": 960,
+  "height": 596,
+  "sourceTitle": "File:Scale model of Zastava 750 of Slovenia's Miliciija.jpg",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Scale_model_of_Zastava_750_of_Slovenia%27s_Miliciija.jpg",
+  "author": "dave conner from Inverness, Scotland",
+  "license": "CC BY 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+  "modified": "크기 축소·WebP 변환",
+  "verifiedAt": "2026-11-21"
+ },
+ "rs-tesla-museum": {
+  "searchQueries": [
+   "Nikola Tesla Museum Belgrade"
+  ],
+  "candidatesFound": 30,
+  "status": "missing",
+  "note": "검토 결과 정확히 일치하는 자유 라이선스 사진 없음"
+ },
+ "me-bar-olive": {
+  "searchQueries": [
+   "Stara maslina Bar",
+   "olive oil Montenegro",
+   "Bar olive tree"
+  ],
+  "candidatesFound": 12,
+  "status": "missing",
+  "note": "검토 결과 정확히 일치하는 자유 라이선스 사진 없음"
+ },
+ "me-dried-figs": {
+  "searchQueries": [
+   "dried figs market",
+   "dried figs"
+  ],
+  "candidatesFound": 60,
+  "status": "verified",
+  "file": "assets/images/souvenirs/me/me-dried-figs.webp",
+  "width": 960,
+  "height": 720,
+  "sourceTitle": "File:Figue sec.JPG",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Figue_sec.JPG",
+  "author": "Madhif",
+  "license": "CC BY-SA 3.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+  "modified": "크기 축소·WebP 변환",
+  "verifiedAt": "2026-11-21"
+ },
+ "me-pomegranate-syrup": {
+  "searchQueries": [
+   "pomegranate syrup",
+   "pomegranate Montenegro"
+  ],
+  "candidatesFound": 30,
+  "status": "verified",
+  "file": "assets/images/souvenirs/me/me-pomegranate-syrup.webp",
+  "width": 644,
+  "height": 960,
+  "sourceTitle": "File:Pomegranate molasses bottle.jpg",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Pomegranate_molasses_bottle.jpg",
+  "author": "El Mono Español",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "modified": "크기 축소·WebP 변환",
+  "verifiedAt": "2026-11-21"
+ },
+ "me-mountain-honey": {
+  "searchQueries": [
+   "Montenegro honey",
+   "mountain honey Durmitor"
+  ],
+  "candidatesFound": 9,
+  "status": "missing",
+  "note": "검토 결과 정확히 일치하는 자유 라이선스 사진 없음"
+ },
+ "me-vranac": {
+  "searchQueries": [
+   "Vranac wine",
+   "Vranac Plantaže"
+  ],
+  "candidatesFound": 30,
+  "status": "missing",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Vranac_Crnogoski_(Plantaze,_2011).jpg",
+  "note": "내려받기 실패: 썸네일을 받지 못함(429·잘림)"
+ },
+ "me-medovaca": {
+  "searchQueries": [
+   "medovača",
+   "medovaca honey rakija"
+  ],
+  "candidatesFound": 0,
+  "status": "missing",
+  "note": "자동 검색에서 조건에 맞는 사진 없음"
+ },
+ "me-dobrota-lace": {
+  "searchQueries": [
+   "Dobrota lace",
+   "Dobrotska čipka"
+  ],
+  "candidatesFound": 0,
+  "status": "missing",
+  "note": "자동 검색에서 조건에 맞는 사진 없음"
+ },
+ "me-kotor-prints": {
+  "searchQueries": [
+   "Kotor cats museum",
+   "Kotor cat souvenir"
+  ],
+  "candidatesFound": 0,
+  "status": "missing",
+  "note": "검토 결과 정확히 일치하는 자유 라이선스 사진 없음"
+ },
+ "me-olive-wood": {
+  "searchQueries": [
+   "olive wood spoon",
+   "olive wood kitchenware"
+  ],
+  "candidatesFound": 30,
+  "status": "missing",
+  "note": "자동 검색에서 조건에 맞는 사진 없음"
+ },
+ "me-kapa": {
+  "searchQueries": [
+   "Montenegrin cap",
+   "Crnogorska kapa"
+  ],
+  "candidatesFound": 30,
+  "status": "missing",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Montenegrin_cap.jpg",
+  "note": "내려받기 실패: 썸네일을 받지 못함(429·잘림)"
+ },
+ "xk-ajvar": {
+  "searchQueries": [
+   "ajvar Kosovo",
+   "ajvar jar"
+  ],
+  "candidatesFound": 14,
+  "status": "verified",
+  "file": "assets/images/souvenirs/xk/xk-ajvar.webp",
+  "width": 839,
+  "height": 960,
+  "sourceTitle": "File:Albi Market, Gjakova, 2025 Ajvar.jpg",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Albi_Market,_Gjakova,_2025_Ajvar.jpg",
+  "author": "Bdx",
+  "license": "CC0",
+  "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "modified": "크기 축소·WebP 변환",
+  "verifiedAt": "2026-11-21"
+ },
+ "xk-feferona": {
+  "searchQueries": [
+   "pickled peppers Balkan",
+   "feferoni"
+  ],
+  "candidatesFound": 30,
+  "status": "verified",
+  "file": "assets/images/souvenirs/xk/xk-feferona.webp",
+  "width": 960,
+  "height": 720,
+  "sourceTitle": "File:Feferoni photo Moma SM.jpg",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Feferoni_photo_Moma_SM.jpg",
+  "author": "Momcilostokanovic",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "modified": "크기 축소·WebP 변환",
+  "verifiedAt": "2026-11-21"
+ },
+ "xk-sar-honey": {
+  "searchQueries": [
+   "Šar Mountains honey",
+   "Sharr honey"
+  ],
+  "candidatesFound": 0,
+  "status": "missing",
+  "note": "자동 검색에서 조건에 맞는 사진 없음"
+ },
+ "xk-sar-tea": {
+  "searchQueries": [
+   "Sideritis tea",
+   "mountain tea Sideritis"
+  ],
+  "candidatesFound": 30,
+  "status": "verified",
+  "file": "assets/images/souvenirs/xk/xk-sar-tea.webp",
+  "width": 461,
+  "height": 960,
+  "sourceTitle": "File:Mountain Tea.jpg",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Mountain_Tea.jpg",
+  "author": "Jok3r 141",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "modified": "크기 축소·WebP 변환",
+  "verifiedAt": "2026-11-21"
+ },
+ "xk-prizren-lokum": {
+  "searchQueries": [
+   "lokum Prizren",
+   "Turkish delight"
+  ],
+  "candidatesFound": 30,
+  "status": "missing",
+  "note": "검토 결과 정확히 일치하는 자유 라이선스 사진 없음"
+ },
+ "xk-rahovec-wine": {
+  "searchQueries": [
+   "Rahovec wine",
+   "Rahovec vineyards"
+  ],
+  "candidatesFound": 6,
+  "status": "verified",
+  "file": "assets/images/souvenirs/xk/xk-rahovec-wine.webp",
+  "width": 960,
+  "height": 638,
+  "sourceTitle": "File:Rahovec Grapes and Wine.JPG",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Rahovec_Grapes_and_Wine.JPG",
+  "author": "Bujar I Gashi",
+  "license": "CC BY-SA 3.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+  "modified": "크기 축소·WebP 변환",
+  "verifiedAt": "2026-11-21"
+ },
+ "xk-raki": {
+  "searchQueries": [
+   "raki Kosovo",
+   "rakia bottle"
+  ],
+  "candidatesFound": 13,
+  "status": "missing",
+  "note": "검토 결과 정확히 일치하는 자유 라이선스 사진 없음"
+ },
+ "xk-prizren-filigree": {
+  "searchQueries": [
+   "Prizren filigree",
+   "filigree silver Prizren"
+  ],
+  "candidatesFound": 1,
+  "status": "verified",
+  "file": "assets/images/souvenirs/xk/xk-prizren-filigree.webp",
+  "width": 960,
+  "height": 640,
+  "sourceTitle": "File:Aksesore nga filigrami, Prizren.jpg",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Aksesore_nga_filigrami,_Prizren.jpg",
+  "author": "Shkurte ramushi",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "modified": "크기 축소·WebP 변환",
+  "verifiedAt": "2026-11-21"
+ },
+ "xk-plis": {
+  "searchQueries": [
+   "plis hat",
+   "qeleshe plis"
+  ],
+  "candidatesFound": 60,
+  "status": "verified",
+  "file": "assets/images/souvenirs/xk/xk-plis.webp",
+  "width": 720,
+  "height": 960,
+  "sourceTitle": "File:Qeleshe veriore.jpg",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Qeleshe_veriore.jpg",
+  "author": "A.jobs02",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "modified": "크기 축소·WebP 변환",
+  "verifiedAt": "2026-11-21"
+ },
+ "xk-kilim": {
+  "searchQueries": [
+   "Kosovo kilim",
+   "Albanian kilim"
+  ],
+  "candidatesFound": 2,
+  "status": "missing",
+  "note": "검토 결과 정확히 일치하는 자유 라이선스 사진 없음"
+ },
+ "xk-goddess-replica": {
+  "searchQueries": [
+   "Goddess on the Throne replica",
+   "Hyjnesha në Fron souvenir"
+  ],
+  "candidatesFound": 1,
+  "status": "missing",
+  "note": "자동 검색에서 조건에 맞는 사진 없음"
+ },
+ "xk-vipa-chips": {
+  "searchQueries": [
+   "Vipa chips"
+  ],
+  "candidatesFound": 0,
+  "status": "missing",
+  "note": "자동 검색에서 조건에 맞는 사진 없음"
+ },
+ "xk-trepca-minerals": {
+  "searchQueries": [
+   "Trepča mineral",
+   "Trepča mine mineral specimen"
+  ],
+  "candidatesFound": 30,
+  "status": "verified",
+  "file": "assets/images/souvenirs/xk/xk-trepca-minerals.webp",
+  "width": 937,
+  "height": 960,
+  "sourceTitle": "File:6289 Trepča 1.jpg",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:6289_Trep%C4%8Da_1.jpg",
+  "author": "J. Patrick Fischer",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "modified": "크기 축소·WebP 변환",
+  "verifiedAt": "2026-11-21"
+ },
+ "mk-ajvar": {
+  "searchQueries": [
+   "ajvar Macedonia",
+   "ajvar"
+  ],
+  "candidatesFound": 60,
+  "status": "verified",
+  "file": "assets/images/souvenirs/mk/mk-ajvar.webp",
+  "width": 960,
+  "height": 720,
+  "sourceTitle": "File:Ajvar toast.jpg",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ajvar_toast.jpg",
+  "author": "Popo le Chien",
+  "license": "CC0",
+  "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "modified": "크기 축소·WebP 변환",
+  "verifiedAt": "2026-11-21"
+ },
+ "mk-pindjur": {
+  "searchQueries": [
+   "pinjur",
+   "pindjur"
+  ],
+  "candidatesFound": 8,
+  "status": "verified",
+  "file": "assets/images/souvenirs/mk/mk-pindjur.webp",
+  "width": 960,
+  "height": 806,
+  "sourceTitle": "File:Pindjur2.JPG",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Pindjur2.JPG",
+  "author": "Off-shell",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "modified": "크기 축소·WebP 변환",
+  "verifiedAt": "2026-11-21"
+ },
+ "mk-lokum": {
+  "searchQueries": [
+   "lokum Skopje",
+   "Turkish delight"
+  ],
+  "candidatesFound": 30,
+  "status": "missing",
+  "note": "검토 결과 정확히 일치하는 자유 라이선스 사진 없음"
+ },
+ "mk-halva": {
+  "searchQueries": [
+   "halva tahini",
+   "halva"
+  ],
+  "candidatesFound": 11,
+  "status": "missing",
+  "note": "검토 결과 정확히 일치하는 자유 라이선스 사진 없음"
+ },
+ "mk-honey": {
+  "searchQueries": [
+   "Macedonian honey",
+   "honey market Skopje"
+  ],
+  "candidatesFound": 30,
+  "status": "verified",
+  "file": "assets/images/souvenirs/mk/mk-honey.webp",
+  "width": 960,
+  "height": 720,
+  "sourceTitle": "File:Природен мед.jpg",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:%D0%9F%D1%80%D0%B8%D1%80%D0%BE%D0%B4%D0%B5%D0%BD_%D0%BC%D0%B5%D0%B4.jpg",
+  "author": "Sentimentalna",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "modified": "크기 축소·WebP 변환",
+  "verifiedAt": "2026-11-21"
+ },
+ "mk-tikves-vranec": {
+  "searchQueries": [
+   "Tikveš winery",
+   "Vranec wine Tikveš"
+  ],
+  "candidatesFound": 5,
+  "status": "missing",
+  "note": "검토 결과 정확히 일치하는 자유 라이선스 사진 없음"
+ },
+ "mk-mastika": {
+  "searchQueries": [
+   "mastika Strumica",
+   "mastika liqueur"
+  ],
+  "candidatesFound": 15,
+  "status": "missing",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Mastika.jpg",
+  "note": "내려받기 실패: 썸네일을 받지 못함(429·잘림)"
+ },
+ "mk-ohrid-pearl": {
+  "searchQueries": [
+   "Ohrid pearl",
+   "Ohrid pearls jewelry"
+  ],
+  "candidatesFound": 3,
+  "status": "verified",
+  "file": "assets/images/souvenirs/mk/mk-ohrid-pearl.webp",
+  "width": 960,
+  "height": 636,
+  "sourceTitle": "File:Ohridski biser 01.JPG",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ohridski_biser_01.JPG",
+  "author": "Slavica Panova",
+  "license": "CC BY-SA 3.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+  "modified": "크기 축소·WebP 변환",
+  "verifiedAt": "2026-11-21"
+ },
+ "mk-ohrid-filigree": {
+  "searchQueries": [
+   "filigree Ohrid",
+   "silver filigree Macedonia"
+  ],
+  "candidatesFound": 36,
+  "status": "missing",
+  "note": "후보는 있으나 검토에서 채택하지 않음"
+ },
+ "mk-ohrid-paper": {
+  "searchQueries": [
+   "Ohrid paper workshop",
+   "Ohrid handmade paper"
+  ],
+  "candidatesFound": 5,
+  "status": "verified",
+  "file": "assets/images/souvenirs/mk/mk-ohrid-paper.webp",
+  "width": 960,
+  "height": 720,
+  "sourceTitle": "File:Paper workshop in Ohrid (4).JPG",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Paper_workshop_in_Ohrid_(4).JPG",
+  "author": "Avi1111 dr. avishai teicher",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "modified": "크기 축소·WebP 변환",
+  "verifiedAt": "2026-11-21"
+ },
+ "mk-stobi-flips": {
+  "searchQueries": [
+   "Stobi Flips",
+   "Vitaminka Prilep"
+  ],
+  "candidatesFound": 3,
+  "status": "missing",
+  "note": "검토 결과 정확히 일치하는 자유 라이선스 사진 없음"
+ },
+ "mk-becutan": {
+  "searchQueries": [
+   "Becutan Alkaloid"
+  ],
+  "candidatesFound": 0,
+  "status": "missing",
+  "note": "자동 검색에서 조건에 맞는 사진 없음"
+ },
+ "mk-stanusina": {
+  "searchQueries": [
+   "Stanušina wine",
+   "Stanushina grape"
+  ],
+  "candidatesFound": 1,
+  "status": "missing",
+  "note": "자동 검색에서 조건에 맞는 사진 없음"
+ },
+ "mk-skopsko": {
+  "searchQueries": [
+   "Skopsko beer",
+   "Skopsko pivo"
+  ],
+  "candidatesFound": 23,
+  "status": "verified",
+  "file": "assets/images/souvenirs/mk/mk-skopsko.webp",
+  "width": 722,
+  "height": 960,
+  "sourceTitle": "File:Skopsko pivo.JPG",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Skopsko_pivo.JPG",
+  "author": "LeeKeoma",
+  "license": "Public domain",
+  "licenseUrl": null,
+  "modified": "크기 축소·WebP 변환",
+  "verifiedAt": "2026-11-21"
+ },
+ "al-permet-gliko": {
+  "searchQueries": [
+   "gliko Përmet",
+   "Permet gliko"
+  ],
+  "candidatesFound": 10,
+  "status": "verified",
+  "file": "assets/images/souvenirs/al/al-permet-gliko.webp",
+  "width": 960,
+  "height": 635,
+  "sourceTitle": "File:Gliko Arre.jpg",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Gliko_Arre.jpg",
+  "author": "Gisela Brame",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "modified": "크기 축소·WebP 변환",
+  "verifiedAt": "2026-11-21"
+ },
+ "al-caj-mali": {
+  "searchQueries": [
+   "Sideritis Albania tea",
+   "çaj mali",
+   "Sideritis raeseri"
+  ],
+  "candidatesFound": 31,
+  "status": "verified",
+  "file": "assets/images/souvenirs/al/al-caj-mali.webp",
+  "width": 960,
+  "height": 540,
+  "sourceTitle": "File:Çaj mali - Krujë.jpg",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:%C3%87aj_mali_-_Kruj%C3%AB.jpg",
+  "author": "VLGJ",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "modified": "크기 축소·WebP 변환",
+  "verifiedAt": "2026-11-21"
+ },
+ "al-mountain-honey": {
+  "searchQueries": [
+   "Albanian honey",
+   "honey Albania"
+  ],
+  "candidatesFound": 17,
+  "status": "verified",
+  "file": "assets/images/souvenirs/al/al-mountain-honey.webp",
+  "width": 720,
+  "height": 960,
+  "sourceTitle": "File:Mjalti i Tepelenës.jpg",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Mjalti_i_Tepelen%C3%ABs.jpg",
+  "author": "NestedLoops",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "modified": "크기 축소·WebP 변환",
+  "verifiedAt": "2026-11-21"
+ },
+ "al-olive-oil": {
+  "searchQueries": [
+   "olive oil Albania",
+   "olive grove Albania"
+  ],
+  "candidatesFound": 19,
+  "status": "missing",
+  "note": "검토 결과 정확히 일치하는 자유 라이선스 사진 없음"
+ },
+ "al-dried-figs": {
+  "searchQueries": [
+   "dried figs",
+   "dried figs market"
+  ],
+  "candidatesFound": 30,
+  "status": "verified",
+  "file": "assets/images/souvenirs/al/al-dried-figs.webp",
+  "width": 960,
+  "height": 960,
+  "sourceTitle": "File:Dried figs (1).jpg",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Dried_figs_(1).jpg",
+  "author": "François Nguyen",
+  "license": "CC BY 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+  "modified": "크기 축소·WebP 변환",
+  "verifiedAt": "2026-11-21"
+ },
+ "al-kallmet": {
+  "searchQueries": [
+   "Kallmet wine",
+   "Kallmet grape"
+  ],
+  "candidatesFound": 9,
+  "status": "verified",
+  "file": "assets/images/souvenirs/al/al-kallmet.webp",
+  "width": 721,
+  "height": 960,
+  "sourceTitle": "File:Kallmeti wine red.jpg",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kallmeti_wine_red.jpg",
+  "author": "Arianit",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "modified": "크기 축소·WebP 변환",
+  "verifiedAt": "2026-11-21"
+ },
+ "al-skrapar-raki": {
+  "searchQueries": [
+   "raki Albania",
+   "Skrapar raki"
+  ],
+  "candidatesFound": 23,
+  "status": "verified",
+  "file": "assets/images/souvenirs/al/al-skrapar-raki.webp",
+  "width": 720,
+  "height": 960,
+  "sourceTitle": "File:Raki me arra.jpg",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Raki_me_arra.jpg",
+  "author": "Klein Muçi",
+  "license": "CC BY 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+  "modified": "크기 축소·WebP 변환",
+  "verifiedAt": "2026-11-21"
+ },
+ "al-kruje-kilim": {
+  "searchQueries": [
+   "Krujë bazaar",
+   "Kruja bazaar carpets"
+  ],
+  "candidatesFound": 30,
+  "status": "missing",
+  "note": "검토 결과 정확히 일치하는 자유 라이선스 사진 없음"
+ },
+ "al-filigree": {
+  "searchQueries": [
+   "filigree Albania",
+   "Albanian filigree"
+  ],
+  "candidatesFound": 4,
+  "status": "missing",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Albanian_Filigree.JPG",
+  "note": "내려받기 실패: 썸네일을 받지 못함(429·잘림)"
+ },
+ "al-qeleshe": {
+  "searchQueries": [
+   "Qeleshe",
+   "qeleshe Kruja"
+  ],
+  "candidatesFound": 30,
+  "status": "verified",
+  "file": "assets/images/souvenirs/al/al-qeleshe.webp",
+  "width": 720,
+  "height": 960,
+  "sourceTitle": "File:Qeleshe jugore.jpg",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Qeleshe_jugore.jpg",
+  "author": "A.jobs02",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "modified": "크기 축소·WebP 변환",
+  "verifiedAt": "2026-11-21"
+ },
+ "al-gjirokaster-miniature": {
+  "searchQueries": [
+   "Gjirokastër souvenir house",
+   "Gjirokaster bazaar souvenirs"
+  ],
+  "candidatesFound": 0,
+  "status": "missing",
+  "note": "자동 검색에서 조건에 맞는 사진 없음"
+ },
+ "al-skenderbeu-brandy": {
+  "searchQueries": [
+   "Skënderbeu brandy",
+   "Skenderbeu konjak"
+  ],
+  "candidatesFound": 0,
+  "status": "missing",
+  "note": "자동 검색에서 조건에 맞는 사진 없음"
+ },
+ "al-mulliri-vjeter": {
+  "searchQueries": [
+   "Mulliri Vjetër"
+  ],
+  "candidatesFound": 17,
+  "status": "missing",
+  "note": "검토 결과 정확히 일치하는 자유 라이선스 사진 없음"
+ },
+ "al-bunkart": {
+  "searchQueries": [
+   "Bunk'Art Tirana",
+   "Bunk Art museum"
+  ],
+  "candidatesFound": 30,
+  "status": "missing",
+  "note": "검토 결과 정확히 일치하는 자유 라이선스 사진 없음"
+ },
+ "ro-magiun-topoloveni": {
+  "searchQueries": [
+   "Magiun de prune Topoloveni",
+   "magiun Topoloveni"
+  ],
+  "candidatesFound": 0,
+  "status": "missing",
+  "note": "자동 검색에서 조건에 맞는 사진 없음"
+ },
+ "ro-zacusca": {
+  "searchQueries": [
+   "Zacuscă",
+   "zacusca jar"
+  ],
+  "candidatesFound": 10,
+  "status": "verified",
+  "file": "assets/images/souvenirs/ro/ro-zacusca.webp",
+  "width": 960,
+  "height": 640,
+  "sourceTitle": "File:Zacuscă.jpg",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Zacusc%C4%83.jpg",
+  "author": "Paul Chiorean",
+  "license": "CC BY 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+  "modified": "크기 축소·WebP 변환",
+  "verifiedAt": "2026-11-21"
+ },
+ "ro-green-walnut-jam": {
+  "searchQueries": [
+   "green walnut jam",
+   "dulceață de nuci verzi"
+  ],
+  "candidatesFound": 8,
+  "status": "verified",
+  "file": "assets/images/souvenirs/ro/ro-green-walnut-jam.webp",
+  "width": 960,
+  "height": 827,
+  "sourceTitle": "File:Green walnut murabba.jpg",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Green_walnut_murabba.jpg",
+  "author": "Eka Samkharadze",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "modified": "크기 축소·WebP 변환",
+  "verifiedAt": "2026-11-21"
+ },
+ "ro-rom-chocolate": {
+  "searchQueries": [
+   "ROM chocolate Romania",
+   "ROM autentic"
+  ],
+  "candidatesFound": 2,
+  "status": "verified",
+  "file": "assets/images/souvenirs/ro/ro-rom-chocolate.webp",
+  "width": 960,
+  "height": 899,
+  "sourceTitle": "File:ROM chocolate.jpg",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:ROM_chocolate.jpg",
+  "author": "Tiia Monto",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "modified": "크기 축소·WebP 변환",
+  "verifiedAt": "2026-11-21"
+ },
+ "ro-eugenia": {
+  "searchQueries": [
+   "Eugenia biscuit",
+   "Eugenia Dobrogea"
+  ],
+  "candidatesFound": 30,
+  "status": "verified",
+  "file": "assets/images/souvenirs/ro/ro-eugenia.webp",
+  "width": 960,
+  "height": 720,
+  "sourceTitle": "File:Eugenia biscuits.jpg",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Eugenia_biscuits.jpg",
+  "author": "Whitepixels",
+  "license": "CC0",
+  "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "modified": "크기 축소·WebP 변환",
+  "verifiedAt": "2026-11-21"
+ },
+ "ro-feteasca-neagra": {
+  "searchQueries": [
+   "Fetească Neagră",
+   "Feteasca Neagra wine"
+  ],
+  "candidatesFound": 18,
+  "status": "verified",
+  "file": "assets/images/souvenirs/ro/ro-feteasca-neagra.webp",
+  "width": 717,
+  "height": 960,
+  "sourceTitle": "File:Feteasca negra from Romania.jpg",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Feteasca_negra_from_Romania.jpg",
+  "author": "Agne27",
+  "license": "CC BY-SA 3.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+  "modified": "크기 축소·WebP 변환",
+  "verifiedAt": "2026-11-21"
+ },
+ "ro-tuica": {
+  "searchQueries": [
+   "Țuică",
+   "tuica bottle"
+  ],
+  "candidatesFound": 30,
+  "status": "missing",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tuica_bottle_from_romania_(3776749792).jpg",
+  "note": "내려받기 실패: 썸네일을 받지 못함(429·잘림)"
+ },
+ "ro-horezu": {
+  "searchQueries": [
+   "Horezu ceramics",
+   "Horezu pottery"
+  ],
+  "candidatesFound": 14,
+  "status": "verified",
+  "file": "assets/images/souvenirs/ro/ro-horezu.webp",
+  "width": 960,
+  "height": 717,
+  "sourceTitle": "File:Ceramică Horezu unu.jpg",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ceramic%C4%83_Horezu_unu.jpg",
+  "author": "Bogdan29roman",
+  "license": "CC BY-SA 3.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+  "modified": "크기 축소·WebP 변환",
+  "verifiedAt": "2026-11-21"
+ },
+ "ro-bucovina-eggs": {
+  "searchQueries": [
+   "Bucovina painted eggs",
+   "ouă încondeiate"
+  ],
+  "candidatesFound": 0,
+  "status": "missing",
+  "note": "검토 결과 정확히 일치하는 자유 라이선스 사진 없음"
+ },
+ "ro-ie": {
+  "searchQueries": [
+   "Romanian ie blouse",
+   "ie romanească"
+  ],
+  "candidatesFound": 6,
+  "status": "missing",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ie_(Iasi,_Moldova,_end_of_XIX_cent.).jpg",
+  "note": "내려받기 실패: 썸네일을 받지 못함(429·잘림)"
+ },
+ "ro-gerovital": {
+  "searchQueries": [
+   "Gerovital H3",
+   "Farmec Gerovital"
+  ],
+  "candidatesFound": 2,
+  "status": "missing",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Gerovital.jpg",
+  "note": "내려받기 실패: 썸네일을 받지 못함(429·잘림)"
+ },
+ "ro-pufuleti": {
+  "searchQueries": [
+   "Pufuleți",
+   "pufuleti"
+  ],
+  "candidatesFound": 17,
+  "status": "verified",
+  "file": "assets/images/souvenirs/ro/ro-pufuleti.webp",
+  "width": 720,
+  "height": 960,
+  "sourceTitle": "File:Pufuleți.jpg",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Pufule%C8%9Bi.jpg",
+  "author": "MagdaBarascu",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "modified": "크기 축소·WebP 변환",
+  "verifiedAt": "2026-11-21"
+ },
+ "ro-dacia-miniature": {
+  "searchQueries": [
+   "Dacia 1300 model car",
+   "Dacia 1300"
+  ],
+  "candidatesFound": 34,
+  "status": "missing",
+  "note": "검토 결과 정확히 일치하는 자유 라이선스 사진 없음"
+ },
+ "ro-carturesti": {
+  "searchQueries": [
+   "Cărturești Carusel",
+   "Carturesti bookstore"
+  ],
+  "candidatesFound": 30,
+  "status": "verified",
+  "file": "assets/images/souvenirs/ro/ro-carturesti.webp",
+  "width": 720,
+  "height": 960,
+  "sourceTitle": "File:Libraria Cărturești Carusel, Bucharest (45562434525).jpg",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Libraria_C%C4%83rture%C8%99ti_Carusel,_Bucharest_(45562434525).jpg",
+  "author": "Dimitris Kamaras from Athens, Greece",
+  "license": "CC BY 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+  "modified": "크기 축소·WebP 변환",
+  "verifiedAt": "2026-11-21"
+ },
+ "ro-covrigi-buzau": {
+  "searchQueries": [
+   "covrigi",
+   "covrigi Buzău"
+  ],
+  "candidatesFound": 30,
+  "status": "missing",
+  "note": "검토 결과 정확히 일치하는 자유 라이선스 사진 없음"
+ },
+ "bg-rose-jam": {
+  "searchQueries": [
+   "rose petal jam",
+   "rose jam Bulgaria"
+  ],
+  "candidatesFound": 30,
+  "status": "verified",
+  "file": "assets/images/souvenirs/bg/bg-rose-jam.webp",
+  "width": 728,
+  "height": 960,
+  "sourceTitle": "File:Rose petals jam.jpg",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Rose_petals_jam.jpg",
+  "author": "Спасимир (Spasimir Pilev)",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "modified": "크기 축소·WebP 변환",
+  "verifiedAt": "2026-11-21"
+ },
+ "bg-rose-cosmetics": {
+  "searchQueries": [
+   "Bulgarian rose oil",
+   "rose water Bulgaria",
+   "Bulgarian rose cosmetics"
+  ],
+  "candidatesFound": 9,
+  "status": "missing",
+  "note": "검토 결과 정확히 일치하는 자유 라이선스 사진 없음"
+ },
+ "bg-rose-lokum": {
+  "searchQueries": [
+   "rose lokum",
+   "rose Turkish delight"
+  ],
+  "candidatesFound": 20,
+  "status": "missing",
+  "note": "검토 결과 정확히 일치하는 자유 라이선스 사진 없음"
+ },
+ "bg-lyutenitsa": {
+  "searchQueries": [
+   "Lyutenitsa",
+   "lutenica"
+  ],
+  "candidatesFound": 17,
+  "status": "verified",
+  "file": "assets/images/souvenirs/bg/bg-lyutenitsa.webp",
+  "width": 960,
+  "height": 654,
+  "sourceTitle": "File:Lutenica.jpg",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Lutenica.jpg",
+  "author": "Off-shell",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "modified": "크기 축소·WebP 변환",
+  "verifiedAt": "2026-11-21"
+ },
+ "bg-sharena-sol": {
+  "searchQueries": [
+   "Sharena sol",
+   "шарена сол"
+  ],
+  "candidatesFound": 18,
+  "status": "missing",
+  "note": "자동 검색에서 조건에 맞는 사진 없음"
+ },
+ "bg-mursalski-chai": {
+  "searchQueries": [
+   "Mursalski tea",
+   "Sideritis scardica"
+  ],
+  "candidatesFound": 28,
+  "status": "missing",
+  "note": "검토 결과 정확히 일치하는 자유 라이선스 사진 없음"
+ },
+ "bg-mavrud": {
+  "searchQueries": [
+   "Mavrud wine",
+   "Mavrud grape"
+  ],
+  "candidatesFound": 5,
+  "status": "verified",
+  "file": "assets/images/souvenirs/bg/bg-mavrud.webp",
+  "width": 670,
+  "height": 960,
+  "sourceTitle": "File:Mavrud.jpg",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Mavrud.jpg",
+  "author": "Petar Milošević",
+  "license": "CC BY-SA 3.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+  "modified": "크기 축소·WebP 변환",
+  "verifiedAt": "2026-11-21"
+ },
+ "bg-rakia": {
+  "searchQueries": [
+   "Bulgarian rakia",
+   "rakia bottle"
+  ],
+  "candidatesFound": 17,
+  "status": "verified",
+  "file": "assets/images/souvenirs/bg/bg-rakia.webp",
+  "width": 960,
+  "height": 641,
+  "sourceTitle": "File:Bulgarian Rakia.JPG",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Bulgarian_Rakia.JPG",
+  "author": "Pudelek (Marcin Szala)",
+  "license": "CC BY-SA 3.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+  "modified": "크기 축소·WebP 변환",
+  "verifiedAt": "2026-11-21"
+ },
+ "bg-troyan-pottery": {
+  "searchQueries": [
+   "Troyan pottery",
+   "Troyan ceramics"
+  ],
+  "candidatesFound": 4,
+  "status": "verified",
+  "file": "assets/images/souvenirs/bg/bg-troyan-pottery.webp",
+  "width": 960,
+  "height": 555,
+  "sourceTitle": "File:Ceramics-in-Troyan-Museum.jpg",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ceramics-in-Troyan-Museum.jpg",
+  "author": "Edal Anton Lefterov",
+  "license": "CC BY-SA 3.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+  "modified": "크기 축소·WebP 변환",
+  "verifiedAt": "2026-11-21"
+ },
+ "bg-chiprovtsi": {
+  "searchQueries": [
+   "Chiprovtsi carpet",
+   "Chiprovtsi kilim"
+  ],
+  "candidatesFound": 19,
+  "status": "missing",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:BASA-2072K-1-339-4-Chiprovtsi-carpet.jpg",
+  "note": "내려받기 실패: 썸네일을 받지 못함(429·잘림)"
+ },
+ "bg-kukeri-mask": {
+  "searchQueries": [
+   "Kukeri mask",
+   "Kukeri"
+  ],
+  "candidatesFound": 30,
+  "status": "verified",
+  "file": "assets/images/souvenirs/bg/bg-kukeri-mask.webp",
+  "width": 540,
+  "height": 960,
+  "sourceTitle": "File:Burgas-Ethnographic-museum-kukeri-mask.jpg",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Burgas-Ethnographic-museum-kukeri-mask.jpg",
+  "author": "Vassia Atanassova - Spiritia",
+  "license": "CC BY-SA 3.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+  "modified": "크기 축소·WebP 변환",
+  "verifiedAt": "2026-11-21"
+ },
+ "bg-medenki": {
+  "searchQueries": [
+   "medenki",
+   "меденки"
+  ],
+  "candidatesFound": 2,
+  "status": "missing",
+  "note": "자동 검색에서 조건에 맞는 사진 없음"
+ },
+ "bg-strandzha-honey": {
+  "searchQueries": [
+   "Strandzha manov med",
+   "Strandzha honey"
+  ],
+  "candidatesFound": 0,
+  "status": "missing",
+  "note": "자동 검색에서 조건에 맞는 사진 없음"
+ },
+ "bg-strandzha-tea": {
+  "searchQueries": [
+   "Strandzha tea",
+   "Strandzha herbs"
+  ],
+  "candidatesFound": 0,
+  "status": "missing",
+  "note": "자동 검색에서 조건에 맞는 사진 없음"
+ },
+ "bg-shevitsa": {
+  "searchQueries": [
+   "Bulgarian shevitsa embroidery",
+   "Bulgarian embroidery pattern"
+  ],
+  "candidatesFound": 0,
+  "status": "missing",
+  "note": "자동 검색에서 조건에 맞는 사진 없음"
+ },
+ "md-bucuria": {
+  "searchQueries": [
+   "Bucuria chocolate",
+   "Bucuria Chișinău"
+  ],
+  "candidatesFound": 1,
+  "status": "missing",
+  "note": "검토 결과 정확히 일치하는 자유 라이선스 사진 없음"
+ },
+ "md-green-walnut-jam": {
+  "searchQueries": [
+   "green walnut jam",
+   "dulceață de nuci verzi"
+  ],
+  "candidatesFound": 8,
+  "status": "missing",
+  "note": "검토 결과 정확히 일치하는 자유 라이선스 사진 없음"
+ },
+ "md-dried-fruit": {
+  "searchQueries": [
+   "dried fruit market Chișinău",
+   "dried fruits market"
+  ],
+  "candidatesFound": 30,
+  "status": "missing",
+  "note": "검토 결과 정확히 일치하는 자유 라이선스 사진 없음"
+ },
+ "md-honey": {
+  "searchQueries": [
+   "Moldovan honey",
+   "miere Moldova"
+  ],
+  "candidatesFound": 3,
+  "status": "verified",
+  "file": "assets/images/souvenirs/md/md-honey.webp",
+  "width": 960,
+  "height": 720,
+  "sourceTitle": "File:Selling honey in Piața Centrală (188840165).jpg",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Selling_honey_in_Pia%C8%9Ba_Central%C4%83_(188840165).jpg",
+  "author": "Guttorm Flatabø from Sogndal, Norway",
+  "license": "CC BY 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+  "modified": "크기 축소·WebP 변환",
+  "verifiedAt": "2026-11-21"
+ },
+ "md-cozonac": {
+  "searchQueries": [
+   "cozonac"
+  ],
+  "candidatesFound": 30,
+  "status": "verified",
+  "file": "assets/images/souvenirs/md/md-cozonac.webp",
+  "width": 960,
+  "height": 640,
+  "sourceTitle": "File:Cozonac-cu-nuca-103.jpg",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Cozonac-cu-nuca-103.jpg",
+  "author": "Vvssmmaann",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "modified": "크기 축소·WebP 변환",
+  "verifiedAt": "2026-11-21"
+ },
+ "md-rara-neagra": {
+  "searchQueries": [
+   "Rara Neagra wine",
+   "Băbească neagră"
+  ],
+  "candidatesFound": 6,
+  "status": "missing",
+  "note": "검토 결과 정확히 일치하는 자유 라이선스 사진 없음"
+ },
+ "md-divin": {
+  "searchQueries": [
+   "Moldovan divin brandy",
+   "KVINT brandy"
+  ],
+  "candidatesFound": 6,
+  "status": "verified",
+  "file": "assets/images/souvenirs/md/md-divin.webp",
+  "width": 664,
+  "height": 960,
+  "sourceTitle": "File:Kvint Premium Grape Divin XO Kosher bottle.jpg",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kvint_Premium_Grape_Divin_XO_Kosher_bottle.jpg",
+  "author": "McKaby",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "modified": "크기 축소·WebP 변환",
+  "verifiedAt": "2026-11-21"
+ },
+ "md-carpet": {
+  "searchQueries": [
+   "Moldovan carpet",
+   "Bessarabian carpet"
+  ],
+  "candidatesFound": 30,
+  "status": "missing",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Moldovan_carpet_-_7..._(50037017312).jpg",
+  "note": "내려받기 실패: 썸네일을 받지 못함(429·잘림)"
+ },
+ "md-martisor": {
+  "searchQueries": [
+   "Mărțișor",
+   "martisor"
+  ],
+  "candidatesFound": 30,
+  "status": "missing",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Martisor_snowdrop.jpg",
+  "note": "내려받기 실패: 썸네일을 받지 못함(429·잘림)"
+ },
+ "md-black-pottery": {
+  "searchQueries": [
+   "black pottery Moldova",
+   "Hoginești pottery"
+  ],
+  "candidatesFound": 2,
+  "status": "missing",
+  "note": "자동 검색에서 조건에 맞는 사진 없음"
+ },
+ "md-cricova": {
+  "searchQueries": [
+   "Cricova winery",
+   "Cricova wine cellar"
+  ],
+  "candidatesFound": 30,
+  "status": "missing",
+  "note": "검토 결과 정확히 일치하는 자유 라이선스 사진 없음"
+ },
+ "md-viorica": {
+  "searchQueries": [
+   "Viorica cosmetic Moldova"
+  ],
+  "candidatesFound": 0,
+  "status": "missing",
+  "note": "자동 검색에서 조건에 맞는 사진 없음"
+ },
+ "md-guguta": {
+  "searchQueries": [
+   "Guguță",
+   "Gugutse Vangheli"
+  ],
+  "candidatesFound": 30,
+  "status": "missing",
+  "note": "검토 결과 정확히 일치하는 자유 라이선스 사진 없음"
+ },
+ "md-gagauz-dolls": {
+  "searchQueries": [
+   "Gagauz costume",
+   "Gagauz textile"
+  ],
+  "candidatesFound": 5,
+  "status": "missing",
+  "note": "검토 결과 정확히 일치하는 자유 라이선스 사진 없음"
+ },
+ "by-kommunarka": {
+  "searchQueries": [
+   "Kommunarka chocolate",
+   "Kommunarka Minsk"
+  ],
+  "candidatesFound": 34,
+  "status": "missing",
+  "note": "검토 결과 정확히 일치하는 자유 라이선스 사진 없음"
+ },
+ "by-spartak": {
+  "searchQueries": [
+   "Spartak Gomel confectionery"
+  ],
+  "candidatesFound": 1,
+  "status": "missing",
+  "note": "검토 결과 정확히 일치하는 자유 라이선스 사진 없음"
+ },
+ "by-cranberries": {
+  "searchQueries": [
+   "cranberries in sugar",
+   "клюква в сахаре"
+  ],
+  "candidatesFound": 4,
+  "status": "missing",
+  "note": "검토 결과 정확히 일치하는 자유 라이선스 사진 없음"
+ },
+ "by-zefir": {
+  "searchQueries": [
+   "zefir confectionery",
+   "зефир"
+  ],
+  "candidatesFound": 30,
+  "status": "verified",
+  "file": "assets/images/souvenirs/by/by-zefir.webp",
+  "width": 960,
+  "height": 777,
+  "sourceTitle": "File:Zefir in chocolate coat2.JPG",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Zefir_in_chocolate_coat2.JPG",
+  "author": "Off-shell",
+  "license": "CC BY-SA 3.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+  "modified": "크기 축소·WebP 변환",
+  "verifiedAt": "2026-11-21"
+ },
+ "by-pryanik": {
+  "searchQueries": [
+   "pryanik",
+   "пряник"
+  ],
+  "candidatesFound": 30,
+  "status": "verified",
+  "file": "assets/images/souvenirs/by/by-pryanik.webp",
+  "width": 960,
+  "height": 932,
+  "sourceTitle": "File:Пряники в сахарной глазури на белой тарелке.jpg",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:%D0%9F%D1%80%D1%8F%D0%BD%D0%B8%D0%BA%D0%B8_%D0%B2_%D1%81%D0%B0%D1%85%D0%B0%D1%80%D0%BD%D0%BE%D0%B9_%D0%B3%D0%BB%D0%B0%D0%B7%D1%83%D1%80%D0%B8_%D0%BD%D0%B0_%D0%B1%D0%B5%D0%BB%D0%BE%D0%B9_%D1%82%D0%B0%D1%80%D0%B5%D0%BB%D0%BA%D0%B5.jpg",
+  "author": "Соколова, Татьяна",
+  "license": "CC BY-SA 3.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+  "modified": "크기 축소·WebP 변환",
+  "verifiedAt": "2026-11-21"
+ },
+ "by-krambambula": {
+  "searchQueries": [
+   "Krambambula"
+  ],
+  "candidatesFound": 10,
+  "status": "missing",
+  "note": "검토 결과 정확히 일치하는 자유 라이선스 사진 없음"
+ },
+ "by-belovezhskaya": {
+  "searchQueries": [
+   "Belovezhskaya bitter"
+  ],
+  "candidatesFound": 0,
+  "status": "missing",
+  "note": "자동 검색에서 조건에 맞는 사진 없음"
+ },
+ "by-straw": {
+  "searchQueries": [
+   "Belarusian straw",
+   "straw craft Belarus"
+  ],
+  "candidatesFound": 30,
+  "status": "verified",
+  "file": "assets/images/souvenirs/by/by-straw.webp",
+  "width": 960,
+  "height": 720,
+  "sourceTitle": "File:2026.02.27 Vera Soldatova Rajca Manor Museum Straw Wisent.jpg",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:2026.02.27_Vera_Soldatova_Rajca_Manor_Museum_Straw_Wisent.jpg",
+  "author": "Tatiana Markina",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "modified": "크기 축소·WebP 변환",
+  "verifiedAt": "2026-11-21"
+ },
+ "by-linen": {
+  "searchQueries": [
+   "Belarusian embroidery",
+   "Belarusian rushnyk"
+  ],
+  "candidatesFound": 30,
+  "status": "verified",
+  "file": "assets/images/souvenirs/by/by-linen.webp",
+  "width": 835,
+  "height": 960,
+  "sourceTitle": "File:2026.08.01 Belarusian Embroidery on Flea market in Minsk Belarus.jpg",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:2026.08.01_Belarusian_Embroidery_on_Flea_market_in_Minsk_Belarus.jpg",
+  "author": "Agbarto",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "modified": "크기 축소·WebP 변환",
+  "verifiedAt": "2026-11-21"
+ },
+ "by-slutsk-belt": {
+  "searchQueries": [
+   "Slutsk belt",
+   "Slutsk sashes"
+  ],
+  "candidatesFound": 30,
+  "status": "verified",
+  "file": "assets/images/souvenirs/by/by-slutsk-belt.webp",
+  "width": 960,
+  "height": 869,
+  "sourceTitle": "File:Slutsk belt - by master craftsman Leo Madjarski - cyrillic script - Belarus - 1780s AD.jpg",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Slutsk_belt_-_by_master_craftsman_Leo_Madjarski_-_cyrillic_script_-_Belarus_-_1780s_AD.jpg",
+  "author": "master craftsman Leo Madjarski",
+  "license": "Public domain",
+  "licenseUrl": null,
+  "modified": "크기 축소·WebP 변환",
+  "verifiedAt": "2026-11-21"
+ },
+ "by-luch": {
+  "searchQueries": [
+   "Luch watch",
+   "Luch wristwatch"
+  ],
+  "candidatesFound": 30,
+  "status": "verified",
+  "file": "assets/images/souvenirs/by/by-luch.webp",
+  "width": 539,
+  "height": 960,
+  "sourceTitle": "File:Montre Luch mono aiguille.jpg",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Montre_Luch_mono_aiguille.jpg",
+  "author": "Kuruma33",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "modified": "크기 축소·WebP 변환",
+  "verifiedAt": "2026-11-21"
+ },
+ "by-neman": {
+  "searchQueries": [
+   "Neman glass factory",
+   "Neman crystal Belarus"
+  ],
+  "candidatesFound": 30,
+  "status": "verified",
+  "file": "assets/images/souvenirs/by/by-neman.webp",
+  "width": 857,
+  "height": 960,
+  "sourceTitle": "File:2024.01.17 NEMAN GLASS FACTORY Color Collection Compote Bowls 01.jpg",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:2024.01.17_NEMAN_GLASS_FACTORY_Color_Collection_Compote_Bowls_01.jpg",
+  "author": "Dina Panayotis",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "modified": "크기 축소·WebP 변환",
+  "verifiedAt": "2026-11-21"
+ },
+ "by-mtz-tractor": {
+  "searchQueries": [
+   "MTZ Belarus tractor",
+   "Belarus tractor"
+  ],
+  "candidatesFound": 30,
+  "status": "missing",
+  "note": "검토 결과 정확히 일치하는 자유 라이선스 사진 없음"
+ },
+ "by-belita": {
+  "searchQueries": [
+   "Belita Vitex"
+  ],
+  "candidatesFound": 0,
+  "status": "missing",
+  "note": "자동 검색에서 조건에 맞는 사진 없음"
+ },
+ "ua-kyiv-dry-jam": {
+  "searchQueries": [
+   "Kyiv dry jam",
+   "Kyiv dry varenye"
+  ],
+  "candidatesFound": 2,
+  "status": "missing",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Dry_pear_varenye_Kiev-style.jpg",
+  "note": "내려받기 실패: 썸네일을 받지 못함(429·잘림)"
+ },
+ "ua-lviv-chocolate": {
+  "searchQueries": [
+   "Lviv Handmade Chocolate",
+   "Lviv chocolate workshop"
+  ],
+  "candidatesFound": 3,
+  "status": "verified",
+  "file": "assets/images/souvenirs/ua/ua-lviv-chocolate.webp",
+  "width": 960,
+  "height": 641,
+  "sourceTitle": "File:Lviv Handmade Chocolate (29624180073).jpg",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Lviv_Handmade_Chocolate_(29624180073).jpg",
+  "author": "Andreas Kontokanis from Piraeus, Greece",
+  "license": "CC BY-SA 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+  "modified": "크기 축소·WebP 변환",
+  "verifiedAt": "2026-11-21"
+ },
+ "ua-yurashky": {
+  "searchQueries": [
+   "Yurashky gingerbread",
+   "Lviv gingerbread"
+  ],
+  "candidatesFound": 7,
+  "status": "missing",
+  "note": "자동 검색에서 조건에 맞는 사진 없음"
+ },
+ "ua-berry-jam": {
+  "searchQueries": [
+   "Carpathian blueberry jam",
+   "bilberry jam Ukraine"
+  ],
+  "candidatesFound": 0,
+  "status": "missing",
+  "note": "자동 검색에서 조건에 맞는 사진 없음"
+ },
+ "ua-honey": {
+  "searchQueries": [
+   "Ukrainian honey",
+   "honey Ukraine"
+  ],
+  "candidatesFound": 30,
+  "status": "missing",
+  "note": "검토 결과 정확히 일치하는 자유 라이선스 사진 없음"
+ },
+ "ua-herbal-tea": {
+  "searchQueries": [
+   "Carpathian herbal tea",
+   "Carpathian tea Ukraine"
+  ],
+  "candidatesFound": 1,
+  "status": "missing",
+  "note": "검토 결과 정확히 일치하는 자유 라이선스 사진 없음"
+ },
+ "ua-zakarpattia-wine": {
+  "searchQueries": [
+   "Zakarpattia wine",
+   "Berehove wine"
+  ],
+  "candidatesFound": 13,
+  "status": "verified",
+  "file": "assets/images/souvenirs/ua/ua-zakarpattia-wine.webp",
+  "width": 960,
+  "height": 639,
+  "sourceTitle": "File:(10-16) Вино (Музей Береговщины) - Wine (Museum of Beregovshiny) (10233399095).jpg",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:(10-16)_%D0%92%D0%B8%D0%BD%D0%BE_(%D0%9C%D1%83%D0%B7%D0%B5%D0%B9_%D0%91%D0%B5%D1%80%D0%B5%D0%B3%D0%BE%D0%B2%D1%89%D0%B8%D0%BD%D1%8B)_-_Wine_(Museum_of_Beregovshiny)_(10233399095).jpg",
+  "author": "spoilt.exile from Kyiv, Ukraine",
+  "license": "CC BY-SA 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+  "modified": "크기 축소·WebP 변환",
+  "verifiedAt": "2026-11-21"
+ },
+ "ua-petrykivka": {
+  "searchQueries": [
+   "Petrykivka painting",
+   "Петриківський розпис"
+  ],
+  "candidatesFound": 30,
+  "status": "verified",
+  "file": "assets/images/souvenirs/ua/ua-petrykivka.webp",
+  "width": 960,
+  "height": 640,
+  "sourceTitle": "File:Petrykivka painting workshop at the BWF 2019.jpg",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Petrykivka_painting_workshop_at_the_BWF_2019.jpg",
+  "author": "Mykola Swarnyk",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "modified": "크기 축소·WebP 변환",
+  "verifiedAt": "2026-11-21"
+ },
+ "ua-pysanka": {
+  "searchQueries": [
+   "Pysanka",
+   "pysanky Ukrainian eggs"
+  ],
+  "candidatesFound": 30,
+  "status": "verified",
+  "file": "assets/images/souvenirs/ua/ua-pysanka.webp",
+  "width": 960,
+  "height": 640,
+  "sourceTitle": "File:Pysanka Eggs.jpg",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Pysanka_Eggs.jpg",
+  "author": "Yevtushuk Victor",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "modified": "크기 축소·WebP 변환",
+  "verifiedAt": "2026-11-21"
+ },
+ "ua-lizhnyk": {
+  "searchQueries": [
+   "lizhnyk",
+   "ліжник"
+  ],
+  "candidatesFound": 35,
+  "status": "verified",
+  "file": "assets/images/souvenirs/ua/ua-lizhnyk.webp",
+  "width": 960,
+  "height": 640,
+  "sourceTitle": "File:Carpathian Lizhnyks.jpg",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Carpathian_Lizhnyks.jpg",
+  "author": "Закарпатська обласна державна адміністрація",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "modified": "크기 축소·WebP 변환",
+  "verifiedAt": "2026-11-21"
+ },
+ "ua-dodo-socks": {
+  "searchQueries": [
+   "Dodo Socks Ukraine"
+  ],
+  "candidatesFound": 0,
+  "status": "missing",
+  "note": "자동 검색에서 조건에 맞는 사진 없음"
+ },
+ "ua-gunia": {
+  "searchQueries": [
+   "GUNIA Project"
+  ],
+  "candidatesFound": 8,
+  "status": "missing",
+  "note": "검토 결과 정확히 일치하는 자유 라이선스 사진 없음"
+ },
+ "ua-stamps": {
+  "searchQueries": [
+   "Ukrposhta stamp",
+   "stamps of Ukraine 2022"
+  ],
+  "candidatesFound": 30,
+  "status": "missing",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Stamps_of_Ukraine,_2014-02.jpg",
+  "note": "내려받기 실패: 썸네일을 받지 못함(429·잘림)"
+ },
+ "ua-gifty": {
+  "searchQueries": [
+   "Gifty Ukraine"
+  ],
+  "candidatesFound": 0,
+  "status": "missing",
+  "note": "자동 검색에서 조건에 맞는 사진 없음"
+ }
+}
