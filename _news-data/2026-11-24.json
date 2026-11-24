@@ -1,0 +1,136 @@
+{
+  "date": "2026-11-24",
+  "home": [0, 3, 5],
+  "overview": "폴란드는 23일 밤 러시아 드론이 다시 영공을 침범했다고 밝혔고, 북대서양이사회는 폴란드에 AWACS 조기경보기를 보내기로 했습니다. 보스니아에서는 SIPA가 도주 중인 범죄 용의자를 도운 혐의로 전쟁 영웅 나세르 오리치 등을 체포했고, 자포리자 주거용 건물 공습으로 사상자가 크게 늘었습니다. 헝가리 마자르 총리는 V4 정상회의 직후 EU 차기 예산안을 협상의 기초로 볼 수 없다고 밝혔습니다.",
+  "stories": [
+    {
+      "region": "top",
+      "title": "폴란드, 러시아 드론 또 영공 침범…NATO는 폴란드에 AWACS 조기경보기 파견",
+      "countries": ["폴란드"],
+      "period": "2026-11-20 ~ 11-24",
+      "points": [
+        "노츠프롬폴란드에 따르면 23일 밤 러시아 드론이 우크라이나 쪽에서 폴란드 영공에 들어왔다가 동쪽으로 되돌아갔습니다. 작전사령부는 격추 권한이 있었으나 민간인 위험을 고려해 쏘지 않았다고 밝혔습니다.",
+        "RMF 보도를 인용한 이 매체는 드론이 제트 추진식이며 약 20km 들어와 9분가량 머물렀다고 전했습니다(익명 취재원). 잘레프스키 국방차관은 사고라고 보기 어려워 의도적 행동으로 본다고 말했습니다.",
+        "23일 임시 북대서양이사회 뒤 NATO는 폴란드에 AWACS 조기경보기를 배치하기로 했습니다. NATO 대변인은 유럽연합군최고사령관이 전진 배치를 승인했고 추가 자산도 검토 중이라고 밝혔습니다.",
+        "앞서 20일에는 3개 물체가 폴란드 남동부에 떨어졌고 Kh-101 순항미사일로 확인됐습니다. 러시아는 두 사건 모두 공식 입장을 내지 않았습니다."
+      ],
+      "why": "미사일에 이어 드론까지 되풀이돼 NATO의 동부 방공 태세와 대응 수위가 쟁점입니다. AWACS 운용 방식과 추가 배치 자산, 러시아의 반응이 다음 확인 지점입니다.",
+      "korea": "",
+      "sources": [
+        { "name": "Notes from Poland – NATO to send surveillance aircraft to Poland after Russian missile strikes", "url": "https://notesfrompoland.com/2026/11/24/nato-to-send-surveillance-aircraft-to-poland-after-russian-missile-strikes/", "lang": "EN" },
+        { "name": "Kyiv Independent – Russian drone violates Polish airspace deliberately, Polish defense ministry says", "url": "https://kyivindependent.com/russian-unmanned-aerial-vehicle-violates-polish-airspace-days-after-missile-incursion/", "lang": "EN" }
+      ]
+    },
+    {
+      "region": "v4",
+      "title": "헝가리 마자르 총리, EU 2028~2034 예산안 ‘협상의 기초 아냐’…V4 정상회의 직후",
+      "countries": ["헝가리"],
+      "period": "2026-11-23 ~ 11-24",
+      "points": [
+        "텔렉스에 따르면 마자르 총리는 24일 EU 차기 중기예산 초안을 두고 어떤 면에서도 협상의 기초로 보지 않는다고 말했습니다. 초안을 카이로·튀니스 시장 풍경에 빗댔습니다.",
+        "V4 정상들은 23일 브라티슬라바에서 만났고 오스트리아가 초청국으로 참석했습니다. 경쟁력, 이주, EU 예산이 주요 의제였습니다.",
+        "마자르 총리의 주된 반대 이유는 이미 빠듯한 예산에 우크라이나 의무 지원이 얹힌다는 점입니다. 헝가리는 우크라이나를 지지하지만 지원이 위협이나 조건으로 쓰여서는 안 된다는 입장입니다. 목요일과 금요일 협상에 참석할 예정입니다.",
+        "피초 슬로바키아 총리는 극적인 표현을 피했다고 말했고, 투스크 폴란드 총리는 헝가리 정권 교체가 V4 합의에 도움이 됐다고 평가했습니다. 키이우인디펜던트는 마자르가 젤렌스키와 자카르파티아에서 만날 수 있다는 취재원 발언을 전했으나 확정은 아닙니다."
+      ],
+      "why": "정권 교체 뒤 헝가리가 EU 예산 협상에서 어떤 입장을 취하는지가 향후 우크라이나 지원 재원 논의에 영향을 줍니다. 이번 주 후반 협상 결과가 다음 확인 지점입니다.",
+      "korea": "",
+      "sources": [
+        { "name": "Telex English – Magyar on EU budget: I do not consider this a basis for negotiation by any means", "url": "https://telex.hu/english/2026/11/24/magyar-on-eu-budget-i-do-not-consider-this-a-basis-for-negotiation-by-any-means", "lang": "EN" },
+        { "name": "Telex English – Magyar expresses solidarity with Ukrainian nation", "url": "https://telex.hu/english/2026/11/23/magyar-expresses-solidarity-with-ukrainian-nation-s-unprecedented-struggle-for-survival", "lang": "EN" }
+      ]
+    },
+    {
+      "region": "baltic",
+      "title": "리투아니아, 칼리닌그라드 공습경보 뒤 ‘리투아니아 공격설’ 확산 …외무부 부인, 허위정보 분석 보도",
+      "countries": ["리투아니아"],
+      "period": "2026-11-21 ~ 11-24",
+      "points": [
+        "LRT에 따르면 21일 19시 31분 칼리닌그라드 주지사는 리투아니아 쪽에서 온 수상한 물체에 경보 체계가 반응했으며 위협은 없다고 밝혔습니다. 같은 날 핀란드만에서 선박 스파르타 II가 드론 공격을 받았다는 보도가 있었습니다.",
+        "러시아 매체 다수는 주지사 발언의 첫 문장만 전했고, 온라인에서는 리투아니아가 먼저 공격했다는 주장이 퍼졌습니다. 리투아니아 외무부는 첫 대응이 4시간 32분 뒤인 22일 0시 40분이었고 드론 공격과 영공 사용 주장을 부인했습니다.",
+        "미디어 모니터링 회사 Repsense 분석에 따르면 NATO 공격 게시물 450건 중 355건이 3개 계정에서 나왔습니다. 리투아니아 내 게시물의 약 3분의 1은 정부·NATO·우크라이나가 나라를 전쟁으로 끌고 간다는 내용이었습니다.",
+        "LRT는 23일 리투아니아가 EU 3개국과 스타링크 장비 방화 공동 수사를 계획한다고 전했고, 24일에는 독일 전차가 리투아니아에 거의 눈에 띄지 않게 도착했다고 보도했습니다."
+      ],
+      "why": "허위정보가 군사 긴장을 키우는 사례로, 발트 국가의 초기 대응 속도와 대응 방식이 쟁점입니다. 이 내용은 LRT가 인용한 단일 분석 기준이며 러시아 정부의 공식 입장은 확인하지 못했습니다.",
+      "korea": "",
+      "sources": [
+        { "name": "LRT – How a Kaliningrad air raid alert turned into an operation against Lithuania", "url": "https://www.lrt.lt/en/news-in-english/19/3123322/how-a-kaliningrad-air-raid-alert-turned-into-an-operation-against-lithuania", "lang": "EN" },
+        { "name": "LRT – Lithuania plans joint investigation with three EU countries into Starlink arson attacks", "url": "https://www.lrt.lt/en/news-in-english/19/3123336/lithuania-plans-joint-investigation-with-three-eu-countries-into-starlink-arson-attacks", "lang": "EN" }
+      ]
+    },
+    {
+      "region": "wbalkan",
+      "title": "보스니아 SIPA, 도주 용의자 도운 혐의로 전 스레브레니차 방어 사령관 오리치 등 체포",
+      "countries": ["보스니아 헤르체고비나"],
+      "period": "2026-11-24",
+      "points": [
+        "N1에 따르면 24일 SIPA와 스르프스카 공화국 경찰은 전 스레브레니차 방어 사령관 나세르 오리치와 전 스르프스카 의원 니콜리나 슐리비치를 체포했습니다. 오리치는 올로보 인근, 슐리비치는 이스토치노 사라예보에서 붙잡혔습니다.",
+        "두 사람은 도주 중인 도르제 즈들랄로의 도피를 도운 혐의를 받습니다. 즈들랄로는 8월 2일 루카비차에서 전 동료를 쏴 다치게 한 뒤 도주 중이며, 2010년 2000년 살인으로 20년형을 받고 2022년 2월 석방됐습니다.",
+        "경찰은 메수드 무스타피치와 변호사 시니샤 데르간츠 관련 장소도 수색했으나 즈들랄로는 발견되지 않았습니다.",
+        "N1은 모든 인물이 확정 판결 전까지 무죄로 추정된다고 덧붙였고, 오리치가 2008년 헤이그 전범재판소 항소심에서 전쟁범죄 혐의에서 무죄를 받았다고 상기시켰습니다. 정치권 반응은 이 기사에서 확인되지 않았습니다."
+      ],
+      "why": "전쟁 시기 영웅으로 알려진 인물의 체포라 보스니아 내 정치·민족 구도에서 반응이 클 수 있습니다. 혐의의 구체적 내용과 구금 연장 여부가 다음 확인 지점입니다. 이번에는 N1 보도 한 건만 확인했습니다.",
+      "korea": "",
+      "sources": [
+        { "name": "N1 – Wartime commander Naser Orić and former MP Nikolina Šljivić arrested in SIPA operation over fugitive Đorđe Zdrale", "url": "https://n1info.ba/english/news/wartime-commander-naser-oric-and-former-mp-nikolina-sljivic-arrested-in-sipa-operation-over-fugitive-djordje-zdrale/", "lang": "EN" }
+      ]
+    },
+    {
+      "region": "sbalkan",
+      "title": "불가리아 바르나 시장 코체프, 지역선관위가 권한 박탈…라데프 총리 ‘유권자 의사 뒤집는 일’",
+      "countries": ["불가리아"],
+      "period": "2026-11-23 ~ 11-24",
+      "points": [
+        "BTA에 따르면 바르나 지역선거관리위원회는 블라고미르 코체프 시장의 권한을 종료하고 당선증을 취소했습니다. 2025년 부패·직권남용 사건으로 구금됐을 때의 휴직 문제에 대한 이의 제기가 근거였습니다.",
+        "루멘 라데프 총리는 위원회에 대표를 둔 정당들이 이유를 설명해야 하며 진보 불가리아는 위원이 없다고 말했습니다. 선관위를 통한 시장 해임은 유권자 의사를 뒤집을 수 있다고 경고했으나 바바 알리노 사건 등 건설 사업 의문은 남아 있다고 했습니다.",
+        "코체프 시장은 이를 쿠데타라고 부르며 항소하겠다고 밝혔고, 테르지예프 소피아 시장은 코체프를 지지했습니다. MRF는 자신들의 입장이 위원회 결정과 무관하다고 밝혔습니다."
+      ],
+      "why": "지방정부 수장의 해임 절차를 둘러싼 정당 갈등으로 법적·정치적 공방이 이어질 수 있습니다. 항소 결과와 위원회 결정의 법적 근거가 다음 확인 지점입니다.",
+      "korea": "",
+      "sources": [
+        { "name": "BTA – PM Calls on Parties to Explain Decision to Remove Varna Mayor Kotsev", "url": "https://www.bta.bg/en/news/bulgaria/1253016-pm-calls-on-parties-to-explain-decision-to-remove-varna-mayor-kotsev", "lang": "EN" }
+      ]
+    },
+    {
+      "region": "east",
+      "title": "자포리자 주거용 건물 공습…사망 2명·부상 44명, 잔해 수색 계속",
+      "countries": ["우크라이나"],
+      "period": "2026-11-23 ~ 11-24",
+      "points": [
+        "키이우인디펜던트에 따르면 23일 늦게 러시아 공격으로 자포리자 코스미치니 구역의 5층 주거용 건물이 일부 파괴됐습니다. 세미킨 주 군정청장은 최소 2명이 숨지고 44명이 다쳤다고 밝혔습니다.",
+        "부상자 중 1명은 외상성 뇌손상으로 위독하며, 1세 미만 영아와 4세·6세·16세 아동이 포함됐습니다. 구조대는 잔해 속 추가 피해자를 수색 중입니다.",
+        "사용된 무기는 확인되지 않았습니다. 한편 EU 집행위가 러시아 비자·스포츠 제재와 금융·에너지 분야 제재안을 제안했고 우크라이나 정부가 환영했으며, 젤렌스키 대통령은 NATO 의회 회의에서 우크라이나 가입을 촉구했다고 보도됐습니다.",
+        "23일 드니프로페트로우스크주에서는 공격으로 35만 가구 이상이 정전을 겪는다고 보도됐습니다."
+      ],
+      "why": "겨울을 앞두고 민간 주거지와 에너지 시설 공습이 이어지고 있습니다. 최종 사상자 집계와 EU 제재안의 회원국 합의 여부가 다음 확인 지점입니다.",
+      "korea": "",
+      "sources": [
+        { "name": "Kyiv Independent – 2 killed, 44 injured in Russian attack on residential building in Zaporizhzhia", "url": "https://kyivindependent.com/2-killed-22-injured-in-russian-attack-on-residential-building-in-zaporizhzhia/", "lang": "EN" },
+        { "name": "Kyiv Independent – Ukraine government welcomes newly proposed EU sanctions package", "url": "https://kyivindependent.com/ukraine-government-welcomes-newly-proposed-eu-sanctions-package/", "lang": "EN" },
+        { "name": "Kyiv Independent – Over 350,000 homes without power as energy crisis deepens in Dnipropetrovsk Oblast", "url": "https://kyivindependent.com/over-350-000-homes-without-power-as-energy-crisis-deepens-in-dnipropetrovsk-oblast/", "lang": "EN" }
+      ]
+    }
+  ],
+  "countries": {
+    "폴란드": "23일 밤 러시아 드론이 영공을 침범했고 NATO가 AWACS 조기경보기 파견을 결정(11/23~24, 노츠프롬폴란드). 네덜란드가 EU SAFE 프로그램으로 폴란드산 피오룬 방공체계를 구매한다고 보도.",
+    "체코": "정부가 연료 가격 상한과 경유세 인하를 12월까지 연장(11/24, Expats.cz, 헤드라인 기준). 발칸인사이트는 바비시 총리의 아그로페르트 이해충돌 문제를 다룬 분석을 실음(11/24).",
+    "슬로바키아": "23일 브라티슬라바에서 V4 정상회의가 열려 경쟁력·이주·EU 예산을 논의(11/23~24, 텔렉스). 피초 총리는 EU 예산안에 극적인 표현을 피했다고 발언.",
+    "헝가리": "마자르 총리가 EU 2028~2034 예산 초안을 협상의 기초로 볼 수 없다고 밝힘(11/24, 텔렉스). 23일 의회에서는 우크라이나와의 연대를 표명하고 곧 자카르파티아를 방문하겠다고 말함.",
+    "에스토니아": "피페드라이브가 236명, 에스토니아 에네르기아가 343명을 감원한다고 발표했고 카르멘 욜레르 사회부 장관이 사임(11/23, ERR). 크렘린은 에스토니아가 우크라이나의 영공 공격을 허용한다는 주장을 되풀이함.",
+    "라트비아": "새 연립정부가 느린 출발을 보인다는 보도(11/24, LSM, 헤드라인 기준). 라트비아가 러시아 외교관을 또 초치했고(11/23), 린케비치 대통령이 UN 안보리에서 연설.",
+    "리투아니아": "칼리닌그라드 경보 이후 리투아니아 공격설 확산과 외무부 부인, 허위정보 분석(11/21~23, LRT). 스타링크 방화 공동수사 계획, 독일 전차 도착(11/24).",
+    "슬로베니아": "최근 48시간 내 주요 보도 확인되지 않음. Sloveniatimes가 403으로 막혀 확인하지 못함.",
+    "크로아티아": "영국항공과 오스트리아항공이 자그레브에서 철수하고 공항이 새 계획을 발표(11/24, Total Croatia News, 헤드라인 기준). EP의 부코바르 결의안을 세르비아 학생운동이 비판(11/23, 발칸인사이트).",
+    "세르비아": "학생 명단의 새 지도부가 코소보 정책을 크게 바꾸지 못할 것이라는 분석(11/24, 발칸인사이트). 추피치 국회의장이 EU-서발칸 정상회의 불참 이유를 밝혔고 SNS는 부의장 선출에 항의하는 서한을 국제기구에 보냄(11/23, EWB).",
+    "보스니아 헤르체고비나": "SIPA가 오리치와 슐리비치를 즈들랄로 도피 지원 혐의로 체포(11/24, N1). 사라예보 법원이 경찰 살해 재심에서 마리노비치에게 45년형을 선고했고, 도디크 일가의 거부권 확보 시도를 다룬 분석도 보도.",
+    "몬테네그로": "최근 48시간 내 주요 보도 확인되지 않음. 발칸인사이트가 기후변화로 와인 재배 지도가 바뀐다는 기획을 실음(11/23, 헤드라인 기준).",
+    "코소보": "최근 48시간 내 주요 보도 확인되지 않음. 발칸인사이트는 세르비아 새 지도부의 코소보 정책 분석을 실음(11/24, 헤드라인 기준).",
+    "알바니아": "야당 민주당이 시위 활동가를 공격한다는 분석(11/23, 발칸인사이트, 헤드라인 기준). 새로운 주요 사건은 확인되지 않음.",
+    "북마케도니아": "실랴놉스카 대통령이 개헌 문제가 단순한 수정안 이야기라는 주장은 진지하지 않다고 발언(11/23, BTA, 헤드라인 기준).",
+    "불가리아": "바르나 시장 코체프의 권한을 지역선관위가 박탈, 라데프 총리가 정당들에 설명을 요구(11/24, BTA). 대통령·부통령 당선인 인증서 수여 예정, 세계은행이 녹색 전환 보고서 발표.",
+    "우크라이나": "자포리자 주거용 건물 공습으로 2명 사망·44명 부상(11/23~24, 키이우인디펜던트). 독일이 우크라이나 델타 체계 접근권을 처음 받은 나라가 되었고 EU가 신규 제재안을 제안.",
+    "벨라루스": "최근 48시간 내 주요 보도 확인되지 않음. 이번에 조회한 매체에서 벨라루스 관련 신규 기사가 확인되지 않았음.",
+    "몰도바": "트란스니스트리아 드네스트롭스크 인근에 드론이 추락해 폭발·화재가 났다는 목격 보도(11/23, IPN 인용 키이우인디펜던트, 미확인). 몰도바 국방부는 21일 러시아 드론이 영공을 두 번 침범했다고 밝힘.",
+    "루마니아": "루마니아와 몰도바 당국자가 부쿠레슈티에서 몰도바 방위 역량 강화와 EU 가입 경로를 논의(11/23, RRI). 재무장관이 민간 투자 유치 지원 계획을 발표."
+  },
+  "note": "작성 기준: 2026-11-24 저녁(한국시간). Kyiv Independent, Radio Romania International, LSM, LRT, ERR, Notes from Poland, Balkan Insight, BTA, European Western Balkans, Total Croatia News, Telex English, N1, Expats.cz 첫 화면을 확인했고, 폴란드 드론·NATO 파견, N1 오리치 체포, 자포리자 공습, 트란스니스트리아 드론, 칼리닌그라드 허위정보, 바르나 시장, 마자르 발언은 본문을 열어 확인했습니다. Sloveniatimes는 403으로 접속하지 못했고 한국 언론과 KOTRA는 이번에 조회하지 않았습니다. 체코·크로아티아·라트비아·북마케도니아 등 일부 단신은 헤드라인 수준만 확인했습니다. 폴란드 드론의 제원은 RMF 보도를 인용한 익명 취재원 기준이며, 트란스니스트리아 드론 사건은 당국 발표가 없는 상태입니다. 러시아의 공식 입장, 오리치 등 혐의의 구체적 내용, EU 제재안 합의 여부는 확인되지 않았습니다. 출처 표시: KR = 한국 언론, KOTRA = KOTRA 해외시장뉴스, EN = 해외 매체."
+}
