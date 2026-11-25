@@ -1,6 +1,222 @@
 /* 원본: _news-data/*.json (최신순, _tools/build-news.mjs로 생성) */
 window.NEWS_DATA=[
     {
+        "date": "2026-11-25",
+        "home": [
+            0,
+            1,
+            3
+        ],
+        "overview": "키이우인디펜던트는 미국 협상단이 전후 우크라이나 안보보장에서 미군 주둔과 군사기지를 배제했다고 25일 단독 보도했습니다. 24일에는 마자르 헝가리 총리가 취임 후 처음으로 자카르파티아에서 젤렌스키 대통령과 공식 회담했고, 보스니아에서는 세르비아계 각료들이 EU 홍수 복구 자금 협정 등을 담은 각료회의 안건을 막았습니다. 불가리아는 EU 집행위의 과잉재정적자 평가를 두고 총리가 강한 질책이라고 말했습니다.",
+        "stories": [
+            {
+                "region": "top",
+                "title": "미국, 전후 우크라이나 안보보장에서 미군 주둔·기지 배제…키이우 기대에 못 미쳐",
+                "countries": [
+                    "우크라이나"
+                ],
+                "period": "2026-11-19 ~ 11-25",
+                "points": [
+                    "키이우인디펜던트 단독 보도에 따르면 미국 협상단은 전쟁 후 안보보장에 병력 파견과 군사기지 설치를 비공개로 배제했습니다(익명 취재원 기반).",
+                    "미국은 NATO 5조를 본뜬 보장을 최종 평화협정에 담으려 하며, 한 미국 관계자는 푸틴이 비공개 논의에서 이 방식을 검토할 수 있다는 태도를 보였다고 전했습니다. 러시아는 외국군 주둔과 우크라이나의 NATO 가입에 계속 반대하고 있습니다.",
+                    "젤렌스키 대통령은 누가 어떻게 방어하는지에 대한 답을 받지 못했다며, 보장은 문서로 명시되고 최소 수십 년 유지돼야 한다고 주장했다고 전해졌습니다.",
+                    "같은 날 키이우인디펜던트는 주요 정상회의를 앞두고 EU 회원국들이 우크라이나 지원 방식에 합의하지 못했다고 보도했습니다."
+                ],
+                "why": "외국군 주둔 없는 보장이 재침공을 막을 수 있는지가 평화협상의 핵심 쟁점입니다. 앞으로 몇 주간 이어질 미국 특사단과 러시아·우크라이나·유럽 간 협의 결과가 다음 확인 지점입니다.",
+                "korea": "",
+                "sources": [
+                    {
+                        "name": "Kyiv Independent – US rules out troops, military bases in Ukraine under post-war security guarantees",
+                        "url": "https://kyivindependent.com/exclusive-us-rules-out-troops-military-bases-in-ukraine-under-post-war-security-guarantees-falling-short-of-kyivs-expectations/",
+                        "lang": "EN"
+                    },
+                    {
+                        "name": "Kyiv Independent – Days before key summit, EU countries want to help Ukraine, but can't agree on how",
+                        "url": "https://kyivindependent.com/days-before-key-summit-eu-countries-want-to-help-ukraine-but-cant-agree-on-how/",
+                        "lang": "EN"
+                    }
+                ]
+            },
+            {
+                "region": "v4",
+                "title": "마자르 헝가리 총리, 자카르파티아에서 젤렌스키와 첫 공식 회담…소수민족 문제는 조건으로 유지",
+                "countries": [
+                    "헝가리"
+                ],
+                "period": "2026-11-24 ~ 11-25",
+                "points": [
+                    "텔렉스에 따르면 24일 마자르 총리와 젤렌스키 대통령이 우크라이나 자카르파티아주 베레호보에서 첫 공식 회담을 가졌고, 우즈호로드에서 함께 헌화했습니다. 젤렌스키는 새로운 관계의 시작이라고 말했습니다.",
+                    "젤렌스키는 에너지를 포함한 여러 분야에서 합의했다고 밝혔고 디젤 부족에 대한 헝가리의 지원을 기대한다고 했습니다. 마자르는 헝가리가 물류 면에서 우크라이나 재건에 핵심 역할을 할 것이라고 말했습니다. 헝가리는 가뭄으로 옥수수가 200만 톤 부족해 우크라이나산 공급 가능성도 논의됐습니다.",
+                    "마자르는 소수민족 문제에 합의가 없으면 우크라이나의 EU 가입 협상 클러스터를 열지 않겠다는 입장을 재확인했고, EU 7년 예산을 우크라이나 지원과 직접 연계하는 것은 받아들일 수 없다고 했습니다.",
+                    "발칸인사이트는 이번 회동이 오르반 정부 퇴진 뒤의 해빙이지만 EU 가입 신속 처리는 없다고 분석했습니다. 텔렉스는 EU 의장국이 헝가리에 대한 7조 절차가 곧 종료될 수 있다고 시사했다고 전했습니다."
+                ],
+                "why": "정권 교체 뒤 헝가리가 우크라이나 지원과 EU 가입 문제에서 협력과 조건을 병행한다는 점이 확인됐습니다. 이번 주 후반 EU 예산 협상과 소수민족 권리 후속 조치가 다음 확인 지점입니다.",
+                "korea": "",
+                "sources": [
+                    {
+                        "name": "Telex English – Magyar: Hungary will play a key role in the rebuilding effort in Ukraine",
+                        "url": "https://telex.hu/english/2026/11/24/magyar-hungary-will-play-a-key-role-in-the-rebuilding-effort-in-ukraine",
+                        "lang": "EN"
+                    },
+                    {
+                        "name": "Telex English – Zelensky and Magyar lay wreaths together in Uzhhorod",
+                        "url": "https://telex.hu/english/2026/11/24/zelensky-and-magyar-lay-wreaths-together-in-uzhhorod-magyar-says-it-is-a-historic-day",
+                        "lang": "EN"
+                    },
+                    {
+                        "name": "Balkan Insight – Hungary-Ukraine Reset Relations but No Fast Track to Joining EU",
+                        "url": "https://balkaninsight.com/2026/11/25/hungary-ukraine-reset-relations-but-no-fast-track-to-joining-eu/rd/",
+                        "lang": "EN"
+                    }
+                ]
+            },
+            {
+                "region": "baltic",
+                "title": "에스토니아, 사회부 장관 사임·대규모 감원 속 EU 22차 대러 제재 지지",
+                "countries": [
+                    "에스토니아"
+                ],
+                "period": "2026-11-23 ~ 11-25",
+                "points": [
+                    "ERR에 따르면 카르멘 욜레르 사회부 장관이 야당이 불신임 표를 모을 수 있다는 상황에서 사임했습니다. 야당은 2027년 예산과 기후법 논의도 지연시키고 있습니다.",
+                    "에스토니아는 EU의 22차 대러 제재 패키지(전투기 관련 비자 금지 포함)를 지지했고, 총리는 러시아와의 철도 국경 검문소 폐쇄가 다음 단계가 될 수 있다고 말했습니다. 모스크바는 에스토니아가 우크라이나의 영공 공격을 허용한다고 비난했습니다.",
+                    "피페드라이브가 236명, 에스토니아 에네르기아가 343명을 감원한다고 발표했고, 정부는 겨울 동안 지역난방·망 요금을 보전할 계획입니다."
+                ],
+                "why": "정치 불안과 고용 악화가 겹친 가운데 러시아와의 국경 조치 수위가 국내 쟁점이 됐습니다. 본문 세부는 확인하지 못했고 ERR 첫 화면과 헤드라인 기준입니다. 철도 검문소 폐쇄 여부와 예산 처리가 다음 확인 지점입니다.",
+                "korea": "",
+                "sources": [
+                    {
+                        "name": "ERR – Social Affairs Minister Karmen Joller resigns",
+                        "url": "https://news.err.ee/1610203828/social-affairs-minister-karmen-joller-resigns",
+                        "lang": "EN"
+                    },
+                    {
+                        "name": "ERR – Estonia backs EU's 22nd Russia sanctions package, fighter visa ban",
+                        "url": "https://news.err.ee/1610204860/estonia-backs-eu-s-22nd-russia-sanctions-package-fighter-visa-ban",
+                        "lang": "EN"
+                    },
+                    {
+                        "name": "ERR – Estonian PM: Closing rail border crossing with Russia could be next step",
+                        "url": "https://news.err.ee/1610205202/estonian-pm-closing-rail-border-crossing-with-russia-could-be-next-step",
+                        "lang": "EN"
+                    }
+                ]
+            },
+            {
+                "region": "wbalkan",
+                "title": "보스니아, 세르비아계 각료들이 각료회의 안건 봉쇄…EU 홍수 복구 4570만 유로 협정 지연",
+                "countries": [
+                    "보스니아 헤르체고비나"
+                ],
+                "period": "2026-11-24",
+                "points": [
+                    "N1에 따르면 세르비아계 각료들이 안건 지지를 거부해 보스니아 각료회의가 제122차 정기회의를 열지 못했습니다. 안건은 40개가 넘었습니다.",
+                    "막힌 안건에는 2024년 10월 홍수 복구용 EU 연대기금 위임 협정 초안이 포함됩니다. 이 협정이 체결되면 약 4,566만 유로가 풀립니다.",
+                    "2027~2029년 공공투자 프로그램, 헤이그 법원 협정 비준 초안, 2026년 6월 FATF 회색 목록 편입 후속 행동계획 보고서, 개혁·성장 기구 이행 관련 보고서 등도 함께 지연됐습니다.",
+                    "각료회의 공식 성명은 결정이 일시적으로 중단됐다고만 밝혔고, 세르비아계 각료의 직접 입장은 이 기사에서 확인되지 않았습니다. 이와 별도로 EWB는 이고르 도디크가 스르프스카 공화국 새 정부 구성 권한을 받았다고 전했습니다."
+                ],
+                "why": "EU 자금과 개혁 의제가 정치적 교착으로 묶여 있습니다. 봉쇄가 풀리는 시점과 EU 자금 집행 영향이 다음 확인 지점입니다. 이번에는 N1 보도 위주로 확인했습니다.",
+                "korea": "",
+                "sources": [
+                    {
+                        "name": "N1 – Blockades begin in Bosnia as Serb ministers stall EUR 45.7 million EU flood relief and reform agenda",
+                        "url": "https://n1info.ba/english/news/blockades-begin-in-bosnia-as-serb-ministers-stall-457-million-eu-flood-relief-and-reform-agenda/",
+                        "lang": "EN"
+                    },
+                    {
+                        "name": "European Western Balkans – Igor Dodik receives mandate to form a new government",
+                        "url": "https://europeanwesternbalkans.com/2026/11/23/igor-dodik-receives-mandate-to-form-a-new-government/",
+                        "lang": "EN"
+                    }
+                ]
+            },
+            {
+                "region": "sbalkan",
+                "title": "불가리아 총리, EU 집행위의 과잉재정적자 평가를 ‘따끔한 질책’이라 평가…바르나 시장은 해임 항의",
+                "countries": [
+                    "불가리아"
+                ],
+                "period": "2026-11-24 ~ 11-25",
+                "points": [
+                    "BTA에 따르면 라데프 총리는 25일 EU 집행위의 과잉재정적자 관련 의견을 이전 정부들의 무분별한 지출에 대한 따끔한 질책이라고 표현했습니다. 집행위는 24일 불가리아의 시정 조치가 불충분하다고 보고 절차 강화를 촉구했습니다.",
+                    "집행위가 2027년 예산의 재정 안정화 조치는 긍정적으로 평가했다며, 총리는 이를 정부 노선에 대한 확인이라고 해석했습니다.",
+                    "의회는 2027년 국가·건강보험·사회보험 예산안 1차 독회를 시작합니다. 가스공사 불가르가스는 12월 가스 요금 14.38% 인상안을 냈다가 더 낮은 수준을 요구하겠다고 밝혔습니다.",
+                    "지역선관위가 권한을 박탈한 바르나 시장 코체프는 법적 근거가 없다고 주장했고, 전국지방자치단체협회는 우려를 표했습니다."
+                ],
+                "why": "재정 적자 시정과 에너지 요금, 지방정부 수장 해임 문제가 한꺼번에 불거졌습니다. 집행위 절차 강화 여부와 코체프 항소 결과가 다음 확인 지점입니다.",
+                "korea": "",
+                "sources": [
+                    {
+                        "name": "BTA – PM Describes European Commission's Opinion on Bulgaria's Excessive Deficit Response as Stinging Rebuke",
+                        "url": "https://www.bta.bg/en/news/economy/1253803-pm-describes-european-commission-s-opinion-on-bulgaria-s-excessive-deficit-respo",
+                        "lang": "EN"
+                    },
+                    {
+                        "name": "BTA – Ousted Varna Mayor Kotsev Sees No Legal Grounds for His Removal",
+                        "url": "https://www.bta.bg/en/news/bulgaria/1253768-ousted-varna-mayor-kotsev-sees-no-legal-grounds-for-his-removal",
+                        "lang": "EN"
+                    }
+                ]
+            },
+            {
+                "region": "east",
+                "title": "러시아, 오데사주·키이우 공격…우크라이나 드론은 러시아 정유시설 2곳 타격 보도",
+                "countries": [
+                    "우크라이나"
+                ],
+                "period": "2026-11-24 ~ 11-25",
+                "points": [
+                    "키이우인디펜던트와 비상사태부 발표에 따르면 24일 밤 러시아 공격으로 오데사주에서 청소년을 포함해 2명이 숨지고 1명이 다쳤습니다. 키이우에서는 16층 건물 앞 드론 폭발로 2명이 다쳤습니다.",
+                    "25일 새벽 키이우주 공격으로 1명이 숨지고 Epicentr, Nova Poshta 등 상업 시설이 피해를 입었습니다.",
+                    "우크라이나 드론이 밤사이 러시아 정유공장 2곳을 공격해 화재가 났다고 모니터링 채널이 전했습니다(독립 확인 전).",
+                    "우크라이나 합참은 러시아군 누적 손실이 164만여 명이라고 주장했습니다(우크라이나 측 발표)."
+                ],
+                "why": "겨울을 앞두고 양측의 장거리 공격이 이어지고 있습니다. 정유시설 피해 규모와 러시아의 공식 발표가 다음 확인 지점입니다.",
+                "korea": "",
+                "sources": [
+                    {
+                        "name": "Kyiv Independent – Russian attacks kill 2 in Odesa Oblast, including child, injure more in Kyiv",
+                        "url": "https://kyivindependent.com/russian-attacks-kill-2-in-odesa-oblast-including-child-injure-more-in-kyiv/",
+                        "lang": "EN"
+                    },
+                    {
+                        "name": "Kyiv Independent – Russian attack kills 1, damages commercial infrastructure in Kyiv Oblast",
+                        "url": "https://kyivindependent.com/russian-attack-kills-1-damages-commercial-infrastructure-in-kyiv-oblast/",
+                        "lang": "EN"
+                    },
+                    {
+                        "name": "Kyiv Independent – Ukrainian drones reportedly strike 2 Russian oil refineries in massive attack",
+                        "url": "https://kyivindependent.com/ukrainian-drones-reportedly-strike-russian-oil-refineries-in-massive-attack/",
+                        "lang": "EN"
+                    }
+                ]
+            }
+        ],
+        "countries": {
+            "폴란드": "폴란드와 미국이 방위기술 협력 협정에 서명(11/24, 노츠프롬폴란드, 헤드라인 기준). 폴란드 영토에 떨어진 물체 3개가 모두 러시아 미사일로 확인(11/23).",
+            "체코": "바비시 총리의 아그로페르트 이해충돌 문제를 다룬 분석 보도(11/24, 발칸인사이트, 헤드라인 기준). Expats.cz는 접속되지 않아 확인하지 못함.",
+            "슬로바키아": "최근 48시간 내 주요 보도 확인되지 않음. 직전 브리핑 기준으로 23일 브라티슬라바에서 V4 정상회의가 열렸음.",
+            "헝가리": "마자르 총리가 자카르파티아에서 젤렌스키와 첫 공식 회담(11/24, 텔렉스). EU 의장국이 7조 절차 종료 가능성을 시사하고, 마자르는 25일 소련 강제노동 피해자 추모행사에서 화해를 언급.",
+            "에스토니아": "욜레르 사회부 장관 사임, EU 22차 제재 지지, 철도 국경 폐쇄 언급(11/23~24, ERR). 피페드라이브·에네르기아 감원 발표.",
+            "라트비아": "린케비치 대통령이 유엔에서 기술 관련 연설(11/25, LSM, 헤드라인 기준). 정부가 airBaltic에 1억 7,500만 유로 보증을 제공할 수 있다는 보도와 2027년 예산 검토, 새 연립정부의 더딘 출발 보도.",
+            "리투아니아": "ECHR가 이주민 벨라루스 송환 관련 리투아니아의 인권 침해를 인정하지 않았다고 판결(11/24, LRT). 대통령 보좌관은 칼리닌그라드 경고를 확전이 아니라 러시아의 두려움 반영이라고 평가, 독일 전차 도착.",
+            "슬로베니아": "최근 48시간 내 주요 보도 확인되지 않음. Sloveniatimes는 이번에 조회하지 못했음.",
+            "크로아티아": "주요 항공사들이 자그레브에서 철수하고 공항이 대응 계획 발표(11/24, Total Croatia News, 헤드라인 기준). 국경경찰의 이주민 대우를 다룬 보고서 보도(11/24, 발칸인사이트), 크로아티아 의원들이 부코바르 결의안 제안.",
+            "세르비아": "베오그라드 법원이 보스니아 세르비아계 여성에게 전쟁 중 살인 유죄 판결(11/24, 발칸인사이트, 헤드라인 기준). 추피치 의장의 EU-서발칸 정상회의 불참 설명과 SNS의 부의장 선출 항의 서한(11/23, EWB).",
+            "보스니아 헤르체고비나": "세르비아계 각료들이 각료회의 안건을 막아 EU 홍수 복구 협정 지연(11/24, N1). 오리치 전 사령관 체포 후속 보도와 건국일(11/25) 행사.",
+            "몬테네그로": "최근 48시간 내 주요 보도 확인되지 않음. 이번에 조회한 매체에서 몬테네그로 관련 신규 기사가 확인되지 않았음.",
+            "코소보": "최근 48시간 내 주요 보도 확인되지 않음. 발칸인사이트는 세르비아 새 지도부가 코소보 정책을 바꾸지 못할 것이라는 의견 기사를 실음(11/24).",
+            "알바니아": "학교 내 스마트시티 카메라가 사생활 침해 우려를 낳는다는 보도(11/25, 발칸인사이트, 헤드라인 기준).",
+            "북마케도니아": "헌법 개정이 가져올 효과를 다룬 EWB 분석 기사(11/24, 헤드라인 기준). 새로운 주요 사건은 확인되지 않음.",
+            "불가리아": "총리가 EU 집행위의 과잉재정적자 의견을 따끔한 질책이라고 표현(11/25, BTA). 12월 가스 요금 인상안, 2027년 예산 1차 독회, 바르나 시장 해임 논란 지속.",
+            "우크라이나": "미국이 전후 안보보장에서 미군 주둔·기지를 배제했다는 단독 보도(11/25, 키이우인디펜던트). 오데사주·키이우 공격으로 사상자 발생, 노르웨이는 2027년 최소 70억 달러 지원 약속.",
+            "벨라루스": "최근 48시간 내 주요 보도 확인되지 않음. ECHR가 벨라루스로 송환된 이주민 사건을 판결했으나 벨라루스 내부 소식은 아님(11/24).",
+            "몰도바": "최근 48시간 내 주요 보도 확인되지 않음. 직전 브리핑 기준으로 루마니아와 몰도바 당국자가 방위 역량 강화와 EU 가입 경로를 논의(11/23, RRI).",
+            "루마니아": "중앙은행 부총재가 루마니아의 인플레이션 기록이 EU에서 가장 길다고 인정, 독일과의 경제 협력 논의(11/24, RRI, 헤드라인 기준)."
+        },
+        "note": "작성 기준: 2026-11-25 저녁(한국시간). Kyiv Independent, Notes from Poland, Balkan Insight, LSM, LRT, ERR, Radio Romania International, Telex English, BTA, European Western Balkans, N1, Total Croatia News 첫 화면을 확인했고, 미국 안보보장 단독, 마자르-젤렌스키 회담, 보스니아 각료회의 봉쇄, 불가리아 총리 발언, 오데사·키이우 공격 기사는 본문을 열어 확인했습니다. Expats.cz는 503으로, Sloveniatimes는 이번에 조회하지 못했고 KOTRA에서는 동유럽 관련 신규 기사를 찾지 못했습니다. ERR 기사는 본문 없이 헤드라인과 첫 화면 기준이며 날짜 일부는 추정입니다. 미국 안보보장 보도는 익명 취재원 기반이며 러시아·미국 정부의 공식 입장은 확인하지 못했습니다. 우크라이나 정유시설 공격은 모니터링 채널 주장이고, EU 정상회의 결과와 마자르의 EU 예산 협상 결과는 아직 나오지 않았습니다. 출처 표시: KR = 한국 언론, KOTRA = KOTRA 해외시장뉴스, EN = 해외 매체."
+    },
+    {
         "date": "2026-11-24",
         "home": [
             0,
@@ -6444,232 +6660,5 @@ window.NEWS_DATA=[
             "루마니아": "콘스탄차 앞바다에서 화물선이 드론 공격 의심으로 침몰, 1명 사망·3명 실종(10/23). 2025년 재정적자 GDP 대비 7.8%로 EU 최고(10/22)."
         },
         "note": "작성 기준: 2026-10-23 저녁(한국시간). Kyiv Independent, Radio Romania International, LSM, LRT, ERR, Notes from Poland, Balkan Insight, BTA, European Western Balkans, Expats.cz, Total Croatia News, Telex, N1의 첫 화면과 일부 기사를 확인했습니다. Sloveniatimes는 이번에 조회하지 않았고 KOTRA 해외시장뉴스는 동유럽 새 기사를 확인하지 못했으며 한국 언론은 사용하지 못했습니다. 루마니아 선박 침몰은 BTA 단일 보도를 바탕으로 했고 공격 주체는 공식 확인되지 않았습니다. 세르비아 기사 일부는 유료 구간 때문에 앞부분만 확인했고, 불가리아 국가보호국장 사임 요구의 경위는 확인하지 못했습니다. 슬로바키아·슬로베니아·코소보·벨라루스·몰도바는 새 주요 보도가 확인되지 않아 배경 동향으로 대신했습니다. 일부 매체의 요약은 헤드라인 중심입니다. ‘한국·기업 시사점’은 보도를 바탕으로 한 해석입니다. 출처 표시: KR = 한국 언론, KOTRA = KOTRA 해외시장뉴스, EN = 해외 매체."
-    },
-    {
-        "date": "2026-10-22",
-        "home": [
-            0,
-            1,
-            3
-        ],
-        "overview": "푸틴이 10월 21일 미국 위트코프 특사와 만나 3자 평화협상 재개를 밝혔지만, 러시아는 같은 시기 미사일과 드론 210대로 우크라이나 전역을 공습해 최소 9명이 숨졌습니다. 폴란드 하원은 10월 20일 낙태 허용 확대 법안 2건을 통과시켰으나 나브로츠키 대통령의 거부권이 변수입니다. 세르비아는 10월 25일 총선을 앞두고 헝가리 MOL의 석유회사 NIS 인수 계약 서명과 선거 공정성 논란이 겹쳤습니다. 몬테네그로에서 열린 베를린 프로세스 정상회의에서는 메르츠 총리가 몬테네그로의 EU 가입협상이 거의 끝났다고 말했고, 루마니아는 약 6개월의 정치 공백 끝에 새 정부가 출범했습니다.",
-        "stories": [
-            {
-                "region": "top",
-                "title": "푸틴·위트코프 회동 직후 러시아 대규모 공습…젤렌스키 “3자 협상 재개 지지”, 회담은 11월 가능성",
-                "countries": [
-                    "우크라이나"
-                ],
-                "period": "2026-10-21 ~ 22",
-                "points": [
-                    "푸틴 대통령은 10월 21일 상트페테르부르크에서 미국 위트코프 특사를 만났고, 크렘린은 미국·러시아·우크라이나 3자 협상 재개 준비가 됐다고 밝혔습니다. 러시아 국영 매체는 양측이 3자 회담을 어떻게 진행할지에 관한 구체적 틀을 논의했다고 전했습니다.",
-                    "젤렌스키 대통령은 3자 협상 재개를 지지한다며 회담이 11월에 열릴 가능성이 크다고 보았습니다. 크렘린의 신호는 긍정적이지만 과거에 회담이 번복된 적이 있어 지켜봐야 한다고 말했습니다.",
-                    "같은 시기 러시아는 미사일과 드론 210대(제트 추진 드론 110대 포함)를 동원해 키이우를 중심으로 공습했습니다. 키이우인디펜던트는 최소 9명 사망·부상 56~57명이라고 전했고(기사 안에서도 수치가 다름), 우크라이나 공군은 드론 181대를 격추했다고 밝혔습니다.",
-                    "파이낸셜타임스는 우크라이나가 NATO의 무기·탄약 조달 체계를 이용할 수 있게 될 것이라고 보도했습니다. 10월 21일에는 반부패청(NABU)이 중앙은행 총재 사무실을 압수수색했다는 보도도 나왔습니다."
-                ],
-                "why": "협상 재개 신호와 공습 확대가 동시에 나타나는 국면입니다. 11월 회담 일정이 실제로 잡히는지가 다음 확인 지점입니다.",
-                "korea": "겨울을 앞둔 에너지·교통 시설 피해가 이어져 현지 한국 기업과 재건 사업은 안전과 인프라 상황을 함께 점검할 필요가 있습니다.",
-                "sources": [
-                    {
-                        "name": "Kyiv Independent – Russian attacks kill at least 9, injure 57 across Ukraine",
-                        "url": "https://kyivindependent.com/russian-attacks-kill-at-least-9-injure-57-across-ukraine-as-kyiv-hit-by-mass-missile-drone-attack/",
-                        "lang": "EN"
-                    },
-                    {
-                        "name": "Kyiv Independent – Zelensky supports resuming trilateral peace talks",
-                        "url": "https://kyivindependent.com/kremlin-ready-to-resume-trilateral-peace-talks-with-us-ukraine-putin-claims/",
-                        "lang": "EN"
-                    },
-                    {
-                        "name": "Kyiv Independent – Ukraine to gain access to NATO procurement system, FT says",
-                        "url": "https://kyivindependent.com/ukraine-to-gain-access-to-nato-procurement-system-for-weapons-ammunition-financial-times-says/",
-                        "lang": "EN"
-                    }
-                ]
-            },
-            {
-                "region": "v4",
-                "title": "폴란드 하원, 낙태 허용 확대 법안 2건 통과…나브로츠키 대통령 거부권이 관건",
-                "countries": [
-                    "폴란드"
-                ],
-                "period": "2026-10-20 ~ 22",
-                "points": [
-                    "하원(Sejm)은 10월 20일 중증 태아 기형 시 낙태를 다시 허용하는 법안을 찬성 233·반대 203으로 통과시켰습니다. 2020년 헌법재판소 판결로 금지된 사유를 되살리는 내용입니다.",
-                    "낙태를 돕는 행위를 비범죄화하는 법안은 찬성 217·반대 213의 한 표 차이로 통과했습니다. 노트프롬폴란드는 PiS 의원 10명(카친스키 대표 포함)을 포함해 27명이 불참했고, 연정 내 PSL 의원 14명이 반대했다고 전했습니다.",
-                    "두 법안은 상원으로 넘어가며, 이후 대통령이 서명·거부·헌재 심사 요청 중 하나를 택합니다. 매체는 낙태에 반대해 온 나브로츠키 대통령이 서명할 가능성은 매우 낮다고 평가했습니다. 대통령실 비서실장은 최종 내용을 보고 판단하겠다고 밝혔습니다.",
-                    "현재 폴란드에서 낙태는 범죄로 인한 임신이나 산모의 생명·건강이 위협받는 경우에만 허용됩니다."
-                ],
-                "why": "연정이 낙태 규제 완화를 약속해 왔으나 연정 내부에서도 이견이 있었고, 마지막 관문은 대통령입니다. 거부 시 연정이 의회에서 뒤집을 표가 부족해 법 시행은 불투명합니다.",
-                "korea": "",
-                "sources": [
-                    {
-                        "name": "Notes from Poland – Parliament approves liberalisation of Poland’s abortion laws",
-                        "url": "https://notesfrompoland.com/2026/10/21/parliament-approves-liberalisation-of-polands-abortion-laws/",
-                        "lang": "EN"
-                    },
-                    {
-                        "name": "Notes from Poland – How will recent scandals affect Polish politics?",
-                        "url": "https://notesfrompoland.com/2026/10/22/how-will-recent-scandals-affect-polish-politics/",
-                        "lang": "EN"
-                    }
-                ]
-            },
-            {
-                "region": "baltic",
-                "title": "리투아니아 총리 “러시아가 NATO 5조의 한계를 시험 중”…폴란드와 합동으로 드론 폭발 조사",
-                "countries": [
-                    "리투아니아"
-                ],
-                "period": "2026-10-21",
-                "points": [
-                    "LRT에 따르면 리투아니아 총리는 10월 21일 러시아가 NATO 집단방위 조항(5조)의 한계를 시험하고 있다고 말했습니다.",
-                    "나우세다 대통령은 리투아니아 안에서 발생한 드론 폭발을 폴란드·리투아니아 합동 조사팀이 조사하고 있다고 밝혔습니다. 앞서 10월 18일 드론 유입 경로를 두고 두 나라 입장이 엇갈렸습니다.",
-                    "대통령은 같은 날 미국 씨티그룹 수장을 만났고, 이 은행이 발트 지역 사무소 설립을 계획 중이라고 LRT가 전했습니다. LRT는 미국이 러시아를 계속 억지할 수 있는지에 대한 리투아니아의 불안도 해설 기사로 다뤘습니다.",
-                    "국영 에너지기업 이그니티스는 700MW 발트해 해상풍력 사업의 일정 지연을 제안했습니다."
-                ],
-                "why": "드론 사건을 계기로 NATO 동부 측면의 대응 규정과 책임 소재가 쟁점이 되고 있습니다. 합동 조사 결과가 폴란드와의 갈등 해소 여부를 가를 수 있습니다.",
-                "korea": "",
-                "sources": [
-                    {
-                        "name": "LRT – Lithuanian PM: Russia is testing limits of NATO’s Article 5",
-                        "url": "https://www.lrt.lt/en/news-in-english/19/3089141/lithuanian-pm-russia-is-testing-limits-of-nato-s-article-5",
-                        "lang": "EN"
-                    },
-                    {
-                        "name": "LRT – Polish-Lithuanian team investigates drone explosion in Lithuania",
-                        "url": "https://www.lrt.lt/en/news-in-english/19/3089120/polish-lithuanian-team-investigates-drone-explosion-in-lithuania-nauseda-says",
-                        "lang": "EN"
-                    },
-                    {
-                        "name": "LRT – Ignitis Group proposes delay to 700 MW Baltic Sea wind farm project",
-                        "url": "https://www.lrt.lt/en/news-in-english/19/3089160/ignitis-group-proposes-delay-to-700-mw-baltic-sea-wind-farm-project",
-                        "lang": "EN"
-                    }
-                ]
-            },
-            {
-                "region": "wbalkan",
-                "title": "세르비아 총선 사흘 앞…MOL의 NIS 인수 계약 서명, 불법 감시 의혹·선거 직전 체포도 잇따라",
-                "countries": [
-                    "세르비아"
-                ],
-                "period": "2026-10-21 ~ 22",
-                "points": [
-                    "유럽웨스턴발칸스는 헝가리 MOL이 세르비아 석유회사 NIS의 러시아 측 과반 지분을 인수하는 계약이 서명됐다고 전했습니다. 말리 재무장관은 세르비아 정부 지분을 30%에서 35%로 늘리는 서면 합의도 있다고 밝혔고, 거래 완결에는 세르비아와 보스니아 경쟁당국의 승인이 필요합니다. 거래 금액은 보도에 나오지 않았습니다.",
-                    "MOL은 이후 NIS 거래에 변화가 없다고 밝혔고, 세르비아 부처는 말리 장관의 발언을 설명하는 입장을 냈습니다.",
-                    "BIRN은 10월 21일 선거일 폭력을 계획한 혐의로 최소 7명이 체포됐다고 전했습니다. 유럽웨스턴발칸스는 새로 드러난 불법 감시 사례가 선거의 공정성에 영향을 줄 수 있다고 보도했습니다.",
-                    "세르비아는 10월 25일 조기 총선을 치릅니다. BIRN은 젊은 유권자 사이에서 집권 세르비아진보당의 지지 기반이 약해지고 있다는 분석을 실었고, 사전 여론조사가 거의 공개되지 않은 이유를 다룬 분석도 나왔습니다."
-                ],
-                "why": "에너지 기업 소유 구조 변경과 선거 공정성 논란이 선거 직전 한꺼번에 불거졌습니다. 결과와 승인 절차가 EU 관계와 에너지 공급에 영향을 줄 수 있습니다.",
-                "korea": "",
-                "sources": [
-                    {
-                        "name": "European Western Balkans – Agreement signed on sale of NIS to Hungary’s MOL",
-                        "url": "https://europeanwesternbalkans.com/2026/10/21/agreement-signed-on-sale-of-nis-to-hungarys-mol/",
-                        "lang": "EN"
-                    },
-                    {
-                        "name": "Balkan Insight – Multiple Arrests Across Serbia Ahead of Crucial Elections",
-                        "url": "https://balkaninsight.com/2026/10/21/multiple-arrests-across-serbia-ahead-of-crucial-elections/bi/",
-                        "lang": "EN"
-                    },
-                    {
-                        "name": "European Western Balkans – Newly revealed cases of illegal surveillance in Serbia",
-                        "url": "https://europeanwesternbalkans.com/2026/10/22/newly-revealed-cases-of-illegal-surveillance-in-serbia-affect-the-integrity-of-the-election-process/",
-                        "lang": "EN"
-                    }
-                ]
-            },
-            {
-                "region": "sbalkan",
-                "title": "몬테네그로 베를린 프로세스 정상회의…메르츠 “EU 가입협상 거의 마쳤다”, 2027년 여름 조약 서명 가능성",
-                "countries": [
-                    "몬테네그로"
-                ],
-                "period": "2026-10-21 ~ 22",
-                "points": [
-                    "10월 22일 몬테네그로 밀로체르에서 열린 베를린 프로세스 정상회의에서 독일 메르츠 총리는 몬테네그로가 EU 가입협상을 거의 마쳤다고 말했습니다. 몬테네그로 의장국 임기의 마지막 행사였습니다.",
-                    "10월 21일 마르타 코스 EU 확대담당 집행위원은 몬테네그로가 2027년 여름까지 가입조약에 서명할 수 있다고 말했습니다.",
-                    "메르츠 총리는 프리슈티나와 베오그라드 간 대화를 정상화해야 한다고 촉구했습니다. 스파이치 총리는 우크라이나 지지를 재확인했고, 의장국 기간 행사는 25건(장관급 12건)이었다고 밝혔습니다.",
-                    "토탈크로아티아뉴스는 몬테네그로의 가입 절차에서 크로아티아의 동의가 필요하다는 발언을 전했습니다."
-                ],
-                "why": "서발칸 가운데 가장 앞선 몬테네그로의 가입 일정이 구체화되고 있습니다. 회원국 승인 절차가 남아 있어 실제 서명 시점은 지켜봐야 합니다.",
-                "korea": "",
-                "sources": [
-                    {
-                        "name": "European Western Balkans – Merz: Montenegro has almost completed EU accession negotiations",
-                        "url": "https://europeanwesternbalkans.com/2026/10/22/mertz-montenegro-has-almost-completed-eu-accession-negotiations/",
-                        "lang": "EN"
-                    },
-                    {
-                        "name": "European Western Balkans – Kos: Montenegro could sign EU accession treaty by summer 2027",
-                        "url": "https://europeanwesternbalkans.com/2026/10/21/kos-montenegro-could-sign-eu-accession-treaty-by-summer-2027/",
-                        "lang": "EN"
-                    },
-                    {
-                        "name": "Total Croatia News – Montenegro EU Accession",
-                        "url": "https://total-croatia-news.com/news/montenegroe-eu-croatian-consent/",
-                        "lang": "EN"
-                    }
-                ]
-            },
-            {
-                "region": "east",
-                "title": "루마니아, 4번째 총리 지명 끝에 새 정부 출범…약 6개월 정치 공백 마무리, 2025년 재정적자 EU 최고",
-                "countries": [
-                    "루마니아"
-                ],
-                "period": "2026-10-20 ~ 22",
-                "points": [
-                    "루마니아국제방송(RRI)은 10월 21일 총리 지명이 네 차례 있었고 약 6개월간 정치 교착이 이어진 끝에 새롭고 안정적인 정부가 들어섰다고 전했습니다. 표결 수치와 장관 명단은 확인하지 못했습니다.",
-                    "유로스탯 자료로는 루마니아의 2025년 재정적자가 GDP의 7.8%로 EU에서 가장 높았고, 2020년부터 과잉적자 시정 절차 대상입니다(RRI, 10월 22일).",
-                    "유럽의회는 불가리아·루마니아가 흑해 위협에 대응하도록 EU 자금을 지원하자고 촉구했고, 소피아의 미온적 대응을 비판했다고 BTA가 전했습니다.",
-                    "BIRN은 10월 22일 루마니아 국영 방위산업의 관리 부실과 보안 문제를 짚은 탐사 기사를 냈습니다."
-                ],
-                "why": "정부가 구성돼 재정적자 축소와 예산 편성에 착수할 수 있게 됐습니다. 흑해 안보 대응과 방위산업 개혁이 다음 과제입니다.",
-                "korea": "루마니아에는 한국 기업의 투자와 방산·원전 협력 사업이 있어 새 정부의 예산 방향과 방위산업 정책을 지켜볼 필요가 있습니다.",
-                "sources": [
-                    {
-                        "name": "Radio Romania International – Romania has a new government",
-                        "url": "https://www.rri.ro/en/news-and-current-affairs/today-in-the-news/romania-has-a-new-government-2-id1073750.html",
-                        "lang": "EN"
-                    },
-                    {
-                        "name": "BTA – EP calls for EU funding to help Bulgaria, Romania counter Black Sea threats",
-                        "url": "https://www.bta.bg/en/news/world/1230296-ep-calls-for-eu-funding-to-help-bulgaria-romania-counter-black-sea-threats-voi",
-                        "lang": "EN"
-                    },
-                    {
-                        "name": "Balkan Insight – Held Together with Wire: Inside Romania’s Neglected Arms Industry",
-                        "url": "https://balkaninsight.com/2026/10/22/held-together-with-wire-inside-romanias-neglected-arms-industry/rd/",
-                        "lang": "EN"
-                    }
-                ]
-            }
-        ],
-        "countries": {
-            "폴란드": "하원이 낙태 허용 확대 법안 2건을 통과(10/20), 대통령 거부권 가능성이 큼. 외무장관이 리비우 지방의회의 2027년 UPA 기념 결정에 반발해 관련 지방의원을 입국 기피 인물 절차에 올림(10/21). 법원이 벨라루스 국경에서 시리아 난민을 오발로 쏜 군인에게 무죄 선고(10/21).",
-            "체코": "상원이 택시 기사에게 체코어·지역 지식 시험을 요구하는 방안을 지지(10/22). 한 공항이 군 관리 아래 들어가지만 민간 항공편은 유지될 예정이며, Booking.com이 체코 축제 예약 논란으로 EU 사기 조사를 받게 됨(Expats.cz).",
-            "슬로바키아": "피초 총리가 중립이 NATO 가입보다 슬로바키아에 낫다고 주장했다는 분석 보도(BIRN, 10/21). 10/24 지방선거를 앞둔 정치 동향은 이번 조사에서 새로 확인하지 못함.",
-            "헝가리": "최근 48시간 내 주요 보도 확인되지 않음. 헝가리 MOL이 세르비아 NIS의 러시아 측 과반 지분을 인수하는 계약이 서명됨(10/21, 세르비아 측 보도). 10/16 머저르 총리·젤렌스키 첫 단독 회담 이후 후속 소식은 없음.",
-            "에스토니아": "외무부 최고위 관료 요나탄 프세비오프가 사임하고 2027년 선거에 사민당으로 출마(ERR). EU가 드론 감시에 3,200만 유로 지원, 독일군 에스토니아 배치 예정, 기피자 운전면허를 법원 판단 없이 취소하는 방안 추진.",
-            "라트비아": "의회가 논란이 된 미디어법 신속 개정안을 통과(10/22). 레젝네·크라슬라바 지역 공습 경보가 해제됨(10/22). 징병 대상을 국경경비대로 확대할 예정(10/21).",
-            "리투아니아": "총리가 러시아가 NATO 5조의 한계를 시험하고 있다고 경고(10/21). 폴란드·리투아니아 합동팀이 드론 폭발을 조사 중. 대통령이 미국 씨티그룹 수장을 만나고, 이그니티스가 700MW 해상풍력 일정 지연을 제안.",
-            "슬로베니아": "최근 48시간 내 주요 보도 확인되지 않음(Sloveniatimes 접속 차단). 배경으로 얀샤 4기 정부(6월 출범)가 2027년 예산 수정안을 처리 중.",
-            "크로아티아": "정부가 미등록 숙박시설 약 1만 5천 곳에 대한 규제를 4년 더 유예(10/21). 언론인 보호 단체 SafeJournalists가 언론 위협에 대한 정부의 공식 입장을 요구(10/21).",
-            "세르비아": "10/25 총선을 앞두고 MOL의 NIS 인수 계약 서명(10/21), 선거일 폭력 계획 혐의 7명 이상 체포(10/21), 불법 감시 의혹 추가 공개(10/22).",
-            "보스니아 헤르체고비나": "연방 고위 공무원들이 반부패 수사 확대로 조사받음(10/21). 연방 9월 소비자물가 전년 대비 5.7% 상승, 스타링크 사전 주문 개시. 베오그라드 법원 무죄 판결이 전쟁범죄 사건의 세르비아 이관 우려를 키움(BIRN, 10/22).",
-            "몬테네그로": "베를린 프로세스 정상회의가 밀로체르에서 열려 메르츠 총리가 EU 가입협상이 거의 끝났다고 평가(10/22). 코스 집행위원은 2027년 여름 조약 서명 가능성을 언급(10/21).",
-            "코소보": "최대 야당 PDK의 베드리 함자 대표가 사임(10/21). 코소보 법원이 세르비아인 피고인에게 전쟁범죄 유죄를 선고(BIRN, 10/21).",
-            "알바니아": "학생 시위가 일주일 넘게 이어져 경찰과 충돌이 계속됨. 시위대는 라마 총리 퇴진과 부패 척결을 요구(BIRN, 10/21).",
-            "북마케도니아": "최근 48시간 내 주요 보도 확인되지 않음. 배경으로 스코페가 10/19 불가리아 대리대사를 초치하는 등 양국 갈등이 이어지는 중. 스코페에서 마케도니아·불가리아 상공회의소 설립 15주년 행사(10/21).",
-            "불가리아": "유럽의회가 불가리아·루마니아의 흑해 위협 대응에 EU 자금을 지원하자고 촉구하며 소피아의 소극적 대응을 비판(10/22). 지방자치단체장 2명이 영향력 거래 혐의로 구금되고, 검찰이 국회의원 면책 박탈을 요청. 에미네곶 남쪽에서 기뢰로 보이는 물체 발견.",
-            "우크라이나": "푸틴·위트코프 회동 후 3자 협상 재개 논의(10/21), 러시아의 대규모 공습으로 최소 9명 사망(10/22). 리비우 지방의회의 UPA 기념 결정으로 폴란드와 새 갈등.",
-            "벨라루스": "최근 48시간 내 주요 보도 확인되지 않음. 폴란드 법원이 벨라루스 국경에서 난민을 오발로 쏜 군인에게 무죄를 선고한 사건이 국경 문제로 보도됨(10/21).",
-            "몰도바": "최근 48시간 내 주요 보도 확인되지 않음. 배경으로 헝가리가 우크라이나와 함께 몰도바의 마지막 2개 EU 협상 분야 개시 절차를 보류(10/20).",
-            "루마니아": "새 정부 출범(10/21). 2025년 재정적자가 GDP의 7.8%로 EU 최고. 유럽의회가 흑해 안보 EU 자금 지원을 촉구."
-        },
-        "note": "작성 기준: 2026-10-22 저녁(한국시간). Kyiv Independent, Radio Romania International, LSM, LRT, ERR, Notes from Poland, Balkan Insight, BTA, European Western Balkans, Expats.cz, Total Croatia News, Telex, N1의 첫 화면과 일부 기사를 확인했습니다. Sloveniatimes는 접속이 차단됐고, KOTRA 해외시장뉴스에서는 동유럽 새 기사를 확인하지 못했으며 한국 언론은 사용하지 못했습니다. 루마니아 신임투표 표결 수치와 장관 명단은 확인하지 못했습니다. 일부 매체의 요약은 헤드라인 중심입니다. 슬로베니아·북마케도니아·벨라루스·몰도바·헝가리는 새 주요 보도가 확인되지 않아 배경 동향으로 대신했습니다. 직전 브리핑(10/20) 이후 10/21자 브리핑은 없어 10/20~22 소식을 함께 다뤘습니다. ‘한국·기업 시사점’은 보도를 바탕으로 한 해석입니다. 출처 표시: KR = 한국 언론, KOTRA = KOTRA 해외시장뉴스, EN = 해외 매체."
     }
 ];
