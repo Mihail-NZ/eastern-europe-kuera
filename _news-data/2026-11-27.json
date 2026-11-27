@@ -1,0 +1,135 @@
+{
+  "date": "2026-11-27",
+  "home": [0, 3, 1],
+  "overview": "러시아가 26~27일 우크라이나 전역에 드론 155대를 투입해 6명이 숨지고 6개 주에서 정전이 발생했으며, 트럼프가 NATO와의 공동성명 문구에 우크라이나를 직접 추가한 사실이 알려졌습니다. 세르비아는 신임 의장이 12월 27일 대통령 선거를 공고했고 부치치는 보이콧 쪽으로 기울었습니다. 폴란드에서는 중앙은행의 헌법재판소 계좌 동결로 정부가 국책은행 경유 자금 지원에 나섰고, 루마니아에서는 AUR 대표 시미온이 폭력 선동 혐의로 기소됐습니다.",
+  "stories": [
+    {
+      "region": "top",
+      "title": "러시아, 우크라이나 전역 드론 155대 공습…6명 사망·6개 주 정전, 트럼프는 NATO 공동성명에 우크라이나 추가",
+      "countries": ["우크라이나"],
+      "period": "2026-11-26 ~ 11-27",
+      "points": [
+        "키이우인디펜던트에 따르면 27일 현재 지난 하루 러시아 공격으로 6명이 숨지고 25명이 다쳤습니다. 하르키우·헤르손·자포리자·도네츠크·드니프로·오데사에서 각 1명이 숨졌다고 지역 당국이 밝혔습니다.",
+        "우크라이나 공군은 러시아가 밤사이 드론 155대(제트엔진 드론 83대 포함)를 발사해 오전 8시까지 110대를 격추·무력화했다고 밝혔습니다. 27곳에서 피격이 기록됐습니다.",
+        "변전소와 배전망이 공격받아 6개 주에서 일시 정전이 발생했고, 네크라소우 에너지 제1차관은 드니프로페트로우스크·헤르손이 가장 큰 피해를 입었다고 말했습니다.",
+        "26일 트럼프와 뤼테 NATO 사무총장의 공동성명은 러시아의 전쟁 확대를 경고했으나, 트럼프가 몇 시간 뒤 자신의 SNS에 우크라이나도 확전을 피해야 한다는 문구를 넣은 판본을 올렸습니다. NATO 관계자는 정치 매체 폴리티코에 양측이 원문에 합의했다고 말했습니다. NATO 외무장관 회의는 12월 2일 브뤼셀에서 열립니다."
+      ],
+      "why": "겨울을 앞두고 에너지 기반시설 공격이 이어지는 가운데, 미국이 공동성명 문구를 일방적으로 바꾼 일은 동맹 내 대러 메시지의 일관성 논란으로 번질 수 있습니다. 12월 2일 NATO 외무장관 회의의 대응이 다음 확인 지점입니다.",
+      "korea": "",
+      "sources": [
+        { "name": "Kyiv Independent – Russian attacks kill 6, injure 25, across Ukraine over past day, trigger outages across 6 oblasts", "url": "https://kyivindependent.com/russian-attacks-kill-6-injure-25-across-ukraine-over-past-day-power-outages-across-6-oblasts/", "lang": "EN" },
+        { "name": "Kyiv Independent – Trump adds Ukraine to warning against expanding war, diverging from joint NATO statement", "url": "https://kyivindependent.com/trump-adds-ukraine-to-warning-against-expanding-war-diverging-from-joint-nato-statement/", "lang": "EN" }
+      ]
+    },
+    {
+      "region": "v4",
+      "title": "폴란드, 중앙은행의 헌법재판소 계좌 동결에 국책은행 경유 자금 지원 지시…재판소장은 위법 주장",
+      "countries": ["폴란드"],
+      "period": "2026-11-17 ~ 11-27",
+      "points": [
+        "노츠프롬폴란드에 따르면 폴란드 중앙은행(NBP)은 17일 헌법재판소(TK) 계좌의 모든 송금을 동결했습니다. NBP는 누가 재판소를 합법적으로 지배하는지 판단할 권한이 없다고 밝혔습니다.",
+        "10월 30일 투스크 연립 다수파가 임명한 판사 8명이 재판소를 장악하고 PiS 임명 소장 시비엥치코프스키의 직무를 정지시켰으며, 소장은 이를 쿠데타라고 부르고 있습니다.",
+        "투스크 총리는 26일 국책 BGK 은행이 재무부 자금으로 재판소 운영비를 지원하도록 지시했습니다. 총리실의 그라비에츠는 재판소가 BGK에 보조 계좌를 갖고 있다고 설명했습니다.",
+        "시비엥치코프스키는 이 조치가 완전히 위법이며 정부 자금을 받으면 정부 측 소장 직무대행이 총리에게 종속된다고 말했습니다. 27일 법원은 바르샤바 시장의 재판소 앞 시위 전면 금지가 지나치다며 취소했습니다."
+      ],
+      "why": "헌법재판소 지배권을 둘러싼 갈등이 재정 문제로 번져 재판소의 운영 자체가 쟁점이 됐습니다. NBP의 대응과 재판소 내 두 갈래 지도부의 법적 효력이 다음 확인 지점입니다.",
+      "korea": "",
+      "sources": [
+        { "name": "Notes from Poland – Polish PM orders alternative financing channel for constitutional court after central bank freezes accounts", "url": "https://notesfrompoland.com/2026/11/26/polish-pm-orders-alternative-financing-channel-for-constitutional-court-after-central-bank-freezes-accounts/", "lang": "EN" },
+        { "name": "Notes from Poland – Court overturns Warsaw mayor's ban on protest outside Constitutional Tribunal", "url": "https://notesfrompoland.com/2026/11/27/court-overturns-warsaw-mayors-ban-on-protest-outside-constitutional-tribunal/", "lang": "EN" }
+      ]
+    },
+    {
+      "region": "baltic",
+      "title": "에스토니아 대법원, 2027년 총선 모바일 투표 허용 결정 뒤집어…앱스토어 배포 위험 지적",
+      "countries": ["에스토니아"],
+      "period": "2026-11-27",
+      "points": [
+        "ERR에 따르면 에스토니아 대법원은 10월 29일 국가선거위원회(VVK)가 승인한 2027년 총선 모바일 기기 투표 결정을 뒤집었습니다. 컴퓨터를 통한 온라인 투표는 계속 가능합니다.",
+        "대법원은 투표 앱이 구글플레이·애플 앱스토어로 배포되면 국가가 법적 통제가 닿지 않는 글로벌 플랫폼을 감독해야 하는데 이는 비현실적이라고 판단했습니다. 가짜 앱 증가와 AI로 인한 위험도 근거로 들었습니다.",
+        "모바일 투표로 인한 투표율 상승 효과는 미미한 것으로 보았고, VVK가 이 이익이 위험을 능가함을 입증하지 못했다고 밝혔습니다.",
+        "소송은 선거 감시인 마르트 푸더와 비영리단체 ‘공정선거’가 제기했고 대법원이 일부 받아들였습니다. 총선은 2027년 3월 1~7일에 치러집니다."
+      ],
+      "why": "세계적으로 앞선 전자투표 국가가 보안을 이유로 모바일 확대에 제동이 걸린 사례입니다. 대법원은 온라인 투표 일반에는 우려가 적용되지 않는다고 했으나, 2027년 총선 준비 일정에 영향을 줄 수 있습니다.",
+      "korea": "",
+      "sources": [
+        { "name": "ERR – Estonia's top court overturns decision to allow mobile device voting in 2027 election", "url": "https://news.err.ee/1610208910/estonia-s-top-court-overturns-decision-to-allow-mobile-device-voting-in-2027-election", "lang": "EN" }
+      ]
+    },
+    {
+      "region": "wbalkan",
+      "title": "세르비아 신임 의장, 12월 27일 대통령 선거 공고…부치치 보이콧 시사",
+      "countries": ["세르비아"],
+      "period": "2026-11-26",
+      "points": [
+        "발칸인사이트에 따르면 신임 의장 알렉산다르 추피치가 12월 27일 대통령 선거를 공고했습니다. 9월 부치치 전 대통령의 사임과 10월 25일 총선에서의 세르비아진보당(SNS) 패배에 뒤따른 일정입니다.",
+        "부치치는 현재 SNS 의원단을 이끌며 이번 선거를 ‘역사상 가장 무의미한 선거’라고 부르고 보이콧 쪽으로 기울었습니다. 당의 최종 결정은 12월 13일 전당대회에서 내려집니다.",
+        "당내에서는 독립 후보 지지, 자체 후보 공천, 무시하자는 의견이 갈립니다. 학생 명단은 의석 250석 중 140석을 얻었고 곧 대선 후보를 발표할 예정입니다.",
+        "SNS는 학생 명단이 ‘혁명적 테러’를 한다고 비난했고, 새 정부가 아직 구성되지 않아 SNS가 형식상 정부를 관리하고 있습니다."
+      ],
+      "why": "정권 교체 직후의 대선에서 구여권이 보이콧하면 선거의 정당성과 투표율 논란이 커질 수 있습니다. 12월 13일 SNS 결정과 학생 명단 후보가 다음 확인 지점입니다.",
+      "korea": "",
+      "sources": [
+        { "name": "Balkan Insight – Serbia's New Speaker Sets December Presidential Election, Vucic Signals Boycott", "url": "https://balkaninsight.com/2026/11/26/serbias-new-speaker-sets-december-presidential-election-vucic-signals-boycott/bi/", "lang": "EN" }
+      ]
+    },
+    {
+      "region": "sbalkan",
+      "title": "불가리아, 레프스키 팬 마르세유 폭행 사태에 외교 공문·UEFA 제소…마크롱 ‘책임자 처벌’ 약속",
+      "countries": ["불가리아"],
+      "period": "2026-11-26 ~ 11-27",
+      "points": [
+        "BTA에 따르면 26일 유로파리그 마르세유-레프스키 경기(마르세유 1-0)에서 마르세유 팬 수백 명이 경기장 안에서 불가리아 팬 구역으로 넘어와 폭행하고 조명탄을 던지는 영상이 확산됐습니다.",
+        "라데프 총리는 마크롱 대통령과 통화했고 마크롱은 책임자를 처벌하겠다고 밝혔습니다. 불가리아 외교부는 프랑스에 철저한 조사를 요구하는 외교 공문을 보낼 예정입니다.",
+        "불가리아축구협회는 UEFA에 문제를 제기했고, 레프스키 측은 경기 중단을 요청했으나 UEFA 감독관이 거부했다고 주장했습니다. 마르세유는 폭력을 비난하며 보안팀이 질서를 회복했다고 밝혔습니다.",
+        "총영사는 27일 체포되거나 입원 중인 불가리아 국적자는 없다고 밝혔습니다. 이는 일부 매체의 입원 보도와 엇갈립니다."
+      ],
+      "why": "스포츠 사건이 정상 간 통화와 외교 공문으로 번진 만큼 UEFA 징계 수위와 프랑스 수사 결과가 양국 관계의 다음 확인 지점입니다.",
+      "korea": "",
+      "sources": [
+        { "name": "BTA – Radev, Macron Condemn Attacks on Levski Fans in Marseille, French President Vows Those Responsible Will Be Punished", "url": "https://www.bta.bg/en/news/world/1255613-radev-macron-condemn-attacks-on-levski-fans-in-marseille-french-president-vows", "lang": "EN" }
+      ]
+    },
+    {
+      "region": "east",
+      "title": "루마니아 검찰, AUR 대표 시미온을 폭력 선동 혐의로 기소",
+      "countries": ["루마니아"],
+      "period": "2026-11-26",
+      "points": [
+        "발칸인사이트에 따르면 26일 루마니아 검찰이 극우 AUR 대표 조르제 시미온을 증오 발언 사건에서 공개 선동 혐의로 기소했습니다.",
+        "혐의는 2025년 3월 페이스북 영상에서 중앙선거관리국 위원들을 광장에서 ‘껍질을 벗겨야 한다’고 말한 것입니다. 이는 선관위가 칼린 조르제스쿠의 대선 출마를 거부한 직후였고, 당일 선관위 앞 시위는 폭력화돼 경찰 일부가 다쳤습니다.",
+        "법정형은 징역 3개월~3년 또는 벌금이며, 공직자가 저지른 경우 1~5년으로 가중됩니다.",
+        "시미온은 사건을 정치적으로 꾸며진 조작이라며 혐의를 부인했고 지지자 수백 명이 검찰청 앞에 모였으나 충돌은 없었다고 합니다."
+      ],
+      "why": "루마니아 제1야당급 정치인에 대한 형사 절차가 시작돼 정치 양극화와 사법 독립 논쟁이 이어질 수 있습니다. 재판 일정과 공직 활동에 미치는 영향이 다음 확인 지점입니다.",
+      "korea": "",
+      "sources": [
+        { "name": "Balkan Insight – Romanian Far-Right Leader Charged With Inciting Violence", "url": "https://balkaninsight.com/2026/11/26/romanian-far-right-leader-charged-with-inciting-violence/bi/", "lang": "EN" },
+        { "name": "BTA – Prosecution in Romania Charges Leader of Far-Right AUR Party with Incitement to Violence", "url": "https://www.bta.bg/en/news/balkans/1255164-prosecution-in-romania-charges-leader-of-far-right-aur-party-with-incitement-to-", "lang": "EN" }
+      ]
+    }
+  ],
+  "countries": {
+    "폴란드": "중앙은행의 헌법재판소 계좌 동결에 투스크가 BGK 경유 지원 지시(11/26), 바르샤바 시위 금지는 법원이 취소(11/27, 노츠프롬폴란드). 바르샤바에서 우크라이나 남성이 분신해 중태(11/27, 키이우인디펜던트, 헤드라인 기준).",
+    "체코": "최근 48시간 내 주요 보도 확인되지 않음. Expats.cz는 EU 지원 주택 이니셔티브, 프라하 겨울 쉼터 12월 1일 개장 등 생활 기사 위주(11/27, 헤드라인 기준).",
+    "슬로바키아": "최근 48시간 내 주요 보도 확인되지 않음. 발칸인사이트는 V4가 EU 예산에 비판적이며 EU 정상회의가 합의 없이 끝났다고 전함(11/27, 헤드라인 기준).",
+    "헝가리": "마자르 총리 방문 뒤 헝가리가 납치된 우크라이나 아동 송환 연합에 합류했다고 젤렌스키가 밝힘(11/26, 키이우인디펜던트). 텔렉스는 헝가리의 우크라이나 곡물 수입 금지가 사료 업계에 부담이라고 보도(11/26).",
+    "에스토니아": "대법원이 2027년 총선 모바일 투표 허용 결정을 뒤집음(11/27, ERR). 국방예산 약 2억 5천만 유로가 미집행될 수 있다는 보도(11/27, 헤드라인 기준).",
+    "라트비아": "정부가 airBaltic 1억 7,500만 유로 대출 보증에 합의(11/26), 러시아 대사관 주장은 터무니없다고 반박(11/26, LSM, 헤드라인 기준).",
+    "리투아니아": "정부가 수정 2027년 예산(적자 3.9%)을 승인(11/27), 러시아 국영매체 협력 혐의 5명 구금(11/26), 러시아 간첩 혐의 기소(11/26, LRT, 헤드라인 기준).",
+    "슬로베니아": "최근 48시간 내 주요 보도 확인되지 않음. Sloveniatimes는 접속이 차단돼(403) 확인하지 못함.",
+    "크로아티아": "유럽의회가 부코바르 함락 35주년 결의안을 채택하고 세르비아에 전쟁 기록 공개를 촉구(11/26, 발칸인사이트). 야드롤리니야 1억 유로 선단 교체 투자 개시(11/27, Total Croatia News, 헤드라인 기준).",
+    "세르비아": "신임 의장이 12월 27일 대통령 선거 공고, 부치치는 보이콧 시사(11/26, 발칸인사이트). SNS 결정은 12월 13일 예정.",
+    "보스니아 헤르체고비나": "유럽위원회가 보스니아가 EU 경로에서 이탈 중이며 성장계획 자금이 재배분될 수 있다고 경고(11/26, N1). 군 현대화(바이락타르 드론·헬기·레이더) 계획 발표(헤드라인 기준).",
+    "몬테네그로": "최근 48시간 내 새 주요 보도 확인되지 않음. 직전 EU-서발칸 정상회의에서 가입조약 초안 작업 평가를 받았고 성장계획 추가 자금(3억 3,800만 유로) 대상국(11/26, 발칸인사이트).",
+    "코소보": "최근 48시간 내 주요 보도 확인되지 않음. 발칸인사이트는 코소보 민영화에서 전직 노동자들이 몫을 받지 못했다고 보도(11/26).",
+    "알바니아": "전 외무장관이 라마의 사회당 대표직에 도전(11/27, BTA, 헤드라인 기준). EU 성장계획 추가 자금 대상국. 2019년 지진 복구는 아직 진행 중(11/26, 발칸인사이트).",
+    "북마케도니아": "연쇄 여성살해 이후 활동가들이 시위를 강화하겠다고 밝힘(11/27, 발칸인사이트). 성장계획 추가 자금 대상국.",
+    "불가리아": "마르세유에서 레프스키 팬 폭행에 라데프·마크롱이 규탄하고 외교 공문 추진(11/26~27, BTA). 지적공부청 직원 전국 1시간 파업(11/27).",
+    "우크라이나": "드론 155대 공습으로 하루 6명 사망·25명 부상, 6개 주 정전(11/27). 트럼프가 NATO 공동성명에 우크라이나를 추가(11/26, 키이우인디펜던트).",
+    "벨라루스": "최근 48시간 내 주요 보도 확인되지 않음. 유럽인권재판소가 벨라루스발 국경 이주민 처우 문제를 지적했으나 벨라루스 내부 소식은 아님(11/26, LSM, 헤드라인 기준).",
+    "몰도바": "최근 48시간 내 주요 보도 확인되지 않음. 이번에 조회한 매체에서 몰도바 관련 신규 기사가 확인되지 않았음.",
+    "루마니아": "검찰이 AUR 대표 시미온을 폭력 선동 혐의로 기소(11/26, 발칸인사이트). 총리가 미오베니·크라이오바 자동차 공장을 방문, 자동차 산업 부진 보도(11/26, RRI, 헤드라인 기준)."
+  },
+  "note": "작성 기준: 2026-11-27 저녁(한국시간). Kyiv Independent, Radio Romania International, LSM, LRT, ERR, Notes from Poland, Balkan Insight, BTA, European Western Balkans, Expats.cz, Total Croatia News, Telex English, N1, KOTRA 첫 화면을 확인했고, 우크라이나 공습, 트럼프 NATO 성명, 폴란드 헌법재판소, 에스토니아 대법원, 세르비아 대선, 루마니아 시미온, 불가리아 레프스키 기사는 본문을 열어 확인했습니다. Sloveniatimes는 403으로 접속하지 못했고, KOTRA에서는 날짜가 표시된 동유럽 관련 신규 기사를 찾지 못했습니다. 불가리아 레프스키 팬 입원 여부는 매체 보도가 엇갈립니다. 세르비아 대선 결과와 SNS의 보이콧 결정, NATO 외무장관 회의 결과는 아직 나오지 않았습니다. 출처 표시: KR = 한국 언론, KOTRA = KOTRA 해외시장뉴스, EN = 해외 매체."
+}
