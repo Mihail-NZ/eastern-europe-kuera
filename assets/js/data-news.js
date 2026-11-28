@@ -1,6 +1,193 @@
 /* 원본: _news-data/*.json (최신순, _tools/build-news.mjs로 생성) */
 window.NEWS_DATA=[
     {
+        "date": "2026-11-28",
+        "home": [
+            0,
+            1,
+            4
+        ],
+        "overview": "27~28일 러시아의 공습으로 우크라이나에서 하루 10명이 숨졌고, 우크라이나는 모스크바주에 드론 460대를 투입했다고 모스크바 시장이 밝혔습니다. 폴란드에서는 헌법재판소 징계재판부가 소장을 12개월 정직시켰고 대통령은 정부의 세제 개편안에 거부권을 행사했습니다. 불가리아는 EU의 22차 대러 제재안을 놓고 양보를 요구하며 협상을 지연시킨다는 보도가 나왔습니다. 세르비아에서는 학생 명단이 대선 후보를 공개했고, 리투아니아 교사 파업은 이어지고 있습니다.",
+        "stories": [
+            {
+                "region": "top",
+                "title": "러시아 공습에 하루 10명 사망…우크라이나, 모스크바주에 드론 460대 투입(모스크바 시장 발표)",
+                "countries": [
+                    "우크라이나"
+                ],
+                "period": "2026-11-27 ~ 11-28",
+                "points": [
+                    "키이우인디펜던트에 따르면 지난 하루 러시아 공격으로 10명이 숨지고 55명이 다쳤다고 현지 당국이 밝혔습니다. 27일 체르니히우주 니진의 상업지구 피격으로 7명이 숨졌고, 기사는 지역별 사망자 합계가 헤드라인 숫자와 맞지 않는다고 지적했습니다.",
+                    "우크라이나 공군은 28일 밤사이 러시아가 드론 162대(제트엔진 74대 포함)를 발사해 오전 8시까지 141대를 격추·무력화했다고 밝혔습니다.",
+                    "소뱌닌 모스크바 시장은 28일 아침 모스크바주를 노린 드론이 460대였고 그중 123대가 모스크바로 향하다 요격됐다고 밝혔습니다. 브누코보·도모데도보 공항에 운항 제한이 걸렸으며 사상자는 보도되지 않았습니다. 우크라이나는 이 공격에 대해 아직 입장을 내지 않았습니다.",
+                    "러시아 국방부는 밤사이 우크라이나 드론 1,246대를 14개 지역과 크림 상공에서 요격했다고 주장했습니다."
+                ],
+                "why": "러시아의 에너지·민간 시설 공격이 이어지는 가운데 양측의 장거리 드론전이 모스크바 인근까지 확대됐습니다. 우크라이나 측의 공식 입장과 러시아의 보복 여부가 다음 확인 지점입니다.",
+                "korea": "",
+                "sources": [
+                    {
+                        "name": "Kyiv Independent – Ukraine reportedly launches massive attack on Moscow Oblast with 460 drones",
+                        "url": "https://kyivindependent.com/ukraine-reportedly-launches-massive-attack-on-moscow-oblast-with-460-drones/",
+                        "lang": "EN"
+                    },
+                    {
+                        "name": "Kyiv Independent – Russian attacks kill 10, injure 55 across Ukraine over past day as deadly strike hits Chernihiv Oblast businesses",
+                        "url": "https://kyivindependent.com/russian-attacks-kill-10-injure-55-across-ukraine-over-past-day-as-deadly-strike-hits-chernihiv-oblast-businesses/",
+                        "lang": "EN"
+                    }
+                ]
+            },
+            {
+                "region": "v4",
+                "title": "폴란드 헌법재판소 징계재판부, 소장 12개월 정직…대통령은 세제 개편안 거부권",
+                "countries": [
+                    "폴란드"
+                ],
+                "period": "2026-11-26 ~ 11-27",
+                "points": [
+                    "노츠프롬폴란드에 따르면 정부 측 판사 3명으로 구성된 헌법재판소 징계재판부가 26일 시비엥치코프스키 소장을 12개월 정직시켰습니다. 소장은 이들을 법복을 입은 찬탈자라 부르며 결정이 효력이 없다고 주장했습니다.",
+                    "재판소는 소장의 면책특권 해제를 요청한 지울렉 법무장관의 신청도 승인했습니다. 나브로츠키 대통령이 의회가 선출한 판사 8명 중 5명의 선서를 받지 않았고, 대법원은 대통령 선서를 받은 판사만 합법이라고 판결했으나 정부는 이를 받아들이지 않고 있습니다.",
+                    "27일 나브로츠키 대통령은 2027년 시행 예정이던 정부의 세제 개편안에 거부권을 행사했습니다. 안은 12% 세율 구간을 13만 즈워티로 올리고 대기업 법인세를 19%에서 22%로 올리는 내용이었으며 대통령은 혜택 대상이 소수라고 주장했습니다.",
+                    "도마인스키 재무장관은 대통령이 대기업 편에 섰다고 비판했습니다. 기사는 폴란드의 2025년 재정적자가 GDP의 7.3%이고 S&P가 전망을 부정적으로 바꿨다고 전했습니다."
+                ],
+                "why": "헌법재판소 지배권 갈등과 대통령·정부의 정책 충돌이 겹치며 재정 개혁과 사법 정상화 모두 교착 상태입니다. 소장 측의 불복과 재정 대책이 다음 확인 지점입니다.",
+                "korea": "",
+                "sources": [
+                    {
+                        "name": "Notes from Poland – Disputed Polish constitutional court announces 12-month suspension of chief justice",
+                        "url": "https://notesfrompoland.com/2026/11/27/disputed-polish-constitutional-court-announces-12-month-suspension-of-chief-justice/",
+                        "lang": "EN"
+                    },
+                    {
+                        "name": "Notes from Poland – President vetoes Polish government's middle-class tax cuts",
+                        "url": "https://notesfrompoland.com/2026/11/27/president-vetoes-polish-governments-middle-class-tax-cuts/",
+                        "lang": "EN"
+                    }
+                ]
+            },
+            {
+                "region": "baltic",
+                "title": "리투아니아 교사 파업 지속…노조 ‘임금 협상 교착’, 12월 1일 의회 앞 집회 예고",
+                "countries": [
+                    "리투아니아"
+                ],
+                "period": "2026-11-27",
+                "points": [
+                    "LRT에 따르면 교육노조(LŠDPS)는 27일 교육부 장관과의 협상이 진전 없이 끝났다며 무기한 파업을 계속하겠다고 밝혔습니다. 노조는 장관이 임금 대신 실무그룹 제안으로 초점을 옮겼다고 비판했습니다.",
+                    "노조는 임금계수 최소 10% 인상과 평균 교사 임금을 전국 평균의 130%로 올리는 구체적 단계를 요구합니다. 정부는 내년 7.56% 인상(세후 월 약 92~152유로)과 2억 4,500만 유로 배정을 제시했습니다.",
+                    "중재 협상에서 교육부가 구체적 임금안을 내기로 했으나 일정은 정해지지 않았습니다. 파업 참여자는 첫날 노조 집계 약 4,000명, 교육청 집계 3,200명이었고 화요일에는 2,000명을 조금 넘었습니다.",
+                    "노조는 12월 1일 정오 의회 앞 독립광장에서 집회를 열 예정이며 체육연맹 등 다른 단체도 참여합니다."
+                ],
+                "why": "정부가 2027년 예산 적자를 3.9%로 승인한 직후 공공부문 임금 갈등이 길어지고 있습니다. 교육부의 구체적 임금안과 12월 1일 집회가 다음 확인 지점입니다.",
+                "korea": "",
+                "sources": [
+                    {
+                        "name": "LRT – Lithuanian teachers' strike to continue as union says talks with minister stall",
+                        "url": "https://www.lrt.lt/en/news-in-english/19/3127258/lithuanian-teachers-strike-to-continue-as-union-says-talks-with-minister-stall",
+                        "lang": "EN"
+                    }
+                ]
+            },
+            {
+                "region": "wbalkan",
+                "title": "세르비아 학생 명단, 12월 27일 대선 후보로 사이치치 교수 지명",
+                "countries": [
+                    "세르비아"
+                ],
+                "period": "2026-11-27",
+                "points": [
+                    "발칸인사이트에 따르면 학생 명단이 12월 27일 대선 후보로 화학 교수 라도미르 사이치치를 지명했습니다. 그는 베오그라드대 교수이자 세르비아과학예술원 회원이며 2025년 6월 부치치 사임을 요구하는 청원에 서명했습니다.",
+                    "사이치치는 대통령직이 수년간 분열을 키우는 데 쓰였다며 헌법 한도 안에서 의회·정부·사법부·대통령직에 대한 신뢰를 회복하겠다고 말했습니다. EU에는 긍정적이나 가입은 법치 등 실질 개혁이 앞서야 한다는 입장입니다.",
+                    "학생 명단은 10월 25일 총선에서 140석을 얻어 진보당(SNS)의 103석을 앞섰습니다. 부치치는 보이콧을 선호하며 SNS는 12월 13일 당 대회에서 결정합니다.",
+                    "후보 신청은 선거 20일 전인 12월 7일 이전에 마쳐야 합니다."
+                ],
+                "why": "대통령 권한은 제한적이지만 정권 교체 이후 첫 대선이라 정당성과 투표율이 쟁점입니다. 12월 7일 후보 등록 마감과 13일 SNS 결정이 다음 확인 지점입니다.",
+                "korea": "",
+                "sources": [
+                    {
+                        "name": "Balkan Insight – Serbia's Student List Names University Professor as Presidential Candidate",
+                        "url": "https://balkaninsight.com/2026/11/27/serbias-student-list-names-university-professor-as-presidential-candidate/bi/",
+                        "lang": "EN"
+                    },
+                    {
+                        "name": "European Western Balkans – Student Movement nominates Professor Radomir Saičić for President of Serbia",
+                        "url": "https://europeanwesternbalkans.com/2026/11/27/student-movement-nominates-professor-radomir-saicic-for-president-of-serbia/",
+                        "lang": "EN"
+                    }
+                ]
+            },
+            {
+                "region": "sbalkan",
+                "title": "불가리아, EU 22차 대러 제재안에 양보 요구하며 협상 지연 보도",
+                "countries": [
+                    "불가리아"
+                ],
+                "period": "2026-11-23 ~ 11-27",
+                "points": [
+                    "키이우인디펜던트는 외교 소식통을 인용해 불가리아가 EU의 22차 대러 제재안(11월 23일 집행위 제안)을 볼모로 양보를 얻으려 한다고 보도했습니다.",
+                    "불가리아는 과거 제재로 금지된 러시아산 선철과 광산 장비 수입 금지의 해제, 러시아 원자력 시설과 연관된 화학 업체 1곳과 개인 1명의 제재 명단 제외를 요구하는 것으로 알려졌습니다. 대신 다른 조치는 통과시킬 의향이라고 합니다.",
+                    "외교관 4명은 제재안에 대한 폭넓은 지지가 있다고 말했고, 이탈리아는 러시아 기업 이사회에 유럽인이 참여하는 것을 금지하는 조항이 모호하다고 이의를 제기했습니다. EU와 우크라이나 당국자는 불가리아의 상업적 동기를 의심한다고 했습니다.",
+                    "불가리아 EU 상주대표부는 논평 요청에 응하지 않았습니다. EU는 12월 14일 외무장관 회의에서의 합의를 목표로 합니다."
+                ],
+                "why": "제재 패키지는 만장일치가 필요해 개별 회원국의 이해관계가 일정을 좌우합니다. 12월 14일 외무장관 회의까지 불가리아의 입장 변화가 다음 확인 지점이며 보도는 익명 소식통에 의존합니다.",
+                "korea": "",
+                "sources": [
+                    {
+                        "name": "Kyiv Independent – Bulgaria holding EU's 22nd Russia sanctions package hostage in bid to extract concessions",
+                        "url": "https://kyivindependent.com/bulgaria-holding-eus-22nd-russia-sanctions-package-hostage-in-bid-to-extract-concessions/",
+                        "lang": "EN"
+                    }
+                ]
+            },
+            {
+                "region": "east",
+                "title": "루마니아 정부·유럽의회 의원들, AfD 바이델의 ‘복지 악용’ 발언에 반발",
+                "countries": [
+                    "루마니아"
+                ],
+                "period": "2026-11-27",
+                "points": [
+                    "RRI에 따르면 독일 극우 AfD 공동대표 바이델이 루마니아·불가리아 이주민이 독일 복지를 악용한다고 주장했고, 바겐크네히트도 비슷한 주장을 했습니다.",
+                    "네쿨러에스쿠 외교장관은 베를린 공동기자회견에서 이를 거부하며 독일 내 루마니아인이 잘 통합된 공동체이고 정쟁에 이용되게 두지 않겠다고 말했습니다. 바더풀 독일 외교장관은 양국 관계가 어느 때보다 가깝다고 밝혔습니다.",
+                    "기사가 인용한 수치로는 독일에 거주하는 루마니아인이 90만 명 넘고 고용률이 약 70%입니다.",
+                    "부다 의원단 대표는 집행위에 항의 서한을 보냈고, 쉬테파누체 의원은 유럽의회에서 문제 삼겠다고 했습니다. 여야를 가리지 않고 AUR 소속 의원도 발언을 비판했습니다."
+                ],
+                "why": "EU 시민의 이동 권리를 둘러싼 독일 내 정치 공방이 회원국 외교 문제로 번졌습니다. 유럽의회와 집행위의 후속 대응이 다음 확인 지점입니다.",
+                "korea": "",
+                "sources": [
+                    {
+                        "name": "Radio Romania International – Romania stands up for its citizens in Germany",
+                        "url": "https://www.rri.ro/en/news-and-current-affairs/today-in-the-news/romania-stands-up-for-its-citizens-in-germany-id1088361.html",
+                        "lang": "EN"
+                    }
+                ]
+            }
+        ],
+        "countries": {
+            "폴란드": "헌법재판소 징계재판부가 소장을 12개월 정직(11/26), 대통령이 세제 개편안에 거부권(11/27), 팔란티어와 3억 달러 군용 AI 소프트웨어 계약(11/27, 노츠프롬폴란드).",
+            "체코": "최근 48시간 내 주요 보도 확인되지 않음. Expats.cz는 접속이 안 돼(503) 확인하지 못함.",
+            "슬로바키아": "최근 48시간 내 주요 보도 확인되지 않음. 발칸인사이트는 V4가 EU 예산에 비판적이고 EU 정상회의가 합의 없이 끝났다고 전함(11/27, 헤드라인 기준).",
+            "헝가리": "최근 48시간 내 새 주요 보도 확인되지 않음. 텔렉스는 마자르 총리의 트란스카르파티아 방문과 우크라이나와의 관계 재설정 시도를 전함(11/25, 헤드라인 기준).",
+            "에스토니아": "리투아니아 우체국이 에스토니아 Omniva에 1억 1,500만 유로 입찰(11/27, LRT·ERR), 대법원의 모바일 투표 허용 결정 번복(11/27, ERR).",
+            "라트비아": "새 외무장관이 첫 해외 방문 예정(11/27), 에스토니아 국경 폐쇄 시 라트비아-러시아 국경 화물차 정체 우려(11/27, LSM, 헤드라인 기준).",
+            "리투아니아": "교사 파업 지속, 12월 1일 집회 예고(11/27, LRT). 국방비를 2040년까지 GDP 5% 이상으로 유지해야 할 수 있다고 장관이 밝힘(11/27, 헤드라인 기준).",
+            "슬로베니아": "최근 48시간 내 주요 보도 확인되지 않음. Sloveniatimes는 이번에 조회하지 않음.",
+            "크로아티아": "유럽의회 부코바르 결의안 관련 후속 기사가 이어짐(11/27~28). 야드롤리니야 1억 유로 선단 교체 투자 개시, 수공업자 벌금 최대 3만 유로 보도(Total Croatia News, 헤드라인 기준).",
+            "세르비아": "학생 명단이 사이치치 교수를 대선 후보로 지명(11/27, 발칸인사이트). 2023년 정보요원이 OSCE 선거 참관단을 미행하고 객실을 수색했다는 보도(11/27, 발칸인사이트, 헤드라인 기준).",
+            "보스니아 헤르체고비나": "스르프스카공화국 헌법재판소가 국가 법원이 체비야노비치 거부권을 무효화한 것을 월권이라 비난(N1, 헤드라인 기준). 사라예보 주 의회가 정부 구성 절차 재개(헤드라인 기준).",
+            "몬테네그로": "최근 48시간 내 새 주요 보도 확인되지 않음. EU가 알바니아·몬테네그로·북마케도니아에 3억 3,800만 유로 추가 지원을 풀 수 있다는 보도(11/26, 발칸인사이트, 헤드라인 기준).",
+            "코소보": "최근 48시간 내 주요 보도 확인되지 않음. 코소보 민영화에서 전직 노동자들이 몫을 받지 못했다는 11/26 보도 이후 새 소식 없음.",
+            "알바니아": "최근 48시간 내 새 주요 보도 확인되지 않음. EU 성장계획 추가 지원금 대상국(11/26, 발칸인사이트, 헤드라인 기준).",
+            "북마케도니아": "연쇄 여성살해 이후 활동가들이 시위를 강화하겠다고 밝힘(11/27, 발칸인사이트). 법원이 불가리아 국적 이바 미하일로바 사건의 종합 감정을 명령(11/27, BTA, 헤드라인 기준).",
+            "불가리아": "EU 22차 제재안 협상에서 양보를 요구한다는 보도(11/27, 키이우인디펜던트). 마르세유-레프스키 폭행 관련 외교부가 불가리아인 11명 부상을 확인, 팬들이 프랑스 대사관 앞 시위(11/27, BTA).",
+            "우크라이나": "하루 10명 사망·55명 부상(11/28), 모스크바주에 드론 460대 투입 보도(11/28). 독일이 2027년 약 120억 유로 지원안 의결(11/27, 키이우인디펜던트, 헤드라인 기준).",
+            "벨라루스": "최근 48시간 내 주요 보도 확인되지 않음. 이번에 조회한 매체에서 벨라루스 관련 신규 기사가 확인되지 않음.",
+            "몰도바": "최근 48시간 내 주요 보도 확인되지 않음. 이번에 조회한 매체에서 몰도바 관련 신규 기사가 확인되지 않음.",
+            "루마니아": "바이델의 복지 악용 발언에 외교장관·유럽의회 의원들이 반발(11/27, RRI). 정부가 기초식품 마진 상한을 7월 1일까지 연장(11/27, RRI, 헤드라인 기준)."
+        },
+        "note": "작성 기준: 2026-11-28 저녁(한국시간). Kyiv Independent, Notes from Poland, Balkan Insight, BTA, LSM, LRT, ERR, Radio Romania International, European Western Balkans, Telex English, Total Croatia News, N1 첫 화면을 확인했고, 우크라이나 공습·모스크바 드론, 폴란드 헌법재판소·세제 거부권, 불가리아 제재, 리투아니아 교사 파업, 루마니아 바이델 논란, 세르비아 대선 후보 기사는 본문을 열어 확인했습니다. Expats.cz는 503으로 접속하지 못했고 Sloveniatimes와 KOTRA는 이번에 조회하지 않았습니다. 모스크바주 드론 460대는 모스크바 시장의 발표를 인용한 보도이며 우크라이나는 아직 입장을 내지 않았습니다. 우크라이나 일일 사망자 10명은 지역별 합계와 차이가 있습니다. 불가리아 제재 지연은 익명 외교 소식통 보도입니다. SNS의 대선 보이콧 결정(12월 13일), EU 제재안 합의(12월 14일 예상)는 아직 나오지 않았습니다. 출처 표시: KR = 한국 언론, KOTRA = KOTRA 해외시장뉴스, EN = 해외 매체."
+    },
+    {
         "date": "2026-11-27",
         "home": [
             0,
@@ -6370,225 +6557,5 @@ window.NEWS_DATA=[
             "루마니아": "러시아 연계 사보타주 혐의 외국인 3명에 유럽 체포영장, 신정부가 사회적 파트너 협의 시작(10/27, RRI)."
         },
         "note": "작성 기준: 2026-10-28 저녁(한국시간). Kyiv Independent, Radio Romania International, LSM, LRT, ERR, Notes from Poland, Balkan Insight, BTA, European Western Balkans, Expats.cz, Telex의 첫 화면과 일부 기사를 확인했습니다. Sloveniatimes는 접속 오류(403)로 읽지 못했고 Total Croatia News, N1, KOTRA, 한국 언론은 이번에 조회하지 않았습니다. ERR와 유럽웨스턴발칸스 페이지에는 요약 지시처럼 보이는 문구가 섞여 있었으나 따르지 않았습니다. 슬로바키아·크로아티아·몬테네그로·북마케도니아·몰도바는 새 주요 보도가 확인되지 않아 배경 동향으로 대신했습니다. 세르비아 득표율은 잠정치입니다. 리투아니아 스타링크 방화 시도 건은 BTA 보도로만 확인했습니다. ‘한국·기업 시사점’은 보도를 바탕으로 한 해석입니다. 출처 표시: KR = 한국 언론, KOTRA = KOTRA 해외시장뉴스, EN = 해외 매체."
-    },
-    {
-        "date": "2026-10-27",
-        "home": [
-            3,
-            4,
-            0
-        ],
-        "overview": "세르비아 조기 총선에서 학생 명부가 과반을 차지하고 부치치 대통령이 패배를 인정해 14년 집권이 끝났습니다. 불가리아 대선은 투표율 22.5%의 사상 최저를 기록하며 11월 1일 결선으로 갑니다. 우크라이나에서는 러시아가 11월 4일 이후 3자 회담 재개 의사를 밝혔고, 젤렌스키 대통령은 미국의 방공미사일 승인 지연을 공개 비판했습니다. 리투아니아에서는 한화에어로스페이스가 현지 기업 4곳과 대공 무기 협력 MoU를 맺었습니다.",
-        "stories": [
-            {
-                "region": "top",
-                "title": "러시아 “11월 4일 이후 3자 회담 재개”…젤렌스키, 미국의 패트리엇·나삼스 미사일 승인 지연 공개 비판",
-                "countries": [
-                    "우크라이나"
-                ],
-                "period": "2026-10-25 ~ 26",
-                "points": [
-                    "키이우인디펜던트에 따르면 푸틴 대통령의 외교 보좌관 우샤코프는 10월 25일 러시아가 11월 4일 이후 우크라이나·미국과의 3자 회담을 재개할 준비가 됐다고 말했습니다. 첫 만남은 큰 성과를 기대하기 어려운 시험 단계라고 했고, 평화 합의는 아직 더 작업이 필요하다고 밝혔습니다.",
-                    "앞서 10월 21일 위트코프 미국 특사가 상트페테르부르크에서 푸틴 대통령을 만났고, 젤렌스키 대통령은 11월 전반 아부다비를 개최지 후보로 언급한 바 있습니다. 크렘린이 다음 달 중국에서 푸틴·트럼프 회동을 원한다는 보도도 있으나 우크라이나는 참여하지 않는다고 합니다.",
-                    "젤렌스키 대통령은 10월 26일 동맹국이 이미 비용을 낸 패트리엇·나삼스용 미사일을 헤그세스 미국 국방장관이 거의 한 달째 승인하지 않고 있다고 말했습니다. 미국이 매달 인도하는 패트리엇 요격미사일은 12발에 그친다고 했고, 우크라이나 당국자들은 이를 민간인 안전을 위협할 수 있는 정치적 압박이라고 표현했습니다.",
-                    "러시아 공격으로 10월 26일 보도 기준 지난 하루 2명이 숨지고 35명이 다쳤으며, 미사일과 드론 140대가 동원되고 자포리자가 집중 타격을 받았습니다. 우크라이나는 보로네시 화학공장 등 러시아 내 시설 타격도 이어갔다고 보도됐습니다."
-                ],
-                "why": "회담 재개 시점이 처음으로 날짜로 제시됐지만 미국의 무기 승인 지연과 공습 피해가 겹쳐 있습니다. 11월 4일 이후 실제 회담이 열리는지가 다음 확인 지점입니다.",
-                "korea": "회담 진전 여부는 재건 사업 환경에, 방공 전력 공급 차질은 겨울 에너지 시설 피해에 영향을 줍니다. 현지 진출 기업은 운영 리스크를 계속 점검할 필요가 있습니다.",
-                "sources": [
-                    {
-                        "name": "Kyiv Independent – Moscow ready to resume trilateral talks with Ukraine, US after Nov. 4, Kremlin aide says",
-                        "url": "https://kyivindependent.com/moscow-ready-to-resume-trilateral-talks-with-ukraine-us-after-nov-4-kremlin-aide-says/",
-                        "lang": "EN"
-                    },
-                    {
-                        "name": "Kyiv Independent – US holding up air defense missiles for Ukraine for nearly a month, Zelensky says",
-                        "url": "https://kyivindependent.com/us-holding-up-air-defense-missiles-for-ukraine-for-nearly-a-month-zelensky-says/",
-                        "lang": "EN"
-                    },
-                    {
-                        "name": "Kyiv Independent – Russian attacks across Ukraine kill 2, wound 35 over past day, as repeated strikes hit Zaporizhzhia",
-                        "url": "https://kyivindependent.com/russian-attacks-across-ukraine-kill-2-wound-35-over-past-day-as-repeated-strikes-hit-zaporizhzhia/",
-                        "lang": "EN"
-                    }
-                ]
-            },
-            {
-                "region": "v4",
-                "title": "폴란드 투스크 총리, 베트남 방문서 전략적 동반자 관계 발표…국민 3분의 2가 낙태법 완화 지지(여론조사)",
-                "countries": [
-                    "폴란드"
-                ],
-                "period": "2026-10-25 ~ 26",
-                "points": [
-                    "노츠프롬폴란드에 따르면 투스크 총리가 하노이를 방문해 폴란드와 베트남이 전략적 동반자 관계를 맺기로 했다고 발표했습니다. 총리는 이를 성과로 내세웠고, 세부 합의 내용은 헤드라인 외에는 확인하지 못했습니다.",
-                    "같은 매체가 전한 새 여론조사에서는 폴란드인의 약 3분의 2가 낙태법 완화를 지지했지만 대다수는 요구에 따른 낙태에는 반대했습니다.",
-                    "10월 25일에는 독일이 폴란드 2차대전 피해자에게 배상할 시간이 얼마 남지 않았다는 기고가 실렸습니다. 이는 의견 기사입니다."
-                ],
-                "why": "폴란드가 아시아와의 외교·경제 관계를 넓히는 한편, 국내에서는 연립 내부 쟁점인 낙태법 논의가 계속됩니다.",
-                "korea": "",
-                "sources": [
-                    {
-                        "name": "Notes from Poland – Poland and Vietnam announce strategic partnership during Tusk visit to Hanoi",
-                        "url": "https://notesfrompoland.com/2026/10/26/poland-and-vietnam-announce-strategic-partnership-during-tusk-visit-to-hanoi/",
-                        "lang": "EN"
-                    },
-                    {
-                        "name": "Notes from Poland – Two thirds of Poles support liberalising abortion law, finds new poll",
-                        "url": "https://notesfrompoland.com/2026/10/26/two-thirds-of-poles-support-liberalising-abortion-law-finds-new-poll/",
-                        "lang": "EN"
-                    }
-                ]
-            },
-            {
-                "region": "baltic",
-                "title": "한화에어로스페이스, 리투아니아 기업 4곳과 대공 무기 MoU…NATO 시아울리아이 기지 확장도 발표",
-                "countries": [
-                    "리투아니아"
-                ],
-                "period": "2026-10-26",
-                "points": [
-                    "LRT에 따르면 한화에어로스페이스가 10월 26일 리투아니아 기업들과 대공 무기 생산·통합 협력 양해각서(MoU)를 체결했습니다. 대상 체계는 저공 표적과 드론에 대응하는 40mm 차륜형 대공포(WAAG)입니다.",
-                    "협력 분야로는 KMT의 차량 통합, 코스모스 컨스트럭션·T&G 리투아니아의 포탑 차체·케이블 생산, 노르탈의 NATO 네트워크 지휘통제 체계 통합이 거론됐습니다. 한화는 기술 이전과 수명주기 정비를 포함한 장기 산업 협력을 원한다고 밝혔습니다.",
-                    "같은 날 LRT는 시아울리아이 공군기지 확장으로 최대 750명의 NATO 병력을 수용하게 된다고 전했습니다. 피치는 리투아니아 신용등급을 A+, 전망 안정적으로 유지했습니다.",
-                    "빌니우스에서는 발트 국방 회의가 열렸고, 리투아니아는 라트비아 정부 교체가 지연된 레일 발티카 사업의 재개로 이어지기를 기대한다고 밝혔습니다."
-                ],
-                "why": "발트 국가의 국방 투자가 현지 생산 협력으로 이어지는 사례입니다. 본계약 체결과 NATO 기지 확장 일정이 다음 확인 지점입니다.",
-                "korea": "한국 방산업체가 NATO 동부 측면에서 현지 기업과 생산·정비 체계를 갖추려는 움직임으로, 향후 수출·현지화 확대의 근거가 될 수 있습니다. MoU 단계여서 본계약 여부는 확인되지 않았습니다.",
-                "sources": [
-                    {
-                        "name": "LRT – South Korean firm signs air defence deals with four Lithuanian companies",
-                        "url": "https://www.lrt.lt/en/news-in-english/19/3094216/south-korean-firm-signs-air-defence-deals-with-four-lithuanian-companies",
-                        "lang": "EN"
-                    },
-                    {
-                        "name": "LRT – Lithuania’s Šiauliai air base expansion to accommodate up to 750 NATO troops",
-                        "url": "https://www.lrt.lt/en/news-in-english/19/3094206/lithuania-s-siauliai-air-base-expansion-to-accommodate-up-to-750-nato-troops",
-                        "lang": "EN"
-                    },
-                    {
-                        "name": "LRT – Fitch affirms Lithuania’s A+ rating with stable outlook",
-                        "url": "https://www.lrt.lt/en/news-in-english/19/3094211/fitch-affirms-lithuania-s-aplus-rating-with-stable-outlook",
-                        "lang": "EN"
-                    }
-                ]
-            },
-            {
-                "region": "wbalkan",
-                "title": "세르비아 총선, 학생 명부 과반 승리…부치치 패배 인정, 14년 집권 종식",
-                "countries": [
-                    "세르비아"
-                ],
-                "period": "2026-10-25 ~ 26",
-                "points": [
-                    "발칸인사이트에 따르면 10월 25일 조기 총선에서 야당 학생 명부가 과반을 확보해 집권 진보당의 14년 통치가 끝났습니다. 선관위 집계(투표소 8,135곳 기준) 학생 명부 52.65%, 부치치 대통령이 이끈 ‘통합 세르비아’ 39.2%, 투표율은 68.8%입니다.",
-                    "예상 의석은 학생 명부 140석, 통합 세르비아 103석이며 나머지는 소수민족 명부가 차지합니다. 학생 명부는 단독 정부 구성이 가능하지만 총리 후보는 아직 발표하지 않았습니다. 부치치 대통령은 10월 25일 패배를 인정한 것으로 보도됐습니다.",
-                    "유럽웨스턴발칸스에 따르면 브뤼셀은 EU의 문이 세르비아에 열려 있다고 하면서 법치 강화를 강조했고, 독일·프랑스는 세르비아의 유럽 경로를 계속 지지한다고 밝혔습니다. 헝가리 마자르 총리와 크로아티아 플렌코비치 총리는 학생 명부 지도부와 통화했습니다. 러시아와 우크라이나는 모두 세르비아와의 관계 강화를 기대한다고 밝혔습니다.",
-                    "코소보 쿠르티 총리는 알바니아계 정당이 단일 명부로 2석을 얻었다고 평가했습니다. 일부 의석 수는 최종 확정 전 투표소 개표 기준 전망치입니다."
-                ],
-                "why": "2년간의 학생 시위가 선거 정권 교체로 이어진 결과입니다. 최종 개표 확정, 총리 후보 지명과 정부 구성, 러시아·EU와의 관계 설정이 다음 확인 지점입니다.",
-                "korea": "",
-                "sources": [
-                    {
-                        "name": "Balkan Insight – Student List Wins Outright Majority in Serbian Parliamentary Polls",
-                        "url": "https://balkaninsight.com/2026/10/26/student-list-wins-outright-majority-in-serbian-parliamentary-polls/bi/",
-                        "lang": "EN"
-                    },
-                    {
-                        "name": "Balkan Insight – Serbian Strongman Vucic Concedes Defeat in Snap Elections",
-                        "url": "https://balkaninsight.com/2026/10/25/serbian-strongman-vucic-concedes-defeat-in-snap-elections/bi/",
-                        "lang": "EN"
-                    },
-                    {
-                        "name": "European Western Balkans – Kos: The door to the EU is open for Serbia",
-                        "url": "https://europeanwesternbalkans.com/2026/10/26/kos-the-door-to-the-eu-is-open-for-serbia/",
-                        "lang": "EN"
-                    },
-                    {
-                        "name": "European Western Balkans – Magyar and Plenković spoke by phone with the leaders of the Student List",
-                        "url": "https://europeanwesternbalkans.com/2026/10/26/magyar-and-plenkovic-spoke-by-phone-with-the-leaders-of-the-student-list/",
-                        "lang": "EN"
-                    }
-                ]
-            },
-            {
-                "region": "sbalkan",
-                "title": "불가리아 대선, 투표율 22.5% 사상 최저…이오토바 34.8% 대 규로프 31.9%, 11월 1일 결선",
-                "countries": [
-                    "불가리아"
-                ],
-                "period": "2026-10-25 ~ 26",
-                "points": [
-                    "발칸인사이트에 따르면 10월 25일 1차 투표에서 라데프 총리가 지지하는 이오토바 대통령 권한대행이 34.8%, 개혁 성향의 전 임시 총리 안드레이 규로프가 31.9%를 얻어 과반 후보가 없었습니다. 개표 99.94% 기준이며 결선은 11월 1일입니다.",
-                    "투표율은 알파리서치 집계로 22.5%로 2021년 40.5%, 2016년 56.28%보다 크게 낮은 역대 최저입니다.",
-                    "BTA에 따르면 4위 라도스틴 바실레프는 결선에서 규로프에게 투표하거나 투표하지 말라고 말했고, 통합민주세력(UDF)은 요청이 오면 양측과 만나겠다고 했습니다. 규로프 진영은 정부 공식 채널을 이용한 선거운동 의혹을 중앙선관위에 회부했습니다.",
-                    "총리는 2027년 예산안을 다음 주 공개한다고 밝혔고, 소피아 경제포럼에서는 유로 도입 효과가 논의됐습니다."
-                ],
-                "why": "낮은 투표율 속에 정부 지원 후보와 개혁 후보가 맞붙어 라데프 총리 진영의 권력 집중 여부가 걸려 있습니다. 11월 1일 결선 결과와 투표율이 다음 확인 지점입니다.",
-                "korea": "",
-                "sources": [
-                    {
-                        "name": "Balkan Insight – Bulgaria’s Presidential Election Heads to Runoff After Record Low Turnout",
-                        "url": "https://balkaninsight.com/2026/10/26/bulgarias-presidential-election-heads-to-runoff-after-record-low-turnout/bi/",
-                        "lang": "EN"
-                    },
-                    {
-                        "name": "BTA – Fourth-Placed Radostin Vasilev on Presidential Runoff: Vote for Gurov or Stay at Home",
-                        "url": "https://www.bta.bg/en/news/bulgaria/1232798-fourth-placed-radostin-vasilev-on-presidential-runoff-vote-for-gurov-or-stay-at",
-                        "lang": "EN"
-                    },
-                    {
-                        "name": "BTA – Gurov-Kandev Nomination Committee Refers Electioneering via Council of Ministers’ Channels to Central Election Commission",
-                        "url": "https://www.bta.bg/en/news/bulgaria/1233114-gurov-kandev-nomination-committee-refers-electioneering-via-council-of-ministers",
-                        "lang": "EN"
-                    }
-                ]
-            },
-            {
-                "region": "east",
-                "title": "몰도바 총리 키이우 방문…우크라이나와 군사기술 협력 협정 체결, 영공 침범 100회 넘어 방공 지원 요청",
-                "countries": [
-                    "몰도바"
-                ],
-                "period": "2026-10-26",
-                "points": [
-                    "키이우인디펜던트(수스필네 인용)에 따르면 몰도바 총리 바실레 토판이 키이우를 방문해 우크라이나와 군사기술 협력 협정을 체결했습니다. 우크라이나 총리 세르히 코레츠키는 이 협정이 경험 교환의 길을 연다고 말했습니다.",
-                    "토판 총리는 러시아의 전면 침공 이후 몰도바 영공이 100회 넘게 침범당했다며 우크라이나의 방공 경험을 원한다고 말했습니다. 우크라이나는 지뢰 제거 연합을 통한 협력 확대를 제안했습니다.",
-                    "대표단에는 국방·인프라·에너지 장관이 포함됐고 젤렌스키 대통령 등과의 면담이 예정됐다고 합니다. 배경으로는 양국 EU 가입 절차를 연계하려는 젤렌스키 대통령의 요구와, 러시아 드론 추락 뒤 몰도바가 러시아 외교관을 추방한 일이 거론됐습니다."
-                ],
-                "why": "러시아 드론이 몰도바 영토에 떨어지는 상황에서 몰도바가 안보 협력을 우크라이나와 제도화했습니다. 실제 협력 범위와 EU 가입 절차 연계 문제가 다음 확인 지점입니다.",
-                "korea": "",
-                "sources": [
-                    {
-                        "name": "Kyiv Independent – Kyiv, Chisinau sign military-technical cooperation deal as Moldovan PM visits Kyiv",
-                        "url": "https://kyivindependent.com/moldovan-pm-arrives-in-kyiv-to-meet-zelensky-ukrainian-officials/",
-                        "lang": "EN"
-                    }
-                ]
-            }
-        ],
-        "countries": {
-            "폴란드": "투스크 총리가 하노이 방문 중 베트남과 전략적 동반자 관계를 발표(10/26, Notes from Poland). 국민 3분의 2가 낙태법 완화를 지지한다는 여론조사도 공개.",
-            "체코": "내각이 체코 코루나를 헌법에 명시하는 방안을 승인(10/26, Expats.cz). 공영방송 재원 개편에 반대하는 구시가지 광장 시위에는 수천 명이 모임. 발칸인사이트는 졸속 개편이라는 반발을 보도.",
-            "슬로바키아": "최근 48시간 내 주요 보도 확인되지 않음. 배경으로 연립정부의 EU·우크라이나 정책 논쟁이 이어지는 중.",
-            "헝가리": "최근 48시간 내 새 전개는 제한적(텔렉스 최신 기사가 10/23). 마자르 총리와 플렌코비치 크로아티아 총리가 세르비아 학생 명부 지도부와 통화(10/26, EWB).",
-            "에스토니아": "국방장관이 국방계획 결정을 재검토해야 한다고 말하고 경전투기를 4년 안에 조달할 수 있다고 언급(10/25~26, ERR). 에스토니아가 우크라이나에 상당수의 기관차를 보낼 계획이라는 보도도 있음.",
-            "라트비아": "NATO 여단이 약 3,000명 규모의 ‘가장 광범위한’ 전개 훈련을 시작해 11월 2일까지 진행(키이우인디펜던트). 사이버대응팀 CERT는 최근 수백 건의 해킹 시도를 막았다고 발표(10/26, LSM).",
-            "리투아니아": "한화에어로스페이스가 현지 기업 4곳과 대공 무기 MoU 체결, 시아울리아이 기지 확장 발표(10/26, LRT).",
-            "슬로베니아": "최근 48시간 내 주요 보도 확인되지 않음(Sloveniatimes 미조회). 배경으로 얀샤 정부가 2027년 예산 수정안을 처리 중.",
-            "크로아티아": "플렌코비치 총리가 세르비아 학생 명부 지도부와 통화(10/26, EWB). JANAF가 카자흐스탄과 석유 탐사 협력에 나선다는 보도(발칸인사이트).",
-            "세르비아": "조기 총선에서 학생 명부가 52.65%로 과반 승리, 부치치 대통령이 패배 인정(10/25~26).",
-            "보스니아 헤르체고비나": "보스니아 정치권이 세르비아 선거 결과에 반응(10/26, N1). 중앙선관위는 총선 결과를 확정했으며 재검표·이의신청은 가능.",
-            "몬테네그로": "메르츠 독일 총리가 몬테네그로가 2028년까지 EU에 가입할 수 있다고 본다고 언급(발칸인사이트 월요 브리핑, 세부 내용은 확인 못 함).",
-            "코소보": "쿠르티 총리가 세르비아 총선에서 알바니아계 단일 명부가 2석을 얻은 것을 성과로 평가(10/26). 가정폭력 신고 몇 시간 뒤 여성이 살해된 사건으로 당국 대응 비판(발칸인사이트).",
-            "알바니아": "라마 총리가 주말 시위 폭력으로 시위자가 고무탄에 부상한 뒤 새 반시위 법안을 예고(10/26, 발칸인사이트).",
-            "북마케도니아": "최근 48시간 내 주요 보도 확인되지 않음. 배경으로 불가리아와의 역사·헌법 문제가 EU 가입 논의의 변수로 남아 있음.",
-            "불가리아": "대선 1차 투표율 22.5%로 사상 최저, 이오토바 34.8% 대 규로프 31.9%로 11월 1일 결선(10/26).",
-            "우크라이나": "러시아가 11월 4일 이후 3자 회담 재개 의사를 밝힘(10/25). 젤렌스키 대통령은 미국의 방공미사일 승인 지연을 비판(10/26).",
-            "벨라루스": "LSM의 De Facto가 벨라루스 국경수비대와 연계된 밀입국 알선의 폭력성을 폭로(10/26). 새 정부 차원의 전개는 확인하지 못함.",
-            "몰도바": "토판 총리가 키이우를 방문해 우크라이나와 군사기술 협력 협정 체결(10/26).",
-            "루마니아": "긴급 소·염소 전염병 백신 접종 시작(10/26, RRI). 하지 감독이 11월 대표팀 명단 발표. 큰 정치·안보 새 전개는 확인하지 못함."
-        },
-        "note": "작성 기준: 2026-10-27 저녁(한국시간). Kyiv Independent, Radio Romania International, LSM, LRT, ERR, Notes from Poland, Balkan Insight, BTA, European Western Balkans, Expats.cz, Telex, Total Croatia News, N1의 첫 화면과 일부 기사를 확인했습니다. Sloveniatimes는 이번에도 조회하지 못했고 KOTRA와 한국 언론은 사용하지 못했습니다. 매체 첫 화면 최신 기사는 10월 26일까지였고 Telex는 10월 23일이 가장 최신이었습니다. 슬로바키아·슬로베니아·북마케도니아는 새 주요 보도가 확인되지 않아 배경 동향으로 대신했습니다. 세르비아 의석 수는 투표소 일부 집계 기준 전망이며 최종 확정 전입니다. 몰도바·우크라이나 총리 이름은 키이우인디펜던트 보도를 그대로 따랐습니다. ‘한국·기업 시사점’은 보도를 바탕으로 한 해석입니다. 출처 표시: KR = 한국 언론, KOTRA = KOTRA 해외시장뉴스, EN = 해외 매체."
     }
 ];
